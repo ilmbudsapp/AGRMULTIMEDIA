@@ -43,8 +43,8 @@ export default function About() {
             {/* Professional team photo or office space */}
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-                alt="AGR Multimedia tim za rad" 
+                src="/attached_assets/BRANDNG_1755470993941.jpg" 
+                alt="MULTIMEDIA AGRONDESIGN branding projekti" 
                 className="w-full h-auto"
                 data-testid="about-team-image"
               />
