@@ -17,7 +17,7 @@ export async function sendContactEmail(formData: ContactFormData): Promise<boole
   try {
     const msg = {
       to: 'agron6922@gmail.com', // Tvoj email
-      from: 'noreply@agrmultimedia.eu', // Sender email (mora biti verifikovani domen)
+      from: 'agron6922@gmail.com', // Koristimo verifikovani Gmail
       replyTo: formData.email, // Da možeš direktno da odgovoriš klijentu
       subject: `Nova poruka sa sajta: ${formData.subject}`,
       html: `
