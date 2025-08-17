@@ -234,7 +234,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="font-medium text-navy">{t.contact.info.location}</p>
-                    <p className="text-gray-600">{t.contact.location}</p>
+                    <p className="text-gray-600">{t.footer.location}</p>
                   </div>
                 </div>
               </div>

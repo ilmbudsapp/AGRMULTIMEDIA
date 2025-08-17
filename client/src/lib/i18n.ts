@@ -349,7 +349,6 @@ export const translations: Record<Language, Translations> = {
     contact: {
       title: "Kontaktirajte nas",
       subtitle: "Spremni smo da vaše ideje pretvorimo u stvarnost. Pošaljite nam poruku!",
-      location: "Geislingen an der Steige, Nemačka",
       form: {
         title: "Pošaljite poruku",
         name: "Ime i prezime",
@@ -407,7 +406,10 @@ export const translations: Record<Language, Translations> = {
       services: "Usluge",
       company: "Kompanija",
       contact: "Kontakt",
-      copyright: "© 2023 MULTIMEDIA AGRONDESIGN. Sva prava zadržana.",
+      phone: "+49 15560 873124",
+      email: "agron6922@gmail.com",
+      location: "Geislingen an der Steige, Nemačka",
+      copyright: "© 2025 MULTIMEDIA AGRONDESIGN. Sva prava zadržana.",
       privacy: "Privatnost",
       terms: "Uslovi",
       cookies: "Kolačići",
@@ -548,7 +550,6 @@ export const translations: Record<Language, Translations> = {
     contact: {
       title: "Contact Us",
       subtitle: "We're ready to turn your ideas into reality. Send us a message!",
-      location: "Geislingen an der Steige, Germany",
       form: {
         title: "Send Message",
         name: "Full Name",
@@ -606,7 +607,10 @@ export const translations: Record<Language, Translations> = {
       services: "Services",
       company: "Company",
       contact: "Contact",
-      copyright: "© 2023 MULTIMEDIA AGRONDESIGN. All rights reserved.",
+      phone: "+49 15560 873124",
+      email: "agron6922@gmail.com",
+      location: "Geislingen an der Steige, Germany",
+      copyright: "© 2025 MULTIMEDIA AGRONDESIGN. All rights reserved.",
       privacy: "Privacy",
       terms: "Terms",
       cookies: "Cookies",
@@ -747,7 +751,6 @@ export const translations: Record<Language, Translations> = {
     contact: {
       title: "Kontaktieren Sie uns",
       subtitle: "Wir sind bereit, Ihre Ideen in die Realität umzusetzen. Senden Sie uns eine Nachricht!",
-      location: "Geislingen an der Steige, Deutschland",
       form: {
         title: "Nachricht senden",
         name: "Vollständiger Name",
@@ -805,7 +808,10 @@ export const translations: Record<Language, Translations> = {
       services: "Leistungen",
       company: "Unternehmen",
       contact: "Kontakt",
-      copyright: "© 2023 MULTIMEDIA AGRONDESIGN. Alle Rechte vorbehalten.",
+      phone: "+49 15560 873124",
+      email: "agron6922@gmail.com",
+      location: "Geislingen an der Steige, Deutschland",
+      copyright: "© 2025 MULTIMEDIA AGRONDESIGN. Alle Rechte vorbehalten.",
       privacy: "Datenschutz",
       terms: "Nutzungsbedingungen",
       cookies: "Cookies",
@@ -946,7 +952,6 @@ export const translations: Record<Language, Translations> = {
     contact: {
       title: "Na Kontaktoni",
       subtitle: "Jemi gati t'i kthejmë idetë tuaja në realitet. Dërgona një mesazh!",
-      location: "Geislingen an der Steige, Gjermani",
       form: {
         title: "Dërgo Mesazh",
         name: "Emri i Plotë",
@@ -1004,7 +1009,10 @@ export const translations: Record<Language, Translations> = {
       services: "Shërbimet",
       company: "Kompania",
       contact: "Kontakt",
-      copyright: "© 2023 MULTIMEDIA AGRONDESIGN. Të gjitha të drejtat të rezervuara.",
+      phone: "+49 15560 873124",
+      email: "agron6922@gmail.com",
+      location: "Geislingen an der Steige, Gjermani",
+      copyright: "© 2025 MULTIMEDIA AGRONDESIGN. Të gjitha të drejtat të rezervuara.",
       privacy: "Privatësia",
       terms: "Kushtet",
       cookies: "Cookies",
