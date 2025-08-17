@@ -1,4 +1,3 @@
-import { Facebook, Instagram, Linkedin } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Footer() {
@@ -19,29 +18,7 @@ export default function Footer() {
             <p className="text-gray-300 mb-6">
               {t.footer.brand}
             </p>
-            <div className="flex space-x-4">
-              <a 
-                href="#" 
-                className="bg-white/10 w-10 h-10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-all duration-300"
-                data-testid="footer-social-facebook"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a 
-                href="#" 
-                className="bg-white/10 w-10 h-10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-all duration-300"
-                data-testid="footer-social-instagram"
-              >
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a 
-                href="#" 
-                className="bg-white/10 w-10 h-10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-all duration-300"
-                data-testid="footer-social-linkedin"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
-            </div>
+
           </div>
           
           <div data-testid="footer-services">
