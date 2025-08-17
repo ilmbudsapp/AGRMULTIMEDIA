@@ -9,6 +9,7 @@ interface ContactFormData {
   name: string;
   email: string;
   phone: string;
+  subject: string;
   projectType: string;
   message: string;
 }
@@ -20,6 +21,7 @@ export default function Contact() {
     name: '',
     email: '',
     phone: '',
+    subject: '',
     projectType: '',
     message: ''
   });
@@ -36,6 +38,7 @@ export default function Contact() {
         name: '',
         email: '',
         phone: '',
+        subject: '',
         projectType: '',
         message: ''
       });
@@ -53,10 +56,10 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!formData.name || !formData.email || !formData.message) {
+    if (!formData.name || !formData.email || !formData.subject || !formData.message) {
       toast({
         title: t.contact.error.validation,
-        description: "Ime, email i poruka su obavezni.",
+        description: t.contact.error.validation,
         variant: "destructive",
       });
       return;
@@ -120,6 +123,20 @@ export default function Contact() {
                     data-testid="input-email"
                   />
                 </div>
+              </div>
+              
+              <div>
+                <label className="block text-gray-700 font-medium mb-2">{(t.contact.form as any).subject} {t.contact.form.required}</label>
+                <input 
+                  type="text"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-electric-blue focus:border-transparent transition-all duration-300" 
+                  placeholder={(t.contact.form as any).subjectPlaceholder}
+                  required
+                  data-testid="input-subject"
+                />
               </div>
               
               <div>

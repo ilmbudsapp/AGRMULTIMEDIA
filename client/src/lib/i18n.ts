@@ -153,6 +153,8 @@ export interface Translations {
       namePlaceholder: string;
       email: string;
       emailPlaceholder: string;
+      subject: string;
+      subjectPlaceholder: string;
       phone: string;
       phonePlaceholder: string;
       projectType: string;
@@ -353,6 +355,8 @@ export const translations: Record<Language, Translations> = {
         namePlaceholder: "Vaše ime",
         email: "Email adresa",
         emailPlaceholder: "vaš.email@example.com",
+        subject: "Predmet",
+        subjectPlaceholder: "Predmet vaše poruke",
         phone: "Telefon",
         phonePlaceholder: "+381 XX XXX XXXX",
         projectType: "Tip projekta",
@@ -394,7 +398,7 @@ export const translations: Record<Language, Translations> = {
       error: {
         title: "Greška pri slanju poruke",
         description: "Molimo pokušajte ponovo ili nas kontaktirajte direktno.",
-        validation: "Molimo popunite sva obavezna polja"
+        validation: "Ime, email, predmet i poruka su obavezni"
       }
     },
     footer: {
@@ -549,6 +553,8 @@ export const translations: Record<Language, Translations> = {
         namePlaceholder: "Your name",
         email: "Email Address",
         emailPlaceholder: "your.email@example.com",
+        subject: "Subject",
+        subjectPlaceholder: "Subject of your message",
         phone: "Phone",
         phonePlaceholder: "+381 XX XXX XXXX",
         projectType: "Project Type",
@@ -590,7 +596,7 @@ export const translations: Record<Language, Translations> = {
       error: {
         title: "Error sending message",
         description: "Please try again or contact us directly.",
-        validation: "Please fill in all required fields"
+        validation: "Name, email, subject and message are required"
       }
     },
     footer: {
@@ -745,6 +751,8 @@ export const translations: Record<Language, Translations> = {
         namePlaceholder: "Ihr Name",
         email: "E-Mail-Adresse",
         emailPlaceholder: "ihre.email@example.com",
+        subject: "Betreff",
+        subjectPlaceholder: "Betreff Ihrer Nachricht",
         phone: "Telefon",
         phonePlaceholder: "+381 XX XXX XXXX",
         projectType: "Projekttyp",
@@ -941,6 +949,8 @@ export const translations: Record<Language, Translations> = {
         namePlaceholder: "Emri juaj",
         email: "Adresa E-mail",
         emailPlaceholder: "email.juaj@example.com",
+        subject: "Tema",
+        subjectPlaceholder: "Tema e mesazhit tuaj",
         phone: "Telefon",
         phonePlaceholder: "+381 XX XXX XXXX",
         projectType: "Lloji i Projektit",

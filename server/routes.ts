@@ -2,6 +2,7 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertContactSchema } from "@shared/schema";
+import { sendContactEmail } from "./email";
 import { z } from "zod";
 
 export async function registerRoutes(app: Express): Promise<Server> {
@@ -9,7 +10,21 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.post("/api/contact", async (req, res) => {
     try {
       const validatedData = insertContactSchema.parse(req.body);
+      
+      // Sačuvaj kontakt u bazi podataka
       const contact = await storage.createContact(validatedData);
+      
+      // Pošalji email notifikaciju
+      const emailSent = await sendContactEmail({
+        name: validatedData.name,
+        email: validatedData.email,
+        subject: validatedData.subject,
+        message: validatedData.message
+      });
+      
+      if (!emailSent) {
+        console.warn('Email nije poslat, ali kontakt je sačuvan u bazi');
+      }
       
       res.json({ 
         success: true, 
