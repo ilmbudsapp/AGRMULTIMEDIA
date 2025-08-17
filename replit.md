@@ -1,6 +1,13 @@
 # Overview
 
-AGR Multimedia is a professional multimedia services portfolio website built as a modern, full-stack web application. The website serves as a digital portfolio showcasing services including web design, graphic design, video production, digital marketing, photography, and consulting. It's designed to attract potential clients and provide a professional online presence for the multimedia agency. The application features a comprehensive contact system, blog functionality, service showcases, and a responsive design optimized for all devices.
+MULTIMEDIA AGRONDESIGN is a professional multimedia services portfolio website built as a modern, full-stack web application. The website serves as a digital portfolio showcasing services including web design, graphic design, video production, digital marketing, and mobile app development for Android and iOS. It's designed to attract potential clients and provide a professional online presence for the multimedia agency. The application features a comprehensive contact system, blog functionality, service showcases, and a responsive design optimized for all devices.
+
+## Recent Changes (January 2025)
+- Complete rebranding from "AGR Multimedia" to "MULTIMEDIA AGRONDESIGN" across all 4 languages
+- Updated footer with new contact details: Phone (+49 15560 873124), Email (agron6922@gmail.com), Location (Geislingen an der Steige, Germany)
+- Removed social media icons from footer (Facebook, Instagram, LinkedIn)
+- Successfully deployed to production domain agrmultimedia.eu via Replit Deployments
+- All content converted to first-person singular format (individual work, not team)
 
 # User Preferences
 
