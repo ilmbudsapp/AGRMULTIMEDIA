@@ -252,8 +252,8 @@ export const translations: Record<Language, Translations> = {
       items: {
         webDesign: {
           title: "Web Dizajn",
-          description: "Responsivni, SEO optimizovani web sajtovi koji privlače posetioce i konvertuju ih u klijente.",
-          features: ["Custom dizajn", "Mobile responsivan", "SEO optimizacija"]
+          description: "Responsivni, SEO optimizovani web sajtovi i mobilne aplikacije za Android i iOS koji privlače posetioce i konvertuju ih u klijente.",
+          features: ["Custom dizajn", "Mobile responsivan", "SEO optimizacija", "Android & iOS aplikacije"]
         },
         graphicDesign: {
           title: "Grafički Dizajn",
@@ -448,8 +448,8 @@ export const translations: Record<Language, Translations> = {
       items: {
         webDesign: {
           title: "Web Design",
-          description: "Responsive, SEO-optimized websites that attract visitors and convert them into clients.",
-          features: ["Custom Design", "Mobile Responsive", "SEO Optimization"]
+          description: "Responsive, SEO-optimized websites and mobile applications for Android and iOS that attract visitors and convert them into clients.",
+          features: ["Custom Design", "Mobile Responsive", "SEO Optimization", "Android & iOS Apps"]
         },
         graphicDesign: {
           title: "Graphic Design",
@@ -644,8 +644,8 @@ export const translations: Record<Language, Translations> = {
       items: {
         webDesign: {
           title: "Webdesign",
-          description: "Responsive, SEO-optimierte Websites, die Besucher anziehen und in Kunden verwandeln.",
-          features: ["Custom Design", "Mobile Responsive", "SEO-Optimierung"]
+          description: "Responsive, SEO-optimierte Websites und mobile Anwendungen für Android und iOS, die Besucher anziehen und in Kunden verwandeln.",
+          features: ["Custom Design", "Mobile Responsive", "SEO-Optimierung", "Android & iOS Apps"]
         },
         graphicDesign: {
           title: "Grafikdesign",
@@ -840,8 +840,8 @@ export const translations: Record<Language, Translations> = {
       items: {
         webDesign: {
           title: "Web Dizajn",
-          description: "Uebsajte përgjigës, të optimizuara për SEO që tërheqin vizitorë dhe i kthejnë ata në klientë.",
-          features: ["Dizajn i Personalizuar", "Mobile Responsive", "Optimizim SEO"]
+          description: "Uebsajte përgjigës, të optimizuara për SEO dhe aplikacione mobile për Android dhe iOS që tërheqin vizitorë dhe i kthejnë ata në klientë.",
+          features: ["Dizajn i Personalizuar", "Mobile Responsive", "Optimizim SEO", "Aplikacione Android & iOS"]
         },
         graphicDesign: {
           title: "Dizajn Grafik",
