@@ -1,31 +1,34 @@
 import { ArrowRight } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Blog() {
+  const { t } = useLanguage();
+  
   const blogPosts = [
     {
       id: 1,
-      title: "5 Najvažnijih Trendova u Digitalnom Marketingu za 2024.",
-      description: "Otkrijte najnovije trendove koji će definisati digitalni marketing u narednoj godini i kako možete prilagoditi svoju strategiju...",
+      title: t.blog.posts.trends.title,
+      description: t.blog.posts.trends.description,
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
-      category: "Marketing",
+      category: t.blog.posts.trends.category,
       date: "15. Dec 2023",
       categoryColor: "bg-electric-blue"
     },
     {
       id: 2,
-      title: "Kako da Kreirate Web Sajt koji Konvertuje Posetioce",
-      description: "Pratite najbolje prakse web dizajna koji ne samo što izgleda dobro, već i efikasno konvertuje posetioce u klijente...",
+      title: t.blog.posts.conversion.title,
+      description: t.blog.posts.conversion.description,
       image: "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
-      category: "Dizajn",
+      category: t.blog.posts.conversion.category,
       date: "12. Dec 2023",
       categoryColor: "bg-purple-500"
     },
     {
       id: 3,
-      title: "Moć Video Marketinga: Zašto je Video Kralj Sadržaja",
-      description: "Video marketing nije samo trend - to je budućnost digitalne komunikacije. Saznajte kako možete iskoristiti video za rast biznisa...",
+      title: t.blog.posts.video.title,
+      description: t.blog.posts.video.description,
       image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
-      category: "Video",
+      category: t.blog.posts.video.category,
       date: "10. Dec 2023",
       categoryColor: "bg-red-500"
     }
@@ -35,9 +38,9 @@ export default function Blog() {
     <section id="blog" className="py-20 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4" data-testid="blog-title">Blog i Novosti</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4" data-testid="blog-title">{t.blog.title}</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto" data-testid="blog-subtitle">
-            Pratite najnovije trendove u digitalnom marketingu i dizajnu
+            {t.blog.subtitle}
           </p>
         </div>
         
@@ -85,7 +88,7 @@ export default function Blog() {
                   className="inline-flex items-center text-electric-blue font-semibold hover:text-purple-500 transition-colors duration-300"
                   data-testid={`blog-post-cta-${post.id}`}
                 >
-                  Čitaj više <ArrowRight className="w-4 h-4 ml-2" />
+                  {t.blog.readMore} <ArrowRight className="w-4 h-4 ml-2" />
                 </button>
               </div>
             </article>
@@ -97,7 +100,7 @@ export default function Blog() {
             className="bg-gradient-to-r from-electric-blue to-purple-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300"
             data-testid="blog-view-all-cta"
           >
-            Pogledaj sve članke
+            {t.blog.viewAll}
           </button>
         </div>
       </div>

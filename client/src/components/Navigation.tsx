@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import LanguageSelector from "./LanguageSelector";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -27,48 +30,49 @@ export default function Navigation() {
           </div>
           
           <div className="hidden md:block">
-            <div className="flex items-center space-x-8">
+            <div className="flex items-center space-x-6">
               <button 
                 onClick={() => scrollToSection('home')} 
                 className="text-gray-700 hover:text-electric-blue transition-colors duration-300"
                 data-testid="nav-home"
               >
-                Početna
+                {t.nav.home}
               </button>
               <button 
                 onClick={() => scrollToSection('about')} 
                 className="text-gray-700 hover:text-electric-blue transition-colors duration-300"
                 data-testid="nav-about"
               >
-                O nama
+                {t.nav.about}
               </button>
               <button 
                 onClick={() => scrollToSection('services')} 
                 className="text-gray-700 hover:text-electric-blue transition-colors duration-300"
                 data-testid="nav-services"
               >
-                Usluge
+                {t.nav.services}
               </button>
               <button 
                 onClick={() => scrollToSection('portfolio')} 
                 className="text-gray-700 hover:text-electric-blue transition-colors duration-300"
                 data-testid="nav-portfolio"
               >
-                Portfolio
+                {t.nav.portfolio}
               </button>
               <button 
                 onClick={() => scrollToSection('blog')} 
                 className="text-gray-700 hover:text-electric-blue transition-colors duration-300"
                 data-testid="nav-blog"
               >
-                Blog
+                {t.nav.blog}
               </button>
+              <LanguageSelector />
               <button 
                 onClick={() => scrollToSection('contact')} 
                 className="bg-gradient-to-r from-electric-blue to-purple-500 text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300"
                 data-testid="nav-contact-cta"
               >
-                Kontakt
+                {t.nav.contact}
               </button>
             </div>
           </div>
@@ -94,42 +98,45 @@ export default function Navigation() {
               className="block w-full text-left text-gray-700 hover:text-electric-blue transition-colors duration-300"
               data-testid="mobile-nav-home"
             >
-              Početna
+              {t.nav.home}
             </button>
             <button 
               onClick={() => scrollToSection('about')} 
               className="block w-full text-left text-gray-700 hover:text-electric-blue transition-colors duration-300"
               data-testid="mobile-nav-about"
             >
-              O nama
+              {t.nav.about}
             </button>
             <button 
               onClick={() => scrollToSection('services')} 
               className="block w-full text-left text-gray-700 hover:text-electric-blue transition-colors duration-300"
               data-testid="mobile-nav-services"
             >
-              Usluge
+              {t.nav.services}
             </button>
             <button 
               onClick={() => scrollToSection('portfolio')} 
               className="block w-full text-left text-gray-700 hover:text-electric-blue transition-colors duration-300"
               data-testid="mobile-nav-portfolio"
             >
-              Portfolio
+              {t.nav.portfolio}
             </button>
             <button 
               onClick={() => scrollToSection('blog')} 
               className="block w-full text-left text-gray-700 hover:text-electric-blue transition-colors duration-300"
               data-testid="mobile-nav-blog"
             >
-              Blog
+              {t.nav.blog}
             </button>
+            <div className="py-2">
+              <LanguageSelector />
+            </div>
             <button 
               onClick={() => scrollToSection('contact')} 
               className="block bg-gradient-to-r from-electric-blue to-purple-500 text-white px-6 py-2 rounded-full text-center"
               data-testid="mobile-nav-contact"
             >
-              Kontakt
+              {t.nav.contact}
             </button>
           </div>
         </div>

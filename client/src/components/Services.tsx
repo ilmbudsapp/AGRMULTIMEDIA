@@ -1,47 +1,50 @@
 import { Code, Palette, Video, Megaphone, Camera, Settings, ArrowRight, Check } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Services() {
+  const { t } = useLanguage();
+  
   const services = [
     {
       icon: <Code className="text-white text-2xl" />,
-      title: "Web Dizajn",
-      description: "Responsivni, SEO optimizovani web sajtovi koji privlače posetioce i konvertuju ih u klijente.",
-      features: ["Custom dizajn", "Mobile responsivan", "SEO optimizacija"],
+      title: t.services.items.webDesign.title,
+      description: t.services.items.webDesign.description,
+      features: t.services.items.webDesign.features,
       gradient: "from-electric-blue to-purple-500"
     },
     {
       icon: <Palette className="text-white text-2xl" />,
-      title: "Grafički Dizajn",
-      description: "Kreativni vizuelni identiteti, logotipi i marketing materijali koji izdvajaju vaš brend.",
-      features: ["Logo dizajn", "Brending", "Print materijali"],
+      title: t.services.items.graphicDesign.title,
+      description: t.services.items.graphicDesign.description,
+      features: t.services.items.graphicDesign.features,
       gradient: "from-purple-500 to-pink-500"
     },
     {
       icon: <Video className="text-white text-2xl" />,
-      title: "Video Produkcija",
-      description: "Profesionalni video sadržaj koji prenosi vašu poruku i angažuje auditorijum.",
-      features: ["Promocijski video", "Animacije", "Post-produkcija"],
+      title: t.services.items.videoProduction.title,
+      description: t.services.items.videoProduction.description,
+      features: t.services.items.videoProduction.features,
       gradient: "from-red-500 to-orange-500"
     },
     {
       icon: <Megaphone className="text-white text-2xl" />,
-      title: "Digitalni Marketing",
-      description: "Strategije koje povećavaju vašu online vidljivost i privlače ciljnu publiku.",
-      features: ["Social Media", "Google Ads", "Content Marketing"],
+      title: t.services.items.digitalMarketing.title,
+      description: t.services.items.digitalMarketing.description,
+      features: t.services.items.digitalMarketing.features,
       gradient: "from-green-500 to-teal-500"
     },
     {
       icon: <Camera className="text-white text-2xl" />,
-      title: "Fotografija",
-      description: "Profesionalne fotografije proizvoda, događaja i portreta za vaš biznis.",
-      features: ["Product photography", "Event coverage", "Post-processing"],
+      title: t.services.items.photography.title,
+      description: t.services.items.photography.description,
+      features: t.services.items.photography.features,
       gradient: "from-blue-500 to-cyan-500"
     },
     {
       icon: <Settings className="text-white text-2xl" />,
-      title: "Konsalting",
-      description: "Stručne konsultacije za digitalne strategije i optimizaciju vašeg online prisustva.",
-      features: ["Digitalna strategija", "UX/UI audit", "Analitika"],
+      title: t.services.items.consulting.title,
+      description: t.services.items.consulting.description,
+      features: t.services.items.consulting.features,
       gradient: "from-indigo-500 to-purple-500"
     }
   ];
@@ -57,9 +60,9 @@ export default function Services() {
     <section id="services" className="py-20 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4" data-testid="services-title">Naše usluge</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4" data-testid="services-title">{t.services.title}</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto" data-testid="services-subtitle">
-            Sveobuhvatna multimedia rešenja prilagođena vašim potrebama
+            {t.services.subtitle}
           </p>
         </div>
         
@@ -92,7 +95,7 @@ export default function Services() {
                 className="inline-flex items-center text-electric-blue font-semibold hover:text-purple-500 transition-colors duration-300"
                 data-testid={`service-cta-${index}`}
               >
-                Saznaj više <ArrowRight className="w-4 h-4 ml-2" />
+                {t.services.learnMore} <ArrowRight className="w-4 h-4 ml-2" />
               </button>
             </div>
           ))}

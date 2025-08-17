@@ -3,6 +3,7 @@ import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin, Twitter } fr
 import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface ContactFormData {
   name: string;
@@ -14,6 +15,7 @@ interface ContactFormData {
 
 export default function Contact() {
   const { toast } = useToast();
+  const { t } = useLanguage();
   const [formData, setFormData] = useState<ContactFormData>({
     name: '',
     email: '',
@@ -27,8 +29,8 @@ export default function Contact() {
       apiRequest('POST', '/api/contact', data),
     onSuccess: () => {
       toast({
-        title: "Poruka je poslana!",
-        description: "Javićemo vam se u najkraćem mogućem roku.",
+        title: t.contact.success.title,
+        description: t.contact.success.description,
       });
       setFormData({
         name: '',
@@ -40,8 +42,8 @@ export default function Contact() {
     },
     onError: (error) => {
       toast({
-        title: "Greška pri slanju poruke",
-        description: "Molimo pokušajte ponovo ili nas kontaktirajte direktno.",
+        title: t.contact.error.title,
+        description: t.contact.error.description,
         variant: "destructive",
       });
       console.error('Contact form error:', error);
@@ -53,7 +55,7 @@ export default function Contact() {
     
     if (!formData.name || !formData.email || !formData.message) {
       toast({
-        title: "Molimo popunite sva obavezna polja",
+        title: t.contact.error.validation,
         description: "Ime, email i poruka su obavezni.",
         variant: "destructive",
       });
@@ -71,49 +73,49 @@ export default function Contact() {
   };
 
   const workingHours = [
-    { day: "Ponedeljak - Petak", hours: "09:00 - 17:00" },
-    { day: "Subota", hours: "10:00 - 14:00" },
-    { day: "Nedelja", hours: "Zatvoreno", closed: true }
+    { day: t.contact.hours.weekdays, hours: "09:00 - 17:00" },
+    { day: t.contact.hours.saturday, hours: "10:00 - 14:00" },
+    { day: t.contact.hours.sunday, hours: t.contact.hours.closed, closed: true }
   ];
 
   return (
     <section id="contact" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4" data-testid="contact-title">Kontaktirajte nas</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4" data-testid="contact-title">{t.contact.title}</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto" data-testid="contact-subtitle">
-            Spremni smo da vaše ideje pretvorimo u stvarnost. Pošaljite nam poruku!
+            {t.contact.subtitle}
           </p>
         </div>
         
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div className="bg-slate-50 rounded-2xl p-8">
-            <h3 className="text-2xl font-semibold text-navy mb-6" data-testid="contact-form-title">Pošaljite poruku</h3>
+            <h3 className="text-2xl font-semibold text-navy mb-6" data-testid="contact-form-title">{t.contact.form.title}</h3>
             <form className="space-y-6" onSubmit={handleSubmit} data-testid="contact-form">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-gray-700 font-medium mb-2">Ime i prezime *</label>
+                  <label className="block text-gray-700 font-medium mb-2">{t.contact.form.name} {t.contact.form.required}</label>
                   <input 
                     type="text"
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-electric-blue focus:border-transparent transition-all duration-300" 
-                    placeholder="Vaše ime"
+                    placeholder={t.contact.form.namePlaceholder}
                     required
                     data-testid="input-name"
                   />
                 </div>
                 <div>
-                  <label className="block text-gray-700 font-medium mb-2">Email adresa *</label>
+                  <label className="block text-gray-700 font-medium mb-2">{t.contact.form.email} {t.contact.form.required}</label>
                   <input 
                     type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-electric-blue focus:border-transparent transition-all duration-300" 
-                    placeholder="vaš.email@example.com"
+                    placeholder={t.contact.form.emailPlaceholder}
                     required
                     data-testid="input-email"
                   />
@@ -121,20 +123,20 @@ export default function Contact() {
               </div>
               
               <div>
-                <label className="block text-gray-700 font-medium mb-2">Telefon</label>
+                <label className="block text-gray-700 font-medium mb-2">{t.contact.form.phone}</label>
                 <input 
                   type="tel"
                   name="phone"
                   value={formData.phone}
                   onChange={handleInputChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-electric-blue focus:border-transparent transition-all duration-300" 
-                  placeholder="+381 XX XXX XXXX"
+                  placeholder={t.contact.form.phonePlaceholder}
                   data-testid="input-phone"
                 />
               </div>
               
               <div>
-                <label className="block text-gray-700 font-medium mb-2">Tip projekta</label>
+                <label className="block text-gray-700 font-medium mb-2">{t.contact.form.projectType}</label>
                 <select 
                   name="projectType"
                   value={formData.projectType}
@@ -142,25 +144,25 @@ export default function Contact() {
                   className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-electric-blue focus:border-transparent transition-all duration-300"
                   data-testid="select-project-type"
                 >
-                  <option value="">Izaberite tip projekta</option>
-                  <option value="web-design">Web Dizajn</option>
-                  <option value="graphic-design">Grafički Dizajn</option>
-                  <option value="video-production">Video Produkcija</option>
-                  <option value="digital-marketing">Digitalni Marketing</option>
-                  <option value="photography">Fotografija</option>
-                  <option value="consulting">Konsalting</option>
+                  <option value="">{t.contact.form.projectTypePlaceholder}</option>
+                  <option value="web-design">{t.contact.form.projectTypes.webDesign}</option>
+                  <option value="graphic-design">{t.contact.form.projectTypes.graphicDesign}</option>
+                  <option value="video-production">{t.contact.form.projectTypes.videoProduction}</option>
+                  <option value="digital-marketing">{t.contact.form.projectTypes.digitalMarketing}</option>
+                  <option value="photography">{t.contact.form.projectTypes.photography}</option>
+                  <option value="consulting">{t.contact.form.projectTypes.consulting}</option>
                 </select>
               </div>
               
               <div>
-                <label className="block text-gray-700 font-medium mb-2">Poruka *</label>
+                <label className="block text-gray-700 font-medium mb-2">{t.contact.form.message} {t.contact.form.required}</label>
                 <textarea 
                   rows={5}
                   name="message"
                   value={formData.message}
                   onChange={handleInputChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-electric-blue focus:border-transparent transition-all duration-300 resize-none" 
-                  placeholder="Opišite vaš projekat i potrebe..."
+                  placeholder={t.contact.form.messagePlaceholder}
                   required
                   data-testid="textarea-message"
                 />
@@ -175,10 +177,10 @@ export default function Contact() {
                 {contactMutation.isPending ? (
                   <span className="flex items-center justify-center">
                     <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                    Šalje se...
+                    {t.contact.form.sending}
                   </span>
                 ) : (
-                  "Pošaljite poruku"
+                  t.contact.form.submit
                 )}
               </button>
             </form>

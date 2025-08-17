@@ -1,59 +1,61 @@
 import { useState } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Portfolio() {
+  const { t } = useLanguage();
   const [activeFilter, setActiveFilter] = useState('all');
 
   const portfolioItems = [
     {
       id: 1,
-      title: "E-commerce Sajt",
-      description: "Kompletan online shopping doživljaj",
+      title: t.portfolio.items.ecommerce.title,
+      description: t.portfolio.items.ecommerce.description,
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
       category: "web"
     },
     {
       id: 2,
-      title: "Brend Identitet",
-      description: "Kompletan vizuelni identitet za startup",
+      title: t.portfolio.items.brand.title,
+      description: t.portfolio.items.brand.description,
       image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
       category: "brand"
     },
     {
       id: 3,
-      title: "Korporativni Video",
-      description: "Predstavljanje kompanije kroz video",
+      title: t.portfolio.items.corporate.title,
+      description: t.portfolio.items.corporate.description,
       image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
       category: "video"
     },
     {
       id: 4,
-      title: "Restoran Website",
-      description: "Elegantno online prisustvo",
+      title: t.portfolio.items.restaurant.title,
+      description: t.portfolio.items.restaurant.description,
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
       category: "web"
     },
     {
       id: 5,
-      title: "Product Photography",
-      description: "Studijska fotografija proizvoda",
+      title: t.portfolio.items.product.title,
+      description: t.portfolio.items.product.description,
       image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
       category: "photo"
     },
     {
       id: 6,
-      title: "Packaging Dizajn",
-      description: "Kreativna ambalažna rešenja",
+      title: t.portfolio.items.packaging.title,
+      description: t.portfolio.items.packaging.description,
       image: "https://images.unsplash.com/photo-1588200908342-23b585c03e26?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
       category: "brand"
     }
   ];
 
   const filterCategories = [
-    { id: 'all', label: 'Svi projekti' },
-    { id: 'web', label: 'Web Dizajn' },
-    { id: 'brand', label: 'Brending' },
-    { id: 'video', label: 'Video' },
-    { id: 'photo', label: 'Fotografija' }
+    { id: 'all', label: t.portfolio.filters.all },
+    { id: 'web', label: t.portfolio.filters.web },
+    { id: 'brand', label: t.portfolio.filters.brand },
+    { id: 'video', label: t.portfolio.filters.video },
+    { id: 'photo', label: t.portfolio.filters.photo }
   ];
 
   const filteredItems = activeFilter === 'all' 
@@ -64,9 +66,9 @@ export default function Portfolio() {
     <section id="portfolio" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4" data-testid="portfolio-title">Naš Portfolio</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4" data-testid="portfolio-title">{t.portfolio.title}</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto" data-testid="portfolio-subtitle">
-            Pogledajte neke od naših najuspešnijih projekata koji su doneli rezultate klijentima
+            {t.portfolio.subtitle}
           </p>
         </div>
         
@@ -112,7 +114,7 @@ export default function Portfolio() {
                     className="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-lg hover:bg-white/30 transition-all duration-300"
                     data-testid={`portfolio-item-cta-${item.id}`}
                   >
-                    Pogledaj detalje
+                    {t.portfolio.viewDetails}
                   </button>
                 </div>
               </div>
