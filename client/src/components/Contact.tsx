@@ -234,7 +234,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="font-medium text-navy">{t.contact.info.location}</p>
-                    <p className="text-gray-600">Geislingen an der Steige, Nemačka</p>
+                    <p className="text-gray-600">{t.contact.location}</p>
                   </div>
                 </div>
               </div>

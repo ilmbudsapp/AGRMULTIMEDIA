@@ -349,6 +349,7 @@ export const translations: Record<Language, Translations> = {
     contact: {
       title: "Kontaktirajte nas",
       subtitle: "Spremni smo da vaše ideje pretvorimo u stvarnost. Pošaljite nam poruku!",
+      location: "Geislingen an der Steige, Nemačka",
       form: {
         title: "Pošaljite poruku",
         name: "Ime i prezime",
@@ -547,6 +548,7 @@ export const translations: Record<Language, Translations> = {
     contact: {
       title: "Contact Us",
       subtitle: "We're ready to turn your ideas into reality. Send us a message!",
+      location: "Geislingen an der Steige, Germany",
       form: {
         title: "Send Message",
         name: "Full Name",
@@ -745,6 +747,7 @@ export const translations: Record<Language, Translations> = {
     contact: {
       title: "Kontaktieren Sie uns",
       subtitle: "Wir sind bereit, Ihre Ideen in die Realität umzusetzen. Senden Sie uns eine Nachricht!",
+      location: "Geislingen an der Steige, Deutschland",
       form: {
         title: "Nachricht senden",
         name: "Vollständiger Name",
@@ -943,6 +946,7 @@ export const translations: Record<Language, Translations> = {
     contact: {
       title: "Na Kontaktoni",
       subtitle: "Jemi gati t'i kthejmë idetë tuaja në realitet. Dërgona një mesazh!",
+      location: "Geislingen an der Steige, Gjermani",
       form: {
         title: "Dërgo Mesazh",
         name: "Emri i Plotë",
