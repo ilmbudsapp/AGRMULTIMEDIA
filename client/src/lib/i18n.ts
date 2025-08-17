@@ -206,6 +206,9 @@ export interface Translations {
     services: string;
     company: string;
     contact: string;
+    phone: string;
+    email: string;
+    location: string;
     copyright: string;
     privacy: string;
     terms: string;
