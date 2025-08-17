@@ -626,7 +626,7 @@ export const translations: Record<Language, Translations> = {
       title: "Über MULTIMEDIA AGRONDESIGN",
       subtitle: "Wir schaffen außergewöhnliche digitale Erlebnisse, die Ihr Unternehmen voranbringen",
       storyTitle: "Unsere Geschichte",
-      storyP1: "AGR Multimedia wurde mit der Vision gegründet, Unternehmen dabei zu helfen, sich in der digitalen Welt zu behaupten. Wir sind spezialisiert auf die Erstellung hochwertiger Multimedia-Inhalte, die Aufmerksamkeit erregen, Marken aufbauen und Ergebnisse erzielen.",
+      storyP1: "MULTIMEDIA AGRONDESIGN wurde mit der Vision gegründet, Unternehmen dabei zu helfen, sich in der digitalen Welt zu behaupten. Wir sind spezialisiert auf die Erstellung hochwertiger Multimedia-Inhalte, die Aufmerksamkeit erregen, Marken aufbauen und Ergebnisse erzielen.",
       storyP2: "Unser Team besteht aus erfahrenen Designern, Entwicklern und Marketing-Profis, die zusammenarbeiten, um Ihre Ideen durch innovative digitale Lösungen zum Leben zu erwecken.",
       stats: {
         projects: "Projekte",
@@ -794,7 +794,7 @@ export const translations: Record<Language, Translations> = {
       services: "Leistungen",
       company: "Unternehmen",
       contact: "Kontakt",
-      copyright: "© 2023 AGR Multimedia. Alle Rechte vorbehalten.",
+      copyright: "© 2023 MULTIMEDIA AGRONDESIGN. Alle Rechte vorbehalten.",
       privacy: "Datenschutz",
       terms: "Nutzungsbedingungen",
       cookies: "Cookies",
@@ -819,10 +819,10 @@ export const translations: Record<Language, Translations> = {
       locations: ["Novi Sad", "Beograd", "Serbi"]
     },
     about: {
-      title: "Rreth AGR Multimedia",
+      title: "Rreth MULTIMEDIA AGRONDESIGN",
       subtitle: "Duke krijuar përvojë të jashtëzakonshme dixhitale që shtyjnë biznesin tuaj përpara",
       storyTitle: "Historia Jonë",
-      storyP1: "AGR Multimedia u themelua me një vizion për të ndihmuar bizneset të dallohen në botën dixhitale. Ne specializohemi në krijimin e përmbajtjeve multimedia me cilësi të lartë që tërheqin vëmendjen, ndërtojnë marka dhe sjellin rezultate.",
+      storyP1: "MULTIMEDIA AGRONDESIGN u themelua me një vizion për të ndihmuar bizneset të dallohen në botën dixhitale. Ne specializohemi në krijimin e përmbajtjeve multimedia me cilësi të lartë që tërheqin vëmendjen, ndërtojnë marka dhe sjellin rezultate.",
       storyP2: "Ekipi ynë përbëhet nga dizajnerë të përvojshëm, zhvillues dhe profesionistë marketingu që punojnë së bashku për t'i dhënë jetë ideve tuaja përmes zgjidhjeve inovative dixhitale.",
       stats: {
         projects: "Projekte",
@@ -990,7 +990,7 @@ export const translations: Record<Language, Translations> = {
       services: "Shërbimet",
       company: "Kompania",
       contact: "Kontakt",
-      copyright: "© 2023 AGR Multimedia. Të gjitha të drejtat të rezervuara.",
+      copyright: "© 2023 MULTIMEDIA AGRONDESIGN. Të gjitha të drejtat të rezervuara.",
       privacy: "Privatësia",
       terms: "Kushtet",
       cookies: "Cookies",
