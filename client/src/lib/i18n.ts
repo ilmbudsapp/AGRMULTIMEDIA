@@ -794,7 +794,7 @@ export const translations: Record<Language, Translations> = {
       error: {
         title: "Fehler beim Senden der Nachricht",
         description: "Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.",
-        validation: "Bitte füllen Sie alle Pflichtfelder aus"
+        validation: "Name, E-Mail, Betreff und Nachricht sind erforderlich"
       }
     },
     footer: {
@@ -992,7 +992,7 @@ export const translations: Record<Language, Translations> = {
       error: {
         title: "Gabim në dërgimin e mesazhit",
         description: "Ju lutemi provoni përsëri ose na kontaktoni direkt.",
-        validation: "Ju lutemi plotësoni të gjitha fushat e detyrueshme"
+        validation: "Emri, email, tema dhe mesazhi janë të detyrueshme"
       }
     },
     footer: {

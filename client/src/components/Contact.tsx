@@ -206,14 +206,14 @@ export default function Contact() {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-semibold text-navy mb-6" data-testid="contact-info-title">Kontakt informacije</h3>
+              <h3 className="text-2xl font-semibold text-navy mb-6" data-testid="contact-info-title">{t.contact.info.title}</h3>
               <div className="space-y-4">
                 <div className="flex items-center" data-testid="contact-phone">
                   <div className="bg-electric-blue/10 w-12 h-12 rounded-xl flex items-center justify-center mr-4">
                     <Phone className="text-electric-blue w-5 h-5" />
                   </div>
                   <div>
-                    <p className="font-medium text-navy">Telefon</p>
+                    <p className="font-medium text-navy">{t.contact.info.phone}</p>
                     <p className="text-gray-600">+49 15560 873124</p>
                   </div>
                 </div>
@@ -223,7 +223,7 @@ export default function Contact() {
                     <Mail className="text-electric-blue w-5 h-5" />
                   </div>
                   <div>
-                    <p className="font-medium text-navy">Email</p>
+                    <p className="font-medium text-navy">{t.contact.info.email}</p>
                     <p className="text-gray-600">agron6922@gmail.com</p>
                   </div>
                 </div>
@@ -233,7 +233,7 @@ export default function Contact() {
                     <MapPin className="text-electric-blue w-5 h-5" />
                   </div>
                   <div>
-                    <p className="font-medium text-navy">Lokacija</p>
+                    <p className="font-medium text-navy">{t.contact.info.location}</p>
                     <p className="text-gray-600">Geislingen an der Steige, Nemačka</p>
                   </div>
                 </div>
@@ -241,7 +241,7 @@ export default function Contact() {
             </div>
             
             <div>
-              <h4 className="text-lg font-semibold text-navy mb-4" data-testid="social-media-title">Pratite nas</h4>
+              <h4 className="text-lg font-semibold text-navy mb-4" data-testid="social-media-title">{t.contact.social.title}</h4>
               <div className="flex space-x-4" data-testid="social-media-links">
                 <a 
                   href="https://www.facebook.com/halidosmani74" 
@@ -267,7 +267,7 @@ export default function Contact() {
             <div className="bg-slate-50 rounded-2xl p-6" data-testid="working-hours">
               <h4 className="text-lg font-semibold text-navy mb-2 flex items-center">
                 <Clock className="w-5 h-5 mr-2" />
-                Radimo
+                {t.contact.hours.title}
               </h4>
               <div className="space-y-2">
                 {workingHours.map((schedule, index) => (
