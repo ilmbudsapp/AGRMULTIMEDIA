@@ -234,8 +234,8 @@ export const translations: Record<Language, Translations> = {
       title: "O MULTIMEDIA AGRONDESIGN",
       subtitle: "Kreiramo izuzetne digitalne doživljaje koji pokreću vaš biznis napred",
       storyTitle: "Naša priča",
-      storyP1: "MULTIMEDIA AGRONDESIGN je osnovan sa vizijom da pomaže biznis-ima da se istaknu u digitalnom svetu. Specijalizovani smo za kreiranje visokih kvaliteta multimedia sadržaja koji privlači pažnju, gradi brendove i pokreće rezultate.",
-      storyP2: "Naš tim sastoji od iskusnih dizajnera, developera i marketing stručnjaka koji rade zajedno da bi vašim idejama dali život kroz inovativna digitalna rešenja.",
+      storyP1: "MULTIMEDIA AGRONDESIGN sam osnovan sa vizijom da pomažem biznis-ima da se istaknu u digitalnom svetu. Specijalizovan sam za kreiranje visokih kvaliteta multimedia sadržaja koji privlači pažnju, gradi brendove i pokreće rezultate.",
+      storyP2: "Kao iskusan dizajner, developer i marketing stručnjak, radim posvećeno da vašim idejama dam život kroz inovativna digitalna rešenja.",
       stats: {
         projects: "Projekata",
         clients: "Klijenata",
@@ -430,8 +430,8 @@ export const translations: Record<Language, Translations> = {
       title: "About MULTIMEDIA AGRONDESIGN",
       subtitle: "Creating exceptional digital experiences that drive your business forward",
       storyTitle: "Our Story",
-      storyP1: "MULTIMEDIA AGRONDESIGN was founded with a vision to help businesses stand out in the digital world. We specialize in creating high-quality multimedia content that attracts attention, builds brands and drives results.",
-      storyP2: "Our team consists of experienced designers, developers and marketing professionals who work together to bring your ideas to life through innovative digital solutions.",
+      storyP1: "I founded MULTIMEDIA AGRONDESIGN with a vision to help businesses stand out in the digital world. I specialize in creating high-quality multimedia content that attracts attention, builds brands and drives results.",
+      storyP2: "As an experienced designer, developer and marketing professional, I work dedicatedly to bring your ideas to life through innovative digital solutions.",
       stats: {
         projects: "Projects",
         clients: "Clients",
@@ -626,8 +626,8 @@ export const translations: Record<Language, Translations> = {
       title: "Über MULTIMEDIA AGRONDESIGN",
       subtitle: "Wir schaffen außergewöhnliche digitale Erlebnisse, die Ihr Unternehmen voranbringen",
       storyTitle: "Unsere Geschichte",
-      storyP1: "MULTIMEDIA AGRONDESIGN wurde mit der Vision gegründet, Unternehmen dabei zu helfen, sich in der digitalen Welt zu behaupten. Wir sind spezialisiert auf die Erstellung hochwertiger Multimedia-Inhalte, die Aufmerksamkeit erregen, Marken aufbauen und Ergebnisse erzielen.",
-      storyP2: "Unser Team besteht aus erfahrenen Designern, Entwicklern und Marketing-Profis, die zusammenarbeiten, um Ihre Ideen durch innovative digitale Lösungen zum Leben zu erwecken.",
+      storyP1: "Ich habe MULTIMEDIA AGRONDESIGN mit der Vision gegründet, Unternehmen dabei zu helfen, sich in der digitalen Welt zu behaupten. Ich bin spezialisiert auf die Erstellung hochwertiger Multimedia-Inhalte, die Aufmerksamkeit erregen, Marken aufbauen und Ergebnisse erzielen.",
+      storyP2: "Als erfahrener Designer, Entwickler und Marketing-Profi arbeite ich engagiert daran, Ihre Ideen durch innovative digitale Lösungen zum Leben zu erwecken.",
       stats: {
         projects: "Projekte",
         clients: "Kunden",
@@ -822,8 +822,8 @@ export const translations: Record<Language, Translations> = {
       title: "Rreth MULTIMEDIA AGRONDESIGN",
       subtitle: "Duke krijuar përvojë të jashtëzakonshme dixhitale që shtyjnë biznesin tuaj përpara",
       storyTitle: "Historia Jonë",
-      storyP1: "MULTIMEDIA AGRONDESIGN u themelua me një vizion për të ndihmuar bizneset të dallohen në botën dixhitale. Ne specializohemi në krijimin e përmbajtjeve multimedia me cilësi të lartë që tërheqin vëmendjen, ndërtojnë marka dhe sjellin rezultate.",
-      storyP2: "Ekipi ynë përbëhet nga dizajnerë të përvojshëm, zhvillues dhe profesionistë marketingu që punojnë së bashku për t'i dhënë jetë ideve tuaja përmes zgjidhjeve inovative dixhitale.",
+      storyP1: "Unë themelova MULTIMEDIA AGRONDESIGN me një vizion për të ndihmuar bizneset të dallohen në botën dixhitale. Specializohem në krijimin e përmbajtjeve multimedia me cilësi të lartë që tërheqin vëmendjen, ndërtojnë marka dhe sjellin rezultate.",
+      storyP2: "Si një dizajner i përvojshëm, zhvillues dhe profesionist marketingu, punoj me përkushtim për t'i dhënë jetë ideve tuaja përmes zgjidhjeve inovative dixhitale.",
       stats: {
         projects: "Projekte",
         clients: "Klientë",
