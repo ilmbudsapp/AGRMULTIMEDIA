@@ -251,7 +251,7 @@ export const translations: Record<Language, Translations> = {
       subtitle: "Sveobuhvatna multimedia rešenja prilagođena vašim potrebama",
       items: {
         webDesign: {
-          title: "Web Dizajn",
+          title: "Kreiranje vašeg Web sajta i Mobilne aplikacije",
           description: "Responsivni, SEO optimizovani web sajtovi i mobilne aplikacije za Android i iOS koji privlače posetioce i konvertuju ih u klijente.",
           features: ["Custom dizajn", "Mobile responsivan", "SEO optimizacija", "Android & iOS aplikacije"]
         },
@@ -447,7 +447,7 @@ export const translations: Record<Language, Translations> = {
       subtitle: "Comprehensive multimedia solutions tailored to your needs",
       items: {
         webDesign: {
-          title: "Web Design",
+          title: "Creating your Website and Mobile Application",
           description: "Responsive, SEO-optimized websites and mobile applications for Android and iOS that attract visitors and convert them into clients.",
           features: ["Custom Design", "Mobile Responsive", "SEO Optimization", "Android & iOS Apps"]
         },
@@ -643,7 +643,7 @@ export const translations: Record<Language, Translations> = {
       subtitle: "Umfassende Multimedia-Lösungen, maßgeschneidert für Ihre Bedürfnisse",
       items: {
         webDesign: {
-          title: "Webdesign",
+          title: "Erstellung Ihrer Website und Mobile Anwendung",
           description: "Responsive, SEO-optimierte Websites und mobile Anwendungen für Android und iOS, die Besucher anziehen und in Kunden verwandeln.",
           features: ["Custom Design", "Mobile Responsive", "SEO-Optimierung", "Android & iOS Apps"]
         },
@@ -839,7 +839,7 @@ export const translations: Record<Language, Translations> = {
       subtitle: "Zgjidhje multimedia gjithëpërfshirëse të përshtatura për nevojat tuaja",
       items: {
         webDesign: {
-          title: "Web Dizajn",
+          title: "Krijimi i Faqes suaj të Internetit dhe Aplikacionit Mobil",
           description: "Uebsajte përgjigës, të optimizuara për SEO dhe aplikacione mobile për Android dhe iOS që tërheqin vizitorë dhe i kthejnë ata në klientë.",
           features: ["Dizajn i Personalizuar", "Mobile Responsive", "Optimizim SEO", "Aplikacione Android & iOS"]
         },
