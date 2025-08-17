@@ -231,10 +231,10 @@ export const translations: Record<Language, Translations> = {
       locations: ["Novi Sad", "Beograd", "Srbija"]
     },
     about: {
-      title: "O AGR Multimedia",
+      title: "O MULTIMEDIA AGRONDESIGN",
       subtitle: "Kreiramo izuzetne digitalne doživljaje koji pokreću vaš biznis napred",
       storyTitle: "Naša priča",
-      storyP1: "AGR Multimedia je osnovan sa vizijom da pomaže biznis-ima da se istaknu u digitalnom svetu. Specijalizovani smo za kreiranje visokih kvaliteta multimedia sadržaja koji privlači pažnju, gradi brendove i pokreće rezultate.",
+      storyP1: "MULTIMEDIA AGRONDESIGN je osnovan sa vizijom da pomaže biznis-ima da se istaknu u digitalnom svetu. Specijalizovani smo za kreiranje visokih kvaliteta multimedia sadržaja koji privlači pažnju, gradi brendove i pokreće rezultate.",
       storyP2: "Naš tim sastoji od iskusnih dizajnera, developera i marketing stručnjaka koji rade zajedno da bi vašim idejama dali život kroz inovativna digitalna rešenja.",
       stats: {
         projects: "Projekata",
@@ -402,7 +402,7 @@ export const translations: Record<Language, Translations> = {
       services: "Usluge",
       company: "Kompanija",
       contact: "Kontakt",
-      copyright: "© 2023 AGR Multimedia. Sva prava zadržana.",
+      copyright: "© 2023 MULTIMEDIA AGRONDESIGN. Sva prava zadržana.",
       privacy: "Privatnost",
       terms: "Uslovi",
       cookies: "Kolačići",
@@ -427,10 +427,10 @@ export const translations: Record<Language, Translations> = {
       locations: ["Novi Sad", "Belgrade", "Serbia"]
     },
     about: {
-      title: "About AGR Multimedia",
+      title: "About MULTIMEDIA AGRONDESIGN",
       subtitle: "Creating exceptional digital experiences that drive your business forward",
       storyTitle: "Our Story",
-      storyP1: "AGR Multimedia was founded with a vision to help businesses stand out in the digital world. We specialize in creating high-quality multimedia content that attracts attention, builds brands and drives results.",
+      storyP1: "MULTIMEDIA AGRONDESIGN was founded with a vision to help businesses stand out in the digital world. We specialize in creating high-quality multimedia content that attracts attention, builds brands and drives results.",
       storyP2: "Our team consists of experienced designers, developers and marketing professionals who work together to bring your ideas to life through innovative digital solutions.",
       stats: {
         projects: "Projects",
@@ -598,7 +598,7 @@ export const translations: Record<Language, Translations> = {
       services: "Services",
       company: "Company",
       contact: "Contact",
-      copyright: "© 2023 AGR Multimedia. All rights reserved.",
+      copyright: "© 2023 MULTIMEDIA AGRONDESIGN. All rights reserved.",
       privacy: "Privacy",
       terms: "Terms",
       cookies: "Cookies",
@@ -623,7 +623,7 @@ export const translations: Record<Language, Translations> = {
       locations: ["Novi Sad", "Belgrad", "Serbien"]
     },
     about: {
-      title: "Über AGR Multimedia",
+      title: "Über MULTIMEDIA AGRONDESIGN",
       subtitle: "Wir schaffen außergewöhnliche digitale Erlebnisse, die Ihr Unternehmen voranbringen",
       storyTitle: "Unsere Geschichte",
       storyP1: "AGR Multimedia wurde mit der Vision gegründet, Unternehmen dabei zu helfen, sich in der digitalen Welt zu behaupten. Wir sind spezialisiert auf die Erstellung hochwertiger Multimedia-Inhalte, die Aufmerksamkeit erregen, Marken aufbauen und Ergebnisse erzielen.",

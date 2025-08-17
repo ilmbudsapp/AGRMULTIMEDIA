@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageSelector from "./LanguageSelector";
+import logoImage from '@assets/MULTIMEDIA AGRONDESIGN LOGO IN NERO_1755440866155.png';
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,10 +23,14 @@ export default function Navigation() {
           <div className="flex-shrink-0">
             <button 
               onClick={() => scrollToSection('home')} 
-              className="text-2xl font-bold gradient-text"
+              className="flex items-center"
               data-testid="logo-button"
             >
-              AGR Multimedia
+              <img 
+                src={logoImage} 
+                alt="MULTIMEDIA AGRONDESIGN" 
+                className="h-8 w-auto"
+              />
             </button>
           </div>
           
