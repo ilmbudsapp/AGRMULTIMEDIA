@@ -228,7 +228,7 @@ export const translations: Record<Language, Translations> = {
       servicesButton: "Pogledajte usluge",
       portfolioButton: "Naši radovi",
       locationTitle: "Radimo sa vodećim brendovima",
-      locations: ["Novi Sad", "Beograd", "Srbija"]
+      locations: ["Stuttgart", "Milano", "Ulm"]
     },
     about: {
       title: "O MULTIMEDIA AGRONDESIGN",
@@ -424,7 +424,7 @@ export const translations: Record<Language, Translations> = {
       servicesButton: "View Services",
       portfolioButton: "Our Work",
       locationTitle: "Working with leading brands",
-      locations: ["Novi Sad", "Belgrade", "Serbia"]
+      locations: ["Stuttgart", "Milano", "Ulm"]
     },
     about: {
       title: "About MULTIMEDIA AGRONDESIGN",
@@ -620,7 +620,7 @@ export const translations: Record<Language, Translations> = {
       servicesButton: "Leistungen ansehen",
       portfolioButton: "Unsere Arbeiten",
       locationTitle: "Arbeiten mit führenden Marken",
-      locations: ["Novi Sad", "Belgrad", "Serbien"]
+      locations: ["Stuttgart", "Milano", "Ulm"]
     },
     about: {
       title: "Über MULTIMEDIA AGRONDESIGN",
@@ -816,7 +816,7 @@ export const translations: Record<Language, Translations> = {
       servicesButton: "Shiko Shërbimet",
       portfolioButton: "Puna Jonë",
       locationTitle: "Duke punuar me marka kryesuese",
-      locations: ["Novi Sad", "Beograd", "Serbi"]
+      locations: ["Stuttgart", "Milano", "Ulm"]
     },
     about: {
       title: "Rreth MULTIMEDIA AGRONDESIGN",
