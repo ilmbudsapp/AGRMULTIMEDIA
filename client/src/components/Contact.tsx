@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Facebook, Instagram } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
@@ -214,7 +214,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="font-medium text-navy">Telefon</p>
-                    <p className="text-gray-600">+381 XX XXX XXXX</p>
+                    <p className="text-gray-600">+49 15560 873124</p>
                   </div>
                 </div>
                 
@@ -224,7 +224,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="font-medium text-navy">Email</p>
-                    <p className="text-gray-600">info@agrmultimedia.eu</p>
+                    <p className="text-gray-600">agron6922@gmail.com</p>
                   </div>
                 </div>
                 
@@ -234,7 +234,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="font-medium text-navy">Lokacija</p>
-                    <p className="text-gray-600">Novi Sad, Srbija</p>
+                    <p className="text-gray-600">Geislingen an der Steige, Nemačka</p>
                   </div>
                 </div>
               </div>
@@ -244,32 +244,22 @@ export default function Contact() {
               <h4 className="text-lg font-semibold text-navy mb-4" data-testid="social-media-title">Pratite nas</h4>
               <div className="flex space-x-4" data-testid="social-media-links">
                 <a 
-                  href="#" 
+                  href="https://www.facebook.com/halidosmani74" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-electric-blue/10 w-12 h-12 rounded-xl flex items-center justify-center text-electric-blue hover:bg-electric-blue hover:text-white transition-all duration-300"
                   data-testid="social-facebook"
                 >
                   <Facebook className="w-5 h-5" />
                 </a>
                 <a 
-                  href="#" 
+                  href="https://www.instagram.com/agrondesign/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-electric-blue/10 w-12 h-12 rounded-xl flex items-center justify-center text-electric-blue hover:bg-electric-blue hover:text-white transition-all duration-300"
                   data-testid="social-instagram"
                 >
                   <Instagram className="w-5 h-5" />
-                </a>
-                <a 
-                  href="#" 
-                  className="bg-electric-blue/10 w-12 h-12 rounded-xl flex items-center justify-center text-electric-blue hover:bg-electric-blue hover:text-white transition-all duration-300"
-                  data-testid="social-linkedin"
-                >
-                  <Linkedin className="w-5 h-5" />
-                </a>
-                <a 
-                  href="#" 
-                  className="bg-electric-blue/10 w-12 h-12 rounded-xl flex items-center justify-center text-electric-blue hover:bg-electric-blue hover:text-white transition-all duration-300"
-                  data-testid="social-twitter"
-                >
-                  <Twitter className="w-5 h-5" />
                 </a>
               </div>
             </div>
