@@ -224,7 +224,7 @@ export const translations: Record<Language, Translations> = {
     },
     hero: {
       title: "Kreativna Multimedia Rešenja",
-      subtitle: "Profesionalne usluge web dizajna, grafičkog dizajna, video produkcije i digitalnog marketinga za vaš biznis",
+      subtitle: "Profesionalne usluge web dizajna, grafičkog dizajna, video produkcije, digitalnog marketinga i razvoja mobilnih aplikacija za Android i iOS za vaš biznis",
       servicesButton: "Pogledajte usluge",
       portfolioButton: "Naši radovi",
       locationTitle: "Radimo sa vodećim brendovima",
@@ -420,7 +420,7 @@ export const translations: Record<Language, Translations> = {
     },
     hero: {
       title: "Creative Multimedia Solutions",
-      subtitle: "Professional web design, graphic design, video production and digital marketing services for your business",
+      subtitle: "Professional web design, graphic design, video production, digital marketing services and mobile app development for Android and iOS for your business",
       servicesButton: "View Services",
       portfolioButton: "Our Work",
       locationTitle: "Working with leading brands",
@@ -616,7 +616,7 @@ export const translations: Record<Language, Translations> = {
     },
     hero: {
       title: "Kreative Multimedia-Lösungen",
-      subtitle: "Professionelle Webdesign-, Grafikdesign-, Videoproduktions- und Digital Marketing-Services für Ihr Unternehmen",
+      subtitle: "Professionelle Webdesign-, Grafikdesign-, Videoproduktions-, Digital Marketing-Services und mobile App-Entwicklung für Android und iOS für Ihr Unternehmen",
       servicesButton: "Leistungen ansehen",
       portfolioButton: "Unsere Arbeiten",
       locationTitle: "Arbeiten mit führenden Marken",
@@ -812,7 +812,7 @@ export const translations: Record<Language, Translations> = {
     },
     hero: {
       title: "Zgjidhje Kreative Multimedia",
-      subtitle: "Shërbime profesionale të web dizajnit, dizajnit grafik, prodhimit të videove dhe marketingut dixhital për biznesin tuaj",
+      subtitle: "Shërbime profesionale të web dizajnit, dizajnit grafik, prodhimit të videove, marketingut dixhital dhe zhvillimit të aplikacioneve mobile për Android dhe iOS për biznesin tuaj",
       servicesButton: "Shiko Shërbimet",
       portfolioButton: "Puna Jonë",
       locationTitle: "Duke punuar me marka kryesuese",
