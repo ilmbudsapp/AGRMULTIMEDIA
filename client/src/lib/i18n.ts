@@ -1004,8 +1004,8 @@ export const getTranslations = (lang: Language): Translations => {
 };
 
 export const languages: Array<{ code: Language; name: string; flag: string }> = [
-  { code: 'sr', name: 'Srpski', flag: '🇷🇸' },
   { code: 'en', name: 'English', flag: '🇬🇧' },
   { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
-  { code: 'sq', name: 'Shqip', flag: '🇦🇱' }
+  { code: 'sq', name: 'Shqip', flag: '🇦🇱' },
+  { code: 'sr', name: 'Srpski', flag: '🇷🇸' }
 ];
