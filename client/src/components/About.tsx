@@ -1,5 +1,6 @@
 import { Award } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import brandingImage from "@/assets/branding-image.jpg";
 
 export default function About() {
   const { t } = useLanguage();
@@ -43,7 +44,7 @@ export default function About() {
             {/* Professional team photo or office space */}
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img 
-                src="/attached_assets/BRANDNG_1755470993941.jpg" 
+                src={brandingImage} 
                 alt="MULTIMEDIA AGRONDESIGN branding projekti" 
                 className="w-full h-auto"
                 data-testid="about-team-image"
