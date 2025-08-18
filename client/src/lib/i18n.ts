@@ -1511,6 +1511,90 @@ export const translations: Record<Language, Translations> = {
           description: "Dizajner Grafik & Zhvillues"
         }
       }
+    },
+
+    // Privacy Policy content (Albanian)
+    privacy: {
+      title: "Politika e Privatësisë",
+      subtitle: "Informacione mbi mbrojtjen e të dhënave personale në përputhje me GDPR",
+      sections: {
+        dataCollection: {
+          title: "Mbledhja e të Dhënave",
+          content: "Ne mbledhim të dhëna personale që ju jepni vullnetarisht përmes formës së kontaktit, duke përfshirë emrin, adresën e emailit dhe mesazhin. Këto të dhëna përdoren ekskluzivisht për komunikim dhe ofrimin e shërbimeve tona."
+        },
+        dataUsage: {
+          title: "Përdorimi i të Dhënave",
+          content: "Ne përdorim të dhënat tuaja personale për: përgjigjen ndaj pyetjeve tuaja, ofrimin e shërbimeve të kërkuara, përmirësimin e faqes sonë dhe shërbimeve, dhe dërgimin e informacioneve relevante mbi shërbimet tona (vetëm me lejen tuaj)."
+        },
+        cookies: {
+          title: "Cookies",
+          content: "Ne përdorim cookies për të përmirësuar funksionalitetin e faqes dhe për analizë trafikut. Ju mund t'i kontrolloni cookies përmes cilësimeve të browserit tuaj. Për informacione më të detajuara, shikoni Politikën tonë të Cookies."
+        },
+        rights: {
+          title: "Të Drejtat Tuaja",
+          content: "Ju keni të drejtën e aksesit, korrigjimit, fshirjes dhe transferimit të të dhënave tuaja. Ju gjithashtu mund të kufizoni ose kundërshtoni përpunimin e të dhënave tuaja. Për të ushtruar këto të drejta, na kontaktoni përmes emailit."
+        },
+        contact: {
+          title: "Kontakti",
+          content: "Për pyetje mbi privatësinë na kontaktoni në: agron6922@gmail.com. Ne rezervojmë të drejtën për të përditësuar këtë politikë, për të cilën do t'ju njoftojmë përmes faqes sonë."
+        }
+      }
+    },
+
+    // Terms of Service content (Albanian)
+    terms: {
+      title: "Kushtet e Shërbimit",
+      subtitle: "Rregullat dhe kushtet për përdorimin e faqes sonë dhe shërbimeve",
+      sections: {
+        scope: {
+          title: "Fushëveprimi",
+          content: "Këto kushte zbatohen për të gjithë përdoruesit e faqes sonë agrmultimedia.eu dhe shërbimeve tona. Duke përdorur faqen, ju i pranoni këto kushte plotësisht."
+        },
+        services: {
+          title: "Shërbimet Tona",
+          content: "Ne ofrojmë shërbime web dizajni, dizajni grafik, prodhimi video, marketingu dixhital dhe zhvillimi i aplikacioneve mobile. Të gjitha shërbimet ofrohen profesionalisht dhe brenda afateve të rëna dakord."
+        },
+        liability: {
+          title: "Kufizimi i Përgjegjësisë",
+          content: "Ne nuk jemi përgjegjës për dëmet që rrjedhin nga përdorimi i faqes sonë përveç rasteve të neglizhencës së rëndë ose qëllimit. Përgjegjësia jonë kufizohet në vlerën e shërbimeve të kontratuara."
+        },
+        intellectual: {
+          title: "Pronësia Intelektuale",
+          content: "I gjithë përmbajtja në faqe është e mbrojtur nga të drejtat e autorit. Kopjimi, shpërndarja ose përdorimi komercial pa leje me shkrim është i ndaluar. Projektet e krijuara për klientët bëhen pronë e tyre pas pagesës."
+        },
+        termination: {
+          title: "Ndërprerja e Shërbimeve",
+          content: "Ne rezervojmë të drejtën për të ndërprerë shërbimet në rast të shkeljes së kushteve të përdorimit. Klientët mund të anulojnë shërbimet duke respektuar kushtet e rëna dakord të anulimit."
+        }
+      }
+    },
+
+    // Cookie Policy content (Albanian)
+    cookies: {
+      title: "Politika e Cookies",
+      subtitle: "Si përdorim cookies në faqen tonë",
+      sections: {
+        whatAre: {
+          title: "Çfarë janë Cookies",
+          content: "Cookies janë skedarë të vegjël që ruhen në pajisjen tuaj kur vizitoni faqen tonë. Ato na ndihmojnë ta bëjmë faqen të funksionojë më mirë dhe t'ju ofrojmë një përvojë më të mirë përdoruesi."
+        },
+        howWeUse: {
+          title: "Si i Përdorim Cookies",
+          content: "Ne përdorim cookies për: ruajtjen e gjuhës dhe cilësimeve tuaja, analizën e trafikut të faqes, përmirësimin e performancës së faqes, dhe ofrimin e funksioneve të sigurisë."
+        },
+        types: {
+          title: "Llojet e Cookies",
+          content: "Ne përdorim cookies thelbësore (të nevojshme për funksionimin e faqes), cookies analitike (Google Analytics), cookies funksionale (ruajtja e cilësimeve), dhe cookies performancë (optimizimi i faqes)."
+        },
+        control: {
+          title: "Kontrolli i Cookies",
+          content: "Ju mund t'i kontrolloni cookies përmes cilësimeve të browserit tuaj. Ju mund t'i bllokoni ose t'i fshini, por kjo mund të ndikojë në funksionalitetin e faqes. Shumica e browserëve i pranojnë cookies automatikisht."
+        },
+        thirdParty: {
+          title: "Cookies të Palëve të Treta",
+          content: "Ne përdorim Google Analytics për analizë trafikut. Google mund të vendosë cookies të tij. Ju lutemi kontrolloni politikën e privatësisë së Google për më shumë informacione mbi cookies e tyre."
+        }
+      }
     }
   }
 };
