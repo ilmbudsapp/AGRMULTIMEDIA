@@ -12,32 +12,32 @@ export default function WebDesign() {
   const portfolioItems = [
     {
       id: 1,
-      title: "TechFlow Business Solutions",
-      description: "Kompleksna web platforma za upravljanje biznisom",
+      title: t.webDesign.portfolio.items[0].title,
+      description: t.webDesign.portfolio.items[0].description,
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
       type: "website",
       features: ["React", "Node.js", "PostgreSQL", "Real-time Analytics"]
     },
     {
       id: 2,
-      title: "EcoMarket Online Store",
-      description: "E-commerce platforma za ekološke proizvode",
+      title: t.webDesign.portfolio.items[1].title,
+      description: t.webDesign.portfolio.items[1].description,
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
       type: "website",
       features: ["Payment Gateway", "Inventory Management", "Multi-language", "Mobile First"]
     },
     {
       id: 3,
-      title: "FitLife Mobile App",
-      description: "Personalizovana fitness aplikacija za Android i iOS",
+      title: t.webDesign.portfolio.items[2].title,
+      description: t.webDesign.portfolio.items[2].description,
       image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=600&fit=crop",
       type: "mobile",
       features: ["Workout Tracking", "Nutrition Plans", "Social Features", "Offline Mode"]
     },
     {
       id: 4,
-      title: "SmartHome Control",
-      description: "IoT aplikacija za upravljanje pametnim domom",
+      title: t.webDesign.portfolio.items[3].title,
+      description: t.webDesign.portfolio.items[3].description,
       image: smartHomeImage,
       type: "mobile",
       features: ["Device Control", "Automation", "Voice Commands", "Energy Monitoring"]

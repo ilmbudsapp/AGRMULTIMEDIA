@@ -363,6 +363,10 @@ export interface Translations {
     };
     portfolio: {
       title: string;
+      items: {
+        title: string;
+        description: string;
+      }[];
     };
     technologies: {
       title: string;
@@ -748,7 +752,25 @@ export const translations: Record<Language, Translations> = {
         ]
       },
       portfolio: {
-        title: "Portfolio Projekata"
+        title: "Portfolio Projekata",
+        items: [
+          {
+            title: "TechFlow Business Solutions",
+            description: "Kompleksna web platforma za upravljanje biznisom"
+          },
+          {
+            title: "EcoMarket Online Store", 
+            description: "E-commerce platforma za ekološke proizvode"
+          },
+          {
+            title: "FitLife Mobile App",
+            description: "Personalizovana fitness aplikacija za Android i iOS"
+          },
+          {
+            title: "SmartHome Control",
+            description: "IoT aplikacija za upravljanje pametnim domom"
+          }
+        ]
       },
       technologies: {
         title: "Tehnologije koje Koristim",
@@ -1132,7 +1154,25 @@ export const translations: Record<Language, Translations> = {
         ]
       },
       portfolio: {
-        title: "Project Portfolio"
+        title: "Project Portfolio",
+        items: [
+          {
+            title: "TechFlow Business Solutions",
+            description: "Complex web platform for business management"
+          },
+          {
+            title: "EcoMarket Online Store", 
+            description: "E-commerce platform for eco-friendly products"
+          },
+          {
+            title: "FitLife Mobile App",
+            description: "Personalized fitness application for Android and iOS"
+          },
+          {
+            title: "SmartHome Control",
+            description: "IoT application for smart home management"
+          }
+        ]
       },
       technologies: {
         title: "Technologies I Use",
@@ -1516,7 +1556,25 @@ export const translations: Record<Language, Translations> = {
         ]
       },
       portfolio: {
-        title: "Projekt-Portfolio"
+        title: "Projekt-Portfolio",
+        items: [
+          {
+            title: "TechFlow Business Solutions",
+            description: "Komplexe Web-Plattform für Geschäftsverwaltung"
+          },
+          {
+            title: "EcoMarket Online Store", 
+            description: "E-Commerce-Plattform für umweltfreundliche Produkte"
+          },
+          {
+            title: "FitLife Mobile App",
+            description: "Personalisierte Fitness-Anwendung für Android und iOS"
+          },
+          {
+            title: "SmartHome Control",
+            description: "IoT-Anwendung für Smart Home-Verwaltung"
+          }
+        ]
       },
       technologies: {
         title: "Technologien die ich verwende",
@@ -1900,7 +1958,25 @@ export const translations: Record<Language, Translations> = {
         ]
       },
       portfolio: {
-        title: "Portfolioja e Projekteve"
+        title: "Portfolioja e Projekteve",
+        items: [
+          {
+            title: "TechFlow Business Solutions",
+            description: "Platformë web komplekse për menaxhimin e biznesit"
+          },
+          {
+            title: "EcoMarket Online Store", 
+            description: "Platformë e-commerce për produkte miqësore me mjedisin"
+          },
+          {
+            title: "FitLife Mobile App",
+            description: "Aplikacion fitness i personalizuar për Android dhe iOS"
+          },
+          {
+            title: "SmartHome Control",
+            description: "Aplikacion IoT për menaxhimin e shtëpisë inteligjente"
+          }
+        ]
       },
       technologies: {
         title: "Teknologjitë që Përdor",
