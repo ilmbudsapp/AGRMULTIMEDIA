@@ -1,6 +1,6 @@
 import { ChevronDown } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import heroBackground from "@/assets/hero-background-ps-pr.png";
+import heroBackground from "@/assets/hero-background-with-ps-pr.png";
 
 export default function Hero() {
   const { t } = useLanguage();
@@ -22,10 +22,10 @@ export default function Hero() {
       ></div>
       
       {/* Dark overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/80"></div>
+      <div className="absolute inset-0 bg-black/85"></div>
       
       {/* Gradient overlay for artistic effect */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-navy/70 to-black/50"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-navy/60 to-black/65"></div>
       
       {/* Subtle animated elements */}
       <div className="absolute inset-0 opacity-10">
