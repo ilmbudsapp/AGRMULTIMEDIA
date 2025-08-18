@@ -12,19 +12,72 @@ export default function Impresum() {
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-6 max-w-4xl">
           <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
-            <h1 className="text-4xl font-bold text-navy mb-8 text-center">
-              {t.footer.impresum}
-            </h1>
+            <div className="text-center mb-12">
+              <h1 className="text-4xl font-bold text-navy mb-4">
+                {t.impresum.title}
+              </h1>
+              <p className="text-xl text-gray-600">
+                {t.impresum.subtitle}
+              </p>
+            </div>
             
-            <div className="prose prose-lg max-w-none">
-              <div className="space-y-8 text-gray-700 leading-relaxed">
-                {/* Tekstovi će biti dodati kada korisnik da sve jezike */}
-                <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-electric-blue">
-                  <p className="text-center text-gray-600">
-                    Impresum sadržaj će biti ažuriran sa vašim podacima...
-                  </p>
+            <div className="space-y-10">
+              {/* Company Information */}
+              <section className="bg-gray-50 rounded-lg p-6">
+                <h2 className="text-2xl font-semibold text-navy mb-4 flex items-center">
+                  <div className="w-1 h-8 bg-electric-blue mr-3 rounded"></div>
+                  {t.impresum.sections.company.title}
+                </h2>
+                <div className="space-y-2 text-gray-700">
+                  <p className="font-medium text-lg">{t.impresum.sections.company.owner}</p>
+                  <p className="whitespace-pre-line leading-relaxed">{t.impresum.sections.company.address}</p>
                 </div>
-              </div>
+              </section>
+
+              {/* Contact Information */}
+              <section className="bg-gray-50 rounded-lg p-6">
+                <h2 className="text-2xl font-semibold text-navy mb-4 flex items-center">
+                  <div className="w-1 h-8 bg-electric-blue mr-3 rounded"></div>
+                  {t.impresum.sections.contact.title}
+                </h2>
+                <div className="text-gray-700">
+                  <p className="text-lg">{t.impresum.sections.contact.email}</p>
+                </div>
+              </section>
+
+              {/* Representative */}
+              <section className="bg-gray-50 rounded-lg p-6">
+                <h2 className="text-2xl font-semibold text-navy mb-4 flex items-center">
+                  <div className="w-1 h-8 bg-electric-blue mr-3 rounded"></div>
+                  {t.impresum.sections.representative.title}
+                </h2>
+                <div className="text-gray-700">
+                  <p className="text-lg font-medium">{t.impresum.sections.representative.name}</p>
+                </div>
+              </section>
+
+              {/* Tax Information */}
+              <section className="bg-gray-50 rounded-lg p-6">
+                <h2 className="text-2xl font-semibold text-navy mb-4 flex items-center">
+                  <div className="w-1 h-8 bg-electric-blue mr-3 rounded"></div>
+                  {t.impresum.sections.tax.title}
+                </h2>
+                <div className="space-y-3 text-gray-700">
+                  <p className="text-lg">{t.impresum.sections.tax.taxNumber}</p>
+                  <p className="text-sm leading-relaxed">{t.impresum.sections.tax.vatNumber}</p>
+                </div>
+              </section>
+
+              {/* Professional Title */}
+              <section className="bg-gray-50 rounded-lg p-6">
+                <h2 className="text-2xl font-semibold text-navy mb-4 flex items-center">
+                  <div className="w-1 h-8 bg-electric-blue mr-3 rounded"></div>
+                  {t.impresum.sections.profession.title}
+                </h2>
+                <div className="text-gray-700">
+                  <p className="text-lg font-medium">{t.impresum.sections.profession.description}</p>
+                </div>
+              </section>
             </div>
           </div>
         </div>

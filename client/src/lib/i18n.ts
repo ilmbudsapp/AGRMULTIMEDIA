@@ -216,6 +216,36 @@ export interface Translations {
     impresum: string;
     career: string;
   };
+  
+  // Impresum content
+  impresum: {
+    title: string;
+    subtitle: string;
+    sections: {
+      company: {
+        title: string;
+        owner: string;
+        address: string;
+      };
+      contact: {
+        title: string;
+        email: string;
+      };
+      representative: {
+        title: string;
+        name: string;
+      };
+      tax: {
+        title: string;
+        taxNumber: string;
+        vatNumber: string;
+      };
+      profession: {
+        title: string;
+        description: string;
+      };
+    };
+  };
 }
 
 export const translations: Record<Language, Translations> = {
@@ -419,6 +449,36 @@ export const translations: Record<Language, Translations> = {
       cookies: "Kolačići",
       impresum: "Impresum",
       career: "Karijera"
+    },
+    
+    // Impresum content
+    impresum: {
+      title: "Impresum (Pravne informacije)",
+      subtitle: "Informacije u skladu sa § 5 TMG (Nemački zakon o telemedijima)",
+      sections: {
+        company: {
+          title: "AGRONDESIGN",
+          owner: "Vlasnik: Agron Osmani",
+          address: "Luise-Hainlen-Weg 4/4\n73312 Geislingen an der Steige\nNemačka"
+        },
+        contact: {
+          title: "Kontakt",
+          email: "Email: agron6922@gmail.com"
+        },
+        representative: {
+          title: "Pravno zastupa",
+          name: "Agron Osmani"
+        },
+        tax: {
+          title: "Poreske informacije",
+          taxNumber: "Poreski broj (Steuernummer): 48267305956",
+          vatNumber: "Identifikacioni broj za PDV u skladu sa §27a nemačkog zakona o PDV-u (USt-IdNr.): DE354016444"
+        },
+        profession: {
+          title: "Profesionalno zvanje",
+          description: "Grafički dizajner i programer"
+        }
+      }
     }
   },
   en: {
@@ -621,6 +681,36 @@ export const translations: Record<Language, Translations> = {
       cookies: "Cookies",
       impresum: "Legal Notice",
       career: "Career"
+    },
+    
+    // Impresum content  
+    impresum: {
+      title: "Imprint (Legal Notice)",
+      subtitle: "Information according to § 5 TMG",
+      sections: {
+        company: {
+          title: "AGRONDESIGN",
+          owner: "Owner: Agron Osmani",
+          address: "Luise-Hainlen-Weg 4/4\n73312 Geislingen an der Steige\nGermany"
+        },
+        contact: {
+          title: "Contact",
+          email: "Email: agron6922@gmail.com"
+        },
+        representative: {
+          title: "Represented by",
+          name: "Agron Osmani"
+        },
+        tax: {
+          title: "Tax Information",
+          taxNumber: "Tax Number (Steuernummer): 48267305956",
+          vatNumber: "VAT identification number in accordance with §27 a of the German VAT act (USt-IdNr.): DE354016444"
+        },
+        profession: {
+          title: "Professional Title",
+          description: "Graphic Designer & Developer"
+        }
+      }
     }
   },
   de: {
@@ -823,6 +913,36 @@ export const translations: Record<Language, Translations> = {
       cookies: "Cookies",
       impresum: "Impressum",
       career: "Karriere"
+    },
+    
+    // Impresum content (German)
+    impresum: {
+      title: "Impressum (Rechtliche Hinweise)",
+      subtitle: "Angaben gemäß § 5 TMG",
+      sections: {
+        company: {
+          title: "AGRONDESIGN",
+          owner: "Inhaber: Agron Osmani",
+          address: "Luise-Hainlen-Weg 4/4\n73312 Geislingen an der Steige\nDeutschland"
+        },
+        contact: {
+          title: "Kontakt",
+          email: "E-Mail: agron6922@gmail.com"
+        },
+        representative: {
+          title: "Vertreten durch",
+          name: "Agron Osmani"
+        },
+        tax: {
+          title: "Steuerliche Angaben",
+          taxNumber: "Steuernummer: 48267305956",
+          vatNumber: "Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz (USt-IdNr.): DE354016444"
+        },
+        profession: {
+          title: "Berufsbezeichnung",
+          description: "Grafikdesigner & Entwickler"
+        }
+      }
     }
   },
   sq: {
@@ -1025,6 +1145,36 @@ export const translations: Record<Language, Translations> = {
       cookies: "Cookies",
       impresum: "Impresum",
       career: "Karriera"
+    },
+    
+    // Impresum content (Albanian)
+    impresum: {
+      title: "Impresum (Informacion Ligjor)",
+      subtitle: "Të dhëna sipas § 5 TMG (Ligji gjerman për telemedian)",
+      sections: {
+        company: {
+          title: "AGRONDESIGN",
+          owner: "Pronar: Agron Osmani",
+          address: "Luise-Hainlen-Weg 4/4\n73312 Geislingen an der Steige\nGjermani"
+        },
+        contact: {
+          title: "Kontakti",
+          email: "Email: agron6922@gmail.com"
+        },
+        representative: {
+          title: "Përfaqësuar nga",
+          name: "Agron Osmani"
+        },
+        tax: {
+          title: "Informacione Tatimore",
+          taxNumber: "Numri Tatimor (Steuernummer): 48267305956",
+          vatNumber: "Numri i Identifikimit të TVSH-së sipas §27a të Ligjit Gjerman të TVSH-së (USt-IdNr.): DE354016444"
+        },
+        profession: {
+          title: "Titulli Profesional",
+          description: "Dizajner Grafik & Zhvillues"
+        }
+      }
     }
   }
 };
