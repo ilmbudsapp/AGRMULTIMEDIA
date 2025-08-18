@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Monitor, Smartphone, Tablet, Globe, Code, Palette, Search, Shield, Zap, Users } from "lucide-react";
 import { Link } from "wouter";
+import smartHomeImage from "@assets/generated_images/SmartHome_Control_App_Interface_b31d7e87.png";
 
 export default function WebDesign() {
   const { t } = useLanguage();
@@ -37,7 +38,7 @@ export default function WebDesign() {
       id: 4,
       title: "SmartHome Control",
       description: "IoT aplikacija za upravljanje pametnim domom",
-      image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=600&fit=crop",
+      image: smartHomeImage,
       type: "mobile",
       features: ["Device Control", "Automation", "Voice Commands", "Energy Monitoring"]
     }
