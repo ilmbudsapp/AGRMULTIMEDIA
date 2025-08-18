@@ -22,10 +22,10 @@ export default function Hero() {
       ></div>
       
       {/* Dark overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/80"></div>
+      <div className="absolute inset-0 bg-black/60"></div>
       
       {/* Gradient overlay for artistic effect */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black/65 via-navy/75 to-black/60"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-navy/50 to-black/35"></div>
       
       {/* Subtle animated elements */}
       <div className="absolute inset-0 opacity-10">
