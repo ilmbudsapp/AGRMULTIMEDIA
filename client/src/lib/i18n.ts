@@ -343,7 +343,7 @@ export const translations: Record<Language, Translations> = {
       contact: "Kontakt"
     },
     hero: {
-      title: "Kreativna Multimedia Rešenja",
+      title: "Kreativna Multimedijalna Rešenja",
       subtitle: "Profesionalne usluge kreiranja web stranica, web dizajna, grafičkog dizajna, video produkcije, digitalnog marketinga i razvoja mobilnih aplikacija za Android i iOS za vaš biznis",
       servicesButton: "Pogledajte usluge",
       portfolioButton: "Naši radovi",
@@ -975,7 +975,7 @@ export const translations: Record<Language, Translations> = {
       contact: "Kontakt"
     },
     hero: {
-      title: "Kreative Multimedia-Lösungen",
+      title: "Kreative Multimediale Lösungen",
       subtitle: "Professionelle Website-Erstellung, Webdesign, Grafikdesign, Videoproduktion, Digital Marketing-Services und mobile App-Entwicklung für Android und iOS für Ihr Unternehmen",
       servicesButton: "Leistungen ansehen",
       portfolioButton: "Unsere Arbeiten",
@@ -1291,7 +1291,7 @@ export const translations: Record<Language, Translations> = {
       contact: "Kontakt"
     },
     hero: {
-      title: "Zgjidhje Kreative Multimedia",
+      title: "Zgjidhje Kreative Multimediale",
       subtitle: "Shërbime profesionale të krijimit të faqeve web, web dizajnit, dizajnit grafik, prodhimit të videove, marketingut dixhital dhe zhvillimit të aplikacioneve mobile për Android dhe iOS për biznesin tuaj",
       servicesButton: "Shiko Shërbimet",
       portfolioButton: "Puna Jonë",
