@@ -866,18 +866,18 @@ export const translations: Record<Language, Translations> = {
       services: {
         logoDesign: {
           title: "Logo Dizajn",
-          description: "Kreiram memorable logotipe koji predstavljaju esenciju vašeg brenda",
-          features: ["Originalni koncepti", "Vektorski formati", "Brandbook", "Različite varijante", "Revizije uključene", "Vlasništvo dizajna"]
+          description: "Kreiram nezaboravne logotipe koji predstavljaju esenciju vašeg brenda",
+          features: ["Originalni koncepti", "Vektorski formati", "Brend priručnik", "Različite varijante", "Revizije uključene", "Vlasništvo dizajna"]
         },
         branding: {
           title: "Brending",
           description: "Kompletni vizuelni identitet koji gradi prepoznatljivost vašeg brenda",
-          features: ["Brandbook", "Vizuelni identitet", "Tipografija", "Paleta boja", "Aplikacije", "Brand Guidelines"]
+          features: ["Brend priručnik", "Vizuelni identitet", "Tipografija", "Paleta boja", "Aplikacije", "Smernice brenda"]
         },
         printMaterials: {
           title: "Print Materijali",
           description: "Fizički marketing materijali koji promovisuju vaš biznis profesionalno",
-          features: ["Majice i tekstil", "Pakovanja", "Kancelarijski materijal", "Marketing materijali", "Signage", "Branded proizvodi"]
+          features: ["Majice i tekstil", "Pakovanja", "Kancelarijski materijal", "Marketing materijali", "Oznake i natpisi", "Brendirani proizvodi"]
         }
       },
       process: {
@@ -909,17 +909,17 @@ export const translations: Record<Language, Translations> = {
             {
               title: "InnovateTech Solutions",
               description: "Moderna tehnološka kompanija",
-              category: "Tech startup"
+              category: "Tehnološki startup"
             },
             {
               title: "GreenHarvest",
               description: "Organska hrana i poljoprivreda",
-              category: "Organic food"
+              category: "Organska hrana"
             },
             {
               title: "AurumCraft",
               description: "Luksuzno zlatarstvo",
-              category: "Luxury jewelry"
+              category: "Luksuzni nakit"
             }
           ]
         },
@@ -934,17 +934,17 @@ export const translations: Record<Language, Translations> = {
             {
               title: "Aroma Collective",
               description: "Premium kafić brend",
-              category: "Food & Beverage"
+              category: "Hrana i piće"
             }
           ]
         },
         print: {
           title: "Print Materijali",
-          description: "Branded majice, kutije za pakovanje i promotivni materijali"
+          description: "Brendirane majice, kutije za pakovanje i promotivni materijali"
         },
         books: {
-          title: "Book Design",
-          description: "Profesionalni dizajn korica i layout-a za publikacije"
+          title: "Dizajn Knjiga",
+          description: "Profesionalni dizajn korica i raspoređenje za publikacije"
         }
       },
       cta: {
