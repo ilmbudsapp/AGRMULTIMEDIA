@@ -68,9 +68,9 @@ export default function Footer() {
               {t.footer.copyright}
             </p>
             <div className="flex space-x-6">
-              <a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">{t.footer.privacy}</a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">{t.footer.terms}</a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">{t.footer.cookies}</a>
+              <a href="/privacy" className="text-gray-300 hover:text-white transition-colors duration-300">{t.footer.privacy}</a>
+              <a href="/terms" className="text-gray-300 hover:text-white transition-colors duration-300">{t.footer.terms}</a>
+              <a href="/cookies" className="text-gray-300 hover:text-white transition-colors duration-300">{t.footer.cookies}</a>
               <a href="/impresum" className="text-gray-300 hover:text-white transition-colors duration-300">{t.footer.impresum}</a>
             </div>
           </div>

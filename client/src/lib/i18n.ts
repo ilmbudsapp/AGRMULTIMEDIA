@@ -246,6 +246,90 @@ export interface Translations {
       };
     };
   };
+
+  // Privacy Policy content
+  privacy: {
+    title: string;
+    subtitle: string;
+    sections: {
+      dataCollection: {
+        title: string;
+        content: string;
+      };
+      dataUsage: {
+        title: string;
+        content: string;
+      };
+      cookies: {
+        title: string;
+        content: string;
+      };
+      rights: {
+        title: string;
+        content: string;
+      };
+      contact: {
+        title: string;
+        content: string;
+      };
+    };
+  };
+
+  // Terms of Service content
+  terms: {
+    title: string;
+    subtitle: string;
+    sections: {
+      scope: {
+        title: string;
+        content: string;
+      };
+      services: {
+        title: string;
+        content: string;
+      };
+      liability: {
+        title: string;
+        content: string;
+      };
+      intellectual: {
+        title: string;
+        content: string;
+      };
+      termination: {
+        title: string;
+        content: string;
+      };
+    };
+  };
+
+  // Cookie Policy content
+  cookies: {
+    title: string;
+    subtitle: string;
+    sections: {
+      whatAre: {
+        title: string;
+        content: string;
+      };
+      howWeUse: {
+        title: string;
+        content: string;
+      };
+      types: {
+        title: string;
+        content: string;
+      };
+      control: {
+        title: string;
+        content: string;
+      };
+      thirdParty: {
+        title: string;
+        content: string;
+      };
+    };
+  };
 }
 
 export const translations: Record<Language, Translations> = {
@@ -477,6 +561,90 @@ export const translations: Record<Language, Translations> = {
         profession: {
           title: "Profesionalno zvanje",
           description: "Grafički dizajner i programer"
+        }
+      }
+    },
+
+    // Privacy Policy content (Serbian)
+    privacy: {
+      title: "Politika Privatnosti",
+      subtitle: "Informacije o zaštiti ličnih podataka u skladu sa GDPR",
+      sections: {
+        dataCollection: {
+          title: "Prikupljanje Podataka",
+          content: "Prikupljamo lične podatke koje vi dobrovoljno dajete preko kontakt forme, uključujući ime, email adresu i poruku. Ovi podaci se koriste isključivo u svrhu komunikacije i pružanja naših usluga."
+        },
+        dataUsage: {
+          title: "Korišćenje Podataka",
+          content: "Vaše lične podatke koristimo za: odgovaranje na vaše upite, pružanje requested usluga, poboljšanje našeg sajta i usluga, i slanje relevantnih informacija o našim uslugama (samo uz vašu dozvolu)."
+        },
+        cookies: {
+          title: "Kolačići (Cookies)",
+          content: "Koristimo kolačiće za poboljšanje funkcionalnosti sajta i analizu saobraćaja. Možete kontrolisati kolačiće kroz postavke vašeg browsera. Detaljnije informacije možete naći u našoj Politici Kolačića."
+        },
+        rights: {
+          title: "Vaša Prava",
+          content: "Imate pravo na pristup, ispravku, brisanje i prenosnost vaših podataka. Takođe možete ograničiti obradu ili se usprotiviti obradi vaših podataka. Za ostvarivanje ovih prava kontaktirajte nas putem emaila."
+        },
+        contact: {
+          title: "Kontakt",
+          content: "Za pitanja o zaštiti privatnosti kontaktirajte nas na: agron6922@gmail.com. Zadržavamo pravo da ažuriramo ovu politiku, o čemu ćemo vas obavestiti putem našeg sajta."
+        }
+      }
+    },
+
+    // Terms of Service content (Serbian)
+    terms: {
+      title: "Uslovi Korišćenja",
+      subtitle: "Pravila i uslovi korišćenja našeg sajta i usluga",
+      sections: {
+        scope: {
+          title: "Opseg Primene",
+          content: "Ovi uslovi se primenjuju na sve korisnike našeg sajta agrmultimedia.eu i naših usluga. Korišćenjem sajta prihvatate ove uslove u potpunosti."
+        },
+        services: {
+          title: "Naše Usluge",
+          content: "Pružamo usluge web dizajna, grafičkog dizajna, video produkcije, digitalnog marketinga i razvoja mobilnih aplikacija. Sve usluge se pružaju profesionalno i u dogovorenim rokovima."
+        },
+        liability: {
+          title: "Ograničenje Odgovornosti",
+          content: "Nismo odgovorni za štete nastale korišćenjem našeg sajta osim u slučajevima grubog nemara ili namere. Naša odgovornost je ograničena na vrednost ugovorenih usluga."
+        },
+        intellectual: {
+          title: "Intelektualna Svojina",
+          content: "Sav sadržaj na sajtu je zaštićen autorskim pravima. Zabranjeno je kopiranje, distribucija ili komercijalna upotreba bez pisane dozvole. Projekti kreirani za klijente postaju njihova svojina nakon plaćanja."
+        },
+        termination: {
+          title: "Prekid Usluga",
+          content: "Zadržavamo pravo da prekinemo pružanje usluga u slučaju kršenja uslova korišćenja. Klijenti mogu otkazati usluge uz poštovanje ugovorenih uslova otkazivanja."
+        }
+      }
+    },
+
+    // Cookie Policy content (Serbian)
+    cookies: {
+      title: "Politika Kolačića",
+      subtitle: "Kako koristimo kolačiće na našem sajtu",
+      sections: {
+        whatAre: {
+          title: "Šta su Kolačići",
+          content: "Kolačići su mali fajlovi koji se čuvaju na vašem uređaju kada posetite naš sajt. Oni nam pomažu da sajt funkcioniše bolje i pružimo vam bolji korisnik doživljaj."
+        },
+        howWeUse: {
+          title: "Kako Koristimo Kolačiće",
+          content: "Koristimo kolačiće za: pamćenje vaših jezika i postavki, analizu prometa na sajtu, poboljšanje performansi sajta, i obezbeđivanje sigurnosnih funkcija."
+        },
+        types: {
+          title: "Vrste Kolačića",
+          content: "Koristimo esencijalne kolačiće (potrebni za rad sajta), analitičke kolačiće (Google Analytics), funkcionalne kolačiće (pamćenje postavki), i performanse kolačiće (optimizacija sajta)."
+        },
+        control: {
+          title: "Kontrola Kolačića",
+          content: "Možete kontrolisati kolačiće kroz postavke vašeg browsera. Možete ih blokirati ili obrisati, ali to može uticati na funkcionalnost sajta. Većina browsera automatski prihvata kolačiće."
+        },
+        thirdParty: {
+          title: "Kolačići Treće Strane",
+          content: "Koristimo Google Analytics za analizu prometa. Google može postaviti svoje kolačiće. Molimo vas da proverite Google-ovu politiku privatnosti za više informacija o njihovim kolačićima."
         }
       }
     }
@@ -711,6 +879,90 @@ export const translations: Record<Language, Translations> = {
           description: "Graphic Designer & Developer"
         }
       }
+    },
+
+    // Privacy Policy content (English)
+    privacy: {
+      title: "Privacy Policy",
+      subtitle: "Information about personal data protection in accordance with GDPR",
+      sections: {
+        dataCollection: {
+          title: "Data Collection",
+          content: "We collect personal data that you voluntarily provide through the contact form, including name, email address and message. This data is used exclusively for communication and providing our services."
+        },
+        dataUsage: {
+          title: "Data Usage",
+          content: "We use your personal data for: responding to your inquiries, providing requested services, improving our website and services, and sending relevant information about our services (only with your permission)."
+        },
+        cookies: {
+          title: "Cookies",
+          content: "We use cookies to improve website functionality and analyze traffic. You can control cookies through your browser settings. For more detailed information, see our Cookie Policy."
+        },
+        rights: {
+          title: "Your Rights",
+          content: "You have the right to access, rectify, delete and portability of your data. You may also restrict or object to the processing of your data. To exercise these rights, contact us via email."
+        },
+        contact: {
+          title: "Contact",
+          content: "For privacy questions contact us at: agron6922@gmail.com. We reserve the right to update this policy, which we will notify you about through our website."
+        }
+      }
+    },
+
+    // Terms of Service content (English)
+    terms: {
+      title: "Terms of Service",
+      subtitle: "Rules and conditions for using our website and services",
+      sections: {
+        scope: {
+          title: "Scope of Application",
+          content: "These terms apply to all users of our website agrmultimedia.eu and our services. By using the website, you accept these terms in full."
+        },
+        services: {
+          title: "Our Services",
+          content: "We provide web design, graphic design, video production, digital marketing and mobile application development services. All services are provided professionally and within agreed timeframes."
+        },
+        liability: {
+          title: "Limitation of Liability",
+          content: "We are not liable for damages arising from the use of our website except in cases of gross negligence or intent. Our liability is limited to the value of contracted services."
+        },
+        intellectual: {
+          title: "Intellectual Property",
+          content: "All content on the website is protected by copyright. Copying, distribution or commercial use without written permission is prohibited. Projects created for clients become their property after payment."
+        },
+        termination: {
+          title: "Service Termination",
+          content: "We reserve the right to terminate services in case of violation of terms of use. Clients may cancel services subject to agreed cancellation terms."
+        }
+      }
+    },
+
+    // Cookie Policy content (English)
+    cookies: {
+      title: "Cookie Policy",
+      subtitle: "How we use cookies on our website",
+      sections: {
+        whatAre: {
+          title: "What are Cookies",
+          content: "Cookies are small files stored on your device when you visit our website. They help us make the website work better and provide you with a better user experience."
+        },
+        howWeUse: {
+          title: "How We Use Cookies",
+          content: "We use cookies for: remembering your language and settings, analyzing website traffic, improving website performance, and providing security functions."
+        },
+        types: {
+          title: "Types of Cookies",
+          content: "We use essential cookies (necessary for website operation), analytical cookies (Google Analytics), functional cookies (settings memory), and performance cookies (website optimization)."
+        },
+        control: {
+          title: "Cookie Control",
+          content: "You can control cookies through your browser settings. You can block or delete them, but this may affect website functionality. Most browsers automatically accept cookies."
+        },
+        thirdParty: {
+          title: "Third Party Cookies",
+          content: "We use Google Analytics for traffic analysis. Google may set its own cookies. Please check Google's privacy policy for more information about their cookies."
+        }
+      }
     }
   },
   de: {
@@ -941,6 +1193,90 @@ export const translations: Record<Language, Translations> = {
         profession: {
           title: "Berufsbezeichnung",
           description: "Grafikdesigner & Entwickler"
+        }
+      }
+    },
+
+    // Privacy Policy content (German)
+    privacy: {
+      title: "Datenschutzerklärung",
+      subtitle: "Informationen zum Schutz personenbezogener Daten gemäß DSGVO",
+      sections: {
+        dataCollection: {
+          title: "Datenerfassung",
+          content: "Wir sammeln personenbezogene Daten, die Sie freiwillig über das Kontaktformular bereitstellen, einschließlich Name, E-Mail-Adresse und Nachricht. Diese Daten werden ausschließlich zur Kommunikation und Bereitstellung unserer Dienstleistungen verwendet."
+        },
+        dataUsage: {
+          title: "Datenverwendung",
+          content: "Wir verwenden Ihre personenbezogenen Daten für: Beantwortung Ihrer Anfragen, Bereitstellung angeforderter Dienstleistungen, Verbesserung unserer Website und Dienstleistungen, und Versendung relevanter Informationen über unsere Dienstleistungen (nur mit Ihrer Erlaubnis)."
+        },
+        cookies: {
+          title: "Cookies",
+          content: "Wir verwenden Cookies zur Verbesserung der Website-Funktionalität und zur Analyse des Traffics. Sie können Cookies über Ihre Browser-Einstellungen kontrollieren. Detailliertere Informationen finden Sie in unserer Cookie-Richtlinie."
+        },
+        rights: {
+          title: "Ihre Rechte",
+          content: "Sie haben das Recht auf Zugang, Berichtigung, Löschung und Übertragbarkeit Ihrer Daten. Sie können auch die Verarbeitung einschränken oder der Verarbeitung Ihrer Daten widersprechen. Um diese Rechte auszuüben, kontaktieren Sie uns per E-Mail."
+        },
+        contact: {
+          title: "Kontakt",
+          content: "Für Datenschutzfragen kontaktieren Sie uns unter: agron6922@gmail.com. Wir behalten uns das Recht vor, diese Richtlinie zu aktualisieren, worüber wir Sie über unsere Website informieren werden."
+        }
+      }
+    },
+
+    // Terms of Service content (German)
+    terms: {
+      title: "Nutzungsbedingungen",
+      subtitle: "Regeln und Bedingungen für die Nutzung unserer Website und Dienstleistungen",
+      sections: {
+        scope: {
+          title: "Anwendungsbereich",
+          content: "Diese Bedingungen gelten für alle Nutzer unserer Website agrmultimedia.eu und unserer Dienstleistungen. Durch die Nutzung der Website akzeptieren Sie diese Bedingungen vollständig."
+        },
+        services: {
+          title: "Unsere Dienstleistungen",
+          content: "Wir bieten Webdesign-, Grafikdesign-, Videoproduktions-, Digital Marketing- und mobile Anwendungsentwicklungsdienstleistungen an. Alle Dienstleistungen werden professionell und innerhalb vereinbarter Zeitrahmen erbracht."
+        },
+        liability: {
+          title: "Haftungsbeschränkung",
+          content: "Wir haften nicht für Schäden, die durch die Nutzung unserer Website entstehen, außer in Fällen grober Fahrlässigkeit oder Vorsatz. Unsere Haftung ist auf den Wert der vertraglich vereinbarten Dienstleistungen beschränkt."
+        },
+        intellectual: {
+          title: "Geistiges Eigentum",
+          content: "Alle Inhalte auf der Website sind urheberrechtlich geschützt. Kopieren, Verbreitung oder kommerzielle Nutzung ohne schriftliche Genehmigung ist verboten. Für Kunden erstellte Projekte werden nach Zahlung zu deren Eigentum."
+        },
+        termination: {
+          title: "Beendigung der Dienstleistungen",
+          content: "Wir behalten uns das Recht vor, Dienstleistungen bei Verletzung der Nutzungsbedingungen zu beenden. Kunden können Dienstleistungen unter Beachtung vereinbarter Kündigungsbedingungen kündigen."
+        }
+      }
+    },
+
+    // Cookie Policy content (German)
+    cookies: {
+      title: "Cookie-Richtlinie",
+      subtitle: "Wie wir Cookies auf unserer Website verwenden",
+      sections: {
+        whatAre: {
+          title: "Was sind Cookies",
+          content: "Cookies sind kleine Dateien, die auf Ihrem Gerät gespeichert werden, wenn Sie unsere Website besuchen. Sie helfen uns, die Website besser funktionieren zu lassen und Ihnen eine bessere Benutzererfahrung zu bieten."
+        },
+        howWeUse: {
+          title: "Wie wir Cookies verwenden",
+          content: "Wir verwenden Cookies für: Speichern Ihrer Sprach- und Einstellungen, Analyse des Website-Traffics, Verbesserung der Website-Leistung und Bereitstellung von Sicherheitsfunktionen."
+        },
+        types: {
+          title: "Arten von Cookies",
+          content: "Wir verwenden essenzielle Cookies (notwendig für den Website-Betrieb), analytische Cookies (Google Analytics), funktionale Cookies (Einstellungen speichern) und Leistungs-Cookies (Website-Optimierung)."
+        },
+        control: {
+          title: "Cookie-Kontrolle",
+          content: "Sie können Cookies über Ihre Browser-Einstellungen kontrollieren. Sie können sie blockieren oder löschen, aber dies kann die Website-Funktionalität beeinträchtigen. Die meisten Browser akzeptieren Cookies automatisch."
+        },
+        thirdParty: {
+          title: "Cookies von Dritten",
+          content: "Wir verwenden Google Analytics zur Traffic-Analyse. Google kann eigene Cookies setzen. Bitte überprüfen Sie Googles Datenschutzrichtlinie für weitere Informationen über deren Cookies."
         }
       }
     }
