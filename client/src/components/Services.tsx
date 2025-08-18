@@ -1,5 +1,6 @@
 import { Code, Palette, Video, Megaphone, Camera, Settings, ArrowRight, Check } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { Link } from "wouter";
 
 export default function Services() {
   const { t } = useLanguage();
@@ -10,7 +11,8 @@ export default function Services() {
       title: t.services.items.webDesign.title,
       description: t.services.items.webDesign.description,
       features: t.services.items.webDesign.features,
-      gradient: "from-electric-blue to-purple-500"
+      gradient: "from-electric-blue to-purple-500",
+      link: "/web-design"
     },
     {
       icon: <Palette className="text-white text-2xl" />,
@@ -90,13 +92,21 @@ export default function Services() {
                   </li>
                 ))}
               </ul>
-              <button 
-                onClick={scrollToContact}
-                className="inline-flex items-center text-electric-blue font-semibold hover:text-purple-500 transition-colors duration-300"
-                data-testid={`service-cta-${index}`}
-              >
-                {t.services.learnMore} <ArrowRight className="w-4 h-4 ml-2" />
-              </button>
+              {service.link ? (
+                <Link href={service.link}>
+                  <button className="inline-flex items-center text-electric-blue font-semibold hover:text-purple-500 transition-colors duration-300" data-testid={`service-cta-${index}`}>
+                    {t.services.learnMore} <ArrowRight className="w-4 h-4 ml-2" />
+                  </button>
+                </Link>
+              ) : (
+                <button 
+                  onClick={scrollToContact}
+                  className="inline-flex items-center text-electric-blue font-semibold hover:text-purple-500 transition-colors duration-300"
+                  data-testid={`service-cta-${index}`}
+                >
+                  {t.services.learnMore} <ArrowRight className="w-4 h-4 ml-2" />
+                </button>
+              )}
             </div>
           ))}
         </div>

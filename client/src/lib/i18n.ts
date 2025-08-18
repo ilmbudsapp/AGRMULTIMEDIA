@@ -330,6 +330,61 @@ export interface Translations {
       };
     };
   };
+
+  // Web Design page content
+  webDesign: {
+    hero: {
+      title: string;
+      description: string;
+    };
+    services: {
+      websites: {
+        title: string;
+        description: string;
+        features: string[];
+      };
+      mobileApps: {
+        title: string;
+        description: string;
+        features: string[];
+      };
+      responsive: {
+        title: string;
+        description: string;
+        features: string[];
+      };
+    };
+    process: {
+      title: string;
+      steps: {
+        title: string;
+        description: string;
+      }[];
+    };
+    portfolio: {
+      title: string;
+    };
+    technologies: {
+      title: string;
+      frontend: {
+        title: string;
+        items: string[];
+      };
+      backend: {
+        title: string;
+        items: string[];
+      };
+      mobile: {
+        title: string;
+        items: string[];
+      };
+    };
+    cta: {
+      title: string;
+      description: string;
+      button: string;
+    };
+  };
 }
 
 export const translations: Record<Language, Translations> = {
@@ -647,6 +702,74 @@ export const translations: Record<Language, Translations> = {
           content: "Koristimo Google Analytics za analizu prometa. Google može postaviti svoje kolačiće. Molimo vas da proverite Google-ovu politiku privatnosti za više informacija o njihovim kolačićima."
         }
       }
+    },
+
+    webDesign: {
+      hero: {
+        title: "Kreiranje Web Sajtova i Mobilnih Aplikacija",
+        description: "Profesionalno razvijam responsivne web sajtove i mobilne aplikacije za Android i iOS koji privlače posetioce, poboljšavaju korisničko iskustvo i efikasno konvertuju posetioce u klijente kroz moderne tehnologije i optimizovan dizajn."
+      },
+      services: {
+        websites: {
+          title: "Web Sajtovi",
+          description: "Kreiram moderne, responsivne web sajtove koji rade savršeno na svim uređajima",
+          features: ["Responsivan Dizajn", "SEO Optimizacija", "Brzo Učitavanje", "CMS Integracija", "Sigurnost", "Analytics"]
+        },
+        mobileApps: {
+          title: "Mobilne Aplikacije",
+          description: "Razvijam native i cross-platform aplikacije za Android i iOS platforme",
+          features: ["Android Aplikacije", "iOS Aplikacije", "Cross-platform", "Push Notifikacije", "Offline Funkcionalnost", "App Store Publikacija"]
+        },
+        responsive: {
+          title: "Responsive Design",
+          description: "Osiguravam da vaš sajt izgleda savršeno na svim uređajima i veličinama ekrana",
+          features: ["Mobile-First Pristup", "Tablet Optimizacija", "Desktop Perfromanse", "Touchscreen Podrška", "Retina Display", "Cross-browser Kompatibilnost"]
+        }
+      },
+      process: {
+        title: "Proces Rada",
+        steps: [
+          {
+            title: "Planiranje",
+            description: "Analiziram vaše potrebe i kreiram detaljnu strategiju projekta"
+          },
+          {
+            title: "Dizajn",
+            description: "Kreiram wireframes, mockup-e i finalni vizuelni dizajn"
+          },
+          {
+            title: "Development",
+            description: "Kodiram funkcionalnu aplikaciju koristeći najnovije tehnologije"
+          },
+          {
+            title: "Testiranje & Lansiranje",
+            description: "Temeljno testiram i uspešno lansiran projekat sa podrškom"
+          }
+        ]
+      },
+      portfolio: {
+        title: "Portfolio Projekata"
+      },
+      technologies: {
+        title: "Tehnologije koje Koristim",
+        frontend: {
+          title: "Frontend",
+          items: ["React", "TypeScript", "Next.js", "Vue.js", "Tailwind CSS", "SCSS"]
+        },
+        backend: {
+          title: "Backend",
+          items: ["Node.js", "Express", "Python", "PostgreSQL", "MongoDB", "Redis"]
+        },
+        mobile: {
+          title: "Mobile",
+          items: ["React Native", "Flutter", "Swift", "Kotlin", "Firebase", "Native APIs"]
+        }
+      },
+      cta: {
+        title: "Spremni za Vaš Projekat?",
+        description: "Kontaktirajte me za besplatnu konsultaciju o vašem web sajtu ili mobilnoj aplikaciji",
+        button: "Kontaktiraj Me"
+      }
     }
   },
   en: {
@@ -962,6 +1085,74 @@ export const translations: Record<Language, Translations> = {
           title: "Third Party Cookies",
           content: "We use Google Analytics for traffic analysis. Google may set its own cookies. Please check Google's privacy policy for more information about their cookies."
         }
+      }
+    },
+
+    webDesign: {
+      hero: {
+        title: "Website Creation & Mobile App Development",
+        description: "I professionally develop responsive websites and mobile applications for Android and iOS that attract visitors, improve user experience, and efficiently convert visitors into clients through modern technologies and optimized design."
+      },
+      services: {
+        websites: {
+          title: "Websites",
+          description: "I create modern, responsive websites that work perfectly on all devices",
+          features: ["Responsive Design", "SEO Optimization", "Fast Loading", "CMS Integration", "Security", "Analytics"]
+        },
+        mobileApps: {
+          title: "Mobile Applications",
+          description: "I develop native and cross-platform applications for Android and iOS platforms",
+          features: ["Android Apps", "iOS Apps", "Cross-platform", "Push Notifications", "Offline Functionality", "App Store Publication"]
+        },
+        responsive: {
+          title: "Responsive Design",
+          description: "I ensure your website looks perfect on all devices and screen sizes",
+          features: ["Mobile-First Approach", "Tablet Optimization", "Desktop Performance", "Touchscreen Support", "Retina Display", "Cross-browser Compatibility"]
+        }
+      },
+      process: {
+        title: "Work Process",
+        steps: [
+          {
+            title: "Planning",
+            description: "I analyze your needs and create a detailed project strategy"
+          },
+          {
+            title: "Design",
+            description: "I create wireframes, mockups and final visual design"
+          },
+          {
+            title: "Development",
+            description: "I code functional application using the latest technologies"
+          },
+          {
+            title: "Testing & Launch",
+            description: "I thoroughly test and successfully launch the project with support"
+          }
+        ]
+      },
+      portfolio: {
+        title: "Project Portfolio"
+      },
+      technologies: {
+        title: "Technologies I Use",
+        frontend: {
+          title: "Frontend",
+          items: ["React", "TypeScript", "Next.js", "Vue.js", "Tailwind CSS", "SCSS"]
+        },
+        backend: {
+          title: "Backend",
+          items: ["Node.js", "Express", "Python", "PostgreSQL", "MongoDB", "Redis"]
+        },
+        mobile: {
+          title: "Mobile",
+          items: ["React Native", "Flutter", "Swift", "Kotlin", "Firebase", "Native APIs"]
+        }
+      },
+      cta: {
+        title: "Ready for Your Project?",
+        description: "Contact me for a free consultation about your website or mobile application",
+        button: "Contact Me"
       }
     }
   },
@@ -1279,6 +1470,74 @@ export const translations: Record<Language, Translations> = {
           content: "Wir verwenden Google Analytics zur Traffic-Analyse. Google kann eigene Cookies setzen. Bitte überprüfen Sie Googles Datenschutzrichtlinie für weitere Informationen über deren Cookies."
         }
       }
+    },
+
+    webDesign: {
+      hero: {
+        title: "Website-Erstellung & Mobile App-Entwicklung",
+        description: "Ich entwickle professionell responsive Websites und mobile Anwendungen für Android und iOS, die Besucher anziehen, die Benutzererfahrung verbessern und Besucher effizient in Kunden umwandeln durch moderne Technologien und optimiertes Design."
+      },
+      services: {
+        websites: {
+          title: "Websites",
+          description: "Ich erstelle moderne, responsive Websites, die perfekt auf allen Geräten funktionieren",
+          features: ["Responsive Design", "SEO-Optimierung", "Schnelles Laden", "CMS-Integration", "Sicherheit", "Analytics"]
+        },
+        mobileApps: {
+          title: "Mobile Anwendungen",
+          description: "Ich entwickle native und plattformübergreifende Anwendungen für Android und iOS Plattformen",
+          features: ["Android Apps", "iOS Apps", "Plattformübergreifend", "Push-Benachrichtigungen", "Offline-Funktionalität", "App Store Veröffentlichung"]
+        },
+        responsive: {
+          title: "Responsive Design",
+          description: "Ich stelle sicher, dass Ihre Website auf allen Geräten und Bildschirmgrößen perfekt aussieht",
+          features: ["Mobile-First-Ansatz", "Tablet-Optimierung", "Desktop-Performance", "Touchscreen-Unterstützung", "Retina Display", "Cross-Browser-Kompatibilität"]
+        }
+      },
+      process: {
+        title: "Arbeitsprozess",
+        steps: [
+          {
+            title: "Planung",
+            description: "Ich analysiere Ihre Bedürfnisse und erstelle eine detaillierte Projektstrategie"
+          },
+          {
+            title: "Design",
+            description: "Ich erstelle Wireframes, Mockups und das finale visuelle Design"
+          },
+          {
+            title: "Entwicklung",
+            description: "Ich programmiere funktionale Anwendungen mit den neuesten Technologien"
+          },
+          {
+            title: "Testing & Launch",
+            description: "Ich teste gründlich und starte das Projekt erfolgreich mit Support"
+          }
+        ]
+      },
+      portfolio: {
+        title: "Projekt-Portfolio"
+      },
+      technologies: {
+        title: "Technologien die ich verwende",
+        frontend: {
+          title: "Frontend",
+          items: ["React", "TypeScript", "Next.js", "Vue.js", "Tailwind CSS", "SCSS"]
+        },
+        backend: {
+          title: "Backend",
+          items: ["Node.js", "Express", "Python", "PostgreSQL", "MongoDB", "Redis"]
+        },
+        mobile: {
+          title: "Mobile",
+          items: ["React Native", "Flutter", "Swift", "Kotlin", "Firebase", "Native APIs"]
+        }
+      },
+      cta: {
+        title: "Bereit für Ihr Projekt?",
+        description: "Kontaktieren Sie mich für eine kostenlose Beratung zu Ihrer Website oder mobilen Anwendung",
+        button: "Kontaktieren Sie mich"
+      }
     }
   },
   sq: {
@@ -1594,6 +1853,74 @@ export const translations: Record<Language, Translations> = {
           title: "Cookies të Palëve të Treta",
           content: "Ne përdorim Google Analytics për analizë trafikut. Google mund të vendosë cookies të tij. Ju lutemi kontrolloni politikën e privatësisë së Google për më shumë informacione mbi cookies e tyre."
         }
+      }
+    },
+
+    webDesign: {
+      hero: {
+        title: "Krijimi i Faqeve të Internetit dhe Zhvillimi i Aplikacioneve Mobile",
+        description: "Unë zhvilloj profesionalisht faqe interneti responsive dhe aplikacione mobile për Android dhe iOS që tërheqin vizitorët, përmirësojnë përvojën e përdoruesit dhe konvertojnë me efikasitet vizitorët në klientë përmes teknologjive moderne dhe dizajnit të optimizuar."
+      },
+      services: {
+        websites: {
+          title: "Faqe Interneti",
+          description: "Krijoj faqe interneti moderne, responsive që funksionojnë përkrysësh në të gjitha pajisjet",
+          features: ["Dizajn Responsive", "Optimizim SEO", "Ngarkimi i Shpejtë", "Integrimi CMS", "Siguria", "Analitikë"]
+        },
+        mobileApps: {
+          title: "Aplikacione Mobile",
+          description: "Zhvilloj aplikacione native dhe cross-platform për platformat Android dhe iOS",
+          features: ["Aplikacione Android", "Aplikacione iOS", "Cross-platform", "Push Njoftimet", "Funksionaliteti Offline", "Publikimi App Store"]
+        },
+        responsive: {
+          title: "Dizajn Responsive",
+          description: "Siguroj që faqja juaj të duket përkryesisht në të gjitha pajisjet dhe madhësitë e ekranit",
+          features: ["Qasja Mobile-First", "Optimizimi Tablet", "Performancë Desktop", "Mbështetja Touchscreen", "Retina Display", "Kompatibilitet Cross-browser"]
+        }
+      },
+      process: {
+        title: "Procesi i Punës",
+        steps: [
+          {
+            title: "Planifikimi",
+            description: "Analizoj nevojat tuaja dhe krijoj një strategji të detajuar projekti"
+          },
+          {
+            title: "Dizajni",
+            description: "Krijoj wireframes, mockups dhe dizajnin e fundit vizual"
+          },
+          {
+            title: "Zhvillimi",
+            description: "Kodoj aplikacion funksional duke përdorur teknologjitë më të fundit"
+          },
+          {
+            title: "Testimi & Lansimi",
+            description: "Testoj plotësisht dhe lançoj me sukses projektin me mbështetje"
+          }
+        ]
+      },
+      portfolio: {
+        title: "Portfolioja e Projekteve"
+      },
+      technologies: {
+        title: "Teknologjitë që Përdor",
+        frontend: {
+          title: "Frontend",
+          items: ["React", "TypeScript", "Next.js", "Vue.js", "Tailwind CSS", "SCSS"]
+        },
+        backend: {
+          title: "Backend",
+          items: ["Node.js", "Express", "Python", "PostgreSQL", "MongoDB", "Redis"]
+        },
+        mobile: {
+          title: "Mobile",
+          items: ["React Native", "Flutter", "Swift", "Kotlin", "Firebase", "Native APIs"]
+        }
+      },
+      cta: {
+        title: "Gati për Projektin Tuaj?",
+        description: "Kontaktoni për një konsultim falas mbi faqen tuaj të internetit ose aplikacionin mobil",
+        button: "Kontaktoni"
       }
     }
   }
