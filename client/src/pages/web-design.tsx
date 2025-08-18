@@ -165,11 +165,11 @@ export default function WebDesign() {
           <div className="grid md:grid-cols-2 gap-8">
             {portfolioItems.map((item) => (
               <Card key={item.id} className="overflow-hidden group hover:shadow-xl transition-all duration-300">
-                <div className="aspect-video overflow-hidden">
+                <div className="aspect-video overflow-hidden bg-gray-50 dark:bg-gray-800">
                   <img 
                     src={item.image} 
                     alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <CardHeader>
