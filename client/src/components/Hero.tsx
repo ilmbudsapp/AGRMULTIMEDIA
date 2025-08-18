@@ -1,5 +1,6 @@
 import { ChevronDown } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import heroBackground from "@/assets/hero-background.png";
 
 export default function Hero() {
   const { t } = useLanguage();
@@ -12,12 +13,25 @@ export default function Hero() {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Creative multimedia background with geometric patterns */}
-      <div className="absolute inset-0 bg-gradient-to-br from-navy via-slate-800 to-gray-900"></div>
-      <div className="absolute inset-0 opacity-20">
+      {/* Hero background image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url(${heroBackground})`,
+        }}
+      ></div>
+      
+      {/* Dark overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/60"></div>
+      
+      {/* Gradient overlay for artistic effect */}
+      <div className="absolute inset-0 bg-gradient-to-br from-navy/80 via-slate-800/70 to-gray-900/80"></div>
+      
+      {/* Subtle animated elements */}
+      <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-32 h-32 bg-electric-blue rounded-full blur-xl animate-pulse-slow"></div>
         <div className="absolute bottom-32 right-32 w-24 h-24 bg-purple-500 rounded-full blur-xl animate-pulse-slow" style={{animationDelay: '1s'}}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-electric-blue to-purple-500 rounded-full blur-3xl opacity-30"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-electric-blue to-purple-500 rounded-full blur-3xl opacity-20"></div>
       </div>
       
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
