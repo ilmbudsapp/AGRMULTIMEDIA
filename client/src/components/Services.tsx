@@ -19,7 +19,8 @@ export default function Services() {
       title: t.services.items.graphicDesign.title,
       description: t.services.items.graphicDesign.description,
       features: t.services.items.graphicDesign.features,
-      gradient: "from-purple-500 to-pink-500"
+      gradient: "from-purple-500 to-pink-500",
+      link: "/graphic-design"
     },
     {
       icon: <Video className="text-white text-2xl" />,

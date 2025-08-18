@@ -389,6 +389,70 @@ export interface Translations {
       button: string;
     };
   };
+
+  // Graphic Design page content
+  graphicDesign: {
+    hero: {
+      title: string;
+      description: string;
+    };
+    services: {
+      logoDesign: {
+        title: string;
+        description: string;
+        features: string[];
+      };
+      branding: {
+        title: string;
+        description: string;
+        features: string[];
+      };
+      printMaterials: {
+        title: string;
+        description: string;
+        features: string[];
+      };
+    };
+    process: {
+      title: string;
+      steps: {
+        title: string;
+        description: string;
+      }[];
+    };
+    portfolio: {
+      title: string;
+      logos: {
+        title: string;
+        items: {
+          title: string;
+          description: string;
+          category: string;
+        }[];
+      };
+      branding: {
+        title: string;
+        items: {
+          title: string;
+          description: string;
+          category: string;
+        }[];
+      };
+      print: {
+        title: string;
+        description: string;
+      };
+      books: {
+        title: string;
+        description: string;
+      };
+    };
+    cta: {
+      title: string;
+      description: string;
+      button: string;
+    };
+  };
 }
 
 export const translations: Record<Language, Translations> = {
@@ -790,6 +854,102 @@ export const translations: Record<Language, Translations> = {
       cta: {
         title: "Spremni za Vaš Projekat?",
         description: "Kontaktirajte me za besplatnu konsultaciju o vašem web sajtu ili mobilnoj aplikaciji",
+        button: "Kontaktiraj Me"
+      }
+    },
+
+    graphicDesign: {
+      hero: {
+        title: "Kreiranje Vizuelnog Identiteta i Grafički Dizajn",
+        description: "Profesionalno kreiram jedinstvene logotipe, brendove i print materijale koji izdvajaju vaš biznis od konkurencije i ostavljaju nezaboravan utisak na vašu ciljnu publiku."
+      },
+      services: {
+        logoDesign: {
+          title: "Logo Dizajn",
+          description: "Kreiram memorable logotipe koji predstavljaju esenciju vašeg brenda",
+          features: ["Originalni koncepti", "Vektorski formati", "Brandbook", "Različite varijante", "Revizije uključene", "Vlasništvo dizajna"]
+        },
+        branding: {
+          title: "Brending",
+          description: "Kompletni vizuelni identitet koji gradi prepoznatljivost vašeg brenda",
+          features: ["Brandbook", "Vizuelni identitet", "Tipografija", "Paleta boja", "Aplikacije", "Brand Guidelines"]
+        },
+        printMaterials: {
+          title: "Print Materijali",
+          description: "Fizički marketing materijali koji promovisuju vaš biznis profesionalno",
+          features: ["Majice i tekstil", "Pakovanja", "Kancelarijski materijal", "Marketing materijali", "Signage", "Branded proizvodi"]
+        }
+      },
+      process: {
+        title: "Kreativni Proces",
+        steps: [
+          {
+            title: "Istraživanje",
+            description: "Analiziram vaš brend, ciljnu publiku i konkurenciju"
+          },
+          {
+            title: "Koncepti",
+            description: "Kreiram početne ideje i vizuelne pravce"
+          },
+          {
+            title: "Razvoj",
+            description: "Razrađujem odabrane koncepte do finalne verzije"
+          },
+          {
+            title: "Finalizacija",
+            description: "Priprema za štampu i digitalno korišćenje"
+          }
+        ]
+      },
+      portfolio: {
+        title: "Portfolio Radova",
+        logos: {
+          title: "Logo Dizajn",
+          items: [
+            {
+              title: "InnovateTech Solutions",
+              description: "Moderna tehnološka kompanija",
+              category: "Tech startup"
+            },
+            {
+              title: "GreenHarvest",
+              description: "Organska hrana i poljoprivreda",
+              category: "Organic food"
+            },
+            {
+              title: "AurumCraft",
+              description: "Luksuzno zlatarstvo",
+              category: "Luxury jewelry"
+            }
+          ]
+        },
+        branding: {
+          title: "Kompletni Brending",
+          items: [
+            {
+              title: "PowerFit Pro",
+              description: "Fitness i wellness brend",
+              category: "Fitness"
+            },
+            {
+              title: "Aroma Collective",
+              description: "Premium kafić brend",
+              category: "Food & Beverage"
+            }
+          ]
+        },
+        print: {
+          title: "Print Materijali",
+          description: "Branded majice, kutije za pakovanje i promotivni materijali"
+        },
+        books: {
+          title: "Book Design",
+          description: "Profesionalni dizajn korica i layout-a za publikacije"
+        }
+      },
+      cta: {
+        title: "Spremni za Novi Vizuelni Identitet?",
+        description: "Kontaktirajte me za besplatnu konsultaciju o vašem brendu",
         button: "Kontaktiraj Me"
       }
     }
@@ -1194,6 +1354,102 @@ export const translations: Record<Language, Translations> = {
         description: "Contact me for a free consultation about your website or mobile application",
         button: "Contact Me"
       }
+    },
+
+    graphicDesign: {
+      hero: {
+        title: "Visual Identity Creation & Graphic Design",
+        description: "I professionally create unique logos, brands and print materials that distinguish your business from the competition and leave an unforgettable impression on your target audience."
+      },
+      services: {
+        logoDesign: {
+          title: "Logo Design",
+          description: "I create memorable logos that represent the essence of your brand",
+          features: ["Original concepts", "Vector formats", "Brandbook", "Various versions", "Revisions included", "Design ownership"]
+        },
+        branding: {
+          title: "Branding",
+          description: "Complete visual identity that builds brand recognition",
+          features: ["Brandbook", "Visual identity", "Typography", "Color palette", "Applications", "Brand Guidelines"]
+        },
+        printMaterials: {
+          title: "Print Materials",
+          description: "Physical marketing materials that promote your business professionally",
+          features: ["T-shirts & textiles", "Packaging", "Office materials", "Marketing materials", "Signage", "Branded products"]
+        }
+      },
+      process: {
+        title: "Creative Process",
+        steps: [
+          {
+            title: "Research",
+            description: "I analyze your brand, target audience and competition"
+          },
+          {
+            title: "Concepts",
+            description: "I create initial ideas and visual directions"
+          },
+          {
+            title: "Development",
+            description: "I develop selected concepts to final version"
+          },
+          {
+            title: "Finalization",
+            description: "Preparation for print and digital use"
+          }
+        ]
+      },
+      portfolio: {
+        title: "Work Portfolio",
+        logos: {
+          title: "Logo Design",
+          items: [
+            {
+              title: "InnovateTech Solutions",
+              description: "Modern technology company",
+              category: "Tech startup"
+            },
+            {
+              title: "GreenHarvest",
+              description: "Organic food and agriculture",
+              category: "Organic food"
+            },
+            {
+              title: "AurumCraft",
+              description: "Luxury jewelry",
+              category: "Luxury jewelry"
+            }
+          ]
+        },
+        branding: {
+          title: "Complete Branding",
+          items: [
+            {
+              title: "PowerFit Pro",
+              description: "Fitness and wellness brand",
+              category: "Fitness"
+            },
+            {
+              title: "Aroma Collective",
+              description: "Premium coffee shop brand",
+              category: "Food & Beverage"
+            }
+          ]
+        },
+        print: {
+          title: "Print Materials",
+          description: "Branded t-shirts, packaging boxes and promotional materials"
+        },
+        books: {
+          title: "Book Design",
+          description: "Professional cover design and layout for publications"
+        }
+      },
+      cta: {
+        title: "Ready for a New Visual Identity?",
+        description: "Contact me for a free consultation about your brand",
+        button: "Contact Me"
+      }
     }
   },
   de: {
@@ -1596,6 +1852,102 @@ export const translations: Record<Language, Translations> = {
         description: "Kontaktieren Sie mich für eine kostenlose Beratung zu Ihrer Website oder mobilen Anwendung",
         button: "Kontaktieren Sie mich"
       }
+    },
+
+    graphicDesign: {
+      hero: {
+        title: "Visuelle Identität & Grafikdesign",
+        description: "Ich erstelle professionell einzigartige Logos, Marken und Druckmaterialien, die Ihr Unternehmen von der Konkurrenz abheben und einen unvergesslichen Eindruck bei Ihrer Zielgruppe hinterlassen."
+      },
+      services: {
+        logoDesign: {
+          title: "Logo Design",
+          description: "Ich erstelle einprägsame Logos, die die Essenz Ihrer Marke repräsentieren",
+          features: ["Originelle Konzepte", "Vektorformate", "Brandbook", "Verschiedene Versionen", "Überarbeitungen inklusive", "Design-Eigentum"]
+        },
+        branding: {
+          title: "Branding",
+          description: "Vollständige visuelle Identität, die Markenbekanntheit aufbaut",
+          features: ["Brandbook", "Visuelle Identität", "Typografie", "Farbpalette", "Anwendungen", "Brand Guidelines"]
+        },
+        printMaterials: {
+          title: "Druckmaterialien",
+          description: "Physische Marketingmaterialien, die Ihr Unternehmen professionell bewerben",
+          features: ["T-Shirts & Textilien", "Verpackungen", "Büromaterialien", "Marketingmaterialien", "Beschilderung", "Branded Produkte"]
+        }
+      },
+      process: {
+        title: "Kreativer Prozess",
+        steps: [
+          {
+            title: "Recherche",
+            description: "Ich analysiere Ihre Marke, Zielgruppe und Konkurrenz"
+          },
+          {
+            title: "Konzepte",
+            description: "Ich erstelle erste Ideen und visuelle Richtungen"
+          },
+          {
+            title: "Entwicklung",
+            description: "Ich entwickle ausgewählte Konzepte zur finalen Version"
+          },
+          {
+            title: "Finalisierung",
+            description: "Vorbereitung für Druck und digitale Nutzung"
+          }
+        ]
+      },
+      portfolio: {
+        title: "Arbeits-Portfolio",
+        logos: {
+          title: "Logo Design",
+          items: [
+            {
+              title: "InnovateTech Solutions",
+              description: "Modernes Technologieunternehmen",
+              category: "Tech startup"
+            },
+            {
+              title: "GreenHarvest",
+              description: "Bio-Lebensmittel und Landwirtschaft",
+              category: "Bio-Lebensmittel"
+            },
+            {
+              title: "AurumCraft",
+              description: "Luxus-Schmuck",
+              category: "Luxus-Schmuck"
+            }
+          ]
+        },
+        branding: {
+          title: "Komplettes Branding",
+          items: [
+            {
+              title: "PowerFit Pro",
+              description: "Fitness- und Wellness-Marke",
+              category: "Fitness"
+            },
+            {
+              title: "Aroma Collective",
+              description: "Premium-Coffeeshop-Marke",
+              category: "Food & Beverage"
+            }
+          ]
+        },
+        print: {
+          title: "Druckmaterialien",
+          description: "Branded T-Shirts, Verpackungsboxen und Werbematerialien"
+        },
+        books: {
+          title: "Buchdesign",
+          description: "Professionelles Cover-Design und Layout für Publikationen"
+        }
+      },
+      cta: {
+        title: "Bereit für eine neue visuelle Identität?",
+        description: "Kontaktieren Sie mich für eine kostenlose Beratung zu Ihrer Marke",
+        button: "Kontaktieren Sie mich"
+      }
     }
   },
   sq: {
@@ -1996,6 +2348,102 @@ export const translations: Record<Language, Translations> = {
       cta: {
         title: "Gati për Projektin Tuaj?",
         description: "Kontaktoni për një konsultim falas mbi faqen tuaj të internetit ose aplikacionin mobil",
+        button: "Kontaktoni"
+      }
+    },
+
+    graphicDesign: {
+      hero: {
+        title: "Krijimi i Identitetit Vizual dhe Dizajni Grafik",
+        description: "Krijoj profesionalisht logo të veçanta, marka dhe materiale printimi që dallojnë biznesin tuaj nga konkurrentët dhe lënë një përshtypje të paharrueshme tek audienca juaj e synuar."
+      },
+      services: {
+        logoDesign: {
+          title: "Dizajni i Logos",
+          description: "Krijoj logo të paharrueshme që përfaqësojnë esencën e markës suaj",
+          features: ["Koncepte origjinale", "Formate vektori", "Brandbook", "Versione të ndryshme", "Rishikime të përfshira", "Pronësia e dizajnit"]
+        },
+        branding: {
+          title: "Brending",
+          description: "Identitet vizual i plotë që ndërton njohjen e markës",
+          features: ["Brandbook", "Identiteti vizual", "Tipografia", "Paleta e ngjyrave", "Aplikacione", "Udhëzimet e markës"]
+        },
+        printMaterials: {
+          title: "Materiale Printimi",
+          description: "Materiale marketingu fizike që promovojnë biznesin tuaj profesionalisht",
+          features: ["Bluzat & tekstilet", "Paketimet", "Materialet e zyrës", "Materialet marketingu", "Tabelat", "Produktet e markës"]
+        }
+      },
+      process: {
+        title: "Procesi Kreativ",
+        steps: [
+          {
+            title: "Hulumtimi",
+            description: "Analizoj markën tuaj, audiencën e synuar dhe konkurrencën"
+          },
+          {
+            title: "Konceptet",
+            description: "Krijoj idetë fillestare dhe drejtimet vizuale"
+          },
+          {
+            title: "Zhvillimi",
+            description: "Zhvilloj konceptet e zgjedhura deri në versionin final"
+          },
+          {
+            title: "Finalizimi",
+            description: "Përgatitje për printim dhe përdorim dixhital"
+          }
+        ]
+      },
+      portfolio: {
+        title: "Portfolioja e Punëve",
+        logos: {
+          title: "Dizajni i Logos",
+          items: [
+            {
+              title: "InnovateTech Solutions",
+              description: "Kompani moderne teknologjike",
+              category: "Tech startup"
+            },
+            {
+              title: "GreenHarvest",
+              description: "Ushqim organik dhe bujqësi",
+              category: "Ushqim organik"
+            },
+            {
+              title: "AurumCraft",
+              description: "Stolitë luksoze",
+              category: "Stoli luksoze"
+            }
+          ]
+        },
+        branding: {
+          title: "Brending i Plotë",
+          items: [
+            {
+              title: "PowerFit Pro",
+              description: "Marka fitness dhe wellness",
+              category: "Fitness"
+            },
+            {
+              title: "Aroma Collective",
+              description: "Marka premium kafeje",
+              category: "Ushqim & Pije"
+            }
+          ]
+        },
+        print: {
+          title: "Materiale Printimi",
+          description: "Bluzat me markë, kutitë e paketimit dhe materialet promocionale"
+        },
+        books: {
+          title: "Dizajni i Librave",
+          description: "Dizajni profesional i kopertinave dhe layout-i për publikime"
+        }
+      },
+      cta: {
+        title: "Gati për një Identitet të Ri Vizual?",
+        description: "Kontaktoni për një konsultim falas mbi markën tuaj",
         button: "Kontaktoni"
       }
     }
