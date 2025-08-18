@@ -831,8 +831,8 @@ export const translations: Record<Language, Translations> = {
             description: "Personalizovana fitness aplikacija za Android i iOS"
           },
           {
-            title: "SmartHome Control",
-            description: "IoT aplikacija za upravljanje pametnim domom"
+            title: "ILMBUDS",
+            description: "Islamska aplikacija za decu"
           }
         ]
       },
@@ -1329,8 +1329,8 @@ export const translations: Record<Language, Translations> = {
             description: "Personalized fitness application for Android and iOS"
           },
           {
-            title: "SmartHome Control",
-            description: "IoT application for smart home management"
+            title: "ILMBUDS",
+            description: "Islamic application for children"
           }
         ]
       },
@@ -1827,8 +1827,8 @@ export const translations: Record<Language, Translations> = {
             description: "Personalisierte Fitness-Anwendung für Android und iOS"
           },
           {
-            title: "SmartHome Control",
-            description: "IoT-Anwendung für Smart Home-Verwaltung"
+            title: "ILMBUDS",
+            description: "Islamische Anwendung für Kinder"
           }
         ]
       },
@@ -2325,8 +2325,8 @@ export const translations: Record<Language, Translations> = {
             description: "Aplikacion fitness i personalizuar për Android dhe iOS"
           },
           {
-            title: "SmartHome Control",
-            description: "Aplikacion IoT për menaxhimin e shtëpisë inteligjente"
+            title: "ILMBUDS",
+            description: "Aplikacion islamik për fëmijë"
           }
         ]
       },
