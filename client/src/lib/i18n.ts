@@ -213,6 +213,7 @@ export interface Translations {
     privacy: string;
     terms: string;
     cookies: string;
+    impresum: string;
     career: string;
   };
 }
@@ -416,6 +417,7 @@ export const translations: Record<Language, Translations> = {
       privacy: "Privatnost",
       terms: "Uslovi",
       cookies: "Kolačići",
+      impresum: "Impresum",
       career: "Karijera"
     }
   },
@@ -617,6 +619,7 @@ export const translations: Record<Language, Translations> = {
       privacy: "Privacy",
       terms: "Terms",
       cookies: "Cookies",
+      impresum: "Legal Notice",
       career: "Career"
     }
   },
@@ -818,6 +821,7 @@ export const translations: Record<Language, Translations> = {
       privacy: "Datenschutz",
       terms: "Nutzungsbedingungen",
       cookies: "Cookies",
+      impresum: "Impressum",
       career: "Karriere"
     }
   },
@@ -1019,6 +1023,7 @@ export const translations: Record<Language, Translations> = {
       privacy: "Privatësia",
       terms: "Kushtet",
       cookies: "Cookies",
+      impresum: "Impresum",
       career: "Karriera"
     }
   }

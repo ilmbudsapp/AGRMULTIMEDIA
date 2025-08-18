@@ -71,6 +71,7 @@ export default function Footer() {
               <a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">{t.footer.privacy}</a>
               <a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">{t.footer.terms}</a>
               <a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">{t.footer.cookies}</a>
+              <a href="/impresum" className="text-gray-300 hover:text-white transition-colors duration-300">{t.footer.impresum}</a>
             </div>
           </div>
         </div>

@@ -9,6 +9,7 @@ import { useAnalytics } from "./hooks/use-analytics";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import { ErrorBoundary } from "./components/ErrorBoundary";
 import Home from "@/pages/home";
+import Impresum from "@/pages/impresum";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -18,6 +19,7 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/impresum" component={Impresum} />
       <Route component={NotFound} />
     </Switch>
   );
