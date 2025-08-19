@@ -405,8 +405,20 @@ Početna
                 <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-red-500 rounded-2xl mx-auto mb-4 flex items-center justify-center">
                   <Award className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="font-semibold mb-2">Aplikacije</h3>
-                <p className="text-sm text-gray-600">Primena na različitim materijalima</p>
+                <h3 className="font-semibold mb-2">
+                  {currentLanguage === 'sr' ? 'Aplikacije' : 
+                   currentLanguage === 'en' ? 'Applications' :
+                   currentLanguage === 'de' ? 'Anwendungen' : 
+                   currentLanguage === 'sq' ? 'Aplikacionet' :
+                   'Aplikacije'}
+                </h3>
+                <p className="text-sm text-gray-600">
+                  {currentLanguage === 'sr' ? 'Primena na različitim materijalima' : 
+                   currentLanguage === 'en' ? 'Application on various materials' :
+                   currentLanguage === 'de' ? 'Anwendung auf verschiedenen Materialien' : 
+                   currentLanguage === 'sq' ? 'Aplikim në materiale të ndryshme' :
+                   'Primena na različitim materijalima'}
+                </p>
               </Card>
             </div>
           </div>
@@ -414,7 +426,11 @@ Početna
           {/* Process Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
-              Kreativni Proces
+              {currentLanguage === 'sr' ? 'Kreativni Proces' : 
+               currentLanguage === 'en' ? 'Creative Process' :
+               currentLanguage === 'de' ? 'Kreativer Prozess' : 
+               currentLanguage === 'sq' ? 'Procesi Kreativ' :
+               'Kreativni Proces'}
             </h2>
             
             <div className="grid md:grid-cols-4 gap-8">
@@ -422,32 +438,80 @@ Početna
                 <div className="w-12 h-12 bg-purple-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
                   1
                 </div>
-                <h3 className="font-semibold mb-2">Istraživanje</h3>
-                <p className="text-sm text-gray-600">Analiza tržišta, konkurencije i ciljne publike</p>
+                <h3 className="font-semibold mb-2">
+                  {currentLanguage === 'sr' ? 'Istraživanje' : 
+                   currentLanguage === 'en' ? 'Research' :
+                   currentLanguage === 'de' ? 'Forschung' : 
+                   currentLanguage === 'sq' ? 'Hulumtimi' :
+                   'Istraživanje'}
+                </h3>
+                <p className="text-sm text-gray-600">
+                  {currentLanguage === 'sr' ? 'Analiza tržišta, konkurencije i ciljne publike' : 
+                   currentLanguage === 'en' ? 'Market, competition and target audience analysis' :
+                   currentLanguage === 'de' ? 'Markt-, Konkurrenz- und Zielgruppenanalyse' : 
+                   currentLanguage === 'sq' ? 'Analiza e tregut, konkurrencës dhe audiencës së synuar' :
+                   'Analiza tržišta, konkurencije i ciljne publike'}
+                </p>
               </div>
 
               <div className="text-center">
                 <div className="w-12 h-12 bg-pink-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
                   2
                 </div>
-                <h3 className="font-semibold mb-2">Kreiranje</h3>
-                <p className="text-sm text-gray-600">Razvoj koncepata i početnih ideja</p>
+                <h3 className="font-semibold mb-2">
+                  {currentLanguage === 'sr' ? 'Kreiranje' : 
+                   currentLanguage === 'en' ? 'Creation' :
+                   currentLanguage === 'de' ? 'Erstellung' : 
+                   currentLanguage === 'sq' ? 'Krijimi' :
+                   'Kreiranje'}
+                </h3>
+                <p className="text-sm text-gray-600">
+                  {currentLanguage === 'sr' ? 'Razvoj koncepata i početnih ideja' : 
+                   currentLanguage === 'en' ? 'Development of concepts and initial ideas' :
+                   currentLanguage === 'de' ? 'Entwicklung von Konzepten und ersten Ideen' : 
+                   currentLanguage === 'sq' ? 'Zhvillimi i koncepteve dhe ideve fillestare' :
+                   'Razvoj koncepata i početnih ideja'}
+                </p>
               </div>
 
               <div className="text-center">
                 <div className="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
                   3
                 </div>
-                <h3 className="font-semibold mb-2">Rafinirane</h3>
-                <p className="text-sm text-gray-600">Izbor najboljih rešenja i usavršavanje</p>
+                <h3 className="font-semibold mb-2">
+                  {currentLanguage === 'sr' ? 'Rafinirane' : 
+                   currentLanguage === 'en' ? 'Refinement' :
+                   currentLanguage === 'de' ? 'Verfeinerung' : 
+                   currentLanguage === 'sq' ? 'Rafinimi' :
+                   'Rafinirane'}
+                </h3>
+                <p className="text-sm text-gray-600">
+                  {currentLanguage === 'sr' ? 'Izbor najboljih rešenja i usavršavanje' : 
+                   currentLanguage === 'en' ? 'Selection of best solutions and refinement' :
+                   currentLanguage === 'de' ? 'Auswahl der besten Lösungen und Verfeinerung' : 
+                   currentLanguage === 'sq' ? 'Përzgjedhja e zgjidhjeve më të mira dhe përmirësimi' :
+                   'Izbor najboljih rešenja i usavršavanje'}
+                </p>
               </div>
 
               <div className="text-center">
                 <div className="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
                   4
                 </div>
-                <h3 className="font-semibold mb-2">Finalizacija</h3>
-                <p className="text-sm text-gray-600">Brend bukvar i finalni materijali</p>
+                <h3 className="font-semibold mb-2">
+                  {currentLanguage === 'sr' ? 'Finalizacija' : 
+                   currentLanguage === 'en' ? 'Finalization' :
+                   currentLanguage === 'de' ? 'Fertigstellung' : 
+                   currentLanguage === 'sq' ? 'Finalizimi' :
+                   'Finalizacija'}
+                </h3>
+                <p className="text-sm text-gray-600">
+                  {currentLanguage === 'sr' ? 'Brend bukvar i finalni materijali' : 
+                   currentLanguage === 'en' ? 'Brand book and final materials' :
+                   currentLanguage === 'de' ? 'Markenbuch und finale Materialien' : 
+                   currentLanguage === 'sq' ? 'Libri i markës dhe materialet finale' :
+                   'Brend bukvar i finalni materijali'}
+                </p>
               </div>
             </div>
           </div>
@@ -455,14 +519,26 @@ Početna
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl p-8 text-white text-center">
             <h3 className="text-2xl font-bold mb-4">
-              Vaš Brend Zaslužuje Jedinstvenu Vizuelinu!
+              {currentLanguage === 'sr' ? 'Vaš Brend Zaslužuje Jedinstvenu Vizuelinu!' : 
+               currentLanguage === 'en' ? 'Your Brand Deserves a Unique Visual Identity!' :
+               currentLanguage === 'de' ? 'Ihre Marke verdient eine einzigartige visuelle Identität!' : 
+               currentLanguage === 'sq' ? 'Marka juaj meriton një identitet vizual unik!' :
+               'Vaš Brend Zaslužuje Jedinstvenu Vizuelinu!'}
             </h3>
             <p className="text-lg mb-6">
-              Kontaktirajte me za kreiranje kompletnog brend identiteta koji će izdvojiti vašu kompaniju od konkurencije.
+              {currentLanguage === 'sr' ? 'Kontaktirajte me za kreiranje kompletnog brend identiteta koji će izdvojiti vašu kompaniju od konkurencije.' : 
+               currentLanguage === 'en' ? 'Contact me to create a complete brand identity that will set your company apart from the competition.' :
+               currentLanguage === 'de' ? 'Kontaktieren Sie mich für die Erstellung einer vollständigen Markenidentität, die Ihr Unternehmen von der Konkurrenz abhebt.' : 
+               currentLanguage === 'sq' ? 'Kontaktoni me për të krijuar një identitet të plotë të markës që do të dallojë kompaninë tuaj nga konkurrenca.' :
+               'Kontaktirajte me za kreiranje kompletnog brend identiteta koji će izdvojiti vašu kompaniju od konkurencije.'}
             </p>
             <Link href="/#contact">
               <Button className="bg-white text-purple-500 hover:bg-gray-100">
-                Kreiraj Moj Brend Identitet
+                {currentLanguage === 'sr' ? 'Kreiraj Moj Brend Identitet' : 
+                 currentLanguage === 'en' ? 'Create My Brand Identity' :
+                 currentLanguage === 'de' ? 'Erstelle meine Markenidentität' : 
+                 currentLanguage === 'sq' ? 'Krijo Identitetin e Markës Sime' :
+                 'Kreiraj Moj Brend Identitet'}
               </Button>
             </Link>
           </div>
