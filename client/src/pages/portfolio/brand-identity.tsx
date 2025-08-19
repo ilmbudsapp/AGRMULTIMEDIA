@@ -30,10 +30,18 @@ Početna
             </Link>
             <div>
               <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
-                Brend Identitet
+                {currentLanguage === 'sr' ? 'Brend Identitet' : 
+                 currentLanguage === 'en' ? 'Brand Identity' :
+                 currentLanguage === 'de' ? 'Markenidentität' : 
+                 currentLanguage === 'sq' ? 'Identiteti i Markës' :
+                 'Brend Identitet'}
               </h1>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                Kompletan vizuelni identitet za startup
+                {currentLanguage === 'sr' ? 'Kompletan vizuelni identitet za startup' : 
+                 currentLanguage === 'en' ? 'Complete visual identity for startup' :
+                 currentLanguage === 'de' ? 'Vollständige visuelle Identität für Startup' : 
+                 currentLanguage === 'sq' ? 'Identitet vizual i plotë për startup' :
+                 'Kompletan vizuelni identitet za startup'}
               </p>
             </div>
           </div>
@@ -45,9 +53,27 @@ Početna
         <div className="max-w-6xl mx-auto">
           {/* Project Meta */}
           <div className="flex flex-wrap items-center gap-4 mb-8">
-            <Badge className="bg-purple-500 text-white">Brending</Badge>
-            <Badge className="bg-pink-500 text-white">Logo Dizajn</Badge>
-            <Badge className="bg-blue-500 text-white">Vizuelni Identitet</Badge>
+            <Badge className="bg-purple-500 text-white">
+              {currentLanguage === 'sr' ? 'Brending' : 
+               currentLanguage === 'en' ? 'Branding' :
+               currentLanguage === 'de' ? 'Branding' : 
+               currentLanguage === 'sq' ? 'Branding' :
+               'Brending'}
+            </Badge>
+            <Badge className="bg-pink-500 text-white">
+              {currentLanguage === 'sr' ? 'Logo Dizajn' : 
+               currentLanguage === 'en' ? 'Logo Design' :
+               currentLanguage === 'de' ? 'Logo-Design' : 
+               currentLanguage === 'sq' ? 'Dizajn Logo' :
+               'Logo Dizajn'}
+            </Badge>
+            <Badge className="bg-blue-500 text-white">
+              {currentLanguage === 'sr' ? 'Vizuelni Identitet' : 
+               currentLanguage === 'en' ? 'Visual Identity' :
+               currentLanguage === 'de' ? 'Visuelle Identität' : 
+               currentLanguage === 'sq' ? 'Identiteti Vizual' :
+               'Vizuelni Identitet'}
+            </Badge>
           </div>
 
           {/* Featured Image */}

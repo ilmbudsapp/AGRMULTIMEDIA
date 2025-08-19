@@ -52,9 +52,21 @@ Početna
         <div className="max-w-6xl mx-auto">
           {/* Project Meta */}
           <div className="flex flex-wrap items-center gap-4 mb-8">
-            <Badge className="bg-electric-blue text-white">Web Dizajn</Badge>
+            <Badge className="bg-electric-blue text-white">
+              {currentLanguage === 'sr' ? 'Web Dizajn' : 
+               currentLanguage === 'en' ? 'Web Design' :
+               currentLanguage === 'de' ? 'Web-Design' : 
+               currentLanguage === 'sq' ? 'Dizajn Web' :
+               'Web Dizajn'}
+            </Badge>
             <Badge className="bg-green-500 text-white">E-commerce</Badge>
-            <Badge className="bg-purple-500 text-white">Mobilno Optimizovan</Badge>
+            <Badge className="bg-purple-500 text-white">
+              {currentLanguage === 'sr' ? 'Mobilno Optimizovan' : 
+               currentLanguage === 'en' ? 'Mobile Optimized' :
+               currentLanguage === 'de' ? 'Mobil Optimiert' : 
+               currentLanguage === 'sq' ? 'Optimizuar për Mobil' :
+               'Mobilno Optimizovan'}
+            </Badge>
           </div>
 
           {/* Featured Image */}
@@ -108,30 +120,60 @@ Početna
                 <Card className="p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <CreditCard className="w-6 h-6 text-green-500" />
-                    <h3 className="text-xl font-semibold">Sigurno Plaćanje</h3>
+                    <h3 className="text-xl font-semibold">
+                      {currentLanguage === 'sr' ? 'Sigurno Plaćanje' : 
+                       currentLanguage === 'en' ? 'Secure Payment' :
+                       currentLanguage === 'de' ? 'Sichere Zahlung' : 
+                       currentLanguage === 'sq' ? 'Pagesa e Sigurtë' :
+                       'Sigurno Plaćanje'}
+                    </h3>
                   </div>
                   <p className="text-gray-600">
-                    Integracija sa sigurnim payment gateway-ima za bezbedan proces plaćanja kartice i PayPal.
+                    {currentLanguage === 'sr' ? 'Integracija sa sigurnim payment gateway-ima za bezbedan proces plaćanja kartice i PayPal.' : 
+                     currentLanguage === 'en' ? 'Integration with secure payment gateways for safe credit card and PayPal payment processing.' :
+                     currentLanguage === 'de' ? 'Integration mit sicheren Payment-Gateways für sichere Kreditkarten- und PayPal-Zahlungsabwicklung.' : 
+                     currentLanguage === 'sq' ? 'Integrim me portat e pagesave të sigurta për përpunimin e sigurt të pagesave me kartë krediti dhe PayPal.' :
+                     'Integracija sa sigurnim payment gateway-ima za bezbedan proces plaćanja kartice i PayPal.'}
                   </p>
                 </Card>
 
                 <Card className="p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <Search className="w-6 h-6 text-purple-500" />
-                    <h3 className="text-xl font-semibold">Napredna Pretraga</h3>
+                    <h3 className="text-xl font-semibold">
+                      {currentLanguage === 'sr' ? 'Napredna Pretraga' : 
+                       currentLanguage === 'en' ? 'Advanced Search' :
+                       currentLanguage === 'de' ? 'Erweiterte Suche' : 
+                       currentLanguage === 'sq' ? 'Kërkim i Avancuar' :
+                       'Napredna Pretraga'}
+                    </h3>
                   </div>
                   <p className="text-gray-600">
-                    Filteri po kategoriji, ceni, brendu i drugim karakteristikama za brže pronalaženje proizvoda.
+                    {currentLanguage === 'sr' ? 'Filteri po kategoriji, ceni, brendu i drugim karakteristikama za brže pronalaženje proizvoda.' : 
+                     currentLanguage === 'en' ? 'Filters by category, price, brand and other characteristics for faster product discovery.' :
+                     currentLanguage === 'de' ? 'Filter nach Kategorie, Preis, Marke und anderen Eigenschaften für schnellere Produktfindung.' : 
+                     currentLanguage === 'sq' ? 'Filtra sipas kategorisë, çmimit, markës dhe karakteristikave të tjera për zbulim më të shpejtë të produkteve.' :
+                     'Filteri po kategoriji, ceni, brendu i drugim karakteristikama za brže pronalaženje proizvoda.'}
                   </p>
                 </Card>
 
                 <Card className="p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <Smartphone className="w-6 h-6 text-orange-500" />
-                    <h3 className="text-xl font-semibold">Mobile-First Dizajn</h3>
+                    <h3 className="text-xl font-semibold">
+                      {currentLanguage === 'sr' ? 'Mobile-First Dizajn' : 
+                       currentLanguage === 'en' ? 'Mobile-First Design' :
+                       currentLanguage === 'de' ? 'Mobile-First-Design' : 
+                       currentLanguage === 'sq' ? 'Dizajn Mobile-First' :
+                       'Mobile-First Dizajn'}
+                    </h3>
                   </div>
                   <p className="text-gray-600">
-                    Potpuno responzivan dizajn optimizovan za savršen shopping doživljaj na mobilnim uređajima.
+                    {currentLanguage === 'sr' ? 'Potpuno responzivan dizajn optimizovan za savršen shopping doživljaj na mobilnim uređajima.' : 
+                     currentLanguage === 'en' ? 'Fully responsive design optimized for perfect shopping experience on mobile devices.' :
+                     currentLanguage === 'de' ? 'Vollständig responsives Design, optimiert für perfekte Shopping-Erfahrung auf Mobilgeräten.' : 
+                     currentLanguage === 'sq' ? 'Dizajn plotësisht përgjigjes i optimizuar për përvojë të përkryer blerjesh në pajisjet mobile.' :
+                     'Potpuno responzivan dizajn optimizovan za savršen shopping doživljaj na mobilnim uređajima.'}
                   </p>
                 </Card>
               </div>
