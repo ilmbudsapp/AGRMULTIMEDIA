@@ -89,50 +89,98 @@ Početna
           <div className="grid lg:grid-cols-3 gap-12 mb-16">
             <div className="lg:col-span-2">
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
-                Kreiranje Kompletnog Brendovskog Identiteta
+                {currentLanguage === 'sr' ? 'Kreiranje Kompletnog Brendovskog Identiteta' : 
+                 currentLanguage === 'en' ? 'Creating Complete Brand Identity' :
+                 currentLanguage === 'de' ? 'Vollständige Markenidentität erstellen' : 
+                 currentLanguage === 'sq' ? 'Krijimi i identitetit të plotë të markës' :
+                 'Kreiranje Kompletnog Brendovskog Identiteta'}
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
-                Razvijam jedinstvene vizuelne identitete koji odražavaju vrednosti, misiju i viziju vašeg brenda. Od logo dizajna do kompletnog brend bukova, kreiram koherentan identitet koji se izdvaja na tržištu i ostaje u sećanju korisnika.
+                {currentLanguage === 'sr' ? 'Razvijam jedinstvene vizuelne identitete koji odražavaju vrednosti, misiju i viziju vašeg brenda. Od logo dizajna do kompletnog brend bukova, kreiram koherentan identitet koji se izdvaja na tržištu i ostaje u sećanju korisnika.' : 
+                 currentLanguage === 'en' ? 'I develop unique visual identities that reflect your brand\'s values, mission and vision. From logo design to complete brand books, I create coherent identity that stands out in the market and stays in users\' memory.' :
+                 currentLanguage === 'de' ? 'Ich entwickle einzigartige visuelle Identitäten, die die Werte, Mission und Vision Ihrer Marke widerspiegeln. Vom Logo-Design bis hin zu vollständigen Brand Books erstelle ich eine kohärente Identität, die sich auf dem Markt abhebt und im Gedächtnis der Nutzer bleibt.' : 
+                 currentLanguage === 'sq' ? 'Zhvilloj identitete unike vizuale që pasqyrojnë vlerat, misionin dhe vizionin e markës suaj. Nga dizajni i logos deri tek librat e plotë të markës, krijoj identitet koherent që dallon në treg dhe mbetet në kujtesën e përdoruesve.' :
+                 'Razvijam jedinstvene vizuelne identitete koji odražavaju vrednosti, misiju i viziju vašeg brenda. Od logo dizajna do kompletnog brend bukova, kreiram koherentan identitet koji se izdvaja na tržištu i ostaje u sećanju korisnika.'}
               </p>
 
               <div className="grid md:grid-cols-2 gap-6">
                 <Card className="p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <Zap className="w-6 h-6 text-purple-500" />
-                    <h3 className="text-xl font-semibold">Logo Kreacija</h3>
+                    <h3 className="text-xl font-semibold">
+                      {currentLanguage === 'sr' ? 'Logo Kreacija' : 
+                       currentLanguage === 'en' ? 'Logo Creation' :
+                       currentLanguage === 'de' ? 'Logo-Erstellung' : 
+                       currentLanguage === 'sq' ? 'Krijimi i Logos' :
+                       'Logo Kreacija'}
+                    </h3>
                   </div>
                   <p className="text-gray-600">
-                    Jedinstveni logotipi koji predstavljaju suštinu brenda kroz simboliku, tipografiju i boje.
+                    {currentLanguage === 'sr' ? 'Jedinstveni logotipi koji predstavljaju suštinu brenda kroz simboliku, tipografiju i boje.' : 
+                     currentLanguage === 'en' ? 'Unique logos that represent the essence of the brand through symbolism, typography and colors.' :
+                     currentLanguage === 'de' ? 'Einzigartige Logos, die das Wesen der Marke durch Symbolik, Typografie und Farben repräsentieren.' : 
+                     currentLanguage === 'sq' ? 'Logo unike që përfaqësojnë thelbin e markës përmes simbolikës, tipografisë dhe ngjyrave.' :
+                     'Jedinstveni logotipi koji predstavljaju suštinu brenda kroz simboliku, tipografiju i boje.'}
                   </p>
                 </Card>
 
                 <Card className="p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <Palette className="w-6 h-6 text-pink-500" />
-                    <h3 className="text-xl font-semibold">Color Palette</h3>
+                    <h3 className="text-xl font-semibold">
+                      {currentLanguage === 'sr' ? 'Color Palette' : 
+                       currentLanguage === 'en' ? 'Color Palette' :
+                       currentLanguage === 'de' ? 'Farbpalette' : 
+                       currentLanguage === 'sq' ? 'Paleta e Ngjyrave' :
+                       'Color Palette'}
+                    </h3>
                   </div>
                   <p className="text-gray-600">
-                    Pažljivo odabrane boje koje prenose emocije i vrednosti brenda kroz sve marketing materijale.
+                    {currentLanguage === 'sr' ? 'Pažljivo odabrane boje koje prenose emocije i vrednosti brenda kroz sve marketing materijale.' : 
+                     currentLanguage === 'en' ? 'Carefully selected colors that convey emotions and brand values through all marketing materials.' :
+                     currentLanguage === 'de' ? 'Sorgfältig ausgewählte Farben, die Emotionen und Markenwerte durch alle Marketingmaterialien vermitteln.' : 
+                     currentLanguage === 'sq' ? 'Ngjyra të përzgjedhura me kujdes që përçojnë emocione dhe vlerat e markës në të gjitha materialet marketingu.' :
+                     'Pažljivo odabrane boje koje prenose emocije i vrednosti brenda kroz sve marketing materijale.'}
                   </p>
                 </Card>
 
                 <Card className="p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <Eye className="w-6 h-6 text-blue-500" />
-                    <h3 className="text-xl font-semibold">Vizuelni Stil</h3>
+                    <h3 className="text-xl font-semibold">
+                      {currentLanguage === 'sr' ? 'Vizuelni Stil' : 
+                       currentLanguage === 'en' ? 'Visual Style' :
+                       currentLanguage === 'de' ? 'Visueller Stil' : 
+                       currentLanguage === 'sq' ? 'Stili Vizual' :
+                       'Vizuelni Stil'}
+                    </h3>
                   </div>
                   <p className="text-gray-600">
-                    Konzistentan vizuelni jezik kroz tipografiju, ikonografiju i kompoziciju.
+                    {currentLanguage === 'sr' ? 'Konzistentan vizuelni jezik kroz tipografiju, ikonografiju i kompoziciju.' : 
+                     currentLanguage === 'en' ? 'Consistent visual language through typography, iconography and composition.' :
+                     currentLanguage === 'de' ? 'Konsistente visuelle Sprache durch Typografie, Ikonografie und Komposition.' : 
+                     currentLanguage === 'sq' ? 'Gjuhë vizuale e qëndrueshme përmes tipografisë, ikonografisë dhe kompozicionit.' :
+                     'Konzistentan vizuelni jezik kroz tipografiju, ikonografiju i kompoziciju.'}
                   </p>
                 </Card>
 
                 <Card className="p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <Award className="w-6 h-6 text-green-500" />
-                    <h3 className="text-xl font-semibold">Brand Guidelines</h3>
+                    <h3 className="text-xl font-semibold">
+                      {currentLanguage === 'sr' ? 'Brand Guidelines' : 
+                       currentLanguage === 'en' ? 'Brand Guidelines' :
+                       currentLanguage === 'de' ? 'Marken-Richtlinien' : 
+                       currentLanguage === 'sq' ? 'Udhëzimet e Markës' :
+                       'Brand Guidelines'}
+                    </h3>
                   </div>
                   <p className="text-gray-600">
-                    Detaljan brend bukvar sa pravilima korišćenja za održavanje konzistentnosti.
+                    {currentLanguage === 'sr' ? 'Detaljan brend bukvar sa pravilima korišćenja za održavanje konzistentnosti.' : 
+                     currentLanguage === 'en' ? 'Detailed brand book with usage rules for maintaining consistency.' :
+                     currentLanguage === 'de' ? 'Detailliertes Markenbuch mit Verwendungsregeln zur Erhaltung der Konsistenz.' : 
+                     currentLanguage === 'sq' ? 'Libër i detajuar i markës me rregulla përdorimi për ruajtjen e qëndrueshmërisë.' :
+                     'Detaljan brend bukvar sa pravilima korišćenja za održavanje konzistentnosti.'}
                   </p>
                 </Card>
               </div>
@@ -141,47 +189,139 @@ Početna
             {/* Project Details Sidebar */}
             <div className="lg:col-span-1">
               <Card className="p-6 sticky top-24">
-                <h3 className="text-xl font-semibold mb-6">Detalji Projekta</h3>
+                <h3 className="text-xl font-semibold mb-6">
+                  {currentLanguage === 'sr' ? 'Detalji Projekta' : 
+                   currentLanguage === 'en' ? 'Project Details' :
+                   currentLanguage === 'de' ? 'Projektdetails' : 
+                   currentLanguage === 'sq' ? 'Detajet e Projektit' :
+                   'Detalji Projekta'}
+                </h3>
                 
                 <div className="space-y-4">
                   <div>
-                    <h4 className="font-medium text-gray-900 mb-2">Kategorija</h4>
-                    <p className="text-gray-600">Brend Identitet</p>
+                    <h4 className="font-medium text-gray-900 mb-2">
+                      {currentLanguage === 'sr' ? 'Kategorija' : 
+                       currentLanguage === 'en' ? 'Category' :
+                       currentLanguage === 'de' ? 'Kategorie' : 
+                       currentLanguage === 'sq' ? 'Kategoria' :
+                       'Kategorija'}
+                    </h4>
+                    <p className="text-gray-600">
+                      {currentLanguage === 'sr' ? 'Brend Identitet' : 
+                       currentLanguage === 'en' ? 'Brand Identity' :
+                       currentLanguage === 'de' ? 'Markenidentität' : 
+                       currentLanguage === 'sq' ? 'Identiteti i Markës' :
+                       'Brend Identitet'}
+                    </p>
                   </div>
                   
                   <div>
-                    <h4 className="font-medium text-gray-900 mb-2">Industrija</h4>
-                    <p className="text-gray-600">Technology Startup</p>
+                    <h4 className="font-medium text-gray-900 mb-2">
+                      {currentLanguage === 'sr' ? 'Industrija' : 
+                       currentLanguage === 'en' ? 'Industry' :
+                       currentLanguage === 'de' ? 'Branche' : 
+                       currentLanguage === 'sq' ? 'Industria' :
+                       'Industrija'}
+                    </h4>
+                    <p className="text-gray-600">
+                      {currentLanguage === 'sr' ? 'Technology Startup' : 
+                       currentLanguage === 'en' ? 'Technology Startup' :
+                       currentLanguage === 'de' ? 'Technologie-Startup' : 
+                       currentLanguage === 'sq' ? 'Startup Teknologjie' :
+                       'Technology Startup'}
+                    </p>
                   </div>
                   
                   <div>
-                    <h4 className="font-medium text-gray-900 mb-2">Isporuka</h4>
+                    <h4 className="font-medium text-gray-900 mb-2">
+                      {currentLanguage === 'sr' ? 'Isporuka' : 
+                       currentLanguage === 'en' ? 'Deliverables' :
+                       currentLanguage === 'de' ? 'Lieferungen' : 
+                       currentLanguage === 'sq' ? 'Dorëzimet' :
+                       'Isporuka'}
+                    </h4>
                     <ul className="text-gray-600 space-y-1">
-                      <li>• Logo dizajn (5 koncepata)</li>
-                      <li>• Color palette</li>
-                      <li>• Tipografija</li>
-                      <li>• Ikone i piktogrami</li>
-                      <li>• Vizitka dizajn</li>
-                      <li>• Letterhead template</li>
-                      <li>• Social media templates</li>
-                      <li>• Brand Guidelines PDF</li>
+                      <li>• {currentLanguage === 'sr' ? 'Logo dizajn (5 koncepata)' : 
+                             currentLanguage === 'en' ? 'Logo design (5 concepts)' :
+                             currentLanguage === 'de' ? 'Logo-Design (5 Konzepte)' : 
+                             currentLanguage === 'sq' ? 'Dizajni i logos (5 koncepte)' :
+                             'Logo dizajn (5 koncepata)'}</li>
+                      <li>• {currentLanguage === 'sr' ? 'Color palette' : 
+                             currentLanguage === 'en' ? 'Color palette' :
+                             currentLanguage === 'de' ? 'Farbpalette' : 
+                             currentLanguage === 'sq' ? 'Paleta e ngjyrave' :
+                             'Color palette'}</li>
+                      <li>• {currentLanguage === 'sr' ? 'Tipografija' : 
+                             currentLanguage === 'en' ? 'Typography' :
+                             currentLanguage === 'de' ? 'Typografie' : 
+                             currentLanguage === 'sq' ? 'Tipografia' :
+                             'Tipografija'}</li>
+                      <li>• {currentLanguage === 'sr' ? 'Ikone i piktogrami' : 
+                             currentLanguage === 'en' ? 'Icons and pictograms' :
+                             currentLanguage === 'de' ? 'Icons und Piktogramme' : 
+                             currentLanguage === 'sq' ? 'Ikona dhe piktograme' :
+                             'Ikone i piktogrami'}</li>
+                      <li>• {currentLanguage === 'sr' ? 'Vizitka dizajn' : 
+                             currentLanguage === 'en' ? 'Business card design' :
+                             currentLanguage === 'de' ? 'Visitenkarten-Design' : 
+                             currentLanguage === 'sq' ? 'Dizajni i kartës së vizitës' :
+                             'Vizitka dizajn'}</li>
+                      <li>• {currentLanguage === 'sr' ? 'Letterhead template' : 
+                             currentLanguage === 'en' ? 'Letterhead template' :
+                             currentLanguage === 'de' ? 'Briefkopf-Vorlage' : 
+                             currentLanguage === 'sq' ? 'Modeli i kokës së letrës' :
+                             'Letterhead template'}</li>
+                      <li>• {currentLanguage === 'sr' ? 'Social media templates' : 
+                             currentLanguage === 'en' ? 'Social media templates' :
+                             currentLanguage === 'de' ? 'Social Media Vorlagen' : 
+                             currentLanguage === 'sq' ? 'Modelet e mediave sociale' :
+                             'Social media templates'}</li>
+                      <li>• {currentLanguage === 'sr' ? 'Brand Guidelines PDF' : 
+                             currentLanguage === 'en' ? 'Brand Guidelines PDF' :
+                             currentLanguage === 'de' ? 'Marken-Richtlinien PDF' : 
+                             currentLanguage === 'sq' ? 'PDF i udhëzimeve të markës' :
+                             'Brand Guidelines PDF'}</li>
                     </ul>
                   </div>
 
                   <div>
-                    <h4 className="font-medium text-gray-900 mb-2">Rezultati</h4>
+                    <h4 className="font-medium text-gray-900 mb-2">
+                      {currentLanguage === 'sr' ? 'Rezultati' : 
+                       currentLanguage === 'en' ? 'Results' :
+                       currentLanguage === 'de' ? 'Ergebnisse' : 
+                       currentLanguage === 'sq' ? 'Rezultatet' :
+                       'Rezultati'}
+                    </h4>
                     <div className="space-y-3">
                       <div className="flex items-center gap-2">
                         <TrendingUp className="w-4 h-4 text-green-500" />
-                        <span className="text-sm">60% bolje prepoznavanje brenda</span>
+                        <span className="text-sm">
+                          {currentLanguage === 'sr' ? '60% bolje prepoznavanje brenda' : 
+                           currentLanguage === 'en' ? '60% better brand recognition' :
+                           currentLanguage === 'de' ? '60% bessere Markenerkennung' : 
+                           currentLanguage === 'sq' ? '60% më shumë njohje e markës' :
+                           '60% bolje prepoznavanje brenda'}
+                        </span>
                       </div>
                       <div className="flex items-center gap-2">
                         <Users className="w-4 h-4 text-blue-500" />
-                        <span className="text-sm">45% više engagement-a</span>
+                        <span className="text-sm">
+                          {currentLanguage === 'sr' ? '45% više engagement-a' : 
+                           currentLanguage === 'en' ? '45% more engagement' :
+                           currentLanguage === 'de' ? '45% mehr Engagement' : 
+                           currentLanguage === 'sq' ? '45% më shumë angazhim' :
+                           '45% više engagement-a'}
+                        </span>
                       </div>
                       <div className="flex items-center gap-2">
                         <Target className="w-4 h-4 text-purple-500" />
-                        <span className="text-sm">Konzistentan omni-channel identitet</span>
+                        <span className="text-sm">
+                          {currentLanguage === 'sr' ? 'Konzistentan omni-channel identitet' : 
+                           currentLanguage === 'en' ? 'Consistent omni-channel identity' :
+                           currentLanguage === 'de' ? 'Konsistente Omni-Channel-Identität' : 
+                           currentLanguage === 'sq' ? 'Identitet i qëndrueshëm omni-channel' :
+                           'Konzistentan omni-channel identitet'}
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -193,7 +333,11 @@ Početna
           {/* Brand Showcase */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
-              Brend Elementi
+              {currentLanguage === 'sr' ? 'Brend Elementi' : 
+               currentLanguage === 'en' ? 'Brand Elements' :
+               currentLanguage === 'de' ? 'Markenelemente' : 
+               currentLanguage === 'sq' ? 'Elementet e Markës' :
+               'Brend Elementi'}
             </h2>
             
             <div className="grid md:grid-cols-4 gap-6">
@@ -201,24 +345,60 @@ Početna
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl mx-auto mb-4 flex items-center justify-center">
                   <Zap className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="font-semibold mb-2">Logo Mark</h3>
-                <p className="text-sm text-gray-600">Simboličko predstavljanje brenda</p>
+                <h3 className="font-semibold mb-2">
+                  {currentLanguage === 'sr' ? 'Logo Mark' : 
+                   currentLanguage === 'en' ? 'Logo Mark' :
+                   currentLanguage === 'de' ? 'Logo-Zeichen' : 
+                   currentLanguage === 'sq' ? 'Shenja Logo' :
+                   'Logo Mark'}
+                </h3>
+                <p className="text-sm text-gray-600">
+                  {currentLanguage === 'sr' ? 'Simboličko predstavljanje brenda' : 
+                   currentLanguage === 'en' ? 'Symbolic brand representation' :
+                   currentLanguage === 'de' ? 'Symbolische Markendarstellung' : 
+                   currentLanguage === 'sq' ? 'Përfaqësim simbolik i markës' :
+                   'Simboličko predstavljanje brenda'}
+                </p>
               </Card>
 
               <Card className="p-6 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl mx-auto mb-4 flex items-center justify-center">
                   <Palette className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="font-semibold mb-2">Boje</h3>
-                <p className="text-sm text-gray-600">Primarna i sekundarna paleta</p>
+                <h3 className="font-semibold mb-2">
+                  {currentLanguage === 'sr' ? 'Boje' : 
+                   currentLanguage === 'en' ? 'Colors' :
+                   currentLanguage === 'de' ? 'Farben' : 
+                   currentLanguage === 'sq' ? 'Ngjyrat' :
+                   'Boje'}
+                </h3>
+                <p className="text-sm text-gray-600">
+                  {currentLanguage === 'sr' ? 'Primarna i sekundarna paleta' : 
+                   currentLanguage === 'en' ? 'Primary and secondary palette' :
+                   currentLanguage === 'de' ? 'Primäre und sekundäre Palette' : 
+                   currentLanguage === 'sq' ? 'Paleta primare dhe sekondare' :
+                   'Primarna i sekundarna paleta'}
+                </p>
               </Card>
 
               <Card className="p-6 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-500 rounded-2xl mx-auto mb-4 flex items-center justify-center text-white font-bold text-xl">
                   Aa
                 </div>
-                <h3 className="font-semibold mb-2">Tipografija</h3>
-                <p className="text-sm text-gray-600">Primarni i sekundarni fontovi</p>
+                <h3 className="font-semibold mb-2">
+                  {currentLanguage === 'sr' ? 'Tipografija' : 
+                   currentLanguage === 'en' ? 'Typography' :
+                   currentLanguage === 'de' ? 'Typografie' : 
+                   currentLanguage === 'sq' ? 'Tipografia' :
+                   'Tipografija'}
+                </h3>
+                <p className="text-sm text-gray-600">
+                  {currentLanguage === 'sr' ? 'Primarni i sekundarni fontovi' : 
+                   currentLanguage === 'en' ? 'Primary and secondary fonts' :
+                   currentLanguage === 'de' ? 'Primäre und sekundäre Schriftarten' : 
+                   currentLanguage === 'sq' ? 'Fontet primare dhe sekondare' :
+                   'Primarni i sekundarni fontovi'}
+                </p>
               </Card>
 
               <Card className="p-6 text-center">
