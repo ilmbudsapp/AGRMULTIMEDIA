@@ -1045,6 +1045,24 @@ export const translations: Record<Language, Translations> = {
       servicesTitle: "Moje Usluge Video Produkcije",
       servicesSubtitle: "Kompletne video usluge od koncepta do finalne isporuke",
       portfolioButtonText: "Portfolio Video",
+      videos: [
+        {
+          title: "Profesionalni Intro Video",
+          description: "Animirani intro sa logo animacijom"
+        },
+        {
+          title: "Promotivni Video", 
+          description: "Kreativni promotional sadržaj"
+        },
+        {
+          title: "Motion Graphics",
+          description: "Dinamičke grafike i animacije"
+        },
+        {
+          title: "Product Showcase",
+          description: "Prezentacija proizvoda sa 3D efektima"
+        }
+      ],
       cta: {
         title: "Spremni za Video Projekat?",
         description: "Kontaktirajte me za besplatnu konsultaciju o vašem video sadržaju",
@@ -1600,6 +1618,24 @@ export const translations: Record<Language, Translations> = {
       servicesTitle: "My Video Production Services",
       servicesSubtitle: "Complete video services from concept to final delivery",
       portfolioButtonText: "Portfolio Video",
+      videos: [
+        {
+          title: "Professional Intro Video",
+          description: "Animated intro with logo animation"
+        },
+        {
+          title: "Promotional Video",
+          description: "Creative promotional content"
+        },
+        {
+          title: "Motion Graphics",
+          description: "Dynamic graphics and animations"
+        },
+        {
+          title: "Product Showcase",
+          description: "Product presentation with 3D effects"
+        }
+      ],
       cta: {
         title: "Ready for Your Video Project?",
         description: "Contact me for a free consultation about your video content",
@@ -2155,6 +2191,24 @@ export const translations: Record<Language, Translations> = {
       servicesTitle: "Meine Videoproduktions-Dienstleistungen",
       servicesSubtitle: "Komplette Videodienstleistungen vom Konzept bis zur finalen Lieferung",
       portfolioButtonText: "Portfolio Video",
+      videos: [
+        {
+          title: "Professionelles Intro-Video",
+          description: "Animiertes Intro mit Logo-Animation"
+        },
+        {
+          title: "Werbevideo",
+          description: "Kreativer Werbungsinhalt"
+        },
+        {
+          title: "Motion Graphics",
+          description: "Dynamische Grafiken und Animationen"
+        },
+        {
+          title: "Produktpräsentation",
+          description: "Produktpräsentation mit 3D-Effekten"
+        }
+      ],
       cta: {
         title: "Bereit für Ihr Videoprojekt?",
         description: "Kontaktieren Sie mich für eine kostenlose Beratung zu Ihrem Videoinhalt",
@@ -2710,6 +2764,24 @@ export const translations: Record<Language, Translations> = {
       servicesTitle: "Shërbimet e Mia të Prodhimit të Videove",
       servicesSubtitle: "Shërbime të plota video nga koncepti deri te dorëzimi final",
       portfolioButtonText: "Portfolio Video",
+      videos: [
+        {
+          title: "Video Intro Profesional",
+          description: "Intro i animuar me animacion logo"
+        },
+        {
+          title: "Video Promocional",
+          description: "Përmbajtje promocionale kreative"
+        },
+        {
+          title: "Motion Graphics",
+          description: "Grafika dinamike dhe animacione"
+        },
+        {
+          title: "Prezantimi i Produktit",
+          description: "Prezantimi i produktit me efekte 3D"
+        }
+      ],
       cta: {
         title: "Gati për Projektin tuaj Video?",
         description: "Më kontaktoni për një konsultim falas rreth përmbajtjes suaj video",

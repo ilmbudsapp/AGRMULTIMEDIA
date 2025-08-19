@@ -18,29 +18,29 @@ export default function VideoProduction() {
     {
       id: 1,
       src: video01,
-      title: "Profesionalni Intro Video",
-      description: "Animirani intro sa logo animacijom",
+      title: t.videoProduction.videos[0].title,
+      description: t.videoProduction.videos[0].description,
       duration: "0:30"
     },
     {
       id: 2,
       src: video02,
-      title: "Promotivni Video",
-      description: "Kreativni promotional sadržaj",
+      title: t.videoProduction.videos[1].title,
+      description: t.videoProduction.videos[1].description,
       duration: "0:45"
     },
     {
       id: 3,
       src: video03,
-      title: "Motion Graphics",
-      description: "Dinamičke grafike i animacije",
+      title: t.videoProduction.videos[2].title,
+      description: t.videoProduction.videos[2].description,
       duration: "0:25"
     },
     {
       id: 4,
       src: video04,
-      title: "Product Showcase",
-      description: "Prezentacija proizvoda sa 3D efektima",
+      title: t.videoProduction.videos[3].title,
+      description: t.videoProduction.videos[3].description,
       duration: "0:35"
     }
   ];
