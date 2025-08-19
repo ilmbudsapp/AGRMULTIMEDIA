@@ -13,7 +13,7 @@ export default function Blog() {
       description: t.blog.posts.trends.description,
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
       category: t.blog.posts.trends.category,
-      date: "15. Dec 2023",
+      date: "19.08.2025",
       categoryColor: "bg-electric-blue"
     },
     {
@@ -23,7 +23,7 @@ export default function Blog() {
       description: t.blog.posts.conversion.description,
       image: "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
       category: t.blog.posts.conversion.category,
-      date: "12. Dec 2023",
+      date: "19.08.2025",
       categoryColor: "bg-purple-500"
     },
     {
@@ -33,7 +33,7 @@ export default function Blog() {
       description: t.blog.posts.video.description,
       image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
       category: t.blog.posts.video.category,
-      date: "10. Dec 2023",
+      date: "19.08.2025",
       categoryColor: "bg-red-500"
     }
   ];

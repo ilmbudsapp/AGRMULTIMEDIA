@@ -50,7 +50,7 @@ export default function WebsiteConversionOptimization() {
             </Badge>
             <div className="flex items-center gap-2 text-gray-600">
               <Calendar className="w-4 h-4" />
-              <span>12. Dec 2023</span>
+              <span>{t.blogPost?.conversion?.date || "19.08.2025"}</span>
             </div>
             <div className="flex items-center gap-2 text-gray-600">
               <User className="w-4 h-4" />

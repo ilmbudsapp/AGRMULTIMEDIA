@@ -16,7 +16,7 @@ MULTIMEDIA AGRONDESIGN is a professional multimedia services portfolio website b
 - **Consulting service page fully implemented**: Complete /consulting page with proper navigation structure (no top navigation, only header with "Početna" button), comprehensive consulting services (Digital Strategy, UX/UI Audit, Analytics), 4-step process, benefits section, and complete translations in all 4 languages
 - **Fixed grammar error in About section**: Corrected Serbian text from "osnovan" to "osnovao" in the story paragraph across all service pages
 - **Fixed Albanian translation inconsistency**: Standardized "Početna" (Home) button translation to "Kreu" across all 6 portfolio pages for consistent Albanian language support
-- **Blog post date updated**: Changed digital marketing trends blog post date from "15. Dec 2023" to "19.08.2025" across all 4 languages (Serbian, English, German, Albanian) and updated all references to 2024 year to 2025 in blog post titles and content
+- **Blog post dates completely updated**: Changed all blog post dates from "15. Dec 2023", "12. Dec 2023", and "10. Dec 2023" to "19.08.2025" across blog cards in homepage and individual blog pages, updated all references to 2024 year to 2025 in blog post titles and content across all 4 languages (Serbian, English, German, Albanian), implemented dynamic date system using i18n translations
 
 # User Preferences
 
