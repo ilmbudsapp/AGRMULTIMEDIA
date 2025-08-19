@@ -178,8 +178,8 @@ Početna
               </div>
               <div className="h-64 rounded-xl overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300"
-                  alt="Delicious Food"
+                  src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300&q=80"
+                  alt="Restoran Jela"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
