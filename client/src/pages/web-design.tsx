@@ -4,10 +4,16 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Monitor, Smartphone, Tablet, Globe, Code, Palette, Search, Shield, Zap, Users } from "lucide-react";
 import { Link } from "wouter";
+import { useEffect } from "react";
 import ilmbudsImage from "@assets/BANNER 1_1755557330915.jpg";
 
 export default function WebDesign() {
   const { t } = useLanguage();
+
+  // Scroll to top when page loads
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const portfolioItems = [
     {

@@ -6,10 +6,16 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight, ArrowLeft, Target, TrendingUp, Users, BarChart3, Globe, MessageSquare, PenTool, CheckCircle } from 'lucide-react';
 import { Link } from 'wouter';
+import { useEffect } from 'react';
 import digitalMarketingImage from '@assets/generated_images/Digital_marketing_workspace_setup_45963362.png';
 
 export default function DigitalMarketing() {
   const { t } = useLanguage();
+
+  // Scroll to top when page loads
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50 dark:from-slate-900 dark:to-purple-900">

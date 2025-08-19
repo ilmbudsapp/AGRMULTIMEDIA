@@ -5,9 +5,15 @@ import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import { useEffect } from "react";
 
 export default function Consulting() {
   const { t } = useLanguage();
+
+  // Scroll to top when page loads
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const services = [
     {

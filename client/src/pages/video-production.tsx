@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight, ArrowLeft, Play, Camera, Edit, Palette, Clock, CheckCircle } from 'lucide-react';
 import { Link } from 'wouter';
+import { useEffect } from 'react';
 import video01 from '@assets/01_1755562646299.mp4';
 import video02 from '@assets/02_1755562690692.mp4';
 import video03 from '@assets/03_1755562697326.mp4';
@@ -13,6 +14,11 @@ import video04 from '@assets/04_1755562702969.mp4';
 
 export default function VideoProduction() {
   const { t } = useLanguage();
+
+  // Scroll to top when page loads
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const videos = [
     {

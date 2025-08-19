@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight, ArrowLeft, Camera, Image, Palette, Film, Brush, CheckCircle } from 'lucide-react';
 import { Link } from 'wouter';
+import { useEffect } from 'react';
 import posterRagazzo from '@assets/Ragazzo con lanterne_1755565190060.jpg';
 import posterAnto from '@assets/ANTO IL SILENZIO DELL BOSS_1755565202925.jpg';
 import posterKong from '@assets/KING KONG_1755565210288.jpg';
@@ -14,6 +15,11 @@ import posterAbandoned from '@assets/MOVIE POSTER ABANDONED_1755565219158.jpg';
 
 export default function Photography() {
   const { t } = useLanguage();
+
+  // Scroll to top when page loads
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const moviePostersData = t.photography?.moviePosters || [
     {

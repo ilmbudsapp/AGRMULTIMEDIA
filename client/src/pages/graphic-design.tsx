@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Palette, Package, Shirt, Book, Eye, Lightbulb, Pencil, CheckCircle } from "lucide-react";
 import { Link } from "wouter";
+import { useEffect } from "react";
 import innovateTechLogo from "@assets/generated_images/InnovateTech_Solutions_Logo_316280d4.png";
 import greenHarvestLogo from "@assets/generated_images/GreenHarvest_Organic_Logo_b1862bc1.png";
 import aurumCraftLogo from "@assets/generated_images/AurumCraft_Jewelry_Logo_56980df7.png";
@@ -16,6 +17,11 @@ import multimediaLogoBlack from "@assets/MULTIMEDIA AGRONDESIGN LOGO IN NERO_175
 
 export default function GraphicDesign() {
   const { t } = useLanguage();
+
+  // Scroll to top when page loads
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const logoItems = [
     {
