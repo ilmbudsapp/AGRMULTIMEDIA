@@ -332,6 +332,13 @@ export interface Translations {
       title: string;
       description: string;
     };
+    servicesTitle: string;
+    servicesSubtitle: string;
+    portfolioButtonText: string;
+    videos: Array<{
+      title: string;
+      description: string;
+    }>;
     cta: {
       title: string;
       description: string;
