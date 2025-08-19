@@ -28,7 +28,7 @@ export default function CorporateVideo() {
 {currentLanguage === 'sr' ? 'Početna' : 
                  currentLanguage === 'en' ? 'Home' :
                  currentLanguage === 'de' ? 'Startseite' : 
-                 currentLanguage === 'sq' ? 'Fillimi' :
+                 currentLanguage === 'sq' ? 'Kreu' :
                  'Početna'}
               </Button>
             </Link>

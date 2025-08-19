@@ -15,7 +15,7 @@ MULTIMEDIA AGRONDESIGN is a professional multimedia services portfolio website b
 - **Photography service page fully completed**: Complete /photography page featuring user's 5 movie posters (Ragazzo con Lanterne, Il Silenzio del Boss, Kong, Gardijan, Abandoned) displayed in full size using object-contain, comprehensive 4-language support for all services (professional photography, photo restoration, photomontages, movie posters), corrected Serbian text ("Fotomontaža" instead of "Photomontaža", "restauriram" spelling fix)
 - **Consulting service page fully implemented**: Complete /consulting page with proper navigation structure (no top navigation, only header with "Početna" button), comprehensive consulting services (Digital Strategy, UX/UI Audit, Analytics), 4-step process, benefits section, and complete translations in all 4 languages
 - **Fixed grammar error in About section**: Corrected Serbian text from "osnovan" to "osnovao" in the story paragraph across all service pages
-- **Fixed Albanian translation inconsistency**: Standardized "Početna" (Home) button translation to "Fillimi" across all 6 portfolio pages for consistent Albanian language support
+- **Fixed Albanian translation inconsistency**: Standardized "Početna" (Home) button translation to "Kreu" across all 6 portfolio pages for consistent Albanian language support
 
 # User Preferences
 
