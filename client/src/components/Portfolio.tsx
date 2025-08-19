@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { Link } from "wouter";
 
 export default function Portfolio() {
   const { t } = useLanguage();
@@ -51,11 +52,13 @@ export default function Portfolio() {
   ];
 
   const filterCategories = [
-    { id: 'all', label: t.portfolio.filters.all },
-    { id: 'web', label: t.portfolio.filters.web },
-    { id: 'brand', label: t.portfolio.filters.brand },
-    { id: 'video', label: t.portfolio.filters.video },
-    { id: 'photo', label: t.portfolio.filters.photo }
+    { id: 'all', label: t.portfolio.filters.all, link: null },
+    { id: 'web', label: t.portfolio.filters.web, link: '/web-design' },
+    { id: 'brand', label: t.portfolio.filters.brand, link: '/graphic-design' },
+    { id: 'video', label: t.portfolio.filters.video, link: '/video-production' },
+    { id: 'photo', label: t.portfolio.filters.photo, link: '/photography' },
+    { id: 'marketing', label: 'Digital Marketing', link: '/digital-marketing' },
+    { id: 'consulting', label: 'Consulting', link: '/consulting' }
   ];
 
   const filteredItems = activeFilter === 'all' 
@@ -74,20 +77,35 @@ export default function Portfolio() {
         
         {/* Portfolio Filter */}
         <div className="flex flex-wrap justify-center mb-12 gap-4" data-testid="portfolio-filter">
-          {filterCategories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setActiveFilter(category.id)}
-              className={`px-6 py-2 rounded-full font-medium transition-colors duration-300 ${
-                activeFilter === category.id
-                  ? 'bg-electric-blue text-white'
-                  : 'text-gray-600 hover:text-electric-blue'
-              }`}
-              data-testid={`filter-${category.id}`}
-            >
-              {category.label}
-            </button>
-          ))}
+          {filterCategories.map((category) => {
+            if (category.link) {
+              return (
+                <Link key={category.id} href={category.link}>
+                  <button
+                    className="px-6 py-2 rounded-full font-medium transition-colors duration-300 text-gray-600 hover:text-electric-blue hover:bg-blue-50"
+                    data-testid={`filter-${category.id}`}
+                  >
+                    {category.label}
+                  </button>
+                </Link>
+              );
+            } else {
+              return (
+                <button
+                  key={category.id}
+                  onClick={() => setActiveFilter(category.id)}
+                  className={`px-6 py-2 rounded-full font-medium transition-colors duration-300 ${
+                    activeFilter === category.id
+                      ? 'bg-electric-blue text-white'
+                      : 'text-gray-600 hover:text-electric-blue'
+                  }`}
+                  data-testid={`filter-${category.id}`}
+                >
+                  {category.label}
+                </button>
+              );
+            }
+          })}
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
