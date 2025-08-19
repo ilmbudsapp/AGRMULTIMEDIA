@@ -1154,6 +1154,53 @@ export const translations: Record<Language, Translations> = {
       servicesTitle: "Moje Fotografske Usluge",
       servicesSubtitle: "Od profesionalnog fotografisanja do kreativnih photomontaža",
       portfolioButtonText: "Portfolio Radova",
+      portfolioTitle: "Portfolio Filmskih Postera",
+      portfolioDescription: "Primeri mojih radova - kreiranje profesionalnih filmskih postera sa različitim stilovima i atmosferama",
+      processTitle: "Kreativni Proces",
+      processSteps: [
+        {
+          title: "Konsultacija",
+          description: "Razgovaramo o vašoj ideji i potrebama",
+          icon: "1"
+        },
+        {
+          title: "Kreiranje Koncepta",
+          description: "Razvijam kreativni pristup i stil",
+          icon: "2"
+        },
+        {
+          title: "Izrada",
+          description: "Profesionalna fotografija ili digitalna obrada",
+          icon: "3"
+        },
+        {
+          title: "Finalizacija",
+          description: "Poslednja obrada i isporuka u željenom formatu",
+          icon: "4"
+        }
+      ],
+      services: {
+        professionalPhotography: {
+          title: "Profesionalno Fotografisanje",
+          description: "Fotografije proizvoda, portreta, događaja i korporativne fotografije",
+          features: ["Studijske fotografije", "Proizvodi i katalozi", "Portretna fotografija", "Event fotografija"]
+        },
+        restoration: {
+          title: "Restauracija Starih Slika",
+          description: "Vraćam život oštećenim i izblelim fotografijama",
+          features: ["Uklanjanje oštećenja", "Obnavljanje boja", "Digitalna restauracija", "Popravljanje starih fotografija"]
+        },
+        photomontage: {
+          title: "Photomontaže Svih Vrsta",
+          description: "Kreativno kombinovanje elemenata u jedinstvene kompozicije",
+          features: ["Kreativne kompozicije", "Realistične montaže", "Fantazijske scene", "Reklamne photomontaže"]
+        },
+        moviePosters: {
+          title: "Filmski Posteri sa Vašom Slikom",
+          description: "Postavite sebe u središe filmskog postera",
+          features: ["Personalizovani posteri", "Različiti filmski stilovi", "Profesionalna obrada", "Visoka rezolucija"]
+        }
+      },
       cta: {
         title: "Spremni za Kreativnu Fotografiju?",
         description: "Kontaktirajte me za besplatnu konsultaciju o vašoj fotografiji ili photomontaži projektu",
@@ -1818,6 +1865,53 @@ export const translations: Record<Language, Translations> = {
       servicesTitle: "My Photography Services",
       servicesSubtitle: "From professional photography to creative photomontages",
       portfolioButtonText: "Work Portfolio",
+      portfolioTitle: "Movie Poster Portfolio",
+      portfolioDescription: "Examples of my work - creating professional movie posters with different styles and atmospheres",
+      processTitle: "Creative Process",
+      processSteps: [
+        {
+          title: "Consultation",
+          description: "We discuss your idea and needs",
+          icon: "1"
+        },
+        {
+          title: "Concept Creation",
+          description: "I develop creative approach and style",
+          icon: "2"
+        },
+        {
+          title: "Production",
+          description: "Professional photography or digital editing",
+          icon: "3"
+        },
+        {
+          title: "Finalization",
+          description: "Final editing and delivery in desired format",
+          icon: "4"
+        }
+      ],
+      services: {
+        professionalPhotography: {
+          title: "Professional Photography",
+          description: "Product, portrait, event and corporate photography",
+          features: ["Studio photography", "Products and catalogs", "Portrait photography", "Event photography"]
+        },
+        restoration: {
+          title: "Old Photo Restoration",
+          description: "Bringing life back to damaged and faded photographs",
+          features: ["Damage removal", "Color restoration", "Digital restoration", "Old photo repair"]
+        },
+        photomontage: {
+          title: "All Types of Photomontages",
+          description: "Creative combination of elements into unique compositions",
+          features: ["Creative compositions", "Realistic montages", "Fantasy scenes", "Advertising photomontages"]
+        },
+        moviePosters: {
+          title: "Movie Posters with Your Image",
+          description: "Place yourself at the center of a movie poster",
+          features: ["Personalized posters", "Various movie styles", "Professional editing", "High resolution"]
+        }
+      },
       cta: {
         title: "Ready for Creative Photography?",
         description: "Contact me for a free consultation about your photography or photomontage project",
@@ -2482,6 +2576,53 @@ export const translations: Record<Language, Translations> = {
       servicesTitle: "Meine Fotografie-Dienstleistungen",
       servicesSubtitle: "Von professioneller Fotografie bis zu kreativen Photomontagen",
       portfolioButtonText: "Arbeiten Portfolio",
+      portfolioTitle: "Filmplakat Portfolio",
+      portfolioDescription: "Beispiele meiner Arbeit - Erstellung professioneller Filmplakate mit verschiedenen Stilen und Atmosphären",
+      processTitle: "Kreativer Prozess",
+      processSteps: [
+        {
+          title: "Beratung",
+          description: "Wir besprechen Ihre Idee und Anforderungen",
+          icon: "1"
+        },
+        {
+          title: "Konzepterstellung",
+          description: "Ich entwickle einen kreativen Ansatz und Stil",
+          icon: "2"
+        },
+        {
+          title: "Produktion",
+          description: "Professionelle Fotografie oder digitale Bearbeitung",
+          icon: "3"
+        },
+        {
+          title: "Finalisierung",
+          description: "Finale Bearbeitung und Lieferung im gewünschten Format",
+          icon: "4"
+        }
+      ],
+      services: {
+        professionalPhotography: {
+          title: "Professionelle Fotografie",
+          description: "Produkt-, Portrait-, Event- und Unternehmensfotografie",
+          features: ["Studio-Fotografie", "Produkte und Kataloge", "Porträtfotografie", "Event-Fotografie"]
+        },
+        restoration: {
+          title: "Restaurierung alter Fotos",
+          description: "Beschädigten und verblassten Fotografien neues Leben einhauchen",
+          features: ["Schäden entfernen", "Farb-Restaurierung", "Digitale Restaurierung", "Alte Foto-Reparatur"]
+        },
+        photomontage: {
+          title: "Alle Arten von Photomontagen",
+          description: "Kreative Kombination von Elementen zu einzigartigen Kompositionen",
+          features: ["Kreative Kompositionen", "Realistische Montagen", "Fantasy-Szenen", "Werbe-Photomontagen"]
+        },
+        moviePosters: {
+          title: "Filmplakate mit Ihrem Bild",
+          description: "Stellen Sie sich in den Mittelpunkt eines Filmplakats",
+          features: ["Personalisierte Plakate", "Verschiedene Filmstile", "Professionelle Bearbeitung", "Hohe Auflösung"]
+        }
+      },
       cta: {
         title: "Bereit für kreative Fotografie?",
         description: "Kontaktieren Sie mich für eine kostenlose Beratung zu Ihrem Fotografie- oder Photomontage-Projekt",
@@ -3146,6 +3287,53 @@ export const translations: Record<Language, Translations> = {
       servicesTitle: "Shërbimet e Mia të Fotografisë",
       servicesSubtitle: "Nga fotografia profesionale deri te photomontazhet kreative",
       portfolioButtonText: "Portfolio Punësh",
+      portfolioTitle: "Portfolio Posterash Filmash",
+      portfolioDescription: "Shembuj të punës sime - krijimi i posterave profesionale të filmave me stile dhe atmosfera të ndryshme",
+      processTitle: "Procesi Kreativ",
+      processSteps: [
+        {
+          title: "Konsultimi",
+          description: "Diskutojmë idenë dhe nevojat tuaja",
+          icon: "1"
+        },
+        {
+          title: "Krijimi i Konceptit",
+          description: "Zhvilloj qasjen kreative dhe stilin",
+          icon: "2"
+        },
+        {
+          title: "Prodhimi",
+          description: "Fotografi profesionale ose përpunim dixhital",
+          icon: "3"
+        },
+        {
+          title: "Finalizimi",
+          description: "Përpunimi final dhe dorëzimi në formatin e dëshiruar",
+          icon: "4"
+        }
+      ],
+      services: {
+        professionalPhotography: {
+          title: "Fotografi Profesionale",
+          description: "Fotografi produktesh, portretesh, ngjarjesh dhe korporative",
+          features: ["Fotografi studio", "Produkte dhe katalogë", "Fotografi portretesh", "Fotografi ngjarjesh"]
+        },
+        restoration: {
+          title: "Restaurimi i Fotografive të Vjetra",
+          description: "Duke sjellë jetë në fotografitë e dëmtuara dhe të zbehtë",
+          features: ["Heqja e dëmtimeve", "Restaurimi i ngjyrave", "Restaurim dixhital", "Riparim fotografish të vjetra"]
+        },
+        photomontage: {
+          title: "Të Gjitha Llojet e Photomontazheve",
+          description: "Kombinim kreativ i elementeve në kompozime të veçanta",
+          features: ["Kompozime kreative", "Montazhe realiste", "Skena fantazie", "Photomontazhe reklamuese"]
+        },
+        moviePosters: {
+          title: "Postera Filmash me Fotografinë Tuaj",
+          description: "Vendoseni veten në qendër të një posteri filmi",
+          features: ["Postera të personalizuar", "Stile të ndryshme filmash", "Përpunim profesional", "Rezolucion i lartë"]
+        }
+      },
       cta: {
         title: "Gati për Fotografi Kreative?",
         description: "Kontaktoni për një konsultim falas mbi projektin tuaj të fotografisë ose photomontazhit",

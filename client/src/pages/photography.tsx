@@ -134,15 +134,15 @@ export default function Photography() {
                   <Camera className="w-6 h-6 text-blue-600 dark:text-blue-400" />
                 </div>
                 <CardTitle className="text-xl text-gray-900 dark:text-white">
-                  Profesionalno Fotografisanje
+                  {t.photography?.services?.professionalPhotography?.title || "Profesionalno Fotografisanje"}
                 </CardTitle>
                 <CardDescription className="text-gray-600 dark:text-gray-300">
-                  Fotografije proizvoda, portreta, događaja i korporativne fotografije
+                  {t.photography?.services?.professionalPhotography?.description || "Fotografije proizvoda, portreta, događaja i korporativne fotografije"}
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-2">
-                  {["Studijske fotografije", "Proizvodi i katalozi", "Portretna fotografija", "Event fotografija"].map((feature, index) => (
+                  {(t.photography?.services?.professionalPhotography?.features || ["Studijske fotografije", "Proizvodi i katalozi", "Portretna fotografija", "Event fotografija"]).map((feature, index) => (
                     <div key={index} className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
                       <span className="text-sm text-gray-600 dark:text-gray-300">{feature}</span>
@@ -158,15 +158,15 @@ export default function Photography() {
                   <Image className="w-6 h-6 text-green-600 dark:text-green-400" />
                 </div>
                 <CardTitle className="text-xl text-gray-900 dark:text-white">
-                  Restauracija Starih Slika
+                  {t.photography?.services?.restoration?.title || "Restauracija Starih Slika"}
                 </CardTitle>
                 <CardDescription className="text-gray-600 dark:text-gray-300">
-                  Vraćam život oštećenim i izblelim fotografijama
+                  {t.photography?.services?.restoration?.description || "Vraćam život oštećenim i izblelim fotografijama"}
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-2">
-                  {["Uklanjanje oštećenja", "Obnavljanje boja", "Digitalna restauracija", "Popravljanje starih fotografija"].map((feature, index) => (
+                  {(t.photography?.services?.restoration?.features || ["Uklanjanje oštećenja", "Obnavljanje boja", "Digitalna restauracija", "Popravljanje starih fotografija"]).map((feature, index) => (
                     <div key={index} className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
                       <span className="text-sm text-gray-600 dark:text-gray-300">{feature}</span>
@@ -182,15 +182,15 @@ export default function Photography() {
                   <Palette className="w-6 h-6 text-purple-600 dark:text-purple-400" />
                 </div>
                 <CardTitle className="text-xl text-gray-900 dark:text-white">
-                  Photomontaže Svih Vrsta
+                  {t.photography?.services?.photomontage?.title || "Photomontaže Svih Vrsta"}
                 </CardTitle>
                 <CardDescription className="text-gray-600 dark:text-gray-300">
-                  Kreativno kombinovanje elemenata u jedinstvene kompozicije
+                  {t.photography?.services?.photomontage?.description || "Kreativno kombinovanje elemenata u jedinstvene kompozicije"}
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-2">
-                  {["Kreativne kompozicije", "Realistične montaže", "Fantazijske scene", "Reklamne photomontaže"].map((feature, index) => (
+                  {(t.photography?.services?.photomontage?.features || ["Kreativne kompozicije", "Realistične montaže", "Fantazijske scene", "Reklamne photomontaže"]).map((feature, index) => (
                     <div key={index} className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
                       <span className="text-sm text-gray-600 dark:text-gray-300">{feature}</span>
@@ -206,15 +206,15 @@ export default function Photography() {
                   <Film className="w-6 h-6 text-red-600 dark:text-red-400" />
                 </div>
                 <CardTitle className="text-xl text-gray-900 dark:text-white">
-                  Filmski Posteri sa Vašom Slikom
+                  {t.photography?.services?.moviePosters?.title || "Filmski Posteri sa Vašom Slikom"}
                 </CardTitle>
                 <CardDescription className="text-gray-600 dark:text-gray-300">
-                  Postavite sebe u središe filmskog postera
+                  {t.photography?.services?.moviePosters?.description || "Postavite sebe u središe filmskog postera"}
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-2">
-                  {["Personalizovani posteri", "Različiti filmski stilovi", "Profesionalna obrada", "Visoka rezolucija"].map((feature, index) => (
+                  {(t.photography?.services?.moviePosters?.features || ["Personalizovani posteri", "Različiti filmski stilovi", "Profesionalna obrada", "Visoka rezolucija"]).map((feature, index) => (
                     <div key={index} className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
                       <span className="text-sm text-gray-600 dark:text-gray-300">{feature}</span>
@@ -232,10 +232,10 @@ export default function Photography() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Portfolio Filmskih Postera
+              {t.photography?.portfolioTitle || "Portfolio Filmskih Postera"}
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Primeri mojih radova - kreiranje profesionalnih filmskih postera sa različitim stilovima i atmosferama
+              {t.photography?.portfolioDescription || "Primeri mojih radova - kreiranje profesionalnih filmskih postera sa različitim stilovima i atmosferama"}
             </p>
           </div>
 
@@ -274,12 +274,12 @@ export default function Photography() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Kreativni Proces
+              {t.photography?.processTitle || "Kreativni Proces"}
             </h2>
           </div>
 
           <div className="grid md:grid-cols-4 gap-8">
-            {[
+            {(t.photography?.processSteps || [
               {
                 title: "Konsultacija",
                 description: "Razgovaramo o vašoj ideji i potrebama",
@@ -300,7 +300,7 @@ export default function Photography() {
                 description: "Poslednja obrada i isporuka u željenom formatu",
                 icon: "4"
               }
-            ].map((step, index) => (
+            ]).map((step, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
                   {step.icon}
