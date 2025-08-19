@@ -1,9 +1,9 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Settings, TrendingUp, BarChart3, Users, CheckCircle, ArrowRight, Target, Clock, Trophy, Eye, Home } from "lucide-react";
+import { Settings, TrendingUp, BarChart3, Users, CheckCircle, ArrowRight, Target, Clock, Trophy, Eye, ArrowLeft } from "lucide-react";
 import consultingImage from "@assets/generated_images/Professional_digital_consulting_workspace_7a5b279f.png";
-import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
+import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 
 export default function Consulting() {
@@ -38,21 +38,26 @@ export default function Consulting() {
   };
 
   return (
-    <div className="bg-white">
-      <Navigation />
-      
-      {/* Home Button */}
-      <div className="bg-gray-50 py-4">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link href="/">
-            <button 
-              className="inline-flex items-center px-4 py-2 bg-navy text-white rounded-lg hover:bg-navy/80 transition-colors duration-300"
-              data-testid="home-button"
-            >
-              <Home className="w-4 h-4 mr-2" />
-              {t.nav.home}
-            </button>
-          </Link>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-blue-900">
+      {/* Header */}
+      <div className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-b sticky top-0 z-50">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex items-center gap-4">
+            <Link href="/">
+              <Button variant="ghost" size="sm" className="gap-2" data-testid="button-back-home">
+                <ArrowLeft className="w-4 h-4" />
+                {t.nav.home}
+              </Button>
+            </Link>
+            <div>
+              <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
+                {t.consulting?.hero?.title || "Konsalting & Strategijsko Savetovanje"}
+              </h1>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                {t.consulting?.hero?.subtitle || "Ekspertsko savetovanje za digitalni uspeh"}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
