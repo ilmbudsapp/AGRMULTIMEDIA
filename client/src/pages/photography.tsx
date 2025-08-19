@@ -15,38 +15,40 @@ import posterAbandoned from '@assets/MOVIE POSTER ABANDONED_1755565219158.jpg';
 export default function Photography() {
   const { t } = useLanguage();
 
-  const moviePosters = [
+  const moviePostersData = t.photography?.moviePosters || [
     {
       title: "Ragazzo con Lanterne",
       description: "Kreativni fantazijski poster sa atmosferskim osvetljenjem",
-      image: posterRagazzo,
       category: "Fantasy"
     },
     {
       title: "Il Silenzio del Boss",
       description: "Dramski poster u stilu filmova noir",
-      image: posterAnto,
       category: "Drama"
     },
     {
       title: "Kong",
       description: "Epski akcioni poster sa kreaturom",
-      image: posterKong,
       category: "Action"
     },
     {
       title: "Gardijan",
       description: "Zimski atmosferski poster sa snegom",
-      image: posterGardijan,
       category: "Drama"
     },
     {
       title: "Abandoned",
       description: "Misterijski triler poster sa tamnom atmosferom",
-      image: posterAbandoned,
       category: "Thriller"
     }
   ];
+
+  const movieImages = [posterRagazzo, posterAnto, posterKong, posterGardijan, posterAbandoned];
+
+  const moviePosters = moviePostersData.map((poster, index) => ({
+    ...poster,
+    image: movieImages[index]
+  }));
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-blue-900">

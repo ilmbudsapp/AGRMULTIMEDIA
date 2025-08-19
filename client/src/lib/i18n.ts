@@ -1156,6 +1156,33 @@ export const translations: Record<Language, Translations> = {
       portfolioButtonText: "Portfolio Radova",
       portfolioTitle: "Portfolio Filmskih Postera",
       portfolioDescription: "Primeri mojih radova - kreiranje profesionalnih filmskih postera sa različitim stilovima i atmosferama",
+      moviePosters: [
+        {
+          title: "Ragazzo con Lanterne",
+          description: "Kreativni fantazijski poster sa atmosferskim osvetljenjem",
+          category: "Fantasy"
+        },
+        {
+          title: "Il Silenzio del Boss",
+          description: "Dramski poster u stilu filmova noir",
+          category: "Drama"
+        },
+        {
+          title: "Kong",
+          description: "Epski akcioni poster sa kreaturom",
+          category: "Action"
+        },
+        {
+          title: "Gardijan",
+          description: "Zimski atmosferski poster sa snegom",
+          category: "Drama"
+        },
+        {
+          title: "Abandoned",
+          description: "Misterijski triler poster sa tamnom atmosferom",
+          category: "Thriller"
+        }
+      ],
       processTitle: "Kreativni Proces",
       processSteps: [
         {
@@ -1867,6 +1894,33 @@ export const translations: Record<Language, Translations> = {
       portfolioButtonText: "Work Portfolio",
       portfolioTitle: "Movie Poster Portfolio",
       portfolioDescription: "Examples of my work - creating professional movie posters with different styles and atmospheres",
+      moviePosters: [
+        {
+          title: "Ragazzo con Lanterne",
+          description: "Creative fantasy poster with atmospheric lighting",
+          category: "Fantasy"
+        },
+        {
+          title: "Il Silenzio del Boss",
+          description: "Drama poster in noir film style",
+          category: "Drama"
+        },
+        {
+          title: "Kong",
+          description: "Epic action poster with creature",
+          category: "Action"
+        },
+        {
+          title: "Gardijan",
+          description: "Winter atmospheric poster with snow",
+          category: "Drama"
+        },
+        {
+          title: "Abandoned",
+          description: "Mysterious thriller poster with dark atmosphere",
+          category: "Thriller"
+        }
+      ],
       processTitle: "Creative Process",
       processSteps: [
         {
@@ -2578,6 +2632,33 @@ export const translations: Record<Language, Translations> = {
       portfolioButtonText: "Arbeiten Portfolio",
       portfolioTitle: "Filmplakat Portfolio",
       portfolioDescription: "Beispiele meiner Arbeit - Erstellung professioneller Filmplakate mit verschiedenen Stilen und Atmosphären",
+      moviePosters: [
+        {
+          title: "Ragazzo con Lanterne",
+          description: "Kreatives Fantasy-Plakat mit atmosphärischer Beleuchtung",
+          category: "Fantasy"
+        },
+        {
+          title: "Il Silenzio del Boss",
+          description: "Drama-Plakat im Noir-Film-Stil",
+          category: "Drama"
+        },
+        {
+          title: "Kong",
+          description: "Episches Action-Plakat mit Kreatur",
+          category: "Action"
+        },
+        {
+          title: "Gardijan",
+          description: "Winter-atmosphärisches Plakat mit Schnee",
+          category: "Drama"
+        },
+        {
+          title: "Abandoned",
+          description: "Mysteriöses Thriller-Plakat mit dunkler Atmosphäre",
+          category: "Thriller"
+        }
+      ],
       processTitle: "Kreativer Prozess",
       processSteps: [
         {
@@ -3289,6 +3370,33 @@ export const translations: Record<Language, Translations> = {
       portfolioButtonText: "Portfolio Punësh",
       portfolioTitle: "Portfolio Posterash Filmash",
       portfolioDescription: "Shembuj të punës sime - krijimi i posterave profesionale të filmave me stile dhe atmosfera të ndryshme",
+      moviePosters: [
+        {
+          title: "Ragazzo con Lanterne",
+          description: "Poster fantazie kreativ me ndriçim atmosferik",
+          category: "Fantasy"
+        },
+        {
+          title: "Il Silenzio del Boss",
+          description: "Poster dramë në stilin e filmave noir",
+          category: "Drama"
+        },
+        {
+          title: "Kong",
+          description: "Poster epik aksioni me krijesë",
+          category: "Action"
+        },
+        {
+          title: "Gardijan",
+          description: "Poster atmosferik dimëror me borë",
+          category: "Drama"
+        },
+        {
+          title: "Abandoned",
+          description: "Poster trilleri misterios me atmosferë të errët",
+          category: "Thriller"
+        }
+      ],
       processTitle: "Procesi Kreativ",
       processSteps: [
         {
