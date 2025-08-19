@@ -16,6 +16,9 @@ import DigitalMarketing from "@/pages/digital-marketing";
 import Photography from "@/pages/photography";
 import Consulting from "@/pages/consulting";
 import Impresum from "@/pages/impresum";
+import DigitalMarketingTrends2024 from "@/pages/blog/digital-marketing-trends-2024";
+import WebsiteConversionOptimization from "@/pages/blog/website-conversion-optimization";
+import VideoMarketingPower from "@/pages/blog/video-marketing-power";
 import Privacy from "@/pages/privacy";
 import Terms from "@/pages/terms";
 import Cookies from "@/pages/cookies";
@@ -35,6 +38,9 @@ function Router() {
       <Route path="/photography" component={Photography} />
       <Route path="/consulting" component={Consulting} />
       <Route path="/impresum" component={Impresum} />
+      <Route path="/blog/digital-marketing-trends-2024" component={DigitalMarketingTrends2024} />
+      <Route path="/blog/website-conversion-optimization" component={WebsiteConversionOptimization} />
+      <Route path="/blog/video-marketing-power" component={VideoMarketingPower} />
       <Route path="/privacy" component={Privacy} />
       <Route path="/terms" component={Terms} />
       <Route path="/cookies" component={Cookies} />

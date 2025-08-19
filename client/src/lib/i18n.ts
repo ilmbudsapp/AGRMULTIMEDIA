@@ -142,6 +142,74 @@ export interface Translations {
     readMore: string;
     viewAll: string;
   };
+
+  // Blog Post content
+  blogPost: {
+    trends: {
+      title: string;
+      subtitle: string;
+      category: string;
+      intro: string;
+      aiPersonalization: { title: string; description: string; };
+      voiceSearch: { title: string; description: string; };
+      mobileFirst: { title: string; description: string; };
+      socialCommerce: { title: string; description: string; };
+      implementation: { title: string; description: string; };
+      actionItems: { title: string; item1: string; item2: string; item3: string; item4: string; };
+    };
+    conversion: {
+      title: string;
+      subtitle: string;
+      category: string;
+      intro: string;
+      userExperience: { title: string; description: string; };
+      abTesting: { title: string; description: string; };
+      callToAction: { title: string; description: string; };
+      analytics: { title: string; description: string; };
+      practicalSteps: { title: string; description: string; };
+      optimizationChecklist: {
+        title: string;
+        technical: string;
+        pageSpeed: string;
+        mobileOptimization: string;
+        formOptimization: string;
+        content: string;
+        headlines: string;
+        socialProof: string;
+        urgency: string;
+      };
+      cta: { title: string; description: string; button: string; };
+    };
+    video: {
+      title: string;
+      subtitle: string;
+      category: string;
+      intro: string;
+      engagement: { title: string; description: string; };
+      conversion: { title: string; description: string; };
+      storytelling: { title: string; description: string; };
+      reach: { title: string; description: string; };
+      types: {
+        title: string;
+        product: { title: string; description: string; };
+        testimonial: { title: string; description: string; };
+        educational: { title: string; description: string; };
+        behindScenes: { title: string; description: string; };
+      };
+      strategy: {
+        title: string;
+        production: string;
+        quality: string;
+        lighting: string;
+        planning: string;
+        distribution: string;
+        platforms: string;
+        timing: string;
+        seo: string;
+      };
+      cta: { title: string; description: string; button: string; };
+    };
+  };
   
   // Contact Section
   contact: {
@@ -674,6 +742,140 @@ export const translations: Record<Language, Translations> = {
       },
       readMore: "Čitaj više",
       viewAll: "Pogledaj sve članke"
+    },
+    blogPost: {
+      trends: {
+        title: "5 Najvažnijih Trendova u Digitalnom Marketingu za 2024.",
+        subtitle: "Ostanite u korak sa najnovijim trendovima",
+        category: "Digitalni Marketing",
+        intro: "Pejzaž digitalnog marketinga se brzo razvija. Od AI-om pokretane personalizacije do immersivnih AR iskustava, 2024. godina donosi uzbudljive prilike za preduzeća da se povežu sa svojom publikom na smisleniji način.",
+        aiPersonalization: {
+          title: "Personalizacija pokretana AI",
+          description: "Veštačka inteligencija omogućava neviđene nivoe personalizacije sadržaja, stvarajući jedinstvena korisnička iskustva prilagođena individualnim preferencama i ponašanjima."
+        },
+        voiceSearch: {
+          title: "Optimizacija za glasovnu pretragu",
+          description: "Sa pametnim zvučnicima koji postaju mainstream, optimizacija sadržaja za glasovne pretrage je ključna za održavanje vidljivosti u rezultatima pretrage."
+        },
+        mobileFirst: {
+          title: "Iskustva usmerena ka mobilnim uređajima",
+          description: "Mobilni uređaji čine većinu web saobraćaja. Dizajniranje iskustava usmerenih ka mobilnim uređajima osigurava optimalnu performansu na svim uređajima."
+        },
+        socialCommerce: {
+          title: "Integracija društvene trgovine",
+          description: "Društvene platforme postaju destinacije za kupovinu. Integracija trgovine direktno u društvena iskustva smanjuje trenje u kupovnom putovanju."
+        },
+        implementation: {
+          title: "Implementacija ovih trendova",
+          description: "Uspešna implementacija ovih trendova zahteva strateško planiranje i odgovarajuću ekspertizu. U MULTIMEDIA AGRONDESIGN-u pomajem preduzećima da se snađu u digitalnom pejzažu sa najsavremenijim rešenjima koja donose stvarne rezultate."
+        },
+        actionItems: {
+          title: "Ključne stavke za akciju",
+          item1: "Audituj svoju trenutnu strategiju digitalnog marketinga",
+          item2: "Identifikuj prilike za AI integraciju",
+          item3: "Optimizuj sadržaj za glasovnu pretragu",
+          item4: "Poboljšaj mobilno korisničko iskustvo"
+        }
+      },
+      conversion: {
+        title: "Ultimativni vodič za optimizaciju konverzije web sajta",
+        subtitle: "Pretvori posetioce u klijente",
+        category: "Optimizacija web sajta",
+        intro: "Konvertovanje posetilaca web sajta u klijente je i umetnost i nauka. Kroz strateški dizajn, uvjerljiv sadržaj i testiranje zasnovano na podacima, možete dramatično poboljšati svoje stope konverzije i rasti svoj biznis.",
+        userExperience: {
+          title: "Dizajn korisničkog iskustva",
+          description: "Intuitivna navigacija, jasne vrednosne ponude i besprekorno korisničke tokove prirodno vode posetioce prema akcijama konverzije."
+        },
+        abTesting: {
+          title: "A/B test strategija",
+          description: "Sistematsko testiranje različitih elemenata pomaže identifikaciji onoga što najbolje rezonuje sa vašom publikom i pokreće više stope konverzije."
+        },
+        callToAction: {
+          title: "Uvjerljivi pozivi na akciju",
+          description: "Strateško postavljanje i uverljiva kopija u vašim CTA-ima mogu značajno uticati na stope konverzije i korisničku angažovanost."
+        },
+        analytics: {
+          title: "Performanse analitike",
+          description: "Uvidi zasnovani na podacima otkrivaju obrasce ponašanja korisnika i prilike za optimizaciju kroz vašu konverzioni levak."
+        },
+        practicalSteps: {
+          title: "Praktični koraci za optimizaciju",
+          description: "Uspešna optimizacija konverzije zahteva sistematski pristup. Počnite sa ovim proverenim strategijama da biste videli neposredna poboljšanja u performansama vašeg web sajta."
+        },
+        optimizationChecklist: {
+          title: "Lista za optimizaciju konverzije",
+          technical: "Tehnička optimizacija",
+          pageSpeed: "Poboljšaj brzinu učitavanja stranice",
+          mobileOptimization: "Optimizuj za mobilne uređaje",
+          formOptimization: "Pojednostavi polja forme",
+          content: "Strategija sadržaja",
+          headlines: "Kreiraj uvjerljive naslove",
+          socialProof: "Dodaj elemente društvenog dokaza",
+          urgency: "Koristi hitnost i nedostupnost"
+        },
+        cta: {
+          title: "Spreman si da pojačaš svoje konverzije?",
+          description: "Dozvoli da MULTIMEDIA AGRONDESIGN optimizuje tvoj web sajt za maksimalne konverzije. Naš pristup zasnovan na podacima donosi merljive rezultate.",
+          button: "Počni danas"
+        }
+      },
+      video: {
+        title: "Moć video marketinga: Angažovanje vaše publike u 2024.",
+        subtitle: "Angažuj publiku kroz vizuelno pripovedanje",
+        category: "Video Marketing",
+        intro: "Video sadržaj je postao dominantna sila u digitalnom marketingu. Sa opadanjem pažnje i povećanjem vizuelne potrošnje, preduzeća koja savladaju video pripovedanje dobijaju značajnu konkurentsku prednost.",
+        engagement: {
+          title: "Više stope angažovanosti",
+          description: "Video sadržaj generiše 1200% više deljenja od teksta i slika zajedno, stvarajući moćan viralni potencijal za vaš brend."
+        },
+        conversion: {
+          title: "Poboljšane konverzije",
+          description: "Odredne stranice sa video-ima mogu povećati stope konverzije do 80%, čineći video osnovnim alatom za prodajne levkove."
+        },
+        storytelling: {
+          title: "Emocionalno pripovedanje",
+          description: "Video omogućava brendovima da pričaju uvjerljive priče koje stvaraju emocionalne veze sa svojom publikom, gradeći lojalnost i poverenje."
+        },
+        reach: {
+          title: "Prošireni doseg",
+          description: "Algoritmi društvenih medija favorizuju video sadržaj, pružajući prilike organskog dosega koje su sve ređe sa drugim tipovima sadržaja."
+        },
+        types: {
+          title: "Tipovi video sadržaja koji konvertuju",
+          product: {
+            title: "Demonstracije proizvoda",
+            description: "Pokažite svoje proizvode u akciji, ističući ključne karakteristike i prednosti na način na koji statičke slike jednostavno ne mogu."
+          },
+          testimonial: {
+            title: "Svedočanstva klijenata",
+            description: "Autentične priče klijenata grade poverenje i kredibilitet, služeći kao moćan društveni dokaz za potencijalne kupce."
+          },
+          educational: {
+            title: "Edukacijski sadržaj",
+            description: "How-to video-i i tutorijali pozicioniraju vaš brend kao eksperta u industriji dok pružaju vredan sadržaj vašoj publici."
+          },
+          behindScenes: {
+            title: "Iz kulisa",
+            description: "Dajte svojoj publici pogled iza zavese da humanizujete svoj brend i stvorite jače veze."
+          }
+        },
+        strategy: {
+          title: "Saveti za strategiju video marketinga",
+          production: "Izvrsnost produkcije",
+          quality: "Investiraj u dobru kvalitet zvuka",
+          lighting: "Koristi odgovarajuće tehnike osvetljenja",
+          planning: "Planiraj strukturu svog sadržaja",
+          distribution: "Pametna distribucija",
+          platforms: "Izaberi prave platforme",
+          timing: "Optimizuj vremena objavljivanja",
+          seo: "Koristi najbolje prakse video SEO-a"
+        },
+        cta: {
+          title: "Spreman si da iskoristiš video marketing?",
+          description: "MULTIMEDIA AGRONDESIGN stvara uvjerljiv video sadržaj koji pokreće angažovanost i konverzije. Od koncepta do distribucije, bavimo se svakim aspektom vaše video marketing strategije.",
+          button: "Počni svoje video putovanje"
+        }
+      }
     },
     contact: {
       title: "Kontaktirajte nas",

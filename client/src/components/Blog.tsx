@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { Link } from "wouter";
 
 export default function Blog() {
   const { t } = useLanguage();
@@ -7,6 +8,7 @@ export default function Blog() {
   const blogPosts = [
     {
       id: 1,
+      slug: "digital-marketing-trends-2024",
       title: t.blog.posts.trends.title,
       description: t.blog.posts.trends.description,
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
@@ -16,6 +18,7 @@ export default function Blog() {
     },
     {
       id: 2,
+      slug: "website-conversion-optimization",
       title: t.blog.posts.conversion.title,
       description: t.blog.posts.conversion.description,
       image: "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
@@ -25,6 +28,7 @@ export default function Blog() {
     },
     {
       id: 3,
+      slug: "video-marketing-power",
       title: t.blog.posts.video.title,
       description: t.blog.posts.video.description,
       image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
@@ -84,12 +88,14 @@ export default function Blog() {
                 >
                   {post.description}
                 </p>
-                <button 
-                  className="inline-flex items-center text-electric-blue font-semibold hover:text-purple-500 transition-colors duration-300"
-                  data-testid={`blog-post-cta-${post.id}`}
-                >
-                  {t.blog.readMore} <ArrowRight className="w-4 h-4 ml-2" />
-                </button>
+                <Link href={`/blog/${post.slug}`}>
+                  <button 
+                    className="inline-flex items-center text-electric-blue font-semibold hover:text-purple-500 transition-colors duration-300"
+                    data-testid={`blog-post-cta-${post.id}`}
+                  >
+                    {t.blog.readMore} <ArrowRight className="w-4 h-4 ml-2" />
+                  </button>
+                </Link>
               </div>
             </article>
           ))}
