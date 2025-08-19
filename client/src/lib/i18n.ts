@@ -565,7 +565,7 @@ export const translations: Record<Language, Translations> = {
       title: "O MULTIMEDIA AGRONDESIGN",
       subtitle: "Kreiramo izuzetne digitalne doživljaje koji pokreću vaš biznis napred",
       storyTitle: "Naša priča",
-      storyP1: "MULTIMEDIA AGRONDESIGN sam osnovan sa vizijom da pomažem biznis-ima da se istaknu u digitalnom svetu. Specijalizovan sam za kreiranje visokih kvaliteta multimedia sadržaja koji privlači pažnju, gradi brendove i pokreće rezultate.",
+      storyP1: "MULTIMEDIA AGRONDESIGN sam osnovao sa vizijom da pomažem biznis-ima da se istaknu u digitalnom svetu. Specijalizovan sam za kreiranje visokih kvaliteta multimedia sadržaja koji privlači pažnju, gradi brendove i pokreće rezultate.",
       storyP2: "Kao iskusan dizajner, developer i marketing stručnjak, radim posvećeno da vašim idejama dam život kroz inovativna digitalna rešenja.",
       stats: {
         projects: "Projekata",
