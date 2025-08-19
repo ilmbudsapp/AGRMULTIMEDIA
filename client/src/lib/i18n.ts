@@ -998,7 +998,7 @@ export const translations: Record<Language, Translations> = {
     videoProduction: {
       hero: {
         title: "Profesionalna Video Produkcija",
-        description: "Kreiram video sadržaj visoke kvaliteta koji prenosi vašu poruku i angažuje auditorijum kroz profesionalno snimanje, editovanje i post-produkciju."
+        description: "Kreiram video sadržaj visokog kvaliteta koji prenosi vašu poruku i angažuje auditorijum kroz profesionalno snimanje, editovanje i post-produkciju."
       },
       services: {
         filming: {
