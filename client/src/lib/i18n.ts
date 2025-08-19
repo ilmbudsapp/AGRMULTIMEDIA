@@ -494,6 +494,53 @@ export interface Translations {
       button: string;
     };
   };
+
+  // Consulting page content
+  consulting: {
+    hero: {
+      title: string;
+      subtitle: string;
+      description: string;
+    };
+    servicesTitle: string;
+    servicesSubtitle: string;
+    services: {
+      digitalStrategy: {
+        title: string;
+        description: string;
+        features: string[];
+      };
+      uxAudit: {
+        title: string;
+        description: string;
+        features: string[];
+      };
+      analytics: {
+        title: string;
+        description: string;
+        features: string[];
+      };
+    };
+    process: {
+      title: string;
+      steps: {
+        title: string;
+        description: string;
+      }[];
+    };
+    benefits: {
+      title: string;
+      items: {
+        title: string;
+        description: string;
+      }[];
+    };
+    cta: {
+      title: string;
+      description: string;
+      button: string;
+    };
+  };
 }
 
 export const translations: Record<Language, Translations> = {
@@ -1231,6 +1278,80 @@ export const translations: Record<Language, Translations> = {
       cta: {
         title: "Spremni za Kreativnu Fotografiju?",
         description: "Kontaktirajte me za besplatnu konsultaciju o vašoj fotografiji ili photomontaži projektu",
+        button: "Kontaktiraj Me"
+      }
+    },
+
+    consulting: {
+      hero: {
+        title: "Konsalting i Strategijsko Savetovanje",
+        subtitle: "Stručne konsultacije za digitalni uspeh",
+        description: "Analiziram vaš trenutni digitalni pristustvo, identifikujem mogućnosti za poboljšanje i kreiram strategiju koja će povećati vašu online efikasnost, korisničko iskustvo i konverzije."
+      },
+      servicesTitle: "Moje Konsalting Usluge",
+      servicesSubtitle: "Strategijsko planiranje i optimizacija za vaš digitalni uspeh",
+      services: {
+        digitalStrategy: {
+          title: "Digitalna Strategija",
+          description: "Kreiram sveobuhvatnu digitalnu strategiju prilagođenu vašim poslovnim ciljevima",
+          features: ["Analiza tržišta i konkurencije", "Definisanje ciljne publike", "Strategija brendiranja", "Plan digitalnog marketinga", "ROI optimizacija", "Dugoročno planiranje"]
+        },
+        uxAudit: {
+          title: "UX/UI Audit",
+          description: "Detaljno analiziram vaš sajt ili aplikaciju i dajem preporuke za poboljšanje",
+          features: ["Analiza korisničkog iskustva", "Testiranje upotrebljivosti", "Analiza konverzija", "Mobile responsivnost", "Brzina učitavanja", "Accessibility provera"]
+        },
+        analytics: {
+          title: "Analitika i Izvještavanje",
+          description: "Postavljam napredne sisteme praćenja i analizirm performanse",
+          features: ["Google Analytics setup", "Conversion tracking", "A/B testiranje", "Heat map analiza", "ROI merenje", "Mesečni izvештaji"]
+        }
+      },
+      process: {
+        title: "Proces Rada",
+        steps: [
+          {
+            title: "Analiza Trenutnog Stanja",
+            description: "Detaljno analiziram vaš trenutni digitalni prisustvo i identifikujem probleme"
+          },
+          {
+            title: "Istraživanje i Strategija",
+            description: "Analiziram tržište, konkurenciju i kreiram prilagođenu strategiju"
+          },
+          {
+            title: "Implementacijski Plan",
+            description: "Kreiram detaljni plan implementacije sa jasnim koracima i rokovima"
+          },
+          {
+            title: "Praćenje i Optimizacija",
+            description: "Kontinuirano praćenje rezultata i optimizacija strategije"
+          }
+        ]
+      },
+      benefits: {
+        title: "Prednosti Profesionalnog Konsaltinga",
+        items: [
+          {
+            title: "Povećanje Konverzija",
+            description: "Optimizacija koja direktno utiče na povećanje prodaje i leads-a"
+          },
+          {
+            title: "Ušteda Vremena i Novca",
+            description: "Izbegavanje grešaka i fokusiranje na strategije koje daju rezultate"
+          },
+          {
+            title: "Konkurentska Prednost",
+            description: "Strategije koje vas izdvajaju od konkurencije"
+          },
+          {
+            title: "Merljivi Rezultati",
+            description: "Jasno definisani KPI-jevi i redovan monitoring performansi"
+          }
+        ]
+      },
+      cta: {
+        title: "Spremni za Digitalni Rast?",
+        description: "Zakažite besplatnu konsultaciju i otkrijte kako možemo poboljšati vaš digitalni pristustvo",
         button: "Kontaktiraj Me"
       }
     }
@@ -1971,6 +2092,80 @@ export const translations: Record<Language, Translations> = {
         description: "Contact me for a free consultation about your photography or photomontage project",
         button: "Contact Me"
       }
+    },
+
+    consulting: {
+      hero: {
+        title: "Consulting & Strategic Advisory",
+        subtitle: "Expert consultations for digital success",
+        description: "I analyze your current digital presence, identify improvement opportunities and create strategies that will increase your online efficiency, user experience and conversions."
+      },
+      servicesTitle: "My Consulting Services",
+      servicesSubtitle: "Strategic planning and optimization for your digital success",
+      services: {
+        digitalStrategy: {
+          title: "Digital Strategy",
+          description: "I create comprehensive digital strategies tailored to your business goals",
+          features: ["Market and competitor analysis", "Target audience definition", "Branding strategy", "Digital marketing plan", "ROI optimization", "Long-term planning"]
+        },
+        uxAudit: {
+          title: "UX/UI Audit",
+          description: "I thoroughly analyze your website or application and provide improvement recommendations",
+          features: ["User experience analysis", "Usability testing", "Conversion analysis", "Mobile responsiveness", "Loading speed", "Accessibility check"]
+        },
+        analytics: {
+          title: "Analytics & Reporting",
+          description: "I set up advanced tracking systems and analyze performance",
+          features: ["Google Analytics setup", "Conversion tracking", "A/B testing", "Heat map analysis", "ROI measurement", "Monthly reports"]
+        }
+      },
+      process: {
+        title: "Work Process",
+        steps: [
+          {
+            title: "Current State Analysis",
+            description: "I thoroughly analyze your current digital presence and identify issues"
+          },
+          {
+            title: "Research & Strategy",
+            description: "I analyze market, competition and create tailored strategy"
+          },
+          {
+            title: "Implementation Plan",
+            description: "I create detailed implementation plan with clear steps and deadlines"
+          },
+          {
+            title: "Monitoring & Optimization",
+            description: "Continuous monitoring of results and strategy optimization"
+          }
+        ]
+      },
+      benefits: {
+        title: "Benefits of Professional Consulting",
+        items: [
+          {
+            title: "Increased Conversions",
+            description: "Optimization that directly impacts increased sales and leads"
+          },
+          {
+            title: "Time and Money Savings",
+            description: "Avoiding mistakes and focusing on strategies that deliver results"
+          },
+          {
+            title: "Competitive Advantage",
+            description: "Strategies that set you apart from competition"
+          },
+          {
+            title: "Measurable Results",
+            description: "Clearly defined KPIs and regular performance monitoring"
+          }
+        ]
+      },
+      cta: {
+        title: "Ready for Digital Growth?",
+        description: "Schedule a free consultation and discover how we can improve your digital presence",
+        button: "Contact Me"
+      }
     }
   },
   de: {
@@ -2709,6 +2904,80 @@ export const translations: Record<Language, Translations> = {
         description: "Kontaktieren Sie mich für eine kostenlose Beratung zu Ihrem Fotografie- oder Photomontage-Projekt",
         button: "Kontaktieren Sie mich"
       }
+    },
+
+    consulting: {
+      hero: {
+        title: "Beratung & Strategische Beratung",
+        subtitle: "Expertenberatung für digitalen Erfolg",
+        description: "Ich analysiere Ihre aktuelle digitale Präsenz, identifiziere Verbesserungsmöglichkeiten und erstelle Strategien, die Ihre Online-Effizienz, Benutzererfahrung und Konversionen steigern."
+      },
+      servicesTitle: "Meine Beratungsdienstleistungen",
+      servicesSubtitle: "Strategische Planung und Optimierung für Ihren digitalen Erfolg",
+      services: {
+        digitalStrategy: {
+          title: "Digitale Strategie",
+          description: "Ich erstelle umfassende digitale Strategien, die auf Ihre Geschäftsziele zugeschnitten sind",
+          features: ["Markt- und Wettbewerbsanalyse", "Zielgruppendefinition", "Branding-Strategie", "Digital-Marketing-Plan", "ROI-Optimierung", "Langfristige Planung"]
+        },
+        uxAudit: {
+          title: "UX/UI Audit",
+          description: "Ich analysiere Ihre Website oder Anwendung gründlich und gebe Verbesserungsempfehlungen",
+          features: ["Benutzererfahrungsanalyse", "Usability-Tests", "Konversionsanalyse", "Mobile Responsivität", "Ladegeschwindigkeit", "Accessibility-Prüfung"]
+        },
+        analytics: {
+          title: "Analytics & Berichterstattung",
+          description: "Ich richte erweiterte Tracking-Systeme ein und analysiere die Performance",
+          features: ["Google Analytics Setup", "Conversion Tracking", "A/B Testing", "Heat Map Analyse", "ROI Messung", "Monatliche Berichte"]
+        }
+      },
+      process: {
+        title: "Arbeitsprozess",
+        steps: [
+          {
+            title: "Ist-Zustand-Analyse",
+            description: "Ich analysiere gründlich Ihre aktuelle digitale Präsenz und identifiziere Probleme"
+          },
+          {
+            title: "Forschung & Strategie",
+            description: "Ich analysiere Markt, Wettbewerb und erstelle maßgeschneiderte Strategie"
+          },
+          {
+            title: "Umsetzungsplan",
+            description: "Ich erstelle einen detaillierten Umsetzungsplan mit klaren Schritten und Fristen"
+          },
+          {
+            title: "Überwachung & Optimierung",
+            description: "Kontinuierliche Überwachung der Ergebnisse und Strategieoptimierung"
+          }
+        ]
+      },
+      benefits: {
+        title: "Vorteile professioneller Beratung",
+        items: [
+          {
+            title: "Erhöhte Konversionen",
+            description: "Optimierung, die sich direkt auf erhöhte Verkäufe und Leads auswirkt"
+          },
+          {
+            title: "Zeit- und Geldersparnis",
+            description: "Vermeidung von Fehlern und Fokussierung auf Strategien, die Ergebnisse liefern"
+          },
+          {
+            title: "Wettbewerbsvorteil",
+            description: "Strategien, die Sie von der Konkurrenz abheben"
+          },
+          {
+            title: "Messbare Ergebnisse",
+            description: "Klar definierte KPIs und regelmäßige Leistungsüberwachung"
+          }
+        ]
+      },
+      cta: {
+        title: "Bereit für digitales Wachstum?",
+        description: "Vereinbaren Sie eine kostenlose Beratung und entdecken Sie, wie wir Ihre digitale Präsenz verbessern können",
+        button: "Kontaktieren Sie mich"
+      }
     }
   },
   sq: {
@@ -3445,6 +3714,80 @@ export const translations: Record<Language, Translations> = {
       cta: {
         title: "Gati për Fotografi Kreative?",
         description: "Kontaktoni për një konsultim falas mbi projektin tuaj të fotografisë ose photomontazhit",
+        button: "Kontaktoni"
+      }
+    },
+
+    consulting: {
+      hero: {
+        title: "Konsultime & Këshillim Strategjik",
+        subtitle: "Konsultime eksperte për sukses dixhital",
+        description: "Analizoj prezencën tuaj aktuale dixhitale, identifikoj mundësitë për përmirësim dhe krijoj strategji që do të rrisin efikasitetin tuaj online, përvojën e përdoruesit dhe konvertimet."
+      },
+      servicesTitle: "Shërbimet e Mia të Konsultimit",
+      servicesSubtitle: "Planifikim strategjik dhe optimizim për suksesin tuaj dixhital",
+      services: {
+        digitalStrategy: {
+          title: "Strategji Dixhitale",
+          description: "Krijoj strategji dixhitale gjithëpërfshirëse të përshtatura për objektivat tuaja të biznesit",
+          features: ["Analiza e tregut dhe konkurrentëve", "Përcaktimi i audiencës së synuar", "Strategji branding", "Plan i marketingut dixhital", "Optimizim ROI", "Planifikim afatgjatë"]
+        },
+        uxAudit: {
+          title: "Audit UX/UI",
+          description: "Analizoj me kujdes faqen tuaj ose aplikacionin dhe jap rekomandime për përmirësim",
+          features: ["Analiza e përvojës së përdoruesit", "Testim të përdorshmërisë", "Analiza e konvertimeve", "Përgjigje mobile", "Shpejtësia e ngarkimit", "Kontroll i aksesueshmërisë"]
+        },
+        analytics: {
+          title: "Analitikë & Raportim",
+          description: "Vendos sisteme të përparuara të ndjekjes dhe analizoj performancën",
+          features: ["Setup Google Analytics", "Ndjekje konvertimesh", "Testim A/B", "Analiza e heat map", "Matje ROI", "Raporte mujore"]
+        }
+      },
+      process: {
+        title: "Procesi i Punës",
+        steps: [
+          {
+            title: "Analiza e Gjendjes Aktuale",
+            description: "Analizoj me kujdes prezencën tuaj aktuale dixhitale dhe identifikoj problemet"
+          },
+          {
+            title: "Hulumtim & Strategji",
+            description: "Analizoj tregun, konkurrentët dhe krijoj strategji të personalizuar"
+          },
+          {
+            title: "Plan Implementimi",
+            description: "Krijoj plan të detajuar implementimi me hapa të qartë dhe afate"
+          },
+          {
+            title: "Monitorim & Optimizim",
+            description: "Monitorim i vazhdueshëm i rezultateve dhe optimizim i strategjisë"
+          }
+        ]
+      },
+      benefits: {
+        title: "Përfitimet e Konsultimit Profesional",
+        items: [
+          {
+            title: "Rritje e Konvertimeve",
+            description: "Optimizim që ndikon direkt në rritjen e shitjeve dhe leads"
+          },
+          {
+            title: "Kursim Kohe dhe Parash",
+            description: "Shmangje gabimesh dhe fokusim në strategji që japin rezultate"
+          },
+          {
+            title: "Avantazh Konkurrues",
+            description: "Strategji që ju ndajnë nga konkurrenca"
+          },
+          {
+            title: "Rezultate të Matshme",
+            description: "KPI të përcaktuar qartë dhe monitorim i rregullt i performancës"
+          }
+        ]
+      },
+      cta: {
+        title: "Gati për Rritje Dixhitale?",
+        description: "Caktoni një konsultim falas dhe zbuloni si mund të përmirësojmë prezencën tuaj dixhitale",
         button: "Kontaktoni"
       }
     }

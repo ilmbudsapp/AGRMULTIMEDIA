@@ -51,7 +51,8 @@ export default function Services() {
       title: t.services.items.consulting.title,
       description: t.services.items.consulting.description,
       features: t.services.items.consulting.features,
-      gradient: "from-indigo-500 to-purple-500"
+      gradient: "from-indigo-500 to-purple-500",
+      link: "/consulting"
     }
   ];
 
