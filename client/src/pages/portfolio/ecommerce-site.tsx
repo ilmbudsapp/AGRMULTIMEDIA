@@ -182,16 +182,40 @@ Početna
             {/* Project Details Sidebar */}
             <div className="lg:col-span-1">
               <Card className="p-6 sticky top-24">
-                <h3 className="text-xl font-semibold mb-6">Detalji Projekta</h3>
+                <h3 className="text-xl font-semibold mb-6">
+                  {currentLanguage === 'sr' ? 'Detalji Projekta' : 
+                   currentLanguage === 'en' ? 'Project Details' :
+                   currentLanguage === 'de' ? 'Projektdetails' : 
+                   currentLanguage === 'sq' ? 'Detajet e Projektit' :
+                   'Detalji Projekta'}
+                </h3>
                 
                 <div className="space-y-4">
                   <div>
-                    <h4 className="font-medium text-gray-900 mb-2">Kategorija</h4>
-                    <p className="text-gray-600">E-commerce Web Sajt</p>
+                    <h4 className="font-medium text-gray-900 mb-2">
+                      {currentLanguage === 'sr' ? 'Kategorija' : 
+                       currentLanguage === 'en' ? 'Category' :
+                       currentLanguage === 'de' ? 'Kategorie' : 
+                       currentLanguage === 'sq' ? 'Kategoria' :
+                       'Kategorija'}
+                    </h4>
+                    <p className="text-gray-600">
+                      {currentLanguage === 'sr' ? 'E-commerce Web Sajt' : 
+                       currentLanguage === 'en' ? 'E-commerce Website' :
+                       currentLanguage === 'de' ? 'E-Commerce-Website' : 
+                       currentLanguage === 'sq' ? 'Faqe E-commerce' :
+                       'E-commerce Web Sajt'}
+                    </p>
                   </div>
                   
                   <div>
-                    <h4 className="font-medium text-gray-900 mb-2">Tehnologije</h4>
+                    <h4 className="font-medium text-gray-900 mb-2">
+                      {currentLanguage === 'sr' ? 'Tehnologije' : 
+                       currentLanguage === 'en' ? 'Technologies' :
+                       currentLanguage === 'de' ? 'Technologien' : 
+                       currentLanguage === 'sq' ? 'Teknologjitë' :
+                       'Tehnologije'}
+                    </h4>
                     <div className="flex flex-wrap gap-2">
                       <Badge variant="outline">React</Badge>
                       <Badge variant="outline">Node.js</Badge>
@@ -201,30 +225,80 @@ Početna
                   </div>
                   
                   <div>
-                    <h4 className="font-medium text-gray-900 mb-2">Funkcije</h4>
+                    <h4 className="font-medium text-gray-900 mb-2">
+                      {currentLanguage === 'sr' ? 'Funkcije' : 
+                       currentLanguage === 'en' ? 'Features' :
+                       currentLanguage === 'de' ? 'Funktionen' : 
+                       currentLanguage === 'sq' ? 'Veçoritë' :
+                       'Funkcije'}
+                    </h4>
                     <ul className="text-gray-600 space-y-1">
-                      <li>• Upravljanje proizvodima</li>
-                      <li>• Sistem korisnika</li>
-                      <li>• Praćenje porudžbina</li>
-                      <li>• Inventory management</li>
-                      <li>• Analytics dashboard</li>
+                      <li>• {currentLanguage === 'sr' ? 'Upravljanje proizvodima' : 
+                             currentLanguage === 'en' ? 'Product management' :
+                             currentLanguage === 'de' ? 'Produktverwaltung' : 
+                             currentLanguage === 'sq' ? 'Menaxhimi i produkteve' :
+                             'Upravljanje proizvodima'}</li>
+                      <li>• {currentLanguage === 'sr' ? 'Sistem korisnika' : 
+                             currentLanguage === 'en' ? 'User system' :
+                             currentLanguage === 'de' ? 'Benutzersystem' : 
+                             currentLanguage === 'sq' ? 'Sistemi i përdoruesve' :
+                             'Sistem korisnika'}</li>
+                      <li>• {currentLanguage === 'sr' ? 'Praćenje porudžbina' : 
+                             currentLanguage === 'en' ? 'Order tracking' :
+                             currentLanguage === 'de' ? 'Bestellverfolgung' : 
+                             currentLanguage === 'sq' ? 'Ndjekja e porosive' :
+                             'Praćenje porudžbina'}</li>
+                      <li>• {currentLanguage === 'sr' ? 'Inventory management' : 
+                             currentLanguage === 'en' ? 'Inventory management' :
+                             currentLanguage === 'de' ? 'Bestandsverwaltung' : 
+                             currentLanguage === 'sq' ? 'Menaxhimi i inventarit' :
+                             'Inventory management'}</li>
+                      <li>• {currentLanguage === 'sr' ? 'Analytics dashboard' : 
+                             currentLanguage === 'en' ? 'Analytics dashboard' :
+                             currentLanguage === 'de' ? 'Analytics-Dashboard' : 
+                             currentLanguage === 'sq' ? 'Paneli i analizave' :
+                             'Analytics dashboard'}</li>
                     </ul>
                   </div>
 
                   <div>
-                    <h4 className="font-medium text-gray-900 mb-2">Rezultati</h4>
+                    <h4 className="font-medium text-gray-900 mb-2">
+                      {currentLanguage === 'sr' ? 'Rezultati' : 
+                       currentLanguage === 'en' ? 'Results' :
+                       currentLanguage === 'de' ? 'Ergebnisse' : 
+                       currentLanguage === 'sq' ? 'Rezultatet' :
+                       'Rezultati'}
+                    </h4>
                     <div className="space-y-3">
                       <div className="flex items-center gap-2">
                         <TrendingUp className="w-4 h-4 text-green-500" />
-                        <span className="text-sm">40% povećanje konverzija</span>
+                        <span className="text-sm">
+                          {currentLanguage === 'sr' ? '40% povećanje konverzija' : 
+                           currentLanguage === 'en' ? '40% increase in conversions' :
+                           currentLanguage === 'de' ? '40% Steigerung der Konversionen' : 
+                           currentLanguage === 'sq' ? '40% rritje e konvertimeve' :
+                           '40% povećanje konverzija'}
+                        </span>
                       </div>
                       <div className="flex items-center gap-2">
                         <Users className="w-4 h-4 text-blue-500" />
-                        <span className="text-sm">300+ registrovanih korisnika</span>
+                        <span className="text-sm">
+                          {currentLanguage === 'sr' ? '300+ registrovanih korisnika' : 
+                           currentLanguage === 'en' ? '300+ registered users' :
+                           currentLanguage === 'de' ? '300+ registrierte Benutzer' : 
+                           currentLanguage === 'sq' ? '300+ përdorues të regjistruar' :
+                           '300+ registrovanih korisnika'}
+                        </span>
                       </div>
                       <div className="flex items-center gap-2">
                         <Star className="w-4 h-4 text-yellow-500" />
-                        <span className="text-sm">4.9/5 korisničkih ocena</span>
+                        <span className="text-sm">
+                          {currentLanguage === 'sr' ? '4.9/5 korisničkih ocena' : 
+                           currentLanguage === 'en' ? '4.9/5 user ratings' :
+                           currentLanguage === 'de' ? '4.9/5 Nutzerbewertungen' : 
+                           currentLanguage === 'sq' ? '4.9/5 vlerësime përdoruesish' :
+                           '4.9/5 korisničkih ocena'}
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -236,7 +310,11 @@ Početna
           {/* Features Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
-              Ključne Funkcije E-commerce Sajta
+              {currentLanguage === 'sr' ? 'Ključne Funkcije E-commerce Sajta' : 
+               currentLanguage === 'en' ? 'Key E-commerce Features' :
+               currentLanguage === 'de' ? 'Wichtige E-Commerce-Funktionen' : 
+               currentLanguage === 'sq' ? 'Veçoritë Kryesore të E-commerce' :
+               'Ključne Funkcije E-commerce Sajta'}
             </h2>
             
             <div className="grid md:grid-cols-3 gap-8">
@@ -244,9 +322,19 @@ Početna
                 <div className="w-16 h-16 bg-electric-blue/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <ShoppingCart className="w-8 h-8 text-electric-blue" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Lako Upravljanje</h3>
+                <h3 className="text-xl font-semibold mb-3">
+                  {currentLanguage === 'sr' ? 'Lako Upravljanje' : 
+                   currentLanguage === 'en' ? 'Easy Management' :
+                   currentLanguage === 'de' ? 'Einfache Verwaltung' : 
+                   currentLanguage === 'sq' ? 'Menaxhim i Lehtë' :
+                   'Lako Upravljanje'}
+                </h3>
                 <p className="text-gray-600">
-                  Jednostavan admin panel za dodavanje proizvoda, kategorija i upravljanje inventarom.
+                  {currentLanguage === 'sr' ? 'Jednostavan admin panel za dodavanje proizvoda, kategorija i upravljanje inventarom.' : 
+                   currentLanguage === 'en' ? 'Simple admin panel for adding products, categories and inventory management.' :
+                   currentLanguage === 'de' ? 'Einfaches Admin-Panel zum Hinzufügen von Produkten, Kategorien und Inventarverwaltung.' : 
+                   currentLanguage === 'sq' ? 'Panel administrativ i thjeshtë për shtimin e produkteve, kategorive dhe menaxhimin e inventarit.' :
+                   'Jednostavan admin panel za dodavanje proizvoda, kategorija i upravljanje inventarom.'}
                 </p>
               </div>
 
@@ -254,9 +342,19 @@ Početna
                 <div className="w-16 h-16 bg-green-500/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <CreditCard className="w-8 h-8 text-green-500" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Sigurne Transakcije</h3>
+                <h3 className="text-xl font-semibold mb-3">
+                  {currentLanguage === 'sr' ? 'Sigurne Transakcije' : 
+                   currentLanguage === 'en' ? 'Secure Transactions' :
+                   currentLanguage === 'de' ? 'Sichere Transaktionen' : 
+                   currentLanguage === 'sq' ? 'Transaksione të Sigurta' :
+                   'Sigurne Transakcije'}
+                </h3>
                 <p className="text-gray-600">
-                  SSL enkripcija i sigurni payment gateway-i za zaštićeno online plaćanje.
+                  {currentLanguage === 'sr' ? 'SSL enkripcija i sigurni payment gateway-i za zaštićeno online plaćanje.' : 
+                   currentLanguage === 'en' ? 'SSL encryption and secure payment gateways for protected online payments.' :
+                   currentLanguage === 'de' ? 'SSL-Verschlüsselung und sichere Payment-Gateways für geschützte Online-Zahlungen.' : 
+                   currentLanguage === 'sq' ? 'Enkriptim SSL dhe porta pagimesh të sigurta për pagesa online të mbrojtura.' :
+                   'SSL enkripcija i sigurni payment gateway-i za zaštićeno online plaćanje.'}
                 </p>
               </div>
 
@@ -264,9 +362,19 @@ Početna
                 <div className="w-16 h-16 bg-purple-500/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <TrendingUp className="w-8 h-8 text-purple-500" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Analytics & SEO</h3>
+                <h3 className="text-xl font-semibold mb-3">
+                  {currentLanguage === 'sr' ? 'Analytics & SEO' : 
+                   currentLanguage === 'en' ? 'Analytics & SEO' :
+                   currentLanguage === 'de' ? 'Analytics & SEO' : 
+                   currentLanguage === 'sq' ? 'Analitika & SEO' :
+                   'Analytics & SEO'}
+                </h3>
                 <p className="text-gray-600">
-                  Detaljne analytics i SEO optimizacija za bolje rangiranje u pretragama.
+                  {currentLanguage === 'sr' ? 'Detaljne analytics i SEO optimizacija za bolje rangiranje u pretragama.' : 
+                   currentLanguage === 'en' ? 'Detailed analytics and SEO optimization for better search rankings.' :
+                   currentLanguage === 'de' ? 'Detaillierte Analysen und SEO-Optimierung für bessere Suchranking.' : 
+                   currentLanguage === 'sq' ? 'Analitika të detajuara dhe optimizim SEO për renditje më të mira në kërkim.' :
+                   'Detaljne analytics i SEO optimizacija za bolje rangiranje u pretragama.'}
                 </p>
               </div>
             </div>
@@ -275,14 +383,26 @@ Početna
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-electric-blue to-purple-500 rounded-2xl p-8 text-white text-center">
             <h3 className="text-2xl font-bold mb-4">
-              Spremni za Vaš E-commerce Sajt?
+              {currentLanguage === 'sr' ? 'Spremni za Vaš E-commerce Sajt?' : 
+               currentLanguage === 'en' ? 'Ready for Your E-commerce Site?' :
+               currentLanguage === 'de' ? 'Bereit für Ihre E-Commerce-Website?' : 
+               currentLanguage === 'sq' ? 'Gati për Faqen tuaj E-commerce?' :
+               'Spremni za Vaš E-commerce Sajt?'}
             </h3>
             <p className="text-lg mb-6">
-              Kontaktirajte me za kreiranje profesionalnog e-commerce rešenja koje će povećati vaše online prodaje.
+              {currentLanguage === 'sr' ? 'Kontaktirajte me za kreiranje profesionalnog e-commerce rešenja koje će povećati vaše online prodaje.' : 
+               currentLanguage === 'en' ? 'Contact me to create a professional e-commerce solution that will increase your online sales.' :
+               currentLanguage === 'de' ? 'Kontaktieren Sie mich für die Erstellung einer professionellen E-Commerce-Lösung, die Ihre Online-Verkäufe steigern wird.' : 
+               currentLanguage === 'sq' ? 'Kontaktoni me për të krijuar një zgjidhje profesionale e-commerce që do të rrisë shitjet tuaja online.' :
+               'Kontaktirajte me za kreiranje profesionalnog e-commerce rešenja koje će povećati vaše online prodaje.'}
             </p>
             <Link href="/#contact">
               <Button className="bg-white text-electric-blue hover:bg-gray-100">
-                Počnite Svoj Online Biznis
+                {currentLanguage === 'sr' ? 'Počnite Svoj Online Biznis' : 
+                 currentLanguage === 'en' ? 'Start Your Online Business' :
+                 currentLanguage === 'de' ? 'Starten Sie Ihr Online-Geschäft' : 
+                 currentLanguage === 'sq' ? 'Filloni Biznesin tuaj Online' :
+                 'Počnite Svoj Online Biznis'}
               </Button>
             </Link>
           </div>
