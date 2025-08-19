@@ -1307,7 +1307,27 @@ export const translations: Record<Language, Translations> = {
         title: "Portfolio Video Radova",
         description: "Primeri mojih najnovijih video produkcija sa različitim stilovima i tehnikama"
       },
-
+      servicesTitle: "Moje Video Produkcijske Usluge",
+      servicesSubtitle: "Kompletne video usluge od koncepta do finalne isporuke",
+      portfolioButtonText: "Portfolio Video",
+      videos: [
+        {
+          title: "Profesionalni Intro Video",
+          description: "Animirani intro sa logo animacijom"
+        },
+        {
+          title: "Promocijski Video",
+          description: "Kreativni promocijski sadržaj"
+        },
+        {
+          title: "Motion Grafika",
+          description: "Dinamična grafika i animacije"
+        },
+        {
+          title: "Prezentacija Proizvoda",
+          description: "Prezentacija proizvoda sa 3D efektima"
+        }
+      ],
       cta: {
         title: "Spremni za Video Projekat?",
         description: "Kontaktirajte me za besplatnu konsultaciju o vašem video sadržaju",

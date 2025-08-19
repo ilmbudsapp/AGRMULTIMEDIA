@@ -24,29 +24,29 @@ export default function VideoProduction() {
     {
       id: 1,
       src: video01,
-      title: t.videoProduction.videos[0].title,
-      description: t.videoProduction.videos[0].description,
+      title: t.videoProduction?.videos?.[0]?.title || "Professional Intro Video",
+      description: t.videoProduction?.videos?.[0]?.description || "Animated intro with logo animation",
       duration: "0:30"
     },
     {
       id: 2,
       src: video02,
-      title: t.videoProduction.videos[1].title,
-      description: t.videoProduction.videos[1].description,
+      title: t.videoProduction?.videos?.[1]?.title || "Promotional Video",
+      description: t.videoProduction?.videos?.[1]?.description || "Creative promotional content",
       duration: "0:45"
     },
     {
       id: 3,
       src: video03,
-      title: t.videoProduction.videos[2].title,
-      description: t.videoProduction.videos[2].description,
+      title: t.videoProduction?.videos?.[2]?.title || "Motion Graphics",
+      description: t.videoProduction?.videos?.[2]?.description || "Dynamic graphics and animations",
       duration: "0:25"
     },
     {
       id: 4,
       src: video04,
-      title: t.videoProduction.videos[3].title,
-      description: t.videoProduction.videos[3].description,
+      title: t.videoProduction?.videos?.[3]?.title || "Product Showcase",
+      description: t.videoProduction?.videos?.[3]?.description || "Product presentation with 3D effects",
       duration: "0:35"
     }
   ];
