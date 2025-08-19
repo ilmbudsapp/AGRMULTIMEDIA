@@ -1042,6 +1042,9 @@ export const translations: Record<Language, Translations> = {
         title: "Portfolio Video Radova",
         description: "Primeri mojih najnovijih video produkcija sa različitim stilovima i tehnikama"
       },
+      servicesTitle: "Moje Usluge Video Produkcije",
+      servicesSubtitle: "Kompletne video usluge od koncepta do finalne isporuke",
+      portfolioButtonText: "Portfolio Video",
       cta: {
         title: "Spremni za Video Projekat?",
         description: "Kontaktirajte me za besplatnu konsultaciju o vašem video sadržaju",
@@ -1594,6 +1597,9 @@ export const translations: Record<Language, Translations> = {
         title: "Video Work Portfolio",
         description: "Examples of my latest video productions with different styles and techniques"
       },
+      servicesTitle: "My Video Production Services",
+      servicesSubtitle: "Complete video services from concept to final delivery",
+      portfolioButtonText: "Portfolio Video",
       cta: {
         title: "Ready for Your Video Project?",
         description: "Contact me for a free consultation about your video content",
@@ -2146,6 +2152,9 @@ export const translations: Record<Language, Translations> = {
         title: "Video-Portfolio",
         description: "Beispiele meiner neuesten Videoproduktionen mit verschiedenen Stilen und Techniken"
       },
+      servicesTitle: "Meine Videoproduktions-Dienstleistungen",
+      servicesSubtitle: "Komplette Videodienstleistungen vom Konzept bis zur finalen Lieferung",
+      portfolioButtonText: "Portfolio Video",
       cta: {
         title: "Bereit für Ihr Videoprojekt?",
         description: "Kontaktieren Sie mich für eine kostenlose Beratung zu Ihrem Videoinhalt",
@@ -2698,6 +2707,9 @@ export const translations: Record<Language, Translations> = {
         title: "Portfolio e Punëve Video",
         description: "Shembuj të prodhimeve të mia të fundit video me stile dhe teknika të ndryshme"
       },
+      servicesTitle: "Shërbimet e Mia të Prodhimit të Videove",
+      servicesSubtitle: "Shërbime të plota video nga koncepti deri te dorëzimi final",
+      portfolioButtonText: "Portfolio Video",
       cta: {
         title: "Gati për Projektin tuaj Video?",
         description: "Më kontaktoni për një konsultim falas rreth përmbajtjes suaj video",
