@@ -12,42 +12,48 @@ export default function Portfolio() {
       title: t.portfolio.items.ecommerce.title,
       description: t.portfolio.items.ecommerce.description,
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      category: "web"
+      category: "web",
+      slug: "ecommerce-site"
     },
     {
       id: 2,
       title: t.portfolio.items.brand.title,
       description: t.portfolio.items.brand.description,
       image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      category: "brand"
+      category: "brand",
+      slug: "brand-identity"
     },
     {
       id: 3,
       title: t.portfolio.items.corporate.title,
       description: t.portfolio.items.corporate.description,
       image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      category: "video"
+      category: "video",
+      slug: "corporate-video"
     },
     {
       id: 4,
       title: t.portfolio.items.restaurant.title,
       description: t.portfolio.items.restaurant.description,
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      category: "web"
+      category: "web",
+      slug: "restaurant-website"
     },
     {
       id: 5,
       title: t.portfolio.items.product.title,
       description: t.portfolio.items.product.description,
       image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      category: "photo"
+      category: "photo",
+      slug: "product-photography"
     },
     {
       id: 6,
       title: t.portfolio.items.packaging.title,
       description: t.portfolio.items.packaging.description,
       image: "https://images.unsplash.com/photo-1588200908342-23b585c03e26?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      category: "brand"
+      category: "brand",
+      slug: "packaging-design"
     }
   ];
 
@@ -128,12 +134,14 @@ export default function Portfolio() {
                   <p className="text-gray-300 text-sm mb-4" data-testid={`portfolio-item-description-${item.id}`}>
                     {item.description}
                   </p>
-                  <button 
-                    className="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-lg hover:bg-white/30 transition-all duration-300"
-                    data-testid={`portfolio-item-cta-${item.id}`}
-                  >
-                    {t.portfolio.viewDetails}
-                  </button>
+                  <Link href={`/portfolio/${item.slug}`}>
+                    <button 
+                      className="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-lg hover:bg-white/30 transition-all duration-300"
+                      data-testid={`portfolio-item-cta-${item.id}`}
+                    >
+                      {t.portfolio.viewDetails}
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>

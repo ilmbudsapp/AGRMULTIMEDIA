@@ -19,6 +19,12 @@ import Impresum from "@/pages/impresum";
 import DigitalMarketingTrends2024 from "@/pages/blog/digital-marketing-trends-2024";
 import WebsiteConversionOptimization from "@/pages/blog/website-conversion-optimization";
 import VideoMarketingPower from "@/pages/blog/video-marketing-power";
+import EcommerceSite from "@/pages/portfolio/ecommerce-site";
+import RestaurantWebsite from "@/pages/portfolio/restaurant-website";
+import BrandIdentity from "@/pages/portfolio/brand-identity";
+import CorporateVideo from "@/pages/portfolio/corporate-video";
+import ProductPhotography from "@/pages/portfolio/product-photography";
+import PackagingDesign from "@/pages/portfolio/packaging-design";
 import Privacy from "@/pages/privacy";
 import Terms from "@/pages/terms";
 import Cookies from "@/pages/cookies";
@@ -41,6 +47,12 @@ function Router() {
       <Route path="/blog/digital-marketing-trends-2024" component={DigitalMarketingTrends2024} />
       <Route path="/blog/website-conversion-optimization" component={WebsiteConversionOptimization} />
       <Route path="/blog/video-marketing-power" component={VideoMarketingPower} />
+      <Route path="/portfolio/ecommerce-site" component={EcommerceSite} />
+      <Route path="/portfolio/restaurant-website" component={RestaurantWebsite} />
+      <Route path="/portfolio/brand-identity" component={BrandIdentity} />
+      <Route path="/portfolio/corporate-video" component={CorporateVideo} />
+      <Route path="/portfolio/product-photography" component={ProductPhotography} />
+      <Route path="/portfolio/packaging-design" component={PackagingDesign} />
       <Route path="/privacy" component={Privacy} />
       <Route path="/terms" component={Terms} />
       <Route path="/cookies" component={Cookies} />
