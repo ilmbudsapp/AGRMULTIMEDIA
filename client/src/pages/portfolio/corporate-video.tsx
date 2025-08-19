@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 
 export default function CorporateVideo() {
-  const { t } = useLanguage();
+  const { t, currentLanguage } = useLanguage();
 
   // Scroll to top when page loads
   useEffect(() => {
@@ -25,7 +25,7 @@ export default function CorporateVideo() {
             <Link href="/">
               <Button variant="ghost" size="sm" className="gap-2" data-testid="button-back-home">
                 <ArrowLeft className="w-4 h-4" />
-                Početna
+{t("portfolioPages.common.backToHome")}
               </Button>
             </Link>
             <div>

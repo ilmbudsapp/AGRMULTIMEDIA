@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 
 export default function EcommerceSite() {
-  const { t } = useLanguage();
+  const { t, currentLanguage } = useLanguage();
 
   // Scroll to top when page loads
   useEffect(() => {
@@ -25,15 +25,22 @@ export default function EcommerceSite() {
             <Link href="/">
               <Button variant="ghost" size="sm" className="gap-2" data-testid="button-back-home">
                 <ArrowLeft className="w-4 h-4" />
-                Početna
+{t("portfolioPages.common.backToHome")}
               </Button>
             </Link>
             <div>
               <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
-                E-commerce Sajt
+{currentLanguage === 'sr' ? 'E-commerce Sajt' : 
+                 currentLanguage === 'en' ? 'E-commerce Site' :
+                 currentLanguage === 'de' ? 'E-Commerce Website' : 
+                 'E-commerce Sajt'}
               </h1>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                Kompletan online shopping doživljaj
+{currentLanguage === 'sr' ? 'Kompletan online shopping doživljaj' : 
+                 currentLanguage === 'en' ? 'Complete online shopping experience' :
+                 currentLanguage === 'de' ? 'Komplettes Online-Shopping-Erlebnis' : 
+                 currentLanguage === 'sq' ? 'Përvojë e plotë e blerjeve online' :
+                 'Kompletan online shopping doživljaj'}
               </p>
             </div>
           </div>

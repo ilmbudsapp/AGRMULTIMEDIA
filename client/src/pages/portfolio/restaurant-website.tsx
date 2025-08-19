@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 
 export default function RestaurantWebsite() {
-  const { t } = useLanguage();
+  const { t, currentLanguage } = useLanguage();
 
   // Scroll to top when page loads
   useEffect(() => {
@@ -25,7 +25,7 @@ export default function RestaurantWebsite() {
             <Link href="/">
               <Button variant="ghost" size="sm" className="gap-2" data-testid="button-back-home">
                 <ArrowLeft className="w-4 h-4" />
-                Početna
+{t("portfolioPages.common.backToHome")}
               </Button>
             </Link>
             <div>
@@ -86,7 +86,7 @@ export default function RestaurantWebsite() {
                     <h3 className="text-xl font-semibold">Online Rezervacije</h3>
                   </div>
                   <p className="text-gray-600">
-                    Sistem rezervacije stolova u realnom vremenu sa kalendar integrацijom i potvrdom putem email-a.
+                    Sistem rezervacije stolova u realnom vremenu sa kalendar integracijom i potvrdom putem email-a.
                   </p>
                 </Card>
 

@@ -210,6 +210,16 @@ export interface Translations {
       cta: { title: string; description: string; button: string; };
     };
   };
+
+  // Portfolio Pages content - simplified for now
+  portfolioPages: {
+    common: {
+      backToHome: string;
+      projectDetails: string; 
+      category: string;
+      results: string;
+    };
+  };
   
   // Contact Section
   contact: {
@@ -1291,27 +1301,7 @@ export const translations: Record<Language, Translations> = {
         title: "Portfolio Video Radova",
         description: "Primeri mojih najnovijih video produkcija sa različitim stilovima i tehnikama"
       },
-      servicesTitle: "Moje Usluge Video Produkcije",
-      servicesSubtitle: "Kompletne video usluge od koncepta do finalne isporuke",
-      portfolioButtonText: "Portfolio Video",
-      videos: [
-        {
-          title: "Profesionalni Intro Video",
-          description: "Animirani intro sa logo animacijom"
-        },
-        {
-          title: "Promotivni Video", 
-          description: "Kreativni promotional sadržaj"
-        },
-        {
-          title: "Motion Graphics",
-          description: "Dinamičke grafike i animacije"
-        },
-        {
-          title: "Product Showcase",
-          description: "Prezentacija proizvoda sa 3D efektima"
-        }
-      ],
+
       cta: {
         title: "Spremni za Video Projekat?",
         description: "Kontaktirajte me za besplatnu konsultaciju o vašem video sadržaju",
@@ -1742,6 +1732,16 @@ export const translations: Record<Language, Translations> = {
         title: "Error sending message",
         description: "Please try again or contact us directly.",
         validation: "Name, email, subject and message are required"
+      }
+    },
+
+    // Temporarily simplified version for all portfolio pages
+    portfolioPages: {
+      common: {
+        backToHome: "Početna",
+        projectDetails: "Detalji Projekta",
+        category: "Kategorija",
+        results: "Rezultati"
       }
     },
     footer: {
