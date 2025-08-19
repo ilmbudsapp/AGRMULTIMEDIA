@@ -149,6 +149,7 @@ export interface Translations {
       title: string;
       subtitle: string;
       category: string;
+      date: string;
       intro: string;
       aiPersonalization: { title: string; description: string; };
       voiceSearch: { title: string; description: string; };
@@ -161,6 +162,7 @@ export interface Translations {
       title: string;
       subtitle: string;
       category: string;
+      date: string;
       intro: string;
       userExperience: { title: string; description: string; };
       abTesting: { title: string; description: string; };
@@ -184,6 +186,7 @@ export interface Translations {
       title: string;
       subtitle: string;
       category: string;
+      date: string;
       intro: string;
       engagement: { title: string; description: string; };
       conversion: { title: string; description: string; };
@@ -735,7 +738,7 @@ export const translations: Record<Language, Translations> = {
       subtitle: "Pratite najnovije trendove u digitalnom marketingu i dizajnu",
       posts: {
         trends: {
-          title: "5 Najvažnijih Trendova u Digitalnom Marketingu za 2024.",
+          title: "5 Najvažnijih Trendova u Digitalnom Marketingu za 2025.",
           description: "Otkrijte najnovije trendove koji će definisati digitalni marketing u narednoj godini i kako možete prilagoditi svoju strategiju...",
           category: "Marketing"
         },
@@ -755,10 +758,11 @@ export const translations: Record<Language, Translations> = {
     },
     blogPost: {
       trends: {
-        title: "5 Najvažnijih Trendova u Digitalnom Marketingu za 2024.",
+        title: "5 Najvažnijih Trendova u Digitalnom Marketingu za 2025.",
         subtitle: "Ostanite u korak sa najnovijim trendovima",
         category: "Digitalni Marketing",
-        intro: "Pejzaž digitalnog marketinga se brzo razvija. Od AI-om pokretane personalizacije do immersivnih AR iskustava, 2024. godina donosi uzbudljive prilike za preduzeća da se povežu sa svojom publikom na smisleniji način.",
+        date: "19.08.2025",
+        intro: "Pejzaž digitalnog marketinga se brzo razvija. Od AI-om pokretane personalizacije do immersivnih AR iskustava, 2025. godina donosi uzbudljive prilike za preduzeća da se povežu sa svojom publiku na smisleniji način.",
         aiPersonalization: {
           title: "Personalizacija pokretana AI",
           description: "Veštačka inteligencija omogućava neviđene nivoe personalizacije sadržaja, stvarajući jedinstvena korisnička iskustva prilagođena individualnim preferencama i ponašanjima."
@@ -791,6 +795,7 @@ export const translations: Record<Language, Translations> = {
         title: "Ultimativni vodič za optimizaciju konverzije web sajta",
         subtitle: "Pretvori posetioce u klijente",
         category: "Optimizacija web sajta",
+        date: "19.08.2025",
         intro: "Konvertovanje posetilaca web sajta u klijente je i umetnost i nauka. Kroz strateški dizajn, uvjerljiv sadržaj i testiranje zasnovano na podacima, možete dramatično poboljšati svoje stope konverzije i rasti svoj biznis.",
         userExperience: {
           title: "Dizajn korisničkog iskustva",
@@ -830,9 +835,10 @@ export const translations: Record<Language, Translations> = {
         }
       },
       video: {
-        title: "Moć video marketinga: Angažovanje vaše publike u 2024.",
+        title: "Moć video marketinga: Angažovanje vaše publike u 2025.",
         subtitle: "Angažuj publiku kroz vizuelno pripovedanje",
         category: "Video Marketing",
+        date: "19.08.2025",
         intro: "Video sadržaj je postao dominantna sila u digitalnom marketingu. Sa opadanjem pažnje i povećanjem vizuelne potrošnje, preduzeća koja savladaju video pripovedanje dobijaju značajnu konkurentsku prednost.",
         engagement: {
           title: "Više stope angažovanosti",
@@ -1661,7 +1667,7 @@ export const translations: Record<Language, Translations> = {
       subtitle: "Follow the latest trends in digital marketing and design",
       posts: {
         trends: {
-          title: "5 Most Important Digital Marketing Trends for 2024",
+          title: "5 Most Important Digital Marketing Trends for 2025",
           description: "Discover the latest trends that will define digital marketing in the coming year and how you can adapt your strategy...",
           category: "Marketing"
         },
@@ -2483,7 +2489,7 @@ export const translations: Record<Language, Translations> = {
       subtitle: "Verfolgen Sie die neuesten Trends in Digital Marketing und Design",
       posts: {
         trends: {
-          title: "5 wichtigste Digital Marketing Trends für 2024",
+          title: "5 wichtigste Digital Marketing Trends für 2025",
           description: "Entdecken Sie die neuesten Trends, die das Digital Marketing im kommenden Jahr definieren werden und wie Sie Ihre Strategie anpassen können...",
           category: "Marketing"
         },
@@ -3295,7 +3301,7 @@ export const translations: Record<Language, Translations> = {
       subtitle: "Ndiq trendet më të fundit në marketing dixhital dhe dizajn",
       posts: {
         trends: {
-          title: "5 Trendet Më të Rëndësishme të Marketing Dixhital për 2024",
+          title: "5 Trendet Më të Rëndësishme të Marketing Dixhital për 2025",
           description: "Zbulo trendet më të fundit që do të përcaktojnë marketing dixhitalin në vitin e ardhshëm dhe si mund ta përshtatësh strategjinë tënde...",
           category: "Marketing"
         },
