@@ -1068,6 +1068,81 @@ export const translations: Record<Language, Translations> = {
         description: "Kontaktirajte me za besplatnu konsultaciju o vašem video sadržaju",
         button: "Kontaktiraj Me"
       }
+    },
+
+    digitalMarketing: {
+      hero: {
+        title: "Digitalni Marketing",
+        subtitle: "Strategije koje povećavaju vašu online vidljivost",
+        description: "Kreiram sveobuhvatne digitalne marketing strategije koje povećavaju vašu online vidljivost, privlače ciljnu publiku i generišu merljive rezultate kroz društvene mreže, Google Ads i content marketing."
+      },
+      servicesTitle: "Moje Digitalne Marketing Usluge",
+      servicesSubtitle: "Kompletne digitalne strategije za rast vašeg biznisa",
+      portfolioButtonText: "Rezultati Portfolio",
+      services: {
+        socialMedia: {
+          title: "Social Media Marketing",
+          description: "Upravljanje društvenim mrežama i kreiranje angažujućeg sadržaja",
+          features: ["Facebook i Instagram kampanje", "LinkedIn strategije", "YouTube optimizacija", "Influencer marketing", "Community management", "Social media analytics"]
+        },
+        googleAds: {
+          title: "Google Ads",
+          description: "Efikasne PPC kampanje koje donose kvalitetne posetioce",
+          features: ["Search kampanje", "Display advertising", "Shopping ads", "YouTube reklame", "Remarketing", "Keyword research i optimizacija"]
+        },
+        contentMarketing: {
+          title: "Content Marketing",
+          description: "Kreiranje vrednog sadržaja koji privlači i zadržava publiku",
+          features: ["Blog strategije", "SEO optimizovan sadržaj", "Email marketing", "Newsletter kampanje", "Video content", "Copywriting"]
+        }
+      },
+      strategy: {
+        title: "Strategijski Pristup",
+        steps: [
+          {
+            title: "Analiza",
+            description: "Detaljno istraživanje tržišta, konkurencije i ciljne publike"
+          },
+          {
+            title: "Strategija",
+            description: "Kreiranje prilagođene digitalne marketing strategije"
+          },
+          {
+            title: "Implementacija",
+            description: "Pokretanje kampanja sa kontinuiranim praćenjem"
+          },
+          {
+            title: "Optimizacija",
+            description: "Analiza rezultata i kontinuirano poboljšanje performansi"
+          }
+        ]
+      },
+      results: {
+        title: "Rezultati Koji Govore",
+        description: "Merljivi rezultati koji pokazuju efikasnost digitalnih marketing strategija",
+        metrics: [
+          {
+            value: "300%",
+            label: "Povećanje Prometa",
+            description: "Prosečno povećanje web saobraćaja"
+          },
+          {
+            value: "150%",
+            label: "Više Konverzija",
+            description: "Poboljšanje stope konverzije"
+          },
+          {
+            value: "250%",
+            label: "ROI Rast",
+            description: "Povećanje povrata na investiciju"
+          }
+        ]
+      },
+      cta: {
+        title: "Spremni za Digitalni Rast?",
+        description: "Kontaktirajte me za besplatnu konsultaciju o vašoj digitalnoj marketing strategiji",
+        button: "Kontaktiraj Me"
+      }
     }
   },
   en: {
@@ -1639,6 +1714,81 @@ export const translations: Record<Language, Translations> = {
       cta: {
         title: "Ready for Your Video Project?",
         description: "Contact me for a free consultation about your video content",
+        button: "Contact Me"
+      }
+    },
+
+    digitalMarketing: {
+      hero: {
+        title: "Digital Marketing",
+        subtitle: "Strategies that increase your online visibility",
+        description: "I create comprehensive digital marketing strategies that increase your online visibility, attract target audiences and generate measurable results through social media, Google Ads and content marketing."
+      },
+      servicesTitle: "My Digital Marketing Services",
+      servicesSubtitle: "Complete digital strategies for your business growth",
+      portfolioButtonText: "Results Portfolio",
+      services: {
+        socialMedia: {
+          title: "Social Media Marketing",
+          description: "Social media management and engaging content creation",
+          features: ["Facebook & Instagram campaigns", "LinkedIn strategies", "YouTube optimization", "Influencer marketing", "Community management", "Social media analytics"]
+        },
+        googleAds: {
+          title: "Google Ads",
+          description: "Effective PPC campaigns that bring quality visitors",
+          features: ["Search campaigns", "Display advertising", "Shopping ads", "YouTube ads", "Remarketing", "Keyword research & optimization"]
+        },
+        contentMarketing: {
+          title: "Content Marketing",
+          description: "Creating valuable content that attracts and retains audience",
+          features: ["Blog strategies", "SEO optimized content", "Email marketing", "Newsletter campaigns", "Video content", "Copywriting"]
+        }
+      },
+      strategy: {
+        title: "Strategic Approach",
+        steps: [
+          {
+            title: "Analysis",
+            description: "Detailed market, competition and target audience research"
+          },
+          {
+            title: "Strategy",
+            description: "Creating customized digital marketing strategy"
+          },
+          {
+            title: "Implementation",
+            description: "Launching campaigns with continuous monitoring"
+          },
+          {
+            title: "Optimization",
+            description: "Results analysis and continuous performance improvement"
+          }
+        ]
+      },
+      results: {
+        title: "Results That Speak",
+        description: "Measurable results that show the effectiveness of digital marketing strategies",
+        metrics: [
+          {
+            value: "300%",
+            label: "Traffic Increase",
+            description: "Average web traffic improvement"
+          },
+          {
+            value: "150%",
+            label: "More Conversions",
+            description: "Conversion rate improvement"
+          },
+          {
+            value: "250%",
+            label: "ROI Growth",
+            description: "Return on investment increase"
+          }
+        ]
+      },
+      cta: {
+        title: "Ready for Digital Growth?",
+        description: "Contact me for a free consultation about your digital marketing strategy",
         button: "Contact Me"
       }
     }
@@ -2214,6 +2364,81 @@ export const translations: Record<Language, Translations> = {
         description: "Kontaktieren Sie mich für eine kostenlose Beratung zu Ihrem Videoinhalt",
         button: "Kontaktieren Sie mich"
       }
+    },
+
+    digitalMarketing: {
+      hero: {
+        title: "Digital Marketing",
+        subtitle: "Strategien, die Ihre Online-Sichtbarkeit erhöhen",
+        description: "Ich erstelle umfassende Digital-Marketing-Strategien, die Ihre Online-Sichtbarkeit erhöhen, Zielgruppen anziehen und messbare Ergebnisse durch Social Media, Google Ads und Content-Marketing generieren."
+      },
+      servicesTitle: "Meine Digital-Marketing-Dienstleistungen",
+      servicesSubtitle: "Komplette digitale Strategien für Ihr Unternehmenswachstum",
+      portfolioButtonText: "Ergebnisse Portfolio",
+      services: {
+        socialMedia: {
+          title: "Social Media Marketing",
+          description: "Social Media Management und Erstellung ansprechender Inhalte",
+          features: ["Facebook & Instagram Kampagnen", "LinkedIn Strategien", "YouTube Optimierung", "Influencer Marketing", "Community Management", "Social Media Analytics"]
+        },
+        googleAds: {
+          title: "Google Ads",
+          description: "Effektive PPC-Kampagnen, die qualitätsvolle Besucher bringen",
+          features: ["Search Kampagnen", "Display Werbung", "Shopping Ads", "YouTube Anzeigen", "Remarketing", "Keyword Research & Optimierung"]
+        },
+        contentMarketing: {
+          title: "Content Marketing",
+          description: "Erstellung wertvoller Inhalte, die Publikum anzieht und bindet",
+          features: ["Blog Strategien", "SEO optimierte Inhalte", "Email Marketing", "Newsletter Kampagnen", "Video Content", "Copywriting"]
+        }
+      },
+      strategy: {
+        title: "Strategischer Ansatz",
+        steps: [
+          {
+            title: "Analyse",
+            description: "Detaillierte Markt-, Konkurrenz- und Zielgruppenforschung"
+          },
+          {
+            title: "Strategie",
+            description: "Erstellung maßgeschneiderter Digital-Marketing-Strategien"
+          },
+          {
+            title: "Umsetzung",
+            description: "Kampagnenstart mit kontinuierlicher Überwachung"
+          },
+          {
+            title: "Optimierung",
+            description: "Ergebnisanalyse und kontinuierliche Leistungsverbesserung"
+          }
+        ]
+      },
+      results: {
+        title: "Ergebnisse, die sprechen",
+        description: "Messbare Ergebnisse, die die Wirksamkeit von Digital-Marketing-Strategien zeigen",
+        metrics: [
+          {
+            value: "300%",
+            label: "Traffic-Steigerung",
+            description: "Durchschnittliche Web-Traffic-Verbesserung"
+          },
+          {
+            value: "150%",
+            label: "Mehr Konversionen",
+            description: "Verbesserung der Konversionsrate"
+          },
+          {
+            value: "250%",
+            label: "ROI-Wachstum",
+            description: "Steigerung der Kapitalrendite"
+          }
+        ]
+      },
+      cta: {
+        title: "Bereit für digitales Wachstum?",
+        description: "Kontaktieren Sie mich für eine kostenlose Beratung zu Ihrer Digital-Marketing-Strategie",
+        button: "Kontaktieren Sie mich"
+      }
     }
   },
   sq: {
@@ -2786,6 +3011,81 @@ export const translations: Record<Language, Translations> = {
         title: "Gati për Projektin tuaj Video?",
         description: "Më kontaktoni për një konsultim falas rreth përmbajtjes suaj video",
         button: "Më kontaktoni"
+      }
+    },
+
+    digitalMarketing: {
+      hero: {
+        title: "Marketing Dixhital",
+        subtitle: "Strategji që shtojnë dukshmërinë tuaj online",
+        description: "Krijoj strategji gjithëpërfshirëse të marketingut dixhital që shtojnë dukshmërinë tuaj online, tërheqin audiencën e synuar dhe gjenerojnë rezultate të matshme përmes mediave sociale, Google Ads dhe content marketing."
+      },
+      servicesTitle: "Shërbimet e Mia të Marketingut Dixhital",
+      servicesSubtitle: "Strategji dixhitale të plota për rritjen e biznesit tuaj",
+      portfolioButtonText: "Portfolio Rezultatesh",
+      services: {
+        socialMedia: {
+          title: "Marketing në Media Sociale",
+          description: "Menaxhimi i mediave sociale dhe krijimi i përmbajtjes tërheqëse",
+          features: ["Fushata Facebook & Instagram", "Strategji LinkedIn", "Optimizimi i YouTube", "Influencer marketing", "Menaxhimi i komunitetit", "Analytics për mediat sociale"]
+        },
+        googleAds: {
+          title: "Google Ads",
+          description: "Fushata PPC efektive që sjellin vizitorë cilësorë",
+          features: ["Fushata Search", "Display advertising", "Shopping ads", "Reklama YouTube", "Remarketing", "Hulumtimi dhe optimizimi i fjalëve kyçe"]
+        },
+        contentMarketing: {
+          title: "Content Marketing",
+          description: "Krijimi i përmbajtjes me vlerë që tërheq dhe ruan audiencën",
+          features: ["Strategji blog", "Përmbajtje e optimizuar për SEO", "Email marketing", "Fushata newsletter", "Përmbajtje video", "Copywriting"]
+        }
+      },
+      strategy: {
+        title: "Qasje Strategjike",
+        steps: [
+          {
+            title: "Analiza",
+            description: "Hulumtim i detajuar i tregut, konkurrencës dhe audiencës së synuar"
+          },
+          {
+            title: "Strategjia",
+            description: "Krijimi i strategjisë së personalizuar të marketingut dixhital"
+          },
+          {
+            title: "Implementimi",
+            description: "Nisja e fushatave me monitorim të vazhdueshëm"
+          },
+          {
+            title: "Optimizimi",
+            description: "Analiza e rezultateve dhe përmirësimi i vazhdueshëm i performancës"
+          }
+        ]
+      },
+      results: {
+        title: "Rezultate që Flasin",
+        description: "Rezultate të matshme që tregojnë efektivitetin e strategjive të marketingut dixhital",
+        metrics: [
+          {
+            value: "300%",
+            label: "Rritje Trafiku",
+            description: "Përmirësim mesatar i trafikut web"
+          },
+          {
+            value: "150%",
+            label: "Më Shumë Konvertime",
+            description: "Përmirësim i normës së konvertimit"
+          },
+          {
+            value: "250%",
+            label: "Rritje ROI",
+            description: "Rritje e kthimit të investimit"
+          }
+        ]
+      },
+      cta: {
+        title: "Gati për Rritje Dixhitale?",
+        description: "Kontaktoni për një konsultim falas mbi strategjinë tuaj të marketingut dixhital",
+        button: "Kontaktoni"
       }
     }
   }

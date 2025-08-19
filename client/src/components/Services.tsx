@@ -35,7 +35,8 @@ export default function Services() {
       title: t.services.items.digitalMarketing.title,
       description: t.services.items.digitalMarketing.description,
       features: t.services.items.digitalMarketing.features,
-      gradient: "from-green-500 to-teal-500"
+      gradient: "from-green-500 to-teal-500",
+      link: "/digital-marketing"
     },
     {
       icon: <Camera className="text-white text-2xl" />,
