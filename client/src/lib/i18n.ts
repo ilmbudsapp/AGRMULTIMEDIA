@@ -1147,9 +1147,9 @@ export const translations: Record<Language, Translations> = {
 
     photography: {
       hero: {
-        title: "Fotografija i Photomontaža",
+        title: "Fotografija i Fotomontaža",
         subtitle: "Kreativna fotografija i digitalna umetnost",
-        description: "Kreiram profesionalne fotografije, restauturam stare slike, radim photomontaže svih vrsta i filmske postere sa vašom slikom - od kreativnih kompozicija do realističnih portreta."
+        description: "Kreiram profesionalne fotografije, restauturam stare slike, radim fotomontaže svih vrsta i filmske postere sa vašom slikom - od kreativnih kompozicija do realističnih portreta."
       },
       servicesTitle: "Moje Fotografske Usluge",
       servicesSubtitle: "Od profesionalnog fotografisanja do kreativnih fotomontaža",
