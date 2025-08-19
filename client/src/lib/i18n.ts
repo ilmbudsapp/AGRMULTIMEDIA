@@ -1004,12 +1004,12 @@ export const translations: Record<Language, Translations> = {
         filming: {
           title: "Profesionalno Snimanje",
           description: "Koristim profesionalnu opremu za kreiranje vizuelno impresivnih video materijala",
-          features: ["4K Ultra HD snimanje", "Profesionalne kamere", "Stabilizatori i gimbal sistemi", "Profesionalno osvetljenje", "Audio snimanje studijskog kvaliteta", "Droneovi za aerijalne snimke"]
+          features: ["4K Ultra HD snimanje", "Profesionalne kamere", "Stabilizatori i gimbal sistemi", "Profesionalno osvetljenje", "Audio snimanje studijskog kvaliteta", "Dronovi za aerijalne snimke"]
         },
         editing: {
           title: "Video Editovanje",
           description: "Napredne tehnike editovanja koje transformišu sirovi materijal u angažujući sadržaj",
-          features: ["Adobe Premiere Pro", "DaVinci Resolve", "Color grading i korekcija", "Zvučni dizajn i miksovanje", "Vizuelni efekti", "Titlovanje i grafike"]
+          features: ["Adobe Premiere Pro", "After Effects", "Color grading i korekcija", "Zvučni dizajn i miksovanje", "Vizuelni efekti", "Titlovanje i grafike"]
         },
         animation: {
           title: "Intro Template Videi",
@@ -1561,7 +1561,7 @@ export const translations: Record<Language, Translations> = {
         editing: {
           title: "Video Editing",
           description: "Advanced editing techniques that transform raw footage into engaging content",
-          features: ["Adobe Premiere Pro", "DaVinci Resolve", "Color grading and correction", "Sound design and mixing", "Visual effects", "Subtitles and graphics"]
+          features: ["Adobe Premiere Pro", "After Effects", "Color grading and correction", "Sound design and mixing", "Visual effects", "Subtitles and graphics"]
         },
         animation: {
           title: "Intro Template Videos",
@@ -2113,7 +2113,7 @@ export const translations: Record<Language, Translations> = {
         editing: {
           title: "Videobearbeitung",
           description: "Fortgeschrittene Bearbeitungstechniken, die Rohmaterial in ansprechenden Inhalt verwandeln",
-          features: ["Adobe Premiere Pro", "DaVinci Resolve", "Color Grading und Korrektur", "Sounddesign und Mischung", "Visuelle Effekte", "Untertitel und Grafiken"]
+          features: ["Adobe Premiere Pro", "After Effects", "Color Grading und Korrektur", "Sounddesign und Mischung", "Visuelle Effekte", "Untertitel und Grafiken"]
         },
         animation: {
           title: "Intro-Template-Videos",
@@ -2665,7 +2665,7 @@ export const translations: Record<Language, Translations> = {
         editing: {
           title: "Editimi i Videove",
           description: "Teknika të avancuara editimi që transformojnë materialin e papërpunuar në përmbajtje tërheqëse",
-          features: ["Adobe Premiere Pro", "DaVinci Resolve", "Gradimi dhe korrigjimi i ngjyrave", "Dizajni dhe përzierja e tingullit", "Efekte vizuale", "Titra dhe grafika"]
+          features: ["Adobe Premiere Pro", "After Effects", "Gradimi dhe korrigjimi i ngjyrave", "Dizajni dhe përzierja e tingullit", "Efekte vizuale", "Titra dhe grafika"]
         },
         animation: {
           title: "Video Template Intro",
