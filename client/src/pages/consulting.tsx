@@ -1,9 +1,10 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Settings, TrendingUp, BarChart3, Users, CheckCircle, ArrowRight, Target, Clock, Trophy, Eye } from "lucide-react";
+import { Settings, TrendingUp, BarChart3, Users, CheckCircle, ArrowRight, Target, Clock, Trophy, Eye, Home } from "lucide-react";
 import consultingImage from "@assets/generated_images/Professional_digital_consulting_workspace_7a5b279f.png";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
+import { Link } from "wouter";
 
 export default function Consulting() {
   const { t } = useLanguage();
@@ -39,6 +40,22 @@ export default function Consulting() {
   return (
     <div className="bg-white">
       <Navigation />
+      
+      {/* Home Button */}
+      <div className="bg-gray-50 py-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Link href="/">
+            <button 
+              className="inline-flex items-center px-4 py-2 bg-navy text-white rounded-lg hover:bg-navy/80 transition-colors duration-300"
+              data-testid="home-button"
+            >
+              <Home className="w-4 h-4 mr-2" />
+              {t.nav.home}
+            </button>
+          </Link>
+        </div>
+      </div>
+
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-navy via-electric-blue to-purple-500 text-white overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
