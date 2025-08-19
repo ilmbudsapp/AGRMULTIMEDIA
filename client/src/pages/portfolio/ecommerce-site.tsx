@@ -25,7 +25,11 @@ export default function EcommerceSite() {
             <Link href="/">
               <Button variant="ghost" size="sm" className="gap-2" data-testid="button-back-home">
                 <ArrowLeft className="w-4 h-4" />
-Početna
+                {currentLanguage === 'sr' ? 'Početna' : 
+                 currentLanguage === 'en' ? 'Home' :
+                 currentLanguage === 'de' ? 'Startseite' : 
+                 currentLanguage === 'sq' ? 'Fillimi' :
+                 'Početna'}
               </Button>
             </Link>
             <div>

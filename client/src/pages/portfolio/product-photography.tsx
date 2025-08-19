@@ -28,7 +28,7 @@ export default function ProductPhotography() {
 {currentLanguage === 'sr' ? 'Početna' : 
                  currentLanguage === 'en' ? 'Home' :
                  currentLanguage === 'de' ? 'Startseite' : 
-                 currentLanguage === 'sq' ? 'Kryefaqja' :
+                 currentLanguage === 'sq' ? 'Fillimi' :
                  'Početna'}
               </Button>
             </Link>

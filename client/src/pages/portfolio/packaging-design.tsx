@@ -28,7 +28,7 @@ export default function PackagingDesign() {
 {currentLanguage === 'sr' ? 'Početna' : 
                  currentLanguage === 'en' ? 'Home' :
                  currentLanguage === 'de' ? 'Startseite' : 
-                 currentLanguage === 'sq' ? 'Kryefaqja' :
+                 currentLanguage === 'sq' ? 'Fillimi' :
                  'Početna'}
               </Button>
             </Link>
