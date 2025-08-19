@@ -13,6 +13,7 @@ import WebDesign from "@/pages/web-design";
 import GraphicDesign from "@/pages/graphic-design";
 import VideoProduction from "@/pages/video-production";
 import DigitalMarketing from "@/pages/digital-marketing";
+import Photography from "@/pages/photography";
 import Impresum from "@/pages/impresum";
 import Privacy from "@/pages/privacy";
 import Terms from "@/pages/terms";
@@ -30,6 +31,7 @@ function Router() {
       <Route path="/graphic-design" component={GraphicDesign} />
       <Route path="/video-production" component={VideoProduction} />
       <Route path="/digital-marketing" component={DigitalMarketing} />
+      <Route path="/photography" component={Photography} />
       <Route path="/impresum" component={Impresum} />
       <Route path="/privacy" component={Privacy} />
       <Route path="/terms" component={Terms} />

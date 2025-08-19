@@ -43,7 +43,8 @@ export default function Services() {
       title: t.services.items.photography.title,
       description: t.services.items.photography.description,
       features: t.services.items.photography.features,
-      gradient: "from-blue-500 to-cyan-500"
+      gradient: "from-blue-500 to-cyan-500",
+      link: "/photography"
     },
     {
       icon: <Settings className="text-white text-2xl" />,

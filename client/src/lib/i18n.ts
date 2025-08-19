@@ -555,9 +555,9 @@ export const translations: Record<Language, Translations> = {
           features: ["Social Media", "Google Ads", "Content Marketing"]
         },
         photography: {
-          title: "Fotografija",
-          description: "Profesionalne fotografije proizvoda, događaja i portreta za vaš biznis.",
-          features: ["Product photography", "Event coverage", "Post-processing"]
+          title: "Fotografija i Photomontaža",
+          description: "Profesionalne fotografije, restauracija starih slika, photomontaže i kreiranje filmskih postera sa vašom slikom.",
+          features: ["Profesionalno fotografisanje", "Restauracija starih fotografija", "Photomontaže svih vrsta", "Filmski posteri sa vašom slikom", "Obrada i post-produkcija", "Kreativni dizajn"]
         },
         consulting: {
           title: "Konsalting",
@@ -1141,6 +1141,22 @@ export const translations: Record<Language, Translations> = {
       cta: {
         title: "Spremni za Digitalni Rast?",
         description: "Kontaktirajte me za besplatnu konsultaciju o vašoj digitalnoj marketing strategiji",
+        button: "Kontaktiraj Me"
+      }
+    },
+
+    photography: {
+      hero: {
+        title: "Fotografija i Photomontaža",
+        subtitle: "Kreativna fotografija i digitalna umetnost",
+        description: "Kreiram profesionalne fotografije, restauturam stare slike, radim photomontaže svih vrsta i filmske postere sa vašom slikom - od kreativnih kompozicija do realističnih portreta."
+      },
+      servicesTitle: "Moje Fotografske Usluge",
+      servicesSubtitle: "Od profesionalnog fotografisanja do kreativnih photomontaža",
+      portfolioButtonText: "Portfolio Radova",
+      cta: {
+        title: "Spremni za Kreativnu Fotografiju?",
+        description: "Kontaktirajte me za besplatnu konsultaciju o vašoj fotografiji ili photomontaži projektu",
         button: "Kontaktiraj Me"
       }
     }
@@ -1791,6 +1807,22 @@ export const translations: Record<Language, Translations> = {
         description: "Contact me for a free consultation about your digital marketing strategy",
         button: "Contact Me"
       }
+    },
+
+    photography: {
+      hero: {
+        title: "Photography & Photomontage",
+        subtitle: "Creative photography and digital art",
+        description: "I create professional photographs, restore old pictures, create photomontages of all kinds and movie posters with your image - from creative compositions to realistic portraits."
+      },
+      servicesTitle: "My Photography Services",
+      servicesSubtitle: "From professional photography to creative photomontages",
+      portfolioButtonText: "Work Portfolio",
+      cta: {
+        title: "Ready for Creative Photography?",
+        description: "Contact me for a free consultation about your photography or photomontage project",
+        button: "Contact Me"
+      }
     }
   },
   de: {
@@ -2439,6 +2471,22 @@ export const translations: Record<Language, Translations> = {
         description: "Kontaktieren Sie mich für eine kostenlose Beratung zu Ihrer Digital-Marketing-Strategie",
         button: "Kontaktieren Sie mich"
       }
+    },
+
+    photography: {
+      hero: {
+        title: "Fotografie & Photomontage",
+        subtitle: "Kreative Fotografie und digitale Kunst",
+        description: "Ich erstelle professionelle Fotografien, restauriere alte Bilder, erstelle Photomontagen aller Art und Filmplakate mit Ihrem Bild - von kreativen Kompositionen bis zu realistischen Porträts."
+      },
+      servicesTitle: "Meine Fotografie-Dienstleistungen",
+      servicesSubtitle: "Von professioneller Fotografie bis zu kreativen Photomontagen",
+      portfolioButtonText: "Arbeiten Portfolio",
+      cta: {
+        title: "Bereit für kreative Fotografie?",
+        description: "Kontaktieren Sie mich für eine kostenlose Beratung zu Ihrem Fotografie- oder Photomontage-Projekt",
+        button: "Kontaktieren Sie mich"
+      }
     }
   },
   sq: {
@@ -3085,6 +3133,22 @@ export const translations: Record<Language, Translations> = {
       cta: {
         title: "Gati për Rritje Dixhitale?",
         description: "Kontaktoni për një konsultim falas mbi strategjinë tuaj të marketingut dixhital",
+        button: "Kontaktoni"
+      }
+    },
+
+    photography: {
+      hero: {
+        title: "Fotografi & Photomontazh",
+        subtitle: "Fotografi kreative dhe art dixhital",
+        description: "Krijoj fotografi profesionale, restauroj fotografi të vjetra, bëj photomontazhe të të gjitha llojeve dhe postera filmash me fotografinë tuaj - nga kompozime kreative deri te portrete realiste."
+      },
+      servicesTitle: "Shërbimet e Mia të Fotografisë",
+      servicesSubtitle: "Nga fotografia profesionale deri te photomontazhet kreative",
+      portfolioButtonText: "Portfolio Punësh",
+      cta: {
+        title: "Gati për Fotografi Kreative?",
+        description: "Kontaktoni për një konsultim falas mbi projektin tuaj të fotografisë ose photomontazhit",
         button: "Kontaktoni"
       }
     }
