@@ -70,20 +70,38 @@ Početna
           <div className="grid lg:grid-cols-3 gap-12 mb-16">
             <div className="lg:col-span-2">
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
-                Profesionalni E-commerce Sajt za Modernu Trgovinu
+                {currentLanguage === 'sr' ? 'Profesionalni E-commerce Sajt za Modernu Trgovinu' : 
+                 currentLanguage === 'en' ? 'Professional E-commerce Site for Modern Commerce' :
+                 currentLanguage === 'de' ? 'Professionelle E-Commerce-Website für modernen Handel' : 
+                 currentLanguage === 'sq' ? 'Faqe Profesionale E-commerce për Tregtinë Moderne' :
+                 'Profesionalni E-commerce Sajt za Modernu Trgovinu'}
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
-                Kreiram moderna e-commerce rešenja koja omogućavaju kompanijama da prodaju svoje proizvode online sa profesionalnim izgledom i funkcionalnostima koje povećavaju konverzije. Ovaj sajt kombinuje elegantan dizajn sa naprednim e-commerce funkcijama.
+                {currentLanguage === 'sr' ? 'Kreiram moderna e-commerce rešenja koja omogućavaju kompanijama da prodaju svoje proizvode online sa profesionalnim izgledom i funkcionalnostima koje povećavaju konverzije. Ovaj sajt kombinuje elegantan dizajn sa naprednim e-commerce funkcijama.' : 
+                 currentLanguage === 'en' ? 'I create modern e-commerce solutions that enable companies to sell their products online with a professional look and features that increase conversions. This site combines elegant design with advanced e-commerce functionality.' :
+                 currentLanguage === 'de' ? 'Ich erstelle moderne E-Commerce-Lösungen, die es Unternehmen ermöglichen, ihre Produkte online mit professionellem Aussehen und Funktionen zu verkaufen, die Conversions steigern. Diese Website kombiniert elegantes Design mit erweiterten E-Commerce-Funktionen.' : 
+                 currentLanguage === 'sq' ? 'Krijoj zgjidhje moderne e-commerce që u mundësojnë kompanive të shesin produktet e tyre online me pamje profesionale dhe funksione që rrisin konvertimet. Kjo faqe kombinon dizajnin elegant me funksionalitetet e avancuara e-commerce.' :
+                 'Kreiram moderna e-commerce rešenja koja omogućavaju kompanijama da prodaju svoje proizvode online sa profesionalnim izgledom i funkcionalnostima koje povećavaju konverzije. Ovaj sajt kombinuje elegantan dizajn sa naprednim e-commerce funkcijama.'}
               </p>
 
               <div className="grid md:grid-cols-2 gap-6">
                 <Card className="p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <ShoppingCart className="w-6 h-6 text-electric-blue" />
-                    <h3 className="text-xl font-semibold">Napredna Korpa</h3>
+                    <h3 className="text-xl font-semibold">
+                      {currentLanguage === 'sr' ? 'Napredna Korpa' : 
+                       currentLanguage === 'en' ? 'Advanced Cart' :
+                       currentLanguage === 'de' ? 'Erweiterte Warenkorb' : 
+                       currentLanguage === 'sq' ? 'Shporta e Avancuar' :
+                       'Napredna Korpa'}
+                    </h3>
                   </div>
                   <p className="text-gray-600">
-                    Intuitivna shopping korpa sa mogućnostima dodavanja, uklanjanja i menjanja količine proizvoda u realnom vremenu.
+                    {currentLanguage === 'sr' ? 'Intuitivna shopping korpa sa mogućnostima dodavanja, uklanjanja i menjanja količine proizvoda u realnom vremenu.' : 
+                     currentLanguage === 'en' ? 'Intuitive shopping cart with options to add, remove and change product quantities in real time.' :
+                     currentLanguage === 'de' ? 'Intuitiver Warenkorb mit Optionen zum Hinzufügen, Entfernen und Ändern von Produktmengen in Echtzeit.' : 
+                     currentLanguage === 'sq' ? 'Shportë intuitiva blerjesh me opsione për të shtuar, hequr dhe ndryshuar sasitë e produkteve në kohë reale.' :
+                     'Intuitivna shopping korpa sa mogućnostima dodavanja, uklanjanja i menjanja količine proizvoda u realnom vremenu.'}
                   </p>
                 </Card>
 

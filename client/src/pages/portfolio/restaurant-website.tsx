@@ -30,10 +30,18 @@ Početna
             </Link>
             <div>
               <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
-                Restoran Website
+                {currentLanguage === 'sr' ? 'Restoran Website' : 
+                 currentLanguage === 'en' ? 'Restaurant Website' :
+                 currentLanguage === 'de' ? 'Restaurant-Website' : 
+                 currentLanguage === 'sq' ? 'Faqja e Restorantit' :
+                 'Restoran Website'}
               </h1>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                Elegantno online prisustvo
+                {currentLanguage === 'sr' ? 'Elegantno online prisustvo' : 
+                 currentLanguage === 'en' ? 'Elegant online presence' :
+                 currentLanguage === 'de' ? 'Elegante Online-Präsenz' : 
+                 currentLanguage === 'sq' ? 'Prezencë elegante online' :
+                 'Elegantno online prisustvo'}
               </p>
             </div>
           </div>
@@ -45,9 +53,27 @@ Početna
         <div className="max-w-6xl mx-auto">
           {/* Project Meta */}
           <div className="flex flex-wrap items-center gap-4 mb-8">
-            <Badge className="bg-orange-500 text-white">Restoran</Badge>
-            <Badge className="bg-amber-500 text-white">Web Dizajn</Badge>
-            <Badge className="bg-green-500 text-white">Online Rezervacije</Badge>
+            <Badge className="bg-orange-500 text-white">
+              {currentLanguage === 'sr' ? 'Restoran' : 
+               currentLanguage === 'en' ? 'Restaurant' :
+               currentLanguage === 'de' ? 'Restaurant' : 
+               currentLanguage === 'sq' ? 'Restorant' :
+               'Restoran'}
+            </Badge>
+            <Badge className="bg-amber-500 text-white">
+              {currentLanguage === 'sr' ? 'Web Dizajn' : 
+               currentLanguage === 'en' ? 'Web Design' :
+               currentLanguage === 'de' ? 'Web-Design' : 
+               currentLanguage === 'sq' ? 'Dizajn Web' :
+               'Web Dizajn'}
+            </Badge>
+            <Badge className="bg-green-500 text-white">
+              {currentLanguage === 'sr' ? 'Online Rezervacije' : 
+               currentLanguage === 'en' ? 'Online Reservations' :
+               currentLanguage === 'de' ? 'Online-Reservierungen' : 
+               currentLanguage === 'sq' ? 'Rezervime Online' :
+               'Online Rezervacije'}
+            </Badge>
           </div>
 
           {/* Featured Image */}
@@ -63,40 +89,78 @@ Početna
           <div className="grid lg:grid-cols-3 gap-12 mb-16">
             <div className="lg:col-span-2">
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
-                Moderni Website za Restorane i Ugostiteljske Objekte
+                {currentLanguage === 'sr' ? 'Moderni Website za Restorane i Ugostiteljske Objekte' : 
+                 currentLanguage === 'en' ? 'Modern Websites for Restaurants and Hospitality' :
+                 currentLanguage === 'de' ? 'Moderne Websites für Restaurants und Gastronomie' : 
+                 currentLanguage === 'sq' ? 'Faqe të Reja për Restorante dhe Hoteleri' :
+                 'Moderni Website za Restorane i Ugostiteljske Objekte'}
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
-                Kreiram elegantne web sajtove za restorane koji prikazuju atmosferu, jelovnik i omogućavaju lakše rezervacije. Kombinujem vizuelno atraktivan dizajn sa funkcionalnostima koje povećavaju broj gostiju i poboljšavaju korisničko iskustvo.
+                {currentLanguage === 'sr' ? 'Kreiram elegantne web sajtove za restorane koji prikazuju atmosferu, jelovnik i omogućavaju lakše rezervacije. Kombinujem vizuelno atraktivan dizajn sa funkcionalnostima koje povećavaju broj gostiju i poboljšavaju korisničko iskustvo.' : 
+                 currentLanguage === 'en' ? 'I create elegant restaurant websites that showcase atmosphere, menus, and enable easy reservations. I combine visually attractive design with features that increase guest numbers and improve user experience.' :
+                 currentLanguage === 'de' ? 'Ich erstelle elegante Restaurant-Websites, die Atmosphäre und Menüs präsentieren und einfache Reservierungen ermöglichen. Ich kombiniere visuell ansprechendes Design mit Funktionen, die die Gästezahl erhöhen und das Benutzererlebnis verbessern.' : 
+                 currentLanguage === 'sq' ? 'Krijoj faqe elegante për restorante që tregojnë atmosferën, menytë dhe mundësojnë rezervime të lehta. Kombinoj dizajnin tërheqës vizual me funksione që rrisin numrin e mysafirëve dhe përmirësojnë përvojën e përdoruesit.' :
+                 'Kreiram elegantne web sajtove za restorane koji prikazuju atmosferu, jelovnik i omogućavaju lakše rezervacije. Kombinujem vizuelno atraktivan dizajn sa funkcionalnostima koje povećavaju broj gostiju i poboljšavaju korisničko iskustvo.'}
               </p>
 
               <div className="grid md:grid-cols-2 gap-6">
                 <Card className="p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <Utensils className="w-6 h-6 text-orange-500" />
-                    <h3 className="text-xl font-semibold">Interaktivni Meni</h3>
+                    <h3 className="text-xl font-semibold">
+                      {currentLanguage === 'sr' ? 'Interaktivni Meni' : 
+                       currentLanguage === 'en' ? 'Interactive Menu' :
+                       currentLanguage === 'de' ? 'Interaktive Speisekarte' : 
+                       currentLanguage === 'sq' ? 'Menu Interaktive' :
+                       'Interaktivni Meni'}
+                    </h3>
                   </div>
                   <p className="text-gray-600">
-                    Digitalni jelovnik sa slikama jela, cenama, opisima i mogućnostima filtriranja po kategorijama i alergentima.
+                    {currentLanguage === 'sr' ? 'Digitalni jelovnik sa slikama jela, cenama, opisima i mogućnostima filtriranja po kategorijama i alergentima.' : 
+                     currentLanguage === 'en' ? 'Digital menu with dish images, prices, descriptions and filtering options by categories and allergens.' :
+                     currentLanguage === 'de' ? 'Digitale Speisekarte mit Bildern, Preisen, Beschreibungen und Filtermöglichkeiten nach Kategorien und Allergenen.' : 
+                     currentLanguage === 'sq' ? 'Menu dixhitale me imazhe të ushqimeve, çmime, përshkrime dhe mundësi filtrimi sipas kategorive dhe alergjeve.' :
+                     'Digitalni jelovnik sa slikama jela, cenama, opisima i mogućnostima filtriranja po kategorijama i alergentima.'}
                   </p>
                 </Card>
 
                 <Card className="p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <Calendar className="w-6 h-6 text-green-500" />
-                    <h3 className="text-xl font-semibold">Online Rezervacije</h3>
+                    <h3 className="text-xl font-semibold">
+                      {currentLanguage === 'sr' ? 'Online Rezervacije' : 
+                       currentLanguage === 'en' ? 'Online Reservations' :
+                       currentLanguage === 'de' ? 'Online-Reservierungen' : 
+                       currentLanguage === 'sq' ? 'Rezervime Online' :
+                       'Online Rezervacije'}
+                    </h3>
                   </div>
                   <p className="text-gray-600">
-                    Sistem rezervacije stolova u realnom vremenu sa kalendar integracijom i potvrdom putem email-a.
+                    {currentLanguage === 'sr' ? 'Sistem rezervacije stolova u realnom vremenu sa kalendar integracijom i potvrdom putem email-a.' : 
+                     currentLanguage === 'en' ? 'Real-time table reservation system with calendar integration and email confirmation.' :
+                     currentLanguage === 'de' ? 'Echtzeit-Tischreservierungssystem mit Kalenderintegration und E-Mail-Bestätigung.' : 
+                     currentLanguage === 'sq' ? 'Sistem rezervimi tavolinash në kohë reale me integrim kalendari dhe konfirmim me email.' :
+                     'Sistem rezervacije stolova u realnom vremenu sa kalendar integracijom i potvrdom putem email-a.'}
                   </p>
                 </Card>
 
                 <Card className="p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <MapPin className="w-6 h-6 text-blue-500" />
-                    <h3 className="text-xl font-semibold">Lokacija & Kontakt</h3>
+                    <h3 className="text-xl font-semibold">
+                      {currentLanguage === 'sr' ? 'Lokacija & Kontakt' : 
+                       currentLanguage === 'en' ? 'Location & Contact' :
+                       currentLanguage === 'de' ? 'Standort & Kontakt' : 
+                       currentLanguage === 'sq' ? 'Vendndodhja & Kontakti' :
+                       'Lokacija & Kontakt'}
+                    </h3>
                   </div>
                   <p className="text-gray-600">
-                    Integrisana Google mapa, radno vreme, kontakt informacije i jednostavne direkcije.
+                    {currentLanguage === 'sr' ? 'Integrisana Google mapa, radno vreme, kontakt informacije i jednostavne direkcije.' : 
+                     currentLanguage === 'en' ? 'Integrated Google map, working hours, contact information and simple directions.' :
+                     currentLanguage === 'de' ? 'Integrierte Google-Karte, Öffnungszeiten, Kontaktinformationen und einfache Wegbeschreibungen.' : 
+                     currentLanguage === 'sq' ? 'Harta e integruar Google, oraret e punës, informacionet e kontaktit dhe udhëzimet e thjeshta.' :
+                     'Integrisana Google mapa, radno vreme, kontakt informacije i jednostavne direkcije.'}
                   </p>
                 </Card>
 
