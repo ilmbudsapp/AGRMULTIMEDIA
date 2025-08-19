@@ -102,15 +102,14 @@ export default function Photography() {
                 <img 
                   src={posterRagazzo} 
                   alt="Kreativni poster"
-                  className="w-full h-48 object-cover rounded-xl shadow-lg"
+                  className="w-full h-64 object-contain rounded-xl shadow-lg bg-white/10 backdrop-blur-sm"
                 />
                 <img 
                   src={posterAnto} 
                   alt="Filmski poster"
-                  className="w-full h-48 object-cover rounded-xl shadow-lg mt-8"
+                  className="w-full h-64 object-contain rounded-xl shadow-lg bg-white/10 backdrop-blur-sm mt-8"
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-blue-600/20 to-transparent rounded-2xl" />
             </div>
           </div>
         </div>
@@ -240,14 +239,14 @@ export default function Photography() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
             {moviePosters.map((poster, index) => (
               <Card key={index} className="group overflow-hidden hover:shadow-2xl transition-all duration-300 border-0 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm">
                 <div className="relative overflow-hidden">
                   <img 
                     src={poster.image} 
                     alt={poster.title}
-                    className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-96 object-contain bg-gray-100 dark:bg-gray-800 group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute top-4 left-4">
                     <Badge variant="secondary" className="bg-black/70 text-white">
@@ -256,8 +255,8 @@ export default function Photography() {
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                <CardContent className="p-4">
+                  <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
                     {poster.title}
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300 text-sm">
