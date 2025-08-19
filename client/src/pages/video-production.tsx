@@ -4,7 +4,7 @@ import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ArrowRight, Play, Camera, Edit, Palette, Clock, CheckCircle } from 'lucide-react';
+import { ArrowRight, ArrowLeft, Play, Camera, Edit, Palette, Clock, CheckCircle } from 'lucide-react';
 import { Link } from 'wouter';
 import video01 from '@assets/01_1755562646299.mp4';
 import video02 from '@assets/02_1755562690692.mp4';
@@ -47,10 +47,30 @@ export default function VideoProduction() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-slate-800">
-      <Navigation />
+      {/* Header */}
+      <div className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-b sticky top-0 z-50">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex items-center gap-4">
+            <Link href="/">
+              <Button variant="ghost" size="sm" className="gap-2" data-testid="button-back-home">
+                <ArrowLeft className="w-4 h-4" />
+                {t.nav.home}
+              </Button>
+            </Link>
+            <div>
+              <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
+                {t.videoProduction.hero.title}
+              </h1>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                {t.videoProduction.hero.description}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <section className="relative pt-16 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 dark:from-blue-400/5 dark:to-purple-400/5" />
         <div className="relative max-w-7xl mx-auto">
           <div className="text-center">
