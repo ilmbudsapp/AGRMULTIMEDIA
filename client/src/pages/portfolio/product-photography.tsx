@@ -25,7 +25,7 @@ export default function ProductPhotography() {
             <Link href="/">
               <Button variant="ghost" size="sm" className="gap-2" data-testid="button-back-home">
                 <ArrowLeft className="w-4 h-4" />
-{t("portfolioPages.common.backToHome")}
+Početna
               </Button>
             </Link>
             <div>
