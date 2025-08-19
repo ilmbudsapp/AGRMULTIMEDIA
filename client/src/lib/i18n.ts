@@ -217,6 +217,47 @@ export interface Translations {
     career: string;
   };
   
+  // Video Production page
+  videoProduction: {
+    hero: {
+      title: string;
+      description: string;
+    };
+    services: {
+      filming: {
+        title: string;
+        description: string;
+        features: string[];
+      };
+      editing: {
+        title: string;
+        description: string;
+        features: string[];
+      };
+      animation: {
+        title: string;
+        description: string;
+        features: string[];
+      };
+    };
+    process: {
+      title: string;
+      steps: {
+        title: string;
+        description: string;
+      }[];
+    };
+    portfolio: {
+      title: string;
+      description: string;
+    };
+    cta: {
+      title: string;
+      description: string;
+      button: string;
+    };
+  };
+
   // Impresum content
   impresum: {
     title: string;
@@ -952,6 +993,60 @@ export const translations: Record<Language, Translations> = {
         description: "Kontaktirajte me za besplatnu konsultaciju o vašem brendu",
         button: "Kontaktiraj Me"
       }
+    },
+
+    videoProduction: {
+      hero: {
+        title: "Profesionalna Video Produkcija",
+        description: "Kreiram video sadržaj visoke kvaliteta koji prenosi vašu poruku i angažuje auditorijum kroz profesionalno snimanje, editovanje i post-produkciju."
+      },
+      services: {
+        filming: {
+          title: "Profesionalno Snimanje",
+          description: "Koristim profesionalnu opremu za kreiranje vizuelno impresivnih video materijala",
+          features: ["4K Ultra HD snimanje", "Profesionalne kamere", "Stabilizatori i gimbal sistemi", "Profesionalno osvetljenje", "Audio snimanje studijskog kvaliteta", "Droneovi za aerijalne snimke"]
+        },
+        editing: {
+          title: "Video Editovanje",
+          description: "Napredne tehnike editovanja koje transformišu sirovi materijal u angažujući sadržaj",
+          features: ["Adobe Premiere Pro", "DaVinci Resolve", "Color grading i korekcija", "Zvučni dizajn i miksovanje", "Vizuelni efekti", "Titlovanje i grafike"]
+        },
+        animation: {
+          title: "Intro Template Videi",
+          description: "Kreiranje animiranih intro template videa i motion graphics visokog kvaliteta",
+          features: ["Motion graphics", "2D i 3D animacije", "Logo animacije", "Intro/outro sekvence", "Kinetic typography", "Visual effects"]
+        }
+      },
+      process: {
+        title: "Kreativni Proces",
+        steps: [
+          {
+            title: "Planiranje",
+            description: "Razvijam koncept i kreiram storyboard prema vašim ciljevima"
+          },
+          {
+            title: "Snimanje",
+            description: "Profesionalno snimanje sa vrhunskom opremom i osvetljenjem"
+          },
+          {
+            title: "Post-produkcija",
+            description: "Editovanje, color grading, zvučni dizajn i finalna obrada"
+          },
+          {
+            title: "Isporuka",
+            description: "Optimizacija za različite platforme i finalna dostava"
+          }
+        ]
+      },
+      portfolio: {
+        title: "Portfolio Video Radova",
+        description: "Primeri mojih najnovijih video produkcija sa različitim stilovima i tehnikama"
+      },
+      cta: {
+        title: "Spremni za Video Projekat?",
+        description: "Kontaktirajte me za besplatnu konsultaciju o vašem video sadržaju",
+        button: "Kontaktiraj Me"
+      }
     }
   },
   en: {
@@ -1448,6 +1543,60 @@ export const translations: Record<Language, Translations> = {
       cta: {
         title: "Ready for a New Visual Identity?",
         description: "Contact me for a free consultation about your brand",
+        button: "Contact Me"
+      }
+    },
+
+    videoProduction: {
+      hero: {
+        title: "Professional Video Production",
+        description: "I create high-quality video content that conveys your message and engages your audience through professional filming, editing, and post-production."
+      },
+      services: {
+        filming: {
+          title: "Professional Filming",
+          description: "I use professional equipment to create visually stunning video materials",
+          features: ["4K Ultra HD filming", "Professional cameras", "Stabilizers and gimbal systems", "Professional lighting", "Studio quality audio recording", "Drones for aerial shots"]
+        },
+        editing: {
+          title: "Video Editing",
+          description: "Advanced editing techniques that transform raw footage into engaging content",
+          features: ["Adobe Premiere Pro", "DaVinci Resolve", "Color grading and correction", "Sound design and mixing", "Visual effects", "Subtitles and graphics"]
+        },
+        animation: {
+          title: "Intro Template Videos",
+          description: "Creating animated intro template videos and high-quality motion graphics",
+          features: ["Motion graphics", "2D and 3D animations", "Logo animations", "Intro/outro sequences", "Kinetic typography", "Visual effects"]
+        }
+      },
+      process: {
+        title: "Creative Process",
+        steps: [
+          {
+            title: "Planning",
+            description: "I develop the concept and create storyboards according to your goals"
+          },
+          {
+            title: "Filming",
+            description: "Professional filming with top-quality equipment and lighting"
+          },
+          {
+            title: "Post-production",
+            description: "Editing, color grading, sound design, and final processing"
+          },
+          {
+            title: "Delivery",
+            description: "Optimization for different platforms and final delivery"
+          }
+        ]
+      },
+      portfolio: {
+        title: "Video Work Portfolio",
+        description: "Examples of my latest video productions with different styles and techniques"
+      },
+      cta: {
+        title: "Ready for Your Video Project?",
+        description: "Contact me for a free consultation about your video content",
         button: "Contact Me"
       }
     }
@@ -1948,6 +2097,60 @@ export const translations: Record<Language, Translations> = {
         description: "Kontaktieren Sie mich für eine kostenlose Beratung zu Ihrer Marke",
         button: "Kontaktieren Sie mich"
       }
+    },
+
+    videoProduction: {
+      hero: {
+        title: "Professionelle Videoproduktion",
+        description: "Ich erstelle hochwertigen Videoinhalt, der Ihre Botschaft vermittelt und Ihr Publikum durch professionelle Aufnahmen, Bearbeitung und Postproduktion anspricht."
+      },
+      services: {
+        filming: {
+          title: "Professionelle Aufnahmen",
+          description: "Ich verwende professionelle Ausrüstung, um visuell beeindruckende Videomaterialien zu erstellen",
+          features: ["4K Ultra HD Aufnahmen", "Professionelle Kameras", "Stabilisatoren und Gimbal-Systeme", "Professionelle Beleuchtung", "Audioaufnahme in Studioqualität", "Drohnen für Luftaufnahmen"]
+        },
+        editing: {
+          title: "Videobearbeitung",
+          description: "Fortgeschrittene Bearbeitungstechniken, die Rohmaterial in ansprechenden Inhalt verwandeln",
+          features: ["Adobe Premiere Pro", "DaVinci Resolve", "Color Grading und Korrektur", "Sounddesign und Mischung", "Visuelle Effekte", "Untertitel und Grafiken"]
+        },
+        animation: {
+          title: "Intro-Template-Videos",
+          description: "Erstellung animierter Intro-Template-Videos und hochwertiger Motion Graphics",
+          features: ["Motion Graphics", "2D und 3D Animationen", "Logo-Animationen", "Intro/Outro-Sequenzen", "Kinetische Typografie", "Visuelle Effekte"]
+        }
+      },
+      process: {
+        title: "Kreativer Prozess",
+        steps: [
+          {
+            title: "Planung",
+            description: "Ich entwickle das Konzept und erstelle Storyboards entsprechend Ihren Zielen"
+          },
+          {
+            title: "Aufnahme",
+            description: "Professionelle Aufnahmen mit hochwertiger Ausrüstung und Beleuchtung"
+          },
+          {
+            title: "Postproduktion",
+            description: "Bearbeitung, Color Grading, Sounddesign und finale Verarbeitung"
+          },
+          {
+            title: "Lieferung",
+            description: "Optimierung für verschiedene Plattformen und finale Auslieferung"
+          }
+        ]
+      },
+      portfolio: {
+        title: "Video-Portfolio",
+        description: "Beispiele meiner neuesten Videoproduktionen mit verschiedenen Stilen und Techniken"
+      },
+      cta: {
+        title: "Bereit für Ihr Videoprojekt?",
+        description: "Kontaktieren Sie mich für eine kostenlose Beratung zu Ihrem Videoinhalt",
+        button: "Kontaktieren Sie mich"
+      }
     }
   },
   sq: {
@@ -2445,6 +2648,60 @@ export const translations: Record<Language, Translations> = {
         title: "Gati për një Identitet të Ri Vizual?",
         description: "Kontaktoni për një konsultim falas mbi markën tuaj",
         button: "Kontaktoni"
+      }
+    },
+
+    videoProduction: {
+      hero: {
+        title: "Prodhimi Profesional i Videove",
+        description: "Krijoj përmbajtje video me cilësi të lartë që transmeton mesazhin tuaj dhe angazhon audiencën përmes filmimit profesional, editimit dhe post-prodhimit."
+      },
+      services: {
+        filming: {
+          title: "Filmim Profesional",
+          description: "Përdor pajisje profesionale për krijimin e materialeve video vizualisht mbresëlënëse",
+          features: ["Filmim 4K Ultra HD", "Kamera profesionale", "Stabilizatorë dhe sisteme gimbal", "Ndriçim profesional", "Regjistrimi audio me cilësi studimi", "Dronë për pamje ajrore"]
+        },
+        editing: {
+          title: "Editimi i Videove",
+          description: "Teknika të avancuara editimi që transformojnë materialin e papërpunuar në përmbajtje tërheqëse",
+          features: ["Adobe Premiere Pro", "DaVinci Resolve", "Gradimi dhe korrigjimi i ngjyrave", "Dizajni dhe përzierja e tingullit", "Efekte vizuale", "Titra dhe grafika"]
+        },
+        animation: {
+          title: "Video Template Intro",
+          description: "Krijimi i video template intro të animuara dhe motion graphics me cilësi të lartë",
+          features: ["Motion graphics", "Animacione 2D dhe 3D", "Animacione logo", "Sekuenca intro/outro", "Tipografi kinetike", "Efekte vizuale"]
+        }
+      },
+      process: {
+        title: "Procesi Kreativ",
+        steps: [
+          {
+            title: "Planifikimi",
+            description: "Zhvilloj konceptin dhe krijoj storyboard sipas objektivave tuaja"
+          },
+          {
+            title: "Filmimi",
+            description: "Filmim profesional me pajisje dhe ndriçim me cilësi të lartë"
+          },
+          {
+            title: "Post-prodhimi",
+            description: "Editimi, gradimi i ngjyrave, dizajni i tingullit dhe përpunimi final"
+          },
+          {
+            title: "Dorëzimi",
+            description: "Optimizimi për platforma të ndryshme dhe dorëzimi final"
+          }
+        ]
+      },
+      portfolio: {
+        title: "Portfolio e Punëve Video",
+        description: "Shembuj të prodhimeve të mia të fundit video me stile dhe teknika të ndryshme"
+      },
+      cta: {
+        title: "Gati për Projektin tuaj Video?",
+        description: "Më kontaktoni për një konsultim falas rreth përmbajtjes suaj video",
+        button: "Më kontaktoni"
       }
     }
   }

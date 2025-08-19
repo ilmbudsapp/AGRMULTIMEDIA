@@ -11,6 +11,7 @@ import { ErrorBoundary } from "./components/ErrorBoundary";
 import Home from "@/pages/home";
 import WebDesign from "@/pages/web-design";
 import GraphicDesign from "@/pages/graphic-design";
+import VideoProduction from "@/pages/video-production";
 import Impresum from "@/pages/impresum";
 import Privacy from "@/pages/privacy";
 import Terms from "@/pages/terms";
@@ -26,6 +27,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/web-design" component={WebDesign} />
       <Route path="/graphic-design" component={GraphicDesign} />
+      <Route path="/video-production" component={VideoProduction} />
       <Route path="/impresum" component={Impresum} />
       <Route path="/privacy" component={Privacy} />
       <Route path="/terms" component={Terms} />

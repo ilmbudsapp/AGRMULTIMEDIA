@@ -27,7 +27,8 @@ export default function Services() {
       title: t.services.items.videoProduction.title,
       description: t.services.items.videoProduction.description,
       features: t.services.items.videoProduction.features,
-      gradient: "from-red-500 to-orange-500"
+      gradient: "from-red-500 to-orange-500",
+      link: "/video-production"
     },
     {
       icon: <Megaphone className="text-white text-2xl" />,
