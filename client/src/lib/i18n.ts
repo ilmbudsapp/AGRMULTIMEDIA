@@ -1152,7 +1152,7 @@ export const translations: Record<Language, Translations> = {
         description: "Kreiram profesionalne fotografije, restauturam stare slike, radim photomontaže svih vrsta i filmske postere sa vašom slikom - od kreativnih kompozicija do realističnih portreta."
       },
       servicesTitle: "Moje Fotografske Usluge",
-      servicesSubtitle: "Od profesionalnog fotografisanja do kreativnih photomontaža",
+      servicesSubtitle: "Od profesionalnog fotografisanja do kreativnih fotomontaža",
       portfolioButtonText: "Portfolio Radova",
       portfolioTitle: "Portfolio Filmskih Postera",
       portfolioDescription: "Primeri mojih radova - kreiranje profesionalnih filmskih postera sa različitim stilovima i atmosferama",
@@ -1218,9 +1218,9 @@ export const translations: Record<Language, Translations> = {
           features: ["Uklanjanje oštećenja", "Obnavljanje boja", "Digitalna restauracija", "Popravljanje starih fotografija"]
         },
         photomontage: {
-          title: "Photomontaže Svih Vrsta",
+          title: "Fotomontaže Svih Vrsta",
           description: "Kreativno kombinovanje elemenata u jedinstvene kompozicije",
-          features: ["Kreativne kompozicije", "Realistične montaže", "Fantazijske scene", "Reklamne photomontaže"]
+          features: ["Kreativne kompozicije", "Realistične fotomontaže", "Fantazijske scene", "Reklamne fotomontaže"]
         },
         moviePosters: {
           title: "Filmski Posteri sa Vašom Slikom",
