@@ -27,6 +27,9 @@ Pricing guidance for German market: 4,500-6,500€ for similar portfolio website
 Language policy: 4 languages (Serbian, English, German, Albanian) are sufficient - no additional languages needed.
 Business model: Professional B2B portfolio site - NO advertising elements to maintain professional appearance.
 
+**CRITICAL USER INSTRUCTION - PERMANENT RULE:**
+When user asks questions, provide ONLY the answer - take NO actions in applications/websites unless explicitly told to do so. Do not make any changes or modifications without direct instruction.
+
 # System Architecture
 
 ## Frontend Architecture
