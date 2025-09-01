@@ -23,6 +23,9 @@ MULTIMEDIA AGRONDESIGN is a professional multimedia services portfolio website b
 # User Preferences
 
 Preferred communication style: Simple, everyday language.
+Pricing guidance for German market: 4,500-6,500€ for similar portfolio websites, up to 8,000€ with strong references.
+Language policy: 4 languages (Serbian, English, German, Albanian) are sufficient - no additional languages needed.
+Business model: Professional B2B portfolio site - NO advertising elements to maintain professional appearance.
 
 # System Architecture
 
