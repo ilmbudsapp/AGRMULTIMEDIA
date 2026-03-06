@@ -1,20 +1,26 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
+import ServicesPreview from "@/components/ServicesPreview";
 import About from "@/components/About";
-import Services from "@/components/Services";
 import Portfolio from "@/components/Portfolio";
+import WhyMe from "@/components/WhyMe";
+import Testimonials from "@/components/Testimonials";
+import FinalCta from "@/components/FinalCta";
 import Blog from "@/components/Blog";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-[#0a0a0f]">
       <Navigation />
       <Hero />
-      <About />
-      <Services />
+      <ServicesPreview />
       <Portfolio />
+      <WhyMe />
+      <Testimonials />
+      <FinalCta />
+      <About />
       <Blog />
       <Contact />
       <Footer />

@@ -9,6 +9,12 @@ import { useAnalytics } from "./hooks/use-analytics";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import { ErrorBoundary } from "./components/ErrorBoundary";
 import Home from "@/pages/home";
+import ServicesPage from "@/pages/ServicesPage";
+import AboutPage from "@/pages/AboutPage";
+import ContactPage from "@/pages/ContactPage";
+import ContactPage from "@/pages/ContactPage";
+import PortfolioPage from "@/pages/PortfolioPage";
+import BlogIndexPage from "@/pages/BlogIndexPage";
 import WebDesign from "@/pages/web-design";
 import GraphicDesign from "@/pages/graphic-design";
 import VideoProduction from "@/pages/video-production";
@@ -37,6 +43,11 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/services" component={ServicesPage} />
+      <Route path="/about" component={AboutPage} />
+      <Route path="/contact" component={ContactPage} />
+      <Route path="/portfolio" component={PortfolioPage} />
+      <Route path="/blog" component={BlogIndexPage} />
       <Route path="/web-design" component={WebDesign} />
       <Route path="/graphic-design" component={GraphicDesign} />
       <Route path="/video-production" component={VideoProduction} />

@@ -2,12 +2,12 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Link, useLocation } from "wouter";
-import LanguageSelector from "./LanguageSelector";
-import logoImage from '@assets/MULTIMEDIA AGRONDESIGN LOGO IN NERO_1755440866155.png';
+import LanguageSwitcherInline from "./LanguageSwitcherInline";
+import logoImage from '@assets/MULTIMEDIA AGRONDESIGN LOGO IN BIANCO_1755555880911.png';
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { t } = useLanguage();
+  const { tSpec } = useLanguage();
   const [location] = useLocation();
   
   const isHomePage = location === '/';
@@ -22,124 +22,67 @@ export default function Navigation() {
     setIsMenuOpen(false);
   };
 
+  const navItems: { id: string; label: string; href: string; section?: string }[] = [
+    { id: 'home', label: tSpec.nav.home, href: '/', section: 'home' },
+    { id: 'services', label: tSpec.nav.services, href: '/services', section: 'services' },
+    { id: 'portfolio', label: tSpec.nav.portfolio, href: '/portfolio', section: 'portfolio' },
+    { id: 'about', label: tSpec.nav.about, href: '/about', section: 'about' },
+    { id: 'blog', label: tSpec.nav.blog, href: '/blog', section: 'blog' },
+    { id: 'contact', label: tSpec.nav.contact, href: '/#contact', section: 'contact' },
+  ];
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-b border-gray-100">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0f]/95 backdrop-blur-xl border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center" data-testid="logo-button">
               <img
                 src={logoImage}
-                alt="MULTIMEDIA AGRONDESIGN"
+                alt="AGR Multimedia"
                 className="h-8 md:h-9 w-auto"
               />
             </Link>
           </div>
           
-          <div className="hidden md:block">
-            <div className="flex items-center space-x-6">
-              {isHomePage ? (
-                <>
-                  <button
-                    onClick={() => scrollToSection('home')}
-                    className="text-gray-700 hover:text-electric-blue font-medium transition-colors duration-300"
-                    data-testid="nav-home"
-                  >
-                    {t.nav.home}
-                  </button>
-                  <button 
-                    onClick={() => scrollToSection('about')} 
-                    className="text-gray-700 hover:text-electric-blue transition-colors duration-300"
-                    data-testid="nav-about"
-                  >
-                    {t.nav.about}
-                  </button>
-                  <button 
-                    onClick={() => scrollToSection('services')} 
-                    className="text-gray-700 hover:text-electric-blue transition-colors duration-300"
-                    data-testid="nav-services"
-                  >
-                    {t.nav.services}
-                  </button>
-                  <button 
-                    onClick={() => scrollToSection('portfolio')} 
-                    className="text-gray-700 hover:text-electric-blue transition-colors duration-300"
-                    data-testid="nav-portfolio"
-                  >
-                    {t.nav.portfolio}
-                  </button>
-                  <button 
-                    onClick={() => scrollToSection('blog')} 
-                    className="text-gray-700 hover:text-electric-blue transition-colors duration-300"
-                    data-testid="nav-blog"
-                  >
-                    {t.nav.blog}
-                  </button>
-                </>
-              ) : (
-                <>
-                  <Link 
-                    href="/"
-                    className="text-gray-700 hover:text-electric-blue transition-colors duration-300"
-                    data-testid="nav-home"
-                  >
-                    {t.nav.home}
-                  </Link>
-                  <Link 
-                    href="/#about"
-                    className="text-gray-700 hover:text-electric-blue transition-colors duration-300"
-                    data-testid="nav-about"
-                  >
-                    {t.nav.about}
-                  </Link>
-                  <Link 
-                    href="/#services"
-                    className="text-gray-700 hover:text-electric-blue transition-colors duration-300"
-                    data-testid="nav-services"
-                  >
-                    {t.nav.services}
-                  </Link>
-                  <Link 
-                    href="/#portfolio"
-                    className="text-gray-700 hover:text-electric-blue transition-colors duration-300"
-                    data-testid="nav-portfolio"
-                  >
-                    {t.nav.portfolio}
-                  </Link>
-                  <Link 
-                    href="/#blog"
-                    className="text-gray-700 hover:text-electric-blue transition-colors duration-300"
-                    data-testid="nav-blog"
-                  >
-                    {t.nav.blog}
-                  </Link>
-                </>
-              )}
-              <LanguageSelector />
-              {isHomePage ? (
-                <button 
-                  onClick={() => scrollToSection('contact')} 
-                  className="bg-gradient-to-r from-electric-blue to-purple-500 text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300"
-                  data-testid="nav-contact-cta"
+          <div className="hidden md:flex items-center gap-8">
+            {navItems.map((item) =>
+              isHomePage && item.section ? (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.section!)}
+                  className="text-white/90 hover:text-white font-medium transition-colors duration-300"
+                  data-testid={`nav-${item.id}`}
                 >
-                  {t.nav.contact}
+                  {item.label}
                 </button>
-              ) : (
-                <Link 
-                  href="/#contact"
-                  className="bg-gradient-to-r from-electric-blue to-purple-500 text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300"
+              ) : item.id === 'contact' ? (
+                <Link
+                  key={item.id}
+                  href={isHomePage ? '/#contact' : '/contact'}
+                  className="bg-white text-[#0a0a0f] px-5 py-2.5 rounded-full font-semibold hover:bg-white/90 transition-all duration-300"
                   data-testid="nav-contact-cta"
                 >
-                  {t.nav.contact}
+                  {item.label}
                 </Link>
-              )}
-            </div>
+              ) : (
+                <Link
+                  key={item.id}
+                  href={item.href}
+                  className="text-white/90 hover:text-white font-medium transition-colors duration-300"
+                  data-testid={`nav-${item.id}`}
+                >
+                  {item.label}
+                </Link>
+              )
+            )}
+            <LanguageSwitcherInline />
           </div>
           
           <div className="md:hidden">
             <button 
               onClick={() => setIsMenuOpen(!isMenuOpen)} 
-              className="text-gray-700 hover:text-electric-blue"
+              className="text-white hover:text-white/80"
               data-testid="mobile-menu-toggle"
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -150,108 +93,43 @@ export default function Navigation() {
       
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-200" data-testid="mobile-menu">
+        <div className="md:hidden bg-[#0a0a0f] border-t border-white/10" data-testid="mobile-menu">
           <div className="px-4 py-4 space-y-4">
-            {isHomePage ? (
-              <>
-                <button 
-                  onClick={() => scrollToSection('home')} 
-                  className="block w-full text-left text-gray-700 hover:text-electric-blue transition-colors duration-300"
-                  data-testid="mobile-nav-home"
-                >
-                  {t.nav.home}
-                </button>
-                <button 
-                  onClick={() => scrollToSection('about')} 
-                  className="block w-full text-left text-gray-700 hover:text-electric-blue transition-colors duration-300"
-                  data-testid="mobile-nav-about"
-                >
-                  {t.nav.about}
-                </button>
-                <button 
-                  onClick={() => scrollToSection('services')} 
-                  className="block w-full text-left text-gray-700 hover:text-electric-blue transition-colors duration-300"
-                  data-testid="mobile-nav-services"
-                >
-                  {t.nav.services}
-                </button>
-                <button 
-                  onClick={() => scrollToSection('portfolio')} 
-                  className="block w-full text-left text-gray-700 hover:text-electric-blue transition-colors duration-300"
-                  data-testid="mobile-nav-portfolio"
-                >
-                  {t.nav.portfolio}
-                </button>
-                <button 
-                  onClick={() => scrollToSection('blog')} 
-                  className="block w-full text-left text-gray-700 hover:text-electric-blue transition-colors duration-300"
-                  data-testid="mobile-nav-blog"
-                >
-                  {t.nav.blog}
-                </button>
-                <button 
-                  onClick={() => scrollToSection('contact')} 
-                  className="block bg-gradient-to-r from-electric-blue to-purple-500 text-white px-6 py-2 rounded-full text-center"
-                  data-testid="mobile-nav-contact"
-                >
-                  {t.nav.contact}
-                </button>
-              </>
-            ) : (
-              <>
-                <Link 
-                  href="/"
-                  className="block w-full text-left text-gray-700 hover:text-electric-blue transition-colors duration-300"
-                  data-testid="mobile-nav-home"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {t.nav.home}
-                </Link>
-                <Link 
-                  href="/#about"
-                  className="block w-full text-left text-gray-700 hover:text-electric-blue transition-colors duration-300"
-                  data-testid="mobile-nav-about"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {t.nav.about}
-                </Link>
-                <Link 
-                  href="/#services"
-                  className="block w-full text-left text-gray-700 hover:text-electric-blue transition-colors duration-300"
-                  data-testid="mobile-nav-services"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {t.nav.services}
-                </Link>
-                <Link 
-                  href="/#portfolio"
-                  className="block w-full text-left text-gray-700 hover:text-electric-blue transition-colors duration-300"
-                  data-testid="mobile-nav-portfolio"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {t.nav.portfolio}
-                </Link>
-                <Link 
-                  href="/#blog"
-                  className="block w-full text-left text-gray-700 hover:text-electric-blue transition-colors duration-300"
-                  data-testid="mobile-nav-blog"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {t.nav.blog}
-                </Link>
-                <Link 
-                  href="/#contact"
-                  className="block bg-gradient-to-r from-electric-blue to-purple-500 text-white px-6 py-2 rounded-full text-center"
-                  data-testid="mobile-nav-contact"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {t.nav.contact}
-                </Link>
-              </>
-            )}
-            <div className="py-2">
-              <LanguageSelector />
+            <div className="pb-3 border-b border-white/10">
+              <LanguageSwitcherInline />
             </div>
+            {navItems.map((item) =>
+              isHomePage && item.section ? (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.section!)}
+                  className="block w-full text-left text-white/90 hover:text-white transition-colors duration-300"
+                  data-testid={`mobile-nav-${item.id}`}
+                >
+                  {item.label}
+                </button>
+              ) : item.id === 'contact' ? (
+                <Link
+                  key={item.id}
+                  href={isHomePage ? '/#contact' : '/contact'}
+                  className="block w-full text-center bg-white text-[#0a0a0f] py-3 rounded-full font-semibold"
+                  data-testid="mobile-nav-contact"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <Link
+                  key={item.id}
+                  href={item.href}
+                  className="block w-full text-left text-white/90 hover:text-white transition-colors duration-300"
+                  data-testid={`mobile-nav-${item.id}`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              )
+            )}
           </div>
         </div>
       )}

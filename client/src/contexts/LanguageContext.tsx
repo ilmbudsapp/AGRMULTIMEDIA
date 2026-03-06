@@ -1,10 +1,12 @@
 import { createContext, useContext, useState, useEffect, ReactNode, useMemo, useCallback } from 'react';
 import { Language, getTranslations, Translations } from '@/lib/i18n';
+import { getSpecTranslations, SpecTranslations } from '@/lib/specTranslations';
 
 interface LanguageContextType {
   currentLanguage: Language;
   setLanguage: (lang: Language) => void;
   t: Translations;
+  tSpec: SpecTranslations;
 }
 
 const LanguageContext = createContext<LanguageContextType | null>(null);
@@ -16,7 +18,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
     try {
       // Load language from localStorage or browser preference
       const saved = localStorage.getItem('preferred-language') as Language;
-      if (saved && ['sr', 'en', 'de', 'sq', 'it'].includes(saved)) {
+      if (saved && ['sr', 'en', 'de', 'sq', 'it', 'al'].includes(saved)) {
         setCurrentLanguage(saved);
       } else {
         // Try to detect from browser language
@@ -24,7 +26,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
         if (browserLang.includes('en')) setCurrentLanguage('en');
         else if (browserLang.includes('de')) setCurrentLanguage('de');
         else if (browserLang.includes('it')) setCurrentLanguage('it');
-        else if (browserLang.includes('sq')) setCurrentLanguage('sq');
+        else if (browserLang.includes('sq')) setCurrentLanguage('al');
         else setCurrentLanguage('sr'); // Default fallback
       }
     } catch (error) {
@@ -46,12 +48,14 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   }, []);
 
   const t = useMemo(() => getTranslations(currentLanguage), [currentLanguage]);
+  const tSpec = useMemo(() => getSpecTranslations(currentLanguage), [currentLanguage]);
 
   const contextValue = useMemo(() => ({
     currentLanguage,
     setLanguage,
-    t
-  }), [currentLanguage, setLanguage, t]);
+    t,
+    tSpec
+  }), [currentLanguage, setLanguage, t, tSpec]);
 
   return (
     <LanguageContext.Provider value={contextValue}>

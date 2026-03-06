@@ -1,4 +1,4 @@
-export type Language = 'sr' | 'en' | 'de' | 'sq' | 'it';
+export type Language = 'sr' | 'en' | 'de' | 'sq' | 'it' | 'al';
 
 export interface Translations {
   // Navigation
@@ -4514,13 +4514,14 @@ export const translations: Record<Language, Translations> = {
 };
 
 export const getTranslations = (lang: Language): Translations => {
-  return translations[lang] || translations.sr;
+  const key = lang === 'al' ? 'sq' : lang;
+  return translations[key] || translations.sr;
 };
 
 export const languages: Array<{ code: Language; name: string; flag: string }> = [
-  { code: 'en', name: 'English', flag: '🇬🇧' },
   { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
+  { code: 'en', name: 'English', flag: '🇬🇧' },
   { code: 'it', name: 'Italiano', flag: '🇮🇹' },
-  { code: 'sq', name: 'Shqip', flag: '🇦🇱' },
-  { code: 'sr', name: 'Srpski', flag: '🇷🇸' }
+  { code: 'sr', name: 'Srpski', flag: '🇷🇸' },
+  { code: 'al', name: 'Shqip', flag: '🇦🇱' }
 ];

@@ -1,19 +1,16 @@
 import { ChevronDown } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { Link } from "wouter";
 import heroVideo from "@assets/02_1755562690692.mp4";
 
 export default function Hero() {
-  const { t } = useLanguage();
+  const { tSpec } = useLanguage();
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
-
-  const words = t.hero.title.split(" ");
-  const gradientWord = words[1] ?? words[0] ?? "";
-  const restWords = words.length > 2 ? words.slice(2).join(" ") : "";
 
   return (
     <section
@@ -111,75 +108,48 @@ export default function Hero() {
       />
 
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
-        <p
-          className="text-white/95 text-sm uppercase tracking-[0.3em] font-semibold mb-6 animate-fade-in-up"
-          style={{ textShadow: "0 0 24px rgba(0,0,0,0.9), 0 1px 3px rgba(0,0,0,1)" }}
-        >
-          Multimedia · Design · Development
-        </p>
         <h1
-          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-white mb-8 leading-[1.05] tracking-tight animate-fade-in-up"
-          style={{ animationDelay: "0.05s", textShadow: "0 2px 20px rgba(0,0,0,0.7), 0 4px 40px rgba(0,0,0,0.5)" }}
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-[1.1] tracking-tight animate-fade-in-up"
+          style={{ textShadow: "0 2px 20px rgba(0,0,0,0.7), 0 4px 40px rgba(0,0,0,0.5)" }}
           data-testid="hero-title"
         >
-          {words[0]}{" "}
-          <span className="gradient-text-warm" style={{ textShadow: "0 2px 20px rgba(0,0,0,0.7), 0 4px 40px rgba(0,0,0,0.5)" }}>{gradientWord}</span>
-          {restWords && (
-            <>
-              <br />
-              <span className="text-white" style={{ textShadow: "0 2px 20px rgba(0,0,0,0.7), 0 4px 40px rgba(0,0,0,0.5)" }}>{restWords}</span>
-            </>
-          )}
+          {tSpec.hero.h1}
         </h1>
         <p
-          className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mb-12 leading-relaxed animate-fade-in-up font-medium"
-          style={{ animationDelay: "0.15s", textShadow: "0 1px 10px rgba(0,0,0,0.8), 0 2px 20px rgba(0,0,0,0.6)" }}
+          className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up font-medium"
+          style={{ animationDelay: "0.1s", textShadow: "0 1px 10px rgba(0,0,0,0.8), 0 2px 20px rgba(0,0,0,0.6)" }}
           data-testid="hero-subtitle"
         >
-          {t.hero.subtitle}
+          {tSpec.hero.subheadline}
         </p>
 
         <div
           className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up"
-          style={{ animationDelay: "0.25s" }}
+          style={{ animationDelay: "0.2s" }}
         >
-          <button
-            onClick={() => scrollToSection("services")}
-            className="group relative bg-white text-navy px-10 py-4 rounded-2xl text-lg font-bold overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-electric-blue/25"
-            data-testid="hero-services-cta"
-          >
-            <span className="relative z-10">{t.hero.servicesButton}</span>
-            <div className="absolute inset-0 bg-gradient-to-r from-electric-blue to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-0" />
-            <span className="absolute inset-0 bg-white group-hover:opacity-0 transition-opacity duration-300 z-0" />
-          </button>
+          <Link href="/#contact">
+            <button
+              className="group relative bg-white text-[#0a0a0f] px-8 py-4 rounded-2xl text-lg font-bold overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl"
+              data-testid="hero-cta-primary"
+            >
+              {tSpec.hero.ctaPrimary}
+            </button>
+          </Link>
           <button
             onClick={() => scrollToSection("portfolio")}
-            className="glass-effect text-white px-10 py-4 rounded-2xl text-lg font-bold border-white/20 hover:bg-white/15 hover:border-white/30 transition-all duration-300"
-            data-testid="hero-portfolio-cta"
+            className="glass-effect text-white px-8 py-4 rounded-2xl text-lg font-bold border-white/20 hover:bg-white/15 hover:border-white/30 transition-all duration-300"
+            data-testid="hero-cta-secondary"
           >
-            {t.hero.portfolioButton}
+            {tSpec.hero.ctaSecondary}
           </button>
         </div>
 
-        <div className="mt-16 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-          <p
-            className="text-gray-300 text-sm font-medium uppercase tracking-widest mb-4"
-            style={{ textShadow: "0 1px 8px rgba(0,0,0,0.8)" }}
-            data-testid="hero-location-title"
-          >
-            {t.hero.locationTitle}
-          </p>
-          <div className="flex flex-wrap justify-center gap-6 text-gray-300 font-medium" style={{ textShadow: "0 1px 8px rgba(0,0,0,0.8)" }}>
-            {t.hero.locations.map((location, index) => (
-              <span key={index} className="flex items-center gap-6">
-                <span>{location}</span>
-                {index < t.hero.locations.length - 1 && (
-                  <span className="text-electric-blue/50">·</span>
-                )}
-              </span>
-            ))}
-          </div>
-        </div>
+        <p
+          className="mt-8 text-white/60 text-sm font-medium uppercase tracking-widest animate-fade-in-up"
+          style={{ animationDelay: "0.35s", textShadow: "0 1px 8px rgba(0,0,0,0.8)" }}
+        >
+          {tSpec.hero.availableIn}
+        </p>
       </div>
 
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
