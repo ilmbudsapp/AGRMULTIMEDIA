@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, MapPin, Facebook, Instagram } from "lucide-react";
+import { Mail, MapPin, Facebook, Instagram, Phone } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
@@ -166,6 +166,13 @@ export default function ContactPage() {
                     <MapPin className="w-5 h-5 text-white/60" />
                     {tSpec.contactPage.locationValue}
                   </p>
+                </div>
+                <div>
+                  <p className="text-white/60 text-sm font-medium mb-2">Phone</p>
+                  <a href="tel:+4915567204598" className="text-white flex items-center gap-2 hover:underline">
+                    <Phone className="w-5 h-5 text-white/60" />
+                    +49 1556 7204598
+                  </a>
                 </div>
                 <div>
                   <p className="text-white/60 text-sm font-medium mb-2">Email</p>

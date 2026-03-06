@@ -1,77 +1,99 @@
 import { useLanguage } from "@/contexts/LanguageContext";
+import { Link, useLocation } from "wouter";
+
+const PHONE = "+49 1556 7204598";
+const FACEBOOK_URL = "https://www.facebook.com/halidosmani74";
+const INSTAGRAM_URL = "https://www.instagram.com/agrondesign/";
 
 export default function Footer() {
-  const { t } = useLanguage();
+  const { t, tSpec } = useLanguage();
+  const [location] = useLocation();
+  const isHome = location === "/";
+
   const scrollToSection = (sectionId: string) => {
+    if (!isHome) return;
     const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    if (element) element.scrollIntoView({ behavior: "smooth" });
   };
 
+  const services = [
+    { label: tSpec.servicesPreview.webUi.title, href: "/services#web-ui" },
+    { label: tSpec.servicesPreview.graphicBranding.title, href: "/services#graphic" },
+    { label: tSpec.servicesPreview.videoMotion.title, href: "/services#video" },
+    { label: tSpec.servicesPreview.aiContent.title, href: "/services#ai" },
+  ];
+
   return (
-    <footer className="bg-navy text-white py-16">
+    <footer className="bg-[#0a0a0f] border-t border-white/10 text-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div data-testid="footer-brand">
-            <div className="text-2xl font-bold gradient-text-warm mb-4">MULTIMEDIA AGRONDESIGN</div>
-            <p className="text-gray-300 mb-6">
-              {t.footer.brand}
-            </p>
+            <div className="text-xl font-bold text-white mb-4">AGR Multimedia</div>
+            <p className="text-gray-400 mb-6 text-sm">{t.footer.brand}</p>
+            <div className="flex gap-4">
+              <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors" aria-label="Facebook">Facebook</a>
+              <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors" aria-label="Instagram">Instagram</a>
+            </div>
+          </div>
 
-          </div>
-          
           <div data-testid="footer-services">
-            <h4 className="text-lg font-semibold mb-6">{t.footer.services}</h4>
+            <h4 className="text-lg font-semibold mb-6 text-white">{t.footer.services}</h4>
             <ul className="space-y-3">
-              <li><button onClick={() => scrollToSection('services')} className="text-gray-300 hover:text-white transition-colors duration-300 text-left">{t.services.items.webDesign.title}</button></li>
-              <li><button onClick={() => scrollToSection('services')} className="text-gray-300 hover:text-white transition-colors duration-300 text-left">{t.services.items.graphicDesign.title}</button></li>
-              <li><button onClick={() => scrollToSection('services')} className="text-gray-300 hover:text-white transition-colors duration-300 text-left">{t.services.items.videoProduction.title}</button></li>
-              <li><button onClick={() => scrollToSection('services')} className="text-gray-300 hover:text-white transition-colors duration-300 text-left">{t.services.items.digitalMarketing.title}</button></li>
-              <li><button onClick={() => scrollToSection('services')} className="text-gray-300 hover:text-white transition-colors duration-300 text-left">{t.services.items.photography.title}</button></li>
+              {services.map((s) => (
+                <li key={s.href}>
+                  <Link href={s.href} className="text-gray-400 hover:text-white transition-colors duration-300 text-left block">
+                    {s.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
-          
+
           <div data-testid="footer-company">
-            <h4 className="text-lg font-semibold mb-6">{t.footer.company}</h4>
+            <h4 className="text-lg font-semibold mb-6 text-white">{t.footer.company}</h4>
             <ul className="space-y-3">
-              <li><button onClick={() => scrollToSection('about')} className="text-gray-300 hover:text-white transition-colors duration-300 text-left">{t.nav.about}</button></li>
-              <li><button onClick={() => scrollToSection('portfolio')} className="text-gray-300 hover:text-white transition-colors duration-300 text-left">{t.nav.portfolio}</button></li>
-              <li><button onClick={() => scrollToSection('blog')} className="text-gray-300 hover:text-white transition-colors duration-300 text-left">{t.nav.blog}</button></li>
-              <li><button onClick={() => scrollToSection('contact')} className="text-gray-300 hover:text-white transition-colors duration-300 text-left">{t.nav.contact}</button></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">{t.footer.career}</a></li>
+              <li>
+                {isHome ? <button type="button" onClick={() => scrollToSection("about")} className="text-gray-400 hover:text-white transition-colors duration-300 text-left">{tSpec.nav.about}</button> : <Link href="/#about" className="text-gray-400 hover:text-white">{tSpec.nav.about}</Link>}
+              </li>
+              <li>
+                <Link href="/portfolio" className="text-gray-400 hover:text-white transition-colors duration-300">{tSpec.nav.portfolio}</Link>
+              </li>
+              <li>
+                {isHome ? <button type="button" onClick={() => scrollToSection("blog")} className="text-gray-400 hover:text-white transition-colors duration-300 text-left">{tSpec.nav.blog}</button> : <Link href="/#blog" className="text-gray-400 hover:text-white">{tSpec.nav.blog}</Link>}
+              </li>
+              <li>
+                {isHome ? <button type="button" onClick={() => scrollToSection("contact")} className="text-gray-400 hover:text-white transition-colors duration-300 text-left">{tSpec.nav.contact}</button> : <Link href="/contact" className="text-gray-400 hover:text-white">{tSpec.nav.contact}</Link>}
+              </li>
             </ul>
           </div>
-          
+
           <div data-testid="footer-contact">
-            <h4 className="text-lg font-semibold mb-6">{t.footer.contact}</h4>
+            <h4 className="text-lg font-semibold mb-6 text-white">{t.footer.contact}</h4>
             <ul className="space-y-3">
-              <li className="text-gray-300 flex items-center">
-                <span className="mr-2">📞</span>
-                {t.footer.phone}
+              <li className="text-gray-400 flex items-center gap-2">
+                <span>📞</span>
+                <a href={`tel:${PHONE.replace(/\s/g, "")}`} className="hover:text-white transition-colors">{PHONE}</a>
               </li>
-              <li className="text-gray-300 flex items-center">
-                <span className="mr-2">📧</span>
-                {t.footer.email}
+              <li className="text-gray-400 flex items-center gap-2">
+                <span>📧</span>
+                <a href="mailto:agron6922@gmail.com" className="hover:text-white transition-colors">agron6922@gmail.com</a>
               </li>
-              <li className="text-gray-300 flex items-center">
-                <span className="mr-2">📍</span>
+              <li className="text-gray-400 flex items-center gap-2">
+                <span>📍</span>
                 {t.footer.location}
               </li>
             </ul>
           </div>
         </div>
-        
-        <div className="border-t border-gray-700 pt-8" data-testid="footer-bottom">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-300 mb-4 md:mb-0">
-              {t.footer.copyright}
-            </p>
-            <div className="flex space-x-6">
-              <a href="/privacy" className="text-gray-300 hover:text-white transition-colors duration-300">{t.footer.privacy}</a>
-              <a href="/terms" className="text-gray-300 hover:text-white transition-colors duration-300">{t.footer.terms}</a>
-              <a href="/cookies" className="text-gray-300 hover:text-white transition-colors duration-300">{t.footer.cookies}</a>
-              <a href="/impresum" className="text-gray-300 hover:text-white transition-colors duration-300">{t.footer.impresum}</a>
+
+        <div className="border-t border-white/10 pt-8" data-testid="footer-bottom">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-gray-500 text-sm">{t.footer.copyright}</p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link href="/privacy" className="text-gray-500 hover:text-white text-sm transition-colors">{t.footer.privacy}</Link>
+              <Link href="/terms" className="text-gray-500 hover:text-white text-sm transition-colors">{t.footer.terms}</Link>
+              <Link href="/cookies" className="text-gray-500 hover:text-white text-sm transition-colors">{t.footer.cookies}</Link>
+              <Link href="/impresum" className="text-gray-500 hover:text-white text-sm transition-colors">{t.footer.impresum}</Link>
             </div>
           </div>
         </div>

@@ -109,14 +109,14 @@ export default function Hero() {
 
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
         <h1
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-[1.1] tracking-tight animate-fade-in-up"
+          className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-5 sm:mb-6 leading-[1.15] tracking-tight animate-fade-in-up"
           style={{ textShadow: "0 2px 20px rgba(0,0,0,0.7), 0 4px 40px rgba(0,0,0,0.5)" }}
           data-testid="hero-title"
         >
           {tSpec.hero.h1}
         </h1>
         <p
-          className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up font-medium"
+          className="text-base sm:text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed animate-fade-in-up font-medium"
           style={{ animationDelay: "0.1s", textShadow: "0 1px 10px rgba(0,0,0,0.8), 0 2px 20px rgba(0,0,0,0.6)" }}
           data-testid="hero-subtitle"
         >
@@ -124,12 +124,12 @@ export default function Hero() {
         </p>
 
         <div
-          className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up"
+          className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center animate-fade-in-up w-full sm:w-auto max-w-sm sm:max-w-none mx-auto"
           style={{ animationDelay: "0.2s" }}
         >
-          <Link href="/#contact">
+          <Link href="/#contact" className="w-full sm:w-auto">
             <button
-              className="group relative bg-white text-[#0a0a0f] px-8 py-4 rounded-2xl text-lg font-bold overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl"
+              className="w-full sm:w-auto min-h-[48px] sm:min-h-0 bg-white text-[#0a0a0f] px-6 sm:px-8 py-4 rounded-2xl text-base sm:text-lg font-bold overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl"
               data-testid="hero-cta-primary"
             >
               {tSpec.hero.ctaPrimary}
@@ -137,7 +137,7 @@ export default function Hero() {
           </Link>
           <button
             onClick={() => scrollToSection("portfolio")}
-            className="glass-effect text-white px-8 py-4 rounded-2xl text-lg font-bold border-white/20 hover:bg-white/15 hover:border-white/30 transition-all duration-300"
+            className="w-full sm:w-auto min-h-[48px] sm:min-h-0 glass-effect text-white px-6 sm:px-8 py-4 rounded-2xl text-base sm:text-lg font-bold border-white/20 hover:bg-white/15 hover:border-white/30 transition-all duration-300"
             data-testid="hero-cta-secondary"
           >
             {tSpec.hero.ctaSecondary}
@@ -145,7 +145,7 @@ export default function Hero() {
         </div>
 
         <p
-          className="mt-8 text-white/60 text-sm font-medium uppercase tracking-widest animate-fade-in-up"
+          className="mt-6 sm:mt-8 text-white/60 text-xs sm:text-sm font-medium uppercase tracking-widest animate-fade-in-up"
           style={{ animationDelay: "0.35s", textShadow: "0 1px 8px rgba(0,0,0,0.8)" }}
         >
           {tSpec.hero.availableIn}

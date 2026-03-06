@@ -293,7 +293,7 @@ export const itTranslations: Translations = {
   },
   contact: {
     title: "Contattaci",
-    subtitle: "Siamo pronti a trasformare le tue idee in realtà. Inviaci un messaggio!",
+    subtitle: "Sono pronto a trasformare le tue idee in realtà. Inviami un messaggio!",
     form: {
       title: "Invia messaggio",
       name: "Nome completo",
@@ -359,7 +359,7 @@ export const itTranslations: Translations = {
     services: "Servizi",
     company: "Azienda",
     contact: "Contatti",
-    phone: "+49 15560 873124",
+      phone: "+49 1556 7204598",
     email: "agron6922@gmail.com",
     location: "Geislingen an der Steige, Germania",
     copyright: "© 2025 MULTIMEDIA AGRONDESIGN. Tutti i diritti riservati.",

@@ -2,17 +2,27 @@ import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Link } from "wouter";
 
+import bannerWeb from "@assets/BANNER 1_1755557330915.jpg";
+import greenHarvest from "@assets/generated_images/GreenHarvest_Organic_Logo_b1862bc1.png";
+import innovateTech from "@assets/generated_images/InnovateTech_Solutions_Logo_316280d4.png";
+import posterRagazzo from "@assets/Ragazzo con lanterne_1755565190060.jpg";
+import posterKong from "@assets/KING KONG_1755565210288.jpg";
+import powerFit from "@assets/generated_images/PowerFit_Pro_Brand_Identity_3cf59135.png";
+import printMockup from "@assets/generated_images/Print_Materials_Mockup_f741f1f6.png";
+
 export default function Portfolio() {
   const { t, tSpec } = useLanguage();
   const [activeFilter, setActiveFilter] = useState('all');
 
   const portfolioItems = [
-    { id: 1, title: t.portfolio.items.ecommerce.title, description: t.portfolio.items.ecommerce.description, image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400", category: "web", slug: "ecommerce-site" },
-    { id: 2, title: t.portfolio.items.brand.title, description: t.portfolio.items.brand.description, image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400", category: "brand", slug: "brand-identity" },
-    { id: 3, title: t.portfolio.items.corporate.title, description: t.portfolio.items.corporate.description, image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400", category: "video", slug: "corporate-video" },
-    { id: 4, title: t.portfolio.items.restaurant.title, description: t.portfolio.items.restaurant.description, image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400", category: "web", slug: "restaurant-website" },
-    { id: 5, title: t.portfolio.items.product.title, description: t.portfolio.items.product.description, image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400", category: "photo", slug: "product-photography" },
-    { id: 6, title: t.portfolio.items.packaging.title, description: t.portfolio.items.packaging.description, image: "https://images.unsplash.com/photo-1588200908342-23b585c03e26?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400", category: "brand", slug: "packaging-design" }
+    { id: 1, title: t.portfolio.items.ecommerce.title, description: t.portfolio.items.ecommerce.description, image: bannerWeb, category: "web", slug: "ecommerce-site" },
+    { id: 2, title: t.portfolio.items.brand.title, description: t.portfolio.items.brand.description, image: greenHarvest, category: "brand", slug: "brand-identity" },
+    { id: 3, title: t.portfolio.items.corporate.title, description: t.portfolio.items.corporate.description, image: powerFit, category: "video", slug: "corporate-video" },
+    { id: 4, title: t.portfolio.items.restaurant.title, description: t.portfolio.items.restaurant.description, image: bannerWeb, category: "web", slug: "restaurant-website" },
+    { id: 5, title: t.portfolio.items.product.title, description: t.portfolio.items.product.description, image: posterRagazzo, category: "photo", slug: "product-photography" },
+    { id: 6, title: t.portfolio.items.packaging.title, description: t.portfolio.items.packaging.description, image: printMockup, category: "brand", slug: "packaging-design" },
+    { id: 7, title: "InnovateTech Solutions", description: t.portfolio.items.brand.description, image: innovateTech, category: "brand", slug: "brand-identity" },
+    { id: 8, title: t.portfolio.items.corporate.title, description: t.portfolio.items.corporate.description, image: posterKong, category: "photo", slug: "corporate-video" },
   ];
 
   const filterCategories = [
@@ -21,10 +31,11 @@ export default function Portfolio() {
     { id: 'brand', label: tSpec.featuredPortfolio.filterGraphic },
     { id: 'video', label: tSpec.featuredPortfolio.filterVideo },
     { id: 'photo', label: tSpec.featuredPortfolio.filterPhoto },
+    { id: 'ai', label: tSpec.featuredPortfolio.filterAi },
   ];
 
-  const filteredItems = activeFilter === 'all' 
-    ? portfolioItems 
+  const filteredItems = activeFilter === 'all'
+    ? portfolioItems
     : portfolioItems.filter(item => item.category === activeFilter);
 
   return (
@@ -61,7 +72,7 @@ export default function Portfolio() {
               data-testid={`portfolio-item-${item.id}`}
             >
               <img 
-                src={item.image} 
+                src={item.image as string} 
                 alt={item.title} 
                 className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" 
               />

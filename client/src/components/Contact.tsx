@@ -216,7 +216,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="font-medium text-navy">{t.contact.info.phone}</p>
-                    <p className="text-gray-600">+49 15560 873124</p>
+                    <p className="text-gray-600">+49 1556 7204598</p>
                   </div>
                 </div>
                 

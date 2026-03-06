@@ -1037,7 +1037,7 @@ export const translations: Record<Language, Translations> = {
     },
     contact: {
       title: "Kontaktirajte nas",
-      subtitle: "Spremni smo da vaše ideje pretvorimo u stvarnost. Pošaljite nam poruku!",
+      subtitle: "Spreman sam da vaše ideje pretvorim u stvarnost. Pošaljite mi poruku!",
       form: {
         title: "Pošaljite poruku",
         name: "Ime i prezime",
@@ -1103,7 +1103,7 @@ export const translations: Record<Language, Translations> = {
       services: "Usluge",
       company: "Kompanija",
       contact: "Kontakt",
-      phone: "+49 15560 873124",
+      phone: "+49 1556 7204598",
       email: "agron6922@gmail.com",
       location: "Geislingen an der Steige, Nemačka",
       copyright: "© 2025 MULTIMEDIA AGRONDESIGN. Sva prava zadržana.",
@@ -2017,7 +2017,7 @@ export const translations: Record<Language, Translations> = {
     },
     contact: {
       title: "Contact Us",
-      subtitle: "We're ready to turn your ideas into reality. Send us a message!",
+      subtitle: "I'm ready to turn your ideas into reality. Send me a message!",
       form: {
         title: "Send Message",
         name: "Full Name",
@@ -2085,7 +2085,7 @@ export const translations: Record<Language, Translations> = {
       services: "Services",
       company: "Company",
       contact: "Contact",
-      phone: "+49 15560 873124",
+      phone: "+49 1556 7204598",
       email: "agron6922@gmail.com",
       location: "Geislingen an der Steige, Germany",
       copyright: "© 2025 MULTIMEDIA AGRONDESIGN. All rights reserved.",
@@ -2921,7 +2921,7 @@ export const translations: Record<Language, Translations> = {
     },
     contact: {
       title: "Kontaktieren Sie uns",
-      subtitle: "Wir sind bereit, Ihre Ideen in die Realität umzusetzen. Senden Sie uns eine Nachricht!",
+      subtitle: "Ich bin bereit, Ihre Ideen in die Realität umzusetzen. Senden Sie mir eine Nachricht!",
       form: {
         title: "Nachricht senden",
         name: "Vollständiger Name",
@@ -2987,7 +2987,7 @@ export const translations: Record<Language, Translations> = {
       services: "Leistungen",
       company: "Unternehmen",
       contact: "Kontakt",
-      phone: "+49 15560 873124",
+      phone: "+49 1556 7204598",
       email: "agron6922@gmail.com",
       location: "Geislingen an der Steige, Deutschland",
       copyright: "© 2025 MULTIMEDIA AGRONDESIGN. Alle Rechte vorbehalten.",
@@ -3823,7 +3823,7 @@ export const translations: Record<Language, Translations> = {
     },
     contact: {
       title: "Na Kontaktoni",
-      subtitle: "Jemi gati t'i kthejmë idetë tuaja në realitet. Dërgona një mesazh!",
+      subtitle: "Jam gati t'i kthej idetë tuaja në realitet. Më dërgoni një mesazh!",
       form: {
         title: "Dërgo Mesazh",
         name: "Emri i Plotë",
@@ -3889,7 +3889,7 @@ export const translations: Record<Language, Translations> = {
       services: "Shërbimet",
       company: "Kompania",
       contact: "Kontakt",
-      phone: "+49 15560 873124",
+      phone: "+49 1556 7204598",
       email: "agron6922@gmail.com",
       location: "Geislingen an der Steige, Gjermani",
       copyright: "© 2025 MULTIMEDIA AGRONDESIGN. Të gjitha të drejtat të rezervuara.",

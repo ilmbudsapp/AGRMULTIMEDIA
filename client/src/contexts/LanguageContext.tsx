@@ -35,6 +35,10 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
     }
   }, []);
 
+  useEffect(() => {
+    document.documentElement.lang = currentLanguage === 'al' ? 'sq' : currentLanguage;
+  }, [currentLanguage]);
+
   const setLanguage = useCallback((lang: Language) => {
     try {
       setCurrentLanguage(lang);
