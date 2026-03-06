@@ -82,18 +82,19 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-24 bg-[#f8f7f5]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4" data-testid="contact-title">{t.contact.title}</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto" data-testid="contact-subtitle">
+          <p className="text-electric-blue font-semibold text-sm uppercase tracking-[0.2em] mb-3">Contact</p>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-navy mb-4 tracking-tight" data-testid="contact-title">{t.contact.title}</h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto" data-testid="contact-subtitle">
             {t.contact.subtitle}
           </p>
         </div>
         
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <div className="bg-slate-50 rounded-2xl p-8">
+          <div className="bg-slate-50/80 rounded-2xl p-8 border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.06)]">
             <h3 className="text-2xl font-semibold text-navy mb-6" data-testid="contact-form-title">{t.contact.form.title}</h3>
             <form className="space-y-6" onSubmit={handleSubmit} data-testid="contact-form">
               <div className="grid md:grid-cols-2 gap-6">
@@ -185,20 +186,21 @@ export default function Contact() {
                 />
               </div>
               
-              <button 
-                type="submit" 
+              <button
+                type="submit"
                 disabled={contactMutation.isPending}
-                className="w-full bg-gradient-to-r from-electric-blue to-purple-500 text-white py-4 rounded-xl font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full group relative bg-navy text-white py-4 rounded-2xl font-bold overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-electric-blue/20 disabled:opacity-50 disabled:cursor-not-allowed"
                 data-testid="submit-contact-form"
               >
-                {contactMutation.isPending ? (
+                <span className="relative z-10">{contactMutation.isPending ? (
                   <span className="flex items-center justify-center">
                     <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                     {t.contact.form.sending}
                   </span>
                 ) : (
                   t.contact.form.submit
-                )}
+                )}</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-electric-blue to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </button>
             </form>
           </div>
@@ -264,7 +266,7 @@ export default function Contact() {
               </div>
             </div>
             
-            <div className="bg-slate-50 rounded-2xl p-6" data-testid="working-hours">
+            <div className="bg-slate-50 rounded-2xl p-6 shadow-[0_4px_16px_rgba(0,0,0,0.06)]" data-testid="working-hours">
               <h4 className="text-lg font-semibold text-navy mb-2 flex items-center">
                 <Clock className="w-5 h-5 mr-2" />
                 {t.contact.hours.title}

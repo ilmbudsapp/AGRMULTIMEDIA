@@ -14,7 +14,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div data-testid="footer-brand">
-            <div className="text-2xl font-bold gradient-text mb-4">MULTIMEDIA AGRONDESIGN</div>
+            <div className="text-2xl font-bold gradient-text-warm mb-4">MULTIMEDIA AGRONDESIGN</div>
             <p className="text-gray-300 mb-6">
               {t.footer.brand}
             </p>

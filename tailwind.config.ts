@@ -66,8 +66,8 @@ export default {
         },
       },
       fontFamily: {
-        sans: ["var(--font-inter)"],
-        inter: ["Inter", "sans-serif"],
+        sans: ["var(--font-sans)", "Plus Jakarta Sans", "system-ui", "sans-serif"],
+        inter: ["Plus Jakarta Sans", "system-ui", "sans-serif"],
         serif: ["var(--font-serif)"],
         mono: ["var(--font-mono)"],
       },

@@ -39,10 +39,11 @@ export default function Blog() {
   ];
 
   return (
-    <section id="blog" className="py-20 bg-slate-50">
+    <section id="blog" className="py-24 bg-[#f0eff7]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4" data-testid="blog-title">{t.blog.title}</h2>
+          <p className="text-electric-blue font-semibold text-sm uppercase tracking-[0.2em] mb-3">{t.nav.blog}</p>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-navy mb-4 tracking-tight" data-testid="blog-title">{t.blog.title}</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto" data-testid="blog-subtitle">
             {t.blog.subtitle}
           </p>
@@ -52,7 +53,7 @@ export default function Blog() {
           {blogPosts.map((post) => (
             <article 
               key={post.id} 
-              className="bg-white rounded-2xl overflow-hidden shadow-lg hover-scale"
+              className="bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover-scale"
               data-testid={`blog-post-${post.id}`}
             >
               <img 

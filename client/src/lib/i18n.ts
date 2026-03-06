@@ -1,4 +1,4 @@
-export type Language = 'sr' | 'en' | 'de' | 'sq';
+export type Language = 'sr' | 'en' | 'de' | 'sq' | 'it';
 
 export interface Translations {
   // Navigation
@@ -36,6 +36,14 @@ export interface Translations {
     certification: {
       certified: string;
       googlePartner: string;
+    };
+    skills: {
+      title: string;
+      creative: { title: string; items: string[] };
+      software: { title: string; items: string[] };
+      aiTools: { title: string; items: string[] };
+      office: { title: string; items: string[] };
+      languages: { title: string; items: string[] };
     };
   };
   
@@ -583,6 +591,108 @@ export interface Translations {
     };
   };
 
+  // Digital Marketing page content
+  digitalMarketing: {
+    hero: {
+      title: string;
+      subtitle: string;
+      description: string;
+    };
+    servicesTitle: string;
+    servicesSubtitle: string;
+    portfolioButtonText: string;
+    services: {
+      socialMedia: {
+        title: string;
+        description: string;
+        features: string[];
+      };
+      googleAds: {
+        title: string;
+        description: string;
+        features: string[];
+      };
+      contentMarketing: {
+        title: string;
+        description: string;
+        features: string[];
+      };
+    };
+    strategy: {
+      title: string;
+      steps: {
+        title: string;
+        description: string;
+      }[];
+    };
+    results: {
+      title: string;
+      description: string;
+      metrics: {
+        value: string;
+        label: string;
+        description: string;
+      }[];
+    };
+    cta: {
+      title: string;
+      description: string;
+      button: string;
+    };
+  };
+
+  // Photography page content
+  photography: {
+    hero: {
+      title: string;
+      subtitle: string;
+      description: string;
+    };
+    servicesTitle: string;
+    servicesSubtitle: string;
+    portfolioButtonText: string;
+    portfolioTitle: string;
+    portfolioDescription: string;
+    moviePosters: {
+      title: string;
+      description: string;
+      category: string;
+    }[];
+    processTitle: string;
+    processSteps: {
+      title: string;
+      description: string;
+      icon: string;
+    }[];
+    services: {
+      professionalPhotography: {
+        title: string;
+        description: string;
+        features: string[];
+      };
+      restoration: {
+        title: string;
+        description: string;
+        features: string[];
+      };
+      photomontage: {
+        title: string;
+        description: string;
+        features: string[];
+      };
+      moviePosters: {
+        title: string;
+        description: string;
+        features: string[];
+      };
+    };
+    cta: {
+      title: string;
+      description: string;
+      button: string;
+    };
+  };
+
   // Consulting page content
   consulting: {
     hero: {
@@ -631,6 +741,8 @@ export interface Translations {
   };
 }
 
+import { itTranslations } from './i18n-it';
+
 export const translations: Record<Language, Translations> = {
   sr: {
     nav: {
@@ -663,6 +775,29 @@ export const translations: Record<Language, Translations> = {
       certification: {
         certified: "Sertifikovani",
         googlePartner: "Google Partner"
+      },
+      skills: {
+        title: "Kompetencije i alati",
+        creative: {
+          title: "Kreativna koncepcija i dizajn",
+          items: ["Kreativna koncepcija", "Korporativni i logo dizajn", "Dizajn za print i digitalne medije"]
+        },
+        software: {
+          title: "Profesionalni softver",
+          items: ["Adobe Photoshop CC 2026", "Adobe Premiere Pro CC 2026", "Adobe After Effects CC 2026"]
+        },
+        aiTools: {
+          title: "AI alati",
+          items: ["Gemini", "Nano Banana", "Chat GPT", "Perplexity", "Veo 3.1", "Sora 2.0"]
+        },
+        office: {
+          title: "Office paket",
+          items: ["Microsoft Word", "Excel", "PowerPoint", "Outlook"]
+        },
+        languages: {
+          title: "Jezici",
+          items: ["Albanski (maternji)", "Italijanski (tečno)", "Srpski (tečno)", "Hrvatski (tečno)", "Nemački (tečno)"]
+        }
       }
     },
     services: {
@@ -953,6 +1088,14 @@ export const translations: Record<Language, Translations> = {
         title: "Greška pri slanju poruke",
         description: "Molimo pokušajte ponovo ili nas kontaktirajte direktno.",
         validation: "Ime, email, predmet i poruka su obavezni"
+      }
+    },
+    portfolioPages: {
+      common: {
+        backToHome: "Početna",
+        projectDetails: "Detalji Projekta",
+        category: "Kategorija",
+        results: "Rezultati"
       }
     },
     footer: {
@@ -1612,6 +1755,29 @@ export const translations: Record<Language, Translations> = {
       certification: {
         certified: "Certified",
         googlePartner: "Google Partner"
+      },
+      skills: {
+        title: "Skills & tools",
+        creative: {
+          title: "Creative concept & design",
+          items: ["Creative concept", "Corporate & logo design", "Print & digital media design"]
+        },
+        software: {
+          title: "Professional software",
+          items: ["Adobe Photoshop CC 2026", "Adobe Premiere Pro CC 2026", "Adobe After Effects CC 2026"]
+        },
+        aiTools: {
+          title: "AI tools",
+          items: ["Gemini", "Nano Banana", "Chat GPT", "Perplexity", "Veo 3.1", "Sora 2.0"]
+        },
+        office: {
+          title: "Office suite",
+          items: ["Microsoft Word", "Excel", "PowerPoint", "Outlook"]
+        },
+        languages: {
+          title: "Languages",
+          items: ["Albanian (native)", "Italian (fluent)", "Serbian (fluent)", "Croatian (fluent)", "German (fluent)"]
+        }
       }
     },
     services: {
@@ -1711,6 +1877,143 @@ export const translations: Record<Language, Translations> = {
       },
       readMore: "Read More",
       viewAll: "View All Articles"
+    },
+    blogPost: {
+      trends: {
+        title: "5 Most Important Digital Marketing Trends for 2025",
+        subtitle: "Stay ahead with the latest trends",
+        category: "Digital Marketing",
+        date: "19.08.2025",
+        intro: "The digital marketing landscape is evolving rapidly. From AI-driven personalization to immersive AR experiences, 2025 brings exciting opportunities for businesses to connect with their audience in more meaningful ways.",
+        aiPersonalization: {
+          title: "AI-Driven Personalization",
+          description: "Artificial intelligence enables unprecedented levels of content personalization, creating unique user experiences tailored to individual preferences and behaviors."
+        },
+        voiceSearch: {
+          title: "Voice Search Optimization",
+          description: "With smart speakers becoming mainstream, optimizing content for voice searches is key to maintaining visibility in search results."
+        },
+        mobileFirst: {
+          title: "Mobile-First Experiences",
+          description: "Mobile devices account for the majority of web traffic. Designing mobile-first experiences ensures optimal performance across all devices."
+        },
+        socialCommerce: {
+          title: "Social Commerce Integration",
+          description: "Social platforms are becoming shopping destinations. Integrating commerce directly into social experiences reduces friction in the purchase journey."
+        },
+        implementation: {
+          title: "Implementing These Trends",
+          description: "Successful implementation of these trends requires strategic planning and appropriate expertise. At MULTIMEDIA AGRONDESIGN I help businesses navigate the digital landscape with cutting-edge solutions that deliver real results."
+        },
+        actionItems: {
+          title: "Key Action Items",
+          item1: "Audit your current digital marketing strategy",
+          item2: "Identify opportunities for AI integration",
+          item3: "Optimize content for voice search",
+          item4: "Improve mobile user experience"
+        }
+      },
+      conversion: {
+        title: "Ultimate Guide to Website Conversion Optimization",
+        subtitle: "Turn visitors into clients",
+        category: "Website Optimization",
+        date: "19.08.2025",
+        intro: "Converting website visitors into clients is both an art and a science. Through strategic design, compelling content and data-driven testing, you can dramatically improve your conversion rates and grow your business.",
+        userExperience: {
+          title: "User Experience Design",
+          description: "Intuitive navigation, clear value propositions and seamless user flows naturally guide visitors toward conversion actions."
+        },
+        abTesting: {
+          title: "A/B Testing Strategy",
+          description: "Systematically testing different elements helps identify what resonates best with your audience and drives higher conversion rates."
+        },
+        callToAction: {
+          title: "Compelling Calls to Action",
+          description: "Strategic placement and persuasive copy in your CTAs can significantly impact conversion rates and user engagement."
+        },
+        analytics: {
+          title: "Performance Analytics",
+          description: "Data-driven insights reveal user behavior patterns and optimization opportunities through your conversion funnel."
+        },
+        practicalSteps: {
+          title: "Practical Steps for Optimization",
+          description: "Successful conversion optimization requires a systematic approach. Start with these proven strategies to see immediate improvements in your website performance."
+        },
+        optimizationChecklist: {
+          title: "Conversion Optimization Checklist",
+          technical: "Technical optimization",
+          pageSpeed: "Improve page load speed",
+          mobileOptimization: "Optimize for mobile devices",
+          formOptimization: "Simplify form fields",
+          content: "Content strategy",
+          headlines: "Create compelling headlines",
+          socialProof: "Add social proof elements",
+          urgency: "Use urgency and scarcity"
+        },
+        cta: {
+          title: "Ready to boost your conversions?",
+          description: "Let MULTIMEDIA AGRONDESIGN optimize your website for maximum conversions. Our data-driven approach delivers measurable results.",
+          button: "Start today"
+        }
+      },
+      video: {
+        title: "The Power of Video Marketing: Engaging Your Audience in 2025",
+        subtitle: "Engage your audience through visual storytelling",
+        category: "Video Marketing",
+        date: "19.08.2025",
+        intro: "Video content has become a dominant force in digital marketing. With declining attention spans and rising visual consumption, businesses that master video storytelling gain a significant competitive advantage.",
+        engagement: {
+          title: "Higher Engagement Rates",
+          description: "Video content generates 1200% more shares than text and images combined, creating powerful viral potential for your brand."
+        },
+        conversion: {
+          title: "Improved Conversions",
+          description: "Pages with video can increase conversion rates by up to 80%, making video an essential tool for sales funnels."
+        },
+        storytelling: {
+          title: "Emotional Storytelling",
+          description: "Video allows brands to tell compelling stories that create emotional connections with their audience, building loyalty and trust."
+        },
+        reach: {
+          title: "Extended Reach",
+          description: "Social media algorithms favor video content, offering organic reach opportunities that are increasingly rare with other content types."
+        },
+        types: {
+          title: "Types of Video Content That Convert",
+          product: {
+            title: "Product Demonstrations",
+            description: "Show your products in action, highlighting key features and benefits in ways static images simply cannot."
+          },
+          testimonial: {
+            title: "Customer Testimonials",
+            description: "Authentic customer stories build trust and credibility, serving as powerful social proof for potential buyers."
+          },
+          educational: {
+            title: "Educational Content",
+            description: "How-to videos and tutorials position your brand as an industry expert while providing valuable content to your audience."
+          },
+          behindScenes: {
+            title: "Behind the Scenes",
+            description: "Give your audience a look behind the curtain to humanize your brand and create stronger connections."
+          }
+        },
+        strategy: {
+          title: "Video Marketing Strategy Tips",
+          production: "Production excellence",
+          quality: "Invest in good audio quality",
+          lighting: "Use proper lighting techniques",
+          planning: "Plan your content structure",
+          distribution: "Smart distribution",
+          platforms: "Choose the right platforms",
+          timing: "Optimize publishing times",
+          seo: "Apply video SEO best practices"
+        },
+        cta: {
+          title: "Ready to leverage video marketing?",
+          description: "MULTIMEDIA AGRONDESIGN creates compelling video content that drives engagement and conversions. From concept to distribution, we handle every aspect of your video marketing strategy.",
+          button: "Start your video journey"
+        }
+      }
     },
     contact: {
       title: "Contact Us",
@@ -2434,6 +2737,29 @@ export const translations: Record<Language, Translations> = {
       certification: {
         certified: "Zertifiziert",
         googlePartner: "Google Partner"
+      },
+      skills: {
+        title: "Kompetenzen & Tools",
+        creative: {
+          title: "Kreative Konzeption & Design",
+          items: ["Kreative Konzeption", "Corporate & Logo Design", "Gestaltung Print & Digital Media"]
+        },
+        software: {
+          title: "Professionelle Software",
+          items: ["Adobe Photoshop CC 2026", "Adobe Premiere Pro CC 2026", "Adobe After Effects CC 2026"]
+        },
+        aiTools: {
+          title: "KI-Tools",
+          items: ["Gemini", "Nano Banana", "Chat GPT", "Perplexity", "Veo 3.1", "Sora 2.0"]
+        },
+        office: {
+          title: "Office-Paket",
+          items: ["Microsoft Word", "Excel", "PowerPoint", "Outlook"]
+        },
+        languages: {
+          title: "Sprachen",
+          items: ["Albanisch (Muttersprache)", "Italienisch (fließend)", "Serbisch (fließend)", "Kroatisch (fließend)", "Deutsch (fließend)"]
+        }
       }
     },
     services: {
@@ -2534,6 +2860,65 @@ export const translations: Record<Language, Translations> = {
       readMore: "Weiterlesen",
       viewAll: "Alle Artikel ansehen"
     },
+    blogPost: {
+      trends: {
+        title: "5 wichtigste Digital-Marketing-Trends für 2025",
+        subtitle: "Bleiben Sie mit den neuesten Trends auf dem Laufenden",
+        category: "Digital Marketing",
+        date: "19.08.2025",
+        intro: "Die digitale Marketinglandschaft entwickelt sich rasant. Von KI-gesteuerter Personalisierung bis zu immersiven AR-Erlebnissen – 2025 bietet spannende Möglichkeiten für Unternehmen, sich auf bedeutsamere Weise mit ihrem Publikum zu verbinden.",
+        aiPersonalization: { title: "KI-gesteuerte Personalisierung", description: "Künstliche Intelligenz ermöglicht beispiellose Content-Personalisierung und schafft einzigartige Nutzererlebnisse." },
+        voiceSearch: { title: "Optimierung für Sprachsuche", description: "Optimierung von Inhalten für Sprachsuchen ist entscheidend für die Sichtbarkeit in Suchergebnissen." },
+        mobileFirst: { title: "Mobile-First-Erlebnisse", description: "Mobile-First-Design gewährleistet optimale Leistung auf allen Geräten." },
+        socialCommerce: { title: "Social-Commerce-Integration", description: "Soziale Plattformen werden zu Einkaufszielen." },
+        implementation: { title: "Umsetzung dieser Trends", description: "Erfolgreiche Umsetzung erfordert strategische Planung und Expertise." },
+        actionItems: { title: "Wichtige Maßnahmen", item1: "Audit Ihrer aktuellen Digital-Marketing-Strategie", item2: "Chancen für KI-Integration identifizieren", item3: "Content für Sprachsuche optimieren", item4: "Mobile User Experience verbessern" }
+      },
+      conversion: {
+        title: "Ultimativer Leitfaden zur Conversion-Optimierung",
+        subtitle: "Besucher in Kunden verwandeln",
+        category: "Website-Optimierung",
+        date: "19.08.2025",
+        intro: "Die Umwandlung von Website-Besuchern in Kunden ist Kunst und Wissenschaft.",
+        userExperience: { title: "User Experience Design", description: "Intuitive Navigation und nahtlose Abläufe führen Besucher zu Conversion-Aktionen." },
+        abTesting: { title: "A/B-Testing-Strategie", description: "Systematisches Testen hilft, was bei Ihrer Zielgruppe am besten funktioniert." },
+        callToAction: { title: "Überzeugende Calls-to-Action", description: "Strategische Platzierung und überzeugende Texte in CTAs steigern Conversion-Raten." },
+        analytics: { title: "Performance-Analytik", description: "Datenbasierte Einblicke zeigen Nutzerverhalten und Optimierungsmöglichkeiten." },
+        practicalSteps: { title: "Praktische Optimierungsschritte", description: "Erfolgreiche Conversion-Optimierung erfordert einen systematischen Ansatz." },
+        optimizationChecklist: {
+          title: "Conversion-Optimierungs-Checkliste",
+          technical: "Technische Optimierung", pageSpeed: "Seitenladegeschwindigkeit verbessern", mobileOptimization: "Für Mobilgeräte optimieren",
+          formOptimization: "Formularfelder vereinfachen", content: "Content-Strategie", headlines: "Überzeugende Überschriften erstellen",
+          socialProof: "Social-Proof-Elemente hinzufügen", urgency: "Dringlichkeit und Knappheit nutzen"
+        },
+        cta: { title: "Bereit, Ihre Conversion zu steigern?", description: "Lassen Sie MULTIMEDIA AGRONDESIGN Ihre Website für maximale Conversion optimieren.", button: "Jetzt starten" }
+      },
+      video: {
+        title: "Die Macht des Video-Marketings: Ihr Publikum 2025 erreichen",
+        subtitle: "Publikum durch visuelles Storytelling ansprechen",
+        category: "Video Marketing",
+        date: "19.08.2025",
+        intro: "Videoinhalte sind eine dominante Kraft im Digital Marketing.",
+        engagement: { title: "Höhere Engagement-Raten", description: "Videoinhalte generieren 1200% mehr Shares als Text und Bilder zusammen." },
+        conversion: { title: "Verbesserte Conversion", description: "Seiten mit Video können die Conversion-Rate um bis zu 80% steigern." },
+        storytelling: { title: "Emotionales Storytelling", description: "Video ermöglicht Marken, überzeugende Geschichten zu erzählen." },
+        reach: { title: "Erweiterte Reichweite", description: "Social-Media-Algorithmen begünstigen Videoinhalte." },
+        types: {
+          title: "Video-Content-Arten die konvertieren",
+          product: { title: "Produktdemonstrationen", description: "Zeigen Sie Ihre Produkte in Aktion." },
+          testimonial: { title: "Kundenreferenzen", description: "Authentische Kundengeschichten schaffen Vertrauen." },
+          educational: { title: "Bildungsinhalte", description: "How-to-Videos positionieren Ihre Marke als Experten." },
+          behindScenes: { title: "Hinter den Kulissen", description: "Geben Sie Ihrem Publikum einen Blick hinter die Kulissen." }
+        },
+        strategy: {
+          title: "Video-Marketing-Strategie-Tipps",
+          production: "Produktionsexzellenz", quality: "In gute Audioqualität investieren", lighting: "Beleuchtungstechniken nutzen",
+          planning: "Content-Struktur planen", distribution: "Intelligente Verteilung", platforms: "Richtige Plattformen wählen",
+          timing: "Veröffentlichungszeiten optimieren", seo: "Video-SEO-Best-Practices anwenden"
+        },
+        cta: { title: "Bereit für Video-Marketing?", description: "MULTIMEDIA AGRONDESIGN erstellt überzeugende Videoinhalte.", button: "Video-Reise starten" }
+      }
+    },
     contact: {
       title: "Kontaktieren Sie uns",
       subtitle: "Wir sind bereit, Ihre Ideen in die Realität umzusetzen. Senden Sie uns eine Nachricht!",
@@ -2587,6 +2972,14 @@ export const translations: Record<Language, Translations> = {
         title: "Fehler beim Senden der Nachricht",
         description: "Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.",
         validation: "Name, E-Mail, Betreff und Nachricht sind erforderlich"
+      }
+    },
+    portfolioPages: {
+      common: {
+        backToHome: "Startseite",
+        projectDetails: "Projektdetails",
+        category: "Kategorie",
+        results: "Ergebnisse"
       }
     },
     footer: {
@@ -3246,6 +3639,29 @@ export const translations: Record<Language, Translations> = {
       certification: {
         certified: "I Certifikuar",
         googlePartner: "Partner Google"
+      },
+      skills: {
+        title: "Aftësitë dhe mjetet",
+        creative: {
+          title: "Koncept kreativ dhe dizajn",
+          items: ["Koncept kreativ", "Dizajn korporativ dhe logo", "Dizajn për print dhe media dixhitale"]
+        },
+        software: {
+          title: "Software profesional",
+          items: ["Adobe Photoshop CC 2026", "Adobe Premiere Pro CC 2026", "Adobe After Effects CC 2026"]
+        },
+        aiTools: {
+          title: "Mjetet e IA",
+          items: ["Gemini", "Nano Banana", "Chat GPT", "Perplexity", "Veo 3.1", "Sora 2.0"]
+        },
+        office: {
+          title: "Paketa Office",
+          items: ["Microsoft Word", "Excel", "PowerPoint", "Outlook"]
+        },
+        languages: {
+          title: "Gjuhët",
+          items: ["Shqip (gjuhë amtare)", "Italisht (rrjedhshëm)", "Serbisht (rrjedhshëm)", "Kroatisht (rrjedhshëm)", "Gjermanisht (rrjedhshëm)"]
+        }
       }
     },
     services: {
@@ -3346,6 +3762,65 @@ export const translations: Record<Language, Translations> = {
       readMore: "Lexo Më Shumë",
       viewAll: "Shiko Të Gjitha Artikujt"
     },
+    blogPost: {
+      trends: {
+        title: "5 Trendet Më të Rëndësishme të Marketingut Dixhital për 2025",
+        subtitle: "Qëndroni përpara me trendet më të fundit",
+        category: "Marketing Dixhital",
+        date: "19.08.2025",
+        intro: "Peizazhi i marketingut dixhital po evoluon shpejt. Nga personalizimi i drejtuar nga IA tek përvojat AR imersive, 2025 sjell mundësi emocionuese për bizneset.",
+        aiPersonalization: { title: "Personalizimi i drejtuar nga IA", description: "Inteligjenca artificiale mundëson nivele të papara personalizimi përmbajtjeje." },
+        voiceSearch: { title: "Optimizimi për kërkim zanor", description: "Optimizimi i përmbajtjes për kërkimet zanore është kyç për dukshmërinë." },
+        mobileFirst: { title: "Përvoja Mobile-First", description: "Dizajnimi i përvojave mobile-first siguron performancë optimale." },
+        socialCommerce: { title: "Integrimi i tregtisë sociale", description: "Platformat sociale po bëhen destinacione blerjesh." },
+        implementation: { title: "Implementimi i këtyre trendeve", description: "Implementimi i suksesshëm kërkon planifikim strategjik." },
+        actionItems: { title: "Veprimet kyçe", item1: "Auditoni strategjinë tuaj aktuale", item2: "Identifikoni mundësitë për integrim IA", item3: "Optimizoni përmbajtjen për kërkim zanor", item4: "Përmirësoni përvojën mobile" }
+      },
+      conversion: {
+        title: "Udhëzuesi për optimizimin e konvertimit",
+        subtitle: "Shndërroni vizitorët në klientë",
+        category: "Optimizim uebfaqesh",
+        date: "19.08.2025",
+        intro: "Shndërrimi i vizitorëve të faqes në klientë është art dhe shkencë.",
+        userExperience: { title: "Dizajni i përvojës së përdoruesit", description: "Navigimi intuitiv dhe rrjedhat e qëndrueshme udhëzojnë vizitorët." },
+        abTesting: { title: "Strategjia e testimit A/B", description: "Testimi sistematik ndihmon të identifikohet çfarë funksionon më mirë." },
+        callToAction: { title: "Thirrje bindëse për veprim", description: "Vendosja strategjike dhe teksti bindës në CTA rrisin konvertimet." },
+        analytics: { title: "Analitika e performancës", description: "Njohuritë e bazuara në të dhëna zbulojnë modele sjelljeje." },
+        practicalSteps: { title: "Hapat praktikë për optimizim", description: "Optimizimi i suksesshëm kërkon një qasje sistematike." },
+        optimizationChecklist: {
+          title: "Lista e kontrollit për optimizim konvertimi",
+          technical: "Optimizim teknik", pageSpeed: "Përmirësoni shpejtësinë e ngarkimit", mobileOptimization: "Optimizoni për mobile",
+          formOptimization: "Thjeshtoni fushat e formularëve", content: "Strategjia e përmbajtjes", headlines: "Krijoni titra bindëse",
+          socialProof: "Shtoni elemente provë sociale", urgency: "Përdorni urgjencë dhe mungesë"
+        },
+        cta: { title: "Gati të rrisni konvertimet?", description: "MULTIMEDIA AGRONDESIGN optimizon faqen tuaj për konvertime maksimale.", button: "Filloni sot" }
+      },
+      video: {
+        title: "Fuqia e Video Marketingut: Angazhimi i audiencës tuaj në 2025",
+        subtitle: "Angazhoni audiencën përmes tregimit vizual",
+        category: "Video Marketing",
+        date: "19.08.2025",
+        intro: "Përmbajtja video është bërë një forcë dominuese në marketingun dixhital.",
+        engagement: { title: "Norma më të larta angazhimi", description: "Përmbajtja video gjeneron 1200% më shumë ndarje se teksti dhe imazhet." },
+        conversion: { title: "Konvertime të përmirësuara", description: "Faqet me video mund të rrisin normat e konvertimit deri në 80%." },
+        storytelling: { title: "Tregim emocional", description: "Videoja lejon markat të tregojnë histori bindëse." },
+        reach: { title: "Mbulim i zgjeruar", description: "Algoritmet e mediave sociale favorizojnë përmbajtjen video." },
+        types: {
+          title: "Llojet e përmbajtjes video që konvertojnë",
+          product: { title: "Demonstrime produkti", description: "Tregoni produktet tuaja në veprim." },
+          testimonial: { title: "Dëshmitë e klientëve", description: "Historitë autentike të klientëve ndërtojnë besim." },
+          educational: { title: "Përmbajtje edukative", description: "Videot si-të bëhet pozicionojnë markën tuaj si ekspert." },
+          behindScenes: { title: "Prapa skenave", description: "Jepni audiencës një vështrim prapa skenave." }
+        },
+        strategy: {
+          title: "Këshilla për strategjinë e video marketingut",
+          production: "Ekselencë prodhimi", quality: "Investoni në cilësi të mirë audio", lighting: "Përdorni teknika ndriçimi",
+          planning: "Planifikoni strukturën e përmbajtjes", distribution: "Shpërndarje inteligjente", platforms: "Zgjidhni platformat e duhura",
+          timing: "Optimizoni kohën e publikimit", seo: "Aplikoni praktikat më të mira video SEO"
+        },
+        cta: { title: "Gati për video marketing?", description: "MULTIMEDIA AGRONDESIGN krijon përmbajtje video bindëse.", button: "Filloni udhëtimin tuaj me video" }
+      }
+    },
     contact: {
       title: "Na Kontaktoni",
       subtitle: "Jemi gati t'i kthejmë idetë tuaja në realitet. Dërgona një mesazh!",
@@ -3399,6 +3874,14 @@ export const translations: Record<Language, Translations> = {
         title: "Gabim në dërgimin e mesazhit",
         description: "Ju lutemi provoni përsëri ose na kontaktoni direkt.",
         validation: "Emri, email, tema dhe mesazhi janë të detyrueshme"
+      }
+    },
+    portfolioPages: {
+      common: {
+        backToHome: "Kreu",
+        projectDetails: "Detajet e Projektit",
+        category: "Kategoria",
+        results: "Rezultatet"
       }
     },
     footer: {
@@ -4026,7 +4509,8 @@ export const translations: Record<Language, Translations> = {
         button: "Kontaktoni"
       }
     }
-  }
+  },
+  it: itTranslations
 };
 
 export const getTranslations = (lang: Language): Translations => {
@@ -4036,6 +4520,7 @@ export const getTranslations = (lang: Language): Translations => {
 export const languages: Array<{ code: Language; name: string; flag: string }> = [
   { code: 'en', name: 'English', flag: '🇬🇧' },
   { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
+  { code: 'it', name: 'Italiano', flag: '🇮🇹' },
   { code: 'sq', name: 'Shqip', flag: '🇦🇱' },
   { code: 'sr', name: 'Srpski', flag: '🇷🇸' }
 ];

@@ -72,10 +72,11 @@ export default function Portfolio() {
     : portfolioItems.filter(item => item.category === activeFilter);
 
   return (
-    <section id="portfolio" className="py-20 bg-white">
+    <section id="portfolio" className="py-24 bg-[#f8f7f5]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4" data-testid="portfolio-title">{t.portfolio.title}</h2>
+          <p className="text-electric-blue font-semibold text-sm uppercase tracking-[0.2em] mb-3">{t.nav.portfolio}</p>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-navy mb-4 tracking-tight" data-testid="portfolio-title">{t.portfolio.title}</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto" data-testid="portfolio-subtitle">
             {t.portfolio.subtitle}
           </p>
@@ -116,9 +117,9 @@ export default function Portfolio() {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredItems.map((item) => (
-            <div 
-              key={item.id} 
-              className="group relative overflow-hidden rounded-2xl shadow-lg hover-scale"
+            <div
+              key={item.id}
+              className="group relative overflow-hidden rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover-lift border border-gray-100"
               data-testid={`portfolio-item-${item.id}`}
             >
               <img 

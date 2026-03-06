@@ -23,15 +23,15 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-16 md:h-20">
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center" data-testid="logo-button">
-              <img 
-                src={logoImage} 
-                alt="MULTIMEDIA AGRONDESIGN" 
-                className="h-8 w-auto"
+              <img
+                src={logoImage}
+                alt="MULTIMEDIA AGRONDESIGN"
+                className="h-8 md:h-9 w-auto"
               />
             </Link>
           </div>
@@ -40,9 +40,9 @@ export default function Navigation() {
             <div className="flex items-center space-x-6">
               {isHomePage ? (
                 <>
-                  <button 
-                    onClick={() => scrollToSection('home')} 
-                    className="text-gray-700 hover:text-electric-blue transition-colors duration-300"
+                  <button
+                    onClick={() => scrollToSection('home')}
+                    className="text-gray-700 hover:text-electric-blue font-medium transition-colors duration-300"
                     data-testid="nav-home"
                   >
                     {t.nav.home}

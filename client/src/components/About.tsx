@@ -1,14 +1,15 @@
-import { Award } from "lucide-react";
+import { Award, Palette, Monitor, Sparkles, Briefcase, Languages } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import brandingImage from "@/assets/branding-image.jpg";
 
 export default function About() {
   const { t } = useLanguage();
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-20 bg-[#f8f7f5]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4" data-testid="about-title">{t.about.title}</h2>
+          <p className="text-electric-blue font-semibold text-sm uppercase tracking-[0.2em] mb-3">About</p>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-navy mb-4 tracking-tight" data-testid="about-title">{t.about.title}</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto" data-testid="about-subtitle">
             {t.about.subtitle}
           </p>
@@ -53,7 +54,7 @@ export default function About() {
             </div>
             
             {/* Floating achievement cards */}
-            <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg p-6 border-l-4 border-electric-blue" data-testid="certification-card">
+            <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-[0_8px_24px_rgba(0,0,0,0.1)] p-6 border-l-4 border-electric-blue" data-testid="certification-card">
               <div className="flex items-center">
                 <Award className="text-electric-blue w-8 h-8 mr-3" />
                 <div>
@@ -64,6 +65,97 @@ export default function About() {
             </div>
           </div>
         </div>
+
+        {/* Skills / Competences */}
+        {t.about.skills && (
+          <div className="mt-24 pt-16 border-t border-gray-200">
+            <h3 className="text-2xl font-bold text-navy text-center mb-10" data-testid="about-skills-title">
+              {t.about.skills.title}
+            </h3>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+              <div className="bg-white rounded-xl p-6 border border-gray-200 hover:border-gray-300 transition-colors hover-lift shadow-[0_4px_16px_rgba(0,0,0,0.06)]">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 rounded-lg bg-gray-100">
+                    <Palette className="w-5 h-5 text-gray-600" />
+                  </div>
+                  <h4 className="font-semibold text-navy">{t.about.skills.creative.title}</h4>
+                </div>
+                <ul className="space-y-2 text-sm text-gray-700">
+                  {t.about.skills.creative.items.map((item, i) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <span className="text-gray-400 mt-0.5">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="bg-white rounded-xl p-6 border border-gray-200 hover:border-gray-300 transition-colors hover-lift shadow-[0_4px_16px_rgba(0,0,0,0.06)]">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 rounded-lg bg-gray-100">
+                    <Monitor className="w-5 h-5 text-gray-600" />
+                  </div>
+                  <h4 className="font-semibold text-navy">{t.about.skills.software.title}</h4>
+                </div>
+                <ul className="space-y-2 text-sm text-gray-700">
+                  {t.about.skills.software.items.map((item, i) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <span className="text-gray-400 mt-0.5">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="bg-white rounded-xl p-6 border border-gray-200 hover:border-gray-300 transition-colors hover-lift shadow-[0_4px_16px_rgba(0,0,0,0.06)]">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 rounded-lg bg-gray-100">
+                    <Sparkles className="w-5 h-5 text-gray-600" />
+                  </div>
+                  <h4 className="font-semibold text-navy">{t.about.skills.aiTools.title}</h4>
+                </div>
+                <ul className="space-y-2 text-sm text-gray-700">
+                  {t.about.skills.aiTools.items.map((item, i) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <span className="text-gray-400 mt-0.5">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="bg-white rounded-xl p-6 border border-gray-200 hover:border-gray-300 transition-colors hover-lift shadow-[0_4px_16px_rgba(0,0,0,0.06)]">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 rounded-lg bg-gray-100">
+                    <Briefcase className="w-5 h-5 text-gray-600" />
+                  </div>
+                  <h4 className="font-semibold text-navy">{t.about.skills.office.title}</h4>
+                </div>
+                <ul className="space-y-2 text-sm text-gray-700">
+                  {t.about.skills.office.items.map((item, i) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <span className="text-gray-400 mt-0.5">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="bg-white rounded-xl p-6 border border-gray-200 hover:border-gray-300 transition-colors hover-lift shadow-[0_4px_16px_rgba(0,0,0,0.06)]">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 rounded-lg bg-gray-100">
+                    <Languages className="w-5 h-5 text-gray-600" />
+                  </div>
+                  <h4 className="font-semibold text-navy">{t.about.skills.languages.title}</h4>
+                </div>
+                <ul className="space-y-2 text-sm text-gray-700">
+                  {t.about.skills.languages.items.map((item, i) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <span className="text-gray-400 mt-0.5">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

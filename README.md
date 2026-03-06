@@ -1,6 +1,19 @@
-# Overview
+# MULTIMEDIA AGRONDESIGN – Portfolio website
 
-MULTIMEDIA AGRONDESIGN is a professional multimedia services portfolio website built as a modern, full-stack web application. The website serves as a digital portfolio showcasing services including web design, graphic design, video production, digital marketing, and mobile app development for Android and iOS. It's designed to attract potential clients and provide a professional online presence for the multimedia agency. The application features a comprehensive contact system, blog functionality, service showcases, and a responsive design optimized for all devices.
+Profesionalni portfolio sajt za multimedijalne usluge. Full-stack web aplikacija (React + Express). **Projekat je potpuno nezavisan od Replit-a** – može se pokretati i deployovati bilo gde (lokalno, Vercel, Railway, VPS, itd.).
+
+## Pokretanje
+
+```bash
+npm install
+npm run dev    # razvoj – http://localhost:5000
+npm run build
+npm run start  # produkcija
+```
+
+## Pregled
+
+MULTIMEDIA AGRONDESIGN je portfolio sajt koji predstavlja usluge: web dizajn, grafički dizajn, video produkcija, digitalni marketing i razvoj mobilnih aplikacija. Sajt ima kontakt formu, blog, prikaz usluga i responzivan dizajn. Podržane su 4 jezika: srpski, engleski, nemački, albanski.
 
 ## Recent Changes (August 2025)
 
@@ -8,7 +21,7 @@ MULTIMEDIA AGRONDESIGN is a professional multimedia services portfolio website b
 - Complete rebranding from "AGR Multimedia" to "MULTIMEDIA AGRONDESIGN" across all 4 languages
 - Updated footer with new contact details: Phone (+49 15560 873124), Email (agron6922@gmail.com), Location (Geislingen an der Steige, Germany)
 - Removed social media icons from footer (Facebook, Instagram, LinkedIn)
-- Successfully deployed to production domain agrmultimedia.eu via Replit Deployments
+- Successfully deployed to production domain agrmultimedia.eu
 - All content converted to first-person singular format (individual work, not team)
 - Contact form saves to database successfully, email delivery pending SendGrid configuration
 - **Impresum (Legal Notice) page fully implemented**: Complete German legal compliance page with all 4 languages (Serbian, English, German, Albanian), professional design, all business details included (Tax Number: 48267305956, VAT: DE354016444), accessible via footer link /impresum

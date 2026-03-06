@@ -4,112 +4,135 @@ import { Link } from "wouter";
 
 export default function Services() {
   const { t } = useLanguage();
-  
+
   const services = [
     {
-      icon: <Code className="text-white text-2xl" />,
+      icon: <Code className="text-white w-6 h-6" />,
       title: t.services.items.webDesign.title,
       description: t.services.items.webDesign.description,
       features: t.services.items.webDesign.features,
-      gradient: "from-electric-blue to-purple-500",
-      link: "/web-design"
+      gradient: "from-electric-blue to-cyan-500",
+      link: "/web-design",
     },
     {
-      icon: <Palette className="text-white text-2xl" />,
+      icon: <Palette className="text-white w-6 h-6" />,
       title: t.services.items.graphicDesign.title,
       description: t.services.items.graphicDesign.description,
       features: t.services.items.graphicDesign.features,
       gradient: "from-purple-500 to-pink-500",
-      link: "/graphic-design"
+      link: "/graphic-design",
     },
     {
-      icon: <Video className="text-white text-2xl" />,
+      icon: <Video className="text-white w-6 h-6" />,
       title: t.services.items.videoProduction.title,
       description: t.services.items.videoProduction.description,
       features: t.services.items.videoProduction.features,
-      gradient: "from-red-500 to-orange-500",
-      link: "/video-production"
+      gradient: "from-rose-500 to-orange-500",
+      link: "/video-production",
     },
     {
-      icon: <Megaphone className="text-white text-2xl" />,
+      icon: <Megaphone className="text-white w-6 h-6" />,
       title: t.services.items.digitalMarketing.title,
       description: t.services.items.digitalMarketing.description,
       features: t.services.items.digitalMarketing.features,
-      gradient: "from-green-500 to-teal-500",
-      link: "/digital-marketing"
+      gradient: "from-emerald-500 to-teal-500",
+      link: "/digital-marketing",
     },
     {
-      icon: <Camera className="text-white text-2xl" />,
+      icon: <Camera className="text-white w-6 h-6" />,
       title: t.services.items.photography.title,
       description: t.services.items.photography.description,
       features: t.services.items.photography.features,
-      gradient: "from-blue-500 to-cyan-500",
-      link: "/photography"
+      gradient: "from-sky-500 to-blue-600",
+      link: "/photography",
     },
     {
-      icon: <Settings className="text-white text-2xl" />,
+      icon: <Settings className="text-white w-6 h-6" />,
       title: t.services.items.consulting.title,
       description: t.services.items.consulting.description,
       features: t.services.items.consulting.features,
-      gradient: "from-indigo-500 to-purple-500",
-      link: "/consulting"
-    }
+      gradient: "from-violet-500 to-purple-600",
+      link: "/consulting",
+    },
   ];
 
   const scrollToContact = () => {
-    const element = document.getElementById('contact');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    const element = document.getElementById("contact");
+    if (element) element.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <section id="services" className="py-20 bg-slate-50">
+    <section id="services" className="py-24 bg-[#f0eff7]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4" data-testid="services-title">{t.services.title}</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto" data-testid="services-subtitle">
+        <div className="text-center mb-20">
+          <p className="text-electric-blue font-semibold text-sm uppercase tracking-[0.2em] mb-4">
+            {t.nav.services}
+          </p>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-navy mb-6 tracking-tight" data-testid="services-title">
+            {t.services.title}
+          </h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto" data-testid="services-subtitle">
             {t.services.subtitle}
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div 
-              key={index} 
-              className="bg-white rounded-2xl p-8 shadow-lg hover-scale border border-gray-100"
+            <div
+              key={index}
+              className={`group bg-white rounded-2xl p-8 border border-gray-100/80 shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover-lift card-glow overflow-hidden animate-fade-in-up ${
+                index === 0 ? "animate-fade-in-up-delay-1" : ""
+              } ${index === 1 ? "animate-fade-in-up-delay-2" : ""} ${
+                index === 2 ? "animate-fade-in-up-delay-3" : ""
+              } ${index === 3 ? "animate-fade-in-up-delay-4" : ""} ${
+                index === 4 ? "animate-fade-in-up-delay-5" : ""
+              } ${index === 5 ? "animate-fade-in-up-delay-6" : ""}`}
               data-testid={`service-card-${index}`}
             >
-              <div className={`bg-gradient-to-r ${service.gradient} w-16 h-16 rounded-xl flex items-center justify-center mb-6`}>
+              <div
+                className={`bg-gradient-to-br ${service.gradient} w-14 h-14 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}
+              >
                 {service.icon}
               </div>
-              <h3 className="text-2xl font-semibold text-navy mb-4" data-testid={`service-title-${index}`}>
+              <h3
+                className="text-xl font-bold text-navy mb-3 group-hover:text-electric-blue transition-colors duration-300"
+                data-testid={`service-title-${index}`}
+              >
                 {service.title}
               </h3>
-              <p className="text-gray-600 mb-6" data-testid={`service-description-${index}`}>
+              <p className="text-gray-600 mb-6 leading-relaxed" data-testid={`service-description-${index}`}>
                 {service.description}
               </p>
-              <ul className="space-y-2 mb-6">
+              <ul className="space-y-3 mb-8">
                 {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center text-gray-600" data-testid={`service-feature-${index}-${featureIndex}`}>
-                    <Check className="text-electric-blue w-4 h-4 mr-2" />
+                  <li
+                    key={featureIndex}
+                    className="flex items-center text-gray-600 text-sm"
+                    data-testid={`service-feature-${index}-${featureIndex}`}
+                  >
+                    <Check className="text-electric-blue w-4 h-4 mr-3 flex-shrink-0" />
                     {feature}
                   </li>
                 ))}
               </ul>
               {service.link ? (
                 <Link href={service.link}>
-                  <button className="inline-flex items-center text-electric-blue font-semibold hover:text-purple-500 transition-colors duration-300" data-testid={`service-cta-${index}`}>
-                    {t.services.learnMore} <ArrowRight className="w-4 h-4 ml-2" />
+                  <button
+                    className="inline-flex items-center gap-2 text-electric-blue font-bold hover:gap-3 transition-all duration-300"
+                    data-testid={`service-cta-${index}`}
+                  >
+                    {t.services.learnMore}
+                    <ArrowRight className="w-4 h-4" />
                   </button>
                 </Link>
               ) : (
-                <button 
+                <button
                   onClick={scrollToContact}
-                  className="inline-flex items-center text-electric-blue font-semibold hover:text-purple-500 transition-colors duration-300"
+                  className="inline-flex items-center gap-2 text-electric-blue font-bold hover:gap-3 transition-all duration-300"
                   data-testid={`service-cta-${index}`}
                 >
-                  {t.services.learnMore} <ArrowRight className="w-4 h-4 ml-2" />
+                  {t.services.learnMore}
+                  <ArrowRight className="w-4 h-4" />
                 </button>
               )}
             </div>

@@ -16,13 +16,14 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
     try {
       // Load language from localStorage or browser preference
       const saved = localStorage.getItem('preferred-language') as Language;
-      if (saved && ['sr', 'en', 'de', 'sq'].includes(saved)) {
+      if (saved && ['sr', 'en', 'de', 'sq', 'it'].includes(saved)) {
         setCurrentLanguage(saved);
       } else {
         // Try to detect from browser language
         const browserLang = navigator.language.toLowerCase();
         if (browserLang.includes('en')) setCurrentLanguage('en');
         else if (browserLang.includes('de')) setCurrentLanguage('de');
+        else if (browserLang.includes('it')) setCurrentLanguage('it');
         else if (browserLang.includes('sq')) setCurrentLanguage('sq');
         else setCurrentLanguage('sr'); // Default fallback
       }
