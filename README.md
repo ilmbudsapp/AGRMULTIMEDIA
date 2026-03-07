@@ -15,7 +15,7 @@ npm run start  # produkcija
 
 MULTIMEDIA AGRONDESIGN je portfolio sajt koji predstavlja usluge: web dizajn, grafički dizajn, video produkcija, digitalni marketing i razvoj mobilnih aplikacija. Sajt ima kontakt formu, blog, prikaz usluga i responzivan dizajn. Podržane su 4 jezika: srpski, engleski, nemački, albanski.
 
-## Recent Changes (August 2025)
+## Recent Changes (March 2026)
 
 **PROJECT COMPLETED - Portfolio website fully developed and deployed**
 - Complete rebranding from "AGR Multimedia" to "MULTIMEDIA AGRONDESIGN" across all 4 languages
@@ -31,7 +31,7 @@ MULTIMEDIA AGRONDESIGN je portfolio sajt koji predstavlja usluge: web dizajn, gr
 - **Consulting service page fully implemented**: Complete /consulting page with proper navigation structure (no top navigation, only header with "Početna" button), comprehensive consulting services (Digital Strategy, UX/UI Audit, Analytics), 4-step process, benefits section, and complete translations in all 4 languages
 - **Fixed grammar error in About section**: Corrected Serbian text from "osnovan" to "osnovao" in the story paragraph across all service pages
 - **Fixed Albanian translation inconsistency**: Standardized "Početna" (Home) button translation to "Kreu" across all 6 portfolio pages for consistent Albanian language support
-- **Blog post dates completely updated**: Changed all blog post dates from "15. Dec 2023", "12. Dec 2023", and "10. Dec 2023" to "19.08.2025" across blog cards in homepage and individual blog pages, updated all references to 2024 year to 2025 in blog post titles and content across all 4 languages (Serbian, English, German, Albanian), implemented dynamic date system using i18n translations
+- **Blog post dates completely updated**: Changed all blog post dates to "07.03.2026" across blog cards in homepage and individual blog pages, updated all references to 2026 year in blog post titles and content across all languages (Serbian, English, German, Italian, Albanian), implemented dynamic date system using i18n translations
 
 # User Preferences
 

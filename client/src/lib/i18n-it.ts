@@ -136,7 +136,7 @@ export const itTranslations: Translations = {
     subtitle: "Segui le ultime tendenze in digital marketing e design",
     posts: {
       trends: {
-        title: "5 tendenze più importanti del digital marketing per il 2025",
+        title: "5 tendenze più importanti del digital marketing per il 2026",
         description: "Scopri le ultime tendenze che definiranno il digital marketing nel prossimo anno e come adattare la tua strategia...",
         category: "Marketing"
       },
@@ -156,11 +156,11 @@ export const itTranslations: Translations = {
   },
   blogPost: {
     trends: {
-      title: "5 tendenze più importanti del digital marketing per il 2025",
+      title: "5 tendenze più importanti del digital marketing per il 2026",
       subtitle: "Resta al passo con le ultime tendenze",
       category: "Digital marketing",
-      date: "19.08.2025",
-      intro: "Il panorama del digital marketing si evolve rapidamente. Dalla personalizzazione basata sull'IA alle esperienze AR immersive, il 2025 offre entusiasmanti opportunità per le aziende di connettersi con il proprio pubblico in modo più significativo.",
+      date: "07.03.2026",
+      intro: "Il panorama del digital marketing si evolve rapidamente. Dalla personalizzazione basata sull'IA alle esperienze AR immersive, il 2026 offre entusiasmanti opportunità per le aziende di connettersi con il proprio pubblico in modo più significativo.",
       aiPersonalization: {
         title: "Personalizzazione basata sull'IA",
         description: "L'intelligenza artificiale consente livelli di personalizzazione dei contenuti senza precedenti, creando esperienze utente uniche adattate a preferenze e comportamenti individuali."
@@ -193,7 +193,7 @@ export const itTranslations: Translations = {
       title: "Guida definitiva all'ottimizzazione della conversione del sito web",
       subtitle: "Trasforma i visitatori in clienti",
       category: "Ottimizzazione sito web",
-      date: "19.08.2025",
+      date: "07.03.2026",
       intro: "Convertire i visitatori del sito in clienti è sia un'arte che una scienza. Con design strategico, contenuti persuasivi e test basati sui dati, puoi migliorare drasticamente i tassi di conversione e far crescere il tuo business.",
       userExperience: {
         title: "Design dell'esperienza utente",
@@ -233,10 +233,10 @@ export const itTranslations: Translations = {
       }
     },
     video: {
-      title: "Il potere del video marketing: coinvolgere il tuo pubblico nel 2025",
+      title: "Il potere del video marketing: coinvolgere il tuo pubblico nel 2026",
       subtitle: "Coinvolgi il pubblico con la narrazione visiva",
       category: "Video marketing",
-      date: "19.08.2025",
+      date: "07.03.2026",
       intro: "I contenuti video sono diventati una forza dominante nel digital marketing. Con il calo dell'attenzione e l'aumento del consumo visivo, le aziende che padroneggiano la narrazione video ottengono un vantaggio competitivo significativo.",
       engagement: {
         title: "Tassi di coinvolgimento più alti",
@@ -362,7 +362,7 @@ export const itTranslations: Translations = {
       phone: "+49 1556 7204598",
     email: "agron6922@gmail.com",
     location: "Geislingen an der Steige, Germania",
-    copyright: "© 2025 MULTIMEDIA AGRONDESIGN. Tutti i diritti riservati.",
+    copyright: "© 2026 MULTIMEDIA AGRONDESIGN. Tutti i diritti riservati.",
     privacy: "Privacy",
     terms: "Termini",
     cookies: "Cookie",

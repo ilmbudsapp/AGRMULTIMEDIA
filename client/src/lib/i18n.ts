@@ -880,7 +880,7 @@ export const translations: Record<Language, Translations> = {
       subtitle: "Pratite najnovije trendove u digitalnom marketingu i dizajnu",
       posts: {
         trends: {
-          title: "5 Najvažnijih Trendova u Digitalnom Marketingu za 2025.",
+          title: "5 Najvažnijih Trendova u Digitalnom Marketingu za 2026.",
           description: "Otkrijte najnovije trendove koji će definisati digitalni marketing u narednoj godini i kako možete prilagoditi svoju strategiju...",
           category: "Marketing"
         },
@@ -900,11 +900,11 @@ export const translations: Record<Language, Translations> = {
     },
     blogPost: {
       trends: {
-        title: "5 Najvažnijih Trendova u Digitalnom Marketingu za 2025.",
+        title: "5 Najvažnijih Trendova u Digitalnom Marketingu za 2026.",
         subtitle: "Ostanite u korak sa najnovijim trendovima",
         category: "Digitalni Marketing",
-        date: "19.08.2025",
-        intro: "Pejzaž digitalnog marketinga se brzo razvija. Od AI-om pokretane personalizacije do immersivnih AR iskustava, 2025. godina donosi uzbudljive prilike za preduzeća da se povežu sa svojom publiku na smisleniji način.",
+        date: "07.03.2026",
+        intro: "Pejzaž digitalnog marketinga se brzo razvija. Od AI-om pokretane personalizacije do immersivnih AR iskustava, 2026. godina donosi uzbudljive prilike za preduzeća da se povežu sa svojom publiku na smisleniji način.",
         aiPersonalization: {
           title: "Personalizacija pokretana AI",
           description: "Veštačka inteligencija omogućava neviđene nivoe personalizacije sadržaja, stvarajući jedinstvena korisnička iskustva prilagođena individualnim preferencama i ponašanjima."
@@ -937,7 +937,7 @@ export const translations: Record<Language, Translations> = {
         title: "Ultimativni vodič za optimizaciju konverzije web sajta",
         subtitle: "Pretvori posetioce u klijente",
         category: "Optimizacija web sajta",
-        date: "19.08.2025",
+        date: "07.03.2026",
         intro: "Konvertovanje posetilaca web sajta u klijente je i umetnost i nauka. Kroz strateški dizajn, uvjerljiv sadržaj i testiranje zasnovano na podacima, možete dramatično poboljšati svoje stope konverzije i rasti svoj biznis.",
         userExperience: {
           title: "Dizajn korisničkog iskustva",
@@ -977,10 +977,10 @@ export const translations: Record<Language, Translations> = {
         }
       },
       video: {
-        title: "Moć video marketinga: Angažovanje vaše publike u 2025.",
+        title: "Moć video marketinga: Angažovanje vaše publike u 2026.",
         subtitle: "Angažuj publiku kroz vizuelno pripovedanje",
         category: "Video Marketing",
-        date: "19.08.2025",
+        date: "07.03.2026",
         intro: "Video sadržaj je postao dominantna sila u digitalnom marketingu. Sa opadanjem pažnje i povećanjem vizuelne potrošnje, preduzeća koja savladaju video pripovedanje dobijaju značajnu konkurentsku prednost.",
         engagement: {
           title: "Više stope angažovanosti",
@@ -1106,7 +1106,7 @@ export const translations: Record<Language, Translations> = {
       phone: "+49 1556 7204598",
       email: "agron6922@gmail.com",
       location: "Geislingen an der Steige, Nemačka",
-      copyright: "© 2025 MULTIMEDIA AGRONDESIGN. Sva prava zadržana.",
+      copyright: "© 2026 MULTIMEDIA AGRONDESIGN. Sva prava zadržana.",
       privacy: "Privatnost",
       terms: "Uslovi",
       cookies: "Kolačići",
@@ -1860,7 +1860,7 @@ export const translations: Record<Language, Translations> = {
       subtitle: "Follow the latest trends in digital marketing and design",
       posts: {
         trends: {
-          title: "5 Most Important Digital Marketing Trends for 2025",
+          title: "5 Most Important Digital Marketing Trends for 2026",
           description: "Discover the latest trends that will define digital marketing in the coming year and how you can adapt your strategy...",
           category: "Marketing"
         },
@@ -1880,11 +1880,11 @@ export const translations: Record<Language, Translations> = {
     },
     blogPost: {
       trends: {
-        title: "5 Most Important Digital Marketing Trends for 2025",
+        title: "5 Most Important Digital Marketing Trends for 2026",
         subtitle: "Stay ahead with the latest trends",
         category: "Digital Marketing",
-        date: "19.08.2025",
-        intro: "The digital marketing landscape is evolving rapidly. From AI-driven personalization to immersive AR experiences, 2025 brings exciting opportunities for businesses to connect with their audience in more meaningful ways.",
+        date: "07.03.2026",
+        intro: "The digital marketing landscape is evolving rapidly. From AI-driven personalization to immersive AR experiences, 2026 brings exciting opportunities for businesses to connect with their audience in more meaningful ways.",
         aiPersonalization: {
           title: "AI-Driven Personalization",
           description: "Artificial intelligence enables unprecedented levels of content personalization, creating unique user experiences tailored to individual preferences and behaviors."
@@ -1917,7 +1917,7 @@ export const translations: Record<Language, Translations> = {
         title: "Ultimate Guide to Website Conversion Optimization",
         subtitle: "Turn visitors into clients",
         category: "Website Optimization",
-        date: "19.08.2025",
+        date: "07.03.2026",
         intro: "Converting website visitors into clients is both an art and a science. Through strategic design, compelling content and data-driven testing, you can dramatically improve your conversion rates and grow your business.",
         userExperience: {
           title: "User Experience Design",
@@ -1957,10 +1957,10 @@ export const translations: Record<Language, Translations> = {
         }
       },
       video: {
-        title: "The Power of Video Marketing: Engaging Your Audience in 2025",
+        title: "The Power of Video Marketing: Engaging Your Audience in 2026",
         subtitle: "Engage your audience through visual storytelling",
         category: "Video Marketing",
-        date: "19.08.2025",
+        date: "07.03.2026",
         intro: "Video content has become a dominant force in digital marketing. With declining attention spans and rising visual consumption, businesses that master video storytelling gain a significant competitive advantage.",
         engagement: {
           title: "Higher Engagement Rates",
@@ -2088,7 +2088,7 @@ export const translations: Record<Language, Translations> = {
       phone: "+49 1556 7204598",
       email: "agron6922@gmail.com",
       location: "Geislingen an der Steige, Germany",
-      copyright: "© 2025 MULTIMEDIA AGRONDESIGN. All rights reserved.",
+      copyright: "© 2026 MULTIMEDIA AGRONDESIGN. All rights reserved.",
       privacy: "Privacy",
       terms: "Terms",
       cookies: "Cookies",
@@ -2842,7 +2842,7 @@ export const translations: Record<Language, Translations> = {
       subtitle: "Verfolgen Sie die neuesten Trends in Digital Marketing und Design",
       posts: {
         trends: {
-          title: "5 wichtigste Digital Marketing Trends für 2025",
+          title: "5 wichtigste Digital Marketing Trends für 2026",
           description: "Entdecken Sie die neuesten Trends, die das Digital Marketing im kommenden Jahr definieren werden und wie Sie Ihre Strategie anpassen können...",
           category: "Marketing"
         },
@@ -2862,11 +2862,11 @@ export const translations: Record<Language, Translations> = {
     },
     blogPost: {
       trends: {
-        title: "5 wichtigste Digital-Marketing-Trends für 2025",
+        title: "5 wichtigste Digital-Marketing-Trends für 2026",
         subtitle: "Bleiben Sie mit den neuesten Trends auf dem Laufenden",
         category: "Digital Marketing",
-        date: "19.08.2025",
-        intro: "Die digitale Marketinglandschaft entwickelt sich rasant. Von KI-gesteuerter Personalisierung bis zu immersiven AR-Erlebnissen – 2025 bietet spannende Möglichkeiten für Unternehmen, sich auf bedeutsamere Weise mit ihrem Publikum zu verbinden.",
+        date: "07.03.2026",
+        intro: "Die digitale Marketinglandschaft entwickelt sich rasant. Von KI-gesteuerter Personalisierung bis zu immersiven AR-Erlebnissen – 2026 bietet spannende Möglichkeiten für Unternehmen, sich auf bedeutsamere Weise mit ihrem Publikum zu verbinden.",
         aiPersonalization: { title: "KI-gesteuerte Personalisierung", description: "Künstliche Intelligenz ermöglicht beispiellose Content-Personalisierung und schafft einzigartige Nutzererlebnisse." },
         voiceSearch: { title: "Optimierung für Sprachsuche", description: "Optimierung von Inhalten für Sprachsuchen ist entscheidend für die Sichtbarkeit in Suchergebnissen." },
         mobileFirst: { title: "Mobile-First-Erlebnisse", description: "Mobile-First-Design gewährleistet optimale Leistung auf allen Geräten." },
@@ -2878,7 +2878,7 @@ export const translations: Record<Language, Translations> = {
         title: "Ultimativer Leitfaden zur Conversion-Optimierung",
         subtitle: "Besucher in Kunden verwandeln",
         category: "Website-Optimierung",
-        date: "19.08.2025",
+        date: "07.03.2026",
         intro: "Die Umwandlung von Website-Besuchern in Kunden ist Kunst und Wissenschaft.",
         userExperience: { title: "User Experience Design", description: "Intuitive Navigation und nahtlose Abläufe führen Besucher zu Conversion-Aktionen." },
         abTesting: { title: "A/B-Testing-Strategie", description: "Systematisches Testen hilft, was bei Ihrer Zielgruppe am besten funktioniert." },
@@ -2894,10 +2894,10 @@ export const translations: Record<Language, Translations> = {
         cta: { title: "Bereit, Ihre Conversion zu steigern?", description: "Lassen Sie MULTIMEDIA AGRONDESIGN Ihre Website für maximale Conversion optimieren.", button: "Jetzt starten" }
       },
       video: {
-        title: "Die Macht des Video-Marketings: Ihr Publikum 2025 erreichen",
+        title: "Die Macht des Video-Marketings: Ihr Publikum 2026 erreichen",
         subtitle: "Publikum durch visuelles Storytelling ansprechen",
         category: "Video Marketing",
-        date: "19.08.2025",
+        date: "07.03.2026",
         intro: "Videoinhalte sind eine dominante Kraft im Digital Marketing.",
         engagement: { title: "Höhere Engagement-Raten", description: "Videoinhalte generieren 1200% mehr Shares als Text und Bilder zusammen." },
         conversion: { title: "Verbesserte Conversion", description: "Seiten mit Video können die Conversion-Rate um bis zu 80% steigern." },
@@ -2990,7 +2990,7 @@ export const translations: Record<Language, Translations> = {
       phone: "+49 1556 7204598",
       email: "agron6922@gmail.com",
       location: "Geislingen an der Steige, Deutschland",
-      copyright: "© 2025 MULTIMEDIA AGRONDESIGN. Alle Rechte vorbehalten.",
+      copyright: "© 2026 MULTIMEDIA AGRONDESIGN. Alle Rechte vorbehalten.",
       privacy: "Datenschutz",
       terms: "Nutzungsbedingungen",
       cookies: "Cookies",
@@ -3744,7 +3744,7 @@ export const translations: Record<Language, Translations> = {
       subtitle: "Ndiq trendet më të fundit në marketing dixhital dhe dizajn",
       posts: {
         trends: {
-          title: "5 Trendet Më të Rëndësishme të Marketing Dixhital për 2025",
+          title: "5 Trendet Më të Rëndësishme të Marketing Dixhital për 2026",
           description: "Zbulo trendet më të fundit që do të përcaktojnë marketing dixhitalin në vitin e ardhshëm dhe si mund ta përshtatësh strategjinë tënde...",
           category: "Marketing"
         },
@@ -3764,11 +3764,11 @@ export const translations: Record<Language, Translations> = {
     },
     blogPost: {
       trends: {
-        title: "5 Trendet Më të Rëndësishme të Marketingut Dixhital për 2025",
+        title: "5 Trendet Më të Rëndësishme të Marketingut Dixhital për 2026",
         subtitle: "Qëndroni përpara me trendet më të fundit",
         category: "Marketing Dixhital",
-        date: "19.08.2025",
-        intro: "Peizazhi i marketingut dixhital po evoluon shpejt. Nga personalizimi i drejtuar nga IA tek përvojat AR imersive, 2025 sjell mundësi emocionuese për bizneset.",
+        date: "07.03.2026",
+        intro: "Peizazhi i marketingut dixhital po evoluon shpejt. Nga personalizimi i drejtuar nga IA tek përvojat AR imersive, 2026 sjell mundësi emocionuese për bizneset.",
         aiPersonalization: { title: "Personalizimi i drejtuar nga IA", description: "Inteligjenca artificiale mundëson nivele të papara personalizimi përmbajtjeje." },
         voiceSearch: { title: "Optimizimi për kërkim zanor", description: "Optimizimi i përmbajtjes për kërkimet zanore është kyç për dukshmërinë." },
         mobileFirst: { title: "Përvoja Mobile-First", description: "Dizajnimi i përvojave mobile-first siguron performancë optimale." },
@@ -3780,7 +3780,7 @@ export const translations: Record<Language, Translations> = {
         title: "Udhëzuesi për optimizimin e konvertimit",
         subtitle: "Shndërroni vizitorët në klientë",
         category: "Optimizim uebfaqesh",
-        date: "19.08.2025",
+        date: "07.03.2026",
         intro: "Shndërrimi i vizitorëve të faqes në klientë është art dhe shkencë.",
         userExperience: { title: "Dizajni i përvojës së përdoruesit", description: "Navigimi intuitiv dhe rrjedhat e qëndrueshme udhëzojnë vizitorët." },
         abTesting: { title: "Strategjia e testimit A/B", description: "Testimi sistematik ndihmon të identifikohet çfarë funksionon më mirë." },
@@ -3796,10 +3796,10 @@ export const translations: Record<Language, Translations> = {
         cta: { title: "Gati të rrisni konvertimet?", description: "MULTIMEDIA AGRONDESIGN optimizon faqen tuaj për konvertime maksimale.", button: "Filloni sot" }
       },
       video: {
-        title: "Fuqia e Video Marketingut: Angazhimi i audiencës tuaj në 2025",
+        title: "Fuqia e Video Marketingut: Angazhimi i audiencës tuaj në 2026",
         subtitle: "Angazhoni audiencën përmes tregimit vizual",
         category: "Video Marketing",
-        date: "19.08.2025",
+        date: "07.03.2026",
         intro: "Përmbajtja video është bërë një forcë dominuese në marketingun dixhital.",
         engagement: { title: "Norma më të larta angazhimi", description: "Përmbajtja video gjeneron 1200% më shumë ndarje se teksti dhe imazhet." },
         conversion: { title: "Konvertime të përmirësuara", description: "Faqet me video mund të rrisin normat e konvertimit deri në 80%." },
@@ -3892,7 +3892,7 @@ export const translations: Record<Language, Translations> = {
       phone: "+49 1556 7204598",
       email: "agron6922@gmail.com",
       location: "Geislingen an der Steige, Gjermani",
-      copyright: "© 2025 MULTIMEDIA AGRONDESIGN. Të gjitha të drejtat të rezervuara.",
+      copyright: "© 2026 MULTIMEDIA AGRONDESIGN. Të gjitha të drejtat të rezervuara.",
       privacy: "Privatësia",
       terms: "Kushtet",
       cookies: "Cookies",

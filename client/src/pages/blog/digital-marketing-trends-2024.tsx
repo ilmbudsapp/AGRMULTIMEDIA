@@ -50,7 +50,7 @@ export default function DigitalMarketingTrends2024() {
             </Badge>
             <div className="flex items-center gap-2 text-gray-600">
               <Calendar className="w-4 h-4" />
-              <span>{t.blogPost?.trends?.date || "19.08.2025"}</span>
+              <span>{t.blogPost?.trends?.date || "07.03.2026"}</span>
             </div>
             <div className="flex items-center gap-2 text-gray-600">
               <User className="w-4 h-4" />
