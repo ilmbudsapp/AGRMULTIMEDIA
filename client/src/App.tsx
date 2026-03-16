@@ -90,7 +90,9 @@ function App() {
           <LanguageProvider>
             <ErrorBoundary>
               <TooltipProvider>
-                <Router />
+                <div className="min-h-screen w-full max-w-[100vw] overflow-x-hidden">
+                  <Router />
+                </div>
                 <Toaster />
               </TooltipProvider>
             </ErrorBoundary>

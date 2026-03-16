@@ -6,7 +6,7 @@ export default function Privacy() {
   const { t } = useLanguage();
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen w-full max-w-[100vw] overflow-x-hidden bg-gray-50">
       <Navigation />
       
       <main className="pt-24 pb-16">
