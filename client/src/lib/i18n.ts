@@ -258,6 +258,7 @@ export interface Translations {
       };
       message: string;
       messagePlaceholder: string;
+      messageHint: string;
       submit: string;
       sending: string;
       required: string;
@@ -1046,6 +1047,7 @@ export const translations: Record<Language, Translations> = {
         emailPlaceholder: "vaš.email@example.com",
         message: "Poruka",
         messagePlaceholder: "Opišite vaš projekat i potrebe...",
+        messageHint: "Uključi molim:\n1) Tvoj biznis/sajt,\n2) Šta želiš da poboljšaš,\n3) Budžet ili rok (opciono).",
         submit: "Dobij besplatnu AI strategiju",
         sending: "Šalje se...",
         required: "*",
@@ -2013,6 +2015,7 @@ export const translations: Record<Language, Translations> = {
         emailPlaceholder: "your.email@example.com",
         message: "Message",
         messagePlaceholder: "Describe your project and needs...",
+        messageHint: "Please include:\n1) Your business/website,\n2) What you want to improve,\n3) Your budget or deadline (optional).",
         submit: "Get My Free Strategy",
         sending: "Sending...",
         required: "*",
@@ -2904,6 +2907,7 @@ export const translations: Record<Language, Translations> = {
         emailPlaceholder: "ihre.email@example.com",
         message: "Nachricht",
         messagePlaceholder: "Beschreiben Sie Ihr Projekt und Ihre Bedürfnisse...",
+        messageHint: "Bitte gib an:\n1) Dein Unternehmen/Website,\n2) Was du verbessern möchtest,\n3) Dein Budget oder Zeitrahmen (optional).",
         submit: "Kostenlose AI‑Strategie anfordern",
         sending: "Wird gesendet...",
         required: "*",
@@ -3793,6 +3797,7 @@ export const translations: Record<Language, Translations> = {
         emailPlaceholder: "email.juaj@example.com",
         message: "Mesazhi",
         messagePlaceholder: "Përshkruani projektin dhe nevojat tuaja...",
+        messageHint: "Ju lutemi përfshini:\n1) Biznesin/faqen tuaj,\n2) Çfarë dëshironi të përmirësoni,\n3) Buxhetin ose afatin (opsionale).",
         submit: "Merr strategjinë time falas",
         sending: "Duke dërguar...",
         required: "*",

@@ -141,15 +141,18 @@ export default function Contact() {
               <div>
                 <label className="block text-gray-700 font-medium mb-2">{t.contact.form.message} {t.contact.form.required}</label>
                 <textarea 
-                  rows={5}
+                  rows={8}
                   name="message"
                   value={formData.message}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-electric-blue focus:border-transparent transition-all duration-300 resize-none" 
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-electric-blue focus:border-transparent transition-all duration-300 min-h-[160px] resize-y" 
                   placeholder={t.contact.form.messagePlaceholder}
                   required
                   data-testid="textarea-message"
                 />
+                <p className="mt-2 text-sm text-gray-500 whitespace-pre-line">
+                  {t.contact.form.messageHint}
+                </p>
               </div>
               
               <button

@@ -302,6 +302,7 @@ export const itTranslations: Translations = {
       emailPlaceholder: "tua.email@esempio.com",
       message: "Messaggio",
       messagePlaceholder: "Descrivi il tuo progetto e le tue esigenze...",
+      messageHint: "Includi per favore:\n1) La tua azienda/sito web,\n2) Cosa vuoi migliorare,\n3) Il tuo budget o scadenza (opzionale).",
       submit: "Ottieni la mia strategia gratuita",
       sending: "Invio in corso...",
       required: "*",
