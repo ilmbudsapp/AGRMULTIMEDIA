@@ -1,7 +1,9 @@
 import { ChevronDown } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Link } from "wouter";
-import heroVideo from "@assets/02_1755562690692.mp4";
+
+const HERO_IMAGE =
+  "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1920&q=80";
 
 export default function Hero() {
   const { tSpec } = useLanguage();
@@ -17,27 +19,25 @@ export default function Hero() {
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0a0a0f]"
     >
-      {/* Background video – dobro vidljiv (~50–55%) */}
+      {/* Background image – AI / creative workspace */}
       <div className="absolute inset-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
+        <img
+          src={HERO_IMAGE}
+          alt=""
           className="absolute inset-0 w-full h-full object-cover"
+          loading="eager"
+          fetchPriority="high"
           aria-hidden
-        >
-          <source src={heroVideo} type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-black/40" aria-hidden />
+        />
+        <div className="absolute inset-0 bg-[#0a0a0f]/70" aria-hidden />
       </div>
 
-      {/* Base gradient – blag da video ostane izražen */}
+      {/* Gradient for text contrast */}
       <div
-        className="absolute inset-0 opacity-55"
+        className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(165deg, #0a0a0f 0%, #0f0f1a 25%, #12122a 50%, #0d0d18 75%, #0a0a0f 100%)",
+            "linear-gradient(165deg, #0a0a0f 0%, rgba(10,10,15,0.92) 25%, rgba(10,10,15,0.88) 50%, #0a0a0f 100%)",
         }}
       />
 
