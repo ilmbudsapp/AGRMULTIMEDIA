@@ -8,10 +8,11 @@ import { useLanguage } from "@/contexts/LanguageContext";
 interface ContactFormData {
   name: string;
   email: string;
-  phone: string;
-  subject: string;
-  projectType: string;
   message: string;
+  // Optional legacy fields kept for API compatibility
+  phone?: string;
+  subject?: string;
+  projectType?: string;
 }
 
 export default function Contact() {
@@ -20,10 +21,7 @@ export default function Contact() {
   const [formData, setFormData] = useState<ContactFormData>({
     name: '',
     email: '',
-    phone: '',
-    subject: '',
-    projectType: '',
-    message: ''
+    message: '',
   });
 
   const contactMutation = useMutation({
@@ -56,7 +54,7 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!formData.name || !formData.email || !formData.subject || !formData.message) {
+    if (!formData.name || !formData.email || !formData.message) {
       toast({
         title: t.contact.error.validation,
         description: t.contact.error.validation,
@@ -85,9 +83,19 @@ export default function Contact() {
     <section id="contact" className="py-24 bg-[#f8f7f5]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <p className="text-electric-blue font-semibold text-sm uppercase tracking-[0.2em] mb-3">Contact</p>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-navy mb-4 tracking-tight" data-testid="contact-title">{t.contact.title}</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto" data-testid="contact-subtitle">
+          <p className="text-electric-blue font-semibold text-sm uppercase tracking-[0.2em] mb-3">
+            {t.nav.contact}
+          </p>
+          <h2
+            className="text-4xl md:text-5xl font-extrabold text-navy mb-4 tracking-tight"
+            data-testid="contact-title"
+          >
+            {t.contact.title}
+          </h2>
+          <p
+            className="text-xl text-gray-700 max-w-2xl mx-auto"
+            data-testid="contact-subtitle"
+          >
             {t.contact.subtitle}
           </p>
         </div>
@@ -97,79 +105,37 @@ export default function Contact() {
           <div className="bg-slate-50/80 rounded-2xl p-8 border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.06)]">
             <h3 className="text-2xl font-semibold text-navy mb-6" data-testid="contact-form-title">{t.contact.form.title}</h3>
             <form className="space-y-6" onSubmit={handleSubmit} data-testid="contact-form">
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="space-y-6">
                 <div>
-                  <label className="block text-gray-700 font-medium mb-2">{t.contact.form.name} {t.contact.form.required}</label>
-                  <input 
+                  <label className="block text-gray-700 font-medium mb-2">
+                    {t.contact.form.name} {t.contact.form.required}
+                  </label>
+                  <input
                     type="text"
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-electric-blue focus:border-transparent transition-all duration-300" 
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-electric-blue focus:border-transparent transition-all duration-300"
                     placeholder={t.contact.form.namePlaceholder}
                     required
                     data-testid="input-name"
                   />
                 </div>
                 <div>
-                  <label className="block text-gray-700 font-medium mb-2">{t.contact.form.email} {t.contact.form.required}</label>
-                  <input 
+                  <label className="block text-gray-700 font-medium mb-2">
+                    {t.contact.form.email} {t.contact.form.required}
+                  </label>
+                  <input
                     type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-electric-blue focus:border-transparent transition-all duration-300" 
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-electric-blue focus:border-transparent transition-all duration-300"
                     placeholder={t.contact.form.emailPlaceholder}
                     required
                     data-testid="input-email"
                   />
                 </div>
-              </div>
-              
-              <div>
-                <label className="block text-gray-700 font-medium mb-2">{(t.contact.form as any).subject} {t.contact.form.required}</label>
-                <input 
-                  type="text"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-electric-blue focus:border-transparent transition-all duration-300" 
-                  placeholder={(t.contact.form as any).subjectPlaceholder}
-                  required
-                  data-testid="input-subject"
-                />
-              </div>
-              
-              <div>
-                <label className="block text-gray-700 font-medium mb-2">{t.contact.form.phone}</label>
-                <input 
-                  type="tel"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-electric-blue focus:border-transparent transition-all duration-300" 
-                  placeholder={t.contact.form.phonePlaceholder}
-                  data-testid="input-phone"
-                />
-              </div>
-              
-              <div>
-                <label className="block text-gray-700 font-medium mb-2">{t.contact.form.projectType}</label>
-                <select 
-                  name="projectType"
-                  value={formData.projectType}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-electric-blue focus:border-transparent transition-all duration-300"
-                  data-testid="select-project-type"
-                >
-                  <option value="">{t.contact.form.projectTypePlaceholder}</option>
-                  <option value="web-design">{t.contact.form.projectTypes.webDesign}</option>
-                  <option value="graphic-design">{t.contact.form.projectTypes.graphicDesign}</option>
-                  <option value="video-production">{t.contact.form.projectTypes.videoProduction}</option>
-                  <option value="digital-marketing">{t.contact.form.projectTypes.digitalMarketing}</option>
-                  <option value="photography">{t.contact.form.projectTypes.photography}</option>
-                  <option value="consulting">{t.contact.form.projectTypes.consulting}</option>
-                </select>
               </div>
               
               <div>
@@ -202,6 +168,9 @@ export default function Contact() {
                 )}</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-electric-blue to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </button>
+              <p className="mt-3 text-center text-sm text-gray-500">
+                {t.contact.form.trustLine}
+              </p>
             </form>
           </div>
           

@@ -1036,33 +1036,20 @@ export const translations: Record<Language, Translations> = {
       }
     },
     contact: {
-      title: "Kontaktirajte nas",
-      subtitle: "Spreman sam da vaše ideje pretvorim u stvarnost. Pošaljite mi poruku!",
+      title: "Dobij besplatnu strategiju za svoj biznis",
+      subtitle: "Analiziraću tvoj brend i pokazati kako da unaprediš online prisustvo uz AI, sadržaj i dizajn.",
       form: {
         title: "Pošaljite poruku",
         name: "Ime i prezime",
         namePlaceholder: "Vaše ime",
         email: "Email adresa",
         emailPlaceholder: "vaš.email@example.com",
-        subject: "Predmet",
-        subjectPlaceholder: "Predmet vaše poruke",
-        phone: "Telefon",
-        phonePlaceholder: "+381 XX XXX XXXX",
-        projectType: "Tip projekta",
-        projectTypePlaceholder: "Izaberite tip projekta",
-        projectTypes: {
-          webDesign: "Web Dizajn",
-          graphicDesign: "Grafički Dizajn",
-          videoProduction: "Video Produkcija",
-          digitalMarketing: "Digitalni Marketing",
-          photography: "Fotografija",
-          consulting: "Konsalting"
-        },
         message: "Poruka",
         messagePlaceholder: "Opišite vaš projekat i potrebe...",
         submit: "Pošaljite poruku",
         sending: "Šalje se...",
-        required: "*"
+        required: "*",
+        trustLine: "Odgovor u roku od 24 sata"
       },
       info: {
         title: "Kontakt informacije",
@@ -1087,7 +1074,7 @@ export const translations: Record<Language, Translations> = {
       error: {
         title: "Greška pri slanju poruke",
         description: "Molimo pokušajte ponovo ili nas kontaktirajte direktno.",
-        validation: "Ime, email, predmet i poruka su obavezni"
+        validation: "Ime, email i poruka su obavezni"
       }
     },
     portfolioPages: {
@@ -2016,33 +2003,20 @@ export const translations: Record<Language, Translations> = {
       }
     },
     contact: {
-      title: "Contact Us",
-      subtitle: "I'm ready to turn your ideas into reality. Send me a message!",
+      title: "Get a free strategy for your business",
+      subtitle: "I will analyze your brand and show you how to improve your online presence using AI, content and design.",
       form: {
         title: "Send Message",
         name: "Full Name",
         namePlaceholder: "Your name",
         email: "Email Address",
         emailPlaceholder: "your.email@example.com",
-        subject: "Subject",
-        subjectPlaceholder: "Subject of your message",
-        phone: "Phone",
-        phonePlaceholder: "+381 XX XXX XXXX",
-        projectType: "Project Type",
-        projectTypePlaceholder: "Select project type",
-        projectTypes: {
-          webDesign: "Web Design",
-          graphicDesign: "Graphic Design",
-          videoProduction: "Video Production",
-          digitalMarketing: "Digital Marketing",
-          photography: "Photography",
-          consulting: "Consulting"
-        },
         message: "Message",
         messagePlaceholder: "Describe your project and needs...",
         submit: "Send Message",
         sending: "Sending...",
-        required: "*"
+        required: "*",
+        trustLine: "Response within 24 hours"
       },
       info: {
         title: "Contact Information",
@@ -2067,7 +2041,7 @@ export const translations: Record<Language, Translations> = {
       error: {
         title: "Error sending message",
         description: "Please try again or contact us directly.",
-        validation: "Name, email, subject and message are required"
+        validation: "Name, email and message are required"
       }
     },
 
@@ -2920,33 +2894,20 @@ export const translations: Record<Language, Translations> = {
       }
     },
     contact: {
-      title: "Kontaktieren Sie uns",
-      subtitle: "Ich bin bereit, Ihre Ideen in die Realität umzusetzen. Senden Sie mir eine Nachricht!",
+      title: "Kostenlose Strategie für dein Business",
+      subtitle: "Ich analysiere deine Marke und zeige dir, wie du deine Online-Präsenz mit AI, Content und Design verbessern kannst.",
       form: {
         title: "Nachricht senden",
         name: "Vollständiger Name",
         namePlaceholder: "Ihr Name",
         email: "E-Mail-Adresse",
         emailPlaceholder: "ihre.email@example.com",
-        subject: "Betreff",
-        subjectPlaceholder: "Betreff Ihrer Nachricht",
-        phone: "Telefon",
-        phonePlaceholder: "+381 XX XXX XXXX",
-        projectType: "Projekttyp",
-        projectTypePlaceholder: "Projekttyp auswählen",
-        projectTypes: {
-          webDesign: "Webdesign",
-          graphicDesign: "Grafikdesign",
-          videoProduction: "Videoproduktion",
-          digitalMarketing: "Digital Marketing",
-          photography: "Fotografie",
-          consulting: "Beratung"
-        },
         message: "Nachricht",
         messagePlaceholder: "Beschreiben Sie Ihr Projekt und Ihre Bedürfnisse...",
         submit: "Nachricht senden",
         sending: "Wird gesendet...",
-        required: "*"
+        required: "*",
+        trustLine: "Antwort innerhalb von 24 Stunden"
       },
       info: {
         title: "Kontaktinformationen",
@@ -2971,7 +2932,7 @@ export const translations: Record<Language, Translations> = {
       error: {
         title: "Fehler beim Senden der Nachricht",
         description: "Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.",
-        validation: "Name, E-Mail, Betreff und Nachricht sind erforderlich"
+        validation: "Name, E-Mail und Nachricht sind erforderlich"
       }
     },
     portfolioPages: {
@@ -3822,33 +3783,20 @@ export const translations: Record<Language, Translations> = {
       }
     },
     contact: {
-      title: "Na Kontaktoni",
-      subtitle: "Jam gati t'i kthej idetë tuaja në realitet. Më dërgoni një mesazh!",
+      title: "Merr një strategji falas për biznesin tënd",
+      subtitle: "Do analizoj biznesin tënd dhe do të tregoj si të përmirësosh prezencën online me AI, përmbajtje dhe dizajn.",
       form: {
         title: "Dërgo Mesazh",
         name: "Emri i Plotë",
         namePlaceholder: "Emri juaj",
         email: "Adresa E-mail",
         emailPlaceholder: "email.juaj@example.com",
-        subject: "Tema",
-        subjectPlaceholder: "Tema e mesazhit tuaj",
-        phone: "Telefon",
-        phonePlaceholder: "+381 XX XXX XXXX",
-        projectType: "Lloji i Projektit",
-        projectTypePlaceholder: "Zgjidhni llojin e projektit",
-        projectTypes: {
-          webDesign: "Web Dizajn",
-          graphicDesign: "Dizajn Grafik",
-          videoProduction: "Prodhim Video",
-          digitalMarketing: "Marketing Dixhital",
-          photography: "Fotografi",
-          consulting: "Konsultime"
-        },
         message: "Mesazhi",
         messagePlaceholder: "Përshkruani projektin dhe nevojat tuaja...",
         submit: "Dërgo Mesazhin",
         sending: "Duke dërguar...",
-        required: "*"
+        required: "*",
+        trustLine: "Përgjigje brenda 24 orëve"
       },
       info: {
         title: "Informacione Kontakti",
@@ -3873,7 +3821,7 @@ export const translations: Record<Language, Translations> = {
       error: {
         title: "Gabim në dërgimin e mesazhit",
         description: "Ju lutemi provoni përsëri ose na kontaktoni direkt.",
-        validation: "Emri, email, tema dhe mesazhi janë të detyrueshme"
+        validation: "Emri, email dhe mesazhi janë të detyrueshme"
       }
     },
     portfolioPages: {

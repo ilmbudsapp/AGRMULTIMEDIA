@@ -292,33 +292,20 @@ export const itTranslations: Translations = {
     }
   },
   contact: {
-    title: "Contattaci",
-    subtitle: "Sono pronto a trasformare le tue idee in realtà. Inviami un messaggio!",
+    title: "Ottieni una strategia gratuita per il tuo business",
+    subtitle: "Analizzerò il tuo brand e ti mostrerò come migliorare la tua presenza online con AI, contenuti e design.",
     form: {
       title: "Invia messaggio",
       name: "Nome completo",
       namePlaceholder: "Il tuo nome",
       email: "Indirizzo email",
       emailPlaceholder: "tua.email@esempio.com",
-      subject: "Oggetto",
-      subjectPlaceholder: "Oggetto del messaggio",
-      phone: "Telefono",
-      phonePlaceholder: "+39 XXX XXX XXXX",
-      projectType: "Tipo di progetto",
-      projectTypePlaceholder: "Seleziona il tipo di progetto",
-      projectTypes: {
-        webDesign: "Web design",
-        graphicDesign: "Graphic design",
-        videoProduction: "Produzione video",
-        digitalMarketing: "Digital marketing",
-        photography: "Fotografia",
-        consulting: "Consulenza"
-      },
       message: "Messaggio",
       messagePlaceholder: "Descrivi il tuo progetto e le tue esigenze...",
       submit: "Invia messaggio",
       sending: "Invio in corso...",
-      required: "*"
+      required: "*",
+      trustLine: "Risposta entro 24 ore"
     },
     info: {
       title: "Informazioni di contatto",
@@ -343,7 +330,7 @@ export const itTranslations: Translations = {
     error: {
       title: "Errore nell'invio del messaggio",
       description: "Riprova o contattaci direttamente.",
-      validation: "Nome, email, oggetto e messaggio sono obbligatori"
+      validation: "Nome, email e messaggio sono obbligatori"
     }
   },
   portfolioPages: {
