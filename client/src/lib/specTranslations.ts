@@ -169,8 +169,8 @@ const en: SpecTranslations = {
       description: '',
     },
     aiContent: {
-      title: '',
-      description: '',
+      title: 'Custom AI Solutions',
+      description: 'AI apps, automation tools and custom digital solutions for your workflows.',
     },
   },
   featuredPortfolio: {
@@ -337,8 +337,8 @@ const de: SpecTranslations = {
       description: '',
     },
     aiContent: {
-      title: '',
-      description: '',
+      title: 'Custom AI Solutions',
+      description: 'AI-Apps, Automatisierungs-Tools und individuelle digitale Lösungen.',
     },
   },
   featuredPortfolio: {
@@ -505,8 +505,8 @@ const it: SpecTranslations = {
       description: '',
     },
     aiContent: {
-      title: '',
-      description: '',
+      title: 'Custom AI Solutions',
+      description: 'Soluzioni AI su misura, automazioni e strumenti digitali personalizzati.',
     },
   },
   featuredPortfolio: {
@@ -673,8 +673,8 @@ const sr: SpecTranslations = {
       description: '',
     },
     aiContent: {
-      title: '',
-      description: '',
+      title: 'Custom AI Solutions',
+      description: 'Custom AI rešenja i alati za automatizaciju rada.',
     },
   },
   featuredPortfolio: {
@@ -841,8 +841,8 @@ const al: SpecTranslations = {
       description: '',
     },
     aiContent: {
-      title: '',
-      description: '',
+      title: 'Custom AI Solutions',
+      description: 'Zgjidhje AI të personalizuara dhe mjete automatizimi për biznesin tuaj.',
     },
   },
   featuredPortfolio: {

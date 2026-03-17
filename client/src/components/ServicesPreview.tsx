@@ -13,7 +13,7 @@ export default function ServicesPreview() {
   const cards = [
     { key: "videoMotion", icon: "video" as const, href: "/services#ai-content-video" },
     { key: "webUi", icon: "web" as const, href: "/services#web-design" },
-    { key: "aiServices", icon: "ai" as const, href: "/services#custom-ai" },
+    { key: "aiContent", icon: "ai" as const, href: "/services#custom-ai" },
   ];
 
   return (
