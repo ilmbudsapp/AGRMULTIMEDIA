@@ -1,27 +1,25 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Link } from "wouter";
-import { LayoutGrid, Palette, Video, Sparkles } from "lucide-react";
+import { LayoutGrid, Video, Sparkles } from "lucide-react";
 
 const icons = {
-  web: LayoutGrid,
-  graphic: Palette,
   video: Video,
+  web: LayoutGrid,
   ai: Sparkles,
 };
 
 export default function ServicesPreview() {
   const { tSpec } = useLanguage();
   const cards = [
-    { key: "webUi", icon: "web" as const, href: "/services#web-ui" },
-    { key: "graphicBranding", icon: "graphic" as const, href: "/services#graphic" },
-    { key: "videoMotion", icon: "video" as const, href: "/services#video" },
-    { key: "aiContent", icon: "ai" as const, href: "/services#ai" },
+    { key: "videoMotion", icon: "video" as const, href: "/services#ai-content-video" },
+    { key: "webUi", icon: "web" as const, href: "/services#web-design" },
+    { key: "aiServices", icon: "ai" as const, href: "/services#custom-ai" },
   ];
 
   return (
     <section id="services-preview" className="py-20 md:py-28 bg-[#0f0f14]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {cards.map(({ key, icon, href }) => {
             const data = tSpec.servicesPreview[key as keyof typeof tSpec.servicesPreview];
             const Icon = icons[icon];

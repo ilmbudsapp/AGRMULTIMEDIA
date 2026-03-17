@@ -6,10 +6,9 @@ import { Link } from "wouter";
 export default function ServicesPage() {
   const { tSpec } = useLanguage();
   const sections = [
-    { id: "web-ui", ...tSpec.servicesPage.webUi },
-    { id: "graphic", ...tSpec.servicesPage.graphicBranding },
-    { id: "video", ...tSpec.servicesPage.videoMotion },
-    { id: "ai", ...tSpec.servicesPage.aiServices },
+    { id: "ai-content-video", ...tSpec.servicesPage.videoMotion },
+    { id: "web-design", ...tSpec.servicesPage.webUi },
+    { id: "custom-ai", ...tSpec.servicesPage.aiServices },
   ];
 
   return (
@@ -29,7 +28,9 @@ export default function ServicesPage() {
                   <li key={i}>{d}</li>
                 ))}
               </ul>
-              <p className="text-sm text-white/70">{section.startingFrom}</p>
+              {section.startingFrom && (
+                <p className="text-sm text-white/70">{section.startingFrom}</p>
+              )}
             </section>
           ))}
           <p className="text-gray-400 mt-12 mb-10">{tSpec.servicesPage.cta}</p>
