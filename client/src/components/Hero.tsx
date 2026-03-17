@@ -2,9 +2,9 @@ import { ChevronDown } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Link } from "wouter";
 
-// AI / neural network – Pexels (free). Illustration: how AI and machine learning relate to the brain.
+// Hero background: Unsplash. Tech / creative – code screen, visible and high-contrast for overlays.
 const HERO_IMAGE =
-  "https://images.pexels.com/photos/17483868/pexels-photo-17483868.jpeg?auto=compress&cs=tinysrgb&w=1920&q=85";
+  "https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&w=1920&q=85";
 
 export default function Hero() {
   const { tSpec } = useLanguage();
@@ -20,17 +20,21 @@ export default function Hero() {
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0a0a0f]"
     >
-      {/* Background image – AI / creative workspace */}
-      <div className="absolute inset-0">
+      {/* Background image – CSS + img so it always shows */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${HERO_IMAGE})` }}
+        aria-hidden
+      >
         <img
           src={HERO_IMAGE}
           alt=""
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover opacity-0 pointer-events-none"
           loading="eager"
           fetchPriority="high"
           aria-hidden
         />
-        <div className="absolute inset-0 bg-[#0a0a0f]/55" aria-hidden />
+        <div className="absolute inset-0 bg-[#0a0a0f]/50" aria-hidden />
       </div>
 
       {/* Gradient for text contrast – centre stays readable, edges show AI graphic */}
