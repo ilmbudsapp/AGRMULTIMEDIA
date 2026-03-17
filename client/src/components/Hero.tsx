@@ -2,9 +2,8 @@ import { ChevronDown } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Link } from "wouter";
 
-// Hero background: Unsplash. Tech / creative – code screen, visible and high-contrast for overlays.
-const HERO_IMAGE =
-  "https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&w=1920&q=85";
+// Hero background: local image – AI workspace with brain graphic, screens, tech.
+const HERO_IMAGE = "/hero-background.png";
 
 export default function Hero() {
   const { tSpec } = useLanguage();
