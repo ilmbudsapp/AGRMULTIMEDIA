@@ -13,6 +13,15 @@ export interface SpecTranslations {
     ctaSecondary: string;
     availableIn: string;
   };
+  // Featured projects under hero
+  heroProjects: {
+    heading: string;
+    projects: {
+      title: string;
+      description: string;
+      result?: string;
+    }[];
+  };
   // Nav (order: Home, Services, Portfolio, About, Blog, Contact)
   nav: {
     home: string;
@@ -108,6 +117,24 @@ const en: SpecTranslations = {
     ctaPrimary: 'Get a free consultation',
     ctaSecondary: 'View portfolio',
     availableIn: 'Available in DE · EN · IT · SR · AL',
+  },
+  heroProjects: {
+    heading: 'Featured projects',
+    projects: [
+      {
+        title: 'AI Video Campaign',
+        description: 'Created short-form AI videos for social media marketing.',
+        result: 'Increased engagement and reach.',
+      },
+      {
+        title: 'Business Website',
+        description: 'Designed and developed a modern website for a local business.',
+      },
+      {
+        title: 'Branding & Content',
+        description: 'Full branding and content creation for online presence.',
+      },
+    ],
   },
   nav: {
     home: 'Home',
@@ -254,6 +281,24 @@ const de: SpecTranslations = {
     ctaSecondary: 'Portfolio ansehen',
     availableIn: 'Verfügbar in DE · EN · IT · SR · AL',
   },
+  heroProjects: {
+    heading: 'Ausgewählte Projekte',
+    projects: [
+      {
+        title: 'AI-Video-Kampagne',
+        description: 'Erstellung von kurzen AI-Videos für Social-Media-Marketing.',
+        result: 'Höheres Engagement und größere Reichweite.',
+      },
+      {
+        title: 'Business-Website',
+        description: 'Konzeption und Umsetzung einer modernen Website für ein lokales Unternehmen.',
+      },
+      {
+        title: 'Branding & Content',
+        description: 'Komplettes Branding und Content-Erstellung für den Online-Auftritt.',
+      },
+    ],
+  },
   nav: {
     home: 'Home',
     services: 'Leistungen',
@@ -398,6 +443,24 @@ const it: SpecTranslations = {
     ctaPrimary: 'Consulenza gratuita',
     ctaSecondary: 'Guarda il portfolio',
     availableIn: 'Disponibile in DE · EN · IT · SR · AL',
+  },
+  heroProjects: {
+    heading: 'Progetti in evidenza',
+    projects: [
+      {
+        title: 'Campagna video con AI',
+        description: 'Creazione di video brevi basati sull’AI per il marketing sui social.',
+        result: 'Aumento di engagement e copertura.',
+      },
+      {
+        title: 'Sito web aziendale',
+        description: 'Design e sviluppo di un sito moderno per un’azienda locale.',
+      },
+      {
+        title: 'Branding & Content',
+        description: 'Branding completo e creazione di contenuti per la presenza online.',
+      },
+    ],
   },
   nav: {
     home: 'Home',
@@ -544,6 +607,24 @@ const sr: SpecTranslations = {
     ctaSecondary: 'Pogledaj portfolio',
     availableIn: 'Dostupno na DE · EN · IT · SR · AL',
   },
+  heroProjects: {
+    heading: 'Izdvojeni projekti',
+    projects: [
+      {
+        title: 'AI video kampanja',
+        description: 'Kreiranje kratkih AI videa za marketing na društvenim mrežama.',
+        result: 'Povećano angažovanje i veći doseg.',
+      },
+      {
+        title: 'Biznis veb sajt',
+        description: 'Dizajn i razvoj modernog sajta za lokalni biznis.',
+      },
+      {
+        title: 'Brending i sadržaj',
+        description: 'Potpuni brending i kreiranje sadržaja za online prisustvo.',
+      },
+    ],
+  },
   nav: {
     home: 'Početna',
     services: 'Usluge',
@@ -688,6 +769,24 @@ const al: SpecTranslations = {
     ctaPrimary: 'Konsultë falas',
     ctaSecondary: 'Shiko portofolin',
     availableIn: 'I disponueshëm në DE · EN · IT · SR · AL',
+  },
+  heroProjects: {
+    heading: 'Projektet e veçuara',
+    projects: [
+      {
+        title: 'Fushatë video me AI',
+        description: 'Krijim videosh të shkurtra me AI për marketing në rrjete sociale.',
+        result: 'Rritje e angazhimit dhe shtrirjes.',
+      },
+      {
+        title: 'Faqe web biznesi',
+        description: 'Dizajnim dhe zhvillim i një faqeje moderne për një biznes lokal.',
+      },
+      {
+        title: 'Branding & Content',
+        description: 'Branding i plotë dhe krijim përmbajtjeje për praninë online.',
+      },
+    ],
   },
   nav: {
     home: 'Kryefaqja',
