@@ -22,6 +22,12 @@ export interface SpecTranslations {
       result?: string;
     }[];
   };
+  // Strong CTA under featured projects
+  heroCta: {
+    heading: string;
+    text: string;
+    button: string;
+  };
   // Nav (order: Home, Services, Portfolio, About, Blog, Contact)
   nav: {
     home: string;
@@ -135,6 +141,11 @@ const en: SpecTranslations = {
         description: 'Full branding and content creation for online presence.',
       },
     ],
+  },
+  heroCta: {
+    heading: 'Ready to grow your business?',
+    text: 'Let’s create something powerful together using AI, design and strategy.',
+    button: 'Get a free consultation',
   },
   nav: {
     home: 'Home',
@@ -299,6 +310,11 @@ const de: SpecTranslations = {
       },
     ],
   },
+  heroCta: {
+    heading: 'Bereit dein Business zu skalieren?',
+    text: 'Lass uns gemeinsam etwas Starkes mit AI, Design und Strategie aufbauen.',
+    button: 'Kostenlose Beratung',
+  },
   nav: {
     home: 'Home',
     services: 'Leistungen',
@@ -461,6 +477,11 @@ const it: SpecTranslations = {
         description: 'Branding completo e creazione di contenuti per la presenza online.',
       },
     ],
+  },
+  heroCta: {
+    heading: 'Pronto a far crescere il tuo business?',
+    text: 'Creiamo insieme qualcosa di potente con AI, design e strategia.',
+    button: 'Consulenza gratuita',
   },
   nav: {
     home: 'Home',
@@ -625,6 +646,11 @@ const sr: SpecTranslations = {
       },
     ],
   },
+  heroCta: {
+    heading: 'Spreman da unaprediš svoj biznis?',
+    text: 'Hajde da zajedno napravimo nešto moćno uz AI, dizajn i strategiju.',
+    button: 'Besplatne konsultacije',
+  },
   nav: {
     home: 'Početna',
     services: 'Usluge',
@@ -787,6 +813,11 @@ const al: SpecTranslations = {
         description: 'Branding i plotë dhe krijim përmbajtjeje për praninë online.',
       },
     ],
+  },
+  heroCta: {
+    heading: 'Gati për të rritur biznesin tënd?',
+    text: 'Le të krijojmë diçka të fuqishme së bashku me AI, dizajn dhe strategji.',
+    button: 'Konsultë falas',
   },
   nav: {
     home: 'Kryefaqja',

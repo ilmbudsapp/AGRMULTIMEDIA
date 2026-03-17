@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import FeaturedProjects from "@/components/FeaturedProjects";
+import HeroCta from "@/components/HeroCta";
 import ServicesPreview from "@/components/ServicesPreview";
 import About from "@/components/About";
 import Portfolio from "@/components/Portfolio";
@@ -17,6 +18,7 @@ export default function Home() {
       <Navigation />
       <Hero />
       <FeaturedProjects />
+      <HeroCta />
       <ServicesPreview />
       <Portfolio />
       <WhyMe />
