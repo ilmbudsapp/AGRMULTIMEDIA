@@ -33,7 +33,7 @@ export default function Hero() {
           fetchPriority="high"
           aria-hidden
         />
-        <div className="absolute inset-0 bg-[#0a0a0f]/25" aria-hidden />
+        <div className="absolute inset-0 bg-[#0a0a0f]/15" aria-hidden />
       </div>
 
       {/* Gradient for text contrast – centre stays readable, edges show AI graphic */}
@@ -41,7 +41,7 @@ export default function Hero() {
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(165deg, rgba(10,10,15,0.65) 0%, rgba(10,10,15,0.5) 30%, rgba(10,10,15,0.45) 50%, rgba(10,10,15,0.7) 100%)",
+            "linear-gradient(165deg, rgba(10,10,15,0.55) 0%, rgba(10,10,15,0.4) 30%, rgba(10,10,15,0.35) 50%, rgba(10,10,15,0.6) 100%)",
         }}
       />
 
