@@ -2,8 +2,9 @@ import { ChevronDown } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Link } from "wouter";
 
+// AI / neural network – Pexels (free). Illustration: how AI and machine learning relate to the brain.
 const HERO_IMAGE =
-  "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1920&q=80";
+  "https://images.pexels.com/photos/17483868/pexels-photo-17483868.jpeg?auto=compress&cs=tinysrgb&w=1920&q=85";
 
 export default function Hero() {
   const { tSpec } = useLanguage();
@@ -29,15 +30,15 @@ export default function Hero() {
           fetchPriority="high"
           aria-hidden
         />
-        <div className="absolute inset-0 bg-[#0a0a0f]/70" aria-hidden />
+        <div className="absolute inset-0 bg-[#0a0a0f]/55" aria-hidden />
       </div>
 
-      {/* Gradient for text contrast */}
+      {/* Gradient for text contrast – centre stays readable, edges show AI graphic */}
       <div
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(165deg, #0a0a0f 0%, rgba(10,10,15,0.92) 25%, rgba(10,10,15,0.88) 50%, #0a0a0f 100%)",
+            "linear-gradient(165deg, rgba(10,10,15,0.85) 0%, rgba(10,10,15,0.75) 30%, rgba(10,10,15,0.7) 50%, rgba(10,10,15,0.85) 100%)",
         }}
       />
 
