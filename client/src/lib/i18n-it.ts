@@ -292,8 +292,8 @@ export const itTranslations: Translations = {
     }
   },
   contact: {
-    title: "Ottieni una strategia gratuita per il tuo business",
-    subtitle: "Analizzerò il tuo brand e ti mostrerò come migliorare la tua presenza online con AI, contenuti e design.",
+    title: "Ottieni una strategia di crescita AI gratuita per il tuo business",
+    subtitle: "Analizzerò i tuoi contenuti & sito web e ti fornirò miglioramenti specifici per aumentare traffico, lead e vendite.",
     form: {
       title: "Invia messaggio",
       name: "Nome completo",
@@ -302,7 +302,7 @@ export const itTranslations: Translations = {
       emailPlaceholder: "tua.email@esempio.com",
       message: "Messaggio",
       messagePlaceholder: "Descrivi il tuo progetto e le tue esigenze...",
-      submit: "Invia messaggio",
+      submit: "Ottieni la mia strategia gratuita",
       sending: "Invio in corso...",
       required: "*",
       trustLine: "Risposta entro 24 ore"

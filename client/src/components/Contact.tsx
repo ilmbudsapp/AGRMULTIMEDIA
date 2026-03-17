@@ -164,7 +164,7 @@ export default function Contact() {
                     {t.contact.form.sending}
                   </span>
                 ) : (
-                  t.contact.form.submit
+                  t.contact.form.submit || "Get My Free Strategy"
                 )}</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-electric-blue to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </button>

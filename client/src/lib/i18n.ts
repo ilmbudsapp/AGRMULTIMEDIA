@@ -1036,8 +1036,8 @@ export const translations: Record<Language, Translations> = {
       }
     },
     contact: {
-      title: "Dobij besplatnu strategiju za svoj biznis",
-      subtitle: "Analiziraću tvoj brend i pokazati kako da unaprediš online prisustvo uz AI, sadržaj i dizajn.",
+      title: "Besplatna AI strategija rasta za tvoj biznis",
+      subtitle: "Analiziraću tvoje sadržaje & web stranicu i dati ti konkretna poboljšanja za više poseta, upita i prodaje.",
       form: {
         title: "Pošaljite poruku",
         name: "Ime i prezime",
@@ -1046,7 +1046,7 @@ export const translations: Record<Language, Translations> = {
         emailPlaceholder: "vaš.email@example.com",
         message: "Poruka",
         messagePlaceholder: "Opišite vaš projekat i potrebe...",
-        submit: "Pošaljite poruku",
+        submit: "Dobij besplatnu AI strategiju",
         sending: "Šalje se...",
         required: "*",
         trustLine: "Odgovor u roku od 24 sata"
@@ -2003,8 +2003,8 @@ export const translations: Record<Language, Translations> = {
       }
     },
     contact: {
-      title: "Get a free strategy for your business",
-      subtitle: "I will analyze your brand and show you how to improve your online presence using AI, content and design.",
+      title: "Get a Free AI Growth Strategy for Your Business",
+      subtitle: "I will audit your current content & website and give you specific improvements you can implement for more traffic, leads and sales.",
       form: {
         title: "Send Message",
         name: "Full Name",
@@ -2013,7 +2013,7 @@ export const translations: Record<Language, Translations> = {
         emailPlaceholder: "your.email@example.com",
         message: "Message",
         messagePlaceholder: "Describe your project and needs...",
-        submit: "Send Message",
+        submit: "Get My Free Strategy",
         sending: "Sending...",
         required: "*",
         trustLine: "Response within 24 hours"
@@ -2894,8 +2894,8 @@ export const translations: Record<Language, Translations> = {
       }
     },
     contact: {
-      title: "Kostenlose Strategie für dein Business",
-      subtitle: "Ich analysiere deine Marke und zeige dir, wie du deine Online-Präsenz mit AI, Content und Design verbessern kannst.",
+      title: "Kostenlose AI‑Wachstumsstrategie für dein Unternehmen",
+      subtitle: "Ich analysiere deine Inhalte & Website und gebe dir konkrete Verbesserungen, die mehr Reichweite, Leads und Umsatz bringen.",
       form: {
         title: "Nachricht senden",
         name: "Vollständiger Name",
@@ -2904,7 +2904,7 @@ export const translations: Record<Language, Translations> = {
         emailPlaceholder: "ihre.email@example.com",
         message: "Nachricht",
         messagePlaceholder: "Beschreiben Sie Ihr Projekt und Ihre Bedürfnisse...",
-        submit: "Nachricht senden",
+        submit: "Kostenlose AI‑Strategie anfordern",
         sending: "Wird gesendet...",
         required: "*",
         trustLine: "Antwort innerhalb von 24 Stunden"
@@ -3783,8 +3783,8 @@ export const translations: Record<Language, Translations> = {
       }
     },
     contact: {
-      title: "Merr një strategji falas për biznesin tënd",
-      subtitle: "Do analizoj biznesin tënd dhe do të tregoj si të përmirësosh prezencën online me AI, përmbajtje dhe dizajn.",
+      title: "Merr një strategji falas të rritjes me AI për biznesin tënd",
+      subtitle: "Do të analizoj përmbajtjen & faqen tënde dhe do të të jap përmirësime konkrete për më shumë vizita, kliente dhe shitje.",
       form: {
         title: "Dërgo Mesazh",
         name: "Emri i Plotë",
@@ -3793,7 +3793,7 @@ export const translations: Record<Language, Translations> = {
         emailPlaceholder: "email.juaj@example.com",
         message: "Mesazhi",
         messagePlaceholder: "Përshkruani projektin dhe nevojat tuaja...",
-        submit: "Dërgo Mesazhin",
+        submit: "Merr strategjinë time falas",
         sending: "Duke dërguar...",
         required: "*",
         trustLine: "Përgjigje brenda 24 orëve"
