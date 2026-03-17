@@ -1,17 +1,30 @@
-import sgMail from "@sendgrid/mail";
+import nodemailer from "nodemailer";
 
-const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY;
-const SENDGRID_FROM_EMAIL =
-  process.env.SENDGRID_FROM_EMAIL || "no-reply@agrmultimedia.eu";
-const SENDGRID_TO_EMAIL =
-  process.env.SENDGRID_TO_EMAIL || "agron6922@gmail.com";
+const SMTP_HOST = process.env.SMTP_HOST || "smtp.gmail.com";
+const SMTP_PORT = Number(process.env.SMTP_PORT || 465);
+const SMTP_SECURE = SMTP_PORT === 465;
+const SMTP_USER = process.env.SMTP_USER;
+const SMTP_PASS = process.env.SMTP_PASS;
+const SMTP_FROM =
+  process.env.SMTP_FROM || (SMTP_USER ? `AGR MULTIMEDIA <${SMTP_USER}>` : "");
+const SMTP_TO = process.env.SMTP_TO || "agron6922@gmail.com";
 
-if (!SENDGRID_API_KEY) {
+let transporter: nodemailer.Transporter | null = null;
+
+if (!SMTP_USER || !SMTP_PASS) {
   console.warn(
-    "SENDGRID_API_KEY nije podešen – kontakt emailovi se NE šalju (samo se loguju u server logu)."
+    "SMTP_USER / SMTP_PASS nisu podešeni – kontakt emailovi se NE šalju (samo se loguju u server logu)."
   );
 } else {
-  sgMail.setApiKey(SENDGRID_API_KEY);
+  transporter = nodemailer.createTransport({
+    host: SMTP_HOST,
+    port: SMTP_PORT,
+    secure: SMTP_SECURE,
+    auth: {
+      user: SMTP_USER,
+      pass: SMTP_PASS,
+    },
+  });
 }
 
 interface ContactFormData {
@@ -25,15 +38,13 @@ export async function sendContactEmail(
   formData: ContactFormData
 ): Promise<boolean> {
   try {
-    if (!SENDGRID_API_KEY) {
+    if (!transporter || !SMTP_FROM) {
       console.log(
-        "Kontakt forma – email nije poslat jer SENDGRID_API_KEY nije podešen. Podaci:",
+        "Kontakt forma – email nije poslat jer SMTP kredencijali nisu podešeni. Podaci:",
         formData
       );
       return true;
     }
-
-    const subject = `Novi kontakt sa sajta: ${formData.subject || "Kontakt"}`;
 
     const text = [
       `Ime i prezime: ${formData.name}`,
@@ -42,6 +53,8 @@ export async function sendContactEmail(
       "Poruka:",
       formData.message,
     ].join("\n");
+
+    const subject = `Novi kontakt sa sajta: ${formData.subject || "Kontakt"}`;
 
     const html = `
       <h2>Novi kontakt sa sajta AGR MULTIMEDIA</h2>
@@ -52,10 +65,10 @@ export async function sendContactEmail(
       <p style="white-space: pre-line;">${formData.message}</p>
     `;
 
-    await sgMail.send({
-      to: SENDGRID_TO_EMAIL,
-      from: SENDGRID_FROM_EMAIL,
-      replyTo: formData.email || SENDGRID_FROM_EMAIL,
+    await transporter.sendMail({
+      to: SMTP_TO,
+      from: SMTP_FROM,
+      replyTo: formData.email || SMTP_FROM,
       subject,
       text,
       html,
