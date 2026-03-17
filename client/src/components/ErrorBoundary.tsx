@@ -28,8 +28,13 @@ export class ErrorBoundary extends Component<Props, State> {
     if (this.state.hasError) {
       return this.props.fallback || (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="text-center p-8">
+          <div className="text-center p-8 max-w-xl">
             <h2 className="text-2xl font-bold text-gray-800 mb-4">Something went wrong</h2>
+            {this.state.error?.message && (
+              <p className="text-sm text-red-600 mb-3">
+                {this.state.error.message}
+              </p>
+            )}
             <p className="text-gray-600 mb-4">Please refresh the page to continue.</p>
             <button 
               onClick={() => window.location.reload()} 
