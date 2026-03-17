@@ -103,9 +103,9 @@ export interface SpecTranslations {
 
 const en: SpecTranslations = {
   hero: {
-    h1: 'Modern design, video and AI solutions for your brand.',
-    subheadline: 'I help small businesses and creators stand out with professional visuals, storytelling videos and smart AI-powered workflows.',
-    ctaPrimary: 'Request a free consultation',
+    h1: 'I help businesses grow with AI-powered content & websites',
+    subheadline: 'Web design, video content and AI solutions that bring real results.',
+    ctaPrimary: 'Get a free consultation',
     ctaSecondary: 'View portfolio',
     availableIn: 'Available in DE · EN · IT · SR · AL',
   },
@@ -248,9 +248,9 @@ const en: SpecTranslations = {
 
 const de: SpecTranslations = {
   hero: {
-    h1: 'Moderne Design-, Video- und KI-Lösungen für Ihr Unternehmen.',
-    subheadline: 'Ich helfe kleinen Unternehmen und Creators, mit professionellen Visuals, Storytelling-Videos und smarten KI-Workflows sichtbar zu werden.',
-    ctaPrimary: 'Kostenlose Beratung anfragen',
+    h1: 'Ich helfe Unternehmen mit AI-Content und Websites zu wachsen',
+    subheadline: 'Webdesign, Video und AI-Lösungen für echte Ergebnisse.',
+    ctaPrimary: 'Kostenlose Beratung',
     ctaSecondary: 'Portfolio ansehen',
     availableIn: 'Verfügbar in DE · EN · IT · SR · AL',
   },
@@ -393,9 +393,9 @@ const de: SpecTranslations = {
 
 const it: SpecTranslations = {
   hero: {
-    h1: 'Soluzioni moderne di design, video e AI per il tuo brand.',
-    subheadline: 'Aiuto piccole imprese e creator a distinguersi con visual professionali, video coinvolgenti e flussi di lavoro intelligenti basati sull\'AI.',
-    ctaPrimary: 'Richiedi una consulenza gratuita',
+    h1: 'Aiuto le aziende a crescere con contenuti e siti web basati sull\'AI',
+    subheadline: 'Web design, video e soluzioni AI che portano risultati concreti.',
+    ctaPrimary: 'Consulenza gratuita',
     ctaSecondary: 'Guarda il portfolio',
     availableIn: 'Disponibile in DE · EN · IT · SR · AL',
   },
@@ -538,9 +538,9 @@ const it: SpecTranslations = {
 
 const sr: SpecTranslations = {
   hero: {
-    h1: 'Moderna rešenja u dizajnu, videu i veštačkoj inteligenciji za vaš brend.',
-    subheadline: 'Pomažem malim biznisima i kreatorima da se istaknu uz profesionalne vizuale, upečatljive video priče i pametne AI procese.',
-    ctaPrimary: 'Zatraži besplatne konsultacije',
+    h1: 'Pomažem biznisima da rastu uz AI sadržaj i web stranice',
+    subheadline: 'Web dizajn, video sadržaj i AI rešenja koja donose rezultate.',
+    ctaPrimary: 'Besplatne konsultacije',
     ctaSecondary: 'Pogledaj portfolio',
     availableIn: 'Dostupno na DE · EN · IT · SR · AL',
   },
@@ -683,9 +683,9 @@ const sr: SpecTranslations = {
 
 const al: SpecTranslations = {
   hero: {
-    h1: 'Zgjidhje moderne në dizajn, video dhe AI për markën tuaj.',
-    subheadline: 'Ndihmoj biznese të vogla dhe krijues të dallohen me dizajn profesional, video rrëfyese dhe procese inteligjente të bazuara në AI.',
-    ctaPrimary: 'Kërko konsultë falas',
+    h1: 'Ndihmoj bizneset të rriten me përmbajtje dhe faqe web me AI',
+    subheadline: 'Web dizajn, video dhe zgjidhje AI që sjellin rezultate reale.',
+    ctaPrimary: 'Konsultë falas',
     ctaSecondary: 'Shiko portofolin',
     availableIn: 'I disponueshëm në DE · EN · IT · SR · AL',
   },
