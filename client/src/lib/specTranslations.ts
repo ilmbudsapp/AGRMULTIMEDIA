@@ -622,8 +622,8 @@ const it: SpecTranslations = {
 
 const sr: SpecTranslations = {
   hero: {
-    h1: 'Pomažem biznisima da rastu uz AI sadržaj i web stranice',
-    subheadline: 'Web dizajn, video sadržaj i AI rešenja koja donose rezultate.',
+    h1: 'AGR Multimedia – web dizajn i digitalni marketing za male biznise u Njemačkoj',
+    subheadline: 'Pravim moderne, brze i prodajno jasne web sajtove za male firme, freelancere i lokalne biznise koji žele više klijenata online.',
     ctaPrimary: 'Besplatne konsultacije',
     ctaSecondary: 'Pogledaj portfolio',
     availableIn: 'Dostupno na DE · EN · IT · SR · AL',
