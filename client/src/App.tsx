@@ -8,6 +8,7 @@ import { initGA } from "./lib/analytics";
 import { useAnalytics } from "./hooks/use-analytics";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import { ErrorBoundary } from "./components/ErrorBoundary";
+import MetaSEO from "./components/MetaSEO";
 import Home from "@/pages/home";
 import ServicesPage from "@/pages/ServicesPage";
 import AboutPage from "@/pages/AboutPage";
@@ -91,6 +92,7 @@ function App() {
             <ErrorBoundary>
               <TooltipProvider>
                 <div className="min-h-screen w-full max-w-[100vw] overflow-x-hidden">
+                  <MetaSEO />
                   <Router />
                 </div>
                 <Toaster />
