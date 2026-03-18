@@ -41,15 +41,15 @@ export default function Portfolio() {
   return (
     <section id="portfolio" className="relative py-24 bg-[#0f0f14] overflow-hidden">
       <div
-        className="absolute inset-0 z-0 opacity-[0.7]"
+        className="absolute inset-0 z-0 opacity-90"
         style={{
-          backgroundImage: `url(https://images.unsplash.com/photo-1561070791-2526d31cc5b5?auto=format&fit=crop&w=1920&q=80)`,
+          backgroundImage: `url(https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&w=1920&q=80)`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
         aria-hidden
       />
-      <div className="absolute inset-0 z-[1] bg-[#0f0f14]/30" aria-hidden />
+      <div className="absolute inset-0 z-[1] bg-[#0f0f14]/50" aria-hidden />
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight" data-testid="portfolio-title">
