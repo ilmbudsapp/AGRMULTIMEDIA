@@ -10,15 +10,34 @@ const SMTP_FROM =
   process.env.SMTP_FROM || (SMTP_USER ? `AGR MULTIMEDIA <${SMTP_USER}>` : "");
 const SMTP_TO = process.env.SMTP_TO || "agron6922@gmail.com";
 
+function setCors(res: VercelResponse) {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+}
+
 export default async function handler(
   req: VercelRequest,
   res: VercelResponse
 ) {
+  setCors(res);
+  if (req.method === "OPTIONS") {
+    return res.status(204).end();
+  }
   if (req.method !== "POST") {
     return res.status(405).json({ success: false, message: "Method not allowed" });
   }
 
-  const body = req.body || {};
+  let body: Record<string, unknown> = {};
+  if (typeof req.body === "object" && req.body !== null) {
+    body = req.body as Record<string, unknown>;
+  } else if (typeof req.body === "string") {
+    try {
+      body = JSON.parse(req.body) as Record<string, unknown>;
+    } catch {
+      return res.status(400).json({ success: false, message: "Invalid JSON body" });
+    }
+  }
   const name = String(body.name || "").trim();
   const email = String(body.email || "").trim();
   const message = String(body.message || "").trim();
@@ -45,6 +64,8 @@ export default async function handler(
     port: SMTP_PORT,
     secure: SMTP_SECURE,
     auth: { user: SMTP_USER, pass: SMTP_PASS },
+    connectionTimeout: 10000,
+    greetingTimeout: 10000,
   });
 
   const emailSubject = `Novi kontakt sa sajta: ${subject}`;
