@@ -118,7 +118,7 @@ export interface SpecTranslations {
 
 const en: SpecTranslations = {
   hero: {
-    h1: 'AGR Multimedia – Web Design & Digital Marketing for Small Businesses in Germany',
+    h1: 'AGR Multimedia – Web Design & Digital Marketing for Small Businesses',
     subheadline: 'I create modern, fast, and conversion-focused websites and digital marketing for small firms, freelancers, and local brands that want more quality inquiries online.',
     ctaPrimary: 'Get a free consultation',
     ctaSecondary: 'View portfolio',
@@ -243,7 +243,7 @@ const en: SpecTranslations = {
     cta: "Not sure which package fits your project? Send me a short message and I'll help you choose the right setup.",
   },
   aboutPage: {
-    intro: "I'm Agron Osmani, a freelance graphic designer, video editor and AI enthusiast based in Geislingen an der Steige, Germany. I create visuals, websites and videos that help small businesses and creators communicate clearly and look professional online.",
+    intro: "I'm Agron Osmani, a freelance graphic designer, video editor and AI enthusiast based in Geislingen an der Steige. I create visuals, websites and videos that help small businesses and creators communicate clearly and look professional online.",
     skillsTitle: 'Skills & tools',
     tools: [
       'Adobe Photoshop',
@@ -257,7 +257,7 @@ const en: SpecTranslations = {
     timelineTitle: 'Timeline',
     milestone1: '2015–2018 – First freelance projects in graphic design and photo editing.',
     milestone2: '2019–2022 – Expanded into video editing and motion graphics.',
-    milestone3: '2023–today – Combining design, video and AI for clients in Germany and abroad.',
+    milestone3: '2023–today – Combining design, video and AI for clients in Europe and abroad.',
     ctaTitle: "Want to know if I'm the right fit for your project? Send me a message and let's talk.",
     ctaButton: 'Send a message',
   },
@@ -279,14 +279,14 @@ const en: SpecTranslations = {
     submit: 'Send message',
     successMessage: "Thank you! I'll reply within 24 hours.",
     locationLabel: 'Location',
-    locationValue: 'Geislingen an der Steige, Germany',
+    locationValue: 'Geislingen an der Steige',
     socialTitle: 'Social',
   },
 };
 
 const de: SpecTranslations = {
   hero: {
-    h1: 'AGR Multimedia – Webdesign und digitales Marketing für kleine Unternehmen in Deutschland',
+    h1: 'AGR Multimedia – Webdesign und digitales Marketing für kleine Unternehmen',
     subheadline: 'Ich erstelle moderne, schnelle und klar verkaufsorientierte Websites sowie digitale Marketinglösungen für kleine Firmen, Freelancer und lokale Marken, die online mehr qualifizierte Anfragen möchten.',
     ctaPrimary: 'Kostenlose Beratung',
     ctaSecondary: 'Portfolio ansehen',
@@ -411,7 +411,7 @@ const de: SpecTranslations = {
     cta: 'Unsicher, welches Paket zu Ihrem Projekt passt? Schreiben Sie mir kurz – ich helfe bei der passenden Lösung.',
   },
   aboutPage: {
-    intro: 'Ich bin Agron Osmani, freiberuflicher Grafikdesigner, Video-Editor und KI-Enthusiast in Geislingen an der Steige, Deutschland. Ich erstelle Visuals, Websites und Videos, mit denen kleine Unternehmen und Creator klar kommunizieren und online professionell auftreten.',
+    intro: 'Ich bin Agron Osmani, freiberuflicher Grafikdesigner, Video-Editor und KI-Enthusiast in Geislingen an der Steige. Ich erstelle Visuals, Websites und Videos, mit denen kleine Unternehmen und Creator klar kommunizieren und online professionell auftreten.',
     skillsTitle: 'Skills & Tools',
     tools: [
       'Adobe Photoshop',
@@ -425,7 +425,7 @@ const de: SpecTranslations = {
     timelineTitle: 'Meilensteine',
     milestone1: '2015–2018 – Erste Freelance-Projekte in Grafikdesign und Fotobearbeitung.',
     milestone2: '2019–2022 – Ausweitung auf Video-Schnitt und Motion Graphics.',
-    milestone3: '2023–heute – Kombination aus Design, Video und KI für Kunden in Deutschland und international.',
+    milestone3: '2023–heute – Kombination aus Design, Video und KI für Kunden in Europa und international.',
     ctaTitle: 'Möchten Sie wissen, ob ich zu Ihrem Projekt passe? Schreiben Sie mir – wir sprechen darüber.',
     ctaButton: 'Nachricht senden',
   },
@@ -447,14 +447,14 @@ const de: SpecTranslations = {
     submit: 'Nachricht senden',
     successMessage: 'Vielen Dank! Ich antworte innerhalb von 24 Stunden.',
     locationLabel: 'Standort',
-    locationValue: 'Geislingen an der Steige, Deutschland',
+    locationValue: 'Geislingen an der Steige',
     socialTitle: 'Social',
   },
 };
 
 const it: SpecTranslations = {
   hero: {
-    h1: 'AGR Multimedia – Web design e digital marketing per piccole imprese in Germania',
+    h1: 'AGR Multimedia – Web design e digital marketing per piccole imprese',
     subheadline: 'Creo siti moderni, veloci e orientati alla conversione per piccole aziende, freelance e attività locali che vogliono più richieste di qualità online.',
     ctaPrimary: 'Consulenza gratuita',
     ctaSecondary: 'Guarda il portfolio',
@@ -579,7 +579,7 @@ const it: SpecTranslations = {
     cta: 'Non sei sicuro quale pacchetto si adatti al tuo progetto? Scrivimi e ti aiuto a scegliere la soluzione giusta.',
   },
   aboutPage: {
-    intro: 'Sono Agron Osmani, graphic designer, video editor e appassionato di AI con base a Geislingen an der Steige, Germania. Creo visual, siti e video che aiutano piccole imprese e creator a comunicare con chiarezza e a apparire professionali online.',
+    intro: 'Sono Agron Osmani, graphic designer, video editor e appassionato di AI con base a Geislingen an der Steige. Creo visual, siti e video che aiutano piccole imprese e creator a comunicare con chiarezza e a apparire professionali online.',
     skillsTitle: 'Competenze e strumenti',
     tools: [
       'Adobe Photoshop',
@@ -593,7 +593,7 @@ const it: SpecTranslations = {
     timelineTitle: 'Tappe',
     milestone1: '2015–2018 – Primi progetti da freelance in graphic design e fotoritocco.',
     milestone2: '2019–2022 – Espansione in video editing e motion graphics.',
-    milestone3: '2023–oggi – Combinazione di design, video e AI per clienti in Germania e all\'estero.',
+    milestone3: '2023–oggi – Combinazione di design, video e AI per clienti in Europa e all\'estero.',
     ctaTitle: 'Vuoi capire se sono la persona giusta per il tuo progetto? Scrivimi e ne parliamo.',
     ctaButton: 'Invia messaggio',
   },
@@ -615,14 +615,14 @@ const it: SpecTranslations = {
     submit: 'Invia messaggio',
     successMessage: 'Grazie! Risponderò entro 24 ore.',
     locationLabel: 'Dove sono',
-    locationValue: 'Geislingen an der Steige, Germania',
+    locationValue: 'Geislingen an der Steige',
     socialTitle: 'Social',
   },
 };
 
 const sr: SpecTranslations = {
   hero: {
-    h1: 'AGR Multimedia – web dizajn i digitalni marketing za male biznise u Njemačkoj',
+    h1: 'AGR Multimedia – web dizajn i digitalni marketing za male biznise',
     subheadline: 'Pravim moderne, brze i prodajno jasne web sajtove za male firme, freelancere i lokalne biznise koji žele više klijenata online.',
     ctaPrimary: 'Besplatne konsultacije',
     ctaSecondary: 'Pogledaj portfolio',
@@ -747,7 +747,7 @@ const sr: SpecTranslations = {
     cta: 'Niste sigurni koji paket je najbolji za vaš projekat? Pošaljite kratku poruku i pomoći ću vam da izaberete pravo rešenje.',
   },
   aboutPage: {
-    intro: 'Ja sam Agron Osmani, slobodni grafički dizajner, video editor i entuzijasta za AI sa sedištem u Geislingen an der Steige, Nemačka. Kreiram vizuale, sajtove i video koji pomažu malim biznisima i kreatorima da jasno komuniciraju i izgledaju profesionalno na mreži.',
+    intro: 'Ja sam Agron Osmani, slobodni grafički dizajner, video editor i entuzijasta za AI sa sedištem u Geislingen an der Steige. Kreiram vizuale, sajtove i video koji pomažu malim biznisima i kreatorima da jasno komuniciraju i izgledaju profesionalno na mreži.',
     skillsTitle: 'Veštine i alati',
     tools: [
       'Adobe Photoshop',
@@ -761,7 +761,7 @@ const sr: SpecTranslations = {
     timelineTitle: 'Vremenska linija',
     milestone1: '2015–2018 – Prvi freelance projekti u grafičkom dizajnu i obradi fotografija.',
     milestone2: '2019–2022 – Proširenje na video montažu i motion grafiku.',
-    milestone3: '2023–danas – Kombinacija dizajna, videa i AI-a za klijente u Nemačkoj i inostranstvu.',
+    milestone3: '2023–danas – Kombinacija dizajna, videa i AI-a za klijente u Evropi i inostranstvu.',
     ctaTitle: 'Želite da znate da li sam prava osoba za vaš projekat? Pošaljite poruku i razgovarajmo.',
     ctaButton: 'Pošalji poruku',
   },
@@ -783,14 +783,14 @@ const sr: SpecTranslations = {
     submit: 'Pošalji poruku',
     successMessage: 'Hvala! Odgovoriću u roku od 24 sata.',
     locationLabel: 'Lokacija',
-    locationValue: 'Geislingen an der Steige, Nemačka',
+    locationValue: 'Geislingen an der Steige',
     socialTitle: 'Društvene mreže',
   },
 };
 
 const al: SpecTranslations = {
   hero: {
-    h1: 'AGR Multimedia – Dizajn web dhe marketing digjital për biznese të vogla në Gjermani',
+    h1: 'AGR Multimedia – Dizajn web dhe marketing digjital për biznese të vogla',
     subheadline: 'Krijoj faqe moderne, të shpejta dhe të qarta me fokus në rezultate për biznese të vogla, freelancerë dhe marka lokale që duan më shumë kërkesa cilësore online.',
     ctaPrimary: 'Konsultë falas',
     ctaSecondary: 'Shiko portofolin',
@@ -915,7 +915,7 @@ const al: SpecTranslations = {
     cta: 'Nuk jeni i sigurt cili paket është i duhuri për projektin tuaj? Më dërgoni një mesazh të shkurtër dhe do t’ju ndihmoj të zgjidhni zgjidhjen e duhur.',
   },
   aboutPage: {
-    intro: 'Unë jam Agron Osmani, dizajner grafik i pavarur, editor video dhe entuziast AI me bazë në Geislingen an der Steige, Gjermani. Krijoj vizuale, faqe web dhe video që ndihmojnë bizneset e vogla dhe krijuesit të komunikojnë qartë dhe të duken profesionalisht online.',
+    intro: 'Unë jam Agron Osmani, dizajner grafik i pavarur, editor video dhe entuziast AI me bazë në Geislingen an der Steige. Krijoj vizuale, faqe web dhe video që ndihmojnë bizneset e vogla dhe krijuesit të komunikojnë qartë dhe të duken profesionalisht online.',
     skillsTitle: 'Aftësi dhe mjete',
     tools: [
       'Adobe Photoshop',
@@ -929,7 +929,7 @@ const al: SpecTranslations = {
     timelineTitle: 'Kronologjia',
     milestone1: '2015–2018 – Projektet e para si freelancer në dizajn grafik dhe redaktim fotosh.',
     milestone2: '2019–2022 – Zgjerim në montim video dhe grafikë lëvizje.',
-    milestone3: '2023–sot – Kombinim dizajni, video dhe AI për klientë në Gjermani dhe jashtë.',
+    milestone3: '2023–sot – Kombinim dizajni, video dhe AI për klientë në Evropë dhe jashtë.',
     ctaTitle: 'Dëshironi të dini nëse jam i përshtatshëm për projektin tuaj? Më dërgoni një mesazh dhe le të flasim.',
     ctaButton: 'Dërgo mesazh',
   },
@@ -951,7 +951,7 @@ const al: SpecTranslations = {
     submit: 'Dërgo mesazh',
     successMessage: 'Faleminderit! Do të përgjigjem brenda 24 orëve.',
     locationLabel: 'Vendndodhja',
-    locationValue: 'Geislingen an der Steige, Gjermani',
+    locationValue: 'Geislingen an der Steige',
     socialTitle: 'Rrjetet sociale',
   },
 };

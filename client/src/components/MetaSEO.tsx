@@ -15,11 +15,11 @@ export default function MetaSEO() {
     const description = tSpec.hero.subheadline;
 
     const keywordsByLang: Record<string, string> = {
-      sr: "web dizajn Njemačka, web dizajn za male biznise, digitalni marketing za male biznise, izrada web sajta Njemačka, AGR Multimedia",
-      en: "web design Germany, web design for small businesses, digital marketing for small businesses, business website Germany, AGR Multimedia",
-      de: "Webdesign Deutschland, Webdesign für kleine Unternehmen, digitales Marketing für kleine Unternehmen, Website erstellen Deutschland, AGR Multimedia",
-      it: "web design Germania, web design per piccole imprese, digital marketing per piccole imprese, sito web Germania, AGR Multimedia",
-      al: "dizajn web Gjermani, dizajn web për biznese të vogla, marketing digjital për biznese të vogla, faqe interneti Gjermani, AGR Multimedia",
+      sr: "web dizajn, web dizajn za male biznise, digitalni marketing za male biznise, izrada web sajta, online marketing, AGR Multimedia",
+      en: "web design, web design for small businesses, digital marketing for small businesses, website creation, online marketing, AGR Multimedia",
+      de: "webdesign, webdesign für kleine Unternehmen, digitales Marketing für kleine Unternehmen, Website erstellen, Online Marketing, AGR Multimedia",
+      it: "web design, web design per piccole imprese, digital marketing per piccole imprese, creazione siti web, marketing online, AGR Multimedia",
+      al: "dizajn web, dizajn web për biznese të vogla, marketing digjital për biznese të vogla, krijim faqesh, marketing online, AGR Multimedia",
     };
 
     const keywords = keywordsByLang[currentLanguage] ?? keywordsByLang.sr;

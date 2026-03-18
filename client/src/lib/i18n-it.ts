@@ -350,7 +350,7 @@ export const itTranslations: Translations = {
     contact: "Contatti",
       phone: "+49 1556 7204598",
     email: "agron6922@gmail.com",
-    location: "Geislingen an der Steige, Germania",
+    location: "Geislingen an der Steige",
     copyright: "© 2026 MULTIMEDIA AGRONDESIGN. Tutti i diritti riservati.",
     privacy: "Privacy",
     terms: "Termini",
@@ -365,7 +365,7 @@ export const itTranslations: Translations = {
       company: {
         title: "AGRONDESIGN",
         owner: "Titolare: Agron Osmani",
-        address: "Luise-Hainlen-Weg 4/4\n73312 Geislingen an der Steige\nGermania"
+        address: "Luise-Hainlen-Weg 4/4\n73312 Geislingen an der Steige"
       },
       contact: {
         title: "Contatto",
