@@ -10,18 +10,8 @@ export default function Testimonials() {
   ];
 
   return (
-    <section id="testimonials" className="relative py-20 md:py-28 bg-[#0f0f14] overflow-hidden">
-      <div
-        className="absolute inset-0 z-0 opacity-90"
-        style={{
-          backgroundImage: `url(https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&w=1920&q=80)`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-        aria-hidden
-      />
-      <div className="absolute inset-0 z-[1] bg-[#0f0f14]/50" aria-hidden />
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="testimonials" className="py-20 md:py-28 bg-[#0f0f14]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">
           {tSpec.testimonials.heading}
         </h2>
@@ -29,7 +19,7 @@ export default function Testimonials() {
           {cards.map((card, i) => (
             <blockquote
               key={i}
-              className="p-8 rounded-2xl bg-white/5 border border-white/10"
+              className="p-8 rounded-2xl glass-card"
             >
               <Quote className="w-10 h-10 text-white/30 mb-4" />
               <p className="text-gray-300 leading-relaxed mb-6">&ldquo;{card.quote}&rdquo;</p>

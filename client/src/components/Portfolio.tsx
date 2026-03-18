@@ -39,18 +39,8 @@ export default function Portfolio() {
     : portfolioItems.filter(item => item.category === activeFilter);
 
   return (
-    <section id="portfolio" className="relative py-24 bg-[#0f0f14] overflow-hidden">
-      <div
-        className="absolute inset-0 z-0 opacity-90"
-        style={{
-          backgroundImage: `url(https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&w=1920&q=80)`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-        aria-hidden
-      />
-      <div className="absolute inset-0 z-[1] bg-[#0f0f14]/50" aria-hidden />
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="portfolio" className="py-24 bg-[#0f0f14]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight" data-testid="portfolio-title">
             {tSpec.featuredPortfolio.heading}
@@ -78,7 +68,7 @@ export default function Portfolio() {
           {filteredItems.map((item) => (
             <div
               key={item.id}
-              className="group relative overflow-hidden rounded-2xl bg-white/5 border border-white/10 hover:border-white/20 transition-all duration-300"
+              className="group relative overflow-hidden rounded-2xl glass-card transition-all duration-300"
               data-testid={`portfolio-item-${item.id}`}
             >
               <img 
