@@ -5,8 +5,8 @@ export default function FeaturedProjects() {
   const projects = tSpec.heroProjects.projects;
 
   return (
-    <section className="py-16 sm:py-20 bg-[#f0eff7]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative py-16 sm:py-20 bg-light-section">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10 sm:mb-12">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-navy tracking-tight">
             {tSpec.heroProjects.heading}
