@@ -236,7 +236,8 @@ export interface Translations {
   contact: {
     title: string;
     subtitle: string;
-    form: {
+    instruction: string;
+    form?: {
       title: string;
       name: string;
       namePlaceholder: string;
@@ -1037,8 +1038,9 @@ export const translations: Record<Language, Translations> = {
       }
     },
     contact: {
-      title: "Besplatna AI strategija rasta za tvoj biznis",
-      subtitle: "Analiziraću tvoje sadržaje & web stranicu i dati ti konkretna poboljšanja za više poseta, upita i prodaje.",
+      title: "Kontakt",
+      subtitle: "Stupite u kontakt direktno putem telefona ili emaila.",
+      instruction: "Za upite nas kontaktirajte putem telefona ili emaila. Molimo navedite kratak opis vašeg projekta i rokova. Odgovaramo u roku od 24 sata.",
       form: {
         title: "Pošaljite poruku",
         name: "Ime i prezime",
@@ -2005,8 +2007,9 @@ export const translations: Record<Language, Translations> = {
       }
     },
     contact: {
-      title: "Get a Free AI Growth Strategy for Your Business",
-      subtitle: "I will audit your current content & website and give you specific improvements you can implement for more traffic, leads and sales.",
+      title: "Contact",
+      subtitle: "Get in touch directly via phone or email.",
+      instruction: "For inquiries, please contact us directly via phone or email. Please include a brief description of your project and timeline. We respond within 24 hours.",
       form: {
         title: "Send Message",
         name: "Full Name",
@@ -2897,8 +2900,9 @@ export const translations: Record<Language, Translations> = {
       }
     },
     contact: {
-      title: "Kostenlose AI‑Wachstumsstrategie für dein Unternehmen",
-      subtitle: "Ich analysiere deine Inhalte & Website und gebe dir konkrete Verbesserungen, die mehr Reichweite, Leads und Umsatz bringen.",
+      title: "Kontakt",
+      subtitle: "Nehmen Sie direkt per Telefon oder E-Mail Kontakt auf.",
+      instruction: "Für Anfragen kontaktieren Sie uns bitte direkt per Telefon oder E-Mail. Bitte geben Sie eine kurze Beschreibung Ihres Projekts und des Zeitplans an. Wir antworten innerhalb von 24 Stunden.",
       form: {
         title: "Nachricht senden",
         name: "Vollständiger Name",
@@ -3787,8 +3791,9 @@ export const translations: Record<Language, Translations> = {
       }
     },
     contact: {
-      title: "Merr një strategji falas të rritjes me AI për biznesin tënd",
-      subtitle: "Do të analizoj përmbajtjen & faqen tënde dhe do të të jap përmirësime konkrete për më shumë vizita, kliente dhe shitje.",
+      title: "Kontakt",
+      subtitle: "Lidhuni me ne direkt përmes telefonit ose emailit.",
+      instruction: "Për pyetje, na kontaktoni direkt me telefon ose email. Ju lutemi përfshini një përshkrim të shkurtër të projektit dhe afateve. Përgjigjemi brenda 24 orëve.",
       form: {
         title: "Dërgo Mesazh",
         name: "Emri i Plotë",

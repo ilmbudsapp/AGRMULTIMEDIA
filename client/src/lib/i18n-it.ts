@@ -292,8 +292,9 @@ export const itTranslations: Translations = {
     }
   },
   contact: {
-    title: "Ottieni una strategia di crescita AI gratuita per il tuo business",
-    subtitle: "Analizzerò i tuoi contenuti & sito web e ti fornirò miglioramenti specifici per aumentare traffico, lead e vendite.",
+    title: "Contatti",
+    subtitle: "Contattaci direttamente per telefono o email.",
+    instruction: "Per richieste, contattaci direttamente per telefono o email. Includi una breve descrizione del tuo progetto e dei tempi. Rispondiamo entro 24 ore.",
     form: {
       title: "Invia messaggio",
       name: "Nome completo",
