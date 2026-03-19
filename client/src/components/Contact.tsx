@@ -42,11 +42,11 @@ export default function Contact() {
             <div className="bg-electric-blue/20 w-12 h-12 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-electric-blue/30 transition-colors">
               <Mail className="text-electric-blue w-5 h-5" />
             </div>
-            <div className="text-left min-w-0">
+            <div className="text-left">
               <p className="text-xs uppercase tracking-wider text-gray-400 font-medium">
                 {t.contact.info.email}
               </p>
-              <p className="text-white font-bold text-lg truncate">{EMAIL}</p>
+              <p className="text-white font-bold text-sm sm:text-lg whitespace-nowrap">{EMAIL}</p>
             </div>
           </a>
 
@@ -58,11 +58,11 @@ export default function Contact() {
             <div className="bg-electric-blue/20 w-12 h-12 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-electric-blue/30 transition-colors">
               <Phone className="text-electric-blue w-5 h-5" />
             </div>
-            <div className="text-left min-w-0">
+            <div className="text-left">
               <p className="text-xs uppercase tracking-wider text-gray-400 font-medium">
                 {t.contact.info.phone}
               </p>
-              <p className="text-white font-bold text-lg truncate">{PHONE}</p>
+              <p className="text-white font-bold text-sm sm:text-lg whitespace-nowrap">{PHONE}</p>
             </div>
           </a>
 
@@ -76,11 +76,11 @@ export default function Contact() {
             <div className="bg-electric-blue/20 w-12 h-12 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-electric-blue/30 transition-colors">
               <MapPin className="text-electric-blue w-5 h-5" />
             </div>
-            <div className="text-left min-w-0">
+            <div className="text-left">
               <p className="text-xs uppercase tracking-wider text-gray-400 font-medium">
                 {t.contact.info.title}
               </p>
-              <p className="text-white font-bold text-lg truncate">{t.contact.info.location}</p>
+              <p className="text-white font-bold text-sm sm:text-lg whitespace-nowrap">{t.contact.info.location}</p>
             </div>
           </a>
         </div>
