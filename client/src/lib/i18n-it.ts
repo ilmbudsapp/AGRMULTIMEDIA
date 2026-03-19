@@ -318,7 +318,7 @@ export const itTranslations: Translations = {
       title: "Informazioni di contatto",
       phone: "Telefono",
       email: "Email",
-      location: "Posizione"
+      location: "Geislingen an der Steige"
     },
     social: {
       title: "Seguici"

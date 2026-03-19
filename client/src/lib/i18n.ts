@@ -1069,7 +1069,7 @@ export const translations: Record<Language, Translations> = {
         title: "Kontakt informacije",
         phone: "Telefon",
         email: "Email",
-        location: "Lokacija"
+        location: "Geislingen an der Steige"
       },
       social: {
         title: "Pratite nas"
@@ -2043,7 +2043,7 @@ export const translations: Record<Language, Translations> = {
         title: "Contact Information",
         phone: "Phone",
         email: "Email",
-        location: "Location"
+        location: "Geislingen an der Steige"
       },
       social: {
         title: "Follow Us"
@@ -2941,7 +2941,7 @@ export const translations: Record<Language, Translations> = {
         title: "Kontaktinformationen",
         phone: "Telefon",
         email: "E-Mail",
-        location: "Standort"
+        location: "Geislingen an der Steige"
       },
       social: {
         title: "Folgen Sie uns"
@@ -3837,7 +3837,7 @@ export const translations: Record<Language, Translations> = {
         title: "Informacione Kontakti",
         phone: "Telefon",
         email: "Email",
-        location: "Lokacioni"
+        location: "Geislingen an der Steige"
       },
       social: {
         title: "Na Ndiqni"
