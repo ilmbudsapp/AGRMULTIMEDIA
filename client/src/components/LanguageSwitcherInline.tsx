@@ -6,6 +6,12 @@ export default function LanguageSwitcherInline() {
   const { currentLanguage, setLanguage } = useLanguage();
   const displayLang = currentLanguage === "al" ? "al" : currentLanguage === "sq" ? "al" : currentLanguage;
 
+  const setLangInUrl = (lang: string) => {
+    const url = new URL(window.location.href);
+    url.searchParams.set("lang", lang);
+    window.history.replaceState({}, "", url.toString());
+  };
+
   return (
     <div className="flex items-center gap-1 text-sm font-medium">
       {specLangCodes.map((code, i) => {
@@ -14,7 +20,10 @@ export default function LanguageSwitcherInline() {
           <span key={code} className="flex items-center gap-1">
             <button
               type="button"
-              onClick={() => setLanguage(code as Language)}
+              onClick={() => {
+                setLangInUrl(code);
+                setLanguage(code as Language);
+              }}
               className={`transition-colors duration-200 ${
                 isActive
                   ? "text-white font-semibold"

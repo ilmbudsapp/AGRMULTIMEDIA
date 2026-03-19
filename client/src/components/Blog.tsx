@@ -59,6 +59,8 @@ export default function Blog() {
               <img 
                 src={post.image} 
                 alt={post.title} 
+                loading="lazy"
+                decoding="async"
                 className="w-full h-48 object-cover"
                 data-testid={`blog-post-image-${post.id}`}
               />

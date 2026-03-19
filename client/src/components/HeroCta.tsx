@@ -1,14 +1,12 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 
+const EMAIL = "agron6922@gmail.com";
+const EMAIL_LINK = `mailto:${EMAIL}`;
+const WHATSAPP_PHONE = "+4915567204598";
+const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_PHONE.replace(/\D/g, "")}`;
+
 export default function HeroCta() {
   const { tSpec } = useLanguage();
-
-  const scrollToContact = () => {
-    const el = document.getElementById("contact");
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <section className="relative py-16 sm:py-20 bg-light-section border-y border-gray-200/60">
@@ -22,14 +20,23 @@ export default function HeroCta() {
               {tSpec.heroCta.text}
             </p>
           </div>
-          <div className="w-full md:w-auto flex justify-center md:justify-end">
-            <button
-              type="button"
-              onClick={scrollToContact}
-              className="w-full md:w-auto inline-flex items-center justify-center px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-navy text-white font-semibold text-sm sm:text-base shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
-            >
-              {tSpec.heroCta.button}
-            </button>
+          <div className="w-full md:w-auto flex flex-col sm:flex-row gap-3 justify-center md:justify-end">
+            <a href={EMAIL_LINK} className="w-full sm:w-auto">
+              <button
+                type="button"
+                className="w-full sm:w-auto inline-flex items-center justify-center px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-navy text-white font-semibold text-sm sm:text-base shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
+              >
+                {tSpec.heroCta.button}
+              </button>
+            </a>
+            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+              <button
+                type="button"
+                className="w-full sm:w-auto inline-flex items-center justify-center px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-white/5 text-white font-semibold text-sm sm:text-base border border-white/10 shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
+              >
+                WhatsApp
+              </button>
+            </a>
           </div>
         </div>
       </div>

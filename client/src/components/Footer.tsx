@@ -1,9 +1,13 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Link, useLocation } from "wouter";
+import { Facebook, Instagram, Linkedin, MessageCircle, Mail as MailIcon } from "lucide-react";
 
 const PHONE = "+49 1556 7204598";
 const FACEBOOK_URL = "https://www.facebook.com/halidosmani74";
 const INSTAGRAM_URL = "https://www.instagram.com/agrondesign/";
+const LINKEDIN_URL = "https://www.linkedin.com/in/agron-osmani-228947266/";
+const WHATSAPP_LINK = "https://wa.me/4915567204598";
+const EMAIL_LINK = "mailto:agron6922@gmail.com";
 
 export default function Footer() {
   const { t, tSpec } = useLanguage();
@@ -30,9 +34,27 @@ export default function Footer() {
           <div data-testid="footer-brand">
             <div className="text-xl font-bold text-white mb-4">AGR Multimedia</div>
             <p className="text-gray-400 mb-6 text-sm">{t.footer.brand}</p>
-            <div className="flex gap-4">
-              <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors" aria-label="Facebook">Facebook</a>
-              <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors" aria-label="Instagram">Instagram</a>
+            <div className="flex flex-wrap gap-3">
+              <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2" aria-label="Facebook">
+                <Facebook className="w-4 h-4" />
+                <span className="text-sm">Facebook</span>
+              </a>
+              <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2" aria-label="Instagram">
+                <Instagram className="w-4 h-4" />
+                <span className="text-sm">Instagram</span>
+              </a>
+              <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2" aria-label="LinkedIn">
+                <Linkedin className="w-4 h-4" />
+                <span className="text-sm">LinkedIn</span>
+              </a>
+              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2" aria-label="WhatsApp">
+                <MessageCircle className="w-4 h-4" />
+                <span className="text-sm">WhatsApp</span>
+              </a>
+              <a href={EMAIL_LINK} className="text-gray-400 hover:text-white transition-colors flex items-center gap-2" aria-label="Email">
+                <MailIcon className="w-4 h-4" />
+                <span className="text-sm">Email</span>
+              </a>
             </div>
           </div>
 

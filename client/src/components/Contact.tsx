@@ -1,4 +1,4 @@
-import { Phone, Mail } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const PHONE = "+49 155 67204598";
@@ -8,6 +8,7 @@ const EMAIL_LINK = "mailto:agron6922@gmail.com";
 
 export default function Contact() {
   const { t } = useLanguage();
+  const mapsLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(t.contact.info.location)}`;
 
   return (
     <section id="contact" className="py-24 bg-[#0a0a0f]">
@@ -32,7 +33,23 @@ export default function Contact() {
           {t.contact.instruction}
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-6 sm:gap-10 justify-center items-center">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 justify-center items-center">
+          <a
+            href={EMAIL_LINK}
+            className="flex items-center gap-4 bg-white/5 border border-white/10 rounded-2xl px-6 py-4 justify-center lg:justify-start hover:bg-white/10 hover:border-white/20 transition-all duration-300 group"
+            data-testid="contact-email"
+          >
+            <div className="bg-electric-blue/20 w-12 h-12 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-electric-blue/30 transition-colors">
+              <Mail className="text-electric-blue w-5 h-5" />
+            </div>
+            <div className="text-left">
+              <p className="text-xs uppercase tracking-wider text-gray-400 font-medium">
+                {t.contact.info.email}
+              </p>
+              <p className="text-white font-bold text-lg break-all">{EMAIL}</p>
+            </div>
+          </a>
+
           <a
             href={PHONE_LINK}
             className="flex items-center gap-4 bg-white/5 border border-white/10 rounded-2xl px-6 py-4 w-full sm:w-auto justify-center sm:justify-start hover:bg-white/10 hover:border-white/20 transition-all duration-300 group"
@@ -50,33 +67,30 @@ export default function Contact() {
           </a>
 
           <a
-            href={EMAIL_LINK}
+            href={mapsLink}
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-4 bg-white/5 border border-white/10 rounded-2xl px-6 py-4 w-full sm:w-auto justify-center sm:justify-start hover:bg-white/10 hover:border-white/20 transition-all duration-300 group"
-            data-testid="contact-email"
+            data-testid="contact-location"
           >
             <div className="bg-electric-blue/20 w-12 h-12 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-electric-blue/30 transition-colors">
-              <Mail className="text-electric-blue w-5 h-5" />
+              <MapPin className="text-electric-blue w-5 h-5" />
             </div>
             <div className="text-left">
               <p className="text-xs uppercase tracking-wider text-gray-400 font-medium">
-                {t.contact.info.email}
+                {t.contact.info.title}
               </p>
-              <p className="text-white font-bold text-lg break-all">{EMAIL}</p>
+              <p className="text-white font-bold text-lg break-all">{t.contact.info.location}</p>
             </div>
           </a>
         </div>
-
-        <div className="mt-10">
-          <p className="text-gray-400 text-base leading-relaxed" data-testid="contact-location">
-            <span className="text-white/70 font-semibold">{t.contact.info.title}:</span>{" "}
-            <span className="text-gray-300">{t.contact.info.location}</span>
-          </p>
-          {t.contact.form?.trustLine && (
-            <p className="text-gray-500 text-sm mt-3" data-testid="contact-trust-line">
+        {t.contact.form?.trustLine && (
+          <div className="mt-8">
+            <p className="text-gray-500 text-sm" data-testid="contact-trust-line">
               {t.contact.form.trustLine}
             </p>
-          )}
-        </div>
+          </div>
+        )}
       </div>
     </section>
   );

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://agrmultimedia.eu/</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://agrmultimedia.eu/services</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://agrmultimedia.eu/portfolio</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://agrmultimedia.eu/about</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://agrmultimedia.eu/contact</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://agrmultimedia.eu/blog</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <!-- Existing starter blog posts -->
+  <url>
+    <loc>https://agrmultimedia.eu/blog/digital-marketing-trends-2024</loc>
+  </url>
+  <url>
+    <loc>https://agrmultimedia.eu/blog/website-conversion-optimization</loc>
+  </url>
+  <url>
+    <loc>https://agrmultimedia.eu/blog/video-marketing-power</loc>
+  </url>
+  <url>
+    <loc>https://agrmultimedia.eu/privacy</loc>
+  </url>
+  <url>
+    <loc>https://agrmultimedia.eu/terms</loc>
+  </url>
+  <url>
+    <loc>https://agrmultimedia.eu/cookies</loc>
+  </url>
+  <url>
+    <loc>https://agrmultimedia.eu/impresum</loc>
+  </url>
+</urlset>
+

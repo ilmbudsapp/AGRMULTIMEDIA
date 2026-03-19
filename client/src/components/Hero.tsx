@@ -4,6 +4,8 @@ import { Link } from "wouter";
 
 // Hero background: local image – AI workspace with brain graphic, screens, tech.
 const HERO_IMAGE = "/hero-background.png";
+const EMAIL = "agron6922@gmail.com";
+const EMAIL_LINK = `mailto:${EMAIL}`;
 
 export default function Hero() {
   const { tSpec } = useLanguage();
@@ -131,14 +133,14 @@ export default function Hero() {
           className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center animate-fade-in-up w-full sm:w-auto max-w-sm sm:max-w-none mx-auto"
           style={{ animationDelay: "0.2s" }}
         >
-          <Link href="/#contact" className="w-full sm:w-auto">
+          <a href={EMAIL_LINK} className="w-full sm:w-auto">
             <button
               className="w-full sm:w-auto min-h-[48px] sm:min-h-0 bg-white text-[#0a0a0f] px-6 sm:px-8 py-4 rounded-2xl text-base sm:text-lg font-bold overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl"
               data-testid="hero-cta-primary"
             >
               {tSpec.hero.ctaPrimary}
             </button>
-          </Link>
+          </a>
           <button
             onClick={() => scrollToSection("portfolio")}
             className="w-full sm:w-auto min-h-[48px] sm:min-h-0 glass-effect text-white px-6 sm:px-8 py-4 rounded-2xl text-base sm:text-lg font-bold border-white/20 hover:bg-white/15 hover:border-white/30 transition-all duration-300"

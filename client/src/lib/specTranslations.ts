@@ -13,6 +13,12 @@ export interface SpecTranslations {
     ctaSecondary: string;
     availableIn: string;
   };
+  // SEO (overrides for title/meta/OG/Twitter)
+  seo: {
+    title: string;
+    description: string;
+    keywords: string;
+  };
   // Featured projects under hero
   heroProjects: {
     heading: string;
@@ -122,11 +128,18 @@ export interface SpecTranslations {
 
 const en: SpecTranslations = {
   hero: {
-    h1: 'AGR Multimedia – Web Design & Digital Marketing for Small Businesses',
+    h1: 'Web Design Geislingen • Graphics • AI Content • Baden-Württemberg',
     subheadline: 'I create modern, fast, and conversion-focused websites and digital marketing for small firms, freelancers, and local brands that want more quality inquiries online.',
     ctaPrimary: 'Get a free consultation',
     ctaSecondary: 'View portfolio',
     availableIn: 'Available in DE · EN · IT · SR · AL',
+  },
+  seo: {
+    title: "AGR Multimedia | Web Design, Graphics & AI for Small Businesses - Geislingen",
+    description:
+      "Professional websites, graphic design, video & AI content for small businesses in Geislingen (Baden-Württemberg). Free consultation! agron6922@gmail.com",
+    keywords:
+      "web design geislingen, graphic design geislingen, ai content, digital marketing small business, website erstellen, agr multimedia",
   },
   heroProjects: {
     heading: 'Featured projects',
@@ -297,11 +310,18 @@ const en: SpecTranslations = {
 
 const de: SpecTranslations = {
   hero: {
-    h1: 'AGR Multimedia – Webdesign und digitales Marketing für kleine Unternehmen',
+    h1: 'Webdesign Geislingen • Grafik • KI-Inhalte • Baden-Württemberg',
     subheadline: 'Ich erstelle moderne, schnelle und klar verkaufsorientierte Websites sowie digitale Marketinglösungen für kleine Firmen, Freelancer und lokale Marken, die online mehr qualifizierte Anfragen möchten.',
     ctaPrimary: 'Kostenlose Beratung',
     ctaSecondary: 'Portfolio ansehen',
     availableIn: 'Verfügbar in DE · EN · IT · SR · AL',
+  },
+  seo: {
+    title: "AGR Multimedia | Webdesign, Grafik & KI für Kleinunternehmen - Geislingen",
+    description:
+      "Professionelle Websites, Grafikdesign, Video & KI-Content für Kleinunternehmen in Geislingen (Baden-Württemberg). Kostenlose Beratung! agron6922@gmail.com",
+    keywords:
+      "webdesign geislingen, grafikdesign geislingen, ki inhalte, digitales marketing kleinunternehmen, website erstellen, agr multimedia",
   },
   heroProjects: {
     heading: 'Ausgewählte Projekte',
@@ -472,11 +492,18 @@ const de: SpecTranslations = {
 
 const it: SpecTranslations = {
   hero: {
-    h1: 'AGR Multimedia – Web design e digital marketing per piccole imprese',
+    h1: 'Web Design Geislingen • Grafica • Contenuti AI • Baden-Württemberg',
     subheadline: 'Creo siti moderni, veloci e orientati alla conversione per piccole aziende, freelance e attività locali che vogliono più richieste di qualità online.',
     ctaPrimary: 'Consulenza gratuita',
     ctaSecondary: 'Guarda il portfolio',
     availableIn: 'Disponibile in DE · EN · IT · SR · AL',
+  },
+  seo: {
+    title: "AGR Multimedia | Web Design, Grafica & AI per Piccole Imprese - Geislingen",
+    description:
+      "Siti web professionali, grafica, video e contenuti AI per piccole imprese a Geislingen (Baden-Württemberg). Consulenza gratuita! agron6922@gmail.com",
+    keywords:
+      "web design geislingen, grafica geislingen, contenuti ai, digital marketing piccole imprese, sito web, agr multimedia",
   },
   heroProjects: {
     heading: 'Progetti in evidenza',
@@ -647,11 +674,18 @@ const it: SpecTranslations = {
 
 const sr: SpecTranslations = {
   hero: {
-    h1: 'AGR Multimedia – web dizajn i digitalni marketing za male biznise',
+    h1: 'Web Dizajn Geislingen • Grafika • AI Sadržaj • Baden-Württemberg',
     subheadline: 'Pravim moderne, brze i prodajno jasne web sajtove za male firme, freelancere i lokalne biznise koji žele više klijenata online.',
     ctaPrimary: 'Besplatne konsultacije',
     ctaSecondary: 'Pogledaj portfolio',
     availableIn: 'Dostupno na DE · EN · IT · SR · AL',
+  },
+  seo: {
+    title: "AGR Multimedia | Web Dizajn, Grafika & AI za Mala Preduzeća - Geislingen",
+    description:
+      "Profesionalni web sajtovi, grafički dizajn, video i AI sadržaj za mala preduzeća u Geislingenu (Baden-Württemberg). Besplatne konsultacije! agron6922@gmail.com",
+    keywords:
+      "web dizajn geislingen, grafički dizajn geislingen, ai sadržaj, digitalni marketing mala preduzeća, izrada web sajta, agr multimedia",
   },
   heroProjects: {
     heading: 'Izdvojeni projekti',
@@ -822,11 +856,18 @@ const sr: SpecTranslations = {
 
 const al: SpecTranslations = {
   hero: {
-    h1: 'AGR Multimedia – Dizajn web dhe marketing digjital për biznese të vogla',
+    h1: 'Web Dizajn Geislingen • Grafikë • Përmbajtje AI • Baden-Württemberg',
     subheadline: 'Krijoj faqe moderne, të shpejta dhe të qarta me fokus në rezultate për biznese të vogla, freelancerë dhe marka lokale që duan më shumë kërkesa cilësore online.',
     ctaPrimary: 'Konsultë falas',
     ctaSecondary: 'Shiko portofolin',
     availableIn: 'I disponueshëm në DE · EN · IT · SR · AL',
+  },
+  seo: {
+    title: "AGR Multimedia | Web Dizajn, Grafikë & AI për Biznese të Vogla - Geislingen",
+    description:
+      "Faqe web profesionale, dizajn grafik, video dhe përmbajtje AI për biznese të vogla në Geislingen (Baden-Württemberg). Konsultë falas! agron6922@gmail.com",
+    keywords:
+      "dizajn web geislingen, dizajn grafik geislingen, përmbajtje ai, marketing digjital për biznese të vogla, faqe interneti, agr multimedia",
   },
   heroProjects: {
     heading: 'Projektet e veçuara',

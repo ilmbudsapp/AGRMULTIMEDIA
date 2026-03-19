@@ -16,6 +16,13 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
 
   useEffect(() => {
     try {
+      const params = new URLSearchParams(window.location.search);
+      const paramLang = params.get("lang");
+      if (paramLang && ["sr", "en", "de", "it", "al", "sq"].includes(paramLang)) {
+        setCurrentLanguage(paramLang === "sq" ? "al" : (paramLang as Language));
+        return;
+      }
+
       // Load language from localStorage or browser preference
       const saved = localStorage.getItem('preferred-language') as Language;
       if (saved && ['sr', 'en', 'de', 'sq', 'it', 'al'].includes(saved)) {
