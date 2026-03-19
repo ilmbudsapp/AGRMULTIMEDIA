@@ -39,6 +39,8 @@ export interface SpecTranslations {
   };
   // Services preview (4 cards on home)
   servicesPreview: {
+    title: string;
+    subtitle: string;
     webUi: { title: string; description: string };
     graphicBranding: { title: string; description: string };
     videoMotion: { title: string; description: string };
@@ -59,6 +61,7 @@ export interface SpecTranslations {
   // Why work with me
   whyMe: {
     heading: string;
+    subtitle: string;
     benefit1: string;
     benefit2: string;
     benefit3: string;
@@ -67,6 +70,7 @@ export interface SpecTranslations {
   // Testimonials
   testimonials: {
     heading: string;
+    subtitle: string;
     card1: { quote: string; author: string; role: string };
     card2: { quote: string; author: string; role: string };
     card3: { quote: string; author: string; role: string };
@@ -156,6 +160,9 @@ const en: SpecTranslations = {
     contact: 'Contact',
   },
   servicesPreview: {
+    title: 'Services that help your business grow',
+    subtitle:
+      'From web design to digital marketing, I build clear, conversion-focused experiences for small businesses and creators. You get strategy, fast execution, and multilingual communication—so your website turns visitors into inquiries.',
     videoMotion: {
       title: 'AI Content & Video',
       description: 'Short-form videos, AI-generated content and social visuals for your brand.',
@@ -186,6 +193,8 @@ const en: SpecTranslations = {
   },
   whyMe: {
     heading: 'Why work with me',
+    subtitle:
+      'You need a website and marketing that look professional and generate real results. I combine design, video and AI-enhanced workflows for a clean process, reliable delivery, and clear outcomes.',
     benefit1: 'Multilingual communication: I speak German, English, Italian, Serbian and Albanian.',
     benefit2: 'Specialized in small businesses and creators who need fast and reliable delivery.',
     benefit3: 'End-to-end support: from first idea to final website, design or video.',
@@ -193,6 +202,8 @@ const en: SpecTranslations = {
   },
   testimonials: {
     heading: 'Client feedback',
+    subtitle:
+      'Honest impressions from clients who wanted modern visuals and marketing materials—without confusion, and with on-time delivery.',
     card1: {
       quote: 'Agron delivered exactly what we needed. Professional, fast, and great to work with. We will definitely hire again.',
       author: 'Placeholder Client',
@@ -324,6 +335,9 @@ const de: SpecTranslations = {
     contact: 'Kontakt',
   },
   servicesPreview: {
+    title: 'Leistungen, die Ergebnisse bringen',
+    subtitle:
+      'Von Webdesign bis digitalem Marketing erstelle ich klare, conversion-starke Auftritte für kleine Unternehmen und Kreative. Sie erhalten Strategie, schnelle Umsetzung und mehrsprachige Kommunikation—damit Ihre Website Anfragen erzeugt.',
     videoMotion: {
       title: 'AI Content & Video',
       description: 'Kurzvideos, AI-generierte Inhalte und Visuals für Ihre Social-Media-Kanäle.',
@@ -354,6 +368,8 @@ const de: SpecTranslations = {
   },
   whyMe: {
     heading: 'Warum mit mir arbeiten',
+    subtitle:
+      'Sie brauchen eine Website, die überzeugt und konvertiert. Ich kombiniere Design, Video und KI-gestützte Workflows für einen sauberen Prozess, verlässliche Umsetzung und klare Ergebnisse.',
     benefit1: 'Mehrsprachige Kommunikation: Ich spreche Deutsch, Englisch, Italienisch, Serbisch und Albanisch.',
     benefit2: 'Spezialisiert auf kleine Unternehmen und Creator mit Bedarf an schneller und zuverlässiger Lieferung.',
     benefit3: 'End-to-End-Betreuung: von der ersten Idee bis zur fertigen Website, zum Design oder Video.',
@@ -361,6 +377,8 @@ const de: SpecTranslations = {
   },
   testimonials: {
     heading: 'Kundenstimmen',
+    subtitle:
+      'Echte Rückmeldungen von Kunden, die moderne Inhalte und Marketing wollten—ohne Stress, mit klarer Kommunikation und pünktlicher Lieferung.',
     card1: {
       quote: 'Agron hat genau geliefert, was wir brauchten. Professionell, schnell, angenehme Zusammenarbeit. Wir werden definitiv wieder buchen.',
       author: 'Platzhalter Kunde',
@@ -492,6 +510,9 @@ const it: SpecTranslations = {
     contact: 'Contatti',
   },
   servicesPreview: {
+    title: 'Servizi che portano risultati',
+    subtitle:
+      'Dallo web design al digital marketing, creo esperienze chiare e orientate alla conversione per piccole imprese e creator. Strategie, tempi rapidi e comunicazione multilingue—per trasformare le visite in richieste.',
     videoMotion: {
       title: 'AI Content & Video',
       description: 'Video brevi, contenuti generati con AI e visual per i social.',
@@ -522,6 +543,8 @@ const it: SpecTranslations = {
   },
   whyMe: {
     heading: 'Perché lavorare con me',
+    subtitle:
+      'Hai bisogno di un sito e di un marketing professionali e davvero efficaci. Combino design, video e workflow potenziati dall’AI per un processo pulito, consegne affidabili e risultati chiari.',
     benefit1: 'Comunicazione multilingue: parlo tedesco, inglese, italiano, serbo e albanese.',
     benefit2: 'Specializzato in piccole imprese e creator che cercano consegne veloci e affidabili.',
     benefit3: 'Supporto end-to-end: dalla prima idea al sito, design o video finale.',
@@ -529,6 +552,8 @@ const it: SpecTranslations = {
   },
   testimonials: {
     heading: 'Recensioni',
+    subtitle:
+      'Feedback reale di clienti che cercavano contenuti moderni e materiali marketing—con comunicazione chiara e consegna puntuale.',
     card1: {
       quote: 'Agron ha consegnato esattamente ciò che ci serviva. Professionale, veloce, ottimo lavorarci. Lo contatteremo di nuovo.',
       author: 'Cliente placeholder',
@@ -660,6 +685,9 @@ const sr: SpecTranslations = {
     contact: 'Kontakt',
   },
   servicesPreview: {
+    title: 'Usluge koje donose rezultate',
+    subtitle:
+      'Radim web dizajn i digitalni marketing za male firme, freelancere i lokalne biznise. Fokus mi je na jasnoj strukturi, brzini i konverzijama—da vaš sajt pretvara posete u upite.',
     videoMotion: {
       title: 'AI sadržaj i video',
       description: 'Kratki video formati, AI sadržaj i vizuali za društvene mreže.',
@@ -690,6 +718,8 @@ const sr: SpecTranslations = {
   },
   whyMe: {
     heading: 'Zašto da radite sa mnom',
+    subtitle:
+      'Potrebna vam je profesionalna web prisutnost i marketing koji donosi rezultate. Spajam dizajn, video i AI workflow-ove za čist proces, pouzdanu isporuku i jasne rezultate.',
     benefit1: 'Višejezična komunikacija: govorim nemački, engleski, italijanski, srpski i albanski.',
     benefit2: 'Specijalizovan za male biznise i kreatore kojima treba brza i pouzdana isporuka.',
     benefit3: 'Podrška od ideje do finalnog sajta, dizajna ili videa.',
@@ -697,6 +727,8 @@ const sr: SpecTranslations = {
   },
   testimonials: {
     heading: 'Utisci klijenata',
+    subtitle:
+      'Pravi utisci klijenata koji su želeli moderne vizuale i marketing materijale—bez konfuzije, uz jasnu komunikaciju i isporuku na vreme.',
     card1: {
       quote: 'Agron je isporučio tačno ono što nam je trebalo. Profesionalno, brzo, odlična saradnja. Sigurno ćemo ponovo angažovati.',
       author: 'Placeholder klijent',
@@ -828,6 +860,9 @@ const al: SpecTranslations = {
     contact: 'Kontakt',
   },
   servicesPreview: {
+    title: 'Shërbime që sjellin rezultate',
+    subtitle:
+      'Nga web design tek marketingu digjital, krijoj përvoja të qarta dhe të fokusuara në konvertime për biznese të vogla dhe creator. Strategji, ekzekutim i shpejtë dhe komunikim shumëgjuhësh—që vizitat të kthehen në kërkesa.',
     videoMotion: {
       title: 'AI Content & Video',
       description: 'Video të shkurtra, përmbajtje të gjeneruar me AI dhe vizuale për rrjetet sociale.',
@@ -858,6 +893,8 @@ const al: SpecTranslations = {
   },
   whyMe: {
     heading: 'Pse të punoni me mua',
+    subtitle:
+      'Ju duhet një faqe dhe marketing që duken profesional dhe funksionojnë vërtet. Kombinoj dizajnin, videon dhe workflow-e të fuqizuara nga AI për një proces të pastër, dorëzim të besueshëm dhe rezultate të qarta.',
     benefit1: 'Komunikim shumëgjuhësh: flas gjermanisht, anglisht, italisht, serbisht dhe shqip.',
     benefit2: 'Specializuar në biznese të vogla dhe krijues që kanë nevojë për dorëzim të shpejtë dhe të besueshëm.',
     benefit3: 'Mbështetje nga ideja e parë deri te faqja, dizajni ose videoja përfundimtare.',
@@ -865,6 +902,8 @@ const al: SpecTranslations = {
   },
   testimonials: {
     heading: 'Përshtypjet e klientëve',
+    subtitle:
+      'Përshtypje reale nga klientë që kërkuan përmbajtje moderne dhe materiale marketingu—me komunikim të qartë dhe dorëzim në kohë.',
     card1: {
       quote: 'Agron dërgoi pikërisht atë që na duhej. Profesional, i shpejtë, punë e këndshme. Do të punësojmë përsëri.',
       author: 'Klient placeholder',

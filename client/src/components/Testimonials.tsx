@@ -15,6 +15,9 @@ export default function Testimonials() {
         <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">
           {tSpec.testimonials.heading}
         </h2>
+        <p className="text-gray-400 text-base md:text-lg text-center max-w-3xl mx-auto mb-14 leading-relaxed">
+          {tSpec.testimonials.subtitle}
+        </p>
         <div className="grid md:grid-cols-3 gap-8">
           {cards.map((card, i) => (
             <blockquote

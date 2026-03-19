@@ -65,6 +65,18 @@ export default function Contact() {
             </div>
           </a>
         </div>
+
+        <div className="mt-10">
+          <p className="text-gray-400 text-base leading-relaxed" data-testid="contact-location">
+            <span className="text-white/70 font-semibold">{t.contact.info.title}:</span>{" "}
+            <span className="text-gray-300">{t.contact.info.location}</span>
+          </p>
+          {t.contact.form?.trustLine && (
+            <p className="text-gray-500 text-sm mt-3" data-testid="contact-trust-line">
+              {t.contact.form.trustLine}
+            </p>
+          )}
+        </div>
       </div>
     </section>
   );

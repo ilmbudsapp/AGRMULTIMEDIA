@@ -17,6 +17,9 @@ export default function WhyMe() {
         <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">
           {tSpec.whyMe.heading}
         </h2>
+        <p className="text-gray-300 text-base md:text-lg text-center max-w-3xl mx-auto mb-14 leading-relaxed">
+          {tSpec.whyMe.subtitle}
+        </p>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {benefits.map(({ key, icon: Icon }) => (
             <div

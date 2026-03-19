@@ -45,6 +45,9 @@ export default function Portfolio() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight" data-testid="portfolio-title">
             {tSpec.featuredPortfolio.heading}
           </h2>
+          <p className="text-gray-400 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
+            {t.portfolio.subtitle}
+          </p>
         </div>
         
         <div className="flex flex-wrap justify-center mb-12 gap-3" data-testid="portfolio-filter">
