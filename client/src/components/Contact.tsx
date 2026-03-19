@@ -12,7 +12,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-24 bg-[#0a0a0f]">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <p className="text-electric-blue font-semibold text-sm uppercase tracking-[0.2em] mb-3">
           {t.nav.contact}
         </p>
@@ -36,7 +36,7 @@ export default function Contact() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 justify-center items-center">
           <a
             href={EMAIL_LINK}
-            className="flex items-center gap-4 bg-white/5 border border-white/10 rounded-2xl px-6 py-4 justify-center lg:justify-start hover:bg-white/10 hover:border-white/20 transition-all duration-300 group"
+            className="w-full flex items-center gap-4 bg-white/5 border border-white/10 rounded-2xl px-6 py-4 justify-center lg:justify-start hover:bg-white/10 hover:border-white/20 transition-all duration-300 group"
             data-testid="contact-email"
           >
             <div className="bg-electric-blue/20 w-12 h-12 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-electric-blue/30 transition-colors">
@@ -46,13 +46,15 @@ export default function Contact() {
               <p className="text-xs uppercase tracking-wider text-gray-400 font-medium">
                 {t.contact.info.email}
               </p>
-              <p className="text-white font-bold text-sm sm:text-lg whitespace-nowrap">{EMAIL}</p>
+              <p className="text-white font-bold text-sm sm:text-base lg:text-lg whitespace-nowrap">
+                {EMAIL}
+              </p>
             </div>
           </a>
 
           <a
             href={PHONE_LINK}
-            className="flex items-center gap-4 bg-white/5 border border-white/10 rounded-2xl px-6 py-4 w-full sm:w-auto justify-center sm:justify-start hover:bg-white/10 hover:border-white/20 transition-all duration-300 group"
+            className="w-full flex items-center gap-4 bg-white/5 border border-white/10 rounded-2xl px-6 py-4 justify-center sm:justify-start hover:bg-white/10 hover:border-white/20 transition-all duration-300 group"
             data-testid="contact-phone"
           >
             <div className="bg-electric-blue/20 w-12 h-12 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-electric-blue/30 transition-colors">
@@ -62,7 +64,9 @@ export default function Contact() {
               <p className="text-xs uppercase tracking-wider text-gray-400 font-medium">
                 {t.contact.info.phone}
               </p>
-              <p className="text-white font-bold text-sm sm:text-lg whitespace-nowrap">{PHONE}</p>
+              <p className="text-white font-bold text-sm sm:text-base lg:text-lg whitespace-nowrap">
+                {PHONE}
+              </p>
             </div>
           </a>
 
@@ -70,7 +74,7 @@ export default function Contact() {
             href={mapsLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-4 bg-white/5 border border-white/10 rounded-2xl px-6 py-4 w-full sm:w-auto justify-center sm:justify-start hover:bg-white/10 hover:border-white/20 transition-all duration-300 group"
+            className="w-full flex items-center gap-4 bg-white/5 border border-white/10 rounded-2xl px-6 py-4 justify-center sm:justify-start hover:bg-white/10 hover:border-white/20 transition-all duration-300 group"
             data-testid="contact-location"
           >
             <div className="bg-electric-blue/20 w-12 h-12 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-electric-blue/30 transition-colors">
@@ -80,7 +84,9 @@ export default function Contact() {
               <p className="text-xs uppercase tracking-wider text-gray-400 font-medium">
                 {t.contact.info.title}
               </p>
-              <p className="text-white font-bold text-sm sm:text-lg whitespace-nowrap">{t.contact.info.location}</p>
+              <p className="text-white font-bold text-sm sm:text-base lg:text-lg whitespace-nowrap">
+                {t.contact.info.location}
+              </p>
             </div>
           </a>
         </div>
