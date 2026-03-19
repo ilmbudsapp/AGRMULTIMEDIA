@@ -146,6 +146,11 @@ export interface Translations {
         description: string;
         category: string;
       };
+      foodTruck: {
+        title: string;
+        description: string;
+        category: string;
+      };
     };
     readMore: string;
     viewAll: string;
@@ -895,6 +900,11 @@ export const translations: Record<Language, Translations> = {
           title: "Moć Video Marketinga: Zašto je Video Kralj Sadržaja",
           description: "Video marketing nije samo trend - to je budućnost digitalne komunikacije. Saznajte kako možete iskoristiti video za rast biznisa...",
           category: "Video"
+        },
+        foodTruck: {
+          title: "Kako sam napravio web za food truck za 500€",
+          description: "Korak-po-korak objašnjavam kako sam dizajnirao i razvio jednostavan web za food truck budžeta od 500€—od strukture, dizajna i copy-ja do osnovnog SEO-a i CTA dugmadi.",
+          category: "Web dizajn"
         }
       },
       readMore: "Čitaj više",
@@ -1864,6 +1874,11 @@ export const translations: Record<Language, Translations> = {
           title: "The Power of Video Marketing: Why Video is King of Content",
           description: "Video marketing isn't just a trend - it's the future of digital communication. Learn how you can use video for business growth...",
           category: "Video"
+        },
+        foodTruck: {
+          title: "How I Built a Food Truck Website for €500",
+          description: "A step-by-step breakdown of how I designed and built a simple food truck website for a €500 budget—structure, copy, and basic SEO to turn visitors into inquiries.",
+          category: "Web Design"
         }
       },
       readMore: "Read More",
@@ -2835,6 +2850,11 @@ export const translations: Record<Language, Translations> = {
           title: "Die Macht des Video-Marketings: Warum Video König der Inhalte ist",
           description: "Video-Marketing ist nicht nur ein Trend - es ist die Zukunft der digitalen Kommunikation. Erfahren Sie, wie Sie Video für Ihr Unternehmenswachstum nutzen können...",
           category: "Video"
+        },
+        foodTruck: {
+          title: "Wie ich eine Food-Truck-Website für 500 € gebaut habe",
+          description: "Ein Schritt-für-Schritt-Guide, wie ich eine einfache Food-Truck-Website mit einem Budget von 500 € gestaltet und gebaut habe—inklusive Struktur, Text und grundlegender SEO und CTAs.",
+          category: "Webdesign"
         }
       },
       readMore: "Weiterlesen",
@@ -3726,6 +3746,11 @@ export const translations: Record<Language, Translations> = {
           title: "Fuqia e Video Marketingut: Pse Video është Mbreti i Përmbajtjes",
           description: "Video marketingu nuk është vetëm një trend - është e ardhmja e komunikimit dixhital. Mëso si mund ta përdorësh videon për rritjen e biznesit...",
           category: "Video"
+        },
+        foodTruck: {
+          title: "Si e ndërtova një faqe web për food truck për 500€",
+          description: "Një udhëzues praktik hap-pas-hapi se si dizajnova dhe ndërtova një web të thjeshtë për food truck me buxhet 500€—strukturë, copy dhe SEO bazë për të marrë më shumë kërkesa.",
+          category: "Dizajn Web"
         }
       },
       readMore: "Lexo Më Shumë",

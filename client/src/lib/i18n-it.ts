@@ -149,6 +149,11 @@ export const itTranslations: Translations = {
         title: "Il potere del video marketing: perché il video è il re dei contenuti",
         description: "Il video marketing non è solo una tendenza: è il futuro della comunicazione digitale. Scopri come usare il video per la crescita del business...",
         category: "Video"
+      },
+      foodTruck: {
+        title: "Come ho realizzato un sito web per un food truck da 500€",
+        description: "Una guida passo-passo su come ho progettato e sviluppato un sito semplice per un food truck con un budget di 500€—dalla struttura e copy fino alle basi SEO e CTA.",
+        category: "Web design"
       }
     },
     readMore: "Leggi tutto",

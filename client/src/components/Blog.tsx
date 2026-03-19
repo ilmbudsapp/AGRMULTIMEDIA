@@ -35,6 +35,16 @@ export default function Blog() {
       category: t.blog.posts.video.category,
       date: "07.03.2026",
       categoryColor: "bg-red-500"
+    },
+    {
+      id: 4,
+      slug: "food-truck-web-500",
+      title: t.blog.posts.foodTruck.title,
+      description: t.blog.posts.foodTruck.description,
+      image: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
+      category: t.blog.posts.foodTruck.category,
+      date: "07.03.2026",
+      categoryColor: "bg-green-500"
     }
   ];
 

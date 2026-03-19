@@ -26,6 +26,7 @@ import Impresum from "@/pages/impresum";
 import DigitalMarketingTrends2024 from "@/pages/blog/digital-marketing-trends-2024";
 import WebsiteConversionOptimization from "@/pages/blog/website-conversion-optimization";
 import VideoMarketingPower from "@/pages/blog/video-marketing-power";
+import FoodTruckWeb500 from "@/pages/blog/food-truck-web-500";
 import EcommerceSite from "@/pages/portfolio/ecommerce-site";
 import RestaurantWebsite from "@/pages/portfolio/restaurant-website";
 import BrandIdentity from "@/pages/portfolio/brand-identity";
@@ -59,6 +60,7 @@ function Router() {
       <Route path="/blog/digital-marketing-trends-2024" component={DigitalMarketingTrends2024} />
       <Route path="/blog/website-conversion-optimization" component={WebsiteConversionOptimization} />
       <Route path="/blog/video-marketing-power" component={VideoMarketingPower} />
+      <Route path="/blog/food-truck-web-500" component={FoodTruckWeb500} />
       <Route path="/portfolio/ecommerce-site" component={EcommerceSite} />
       <Route path="/portfolio/restaurant-website" component={RestaurantWebsite} />
       <Route path="/portfolio/brand-identity" component={BrandIdentity} />
