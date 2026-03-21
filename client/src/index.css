@@ -329,64 +329,6 @@
   }
 }
 
-/* —— Site navbar: glassmorphism + nav link motion —— */
-.nav-glass {
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  background: rgba(255, 255, 255, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.nav-links-desktop {
-  transform: translateX(-100%);
-  opacity: 0;
-  animation: nav-links-slide-in 0.8s ease 0.12s forwards;
-}
-
-@keyframes nav-links-slide-in {
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .nav-links-desktop {
-    transform: none;
-    opacity: 1;
-    animation: none;
-  }
-}
-
-.logo-morph {
-  font-size: clamp(0.7rem, 2.5vw, 0.95rem);
-  line-height: 1.1;
-  letter-spacing: 0.04em;
-}
-
-.logo-morph-letter {
-  display: inline-block;
-  transform-origin: 50% 50%;
-}
-
-.nav-link-item {
-  position: relative;
-  border-radius: 9999px;
-  padding: 0.35rem 0.6rem;
-  margin: 0 -0.35rem;
-  transition: color 0.25s ease, box-shadow 0.35s ease, background-color 0.25s ease;
-}
-
-.nav-link-item:hover {
-  box-shadow: 0 0 20px rgba(0, 0, 255, 0.45);
-  color: rgb(255 255 255);
-}
-
-.nav-link-item:focus-visible {
-  outline: 2px solid rgba(147, 197, 253, 0.9);
-  outline-offset: 2px;
-}
-
 /* Hero CTA glass */
 .glass-premium-cta {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(139, 92, 246, 0.06) 100%);
