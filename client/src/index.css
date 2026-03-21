@@ -290,6 +290,11 @@
   opacity: 0.8;
 }
 
+/* Hero H1: magnetic morph target (SEO text; animation via GSAP) */
+.hero-h1 {
+  color: #f8fafc;
+}
+
 /* Hero: typed segment + glow after complete */
 .type-text {
   display: inline;

@@ -142,9 +142,9 @@ export interface SpecTranslations {
 
 const en: SpecTranslations = {
   hero: {
-    h1: 'Web Design AGRMULTIMEDIA',
+    h1: 'Web Design Geislingen Pro',
     h1Prefix: 'Web Design ',
-    h1Typed: 'AGRMULTIMEDIA',
+    h1Typed: 'Geislingen Pro',
     subheadline: 'I create modern, fast, and conversion-focused websites and digital marketing for small firms, freelancers, and local brands that want more quality inquiries online.',
     ctaPrimary: 'Get a free consultation',
     ctaSecondary: 'View portfolio',
@@ -336,9 +336,9 @@ const en: SpecTranslations = {
 
 const de: SpecTranslations = {
   hero: {
-    h1: 'Web Dizajn AGRMULTIMEDIA',
-    h1Prefix: 'Web Dizajn ',
-    h1Typed: 'AGRMULTIMEDIA',
+    h1: 'Webdesign Geislingen Pro',
+    h1Prefix: 'Webdesign ',
+    h1Typed: 'Geislingen Pro',
     subheadline: 'Ich erstelle moderne, schnelle und klar verkaufsorientierte Websites sowie digitale Marketinglösungen für kleine Firmen, Freelancer und lokale Marken, die online mehr qualifizierte Anfragen möchten.',
     ctaPrimary: 'Kostenlose Beratung',
     ctaSecondary: 'Portfolio ansehen',
@@ -530,9 +530,9 @@ const de: SpecTranslations = {
 
 const it: SpecTranslations = {
   hero: {
-    h1: 'Web Design AGRMULTIMEDIA',
+    h1: 'Web Design Geislingen Pro',
     h1Prefix: 'Web Design ',
-    h1Typed: 'AGRMULTIMEDIA',
+    h1Typed: 'Geislingen Pro',
     subheadline: 'Creo siti moderni, veloci e orientati alla conversione per piccole aziende, freelance e attività locali che vogliono più richieste di qualità online.',
     ctaPrimary: 'Consulenza gratuita',
     ctaSecondary: 'Guarda il portfolio',
@@ -724,9 +724,9 @@ const it: SpecTranslations = {
 
 const sr: SpecTranslations = {
   hero: {
-    h1: 'Web Dizajn AGRMULTIMEDIA',
+    h1: 'Web Dizajn Geislingen Pro',
     h1Prefix: 'Web Dizajn ',
-    h1Typed: 'AGRMULTIMEDIA',
+    h1Typed: 'Geislingen Pro',
     subheadline: 'Pravim moderne, brze i prodajno jasne web sajtove za male firme, freelancere i lokalne biznise koji žele više klijenata online.',
     ctaPrimary: 'Besplatne konsultacije',
     ctaSecondary: 'Pogledaj portfolio',
@@ -918,9 +918,9 @@ const sr: SpecTranslations = {
 
 const al: SpecTranslations = {
   hero: {
-    h1: 'Web Dizajn AGRMULTIMEDIA',
+    h1: 'Web Dizajn Geislingen Pro',
     h1Prefix: 'Web Dizajn ',
-    h1Typed: 'AGRMULTIMEDIA',
+    h1Typed: 'Geislingen Pro',
     subheadline: 'Krijoj faqe moderne, të shpejta dhe të qarta me fokus në rezultate për biznese të vogla, freelancerë dhe marka lokale që duan më shumë kërkesa cilësore online.',
     ctaPrimary: 'Konsultë falas',
     ctaSecondary: 'Shiko portofolin',

@@ -3,7 +3,7 @@ import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLanguage } from "@/contexts/LanguageContext";
-import HeroScrambleHeading from "@/components/HeroScrambleHeading";
+import HeroMagneticMorphHeading from "@/components/HeroMagneticMorphHeading";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -154,7 +154,7 @@ export default function Hero() {
 
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
         {useSplitHeadline ? (
-          <HeroScrambleHeading
+          <HeroMagneticMorphHeading
             h1Prefix={h1Prefix!}
             h1Typed={h1Typed!}
             fullH1={tSpec.hero.h1}
@@ -162,7 +162,7 @@ export default function Hero() {
             aria-label={tSpec.hero.h1}
           />
         ) : (
-          <HeroScrambleHeading
+          <HeroMagneticMorphHeading
             h1Prefix=""
             h1Typed={tSpec.hero.h1}
             fullH1={tSpec.hero.h1}

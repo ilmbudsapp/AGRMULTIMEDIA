@@ -1,10 +1,10 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
-import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
+import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import { cn } from "@/lib/utils";
 
-gsap.registerPlugin(ScrambleTextPlugin);
+gsap.registerPlugin(MotionPathPlugin);
 SplitText.register(gsap);
 
 type Props = {
@@ -16,13 +16,13 @@ type Props = {
   "aria-label"?: string;
 };
 
-const SCRAMBLE_DURATION = 1.75;
-const GLOW_DURATION = 0.55;
+const MAIN_DURATION = 2;
+const GLOW_PULSE_DURATION = 0.5;
 
 /**
- * H1 stays real text in the DOM (SEO). SplitText + ScrambleTextPlugin, then revert split.
+ * Real H1 in DOM (SEO). Letters scatter then elastic-snap into place; split reverts after tween.
  */
-export default function HeroScrambleHeading({
+export default function HeroMagneticMorphHeading({
   h1Prefix,
   h1Typed,
   fullH1,
@@ -57,7 +57,7 @@ export default function HeroScrambleHeading({
         if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
           gsap.set(h1, {
             textShadow:
-              "0 2px 20px rgba(0,0,0,0.7), 0 4px 40px rgba(0,0,0,0.5), 0 0 28px rgba(199,210,255,0.35)",
+              "0 2px 20px rgba(0,0,0,0.75), 0 0 28px rgba(147,197,253,0.45), 0 0 48px rgba(167,139,250,0.3)",
           });
           return;
         }
@@ -74,6 +74,18 @@ export default function HeroScrambleHeading({
               return;
             }
 
+            const vw = window.innerWidth;
+            const vh = window.innerHeight;
+            const rx = Math.min(vw * 0.32, 260);
+            const ry = Math.min(vh * 0.22, 160);
+
+            gsap.set(chars, {
+              transformOrigin: "50% 50%",
+              x: () => gsap.utils.random(-rx, rx),
+              y: () => gsap.utils.random(-ry, ry),
+              rotation: () => gsap.utils.random(-90, 90),
+            });
+
             const tl = gsap.timeline({
               onComplete: () => {
                 gsap.killTweensOf(chars);
@@ -83,35 +95,28 @@ export default function HeroScrambleHeading({
                   h1,
                   {
                     textShadow:
-                      "0 2px 20px rgba(0,0,0,0.7), 0 4px 40px rgba(0,0,0,0.5), 0 0 0 rgba(199,210,255,0)",
+                      "0 2px 20px rgba(0,0,0,0.75), 0 0 12px rgba(147,197,253,0.25), 0 0 0 rgba(167,139,250,0)",
                   },
                   {
                     textShadow:
-                      "0 2px 20px rgba(0,0,0,0.7), 0 4px 40px rgba(0,0,0,0.5), 0 0 32px rgba(199,210,255,0.5), 0 0 56px rgba(139,92,246,0.25)",
-                    duration: GLOW_DURATION,
+                      "0 2px 24px rgba(0,0,0,0.8), 0 0 36px rgba(147,197,253,0.65), 0 0 64px rgba(96,165,250,0.35), 0 0 88px rgba(167,139,250,0.22)",
+                    duration: GLOW_PULSE_DURATION,
                     ease: "power2.out",
+                    yoyo: true,
+                    repeat: 1,
                   },
                 );
               },
             });
 
-            tl.from(
-              chars,
-              {
-                duration: 0.42,
-                ease: "power2.inOut",
-                scrambleText: {
-                  text: "{original}",
-                  chars: "upperAndLowerCase",
-                  speed: 0.65,
-                },
-                stagger: {
-                  amount: Math.max(0.85, SCRAMBLE_DURATION - 0.42),
-                  from: "random",
-                },
-              },
-              0,
-            );
+            tl.to(chars, {
+              duration: MAIN_DURATION,
+              x: 0,
+              y: 0,
+              rotation: 0,
+              stagger: 0.03,
+              ease: "elastic.out(1, 0.3)",
+            });
           });
         });
       })();
@@ -156,19 +161,20 @@ export default function HeroScrambleHeading({
     >
       <h1
         ref={h1Ref}
-        id="heroScramble"
+        id="magneticHero"
         className={cn(
-          "hero-title scramble-text text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.15] tracking-tight text-white",
+          "hero-h1 hero-title text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.15] tracking-tight text-white",
           className,
         )}
         style={{
-          textShadow: "0 2px 20px rgba(0,0,0,0.7), 0 4px 40px rgba(0,0,0,0.5)",
+          textShadow:
+            "0 2px 20px rgba(0,0,0,0.75), 0 0 20px rgba(147,197,253,0.15)",
         }}
         data-testid={dataTestId}
         aria-label={ariaLabel ?? fullH1}
       >
         {h1Prefix ? <span className="hero-title__prefix">{h1Prefix}</span> : null}
-        <span id="dynamic-text" className="type-text type-text--complete">
+        <span id="dynamic-text" className="type-text">
           {h1Typed}
         </span>
       </h1>
