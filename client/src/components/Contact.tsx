@@ -1,5 +1,5 @@
 import { Phone, Mail, MapPin } from "lucide-react";
-import { useCallback, useLayoutEffect, useRef, useState, FormEvent } from "react";
+import { useCallback, useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -11,19 +11,10 @@ const PHONE_LINK = "tel:+4915567204598";
 const EMAIL = "agron6922@gmail.com";
 const EMAIL_LINK = "mailto:agron6922@gmail.com";
 
-type FormStatus = "idle" | "sending" | "success" | "error";
-
 export default function Contact() {
   const { t, currentLanguage } = useLanguage();
   const sectionRef = useRef<HTMLElement>(null);
-  const formBlockRef = useRef<HTMLDivElement>(null);
   const mapsLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(t.contact.info.location)}`;
-
-  const form = t.contact.form;
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [status, setStatus] = useState<FormStatus>("idle");
 
   const runReveal = useCallback(() => {
     const root = sectionRef.current;
@@ -44,62 +35,13 @@ export default function Contact() {
           once: true,
         },
       });
-
-      const formRoot = formBlockRef.current;
-      if (formRoot) {
-        gsap.from(".contact-form-reveal", {
-          opacity: 0,
-          y: 32,
-          duration: 0.55,
-          stagger: 0.1,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: formRoot,
-            start: "top 88%",
-            once: true,
-          },
-        });
-      }
     }, root);
   }, []);
 
   useLayoutEffect(() => {
     const ctx = runReveal();
     return () => ctx?.revert();
-  }, [runReveal, currentLanguage, form]);
-
-  const onSubmit = async (e: FormEvent) => {
-    e.preventDefault();
-    if (!form) return;
-    if (!name.trim() || !email.trim() || !message.trim()) {
-      setStatus("error");
-      return;
-    }
-    setStatus("sending");
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: name.trim(),
-          email: email.trim(),
-          message: message.trim(),
-          subject: t.contact.title,
-        }),
-      });
-      const data = await res.json().catch(() => ({}));
-      if (res.ok && data.success) {
-        setStatus("success");
-        setName("");
-        setEmail("");
-        setMessage("");
-      } else {
-        setStatus("error");
-      }
-    } catch {
-      setStatus("error");
-    }
-  };
+  }, [runReveal, currentLanguage]);
 
   return (
     <section ref={sectionRef} id="contact" className="py-24 bg-[#06060d]">
@@ -182,77 +124,11 @@ export default function Contact() {
           </a>
         </div>
 
-        {form && (
-          <div ref={formBlockRef} id="contact-form-block" className="mt-16 text-left max-w-xl mx-auto">
-            <h3 className="contact-form-reveal text-xl font-bold text-white text-center mb-6">{form.title}</h3>
-            <form onSubmit={onSubmit} className="contact-glass-panel rounded-2xl p-6 md:p-8 space-y-5 border border-white/10">
-              <div className="contact-form-reveal">
-                <label htmlFor="contact-name" className="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">
-                  {form.name}
-                </label>
-                <input
-                  id="contact-name"
-                  type="text"
-                  autoComplete="name"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  placeholder={form.namePlaceholder}
-                  className="w-full rounded-xl bg-white/5 border border-white/15 px-4 py-3 text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-violet-500/50"
-                />
-              </div>
-              <div className="contact-form-reveal">
-                <label htmlFor="contact-email" className="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">
-                  {form.email}
-                </label>
-                <input
-                  id="contact-email"
-                  type="email"
-                  autoComplete="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder={form.emailPlaceholder}
-                  className="w-full rounded-xl bg-white/5 border border-white/15 px-4 py-3 text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-violet-500/50"
-                />
-              </div>
-              <div className="contact-form-reveal">
-                <label htmlFor="contact-message" className="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">
-                  {form.message}
-                </label>
-                <textarea
-                  id="contact-message"
-                  rows={4}
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  placeholder={form.messagePlaceholder}
-                  className="w-full rounded-xl bg-white/5 border border-white/15 px-4 py-3 text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-violet-500/50 resize-y min-h-[120px]"
-                />
-              </div>
-              <div className="contact-form-reveal flex flex-col sm:flex-row sm:items-center gap-4 pt-1">
-                <button
-                  type="submit"
-                  disabled={status === "sending"}
-                  className="w-full sm:w-auto rounded-xl bg-white text-[#0a0a0f] px-8 py-3.5 font-bold hover:bg-violet-100 transition-colors disabled:opacity-60"
-                >
-                  {status === "sending" ? form.sending : form.submit}
-                </button>
-                {status === "success" && (
-                  <p className="text-emerald-400 text-sm font-medium">{t.contact.success.title}</p>
-                )}
-                {status === "error" && (
-                  <p className="text-rose-400 text-sm font-medium">{t.contact.error.validation}</p>
-                )}
-              </div>
-            </form>
-          </div>
-        )}
-
-        {t.contact.form?.trustLine && (
-          <div className="mt-8 contact-reveal">
-            <p className="text-gray-500 text-sm" data-testid="contact-trust-line">
-              {t.contact.form.trustLine}
-            </p>
-          </div>
-        )}
+        <div className="mt-10 contact-reveal">
+          <p className="text-gray-500 text-sm" data-testid="contact-trust-line">
+            {t.contact.trustLine}
+          </p>
+        </div>
       </div>
     </section>
   );

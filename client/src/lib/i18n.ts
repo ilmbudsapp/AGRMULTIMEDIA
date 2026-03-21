@@ -242,33 +242,7 @@ export interface Translations {
     title: string;
     subtitle: string;
     instruction: string;
-    form?: {
-      title: string;
-      name: string;
-      namePlaceholder: string;
-      email: string;
-      emailPlaceholder: string;
-      subject: string;
-      subjectPlaceholder: string;
-      phone: string;
-      phonePlaceholder: string;
-      projectType: string;
-      projectTypePlaceholder: string;
-      projectTypes: {
-        webDesign: string;
-        graphicDesign: string;
-        videoProduction: string;
-        digitalMarketing: string;
-        photography: string;
-        consulting: string;
-      };
-      message: string;
-      messagePlaceholder: string;
-      messageHint: string;
-      submit: string;
-      sending: string;
-      required: string;
-    };
+    trustLine: string;
     info: {
       title: string;
       phone: string;
@@ -1051,20 +1025,7 @@ export const translations: Record<Language, Translations> = {
       title: "Kontakt",
       subtitle: "Stupite u kontakt direktno putem telefona ili emaila.",
       instruction: "Za upite nas kontaktirajte putem telefona ili emaila. Molimo navedite kratak opis vašeg projekta i rokova. Odgovaramo u roku od 24 sata.",
-      form: {
-        title: "Pošaljite poruku",
-        name: "Ime i prezime",
-        namePlaceholder: "Vaše ime",
-        email: "Email adresa",
-        emailPlaceholder: "vaš.email@example.com",
-        message: "Poruka",
-        messagePlaceholder: "Opišite vaš projekat i potrebe...",
-        messageHint: "Uključi molim:\n1) Tvoj biznis/sajt,\n2) Šta želiš da poboljšaš,\n3) Budžet ili rok (opciono).",
-        submit: "Dobij besplatnu AI strategiju",
-        sending: "Šalje se...",
-        required: "*",
-        trustLine: "Odgovor u roku od 24 sata"
-      },
+      trustLine: "Odgovor u roku od 24 sata",
       info: {
         title: "Kontakt informacije",
         phone: "Telefon",
@@ -2025,20 +1986,7 @@ export const translations: Record<Language, Translations> = {
       title: "Contact",
       subtitle: "Get in touch directly via phone or email.",
       instruction: "For inquiries, please contact us directly via phone or email. Please include a brief description of your project and timeline. We respond within 24 hours.",
-      form: {
-        title: "Send Message",
-        name: "Full Name",
-        namePlaceholder: "Your name",
-        email: "Email Address",
-        emailPlaceholder: "your.email@example.com",
-        message: "Message",
-        messagePlaceholder: "Describe your project and needs...",
-        messageHint: "Please include:\n1) Your business/website,\n2) What you want to improve,\n3) Your budget or deadline (optional).",
-        submit: "Get My Free Strategy",
-        sending: "Sending...",
-        required: "*",
-        trustLine: "Response within 24 hours"
-      },
+      trustLine: "Response within 24 hours",
       info: {
         title: "Contact Information",
         phone: "Phone",
@@ -2923,20 +2871,7 @@ export const translations: Record<Language, Translations> = {
       title: "Kontakt",
       subtitle: "Nehmen Sie direkt per Telefon oder E-Mail Kontakt auf.",
       instruction: "Für Anfragen kontaktieren Sie uns bitte direkt per Telefon oder E-Mail. Bitte geben Sie eine kurze Beschreibung Ihres Projekts und des Zeitplans an. Wir antworten innerhalb von 24 Stunden.",
-      form: {
-        title: "Nachricht senden",
-        name: "Vollständiger Name",
-        namePlaceholder: "Ihr Name",
-        email: "E-Mail-Adresse",
-        emailPlaceholder: "ihre.email@example.com",
-        message: "Nachricht",
-        messagePlaceholder: "Beschreiben Sie Ihr Projekt und Ihre Bedürfnisse...",
-        messageHint: "Bitte gib an:\n1) Dein Unternehmen/Website,\n2) Was du verbessern möchtest,\n3) Dein Budget oder Zeitrahmen (optional).",
-        submit: "Kostenlose AI‑Strategie anfordern",
-        sending: "Wird gesendet...",
-        required: "*",
-        trustLine: "Antwort innerhalb von 24 Stunden"
-      },
+      trustLine: "Antwort innerhalb von 24 Stunden",
       info: {
         title: "Kontaktinformationen",
         phone: "Telefon",
@@ -3819,20 +3754,7 @@ export const translations: Record<Language, Translations> = {
       title: "Kontakt",
       subtitle: "Lidhuni me ne direkt përmes telefonit ose emailit.",
       instruction: "Për pyetje, na kontaktoni direkt me telefon ose email. Ju lutemi përfshini një përshkrim të shkurtër të projektit dhe afateve. Përgjigjemi brenda 24 orëve.",
-      form: {
-        title: "Dërgo Mesazh",
-        name: "Emri i Plotë",
-        namePlaceholder: "Emri juaj",
-        email: "Adresa E-mail",
-        emailPlaceholder: "email.juaj@example.com",
-        message: "Mesazhi",
-        messagePlaceholder: "Përshkruani projektin dhe nevojat tuaja...",
-        messageHint: "Ju lutemi përfshini:\n1) Biznesin/faqen tuaj,\n2) Çfarë dëshironi të përmirësoni,\n3) Buxhetin ose afatin (opsionale).",
-        submit: "Merr strategjinë time falas",
-        sending: "Duke dërguar...",
-        required: "*",
-        trustLine: "Përgjigje brenda 24 orëve"
-      },
+      trustLine: "Përgjigje brenda 24 orëve",
       info: {
         title: "Informacione Kontakti",
         phone: "Telefon",

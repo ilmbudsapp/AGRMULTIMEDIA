@@ -300,20 +300,7 @@ export const itTranslations: Translations = {
     title: "Contatti",
     subtitle: "Contattaci direttamente per telefono o email.",
     instruction: "Per richieste, contattaci direttamente per telefono o email. Includi una breve descrizione del tuo progetto e dei tempi. Rispondiamo entro 24 ore.",
-    form: {
-      title: "Invia messaggio",
-      name: "Nome completo",
-      namePlaceholder: "Il tuo nome",
-      email: "Indirizzo email",
-      emailPlaceholder: "tua.email@esempio.com",
-      message: "Messaggio",
-      messagePlaceholder: "Descrivi il tuo progetto e le tue esigenze...",
-      messageHint: "Includi per favore:\n1) La tua azienda/sito web,\n2) Cosa vuoi migliorare,\n3) Il tuo budget o scadenza (opzionale).",
-      submit: "Ottieni la mia strategia gratuita",
-      sending: "Invio in corso...",
-      required: "*",
-      trustLine: "Risposta entro 24 ore"
-    },
+    trustLine: "Risposta entro 24 ore",
     info: {
       title: "Informazioni di contatto",
       phone: "Telefono",
