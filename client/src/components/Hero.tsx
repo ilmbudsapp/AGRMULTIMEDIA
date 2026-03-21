@@ -1,8 +1,9 @@
 import { ChevronDown } from "lucide-react";
-import { useEffect, useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLanguage } from "@/contexts/LanguageContext";
+import HeroParticleHeading from "@/components/HeroParticleHeading";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,11 +15,9 @@ export default function Hero() {
   const { tSpec, currentLanguage } = useLanguage();
   const sectionRef = useRef<HTMLElement>(null);
   const parallaxRef = useRef<HTMLDivElement>(null);
-  const typedRef = useRef<HTMLSpanElement>(null);
-  const titleBlockRef = useRef<HTMLHeadingElement>(null);
 
   const { h1Prefix, h1Typed } = tSpec.hero;
-  const useTyping = Boolean(h1Prefix && h1Typed);
+  const useSplitHeadline = Boolean(h1Prefix && h1Typed);
 
   useLayoutEffect(() => {
     const section = sectionRef.current;
@@ -43,55 +42,6 @@ export default function Hero() {
       st.kill();
     };
   }, [currentLanguage]);
-
-  useEffect(() => {
-    if (!useTyping || !typedRef.current) return;
-    const typedEl = typedRef.current;
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-    typedEl.classList.remove("type-text--complete");
-    typedEl.textContent = "";
-
-    if (reduce) {
-      typedEl.textContent = h1Typed!;
-      typedEl.classList.add("type-text--complete");
-      return;
-    }
-
-    const prog = { v: 0 };
-    const tl = gsap.timeline();
-    tl.to(prog, {
-      v: 1,
-      duration: 2.5,
-      ease: "power2.inOut",
-      onUpdate: () => {
-        const len = Math.round(h1Typed!.length * prog.v);
-        typedEl.textContent = h1Typed!.slice(0, len);
-      },
-      onComplete: () => {
-        typedEl.classList.add("type-text--complete");
-      },
-    });
-
-    return () => {
-      tl.kill();
-    };
-  }, [useTyping, h1Typed, currentLanguage]);
-
-  useLayoutEffect(() => {
-    if (!titleBlockRef.current || !useTyping) return;
-    const el = titleBlockRef.current;
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduce) {
-      gsap.set(el, { opacity: 1, y: 0 });
-      return;
-    }
-    gsap.fromTo(
-      el,
-      { opacity: 0, y: 28 },
-      { opacity: 1, y: 0, duration: 0.65, ease: "power2.out", delay: 0.05 },
-    );
-  }, [useTyping, currentLanguage]);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -201,27 +151,22 @@ export default function Hero() {
       />
 
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
-        {useTyping ? (
-          <h1
-            ref={titleBlockRef}
-            className="hero-title text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-5 sm:mb-6 leading-[1.15] tracking-tight opacity-0"
-            style={{
-              textShadow: "0 2px 20px rgba(0,0,0,0.7), 0 4px 40px rgba(0,0,0,0.5)",
-            }}
+        {useSplitHeadline ? (
+          <HeroParticleHeading
+            h1Prefix={h1Prefix!}
+            h1Typed={h1Typed!}
+            fullH1={tSpec.hero.h1}
             data-testid="hero-title"
             aria-label={tSpec.hero.h1}
-          >
-            <span className="hero-title__prefix">{h1Prefix}</span>
-            <span ref={typedRef} id="dynamic-text" className="type-text" />
-          </h1>
+          />
         ) : (
-          <h1
-            className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-5 sm:mb-6 leading-[1.15] tracking-tight animate-fade-in-up"
-            style={{ textShadow: "0 2px 20px rgba(0,0,0,0.7), 0 4px 40px rgba(0,0,0,0.5)" }}
+          <HeroParticleHeading
+            h1Prefix=""
+            h1Typed={tSpec.hero.h1}
+            fullH1={tSpec.hero.h1}
             data-testid="hero-title"
-          >
-            {tSpec.hero.h1}
-          </h1>
+            aria-label={tSpec.hero.h1}
+          />
         )}
         <p
           className="text-base sm:text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed animate-fade-in-up font-medium"
