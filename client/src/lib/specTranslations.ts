@@ -4,6 +4,14 @@
  */
 export type SpecLang = 'de' | 'en' | 'it' | 'sr' | 'al';
 
+/** Home flip-card: front copy + back (price) line */
+export interface ServiceFlipCardCopy {
+  title: string;
+  description: string;
+  flipPrice: string;
+  flipIncludes: string;
+}
+
 export interface SpecTranslations {
   // Hero
   hero: {
@@ -47,14 +55,16 @@ export interface SpecTranslations {
     blog: string;
     contact: string;
   };
-  // Services preview (4 cards on home)
+  // Services preview (4 flip cards on home)
   servicesPreview: {
     title: string;
     subtitle: string;
-    webUi: { title: string; description: string };
-    graphicBranding: { title: string; description: string };
-    videoMotion: { title: string; description: string };
-    aiContent: { title: string; description: string };
+    flipOrderCta: string;
+    flipDetailsLink: string;
+    webUi: ServiceFlipCardCopy;
+    graphicBranding: ServiceFlipCardCopy;
+    videoMotion: ServiceFlipCardCopy;
+    aiContent: ServiceFlipCardCopy;
   };
   // Featured portfolio
   featuredPortfolio: {
@@ -132,9 +142,9 @@ export interface SpecTranslations {
 
 const en: SpecTranslations = {
   hero: {
-    h1: 'Web Design Geislingen',
+    h1: 'Web Design Geislingen Pro',
     h1Prefix: 'Web Design ',
-    h1Typed: 'Geislingen',
+    h1Typed: 'Geislingen Pro',
     subheadline: 'I create modern, fast, and conversion-focused websites and digital marketing for small firms, freelancers, and local brands that want more quality inquiries online.',
     ctaPrimary: 'Get a free consultation',
     ctaSecondary: 'View portfolio',
@@ -182,21 +192,31 @@ const en: SpecTranslations = {
     title: 'Services that help your business grow',
     subtitle:
       'From web design to digital marketing, I build clear, conversion-focused experiences for small businesses and creators. You get strategy, fast execution, and multilingual communication—so your website turns visitors into inquiries.',
-    videoMotion: {
-      title: 'AI Content & Video',
-      description: 'Short-form videos, AI-generated content and social visuals for your brand.',
-    },
+    flipOrderCta: 'Request now',
+    flipDetailsLink: 'Service details',
     webUi: {
       title: 'Web Design & Development',
       description: 'Business websites, landing pages and UI/UX that feel clear and modern.',
+      flipPrice: 'from €1,200',
+      flipIncludes: 'Portfolio · SEO · Contact · Mobile-first',
     },
     graphicBranding: {
-      title: '',
-      description: '',
+      title: 'Graphic & Branding',
+      description: 'Logo, print assets and brand guidelines that look sharp and trustworthy.',
+      flipPrice: 'from €650',
+      flipIncludes: 'Logo · Brand kit · Print-ready files',
+    },
+    videoMotion: {
+      title: 'AI Content & Video',
+      description: 'Short-form videos, AI-generated content and social visuals for your brand.',
+      flipPrice: 'from €890',
+      flipIncludes: 'Social cuts · AI visuals · Motion basics',
     },
     aiContent: {
       title: 'Custom AI Solutions',
       description: 'AI apps, automation tools and custom digital solutions for your workflows.',
+      flipPrice: 'from €1,500',
+      flipIncludes: 'Automation · Custom tools · Integration',
     },
   },
   featuredPortfolio: {
@@ -316,9 +336,9 @@ const en: SpecTranslations = {
 
 const de: SpecTranslations = {
   hero: {
-    h1: 'Web Dizajn Geislingen',
+    h1: 'Web Dizajn Geislingen Pro',
     h1Prefix: 'Web Dizajn ',
-    h1Typed: 'Geislingen',
+    h1Typed: 'Geislingen Pro',
     subheadline: 'Ich erstelle moderne, schnelle und klar verkaufsorientierte Websites sowie digitale Marketinglösungen für kleine Firmen, Freelancer und lokale Marken, die online mehr qualifizierte Anfragen möchten.',
     ctaPrimary: 'Kostenlose Beratung',
     ctaSecondary: 'Portfolio ansehen',
@@ -366,21 +386,31 @@ const de: SpecTranslations = {
     title: 'Leistungen, die Ergebnisse bringen',
     subtitle:
       'Von Webdesign bis digitalem Marketing erstelle ich klare, conversion-starke Auftritte für kleine Unternehmen und Kreative. Sie erhalten Strategie, schnelle Umsetzung und mehrsprachige Kommunikation—damit Ihre Website Anfragen erzeugt.',
-    videoMotion: {
-      title: 'AI Content & Video',
-      description: 'Kurzvideos, AI-generierte Inhalte und Visuals für Ihre Social-Media-Kanäle.',
-    },
+    flipOrderCta: 'Jetzt anfragen',
+    flipDetailsLink: 'Leistung ansehen',
     webUi: {
       title: 'Webdesign & Entwicklung',
       description: 'Business-Websites, Landingpages und UI/UX-Design mit klarem Aufbau.',
+      flipPrice: 'ab 1.200 €',
+      flipIncludes: 'Portfolio · SEO · Kontakt · Mobile-first',
     },
     graphicBranding: {
-      title: '',
-      description: '',
+      title: 'Grafik & Branding',
+      description: 'Logo, Print und Markenrichtlinien, die professionell und vertrauenswürdig wirken.',
+      flipPrice: 'ab 650 €',
+      flipIncludes: 'Logo · Brand-Kit · Druckfertige Dateien',
+    },
+    videoMotion: {
+      title: 'AI Content & Video',
+      description: 'Kurzvideos, AI-generierte Inhalte und Visuals für Ihre Social-Media-Kanäle.',
+      flipPrice: 'ab 890 €',
+      flipIncludes: 'Social-Formate · AI-Visuals · Motion-Basics',
     },
     aiContent: {
-      title: 'Custom AI Solutions',
-      description: 'AI-Apps, Automatisierungs-Tools und individuelle digitale Lösungen.',
+      title: 'Individuelle KI-Lösungen',
+      description: 'KI-Apps, Automatisierung und maßgeschneiderte digitale Tools für Ihre Abläufe.',
+      flipPrice: 'ab 1.500 €',
+      flipIncludes: 'Automatisierung · Custom Tools · Anbindung',
     },
   },
   featuredPortfolio: {
@@ -500,9 +530,9 @@ const de: SpecTranslations = {
 
 const it: SpecTranslations = {
   hero: {
-    h1: 'Web Design Geislingen',
+    h1: 'Web Design Geislingen Pro',
     h1Prefix: 'Web Design ',
-    h1Typed: 'Geislingen',
+    h1Typed: 'Geislingen Pro',
     subheadline: 'Creo siti moderni, veloci e orientati alla conversione per piccole aziende, freelance e attività locali che vogliono più richieste di qualità online.',
     ctaPrimary: 'Consulenza gratuita',
     ctaSecondary: 'Guarda il portfolio',
@@ -550,21 +580,31 @@ const it: SpecTranslations = {
     title: 'Servizi che portano risultati',
     subtitle:
       'Dallo web design al digital marketing, creo esperienze chiare e orientate alla conversione per piccole imprese e creator. Strategie, tempi rapidi e comunicazione multilingue—per trasformare le visite in richieste.',
-    videoMotion: {
-      title: 'AI Content & Video',
-      description: 'Video brevi, contenuti generati con AI e visual per i social.',
-    },
+    flipOrderCta: 'Richiedi ora',
+    flipDetailsLink: 'Dettagli servizio',
     webUi: {
       title: 'Web Design & Development',
       description: 'Siti web business, landing page e UI/UX dal design chiaro e moderno.',
+      flipPrice: 'da 1.200 €',
+      flipIncludes: 'Portfolio · SEO · Contatti · Mobile-first',
     },
     graphicBranding: {
-      title: '',
-      description: '',
+      title: 'Grafica & Branding',
+      description: 'Logo, materiali stampa e linee guida brand professionali e coerenti.',
+      flipPrice: 'da 650 €',
+      flipIncludes: 'Logo · Brand kit · File stampa',
+    },
+    videoMotion: {
+      title: 'AI Content & Video',
+      description: 'Video brevi, contenuti generati con AI e visual per i social.',
+      flipPrice: 'da 890 €',
+      flipIncludes: 'Formati social · Visual AI · Motion base',
     },
     aiContent: {
-      title: 'Custom AI Solutions',
-      description: 'Soluzioni AI su misura, automazioni e strumenti digitali personalizzati.',
+      title: 'Soluzioni AI su misura',
+      description: 'App AI, automazioni e strumenti digitali personalizzati per i tuoi processi.',
+      flipPrice: 'da 1.500 €',
+      flipIncludes: 'Automazione · Tool custom · Integrazioni',
     },
   },
   featuredPortfolio: {
@@ -684,9 +724,9 @@ const it: SpecTranslations = {
 
 const sr: SpecTranslations = {
   hero: {
-    h1: 'Web Dizajn Geislingen',
+    h1: 'Web Dizajn Geislingen Pro',
     h1Prefix: 'Web Dizajn ',
-    h1Typed: 'Geislingen',
+    h1Typed: 'Geislingen Pro',
     subheadline: 'Pravim moderne, brze i prodajno jasne web sajtove za male firme, freelancere i lokalne biznise koji žele više klijenata online.',
     ctaPrimary: 'Besplatne konsultacije',
     ctaSecondary: 'Pogledaj portfolio',
@@ -734,21 +774,31 @@ const sr: SpecTranslations = {
     title: 'Usluge koje donose rezultate',
     subtitle:
       'Radim web dizajn i digitalni marketing za male firme, freelancere i lokalne biznise. Fokus mi je na jasnoj strukturi, brzini i konverzijama—da vaš sajt pretvara posete u upite.',
-    videoMotion: {
-      title: 'AI sadržaj i video',
-      description: 'Kratki video formati, AI sadržaj i vizuali za društvene mreže.',
-    },
+    flipOrderCta: 'Poruči sada',
+    flipDetailsLink: 'Detalji usluge',
     webUi: {
       title: 'Web dizajn i razvoj',
       description: 'Biznis sajtovi, landing stranice i UI/UX sa jasnom strukturom.',
+      flipPrice: 'od 1.200 €',
+      flipIncludes: 'Portfolio · SEO · Kontakt · Mobile-first',
     },
     graphicBranding: {
-      title: '',
-      description: '',
+      title: 'Grafika i brending',
+      description: 'Logo, štampa i smernice brenda koje deluju profesionalno i pouzdano.',
+      flipPrice: 'od 650 €',
+      flipIncludes: 'Logo · Brend kit · Fajlovi za štampu',
+    },
+    videoMotion: {
+      title: 'AI sadržaj i video',
+      description: 'Kratki video formati, AI sadržaj i vizuali za društvene mreže.',
+      flipPrice: 'od 890 €',
+      flipIncludes: 'Social formati · AI vizuali · Osnovna animacija',
     },
     aiContent: {
-      title: 'Custom AI Solutions',
-      description: 'Custom AI rešenja i alati za automatizaciju rada.',
+      title: 'Prilagođena AI rešenja',
+      description: 'AI aplikacije, automatizacija i digitalna rešenja po meri.',
+      flipPrice: 'od 1.500 €',
+      flipIncludes: 'Automatizacija · Custom alati · Integracija',
     },
   },
   featuredPortfolio: {
@@ -868,9 +918,9 @@ const sr: SpecTranslations = {
 
 const al: SpecTranslations = {
   hero: {
-    h1: 'Web Dizajn Geislingen',
+    h1: 'Web Dizajn Geislingen Pro',
     h1Prefix: 'Web Dizajn ',
-    h1Typed: 'Geislingen',
+    h1Typed: 'Geislingen Pro',
     subheadline: 'Krijoj faqe moderne, të shpejta dhe të qarta me fokus në rezultate për biznese të vogla, freelancerë dhe marka lokale që duan më shumë kërkesa cilësore online.',
     ctaPrimary: 'Konsultë falas',
     ctaSecondary: 'Shiko portofolin',
@@ -918,21 +968,31 @@ const al: SpecTranslations = {
     title: 'Shërbime që sjellin rezultate',
     subtitle:
       'Nga web design tek marketingu digjital, krijoj përvoja të qarta dhe të fokusuara në konvertime për biznese të vogla dhe creator. Strategji, ekzekutim i shpejtë dhe komunikim shumëgjuhësh—që vizitat të kthehen në kërkesa.',
-    videoMotion: {
-      title: 'AI Content & Video',
-      description: 'Video të shkurtra, përmbajtje të gjeneruar me AI dhe vizuale për rrjetet sociale.',
-    },
+    flipOrderCta: 'Porosit tani',
+    flipDetailsLink: 'Detajet e shërbimit',
     webUi: {
       title: 'Web design & development',
       description: 'Faqe biznesi, landing faqe dhe UI/UX me strukturë të qartë.',
+      flipPrice: 'nga 1.200 €',
+      flipIncludes: 'Portfolio · SEO · Kontakt · Mobile-first',
     },
     graphicBranding: {
-      title: '',
-      description: '',
+      title: 'Grafikë & branding',
+      description: 'Logo, print dhe udhëzime marke që duken profesionale dhe të besueshme.',
+      flipPrice: 'nga 650 €',
+      flipIncludes: 'Logo · Brand kit · Skedarë gati për shtyp',
+    },
+    videoMotion: {
+      title: 'AI Content & Video',
+      description: 'Video të shkurtra, përmbajtje të gjeneruar me AI dhe vizuale për rrjetet sociale.',
+      flipPrice: 'nga 890 €',
+      flipIncludes: 'Formate sociale · Vizuale AI · Motion bazë',
     },
     aiContent: {
-      title: 'Custom AI Solutions',
-      description: 'Zgjidhje AI të personalizuara dhe mjete automatizimi për biznesin tuaj.',
+      title: 'Zgjidhje AI me porosi',
+      description: 'Aplikacione AI, automatizim dhe mjete dixhitale të personalizuara.',
+      flipPrice: 'nga 1.500 €',
+      flipIncludes: 'Automatizim · Mjete me porosi · Integrim',
     },
   },
   featuredPortfolio: {
