@@ -1,5 +1,5 @@
 import { ChevronDown } from "lucide-react";
-import { useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -15,6 +15,7 @@ export default function Hero() {
   const { tSpec, currentLanguage } = useLanguage();
   const sectionRef = useRef<HTMLElement>(null);
   const parallaxRef = useRef<HTMLDivElement>(null);
+  const [dustPortalHost, setDustPortalHost] = useState<HTMLDivElement | null>(null);
 
   const { h1Prefix, h1Typed } = tSpec.hero;
   const useSplitHeadline = Boolean(h1Prefix && h1Typed);
@@ -52,8 +53,9 @@ export default function Hero() {
     <section
       ref={sectionRef}
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#06060d]"
+      className="relative min-h-screen flex items-center justify-center bg-[#06060d]"
     >
+      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden>
       <div
         ref={parallaxRef}
         className="hero-bg-parallax absolute inset-0 bg-cover bg-center bg-no-repeat scale-110"
@@ -149,6 +151,13 @@ export default function Hero() {
             "radial-gradient(ellipse 100% 100% at 50% 50%, transparent 32%, rgba(0,0,0,0.55) 100%)",
         }}
       />
+      </div>
+
+      <div
+        ref={setDustPortalHost}
+        className="hero-dust-portal pointer-events-none absolute inset-0 z-[6]"
+        aria-hidden
+      />
 
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
         {useSplitHeadline ? (
@@ -156,6 +165,7 @@ export default function Hero() {
             h1Prefix={h1Prefix!}
             h1Typed={h1Typed!}
             fullH1={tSpec.hero.h1}
+            dustPortalHost={dustPortalHost}
             data-testid="hero-title"
             aria-label={tSpec.hero.h1}
           />
@@ -164,6 +174,7 @@ export default function Hero() {
             h1Prefix=""
             h1Typed={tSpec.hero.h1}
             fullH1={tSpec.hero.h1}
+            dustPortalHost={dustPortalHost}
             data-testid="hero-title"
             aria-label={tSpec.hero.h1}
           />
