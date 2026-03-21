@@ -7,7 +7,6 @@ import { useLanguage } from "@/contexts/LanguageContext";
 gsap.registerPlugin(ScrollTrigger);
 
 const HERO_IMAGE = "/hero-background.png";
-const SIGNATURE_SRC = "/signature.png";
 const EMAIL = "agron6922@gmail.com";
 const EMAIL_LINK = `mailto:${EMAIL}`;
 
@@ -18,8 +17,6 @@ export default function Hero() {
   const typedRef = useRef<HTMLSpanElement>(null);
   const cursorRef = useRef<HTMLSpanElement>(null);
   const titleBlockRef = useRef<HTMLHeadingElement>(null);
-  const signatureWrapRef = useRef<HTMLDivElement>(null);
-  const signatureImgRef = useRef<HTMLImageElement>(null);
 
   const { h1Prefix, h1Typed } = tSpec.hero;
   const useTyping = Boolean(h1Prefix && h1Typed);
@@ -45,47 +42,6 @@ export default function Hero() {
     return () => {
       st.scrollTrigger?.kill();
       st.kill();
-    };
-  }, [currentLanguage]);
-
-  useLayoutEffect(() => {
-    const wrap = signatureWrapRef.current;
-    const img = signatureImgRef.current;
-    if (!wrap || !img) return;
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduce) {
-      gsap.set(wrap, { clipPath: "none" });
-      gsap.set(img, { clearProps: "opacity,transform" });
-      return;
-    }
-
-    gsap.killTweensOf([wrap, img]);
-    gsap.set(wrap, { clipPath: "inset(0 100% 0 0)" });
-    gsap.set(img, { opacity: 0.45, x: -18 });
-
-    const tl = gsap.timeline({ delay: 0.25 });
-    tl.to(wrap, {
-      clipPath: "inset(0 0% 0 0)",
-      duration: 1.35,
-      ease: "power3.inOut",
-    }).to(
-      img,
-      {
-        opacity: 1,
-        x: 0,
-        duration: 1.15,
-        ease: "power2.out",
-      },
-      0.08,
-    );
-
-    tl.call(() => {
-      img.classList.add("hero-signature-img--pulse");
-    });
-
-    return () => {
-      tl.kill();
-      img.classList.remove("hero-signature-img--pulse");
     };
   }, [currentLanguage]);
 
@@ -253,23 +209,6 @@ export default function Hero() {
             "radial-gradient(ellipse 100% 100% at 50% 50%, transparent 32%, rgba(0,0,0,0.55) 100%)",
         }}
       />
-
-      <div
-        ref={signatureWrapRef}
-        className="hero-signature-wrap pointer-events-none absolute z-[8] hidden md:block left-5 lg:left-8 xl:left-12 top-[36%] -translate-y-1/2 w-[min(34vw,260px)] xl:w-[min(30vw,300px)]"
-        aria-hidden
-      >
-        <img
-          ref={signatureImgRef}
-          src={SIGNATURE_SRC}
-          alt=""
-          width={300}
-          height={120}
-          className="hero-signature-img w-full h-auto object-contain object-left select-none"
-          loading="eager"
-          decoding="async"
-        />
-      </div>
 
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
         {useTyping ? (
