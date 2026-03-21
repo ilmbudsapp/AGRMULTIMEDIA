@@ -8,6 +8,10 @@ export interface SpecTranslations {
   // Hero
   hero: {
     h1: string;
+    /** With `h1Typed`, static part before the typing animation (must match start of `h1`). */
+    h1Prefix?: string;
+    /** Animated suffix; full visible H1 = h1Prefix + h1Typed. */
+    h1Typed?: string;
     subheadline: string;
     ctaPrimary: string;
     ctaSecondary: string;
@@ -128,7 +132,9 @@ export interface SpecTranslations {
 
 const en: SpecTranslations = {
   hero: {
-    h1: 'Web Design & Digital Marketing • AI for Small Businesses',
+    h1: 'Web Design Geislingen',
+    h1Prefix: 'Web Design ',
+    h1Typed: 'Geislingen',
     subheadline: 'I create modern, fast, and conversion-focused websites and digital marketing for small firms, freelancers, and local brands that want more quality inquiries online.',
     ctaPrimary: 'Get a free consultation',
     ctaSecondary: 'View portfolio',
@@ -310,7 +316,9 @@ const en: SpecTranslations = {
 
 const de: SpecTranslations = {
   hero: {
-    h1: 'Webdesign & digitales Marketing • KI für Kleinunternehmen',
+    h1: 'Web Dizajn Geislingen',
+    h1Prefix: 'Web Dizajn ',
+    h1Typed: 'Geislingen',
     subheadline: 'Ich erstelle moderne, schnelle und klar verkaufsorientierte Websites sowie digitale Marketinglösungen für kleine Firmen, Freelancer und lokale Marken, die online mehr qualifizierte Anfragen möchten.',
     ctaPrimary: 'Kostenlose Beratung',
     ctaSecondary: 'Portfolio ansehen',
@@ -492,7 +500,9 @@ const de: SpecTranslations = {
 
 const it: SpecTranslations = {
   hero: {
-    h1: 'Web Design & Digital Marketing • AI per Piccole Imprese',
+    h1: 'Web Design Geislingen',
+    h1Prefix: 'Web Design ',
+    h1Typed: 'Geislingen',
     subheadline: 'Creo siti moderni, veloci e orientati alla conversione per piccole aziende, freelance e attività locali che vogliono più richieste di qualità online.',
     ctaPrimary: 'Consulenza gratuita',
     ctaSecondary: 'Guarda il portfolio',
@@ -674,7 +684,9 @@ const it: SpecTranslations = {
 
 const sr: SpecTranslations = {
   hero: {
-    h1: 'Web Dizajn i Digitalni Marketing • AI za Mala Preduzeća',
+    h1: 'Web Dizajn Geislingen',
+    h1Prefix: 'Web Dizajn ',
+    h1Typed: 'Geislingen',
     subheadline: 'Pravim moderne, brze i prodajno jasne web sajtove za male firme, freelancere i lokalne biznise koji žele više klijenata online.',
     ctaPrimary: 'Besplatne konsultacije',
     ctaSecondary: 'Pogledaj portfolio',
@@ -856,7 +868,9 @@ const sr: SpecTranslations = {
 
 const al: SpecTranslations = {
   hero: {
-    h1: 'Dizajn Web & Marketing Digjital • AI për Biznese të Vogla',
+    h1: 'Web Dizajn Geislingen',
+    h1Prefix: 'Web Dizajn ',
+    h1Typed: 'Geislingen',
     subheadline: 'Krijoj faqe moderne, të shpejta dhe të qarta me fokus në rezultate për biznese të vogla, freelancerë dhe marka lokale që duan më shumë kërkesa cilësore online.',
     ctaPrimary: 'Konsultë falas',
     ctaSecondary: 'Shiko portofolin',

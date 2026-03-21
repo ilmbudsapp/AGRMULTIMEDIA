@@ -1,6 +1,7 @@
 import { ChevronDown } from "lucide-react";
+import { useEffect, useLayoutEffect, useRef } from "react";
+import gsap from "gsap";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Link } from "wouter";
 
 // Hero background: local image – AI workspace with brain graphic, screens, tech.
 const HERO_IMAGE = "/hero-background.png";
@@ -8,7 +9,72 @@ const EMAIL = "agron6922@gmail.com";
 const EMAIL_LINK = `mailto:${EMAIL}`;
 
 export default function Hero() {
-  const { tSpec } = useLanguage();
+  const { tSpec, currentLanguage } = useLanguage();
+  const typedRef = useRef<HTMLSpanElement>(null);
+  const cursorRef = useRef<HTMLSpanElement>(null);
+  const titleBlockRef = useRef<HTMLHeadingElement>(null);
+
+  const { h1Prefix, h1Typed } = tSpec.hero;
+  const useTyping = Boolean(h1Prefix && h1Typed);
+
+  useEffect(() => {
+    if (!useTyping || !typedRef.current) return;
+    const typedEl = typedRef.current;
+    const cursorEl = cursorRef.current;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    typedEl.classList.remove("type-text--complete");
+    typedEl.textContent = "";
+
+    if (reduce) {
+      typedEl.textContent = h1Typed!;
+      typedEl.classList.add("type-text--complete");
+      if (cursorEl) cursorEl.style.opacity = "0";
+      return;
+    }
+
+    if (cursorEl) {
+      cursorEl.style.opacity = "1";
+      gsap.fromTo(cursorEl, { opacity: 1 }, { opacity: 0.25, repeat: -1, yoyo: true, duration: 0.45 });
+    }
+
+    const counter = { n: 0 };
+    const tl = gsap.timeline();
+    tl.to(counter, {
+      n: h1Typed!.length,
+      duration: Math.max(0.75, h1Typed!.length * 0.052),
+      ease: "none",
+      onUpdate: () => {
+        const len = Math.round(counter.n);
+        typedEl.textContent = h1Typed!.slice(0, len);
+      },
+      onComplete: () => {
+        typedEl.classList.add("type-text--complete");
+        if (cursorEl) gsap.to(cursorEl, { opacity: 0, duration: 0.2, overwrite: true });
+      },
+    });
+
+    return () => {
+      tl.kill();
+      if (cursorEl) gsap.killTweensOf(cursorEl);
+    };
+  }, [useTyping, h1Typed, currentLanguage]);
+
+  useLayoutEffect(() => {
+    if (!titleBlockRef.current || !useTyping) return;
+    const el = titleBlockRef.current;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) {
+      gsap.set(el, { opacity: 1, y: 0 });
+      return;
+    }
+    gsap.fromTo(
+      el,
+      { opacity: 0, y: 28 },
+      { opacity: 1, y: 0, duration: 0.65, ease: "power2.out", delay: 0.05 },
+    );
+  }, [useTyping, currentLanguage]);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -114,13 +180,31 @@ export default function Hero() {
       />
 
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
-        <h1
-          className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-5 sm:mb-6 leading-[1.15] tracking-tight animate-fade-in-up"
-          style={{ textShadow: "0 2px 20px rgba(0,0,0,0.7), 0 4px 40px rgba(0,0,0,0.5)" }}
-          data-testid="hero-title"
-        >
-          {tSpec.hero.h1}
-        </h1>
+        {useTyping ? (
+          <h1
+            ref={titleBlockRef}
+            className="hero-title text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-5 sm:mb-6 leading-[1.15] tracking-tight opacity-0"
+            style={{
+              textShadow: "0 2px 20px rgba(0,0,0,0.7), 0 4px 40px rgba(0,0,0,0.5)",
+            }}
+            data-testid="hero-title"
+            aria-label={tSpec.hero.h1}
+          >
+            <span className="hero-title__prefix">{h1Prefix}</span>
+            <span ref={typedRef} className="type-text" />
+            <span ref={cursorRef} className="type-cursor font-light text-white/80" aria-hidden>
+              |
+            </span>
+          </h1>
+        ) : (
+          <h1
+            className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-5 sm:mb-6 leading-[1.15] tracking-tight animate-fade-in-up"
+            style={{ textShadow: "0 2px 20px rgba(0,0,0,0.7), 0 4px 40px rgba(0,0,0,0.5)" }}
+            data-testid="hero-title"
+          >
+            {tSpec.hero.h1}
+          </h1>
+        )}
         <p
           className="text-base sm:text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed animate-fade-in-up font-medium"
           style={{ animationDelay: "0.1s", textShadow: "0 1px 10px rgba(0,0,0,0.8), 0 2px 20px rgba(0,0,0,0.6)" }}

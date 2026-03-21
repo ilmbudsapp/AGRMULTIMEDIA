@@ -289,3 +289,51 @@
   background-size: 48px 48px;
   opacity: 0.8;
 }
+
+/* Hero: typed segment + glow after complete */
+.type-text {
+  display: inline;
+  position: relative;
+}
+
+.type-text.type-text--complete {
+  animation: hero-type-glow 2.4s ease-in-out infinite alternate;
+}
+
+@keyframes hero-type-glow {
+  from {
+    text-shadow:
+      0 0 18px rgba(167, 139, 250, 0.55),
+      0 0 36px rgba(99, 102, 241, 0.35),
+      0 2px 20px rgba(0, 0, 0, 0.7);
+  }
+  to {
+    text-shadow:
+      0 0 32px rgba(196, 181, 253, 0.75),
+      0 0 64px rgba(99, 102, 241, 0.45),
+      0 2px 20px rgba(0, 0, 0, 0.7);
+  }
+}
+
+.type-cursor {
+  display: inline-block;
+  margin-left: 1px;
+  font-weight: 300;
+  transform: translateY(-0.05em);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .type-text.type-text--complete {
+    animation: none;
+    text-shadow:
+      0 0 22px rgba(167, 139, 250, 0.5),
+      0 2px 20px rgba(0, 0, 0, 0.7);
+  }
+}
+
+/* Services preview: 3D tilt layer */
+.service-preview-tilt {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  will-change: transform;
+}

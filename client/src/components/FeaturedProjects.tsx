@@ -1,13 +1,46 @@
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useCallback, useLayoutEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function FeaturedProjects() {
-  const { tSpec } = useLanguage();
+  const { tSpec, currentLanguage } = useLanguage();
   const projects = tSpec.heroProjects.projects;
+  const sectionRef = useRef<HTMLElement>(null);
+
+  const runReveal = useCallback(() => {
+    const root = sectionRef.current;
+    if (!root) return;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) return;
+
+    return gsap.context(() => {
+      gsap.from(".featured-reveal", {
+        opacity: 0,
+        y: 44,
+        duration: 0.7,
+        stagger: 0.12,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: root,
+          start: "top 84%",
+          once: true,
+        },
+      });
+    }, root);
+  }, []);
+
+  useLayoutEffect(() => {
+    const ctx = runReveal();
+    return () => ctx?.revert();
+  }, [runReveal, currentLanguage]);
 
   return (
-    <section className="relative py-16 sm:py-20 bg-light-section">
+    <section ref={sectionRef} className="relative py-16 sm:py-20 bg-light-section">
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-10 sm:mb-12">
+        <div className="text-center mb-10 sm:mb-12 featured-reveal">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-navy tracking-tight">
             {tSpec.heroProjects.heading}
           </h2>
@@ -17,7 +50,7 @@ export default function FeaturedProjects() {
           {projects.map((project, index) => (
             <article
               key={index}
-              className="relative overflow-hidden rounded-2xl bg-white border border-gray-200/80 shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_18px_45px_rgba(0,0,0,0.1)] transition-all duration-300"
+              className="featured-reveal relative overflow-hidden rounded-2xl bg-white border border-gray-200/80 shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_18px_45px_rgba(0,0,0,0.1)] transition-shadow duration-300"
             >
               <div className="h-32 sm:h-36 bg-gradient-to-r from-electric-blue/20 via-purple-500/20 to-pink-500/20" />
               <div className="p-6 sm:p-7">
@@ -40,4 +73,3 @@ export default function FeaturedProjects() {
     </section>
   );
 }
-
