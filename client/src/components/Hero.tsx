@@ -15,7 +15,6 @@ export default function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
   const parallaxRef = useRef<HTMLDivElement>(null);
   const typedRef = useRef<HTMLSpanElement>(null);
-  const cursorRef = useRef<HTMLSpanElement>(null);
   const titleBlockRef = useRef<HTMLHeadingElement>(null);
 
   const { h1Prefix, h1Typed } = tSpec.hero;
@@ -48,7 +47,6 @@ export default function Hero() {
   useEffect(() => {
     if (!useTyping || !typedRef.current) return;
     const typedEl = typedRef.current;
-    const cursorEl = cursorRef.current;
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     typedEl.classList.remove("type-text--complete");
@@ -57,13 +55,7 @@ export default function Hero() {
     if (reduce) {
       typedEl.textContent = h1Typed!;
       typedEl.classList.add("type-text--complete");
-      if (cursorEl) cursorEl.style.opacity = "0";
       return;
-    }
-
-    if (cursorEl) {
-      cursorEl.style.opacity = "1";
-      gsap.fromTo(cursorEl, { opacity: 1 }, { opacity: 0.22, repeat: -1, yoyo: true, duration: 0.48 });
     }
 
     const prog = { v: 0 };
@@ -78,13 +70,11 @@ export default function Hero() {
       },
       onComplete: () => {
         typedEl.classList.add("type-text--complete");
-        if (cursorEl) gsap.to(cursorEl, { opacity: 0, duration: 0.25, overwrite: true });
       },
     });
 
     return () => {
       tl.kill();
-      if (cursorEl) gsap.killTweensOf(cursorEl);
     };
   }, [useTyping, h1Typed, currentLanguage]);
 
@@ -223,9 +213,6 @@ export default function Hero() {
           >
             <span className="hero-title__prefix">{h1Prefix}</span>
             <span ref={typedRef} id="dynamic-text" className="type-text" />
-            <span ref={cursorRef} className="typing-cursor cursor font-light text-violet-200/90" aria-hidden>
-              |
-            </span>
           </h1>
         ) : (
           <h1

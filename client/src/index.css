@@ -315,14 +315,6 @@
   }
 }
 
-.type-cursor,
-.typing-cursor {
-  display: inline-block;
-  margin-left: 1px;
-  font-weight: 300;
-  transform: translateY(-0.05em);
-}
-
 @media (prefers-reduced-motion: reduce) {
   .type-text.type-text--complete {
     animation: none;
