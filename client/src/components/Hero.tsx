@@ -1,9 +1,9 @@
 import { ChevronDown } from "lucide-react";
-import { useLayoutEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLanguage } from "@/contexts/LanguageContext";
-import HeroParticleHeading from "@/components/HeroParticleHeading";
+import HeroScrambleHeading from "@/components/HeroScrambleHeading";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,7 +15,6 @@ export default function Hero() {
   const { tSpec, currentLanguage } = useLanguage();
   const sectionRef = useRef<HTMLElement>(null);
   const parallaxRef = useRef<HTMLDivElement>(null);
-  const [dustPortalHost, setDustPortalHost] = useState<HTMLDivElement | null>(null);
 
   const { h1Prefix, h1Typed } = tSpec.hero;
   const useSplitHeadline = Boolean(h1Prefix && h1Typed);
@@ -153,28 +152,20 @@ export default function Hero() {
       />
       </div>
 
-      <div
-        ref={setDustPortalHost}
-        className="hero-dust-portal pointer-events-none absolute inset-0 z-[6]"
-        aria-hidden
-      />
-
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
         {useSplitHeadline ? (
-          <HeroParticleHeading
+          <HeroScrambleHeading
             h1Prefix={h1Prefix!}
             h1Typed={h1Typed!}
             fullH1={tSpec.hero.h1}
-            dustPortalHost={dustPortalHost}
             data-testid="hero-title"
             aria-label={tSpec.hero.h1}
           />
         ) : (
-          <HeroParticleHeading
+          <HeroScrambleHeading
             h1Prefix=""
             h1Typed={tSpec.hero.h1}
             fullH1={tSpec.hero.h1}
-            dustPortalHost={dustPortalHost}
             data-testid="hero-title"
             aria-label={tSpec.hero.h1}
           />
