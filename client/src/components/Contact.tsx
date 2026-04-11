@@ -4,6 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { PHONE_DISPLAY, PHONE_TEL } from "@/lib/contact";
+import { isEmailJsConfigured, sendContactViaEmailJs } from "@/lib/emailjsContact";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
@@ -72,24 +73,20 @@ export default function Contact() {
       return;
     }
 
+    if (!isEmailJsConfigured()) {
+      setSubmitState("error");
+      setFeedback(t.contact.error.emailjsMissing);
+      return;
+    }
+
     setSubmitState("loading");
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: n,
-          email: em,
-          message: msg,
-          subject: t.contact.form.emailSubject,
-        }),
+      await sendContactViaEmailJs({
+        fromName: n,
+        fromEmail: em,
+        message: msg,
+        subject: t.contact.form.emailSubject,
       });
-      const data = (await res.json()) as { success?: boolean; message?: string };
-      if (!res.ok || !data.success) {
-        setSubmitState("error");
-        setFeedback(data.message ?? t.contact.error.description);
-        return;
-      }
       setSubmitState("success");
       setName("");
       setEmail("");

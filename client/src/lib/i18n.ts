@@ -267,6 +267,7 @@ export interface Translations {
       title: string;
       description: string;
       validation: string;
+      emailjsMissing: string;
     };
     form: {
       title: string;
@@ -1059,7 +1060,8 @@ export const translations: Record<Exclude<Language, "al">, Translations> = {
       error: {
         title: "Greška pri slanju poruke",
         description: "Molimo pokušajte ponovo ili nas kontaktirajte direktno.",
-        validation: "Ime, email i poruka su obavezni"
+        validation: "Ime, email i poruka su obavezni",
+        emailjsMissing: "Kontakt forma nije podešena (EmailJS). Javite nam se telefonom ili emailom."
       },
       form: {
         title: "Pošaljite upit",
@@ -2030,7 +2032,8 @@ export const translations: Record<Exclude<Language, "al">, Translations> = {
       error: {
         title: "Error sending message",
         description: "Please try again or contact us directly.",
-        validation: "Name, email and message are required"
+        validation: "Name, email and message are required",
+        emailjsMissing: "Contact form is not configured (EmailJS). Please call or email us directly."
       },
       form: {
         title: "Send an inquiry",
@@ -2925,7 +2928,8 @@ export const translations: Record<Exclude<Language, "al">, Translations> = {
       error: {
         title: "Fehler beim Senden der Nachricht",
         description: "Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.",
-        validation: "Name, E-Mail und Nachricht sind erforderlich"
+        validation: "Name, E-Mail und Nachricht sind erforderlich",
+        emailjsMissing: "Kontaktformular ist nicht konfiguriert (EmailJS). Bitte rufen Sie uns an oder schreiben Sie eine E-Mail."
       },
       form: {
         title: "Anfrage senden",
@@ -3818,7 +3822,8 @@ export const translations: Record<Exclude<Language, "al">, Translations> = {
       error: {
         title: "Gabim në dërgimin e mesazhit",
         description: "Ju lutemi provoni përsëri ose na kontaktoni direkt.",
-        validation: "Emri, email dhe mesazhi janë të detyrueshme"
+        validation: "Emri, email dhe mesazhi janë të detyrueshme",
+        emailjsMissing: "Formulari i kontaktit nuk është konfiguruar (EmailJS). Na kontaktoni me telefon ose email."
       },
       form: {
         title: "Dërgo pyetje",

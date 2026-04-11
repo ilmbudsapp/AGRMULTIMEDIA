@@ -324,7 +324,8 @@ export const itTranslations: Translations = {
     error: {
       title: "Errore nell'invio del messaggio",
       description: "Riprova o contattaci direttamente.",
-      validation: "Nome, email e messaggio sono obbligatori"
+      validation: "Nome, email e messaggio sono obbligatori",
+      emailjsMissing: "Modulo di contatto non configurato (EmailJS). Chiamaci o scrivici direttamente."
     },
     form: {
       title: "Invia una richiesta",
