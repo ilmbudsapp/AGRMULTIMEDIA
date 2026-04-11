@@ -3,6 +3,8 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 
 export default defineConfig({
+  /** Da se učitava `client/.env` (config fajl je u korenu repoa) */
+  envDir: path.resolve(import.meta.dirname, "client"),
   plugins: [react()],
   resolve: {
     alias: {
