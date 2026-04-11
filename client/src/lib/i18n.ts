@@ -268,6 +268,16 @@ export interface Translations {
       description: string;
       validation: string;
     };
+    form: {
+      title: string;
+      intro: string;
+      name: string;
+      email: string;
+      message: string;
+      submit: string;
+      sending: string;
+      emailSubject: string;
+    };
   };
   
   // Footer
@@ -724,7 +734,7 @@ export interface Translations {
 
 import { itTranslations } from './i18n-it';
 
-export const translations: Record<Language, Translations> = {
+export const translations: Record<Exclude<Language, "al">, Translations> = {
   sr: {
     nav: {
       home: "Početna",
@@ -1024,7 +1034,7 @@ export const translations: Record<Language, Translations> = {
     contact: {
       title: "Kontakt",
       subtitle: "Stupite u kontakt direktno putem telefona ili emaila.",
-      instruction: "Za upite nas kontaktirajte putem telefona ili emaila. Molimo navedite kratak opis vašeg projekta i rokova. Odgovaramo u roku od 24 sata.",
+      instruction: "Pošaljite upit putem forme ispod (bez zakazivanja termina) ili nas kontaktirajte telefonom ili emailom. Odgovaramo u roku od 24 sata.",
       trustLine: "Odgovor u roku od 24 sata",
       info: {
         title: "Kontakt informacije",
@@ -1050,6 +1060,16 @@ export const translations: Record<Language, Translations> = {
         title: "Greška pri slanju poruke",
         description: "Molimo pokušajte ponovo ili nas kontaktirajte direktno.",
         validation: "Ime, email i poruka su obavezni"
+      },
+      form: {
+        title: "Pošaljite upit",
+        intro: "Bez zakazivanja termina — samo vaša pitanja i zahtev za informacije. Odgovaramo na email.",
+        name: "Ime i prezime",
+        email: "Email",
+        message: "Vaša poruka",
+        submit: "Pošalji poruku",
+        sending: "Šaljem…",
+        emailSubject: "Upit za informacije (sajt)"
       }
     },
     portfolioPages: {
@@ -1985,7 +2005,7 @@ export const translations: Record<Language, Translations> = {
     contact: {
       title: "Contact",
       subtitle: "Get in touch directly via phone or email.",
-      instruction: "For inquiries, please contact us directly via phone or email. Please include a brief description of your project and timeline. We respond within 24 hours.",
+      instruction: "Send a message using the form below (no appointment booking) or reach us by phone or email. We respond within 24 hours.",
       trustLine: "Response within 24 hours",
       info: {
         title: "Contact Information",
@@ -2011,6 +2031,16 @@ export const translations: Record<Language, Translations> = {
         title: "Error sending message",
         description: "Please try again or contact us directly.",
         validation: "Name, email and message are required"
+      },
+      form: {
+        title: "Send an inquiry",
+        intro: "No appointment scheduling — questions and information requests only. We reply by email.",
+        name: "Full name",
+        email: "Email",
+        message: "Your message",
+        submit: "Send message",
+        sending: "Sending…",
+        emailSubject: "Website inquiry (information)"
       }
     },
 
@@ -2870,7 +2900,7 @@ export const translations: Record<Language, Translations> = {
     contact: {
       title: "Kontakt",
       subtitle: "Nehmen Sie direkt per Telefon oder E-Mail Kontakt auf.",
-      instruction: "Für Anfragen kontaktieren Sie uns bitte direkt per Telefon oder E-Mail. Bitte geben Sie eine kurze Beschreibung Ihres Projekts und des Zeitplans an. Wir antworten innerhalb von 24 Stunden.",
+      instruction: "Senden Sie uns eine Nachricht über das Formular unten (ohne Terminvereinbarung) oder kontaktieren Sie uns telefonisch oder per E-Mail. Wir antworten innerhalb von 24 Stunden.",
       trustLine: "Antwort innerhalb von 24 Stunden",
       info: {
         title: "Kontaktinformationen",
@@ -2896,6 +2926,16 @@ export const translations: Record<Language, Translations> = {
         title: "Fehler beim Senden der Nachricht",
         description: "Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.",
         validation: "Name, E-Mail und Nachricht sind erforderlich"
+      },
+      form: {
+        title: "Anfrage senden",
+        intro: "Keine Terminbuchung — nur Fragen und Informationsanfragen. Antwort per E-Mail.",
+        name: "Name",
+        email: "E-Mail",
+        message: "Ihre Nachricht",
+        submit: "Nachricht senden",
+        sending: "Wird gesendet…",
+        emailSubject: "Informationsanfrage (Website)"
       }
     },
     portfolioPages: {
@@ -3753,7 +3793,7 @@ export const translations: Record<Language, Translations> = {
     contact: {
       title: "Kontakt",
       subtitle: "Lidhuni me ne direkt përmes telefonit ose emailit.",
-      instruction: "Për pyetje, na kontaktoni direkt me telefon ose email. Ju lutemi përfshini një përshkrim të shkurtër të projektit dhe afateve. Përgjigjemi brenda 24 orëve.",
+      instruction: "Dërgoni një mesazh përmes formës më poshtë (pa caktim takimi) ose na kontaktoni me telefon ose email. Përgjigjemi brenda 24 orëve.",
       trustLine: "Përgjigje brenda 24 orëve",
       info: {
         title: "Informacione Kontakti",
@@ -3779,6 +3819,16 @@ export const translations: Record<Language, Translations> = {
         title: "Gabim në dërgimin e mesazhit",
         description: "Ju lutemi provoni përsëri ose na kontaktoni direkt.",
         validation: "Emri, email dhe mesazhi janë të detyrueshme"
+      },
+      form: {
+        title: "Dërgo pyetje",
+        intro: "Pa caktim takimesh — vetëm pyetje dhe kërkesa informacioni. Përgjigjemi me email.",
+        name: "Emri dhe mbiemri",
+        email: "Email",
+        message: "Mesazhi juaj",
+        submit: "Dërgo mesazhin",
+        sending: "Duke dërguar…",
+        emailSubject: "Pyetje për informacion (sajti)"
       }
     },
     portfolioPages: {

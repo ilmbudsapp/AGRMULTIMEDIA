@@ -299,7 +299,7 @@ export const itTranslations: Translations = {
   contact: {
     title: "Contatti",
     subtitle: "Contattaci direttamente per telefono o email.",
-    instruction: "Per richieste, contattaci direttamente per telefono o email. Includi una breve descrizione del tuo progetto e dei tempi. Rispondiamo entro 24 ore.",
+    instruction: "Invia un messaggio con il modulo qui sotto (senza prenotazione appuntamenti) oppure contattaci per telefono o email. Rispondiamo entro 24 ore.",
     trustLine: "Risposta entro 24 ore",
     info: {
       title: "Informazioni di contatto",
@@ -325,6 +325,16 @@ export const itTranslations: Translations = {
       title: "Errore nell'invio del messaggio",
       description: "Riprova o contattaci direttamente.",
       validation: "Nome, email e messaggio sono obbligatori"
+    },
+    form: {
+      title: "Invia una richiesta",
+      intro: "Nessuna prenotazione — solo domande e richieste di informazioni. Rispondiamo via email.",
+      name: "Nome e cognome",
+      email: "Email",
+      message: "Il tuo messaggio",
+      submit: "Invia messaggio",
+      sending: "Invio in corso…",
+      emailSubject: "Richiesta informazioni (sito web)"
     }
   },
   portfolioPages: {

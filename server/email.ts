@@ -34,6 +34,14 @@ interface ContactFormData {
   message: string;
 }
 
+function escapeHtml(s: string): string {
+  return s
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
 export async function sendContactEmail(
   formData: ContactFormData
 ): Promise<boolean> {
@@ -58,11 +66,11 @@ export async function sendContactEmail(
 
     const html = `
       <h2>Novi kontakt sa sajta AGR MULTIMEDIA</h2>
-      <p><strong>Ime i prezime:</strong> ${formData.name}</p>
-      <p><strong>Email posetioca:</strong> ${formData.email}</p>
+      <p><strong>Ime i prezime:</strong> ${escapeHtml(formData.name)}</p>
+      <p><strong>Email posetioca:</strong> ${escapeHtml(formData.email)}</p>
       <hr />
       <p><strong>Poruka:</strong></p>
-      <p style="white-space: pre-line;">${formData.message}</p>
+      <p style="white-space: pre-line;">${escapeHtml(formData.message)}</p>
     `;
 
     await transporter.sendMail({
