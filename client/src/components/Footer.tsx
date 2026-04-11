@@ -1,12 +1,11 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Link, useLocation } from "wouter";
 import { Facebook, Instagram, Linkedin, MessageCircle, Mail as MailIcon } from "lucide-react";
+import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_LINK } from "@/lib/contact";
 
-const PHONE = "+49 1556 7204598";
 const FACEBOOK_URL = "https://www.facebook.com/halidosmani74";
 const INSTAGRAM_URL = "https://www.instagram.com/agrondesign/";
 const LINKEDIN_URL = "https://www.linkedin.com/in/agron-osmani-228947266/";
-const WHATSAPP_LINK = "https://wa.me/4915567204598";
 const EMAIL_LINK = "mailto:agron6922@gmail.com";
 
 export default function Footer() {
@@ -94,7 +93,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="text-gray-400 flex items-center gap-2">
                 <span>📞</span>
-                <a href={`tel:${PHONE.replace(/\s/g, "")}`} className="hover:text-white transition-colors">{PHONE}</a>
+                <a href={`tel:${PHONE_TEL}`} className="hover:text-white transition-colors">{PHONE_DISPLAY}</a>
               </li>
               <li className="text-gray-400 flex items-center gap-2">
                 <span>📧</span>

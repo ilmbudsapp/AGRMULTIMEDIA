@@ -1,9 +1,8 @@
 import { useLanguage } from "@/contexts/LanguageContext";
+import { WHATSAPP_LINK } from "@/lib/contact";
 
 const EMAIL = "agron6922@gmail.com";
 const EMAIL_LINK = `mailto:${EMAIL}`;
-const WHATSAPP_PHONE = "+4915567204598";
-const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_PHONE.replace(/\D/g, "")}`;
 
 export default function HeroCta() {
   const { tSpec } = useLanguage();

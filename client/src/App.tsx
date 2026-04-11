@@ -9,10 +9,10 @@ import { useAnalytics } from "./hooks/use-analytics";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import { ErrorBoundary } from "./components/ErrorBoundary";
 import MetaSEO from "./components/MetaSEO";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 import Home from "@/pages/home";
 import ServicesPage from "@/pages/ServicesPage";
 import AboutPage from "@/pages/AboutPage";
-import ContactPage from "@/pages/ContactPage";
 import ContactPage from "@/pages/ContactPage";
 import PortfolioPage from "@/pages/PortfolioPage";
 import BlogIndexPage from "@/pages/BlogIndexPage";
@@ -96,6 +96,7 @@ function App() {
                 <div className="min-h-screen w-full max-w-[100vw] overflow-x-hidden">
                   <MetaSEO />
                   <Router />
+                  <WhatsAppFloat />
                 </div>
                 <Toaster />
               </TooltipProvider>

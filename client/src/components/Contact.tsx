@@ -3,11 +3,12 @@ import { useCallback, useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { PHONE_DISPLAY, PHONE_TEL } from "@/lib/contact";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const PHONE = "+49 155 67204598";
-const PHONE_LINK = "tel:+4915567204598";
+const PHONE = PHONE_DISPLAY;
+const PHONE_LINK = `tel:${PHONE_TEL}`;
 const EMAIL = "agron6922@gmail.com";
 const EMAIL_LINK = "mailto:agron6922@gmail.com";
 

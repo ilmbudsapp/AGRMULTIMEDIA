@@ -340,7 +340,7 @@ export const itTranslations: Translations = {
     services: "Servizi",
     company: "Azienda",
     contact: "Contatti",
-      phone: "+49 1556 7204598",
+      phone: "+49 15560 873124",
     email: "agron6922@gmail.com",
     location: "Geislingen an der Steige",
     copyright: "© 2026 MULTIMEDIA AGRONDESIGN. Tutti i diritti riservati.",

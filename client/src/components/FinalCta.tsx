@@ -3,13 +3,12 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Link } from "wouter";
+import { WHATSAPP_LINK } from "@/lib/contact";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const EMAIL = "agron6922@gmail.com";
 const EMAIL_LINK = `mailto:${EMAIL}`;
-const WHATSAPP_PHONE = "+4915567204598";
-const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_PHONE.replace(/\D/g, "")}`;
 
 export default function FinalCta() {
   const { tSpec, currentLanguage } = useLanguage();
