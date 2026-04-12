@@ -24,6 +24,11 @@ export interface SpecTranslations {
     ctaPrimary: string;
     ctaSecondary: string;
     availableIn: string;
+    /** Short labels on hero visual collage */
+    collageWeb: string;
+    collageBrand: string;
+    collageVideo: string;
+    collageCreative: string;
   };
   // SEO (overrides for title/meta/OG/Twitter)
   seo: {
@@ -155,12 +160,16 @@ const en: SpecTranslations = {
     moreAbout: 'Full profile & background',
   },
   hero: {
-    h1: 'Web design, branding & SEO for businesses that value clarity',
+    h1: 'Websites, branding & AI-powered creative for businesses',
     subheadline:
-      'Websites, identity systems, AI-assisted video, and search optimisation—delivered with a calm, professional process.',
+      'I design and build clear web experiences, strong visual identities, and video / AI-driven content—so your first impression matches your quality.',
     ctaPrimary: 'Get a quote',
     ctaSecondary: 'Selected work',
     availableIn: 'DE · EN · IT · SR · AL',
+    collageWeb: 'Web & UI',
+    collageBrand: 'Branding',
+    collageVideo: 'Video & AI',
+    collageCreative: 'Print & layout',
   },
   seo: {
     title: "AGR Multimedia | Web Design, Graphics & AI for Small Businesses",
@@ -353,12 +362,16 @@ const de: SpecTranslations = {
     moreAbout: 'Zum vollständigen Profil',
   },
   hero: {
-    h1: 'Webdesign, Branding & SEO für klare Auftritte',
+    h1: 'Websites, Branding & KI-gestützte Kreativ für Unternehmen',
     subheadline:
-      'Websites, visuelle Identität, KI-unterstütztes Video und Suchmaschinenoptimierung—strukturiert und ohne Schnickschnack.',
+      'Ich gestalte klare Web-Auftritte, starke Markenidentität und Video-/KI-Inhalte—damit der erste Eindruck zu Ihrer Qualität passt.',
     ctaPrimary: 'Angebot anfragen',
     ctaSecondary: 'Ausgewählte Arbeiten',
     availableIn: 'DE · EN · IT · SR · AL',
+    collageWeb: 'Web & UI',
+    collageBrand: 'Branding',
+    collageVideo: 'Video & KI',
+    collageCreative: 'Print & Layout',
   },
   seo: {
     title: "AGR Multimedia | Webdesign, Grafik & KI für Kleinunternehmen",
@@ -551,12 +564,16 @@ const it: SpecTranslations = {
     moreAbout: 'Profilo completo',
   },
   hero: {
-    h1: 'Web design, branding e SEO per chi vuole chiarezza',
+    h1: 'Siti web, branding e creatività AI-powered per aziende',
     subheadline:
-      'Siti, identità visiva, video con supporto AI e ottimizzazione SEO—con un processo professionale e ordinato.',
+      'Progetto esperienze web chiare, identità visive forti e contenuti video/AI—così la prima impressione rispecchia la tua qualità.',
     ctaPrimary: 'Richiedi un preventivo',
     ctaSecondary: 'Lavori selezionati',
     availableIn: 'DE · EN · IT · SR · AL',
+    collageWeb: 'Web & UI',
+    collageBrand: 'Branding',
+    collageVideo: 'Video & AI',
+    collageCreative: 'Print & layout',
   },
   seo: {
     title: "AGR Multimedia | Web Design, Grafica & AI per Piccole Imprese",
@@ -749,12 +766,16 @@ const sr: SpecTranslations = {
     moreAbout: 'Kompletan profil',
   },
   hero: {
-    h1: 'Web dizajn, brending i SEO za ozbiljne brendove',
+    h1: 'Sajtovi, brending i AI kreativni sadržaj za biznise',
     subheadline:
-      'Sajtovi, vizuelni identitet, AI video i SEO—strukturisano, bez vizuelnog šuma.',
+      'Dizajniram jasne web doživljaje, jaku vizuelnu identitet i video / AI sadržaj—da prvi utisak odgovara vašem kvalitetu.',
     ctaPrimary: 'Zatraži ponudu',
     ctaSecondary: 'Izabrani radovi',
     availableIn: 'DE · EN · IT · SR · AL',
+    collageWeb: 'Web i UI',
+    collageBrand: 'Brending',
+    collageVideo: 'Video i AI',
+    collageCreative: 'Štampa i layout',
   },
   seo: {
     title: "AGR Multimedia | Web Dizajn, Grafika & AI za Mala Preduzeća",
@@ -947,12 +968,16 @@ const al: SpecTranslations = {
     moreAbout: 'Profili i plotë',
   },
   hero: {
-    h1: 'Web design, branding dhe SEO për biznese që duan qartësi',
+    h1: 'Faqe web, branding dhe përmbajtje kreative me AI për biznese',
     subheadline:
-      'Faqe interneti, identitet vizual, video me AI dhe SEO—proces i strukturuar dhe i qetë.',
+      'Krijoj përvoja të qarta në web, identitet vizual të fortë dhe video / përmbajtje me AI—që përshtypja e parë të pasqyrojë cilësinë tuaj.',
     ctaPrimary: 'Kërko ofertë',
     ctaSecondary: 'Punë të zgjedhura',
     availableIn: 'DE · EN · IT · SR · AL',
+    collageWeb: 'Web & UI',
+    collageBrand: 'Branding',
+    collageVideo: 'Video & AI',
+    collageCreative: 'Print & layout',
   },
   seo: {
     title: "AGR Multimedia | Web Dizajn, Grafikë & AI për Biznese të Vogla",
