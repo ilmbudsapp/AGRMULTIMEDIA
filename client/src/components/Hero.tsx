@@ -75,8 +75,8 @@ export default function Hero() {
           </p>
         </div>
 
-        <div className="order-2 w-full max-w-lg justify-self-center lg:order-none lg:max-w-none lg:justify-self-end">
-          <div className="relative overflow-hidden rounded-2xl bg-neutral-900 shadow-[0_24px_48px_-12px_rgba(15,23,42,0.25),0_0_0_1px_rgba(15,23,42,0.06)] ring-1 ring-black/5">
+        <div className="order-2 w-full max-w-lg justify-self-center p-2 sm:p-3 lg:order-none lg:max-w-none lg:justify-self-end">
+          <div className="relative overflow-hidden rounded-2xl bg-neutral-900 shadow-[0_2px_4px_rgba(15,23,42,0.05),0_14px_32px_-8px_rgba(15,23,42,0.22),0_32px_64px_-14px_rgba(15,23,42,0.32),0_52px_88px_-22px_rgba(15,23,42,0.24)] ring-1 ring-neutral-900/10">
             <div className="relative aspect-video w-full">
               <video
                 ref={videoRef}
