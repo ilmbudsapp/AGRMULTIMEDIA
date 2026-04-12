@@ -1,6 +1,6 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const HERO_IMAGE = "/hero-background.png";
+const HERO_IMAGE = "/hero-workspace.png";
 
 export default function Hero() {
   const { tSpec } = useLanguage();
@@ -12,25 +12,27 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-[88vh] flex flex-col justify-center pt-20 pb-16 md:pt-24 md:pb-20 bg-[#07070b]"
+      className="relative min-h-[88vh] flex flex-col justify-center bg-[#c8ced8] pt-20 pb-16 md:pt-24 md:pb-20"
     >
       <div className="absolute inset-0 pointer-events-none" aria-hidden>
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-[0.35]"
+          className="absolute inset-0 bg-cover bg-[center_28%] sm:bg-center"
           style={{ backgroundImage: `url(${HERO_IMAGE})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#07070b]/80 via-[#07070b]/90 to-[#07070b]" />
+        {/* Lighter scrim so the office photo stays visible; enough contrast for white copy */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/28 to-black/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/35 via-transparent to-black/25" />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
         <h1
-          className="text-[1.75rem] sm:text-3xl md:text-4xl lg:text-[2.75rem] font-semibold tracking-tight text-white leading-[1.15]"
+          className="text-[1.75rem] font-semibold leading-[1.15] tracking-tight text-white [text-shadow:0_2px_28px_rgba(0,0,0,0.55)] sm:text-3xl md:text-4xl lg:text-[2.75rem]"
           data-testid="hero-title"
         >
           {tSpec.hero.h1}
         </h1>
         <p
-          className="mt-6 text-base sm:text-lg text-white/70 max-w-xl mx-auto leading-relaxed"
+          className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-white/85 [text-shadow:0_1px_18px_rgba(0,0,0,0.45)] sm:text-lg"
           data-testid="hero-subtitle"
         >
           {tSpec.hero.subheadline}
