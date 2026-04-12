@@ -19,7 +19,7 @@ export default function Hero() {
         <img
           src={HERO_IMAGE}
           alt=""
-          className="absolute inset-0 h-full w-full object-cover object-[88%_22%] max-[480px]:object-[86%_18%] sm:object-[center_28%] lg:object-center"
+          className="absolute inset-0 h-full w-full object-cover object-[96%_22%] max-[480px]:object-[98%_18%] sm:object-[center_28%] lg:object-center"
           decoding="async"
           fetchPriority="high"
         />
