@@ -91,22 +91,6 @@ export default function Hero() {
               >
                 <source src={PROMO_VIDEO} type="video/mp4" />
               </video>
-              {/* Decorative play hint — video is muted autoplay; no sound */}
-              <div
-                className="pointer-events-none absolute inset-0 flex items-center justify-center bg-gradient-to-t from-black/20 via-transparent to-black/10"
-                aria-hidden
-              >
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white/12 shadow-inner backdrop-blur-[2px] ring-1 ring-white/25 sm:h-16 sm:w-16">
-                  <svg
-                    viewBox="0 0 24 24"
-                    className="ml-0.5 h-7 w-7 text-white/95 sm:h-8 sm:w-8"
-                    fill="currentColor"
-                    aria-hidden
-                  >
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </div>
-              </div>
             </div>
           </div>
         </div>
