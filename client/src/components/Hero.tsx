@@ -15,11 +15,11 @@ export default function Hero() {
       className="relative min-h-[88vh] flex flex-col justify-center bg-[#c8ced8] pt-20 pb-16 md:pt-24 md:pb-20"
     >
       <div className="absolute inset-0 pointer-events-none" aria-hidden>
-        {/* object-position: na uskim ekranima fokus na desno (osoba + radno mesto), ne centar */}
+        {/* Mobilni: fokus levo (monitori / prozor); desktop: uravnotežen kadar */}
         <img
           src={HERO_IMAGE}
           alt=""
-          className="absolute inset-0 h-full w-full object-cover object-[96%_22%] max-[480px]:object-[98%_18%] sm:object-[center_28%] lg:object-center"
+          className="absolute inset-0 h-full w-full object-cover object-[18%_24%] max-[480px]:object-[12%_20%] sm:object-[center_28%] lg:object-center"
           decoding="async"
           fetchPriority="high"
         />
