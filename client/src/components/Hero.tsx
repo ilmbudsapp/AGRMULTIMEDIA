@@ -15,11 +15,11 @@ export default function Hero() {
       className="relative min-h-[88vh] flex flex-col justify-center bg-[#c8ced8] pt-20 pb-16 md:pt-24 md:pb-20"
     >
       <div className="absolute inset-0 pointer-events-none" aria-hidden>
-        {/* Mobilni: blago ulevo od centra da budu i monitori i osoba; desktop kao ranije */}
+        {/* Mobilni: veći X = više desne strane slike u kadru (osoba levo na ekranu); desktop kao ranije */}
         <img
           src={HERO_IMAGE}
           alt=""
-          className="absolute inset-0 h-full w-full object-cover object-[44%_24%] max-[480px]:object-[40%_20%] sm:object-[center_28%] lg:object-center"
+          className="absolute inset-0 h-full w-full object-cover object-[68%_24%] max-[480px]:object-[62%_20%] sm:object-[center_28%] lg:object-center"
           decoding="async"
           fetchPriority="high"
         />
