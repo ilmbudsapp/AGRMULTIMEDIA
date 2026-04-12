@@ -15,9 +15,13 @@ export default function Hero() {
       className="relative min-h-[88vh] flex flex-col justify-center bg-[#c8ced8] pt-20 pb-16 md:pt-24 md:pb-20"
     >
       <div className="absolute inset-0 pointer-events-none" aria-hidden>
-        <div
-          className="absolute inset-0 bg-cover bg-[center_28%] sm:bg-center"
-          style={{ backgroundImage: `url(${HERO_IMAGE})` }}
+        {/* object-position: na uskim ekranima fokus na desno (osoba + radno mesto), ne centar */}
+        <img
+          src={HERO_IMAGE}
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover object-[88%_22%] max-[480px]:object-[86%_18%] sm:object-[center_28%] lg:object-center"
+          decoding="async"
+          fetchPriority="high"
         />
         {/* Lighter scrim so the office photo stays visible; enough contrast for white copy */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/28 to-black/50" />
