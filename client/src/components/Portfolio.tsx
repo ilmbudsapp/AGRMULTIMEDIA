@@ -10,7 +10,9 @@ import posterKong from "@assets/KING KONG_1755565210288.jpg";
 import powerFit from "@assets/generated_images/PowerFit_Pro_Brand_Identity_3cf59135.png";
 import printMockup from "@assets/generated_images/Print_Materials_Mockup_f741f1f6.png";
 
-export default function Portfolio() {
+type PortfolioProps = { featured?: boolean };
+
+export default function Portfolio({ featured = false }: PortfolioProps) {
   const { t, tSpec } = useLanguage();
   const [activeFilter, setActiveFilter] = useState('all');
 
@@ -38,18 +40,34 @@ export default function Portfolio() {
     ? portfolioItems
     : portfolioItems.filter(item => item.category === activeFilter);
 
+  const curatedFeatured = (() => {
+    const seen = new Set<string>();
+    const out: typeof portfolioItems = [];
+    for (const item of portfolioItems) {
+      if (seen.has(item.slug)) continue;
+      seen.add(item.slug);
+      out.push(item);
+      if (out.length >= 6) break;
+    }
+    return out;
+  })();
+
+  const displayItems = featured ? curatedFeatured : filteredItems;
+
   return (
-    <section id="portfolio" className="py-24 bg-[#0f0f14]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight" data-testid="portfolio-title">
+    <section id="portfolio" className={`scroll-mt-24 ${featured ? "py-20 md:py-24 bg-[#0a0a0c]" : "py-24 bg-[#0f0f14]"}`}>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className={`${featured ? "mb-12 md:mb-14 text-left max-w-2xl" : "text-center mb-16"}`}>
+          <p className="text-xs font-medium uppercase tracking-[0.2em] text-white/40 mb-3">{tSpec.nav.portfolio}</p>
+          <h2 className="text-3xl md:text-4xl font-semibold text-white tracking-tight" data-testid="portfolio-title">
             {tSpec.featuredPortfolio.heading}
           </h2>
-          <p className="text-gray-400 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
-            {t.portfolio.subtitle}
+          <p className={`text-white/55 text-sm md:text-base leading-relaxed ${featured ? "mt-3" : "mt-4 text-gray-400 max-w-3xl mx-auto"}`}>
+            {featured ? tSpec.featuredPortfolio.featuredIntro : t.portfolio.subtitle}
           </p>
         </div>
-        
+
+        {!featured && (
         <div className="flex flex-wrap justify-center mb-12 gap-3" data-testid="portfolio-filter">
           {filterCategories.map((category) => (
             <button
@@ -66,12 +84,13 @@ export default function Portfolio() {
             </button>
           ))}
         </div>
+        )}
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredItems.map((item) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          {displayItems.map((item) => (
             <div
               key={item.id}
-              className="group relative overflow-hidden rounded-2xl glass-card transition-all duration-300"
+              className="group relative overflow-hidden rounded-xl border border-white/[0.06] bg-white/[0.02] transition-colors hover:border-white/[0.1]"
               data-testid={`portfolio-item-${item.id}`}
             >
               <img 
@@ -79,29 +98,40 @@ export default function Portfolio() {
                 alt={item.title} 
                 loading="lazy"
                 decoding="async"
-                className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" 
+                className={`w-full object-cover transition-transform duration-500 group-hover:scale-[1.02] ${featured ? "h-52 md:h-56" : "h-64"}`}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] via-[#0a0a0f]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-6 left-6 right-6">
-                  <h3 className="text-white text-xl font-semibold mb-2" data-testid={`portfolio-item-title-${item.id}`}>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent opacity-90 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6">
+                  <h3 className="text-white text-lg font-semibold mb-1" data-testid={`portfolio-item-title-${item.id}`}>
                     {item.title}
                   </h3>
-                  <p className="text-gray-300 text-sm mb-4 line-clamp-2" data-testid={`portfolio-item-description-${item.id}`}>
+                  <p className="text-white/75 text-sm mb-4 line-clamp-2" data-testid={`portfolio-item-description-${item.id}`}>
                     {item.description}
                   </p>
                   <Link href={`/portfolio/${item.slug}`}>
-                    <button 
-                      className="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-lg hover:bg-white/30 transition-all duration-300"
+                    <span 
+                      className="inline-block text-sm font-medium text-white border-b border-white/40 pb-0.5 hover:border-white"
                       data-testid={`portfolio-item-cta-${item.id}`}
                     >
                       {tSpec.featuredPortfolio.viewDetails}
-                    </button>
+                    </span>
                   </Link>
                 </div>
               </div>
             </div>
           ))}
         </div>
+
+        {featured && (
+          <div className="mt-12 text-center">
+            <Link
+              href="/portfolio"
+              className="inline-flex text-sm font-medium text-white/60 hover:text-white transition-colors underline-offset-4 hover:underline"
+            >
+              {tSpec.nav.portfolio} →
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );

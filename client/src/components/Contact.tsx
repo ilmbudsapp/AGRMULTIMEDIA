@@ -100,7 +100,7 @@ export default function Contact() {
   }
 
   return (
-    <section ref={sectionRef} id="contact" className="py-24 bg-[#06060d]">
+    <section ref={sectionRef} id="contact" className="scroll-mt-24 py-20 md:py-28 bg-[#06060d] border-t border-white/[0.06]">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <p className="contact-reveal text-violet-400 font-semibold text-sm uppercase tracking-[0.2em] mb-3">
           {t.nav.contact}

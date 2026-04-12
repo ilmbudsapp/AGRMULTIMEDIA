@@ -46,7 +46,12 @@ export interface SpecTranslations {
     text: string;
     button: string;
   };
-  // Nav (order: Home, Services, Portfolio, About, Blog, Contact)
+  /** Homepage About teaser */
+  homeAbout: {
+    lead: string;
+    moreAbout: string;
+  };
+  // Nav (blog removed from UI; keys kept for legacy strings)
   nav: {
     home: string;
     services: string;
@@ -54,6 +59,8 @@ export interface SpecTranslations {
     about: string;
     blog: string;
     contact: string;
+    /** Primary header CTA → #contact */
+    ctaQuote: string;
   };
   // Services preview (4 flip cards on home)
   servicesPreview: {
@@ -69,6 +76,8 @@ export interface SpecTranslations {
   // Featured portfolio
   featuredPortfolio: {
     heading: string;
+    /** One line under heading on homepage featured grid */
+    featuredIntro: string;
     filterAll: string;
     filterWeb: string;
     filterGraphic: string;
@@ -141,14 +150,17 @@ export interface SpecTranslations {
 }
 
 const en: SpecTranslations = {
+  homeAbout: {
+    lead: 'AGR Multimedia is a freelance creative studio focused on clear positioning, refined visuals, and measurable outcomes—not noise.',
+    moreAbout: 'Full profile & background',
+  },
   hero: {
-    h1: 'Web Design AGRMULTIMEDIA',
-    h1Prefix: 'Web Design ',
-    h1Typed: 'AGRMULTIMEDIA',
-    subheadline: 'I create modern, fast, and conversion-focused websites and digital marketing for small firms, freelancers, and local brands that want more quality inquiries online.',
-    ctaPrimary: 'Get a free consultation',
-    ctaSecondary: 'View portfolio',
-    availableIn: 'Available in DE · EN · IT · SR · AL',
+    h1: 'Web design, branding & SEO for businesses that value clarity',
+    subheadline:
+      'Websites, identity systems, AI-assisted video, and search optimisation—delivered with a calm, professional process.',
+    ctaPrimary: 'Get a quote',
+    ctaSecondary: 'Selected work',
+    availableIn: 'DE · EN · IT · SR · AL',
   },
   seo: {
     title: "AGR Multimedia | Web Design, Graphics & AI for Small Businesses",
@@ -187,11 +199,11 @@ const en: SpecTranslations = {
     about: 'About',
     blog: 'Blog',
     contact: 'Contact',
+    ctaQuote: 'Get a quote',
   },
   servicesPreview: {
-    title: 'Services that help your business grow',
-    subtitle:
-      'From web design to digital marketing, I build clear, conversion-focused experiences for small businesses and creators. You get strategy, fast execution, and multilingual communication—so your website turns visitors into inquiries.',
+    title: 'What I do',
+    subtitle: 'Four focused areas—structured for small businesses and creators who need a premium presence without complexity.',
     flipOrderCta: 'Request now',
     flipDetailsLink: 'Service details',
     webUi: {
@@ -213,14 +225,15 @@ const en: SpecTranslations = {
       flipIncludes: 'Social cuts · AI visuals · Motion basics',
     },
     aiContent: {
-      title: 'Custom AI Solutions',
-      description: 'AI apps, automation tools and custom digital solutions for your workflows.',
-      flipPrice: 'from €1,500',
-      flipIncludes: 'Automation · Custom tools · Integration',
+      title: 'SEO optimisation',
+      description: 'Technical SEO, content structure, and ongoing improvements so the right people find you.',
+      flipPrice: 'from €450',
+      flipIncludes: 'Audits · On-page · Reporting',
     },
   },
   featuredPortfolio: {
-    heading: 'Selected projects',
+    heading: 'Selected work',
+    featuredIntro: 'A curated set of projects—full portfolio available on request.',
     filterAll: 'All',
     filterWeb: 'Web',
     filterGraphic: 'Graphic',
@@ -233,7 +246,7 @@ const en: SpecTranslations = {
   whyMe: {
     heading: 'Why work with me',
     subtitle:
-      'You need a website and marketing that look professional and generate real results. I combine design, video and AI-enhanced workflows for a clean process, reliable delivery, and clear outcomes.',
+      'Adobe Creative Cloud, modern AI-assisted workflows, and multilingual communication—structured delivery without agency overhead.',
     benefit1: 'Multilingual communication: I speak German, English, Italian, Serbian and Albanian.',
     benefit2: 'Specialized in small businesses and creators who need fast and reliable delivery.',
     benefit3: 'End-to-end support: from first idea to final website, design or video.',
@@ -335,14 +348,17 @@ const en: SpecTranslations = {
 };
 
 const de: SpecTranslations = {
+  homeAbout: {
+    lead: 'AGR Multimedia ist ein kreatives Studio mit Fokus auf klare Positionierung und ruhige, professionelle Umsetzung.',
+    moreAbout: 'Zum vollständigen Profil',
+  },
   hero: {
-    h1: 'Webdesign AGRMULTIMEDIA',
-    h1Prefix: 'Webdesign ',
-    h1Typed: 'AGRMULTIMEDIA',
-    subheadline: 'Ich erstelle moderne, schnelle und klar verkaufsorientierte Websites sowie digitale Marketinglösungen für kleine Firmen, Freelancer und lokale Marken, die online mehr qualifizierte Anfragen möchten.',
-    ctaPrimary: 'Kostenlose Beratung',
-    ctaSecondary: 'Portfolio ansehen',
-    availableIn: 'Verfügbar in DE · EN · IT · SR · AL',
+    h1: 'Webdesign, Branding & SEO für klare Auftritte',
+    subheadline:
+      'Websites, visuelle Identität, KI-unterstütztes Video und Suchmaschinenoptimierung—strukturiert und ohne Schnickschnack.',
+    ctaPrimary: 'Angebot anfragen',
+    ctaSecondary: 'Ausgewählte Arbeiten',
+    availableIn: 'DE · EN · IT · SR · AL',
   },
   seo: {
     title: "AGR Multimedia | Webdesign, Grafik & KI für Kleinunternehmen",
@@ -381,11 +397,11 @@ const de: SpecTranslations = {
     about: 'Über mich',
     blog: 'Blog',
     contact: 'Kontakt',
+    ctaQuote: 'Angebot anfragen',
   },
   servicesPreview: {
-    title: 'Leistungen, die Ergebnisse bringen',
-    subtitle:
-      'Von Webdesign bis digitalem Marketing erstelle ich klare, conversion-starke Auftritte für kleine Unternehmen und Kreative. Sie erhalten Strategie, schnelle Umsetzung und mehrsprachige Kommunikation—damit Ihre Website Anfragen erzeugt.',
+    title: 'Schwerpunkte',
+    subtitle: 'Vier Bereiche—für kleine Unternehmen, die Qualität ohne Überladung suchen.',
     flipOrderCta: 'Jetzt anfragen',
     flipDetailsLink: 'Leistung ansehen',
     webUi: {
@@ -407,14 +423,15 @@ const de: SpecTranslations = {
       flipIncludes: 'Social-Formate · AI-Visuals · Motion-Basics',
     },
     aiContent: {
-      title: 'Individuelle KI-Lösungen',
-      description: 'KI-Apps, Automatisierung und maßgeschneiderte digitale Tools für Ihre Abläufe.',
-      flipPrice: 'ab 1.500 €',
-      flipIncludes: 'Automatisierung · Custom Tools · Anbindung',
+      title: 'SEO-Optimierung',
+      description: 'Technisches SEO, Content-Struktur und laufende Verbesserungen für bessere Sichtbarkeit.',
+      flipPrice: 'ab 450 €',
+      flipIncludes: 'Audits · On-Page · Reporting',
     },
   },
   featuredPortfolio: {
-    heading: 'Ausgewählte Projekte',
+    heading: 'Ausgewählte Arbeiten',
+    featuredIntro: 'Eine kuratierte Auswahl—das vollständige Portfolio auf Anfrage.',
     filterAll: 'Alle',
     filterWeb: 'Web',
     filterGraphic: 'Grafik',
@@ -427,7 +444,7 @@ const de: SpecTranslations = {
   whyMe: {
     heading: 'Warum mit mir arbeiten',
     subtitle:
-      'Sie brauchen eine Website, die überzeugt und konvertiert. Ich kombiniere Design, Video und KI-gestützte Workflows für einen sauberen Prozess, verlässliche Umsetzung und klare Ergebnisse.',
+      'Adobe Creative Cloud, moderne KI-Workflows und mehrsprachige Abstimmung—ohne Agentur-Overhead.',
     benefit1: 'Mehrsprachige Kommunikation: Ich spreche Deutsch, Englisch, Italienisch, Serbisch und Albanisch.',
     benefit2: 'Spezialisiert auf kleine Unternehmen und Creator mit Bedarf an schneller und zuverlässiger Lieferung.',
     benefit3: 'End-to-End-Betreuung: von der ersten Idee bis zur fertigen Website, zum Design oder Video.',
@@ -529,14 +546,17 @@ const de: SpecTranslations = {
 };
 
 const it: SpecTranslations = {
+  homeAbout: {
+    lead: 'AGR Multimedia è uno studio creativo indipendente: chiarezza visiva, identità curata e risultati misurabili.',
+    moreAbout: 'Profilo completo',
+  },
   hero: {
-    h1: 'Web Design AGRMULTIMEDIA',
-    h1Prefix: 'Web Design ',
-    h1Typed: 'AGRMULTIMEDIA',
-    subheadline: 'Creo siti moderni, veloci e orientati alla conversione per piccole aziende, freelance e attività locali che vogliono più richieste di qualità online.',
-    ctaPrimary: 'Consulenza gratuita',
-    ctaSecondary: 'Guarda il portfolio',
-    availableIn: 'Disponibile in DE · EN · IT · SR · AL',
+    h1: 'Web design, branding e SEO per chi vuole chiarezza',
+    subheadline:
+      'Siti, identità visiva, video con supporto AI e ottimizzazione SEO—con un processo professionale e ordinato.',
+    ctaPrimary: 'Richiedi un preventivo',
+    ctaSecondary: 'Lavori selezionati',
+    availableIn: 'DE · EN · IT · SR · AL',
   },
   seo: {
     title: "AGR Multimedia | Web Design, Grafica & AI per Piccole Imprese",
@@ -575,11 +595,11 @@ const it: SpecTranslations = {
     about: 'Chi sono',
     blog: 'Blog',
     contact: 'Contatti',
+    ctaQuote: 'Richiedi un preventivo',
   },
   servicesPreview: {
-    title: 'Servizi che portano risultati',
-    subtitle:
-      'Dallo web design al digital marketing, creo esperienze chiare e orientate alla conversione per piccole imprese e creator. Strategie, tempi rapidi e comunicazione multilingue—per trasformare le visite in richieste.',
+    title: 'Cosa faccio',
+    subtitle: 'Quattro aree focali—per piccole imprese che cercano qualità senza rumore.',
     flipOrderCta: 'Richiedi ora',
     flipDetailsLink: 'Dettagli servizio',
     webUi: {
@@ -601,14 +621,15 @@ const it: SpecTranslations = {
       flipIncludes: 'Formati social · Visual AI · Motion base',
     },
     aiContent: {
-      title: 'Soluzioni AI su misura',
-      description: 'App AI, automazioni e strumenti digitali personalizzati per i tuoi processi.',
-      flipPrice: 'da 1.500 €',
-      flipIncludes: 'Automazione · Tool custom · Integrazioni',
+      title: 'Ottimizzazione SEO',
+      description: 'SEO tecnica, struttura dei contenuti e miglioramenti continui per farti trovare.',
+      flipPrice: 'da 450 €',
+      flipIncludes: 'Audit · On-page · Report',
     },
   },
   featuredPortfolio: {
-    heading: 'Progetti selezionati',
+    heading: 'Lavori selezionati',
+    featuredIntro: 'Una selezione curata—portfolio completo su richiesta.',
     filterAll: 'Tutti',
     filterWeb: 'Web',
     filterGraphic: 'Grafica',
@@ -621,7 +642,7 @@ const it: SpecTranslations = {
   whyMe: {
     heading: 'Perché lavorare con me',
     subtitle:
-      'Hai bisogno di un sito e di un marketing professionali e davvero efficaci. Combino design, video e workflow potenziati dall’AI per un processo pulito, consegne affidabili e risultati chiari.',
+      'Adobe Creative Cloud, workflow AI moderni e comunicazione multilingue—senza overhead da agenzia.',
     benefit1: 'Comunicazione multilingue: parlo tedesco, inglese, italiano, serbo e albanese.',
     benefit2: 'Specializzato in piccole imprese e creator che cercano consegne veloci e affidabili.',
     benefit3: 'Supporto end-to-end: dalla prima idea al sito, design o video finale.',
@@ -723,14 +744,17 @@ const it: SpecTranslations = {
 };
 
 const sr: SpecTranslations = {
+  homeAbout: {
+    lead: 'AGR Multimedia je kreativni studio usmeren na jasno pozicioniranje, uredan dizajn i merljive rezultate.',
+    moreAbout: 'Kompletan profil',
+  },
   hero: {
-    h1: 'Web Dizajn AGRMULTIMEDIA',
-    h1Prefix: 'Web Dizajn ',
-    h1Typed: 'AGRMULTIMEDIA',
-    subheadline: 'Pravim moderne, brze i prodajno jasne web sajtove za male firme, freelancere i lokalne biznise koji žele više klijenata online.',
-    ctaPrimary: 'Besplatne konsultacije',
-    ctaSecondary: 'Pogledaj portfolio',
-    availableIn: 'Dostupno na DE · EN · IT · SR · AL',
+    h1: 'Web dizajn, brending i SEO za ozbiljne brendove',
+    subheadline:
+      'Sajtovi, vizuelni identitet, AI video i SEO—strukturisano, bez vizuelnog šuma.',
+    ctaPrimary: 'Zatraži ponudu',
+    ctaSecondary: 'Izabrani radovi',
+    availableIn: 'DE · EN · IT · SR · AL',
   },
   seo: {
     title: "AGR Multimedia | Web Dizajn, Grafika & AI za Mala Preduzeća",
@@ -769,11 +793,11 @@ const sr: SpecTranslations = {
     about: 'O meni',
     blog: 'Blog',
     contact: 'Kontakt',
+    ctaQuote: 'Zatraži ponudu',
   },
   servicesPreview: {
-    title: 'Usluge koje donose rezultate',
-    subtitle:
-      'Radim web dizajn i digitalni marketing za male firme, freelancere i lokalne biznise. Fokus mi je na jasnoj strukturi, brzini i konverzijama—da vaš sajt pretvara posete u upite.',
+    title: ' Oblasti rada',
+    subtitle: 'Četiri fokusa—za mala preduzeća koja žele kvalitet bez pretrpanosti.',
     flipOrderCta: 'Poruči sada',
     flipDetailsLink: 'Detalji usluge',
     webUi: {
@@ -795,14 +819,15 @@ const sr: SpecTranslations = {
       flipIncludes: 'Social formati · AI vizuali · Osnovna animacija',
     },
     aiContent: {
-      title: 'Prilagođena AI rešenja',
-      description: 'AI aplikacije, automatizacija i digitalna rešenja po meri.',
-      flipPrice: 'od 1.500 €',
-      flipIncludes: 'Automatizacija · Custom alati · Integracija',
+      title: 'SEO optimizacija',
+      description: 'Tehnički SEO, struktura sadržaja i kontinuirana poboljšanja za bolju vidljivost.',
+      flipPrice: 'od 450 €',
+      flipIncludes: 'Audit · On-page · Izveštaji',
     },
   },
   featuredPortfolio: {
-    heading: 'Izabrani projekti',
+    heading: 'Izabrani radovi',
+    featuredIntro: 'Kuratirani izbor—ceo portfolio na zahtev.',
     filterAll: 'Sve',
     filterWeb: 'Web',
     filterGraphic: 'Grafika',
@@ -815,7 +840,7 @@ const sr: SpecTranslations = {
   whyMe: {
     heading: 'Zašto da radite sa mnom',
     subtitle:
-      'Potrebna vam je profesionalna web prisutnost i marketing koji donosi rezultate. Spajam dizajn, video i AI workflow-ove za čist proces, pouzdanu isporuku i jasne rezultate.',
+      'Adobe Creative Cloud, savremeni AI workflow i višejezična komunikacija—bez agencijskog overhead-a.',
     benefit1: 'Višejezična komunikacija: govorim nemački, engleski, italijanski, srpski i albanski.',
     benefit2: 'Specijalizovan za male biznise i kreatore kojima treba brza i pouzdana isporuka.',
     benefit3: 'Podrška od ideje do finalnog sajta, dizajna ili videa.',
@@ -917,14 +942,17 @@ const sr: SpecTranslations = {
 };
 
 const al: SpecTranslations = {
+  homeAbout: {
+    lead: 'AGR Multimedia është një studio krijuese e fokusuar në pozicionim të qartë dhe prezencë profesionale.',
+    moreAbout: 'Profili i plotë',
+  },
   hero: {
-    h1: 'Web Dizajn AGRMULTIMEDIA',
-    h1Prefix: 'Web Dizajn ',
-    h1Typed: 'AGRMULTIMEDIA',
-    subheadline: 'Krijoj faqe moderne, të shpejta dhe të qarta me fokus në rezultate për biznese të vogla, freelancerë dhe marka lokale që duan më shumë kërkesa cilësore online.',
-    ctaPrimary: 'Konsultë falas',
-    ctaSecondary: 'Shiko portofolin',
-    availableIn: 'I disponueshëm në DE · EN · IT · SR · AL',
+    h1: 'Web design, branding dhe SEO për biznese që duan qartësi',
+    subheadline:
+      'Faqe interneti, identitet vizual, video me AI dhe SEO—proces i strukturuar dhe i qetë.',
+    ctaPrimary: 'Kërko ofertë',
+    ctaSecondary: 'Punë të zgjedhura',
+    availableIn: 'DE · EN · IT · SR · AL',
   },
   seo: {
     title: "AGR Multimedia | Web Dizajn, Grafikë & AI për Biznese të Vogla",
@@ -963,11 +991,11 @@ const al: SpecTranslations = {
     about: 'Rreth meje',
     blog: 'Blog',
     contact: 'Kontakt',
+    ctaQuote: 'Kërko ofertë',
   },
   servicesPreview: {
-    title: 'Shërbime që sjellin rezultate',
-    subtitle:
-      'Nga web design tek marketingu digjital, krijoj përvoja të qarta dhe të fokusuara në konvertime për biznese të vogla dhe creator. Strategji, ekzekutim i shpejtë dhe komunikim shumëgjuhësh—që vizitat të kthehen në kërkesa.',
+    title: 'Fokusi im',
+    subtitle: 'Katër fusha—për biznese të vogla që duan cilësi pa mbingarkesë.',
     flipOrderCta: 'Porosit tani',
     flipDetailsLink: 'Detajet e shërbimit',
     webUi: {
@@ -989,14 +1017,15 @@ const al: SpecTranslations = {
       flipIncludes: 'Formate sociale · Vizuale AI · Motion bazë',
     },
     aiContent: {
-      title: 'Zgjidhje AI me porosi',
-      description: 'Aplikacione AI, automatizim dhe mjete dixhitale të personalizuara.',
-      flipPrice: 'nga 1.500 €',
-      flipIncludes: 'Automatizim · Mjete me porosi · Integrim',
+      title: 'Optimizim SEO',
+      description: 'SEO teknik, strukturë përmbajtjeje dhe përmirësime të vazhdueshme për dukshmëri më të mirë.',
+      flipPrice: 'nga 450 €',
+      flipIncludes: 'Audit · On-page · Raporte',
     },
   },
   featuredPortfolio: {
-    heading: 'Projekte të përzgjedhura',
+    heading: 'Punë të zgjedhura',
+    featuredIntro: 'Një përzgjedhje e kuruar—portofoli i plotë me kërkesë.',
     filterAll: 'Të gjitha',
     filterWeb: 'Web',
     filterGraphic: 'Grafikë',
@@ -1009,7 +1038,7 @@ const al: SpecTranslations = {
   whyMe: {
     heading: 'Pse të punoni me mua',
     subtitle:
-      'Ju duhet një faqe dhe marketing që duken profesional dhe funksionojnë vërtet. Kombinoj dizajnin, videon dhe workflow-e të fuqizuara nga AI për një proces të pastër, dorëzim të besueshëm dhe rezultate të qarta.',
+      'Adobe Creative Cloud, workflow moderne me AI dhe komunikim shumëgjuhësh—pa overhead agjencie.',
     benefit1: 'Komunikim shumëgjuhësh: flas gjermanisht, anglisht, italisht, serbisht dhe shqip.',
     benefit2: 'Specializuar në biznese të vogla dhe krijues që kanë nevojë për dorëzim të shpejtë dhe të besueshëm.',
     benefit3: 'Mbështetje nga ideja e parë deri te faqja, dizajni ose videoja përfundimtare.',

@@ -20,10 +20,10 @@ export default function Footer() {
   };
 
   const services = [
-    { label: tSpec.servicesPreview.webUi.title, href: "/services#web-ui" },
-    { label: tSpec.servicesPreview.graphicBranding.title, href: "/services#graphic" },
-    { label: tSpec.servicesPreview.videoMotion.title, href: "/services#video" },
-    { label: tSpec.servicesPreview.aiContent.title, href: "/services#ai" },
+    { label: tSpec.servicesPreview.webUi.title, href: "/web-design" },
+    { label: tSpec.servicesPreview.graphicBranding.title, href: "/graphic-design" },
+    { label: tSpec.servicesPreview.videoMotion.title, href: "/video-production" },
+    { label: tSpec.servicesPreview.aiContent.title, href: "/digital-marketing" },
   ];
 
   return (
@@ -78,9 +78,6 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/portfolio" className="text-gray-400 hover:text-white transition-colors duration-300">{tSpec.nav.portfolio}</Link>
-              </li>
-              <li>
-                {isHome ? <button type="button" onClick={() => scrollToSection("blog")} className="text-gray-400 hover:text-white transition-colors duration-300 text-left">{tSpec.nav.blog}</button> : <Link href="/#blog" className="text-gray-400 hover:text-white">{tSpec.nav.blog}</Link>}
               </li>
               <li>
                 {isHome ? <button type="button" onClick={() => scrollToSection("contact")} className="text-gray-400 hover:text-white transition-colors duration-300 text-left">{tSpec.nav.contact}</button> : <Link href="/contact" className="text-gray-400 hover:text-white">{tSpec.nav.contact}</Link>}

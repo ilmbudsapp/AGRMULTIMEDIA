@@ -27,61 +27,77 @@ export default function Navigation() {
     { id: "services", label: tSpec.nav.services, href: "/services", section: "services-preview" },
     { id: "portfolio", label: tSpec.nav.portfolio, href: "/portfolio", section: "portfolio" },
     { id: "about", label: tSpec.nav.about, href: "/about", section: "about" },
-    { id: "blog", label: tSpec.nav.blog, href: "/blog", section: "blog" },
-    { id: "contact", label: tSpec.nav.contact, href: "/#contact", section: "contact" },
   ];
 
+  const contactHref = isHomePage ? "/#contact" : "/contact";
+  const contactScroll = () => {
+    if (isHomePage) scrollToSection("contact");
+    setIsMenuOpen(false);
+  };
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0f]/95 backdrop-blur-xl border-b border-white/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 md:h-20">
+    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/[0.08] bg-[#07070b]/90 backdrop-blur-md">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-14 md:h-16">
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center" data-testid="logo-button">
-              <img src={logoImage} alt="AGR Multimedia" className="h-8 md:h-9 w-auto" />
+              <img src={logoImage} alt="AGR Multimedia" className="h-7 md:h-8 w-auto" />
             </Link>
           </div>
 
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-7 lg:gap-8">
             {navItems.map((item) =>
               isHomePage && item.section ? (
                 <button
                   key={item.id}
                   type="button"
                   onClick={() => scrollToSection(item.section!)}
-                  className="text-white/90 hover:text-white font-medium transition-colors duration-300"
+                  className="text-[0.9375rem] text-white/75 hover:text-white transition-colors"
                   data-testid={`nav-${item.id}`}
                 >
                   {item.label}
                 </button>
-              ) : item.id === "contact" ? (
-                <Link
-                  key={item.id}
-                  href={isHomePage ? "/#contact" : "/contact"}
-                  className="bg-white text-[#0a0a0f] px-5 py-2.5 rounded-full font-semibold hover:bg-white/90 transition-all duration-300"
-                  data-testid="nav-contact-cta"
-                >
-                  {item.label}
-                </Link>
               ) : (
                 <Link
                   key={item.id}
                   href={item.href}
-                  className="text-white/90 hover:text-white font-medium transition-colors duration-300"
+                  className="text-[0.9375rem] text-white/75 hover:text-white transition-colors"
                   data-testid={`nav-${item.id}`}
                 >
                   {item.label}
                 </Link>
               ),
             )}
+            {isHomePage ? (
+              <button
+                type="button"
+                onClick={() => scrollToSection("contact")}
+                className="rounded-full bg-white px-5 py-2 text-[0.875rem] font-semibold text-[#0a0a0f] hover:bg-white/90 transition-colors"
+                data-testid="nav-contact-cta"
+              >
+                {tSpec.nav.ctaQuote}
+              </button>
+            ) : (
+              <Link
+                href={contactHref}
+                className="rounded-full bg-white px-5 py-2 text-[0.875rem] font-semibold text-[#0a0a0f] hover:bg-white/90 transition-colors"
+                data-testid="nav-contact-cta"
+              >
+                {tSpec.nav.ctaQuote}
+              </Link>
+            )}
             <LanguageSwitcherInline />
           </div>
 
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center gap-3">
+            <LanguageSwitcherInline />
             <button
               type="button"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-white hover:text-white/80"
+              className="text-white/90 p-1"
               data-testid="mobile-menu-toggle"
+              aria-expanded={isMenuOpen}
+              aria-label="Menu"
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -90,43 +106,49 @@ export default function Navigation() {
       </div>
 
       {isMenuOpen && (
-        <div className="md:hidden bg-[#0a0a0f] border-t border-white/10" data-testid="mobile-menu">
-          <div className="px-4 py-4 space-y-4">
-            <div className="pb-3 border-b border-white/10">
-              <LanguageSwitcherInline />
-            </div>
+        <div className="md:hidden border-t border-white/[0.08] bg-[#07070b]" data-testid="mobile-menu">
+          <div className="px-4 py-4 space-y-1 max-w-6xl mx-auto">
             {navItems.map((item) =>
               isHomePage && item.section ? (
                 <button
                   key={item.id}
                   type="button"
                   onClick={() => scrollToSection(item.section!)}
-                  className="block w-full text-left text-white/90 hover:text-white transition-colors duration-300"
+                  className="block w-full text-left py-3 text-white/85 text-[0.9375rem]"
                   data-testid={`mobile-nav-${item.id}`}
                 >
                   {item.label}
                 </button>
-              ) : item.id === "contact" ? (
-                <Link
-                  key={item.id}
-                  href={isHomePage ? "/#contact" : "/contact"}
-                  className="block w-full text-center bg-white text-[#0a0a0f] py-3 rounded-full font-semibold"
-                  data-testid="mobile-nav-contact"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.label}
-                </Link>
               ) : (
                 <Link
                   key={item.id}
                   href={item.href}
-                  className="block w-full text-left text-white/90 hover:text-white transition-colors duration-300"
+                  className="block w-full py-3 text-white/85 text-[0.9375rem]"
                   data-testid={`mobile-nav-${item.id}`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
                 </Link>
               ),
+            )}
+            {isHomePage ? (
+              <button
+                type="button"
+                onClick={contactScroll}
+                className="mt-3 w-full rounded-full bg-white py-3 text-center text-[0.875rem] font-semibold text-[#0a0a0f]"
+                data-testid="mobile-nav-contact"
+              >
+                {tSpec.nav.ctaQuote}
+              </button>
+            ) : (
+              <Link
+                href="/contact"
+                className="mt-3 block w-full rounded-full bg-white py-3 text-center text-[0.875rem] font-semibold text-[#0a0a0f]"
+                data-testid="mobile-nav-contact"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {tSpec.nav.ctaQuote}
+              </Link>
             )}
           </div>
         </div>

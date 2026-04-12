@@ -12,24 +12,27 @@ export default function WhyMe() {
   const { tSpec } = useLanguage();
 
   return (
-    <section id="why-me" className="py-20 md:py-28 bg-[#0a0a0f]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">
-          {tSpec.whyMe.heading}
-        </h2>
-        <p className="text-gray-300 text-base md:text-lg text-center max-w-3xl mx-auto mb-14 leading-relaxed">
-          {tSpec.whyMe.subtitle}
-        </p>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+    <section id="why-me" className="scroll-mt-24 py-20 md:py-24 bg-[#08080c] border-t border-white/[0.06]">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-2xl mb-12 md:mb-14">
+          <p className="text-xs font-medium uppercase tracking-[0.2em] text-white/40 mb-3">AGR Multimedia</p>
+          <h2 className="text-3xl md:text-4xl font-semibold text-white tracking-tight">
+            {tSpec.whyMe.heading}
+          </h2>
+          <p className="text-white/55 text-sm md:text-base mt-4 leading-relaxed">
+            {tSpec.whyMe.subtitle}
+          </p>
+        </div>
+        <div className="grid sm:grid-cols-2 gap-5 md:gap-6">
           {benefits.map(({ key, icon: Icon }) => (
             <div
               key={key}
-              className="flex flex-col items-center text-center p-6 rounded-2xl glass-card"
+              className="flex gap-4 rounded-xl border border-white/[0.08] bg-white/[0.02] p-5 md:p-6"
             >
-              <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center mb-4 text-white">
-                <Icon className="w-7 h-7" />
+              <div className="shrink-0 w-10 h-10 rounded-lg border border-white/10 flex items-center justify-center text-white/80">
+                <Icon className="w-5 h-5" strokeWidth={1.5} />
               </div>
-              <p className="text-gray-300 text-sm leading-relaxed">
+              <p className="text-white/65 text-sm leading-relaxed pt-0.5">
                 {tSpec.whyMe[key]}
               </p>
             </div>
