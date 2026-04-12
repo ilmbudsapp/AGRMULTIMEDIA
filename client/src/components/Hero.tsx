@@ -1,9 +1,26 @@
+import { useEffect, useRef } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const HERO_IMAGE = "/hero-workspace.png";
+/** Public folder; spaces encoded for reliable load */
+const PROMO_VIDEO = encodeURI("/Werbung Finito FULL HD COMPRESSO.mp4");
+const VIDEO_POSTER = "/hero-workspace.png";
 
 export default function Hero() {
   const { tSpec } = useLanguage();
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const sync = () => {
+      if (mq.matches) v.pause();
+      else void v.play().catch(() => {});
+    };
+    sync();
+    mq.addEventListener("change", sync);
+    return () => mq.removeEventListener("change", sync);
+  }, []);
 
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -12,58 +29,87 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-[88vh] flex flex-col justify-center bg-[#c8ced8] pt-20 pb-16 md:pt-24 md:pb-20"
+      className="relative scroll-mt-20 border-b border-neutral-200/80 bg-gradient-to-br from-[#faf9f7] via-[#f3f2ee] to-[#e8eaef] pt-[5.25rem] pb-14 md:pt-28 md:pb-20"
     >
-      <div className="absolute inset-0 pointer-events-none" aria-hidden>
-        {/* Mobilni: veći X = više desne strane slike u kadru (osoba levo na ekranu); desktop kao ranije */}
-        <img
-          src={HERO_IMAGE}
-          alt=""
-          className="absolute inset-0 h-full w-full object-cover object-[68%_24%] max-[480px]:object-[62%_20%] sm:object-[center_28%] lg:object-center"
-          decoding="async"
-          fetchPriority="high"
-        />
-        {/* Lighter scrim so the office photo stays visible; enough contrast for white copy */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/28 to-black/50" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/35 via-transparent to-black/25" />
-      </div>
+      <div
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_100%_20%,rgba(99,102,241,0.06),transparent_55%)]"
+        aria-hidden
+      />
 
-      <div className="relative z-10 mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
-        <h1
-          className="text-[1.75rem] font-semibold leading-[1.15] tracking-tight text-white [text-shadow:0_2px_28px_rgba(0,0,0,0.55)] sm:text-3xl md:text-4xl lg:text-[2.75rem]"
-          data-testid="hero-title"
-        >
-          {tSpec.hero.h1}
-        </h1>
-        <p
-          className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-white/85 [text-shadow:0_1px_18px_rgba(0,0,0,0.45)] sm:text-lg"
-          data-testid="hero-subtitle"
-        >
-          {tSpec.hero.subheadline}
-        </p>
+      <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-10 px-4 sm:gap-12 sm:px-6 lg:grid-cols-2 lg:gap-14 lg:px-8">
+        <div className="order-1 text-center lg:order-none lg:text-left">
+          <h1
+            className="text-[1.65rem] font-semibold leading-[1.15] tracking-tight text-neutral-900 sm:text-3xl md:text-[2.15rem] lg:text-[2.35rem]"
+            data-testid="hero-title"
+          >
+            {tSpec.hero.h1}
+          </h1>
+          <p
+            className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-neutral-600 lg:mx-0 lg:max-w-[28rem]"
+            data-testid="hero-subtitle"
+          >
+            {tSpec.hero.subheadline}
+          </p>
 
-        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
-          <button
-            type="button"
-            onClick={() => scrollTo("contact")}
-            className="w-full sm:w-auto min-h-[48px] rounded-full bg-white px-8 py-3 text-[0.9375rem] font-semibold text-[#0a0a0f] transition-colors hover:bg-white/90"
-            data-testid="hero-cta-primary"
-          >
-            {tSpec.hero.ctaPrimary}
-          </button>
-          <button
-            type="button"
-            onClick={() => scrollTo("portfolio")}
-            className="w-full sm:w-auto min-h-[48px] rounded-full border border-white/20 bg-transparent px-8 py-3 text-[0.9375rem] font-medium text-white/90 hover:bg-white/5"
-            data-testid="hero-cta-secondary"
-          >
-            {tSpec.hero.ctaSecondary}
-          </button>
+          <div className="mt-9 flex flex-col items-stretch justify-center gap-3 sm:flex-row lg:justify-start">
+            <button
+              type="button"
+              onClick={() => scrollTo("contact")}
+              className="min-h-[48px] rounded-full bg-neutral-900 px-8 py-3 text-[0.9375rem] font-semibold text-white shadow-sm transition hover:bg-neutral-800"
+              data-testid="hero-cta-primary"
+            >
+              {tSpec.hero.ctaPrimary}
+            </button>
+            <button
+              type="button"
+              onClick={() => scrollTo("portfolio")}
+              className="min-h-[48px] rounded-full border border-neutral-300 bg-white/80 px-8 py-3 text-[0.9375rem] font-medium text-neutral-800 shadow-sm backdrop-blur-sm transition hover:bg-white"
+              data-testid="hero-cta-secondary"
+            >
+              {tSpec.hero.ctaSecondary}
+            </button>
+          </div>
+
+          <p className="mt-8 text-[0.6875rem] font-medium uppercase tracking-[0.16em] text-neutral-400">
+            {tSpec.hero.availableIn}
+          </p>
         </div>
 
-        <p className="mt-10 text-[0.6875rem] sm:text-xs text-white/40 tracking-[0.14em] uppercase">
-          {tSpec.hero.availableIn}
-        </p>
+        <div className="order-2 w-full max-w-lg justify-self-center lg:order-none lg:max-w-none lg:justify-self-end">
+          <div className="relative overflow-hidden rounded-2xl bg-neutral-900 shadow-[0_24px_48px_-12px_rgba(15,23,42,0.25),0_0_0_1px_rgba(15,23,42,0.06)] ring-1 ring-black/5">
+            <div className="relative aspect-video w-full">
+              <video
+                ref={videoRef}
+                className="absolute inset-0 h-full w-full object-cover"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                poster={VIDEO_POSTER}
+                aria-label="Showreel — preview without sound"
+              >
+                <source src={PROMO_VIDEO} type="video/mp4" />
+              </video>
+              {/* Decorative play hint — video is muted autoplay; no sound */}
+              <div
+                className="pointer-events-none absolute inset-0 flex items-center justify-center bg-gradient-to-t from-black/20 via-transparent to-black/10"
+                aria-hidden
+              >
+                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white/12 shadow-inner backdrop-blur-[2px] ring-1 ring-white/25 sm:h-16 sm:w-16">
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="ml-0.5 h-7 w-7 text-white/95 sm:h-8 sm:w-8"
+                    fill="currentColor"
+                    aria-hidden
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
