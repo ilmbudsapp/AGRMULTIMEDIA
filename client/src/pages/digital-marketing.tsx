@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import ServicePageTemplate from "@/components/ServicePageTemplate";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { fotoKreiraneSaAiGalleryByLang } from "@/data/fotoKreiraneSaAiGallery";
+import { videoKreiraniSaAiGalleryByLang } from "@/data/videoKreiraniSaAiGallery";
 import { buildSubsections, getServiceTemplateLabels, toServiceLang, type ServiceLang } from "@/lib/servicePageI18n";
 
 type AIContent = {
@@ -40,6 +41,7 @@ const aiByLang: Record<ServiceLang, AIContent> = {
       { id: "ai-product-marketing-visuals", h3: "AI Product Visuals for Advertising" },
       { id: "ai-photo-concepts", h3: "AI Photo Concepts" },
       { id: "foto-kreirane-sa-ai", h3: "AI-generated photos (Google Gemini)" },
+      { id: "video-kreirani-sa-ai", h3: "AI-generated video clips (hosted on this site)" },
       { id: "ai-video-creation", h3: "AI Video Creation" },
       { id: "ai-videos-veo", h3: "AI Video Creation with Veo 3.1" },
       { id: "ai-content-business-promo", h3: "AI Content for Business Promotion" },
@@ -76,6 +78,7 @@ const aiByLang: Record<ServiceLang, AIContent> = {
       { id: "ai-product-marketing-visuals", h3: "AI Product Visuals für Advertising" },
       { id: "ai-photo-concepts", h3: "AI Photo Concepts" },
       { id: "foto-kreirane-sa-ai", h3: "KI-generierte Fotos (Google Gemini)" },
+      { id: "video-kreirani-sa-ai", h3: "KI-generierte Videos (auf dieser Website gehostet)" },
       { id: "ai-video-creation", h3: "AI Video Creation" },
       { id: "ai-videos-veo", h3: "AI Video Creation mit Veo 3.1" },
       { id: "ai-content-business-promo", h3: "AI Content für Business Promotion" },
@@ -112,6 +115,7 @@ const aiByLang: Record<ServiceLang, AIContent> = {
       { id: "ai-product-marketing-visuals", h3: "AI Product Visuals for Advertising" },
       { id: "ai-photo-concepts", h3: "AI Photo Concepts" },
       { id: "foto-kreirane-sa-ai", h3: "Foto generate con IA (Google Gemini)" },
+      { id: "video-kreirani-sa-ai", h3: "Video generati con IA (su questo sito)" },
       { id: "ai-video-creation", h3: "AI Video Creation" },
       { id: "ai-videos-veo", h3: "AI Video Creation with Veo 3.1" },
       { id: "ai-content-business-promo", h3: "AI Content for Business Promotion" },
@@ -148,6 +152,7 @@ const aiByLang: Record<ServiceLang, AIContent> = {
       { id: "ai-product-marketing-visuals", h3: "AI Product Visuals for Advertising" },
       { id: "ai-photo-concepts", h3: "AI Photo Concepts" },
       { id: "foto-kreirane-sa-ai", h3: "Foto kreirane sa AI (Google Gemini)" },
+      { id: "video-kreirani-sa-ai", h3: "Video kreirani sa AI (hostovano na sajtu)" },
       { id: "ai-video-creation", h3: "AI Video Creation" },
       { id: "ai-videos-veo", h3: "AI Video Creation with Veo 3.1" },
       { id: "ai-content-business-promo", h3: "AI Content for Business Promotion" },
@@ -184,6 +189,7 @@ const aiByLang: Record<ServiceLang, AIContent> = {
       { id: "ai-product-marketing-visuals", h3: "AI Product Visuals for Advertising" },
       { id: "ai-photo-concepts", h3: "AI Photo Concepts" },
       { id: "foto-kreirane-sa-ai", h3: "Foto të krijuara me AI (Google Gemini)" },
+      { id: "video-kreirani-sa-ai", h3: "Video të krijuara me AI (të hostuara në sajt)" },
       { id: "ai-video-creation", h3: "AI Video Creation" },
       { id: "ai-videos-veo", h3: "AI Video Creation with Veo 3.1" },
       { id: "ai-content-business-promo", h3: "AI Content for Business Promotion" },
@@ -211,9 +217,11 @@ export default function DigitalMarketing() {
   const lang = toServiceLang(currentLanguage);
   const copy = aiByLang[lang];
 
-  const subsections = buildSubsections(lang, copy.subsectionTitles).map((sub) =>
-    sub.id === "foto-kreirane-sa-ai" ? { ...sub, workGallery: fotoKreiraneSaAiGalleryByLang[lang] } : sub,
-  );
+  const subsections = buildSubsections(lang, copy.subsectionTitles).map((sub) => {
+    if (sub.id === "foto-kreirane-sa-ai") return { ...sub, workGallery: fotoKreiraneSaAiGalleryByLang[lang] };
+    if (sub.id === "video-kreirani-sa-ai") return { ...sub, workVideoGallery: videoKreiraniSaAiGalleryByLang[lang] };
+    return sub;
+  });
 
   useEffect(() => {
     window.scrollTo(0, 0);

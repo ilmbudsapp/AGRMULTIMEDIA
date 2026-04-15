@@ -96,7 +96,12 @@ export default function ServicePageTemplate({
         <section id="service-categories" className="mx-auto mt-8 max-w-6xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-semibold tracking-tight">{serviceCategoriesTitle}</h2>
           <div className="mt-5 space-y-5">
-            {subsections.map((sub) => (
+            {subsections.map((sub) => {
+              const hasVideoGallery = Boolean(sub.workVideoGallery?.length);
+              const hasImageGallery = Boolean(sub.workGallery?.length);
+              const hasWorkMedia = hasVideoGallery || hasImageGallery;
+
+              return (
               <article key={sub.id} id={sub.id} className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
                 <h3 className="text-xl font-semibold tracking-tight text-neutral-900">{sub.h3}</h3>
                 <p className="mt-3 text-neutral-600 leading-relaxed">{sub.intro}</p>
@@ -115,24 +120,50 @@ export default function ServicePageTemplate({
 
                 <div
                   className={
-                    sub.workGallery?.length
+                    hasWorkMedia
                       ? "mt-5 space-y-4"
                       : "mt-5 grid gap-3 md:grid-cols-2"
                   }
                 >
                   <div
                     className={`rounded-xl p-4 ${
-                      sub.workGallery?.length
+                      hasWorkMedia
                         ? "border border-neutral-200 bg-neutral-50"
                         : "border border-dashed border-neutral-300 bg-neutral-50"
                     }`}
                   >
                     <h4 className="text-sm font-semibold text-neutral-800">
-                      {sub.workGallery?.length ? labels.workExamples : labels.selectedWorkPlaceholder}
+                      {hasVideoGallery
+                        ? labels.videoExamples
+                        : hasImageGallery
+                          ? labels.workExamples
+                          : labels.selectedWorkPlaceholder}
                     </h4>
-                    {sub.workGallery?.length ? (
+                    {hasVideoGallery ? (
+                      <div className="mt-4 grid gap-4 sm:grid-cols-1 lg:grid-cols-2">
+                        {sub.workVideoGallery!.map((vid) => (
+                          <figure
+                            key={vid.src}
+                            className="overflow-hidden rounded-lg border border-neutral-200 bg-neutral-950 shadow-sm"
+                          >
+                            <video
+                              className="aspect-video w-full object-contain"
+                              controls
+                              playsInline
+                              preload="metadata"
+                              aria-label={vid.title}
+                            >
+                              <source src={encodeURI(vid.src)} type="video/mp4" />
+                            </video>
+                            <figcaption className="bg-neutral-50 px-2 py-2 text-center text-xs text-neutral-600">
+                              {vid.title}
+                            </figcaption>
+                          </figure>
+                        ))}
+                      </div>
+                    ) : hasImageGallery ? (
                       <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                        {sub.workGallery.map((img) => (
+                        {sub.workGallery!.map((img) => (
                           <figure
                             key={img.src}
                             className="overflow-hidden rounded-lg border border-neutral-200 bg-neutral-100 shadow-sm"
@@ -165,7 +196,8 @@ export default function ServicePageTemplate({
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </article>
-            ))}
+              );
+            })}
           </div>
         </section>
 

@@ -12,6 +12,8 @@ export type LocalizedSubsection = {
   cta: string;
   /** When set, the template shows a real image grid instead of the work placeholder copy. */
   workGallery?: { src: string; alt: string }[];
+  /** When set, the template shows HTML5 video players (hosted under /public). */
+  workVideoGallery?: { src: string; title: string }[];
 };
 
 export type ServiceTemplateLabels = {
@@ -20,6 +22,8 @@ export type ServiceTemplateLabels = {
   whatThisIncludes: string;
   /** Heading for the work samples box when a gallery is present */
   workExamples: string;
+  /** Heading when a video gallery is present */
+  videoExamples: string;
   selectedWorkPlaceholder: string;
   toolsPlaceholder: string;
   selectedWorkSlot: string;
@@ -54,6 +58,7 @@ const templateLabelsByLang: Record<ServiceLang, ServiceTemplateLabels> = {
     serviceCategories: "Service Categories",
     whatThisIncludes: "What this includes",
     workExamples: "Work examples",
+    videoExamples: "Video examples",
     selectedWorkPlaceholder: "Selected Work Placeholder",
     toolsPlaceholder: "Tools Placeholder",
     selectedWorkSlot: "Placeholder Slot",
@@ -67,6 +72,7 @@ const templateLabelsByLang: Record<ServiceLang, ServiceTemplateLabels> = {
     serviceCategories: "Service-Kategorien",
     whatThisIncludes: "Was enthalten ist",
     workExamples: "Arbeitsbeispiele",
+    videoExamples: "Videobeispiele",
     selectedWorkPlaceholder: "Platzhalter für ausgewählte Arbeiten",
     toolsPlaceholder: "Tools-Platzhalter",
     selectedWorkSlot: "Platzhalter-Slot",
@@ -80,6 +86,7 @@ const templateLabelsByLang: Record<ServiceLang, ServiceTemplateLabels> = {
     serviceCategories: "Categorie di servizio",
     whatThisIncludes: "Cosa include",
     workExamples: "Esempi di lavori",
+    videoExamples: "Esempi video",
     selectedWorkPlaceholder: "Placeholder lavori selezionati",
     toolsPlaceholder: "Placeholder strumenti",
     selectedWorkSlot: "Slot placeholder",
@@ -93,6 +100,7 @@ const templateLabelsByLang: Record<ServiceLang, ServiceTemplateLabels> = {
     serviceCategories: "Kategorije usluga",
     whatThisIncludes: "Šta uključuje",
     workExamples: "Primeri radova",
+    videoExamples: "Video primeri",
     selectedWorkPlaceholder: "Placeholder za odabrane radove",
     toolsPlaceholder: "Placeholder za alate",
     selectedWorkSlot: "Placeholder slot",
@@ -106,6 +114,7 @@ const templateLabelsByLang: Record<ServiceLang, ServiceTemplateLabels> = {
     serviceCategories: "Kategoritë e shërbimit",
     whatThisIncludes: "Çfarë përfshin",
     workExamples: "Shembuj pune",
+    videoExamples: "Shembuj video",
     selectedWorkPlaceholder: "Placeholder për punë të zgjedhura",
     toolsPlaceholder: "Placeholder për mjetet",
     selectedWorkSlot: "Slot placeholder",
