@@ -3,6 +3,7 @@ import ServicePageTemplate from "@/components/ServicePageTemplate";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { brandingGalleryByLang } from "@/data/brandingGallery";
 import { fotomanipulacijeGalleryByLang } from "@/data/fotomanipulacijeGallery";
+import { vizitKarticeGalleryByLang } from "@/data/vizitKarticeGallery";
 import { buildSubsections, getServiceTemplateLabels, toServiceLang, type ServiceLang } from "@/lib/servicePageI18n";
 
 type GraphicContent = {
@@ -205,6 +206,7 @@ export default function GraphicDesign() {
   const subsections = buildSubsections(lang, copy.subsectionTitles).map((sub) => {
     if (sub.id === "fotomanipulacije") return { ...sub, workGallery: fotomanipulacijeGalleryByLang[lang] };
     if (sub.id === "branding") return { ...sub, workGallery: brandingGalleryByLang[lang] };
+    if (sub.id === "vizit-kartice") return { ...sub, workGallery: vizitKarticeGalleryByLang[lang] };
     return sub;
   });
 
