@@ -25,7 +25,6 @@ export default function Navigation() {
   const navItems: { id: string; label: string; href: string; section?: string }[] = [
     { id: "home", label: tSpec.nav.home, href: "/", section: "home" },
     { id: "services", label: tSpec.nav.services, href: "/services", section: "services-preview" },
-    { id: "portfolio", label: tSpec.nav.portfolio, href: "/portfolio", section: "portfolio" },
     { id: "about", label: tSpec.nav.about, href: "/about", section: "about" },
   ];
 

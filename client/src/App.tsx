@@ -20,6 +20,8 @@ import WebDesign from "@/pages/web-design";
 import GraphicDesign from "@/pages/graphic-design";
 import VideoProduction from "@/pages/video-production";
 import DigitalMarketing from "@/pages/digital-marketing";
+import AIContentCreation from "@/pages/ai-content-creation";
+import ApplicationDesignDevelopment from "@/pages/application-design-development";
 import Photography from "@/pages/photography";
 import Consulting from "@/pages/consulting";
 import Impresum from "@/pages/impresum";
@@ -54,6 +56,8 @@ function Router() {
       <Route path="/graphic-design" component={GraphicDesign} />
       <Route path="/video-production" component={VideoProduction} />
       <Route path="/digital-marketing" component={DigitalMarketing} />
+      <Route path="/ai-content-creation" component={AIContentCreation} />
+      <Route path="/application-design-development" component={ApplicationDesignDevelopment} />
       <Route path="/photography" component={Photography} />
       <Route path="/consulting" component={Consulting} />
       <Route path="/impresum" component={Impresum} />

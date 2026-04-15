@@ -1,8 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import HomeServices from "@/components/HomeServices";
-import Portfolio from "@/components/Portfolio";
-import WhyMe from "@/components/WhyMe";
 import AboutHome from "@/components/AboutHome";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -14,8 +12,6 @@ export default function Home() {
       <main>
         <Hero />
         <HomeServices />
-        <Portfolio featured />
-        <WhyMe />
         <AboutHome />
         <Contact />
       </main>

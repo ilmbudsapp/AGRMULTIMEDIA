@@ -9,33 +9,32 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://agrmultimedia.eu/portfolio</loc>
+    <loc>https://agrmultimedia.eu/graphic-design</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://agrmultimedia.eu/video-production</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://agrmultimedia.eu/ai-content-creation</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://agrmultimedia.eu/web-design</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://agrmultimedia.eu/application-design-development</loc>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://agrmultimedia.eu/about</loc>
-    <changefreq>weekly</changefreq>
+    <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://agrmultimedia.eu/contact</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://agrmultimedia.eu/blog</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <!-- Existing starter blog posts -->
-  <url>
-    <loc>https://agrmultimedia.eu/blog/digital-marketing-trends-2024</loc>
-  </url>
-  <url>
-    <loc>https://agrmultimedia.eu/blog/website-conversion-optimization</loc>
-  </url>
-  <url>
-    <loc>https://agrmultimedia.eu/blog/video-marketing-power</loc>
-  </url>
-  <url>
-    <loc>https://agrmultimedia.eu/blog/food-truck-web-500</loc>
+    <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://agrmultimedia.eu/privacy</loc>
