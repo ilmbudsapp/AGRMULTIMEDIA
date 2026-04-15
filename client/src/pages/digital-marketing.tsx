@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import ServicePageTemplate from "@/components/ServicePageTemplate";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { fotoKreiraneSaAiGalleryByLang } from "@/data/fotoKreiraneSaAiGallery";
 import { buildSubsections, getServiceTemplateLabels, toServiceLang, type ServiceLang } from "@/lib/servicePageI18n";
 
 type AIContent = {
@@ -38,6 +39,7 @@ const aiByLang: Record<ServiceLang, AIContent> = {
       { id: "ai-image-creation", h3: "AI Image Creation for Brands" },
       { id: "ai-product-marketing-visuals", h3: "AI Product Visuals for Advertising" },
       { id: "ai-photo-concepts", h3: "AI Photo Concepts" },
+      { id: "foto-kreirane-sa-ai", h3: "AI-generated photos (Google Gemini)" },
       { id: "ai-video-creation", h3: "AI Video Creation" },
       { id: "ai-videos-veo", h3: "AI Video Creation with Veo 3.1" },
       { id: "ai-content-business-promo", h3: "AI Content for Business Promotion" },
@@ -45,7 +47,7 @@ const aiByLang: Record<ServiceLang, AIContent> = {
     selectedWorkTitle: "Selected Work Placeholder",
     selectedWorkIntro: "Reserved for curated AI image and AI video showcases in the next content phase.",
     toolsTitle: "Tools / Software I Use",
-    tools: ["Midjourney", "Flux workflows", "Veo 3.1", "Runway", "Adobe Photoshop + Premiere Pro"],
+    tools: ["Google Gemini", "Midjourney", "Flux workflows", "Veo 3.1", "Runway", "Adobe Photoshop + Premiere Pro"],
     whyChooseTitle: "Why Choose This Service",
     whyChoosePoints: [
       "AI image and AI video services are clearly separated",
@@ -73,6 +75,7 @@ const aiByLang: Record<ServiceLang, AIContent> = {
       { id: "ai-image-creation", h3: "AI Image Creation für Brands" },
       { id: "ai-product-marketing-visuals", h3: "AI Product Visuals für Advertising" },
       { id: "ai-photo-concepts", h3: "AI Photo Concepts" },
+      { id: "foto-kreirane-sa-ai", h3: "KI-generierte Fotos (Google Gemini)" },
       { id: "ai-video-creation", h3: "AI Video Creation" },
       { id: "ai-videos-veo", h3: "AI Video Creation mit Veo 3.1" },
       { id: "ai-content-business-promo", h3: "AI Content für Business Promotion" },
@@ -80,7 +83,7 @@ const aiByLang: Record<ServiceLang, AIContent> = {
     selectedWorkTitle: "Platzhalter für ausgewählte Arbeiten",
     selectedWorkIntro: "Reserviert für kuratierte AI-Bild- und AI-Video-Beispiele in der nächsten Phase.",
     toolsTitle: "Tools / Software, die ich nutze",
-    tools: ["Midjourney", "Flux Workflows", "Veo 3.1", "Runway", "Adobe Photoshop + Premiere Pro"],
+    tools: ["Google Gemini", "Midjourney", "Flux Workflows", "Veo 3.1", "Runway", "Adobe Photoshop + Premiere Pro"],
     whyChooseTitle: "Warum diese Leistung wählen",
     whyChoosePoints: [
       "Klare Trennung zwischen AI-Bild- und AI-Video-Leistung",
@@ -108,6 +111,7 @@ const aiByLang: Record<ServiceLang, AIContent> = {
       { id: "ai-image-creation", h3: "AI Image Creation for Brands" },
       { id: "ai-product-marketing-visuals", h3: "AI Product Visuals for Advertising" },
       { id: "ai-photo-concepts", h3: "AI Photo Concepts" },
+      { id: "foto-kreirane-sa-ai", h3: "Foto generate con IA (Google Gemini)" },
       { id: "ai-video-creation", h3: "AI Video Creation" },
       { id: "ai-videos-veo", h3: "AI Video Creation with Veo 3.1" },
       { id: "ai-content-business-promo", h3: "AI Content for Business Promotion" },
@@ -115,7 +119,7 @@ const aiByLang: Record<ServiceLang, AIContent> = {
     selectedWorkTitle: "Placeholder lavori selezionati",
     selectedWorkIntro: "Riservato a showcase AI immagini/video nella prossima fase.",
     toolsTitle: "Tools / Software che uso",
-    tools: ["Midjourney", "Flux workflows", "Veo 3.1", "Runway", "Adobe Photoshop + Premiere Pro"],
+    tools: ["Google Gemini", "Midjourney", "Flux workflows", "Veo 3.1", "Runway", "Adobe Photoshop + Premiere Pro"],
     whyChooseTitle: "Perché scegliere questo servizio",
     whyChoosePoints: [
       "Separazione chiara tra servizi AI image e AI video",
@@ -143,6 +147,7 @@ const aiByLang: Record<ServiceLang, AIContent> = {
       { id: "ai-image-creation", h3: "AI Image Creation for Brands" },
       { id: "ai-product-marketing-visuals", h3: "AI Product Visuals for Advertising" },
       { id: "ai-photo-concepts", h3: "AI Photo Concepts" },
+      { id: "foto-kreirane-sa-ai", h3: "Foto kreirane sa AI (Google Gemini)" },
       { id: "ai-video-creation", h3: "AI Video Creation" },
       { id: "ai-videos-veo", h3: "AI Video Creation with Veo 3.1" },
       { id: "ai-content-business-promo", h3: "AI Content for Business Promotion" },
@@ -150,7 +155,7 @@ const aiByLang: Record<ServiceLang, AIContent> = {
     selectedWorkTitle: "Placeholder za odabrane radove",
     selectedWorkIntro: "Rezervisano za kurirane AI image i AI video primere u sledećoj fazi.",
     toolsTitle: "Alati / softver koji koristim",
-    tools: ["Midjourney", "Flux workflow", "Veo 3.1", "Runway", "Adobe Photoshop + Premiere Pro"],
+    tools: ["Google Gemini", "Midjourney", "Flux workflow", "Veo 3.1", "Runway", "Adobe Photoshop + Premiere Pro"],
     whyChooseTitle: "Zašto izabrati ovu uslugu",
     whyChoosePoints: [
       "Jasno razdvajanje AI image i AI video usluga",
@@ -178,6 +183,7 @@ const aiByLang: Record<ServiceLang, AIContent> = {
       { id: "ai-image-creation", h3: "AI Image Creation for Brands" },
       { id: "ai-product-marketing-visuals", h3: "AI Product Visuals for Advertising" },
       { id: "ai-photo-concepts", h3: "AI Photo Concepts" },
+      { id: "foto-kreirane-sa-ai", h3: "Foto të krijuara me AI (Google Gemini)" },
       { id: "ai-video-creation", h3: "AI Video Creation" },
       { id: "ai-videos-veo", h3: "AI Video Creation with Veo 3.1" },
       { id: "ai-content-business-promo", h3: "AI Content for Business Promotion" },
@@ -185,7 +191,7 @@ const aiByLang: Record<ServiceLang, AIContent> = {
     selectedWorkTitle: "Placeholder për punë të zgjedhura",
     selectedWorkIntro: "I rezervuar për shembuj AI image dhe AI video në fazën tjetër.",
     toolsTitle: "Tools / Software që përdor",
-    tools: ["Midjourney", "Flux workflows", "Veo 3.1", "Runway", "Adobe Photoshop + Premiere Pro"],
+    tools: ["Google Gemini", "Midjourney", "Flux workflows", "Veo 3.1", "Runway", "Adobe Photoshop + Premiere Pro"],
     whyChooseTitle: "Pse të zgjidhni këtë shërbim",
     whyChoosePoints: [
       "Ndarje e qartë mes shërbimeve AI image dhe AI video",
@@ -205,6 +211,10 @@ export default function DigitalMarketing() {
   const lang = toServiceLang(currentLanguage);
   const copy = aiByLang[lang];
 
+  const subsections = buildSubsections(lang, copy.subsectionTitles).map((sub) =>
+    sub.id === "foto-kreirane-sa-ai" ? { ...sub, workGallery: fotoKreiraneSaAiGalleryByLang[lang] } : sub,
+  );
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -217,7 +227,7 @@ export default function DigitalMarketing() {
       intro={copy.intro}
       whatIoffer={copy.whatIoffer}
       serviceCategoriesTitle={copy.serviceCategoriesTitle}
-      subsections={buildSubsections(lang, copy.subsectionTitles)}
+      subsections={subsections}
       selectedWorkTitle={copy.selectedWorkTitle}
       selectedWorkIntro={copy.selectedWorkIntro}
       toolsTitle={copy.toolsTitle}
