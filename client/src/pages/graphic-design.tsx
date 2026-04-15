@@ -4,6 +4,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { brandingGalleryByLang } from "@/data/brandingGallery";
 import { fotomanipulacijeGalleryByLang } from "@/data/fotomanipulacijeGallery";
 import { moviePosterGalleryByLang } from "@/data/moviePosterGallery";
+import { retushRadoviGalleryByLang } from "@/data/retushRadoviGallery";
 import { vizitKarticeGalleryByLang } from "@/data/vizitKarticeGallery";
 import { buildSubsections, getServiceTemplateLabels, toServiceLang, type ServiceLang } from "@/lib/servicePageI18n";
 
@@ -209,6 +210,7 @@ export default function GraphicDesign() {
     if (sub.id === "branding") return { ...sub, workGallery: brandingGalleryByLang[lang] };
     if (sub.id === "vizit-kartice") return { ...sub, workGallery: vizitKarticeGalleryByLang[lang] };
     if (sub.id === "movie-poster") return { ...sub, workGallery: moviePosterGalleryByLang[lang] };
+    if (sub.id === "retush-radovi") return { ...sub, workGallery: retushRadoviGalleryByLang[lang] };
     return sub;
   });
 
