@@ -2,6 +2,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { Link, useLocation } from "wouter";
 import { Facebook, Instagram, Linkedin, MessageCircle, Mail as MailIcon } from "lucide-react";
 import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_LINK } from "@/lib/contact";
+import { toServiceLang, type ServiceLang } from "@/lib/servicePageI18n";
 
 const FACEBOOK_URL = "https://www.facebook.com/halidosmani74";
 const INSTAGRAM_URL = "https://www.instagram.com/agrondesign/";
@@ -9,7 +10,7 @@ const LINKEDIN_URL = "https://www.linkedin.com/in/agron-osmani-228947266/";
 const EMAIL_LINK = "mailto:agron6922@gmail.com";
 
 export default function Footer() {
-  const { t, tSpec } = useLanguage();
+  const { t, tSpec, currentLanguage } = useLanguage();
   const [location] = useLocation();
   const isHome = location === "/";
 
@@ -19,12 +20,50 @@ export default function Footer() {
     if (element) element.scrollIntoView({ behavior: "smooth" });
   };
 
+  const serviceLabelsByLang: Record<ServiceLang, string[]> = {
+    en: [
+      "Graphic Design Services",
+      "Video Editing Services",
+      "AI Content Creation Services",
+      "Web Design and SEO Services",
+      "Application Design and Development Services",
+    ],
+    de: [
+      "Grafikdesign Services",
+      "Video Editing Services",
+      "AI Content Creation Services",
+      "Web Design und SEO Services",
+      "Application Design und Development Services",
+    ],
+    it: [
+      "Servizi Graphic Design",
+      "Servizi Video Editing",
+      "Servizi AI Content Creation",
+      "Servizi Web Design e SEO",
+      "Servizi Application Design e Development",
+    ],
+    sr: [
+      "Graphic Design usluge",
+      "Video Editing usluge",
+      "AI Content Creation usluge",
+      "Web Design i SEO usluge",
+      "Application Design i Development usluge",
+    ],
+    al: [
+      "Shërbime Graphic Design",
+      "Shërbime Video Editing",
+      "Shërbime AI Content Creation",
+      "Shërbime Web Design dhe SEO",
+      "Shërbime Application Design dhe Development",
+    ],
+  };
+  const currentLang = toServiceLang(currentLanguage);
   const services = [
-    { label: "Graphic Design Services", href: "/graphic-design" },
-    { label: "Video Editing Services", href: "/video-production" },
-    { label: "AI Content Creation Services", href: "/ai-content-creation" },
-    { label: "Web Design and SEO Services", href: "/web-design" },
-    { label: "Application Design and Development Services", href: "/application-design-development" },
+    { label: serviceLabelsByLang[currentLang][0], href: "/graphic-design" },
+    { label: serviceLabelsByLang[currentLang][1], href: "/video-production" },
+    { label: serviceLabelsByLang[currentLang][2], href: "/ai-content-creation" },
+    { label: serviceLabelsByLang[currentLang][3], href: "/web-design" },
+    { label: serviceLabelsByLang[currentLang][4], href: "/application-design-development" },
   ];
 
   return (

@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { CheckCircle2, Wrench, ArrowRight } from "lucide-react";
+import type { ServiceTemplateLabels } from "@/lib/servicePageI18n";
 
 type ServiceSubsection = {
   id: string;
@@ -14,6 +15,7 @@ type ServiceSubsection = {
 };
 
 type ServicePageTemplateProps = {
+  labels: ServiceTemplateLabels;
   eyebrow: string;
   h1: string;
   intro: string;
@@ -33,6 +35,7 @@ type ServicePageTemplateProps = {
 };
 
 export default function ServicePageTemplate({
+  labels,
   eyebrow,
   h1,
   intro,
@@ -51,12 +54,12 @@ export default function ServicePageTemplate({
   localNote,
 }: ServicePageTemplateProps) {
   const anchorLinks = [
-    { href: "#what-i-offer", label: "What I Offer" },
-    { href: "#service-categories", label: "Service Categories" },
-    { href: "#selected-work-placeholder", label: "Selected Work Placeholder" },
-    { href: "#tools-software", label: "Tools / Software I Use" },
-    { href: "#why-choose", label: "Why Choose This Service" },
-    { href: "#contact-cta", label: "CTA / Contact" },
+    { href: "#what-i-offer", label: labels.whatIOffer },
+    { href: "#service-categories", label: labels.serviceCategories },
+    { href: "#selected-work-placeholder", label: labels.selectedWorkPlaceholder },
+    { href: "#tools-software", label: labels.toolsSoftware },
+    { href: "#why-choose", label: labels.whyChoose },
+    { href: "#contact-cta", label: labels.contactCta },
   ];
 
   return (
@@ -88,7 +91,7 @@ export default function ServicePageTemplate({
 
         <section id="what-i-offer" className="mx-auto mt-10 max-w-6xl px-4 sm:px-6 lg:px-8">
           <article className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
-            <h2 className="text-2xl font-semibold tracking-tight">What I Offer</h2>
+            <h2 className="text-2xl font-semibold tracking-tight">{labels.whatIOffer}</h2>
             <ul className="mt-5 grid gap-3 sm:grid-cols-2">
               {whatIoffer.map((item) => (
                 <li key={item} className="flex items-start gap-2 text-neutral-700">
@@ -120,11 +123,11 @@ export default function ServicePageTemplate({
 
                 <div className="mt-5 grid gap-3 md:grid-cols-2">
                   <div className="rounded-xl border border-dashed border-neutral-300 bg-neutral-50 p-4">
-                    <h4 className="text-sm font-semibold text-neutral-800">Selected Work Placeholder</h4>
+                    <h4 className="text-sm font-semibold text-neutral-800">{labels.selectedWorkPlaceholder}</h4>
                     <p className="mt-2 text-sm text-neutral-600">{sub.workPlaceholder}</p>
                   </div>
                   <div className="rounded-xl border border-dashed border-neutral-300 bg-neutral-50 p-4">
-                    <h4 className="text-sm font-semibold text-neutral-800">Tools Placeholder</h4>
+                    <h4 className="text-sm font-semibold text-neutral-800">{labels.toolsPlaceholder}</h4>
                     <p className="mt-2 text-sm text-neutral-600">{sub.toolsPlaceholder}</p>
                   </div>
                 </div>
@@ -147,13 +150,13 @@ export default function ServicePageTemplate({
             <p className="mt-3 text-neutral-600">{selectedWorkIntro}</p>
             <div className="mt-5 grid gap-3 sm:grid-cols-3">
               <div className="rounded-xl border border-dashed border-neutral-300 bg-neutral-50 p-4 text-sm text-neutral-600">
-                Placeholder Slot 1 (future project)
+                {labels.selectedWorkSlot} 1 ({labels.futureProject})
               </div>
               <div className="rounded-xl border border-dashed border-neutral-300 bg-neutral-50 p-4 text-sm text-neutral-600">
-                Placeholder Slot 2 (future project)
+                {labels.selectedWorkSlot} 2 ({labels.futureProject})
               </div>
               <div className="rounded-xl border border-dashed border-neutral-300 bg-neutral-50 p-4 text-sm text-neutral-600">
-                Placeholder Slot 3 (future project)
+                {labels.selectedWorkSlot} 3 ({labels.futureProject})
               </div>
             </div>
           </article>
