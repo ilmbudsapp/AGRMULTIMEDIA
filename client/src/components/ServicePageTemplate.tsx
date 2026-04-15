@@ -1,42 +1,64 @@
-import type { ReactNode } from "react";
 import { Link } from "wouter";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { CheckCircle2, Wrench, ArrowRight } from "lucide-react";
 
+type ServiceSubsection = {
+  id: string;
+  h3: string;
+  intro: string;
+  includes: string[];
+  workPlaceholder: string;
+  toolsPlaceholder: string;
+  cta: string;
+};
+
 type ServicePageTemplateProps = {
   eyebrow: string;
   h1: string;
   intro: string;
-  overviewTitle: string;
-  overviewText: string;
-  deliverablesTitle: string;
-  deliverables: string[];
+  whatIoffer: string[];
+  serviceCategoriesTitle: string;
+  subsections: ServiceSubsection[];
+  selectedWorkTitle: string;
+  selectedWorkIntro: string;
   toolsTitle: string;
   tools: string[];
+  whyChooseTitle: string;
+  whyChoosePoints: string[];
   ctaTitle: string;
   ctaText: string;
   ctaButton: string;
   localNote?: string;
-  extraBlock?: ReactNode;
 };
 
 export default function ServicePageTemplate({
   eyebrow,
   h1,
   intro,
-  overviewTitle,
-  overviewText,
-  deliverablesTitle,
-  deliverables,
+  whatIoffer,
+  serviceCategoriesTitle,
+  subsections,
+  selectedWorkTitle,
+  selectedWorkIntro,
   toolsTitle,
   tools,
+  whyChooseTitle,
+  whyChoosePoints,
   ctaTitle,
   ctaText,
   ctaButton,
   localNote,
-  extraBlock,
 }: ServicePageTemplateProps) {
+  const anchorLinks = [
+    { href: "#what-i-offer", label: "What I Offer" },
+    { href: "#service-categories", label: "Service Categories" },
+    { href: "#selected-work-placeholder", label: "Selected Work Placeholder" },
+    { href: "#tools-software", label: "Tools / Software I Use" },
+    { href: "#why-choose", label: "Why Choose This Service" },
+    { href: "#contact-cta", label: "CTA / Contact" },
+  ];
+
   return (
     <div className="min-h-screen w-full max-w-[100vw] overflow-x-hidden bg-[#f5f4f2] text-neutral-900">
       <Navigation />
@@ -48,33 +70,27 @@ export default function ServicePageTemplate({
           </h1>
           <p className="mt-6 max-w-3xl text-base leading-relaxed text-neutral-600 sm:text-lg">{intro}</p>
           {localNote ? <p className="mt-4 max-w-3xl text-sm text-neutral-500">{localNote}</p> : null}
+          <nav
+            aria-label="Service page sections"
+            className="mt-8 flex flex-wrap gap-2 rounded-xl border border-neutral-200 bg-white p-3 shadow-sm"
+          >
+            {anchorLinks.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="rounded-full border border-neutral-200 px-3 py-1.5 text-xs font-medium text-neutral-700 transition hover:bg-neutral-100"
+              >
+                {item.label}
+              </a>
+            ))}
+          </nav>
         </section>
 
-        <section className="mx-auto mt-14 grid max-w-6xl gap-8 px-4 sm:px-6 lg:grid-cols-3 lg:gap-10 lg:px-8">
-          <article className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm lg:col-span-2">
-            <h2 className="text-2xl font-semibold tracking-tight">{overviewTitle}</h2>
-            <p className="mt-4 text-neutral-600 leading-relaxed">{overviewText}</p>
-            {extraBlock ? <div className="mt-6">{extraBlock}</div> : null}
-          </article>
-
-          <aside className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
-            <h2 className="text-xl font-semibold tracking-tight">{toolsTitle}</h2>
-            <ul className="mt-4 space-y-2">
-              {tools.map((tool) => (
-                <li key={tool} className="flex items-start gap-2 text-sm text-neutral-700">
-                  <Wrench className="mt-0.5 h-4 w-4 text-neutral-500" />
-                  <span>{tool}</span>
-                </li>
-              ))}
-            </ul>
-          </aside>
-        </section>
-
-        <section className="mx-auto mt-8 max-w-6xl px-4 sm:px-6 lg:px-8">
+        <section id="what-i-offer" className="mx-auto mt-10 max-w-6xl px-4 sm:px-6 lg:px-8">
           <article className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
-            <h2 className="text-2xl font-semibold tracking-tight">{deliverablesTitle}</h2>
+            <h2 className="text-2xl font-semibold tracking-tight">What I Offer</h2>
             <ul className="mt-5 grid gap-3 sm:grid-cols-2">
-              {deliverables.map((item) => (
+              {whatIoffer.map((item) => (
                 <li key={item} className="flex items-start gap-2 text-neutral-700">
                   <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-emerald-600" />
                   <span>{item}</span>
@@ -84,7 +100,94 @@ export default function ServicePageTemplate({
           </article>
         </section>
 
-        <section className="mx-auto mt-8 max-w-6xl px-4 sm:px-6 lg:px-8">
+        <section id="service-categories" className="mx-auto mt-8 max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-semibold tracking-tight">{serviceCategoriesTitle}</h2>
+          <div className="mt-5 space-y-5">
+            {subsections.map((sub) => (
+              <article key={sub.id} id={sub.id} className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
+                <h3 className="text-xl font-semibold tracking-tight text-neutral-900">{sub.h3}</h3>
+                <p className="mt-3 text-neutral-600 leading-relaxed">{sub.intro}</p>
+
+                <h4 className="mt-5 text-sm font-semibold uppercase tracking-wide text-neutral-700">What this includes</h4>
+                <ul className="mt-3 grid gap-2 sm:grid-cols-2">
+                  {sub.includes.map((item) => (
+                    <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
+                      <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="mt-5 grid gap-3 md:grid-cols-2">
+                  <div className="rounded-xl border border-dashed border-neutral-300 bg-neutral-50 p-4">
+                    <h4 className="text-sm font-semibold text-neutral-800">Selected Work Placeholder</h4>
+                    <p className="mt-2 text-sm text-neutral-600">{sub.workPlaceholder}</p>
+                  </div>
+                  <div className="rounded-xl border border-dashed border-neutral-300 bg-neutral-50 p-4">
+                    <h4 className="text-sm font-semibold text-neutral-800">Tools Placeholder</h4>
+                    <p className="mt-2 text-sm text-neutral-600">{sub.toolsPlaceholder}</p>
+                  </div>
+                </div>
+
+                <Link
+                  href="/contact"
+                  className="mt-5 inline-flex items-center gap-2 rounded-full border border-neutral-300 bg-white px-4 py-2 text-sm font-semibold text-neutral-800 transition hover:bg-neutral-100"
+                >
+                  {sub.cta}
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section id="selected-work-placeholder" className="mx-auto mt-8 max-w-6xl px-4 sm:px-6 lg:px-8">
+          <article className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
+            <h2 className="text-2xl font-semibold tracking-tight">{selectedWorkTitle}</h2>
+            <p className="mt-3 text-neutral-600">{selectedWorkIntro}</p>
+            <div className="mt-5 grid gap-3 sm:grid-cols-3">
+              <div className="rounded-xl border border-dashed border-neutral-300 bg-neutral-50 p-4 text-sm text-neutral-600">
+                Placeholder Slot 1 (future project)
+              </div>
+              <div className="rounded-xl border border-dashed border-neutral-300 bg-neutral-50 p-4 text-sm text-neutral-600">
+                Placeholder Slot 2 (future project)
+              </div>
+              <div className="rounded-xl border border-dashed border-neutral-300 bg-neutral-50 p-4 text-sm text-neutral-600">
+                Placeholder Slot 3 (future project)
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section id="tools-software" className="mx-auto mt-8 max-w-6xl px-4 sm:px-6 lg:px-8">
+          <article className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
+            <h2 className="text-2xl font-semibold tracking-tight">{toolsTitle}</h2>
+            <ul className="mt-4 grid gap-2 sm:grid-cols-2">
+              {tools.map((tool) => (
+                <li key={tool} className="flex items-start gap-2 text-sm text-neutral-700">
+                  <Wrench className="mt-0.5 h-4 w-4 text-neutral-500" />
+                  <span>{tool}</span>
+                </li>
+              ))}
+            </ul>
+          </article>
+        </section>
+
+        <section id="why-choose" className="mx-auto mt-8 max-w-6xl px-4 sm:px-6 lg:px-8">
+          <article className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
+            <h2 className="text-2xl font-semibold tracking-tight">{whyChooseTitle}</h2>
+            <ul className="mt-5 grid gap-3 sm:grid-cols-2">
+              {whyChoosePoints.map((point) => (
+                <li key={point} className="flex items-start gap-2 text-neutral-700">
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-emerald-600" />
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
+          </article>
+        </section>
+
+        <section id="contact-cta" className="mx-auto mt-8 max-w-6xl px-4 sm:px-6 lg:px-8">
           <article className="rounded-2xl border border-neutral-200 bg-neutral-900 p-8 text-white shadow-[0_16px_40px_rgba(15,23,42,0.22)]">
             <h2 className="text-2xl font-semibold tracking-tight">{ctaTitle}</h2>
             <p className="mt-3 max-w-2xl text-neutral-300">{ctaText}</p>
