@@ -13,7 +13,7 @@ export type LocalizedSubsection = {
   /** When set, the template shows a real image grid instead of the work placeholder copy. */
   workGallery?: { src: string; alt: string }[];
   /** When set, the template shows HTML5 video players (hosted under /public). */
-  workVideoGallery?: { src: string; title: string }[];
+  workVideoGallery?: { src: string; title: string; poster: string }[];
 };
 
 export type ServiceTemplateLabels = {

@@ -1,52 +1,23 @@
 import type { ServiceLang } from "@/lib/servicePageI18n";
 
-/** Served from `client/public/Video Ai/` — URL-encode spaces in browser via encodeURI in template. */
-const B = "/Video Ai";
+/** MP4s in `client/public/Video Ai/` — posters JPG in `posters/` (see scripts/extract-video-posters.mjs). */
+const V = "/Video Ai";
+const P = `${V}/posters`;
 
-export const videoKreiraniSaAiGalleryByLang: Record<ServiceLang, { src: string; title: string }[]> = {
-  en: [
-    { src: `${B}/01.mp4`, title: "AI video 1" },
-    { src: `${B}/02.mp4`, title: "AI video 2" },
-    { src: `${B}/03.mp4`, title: "AI video 3" },
-    { src: `${B}/04.mp4`, title: "AI video 4" },
-    { src: `${B}/05.mp4`, title: "AI video 5" },
-    { src: `${B}/06.mp4`, title: "AI video 6" },
-    { src: `${B}/07.mp4`, title: "AI video 7" },
-  ],
-  de: [
-    { src: `${B}/01.mp4`, title: "KI-Video 1" },
-    { src: `${B}/02.mp4`, title: "KI-Video 2" },
-    { src: `${B}/03.mp4`, title: "KI-Video 3" },
-    { src: `${B}/04.mp4`, title: "KI-Video 4" },
-    { src: `${B}/05.mp4`, title: "KI-Video 5" },
-    { src: `${B}/06.mp4`, title: "KI-Video 6" },
-    { src: `${B}/07.mp4`, title: "KI-Video 7" },
-  ],
-  it: [
-    { src: `${B}/01.mp4`, title: "Video IA 1" },
-    { src: `${B}/02.mp4`, title: "Video IA 2" },
-    { src: `${B}/03.mp4`, title: "Video IA 3" },
-    { src: `${B}/04.mp4`, title: "Video IA 4" },
-    { src: `${B}/05.mp4`, title: "Video IA 5" },
-    { src: `${B}/06.mp4`, title: "Video IA 6" },
-    { src: `${B}/07.mp4`, title: "Video IA 7" },
-  ],
-  sr: [
-    { src: `${B}/01.mp4`, title: "AI video klip 1" },
-    { src: `${B}/02.mp4`, title: "AI video klip 2" },
-    { src: `${B}/03.mp4`, title: "AI video klip 3" },
-    { src: `${B}/04.mp4`, title: "AI video klip 4" },
-    { src: `${B}/05.mp4`, title: "AI video klip 5" },
-    { src: `${B}/06.mp4`, title: "AI video klip 6" },
-    { src: `${B}/07.mp4`, title: "AI video klip 7" },
-  ],
-  al: [
-    { src: `${B}/01.mp4`, title: "Video AI 1" },
-    { src: `${B}/02.mp4`, title: "Video AI 2" },
-    { src: `${B}/03.mp4`, title: "Video AI 3" },
-    { src: `${B}/04.mp4`, title: "Video AI 4" },
-    { src: `${B}/05.mp4`, title: "Video AI 5" },
-    { src: `${B}/06.mp4`, title: "Video AI 6" },
-    { src: `${B}/07.mp4`, title: "Video AI 7" },
-  ],
+const clips: { src: string; poster: string }[] = [
+  { src: `${V}/01.mp4`, poster: `${P}/01.jpg` },
+  { src: `${V}/02.mp4`, poster: `${P}/02.jpg` },
+  { src: `${V}/03.mp4`, poster: `${P}/03.jpg` },
+  { src: `${V}/04.mp4`, poster: `${P}/04.jpg` },
+  { src: `${V}/05.mp4`, poster: `${P}/05.jpg` },
+  { src: `${V}/06.mp4`, poster: `${P}/06.jpg` },
+  { src: `${V}/07.mp4`, poster: `${P}/07.jpg` },
+];
+
+export const videoKreiraniSaAiGalleryByLang: Record<ServiceLang, { src: string; title: string; poster: string }[]> = {
+  en: clips.map((c, i) => ({ ...c, title: `AI video ${i + 1}` })),
+  de: clips.map((c, i) => ({ ...c, title: `KI-Video ${i + 1}` })),
+  it: clips.map((c, i) => ({ ...c, title: `Video IA ${i + 1}` })),
+  sr: clips.map((c, i) => ({ ...c, title: `AI video klip ${i + 1}` })),
+  al: clips.map((c, i) => ({ ...c, title: `Video AI ${i + 1}` })),
 };

@@ -147,10 +147,11 @@ export default function ServicePageTemplate({
                             className="overflow-hidden rounded-lg border border-neutral-200 bg-neutral-950 shadow-sm"
                           >
                             <video
-                              className="aspect-video w-full object-contain"
+                              className="aspect-video w-full bg-neutral-900 object-contain"
                               controls
                               playsInline
-                              preload="metadata"
+                              preload="none"
+                              poster={encodeURI(vid.poster)}
                               aria-label={vid.title}
                             >
                               <source src={encodeURI(vid.src)} type="video/mp4" />
