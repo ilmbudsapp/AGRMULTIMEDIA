@@ -10,12 +10,16 @@ export type LocalizedSubsection = {
   workPlaceholder: string;
   toolsPlaceholder: string;
   cta: string;
+  /** When set, the template shows a real image grid instead of the work placeholder copy. */
+  workGallery?: { src: string; alt: string }[];
 };
 
 export type ServiceTemplateLabels = {
   whatIOffer: string;
   serviceCategories: string;
   whatThisIncludes: string;
+  /** Heading for the work samples box when a gallery is present */
+  workExamples: string;
   selectedWorkPlaceholder: string;
   toolsPlaceholder: string;
   selectedWorkSlot: string;
@@ -49,6 +53,7 @@ const templateLabelsByLang: Record<ServiceLang, ServiceTemplateLabels> = {
     whatIOffer: "What I Offer",
     serviceCategories: "Service Categories",
     whatThisIncludes: "What this includes",
+    workExamples: "Work examples",
     selectedWorkPlaceholder: "Selected Work Placeholder",
     toolsPlaceholder: "Tools Placeholder",
     selectedWorkSlot: "Placeholder Slot",
@@ -61,6 +66,7 @@ const templateLabelsByLang: Record<ServiceLang, ServiceTemplateLabels> = {
     whatIOffer: "Was ich anbiete",
     serviceCategories: "Service-Kategorien",
     whatThisIncludes: "Was enthalten ist",
+    workExamples: "Arbeitsbeispiele",
     selectedWorkPlaceholder: "Platzhalter für ausgewählte Arbeiten",
     toolsPlaceholder: "Tools-Platzhalter",
     selectedWorkSlot: "Platzhalter-Slot",
@@ -73,6 +79,7 @@ const templateLabelsByLang: Record<ServiceLang, ServiceTemplateLabels> = {
     whatIOffer: "Cosa offro",
     serviceCategories: "Categorie di servizio",
     whatThisIncludes: "Cosa include",
+    workExamples: "Esempi di lavori",
     selectedWorkPlaceholder: "Placeholder lavori selezionati",
     toolsPlaceholder: "Placeholder strumenti",
     selectedWorkSlot: "Slot placeholder",
@@ -85,6 +92,7 @@ const templateLabelsByLang: Record<ServiceLang, ServiceTemplateLabels> = {
     whatIOffer: "Šta nudim",
     serviceCategories: "Kategorije usluga",
     whatThisIncludes: "Šta uključuje",
+    workExamples: "Primeri radova",
     selectedWorkPlaceholder: "Placeholder za odabrane radove",
     toolsPlaceholder: "Placeholder za alate",
     selectedWorkSlot: "Placeholder slot",
@@ -97,6 +105,7 @@ const templateLabelsByLang: Record<ServiceLang, ServiceTemplateLabels> = {
     whatIOffer: "Çfarë ofroj",
     serviceCategories: "Kategoritë e shërbimit",
     whatThisIncludes: "Çfarë përfshin",
+    workExamples: "Shembuj pune",
     selectedWorkPlaceholder: "Placeholder për punë të zgjedhura",
     toolsPlaceholder: "Placeholder për mjetet",
     selectedWorkSlot: "Slot placeholder",

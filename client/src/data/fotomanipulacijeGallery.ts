@@ -1,0 +1,67 @@
+import type { ServiceLang } from "@/lib/servicePageI18n";
+
+const B = "/portfolio/fotomanipulacije";
+
+/** Same 10 images for all languages; alt text localized for accessibility. */
+export const fotomanipulacijeGalleryByLang: Record<ServiceLang, { src: string; alt: string }[]> = {
+  en: [
+    { src: `${B}/01-wolf-spirit.png`, alt: "Photo manipulation: giant white wolf howling above a warrior in a misty forest." },
+    { src: `${B}/02-groot-reading.png`, alt: "Photo manipulation: girl reading by lantern with Baby Groot in a dark forest." },
+    { src: `${B}/03-rooftop-ruins.png`, alt: "Photo manipulation: figure on a rooftop overlooking a ruined city." },
+    { src: `${B}/04-giant-mist.png`, alt: "Photo manipulation: lone figure facing a colossal shadow through fog in a forest." },
+    { src: `${B}/05-lantern-apparition.png`, alt: "Photo manipulation: man with lantern and ghostly figure with red eyes in a forest." },
+    { src: `${B}/06-burning-mask.png`, alt: "Photo manipulation: man holding a cracked stone mask with fire and embers." },
+    { src: `${B}/07-boy-lantern-deer.png`, alt: "Photo manipulation: boy with lantern, glowing mushrooms, and a spectral deer." },
+    { src: `${B}/08-postapocalyptic-walk.png`, alt: "Photo manipulation: man walking through a devastated city street." },
+    { src: `${B}/09-wasteland-journey.png`, alt: "Photo manipulation: man and child walking through a ruined street with fire and smoke." },
+    { src: `${B}/10-kong-poster.png`, alt: "Cinematic movie-poster style artwork: gorilla on a cliff with KONG title treatment." },
+  ],
+  de: [
+    { src: `${B}/01-wolf-spirit.png`, alt: "Fotomanipulation: riesiger weißer Wolf über einem Krieger im nebligen Wald." },
+    { src: `${B}/02-groot-reading.png`, alt: "Fotomanipulation: Mädchen liest bei Laterne mit Baby Groot im dunklen Wald." },
+    { src: `${B}/03-rooftop-ruins.png`, alt: "Fotomanipulation: Figur auf einem Dach über einer zerstörten Stadt." },
+    { src: `${B}/04-giant-mist.png`, alt: "Fotomanipulation: einsame Figur vor einer riesigen Schattengestalt im Nebel." },
+    { src: `${B}/05-lantern-apparition.png`, alt: "Fotomanipulation: Mann mit Laterne und geisterhafter Gestalt mit roten Augen." },
+    { src: `${B}/06-burning-mask.png`, alt: "Fotomanipulation: Mann mit rissiger Steinmaske, Feuer und Funken." },
+    { src: `${B}/07-boy-lantern-deer.png`, alt: "Fotomanipulation: Junge mit Laterne, leuchtenden Pilzen und geisterhaftem Hirsch." },
+    { src: `${B}/08-postapocalyptic-walk.png`, alt: "Fotomanipulation: Mann geht durch eine zerstörte Stadtstraße." },
+    { src: `${B}/09-wasteland-journey.png`, alt: "Fotomanipulation: Mann und Kind auf einer zerstörten Straße mit Feuer und Rauch." },
+    { src: `${B}/10-kong-poster.png`, alt: "Filmplakat-Stil: Gorilla auf einem Felsen mit KONG-Titel." },
+  ],
+  it: [
+    { src: `${B}/01-wolf-spirit.png`, alt: "Fotomanipolazione: lupo bianco gigante che ulula sopra un guerriero nella foresta nebbiosa." },
+    { src: `${B}/02-groot-reading.png`, alt: "Fotomanipolazione: bambina legge con lanterna e Baby Groot nella foresta." },
+    { src: `${B}/03-rooftop-ruins.png`, alt: "Fotomanipolazione: figura su un tetto sopra una città in rovina." },
+    { src: `${B}/04-giant-mist.png`, alt: "Fotomanipolazione: figura solitaria di fronte a un’ombra colossale nella nebbia." },
+    { src: `${B}/05-lantern-apparition.png`, alt: "Fotomanipolazione: uomo con lanterna e figura spettrale con occhi rossi." },
+    { src: `${B}/06-burning-mask.png`, alt: "Fotomanipolazione: uomo con maschera di pietra incrinata, fuoco e braci." },
+    { src: `${B}/07-boy-lantern-deer.png`, alt: "Fotomanipolazione: ragazzo con lanterna, funghi luminosi e cervo etereo." },
+    { src: `${B}/08-postapocalyptic-walk.png`, alt: "Fotomanipolazione: uomo che cammina in una strada post-apocalittica." },
+    { src: `${B}/09-wasteland-journey.png`, alt: "Fotomanipolazione: uomo e bambina in strada distrutta con fuoco e fumo." },
+    { src: `${B}/10-kong-poster.png`, alt: "Stile locandina cinematografica: gorilla su una scogliera con titolo KONG." },
+  ],
+  sr: [
+    { src: `${B}/01-wolf-spirit.png`, alt: "Fotomanipulacija: veliki beli vuk koji uriše iznad ratnika u magli." },
+    { src: `${B}/02-groot-reading.png`, alt: "Fotomanipulacija: devojčica čita uz fenjer sa Baby Groot-om u šumi." },
+    { src: `${B}/03-rooftop-ruins.png`, alt: "Fotomanipulacija: figura na krovu iznad razorene grada." },
+    { src: `${B}/04-giant-mist.png`, alt: "Fotomanipulacija: usamljena figura pred ogromnu senku u magli." },
+    { src: `${B}/05-lantern-apparition.png`, alt: "Fotomanipulacija: muškarac sa fenjerom i sablasna figura sa crvenim očima." },
+    { src: `${B}/06-burning-mask.png`, alt: "Fotomanipulacija: muškarac drži puklu kamenu masku sa vatrom i iskrama." },
+    { src: `${B}/07-boy-lantern-deer.png`, alt: "Fotomanipulacija: dečak sa fenjerom, svetlećim pečurkama i jelenom." },
+    { src: `${B}/08-postapocalyptic-walk.png`, alt: "Fotomanipulacija: muškarac kroz uništenu gradsku ulicu." },
+    { src: `${B}/09-wasteland-journey.png`, alt: "Fotomanipulacija: muškarac i dete kroz uništenu ulicu sa vatrom i dimom." },
+    { src: `${B}/10-kong-poster.png`, alt: "Kao filmski poster: gorila na litici sa naslovom KONG." },
+  ],
+  al: [
+    { src: `${B}/01-wolf-spirit.png`, alt: "Fotomanipulim: ujk i bardhë gjigant mbi një luftëtar në pyll me mjegull." },
+    { src: `${B}/02-groot-reading.png`, alt: "Fotomanipulim: vajzë lexon me llambë me Baby Groot në pyll të errët." },
+    { src: `${B}/03-rooftop-ruins.png`, alt: "Fotomanipulim: figurë në kulm mbi një qytet të shkatërruar." },
+    { src: `${B}/04-giant-mist.png`, alt: "Fotomanipulim: figurë e vetmuar përballë një hije gjigande në mjegull." },
+    { src: `${B}/05-lantern-apparition.png`, alt: "Fotomanipulim: burrë me llambë dhe figurë fantazmë me sy të kuq." },
+    { src: `${B}/06-burning-mask.png`, alt: "Fotomanipulim: burrë me maskë guri të plasaritur, zjarr dhe shkëndija." },
+    { src: `${B}/07-boy-lantern-deer.png`, alt: "Fotomanipulim: djalë me llambë, kërpudha që ndriçojnë dhe dre kafshësh." },
+    { src: `${B}/08-postapocalyptic-walk.png`, alt: "Fotomanipulim: burrë ecën në rrugë qyteti të shkatërruar." },
+    { src: `${B}/09-wasteland-journey.png`, alt: "Fotomanipulim: burrë dhe fëmijë në rrugë të shkatërruar me zjarr dhe tym." },
+    { src: `${B}/10-kong-poster.png`, alt: "Stil poster filmi: gorilë në shkëmb me titullin KONG." },
+  ],
+};

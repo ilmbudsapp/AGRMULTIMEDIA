@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import ServicePageTemplate from "@/components/ServicePageTemplate";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { fotomanipulacijeGalleryByLang } from "@/data/fotomanipulacijeGallery";
 import { buildSubsections, getServiceTemplateLabels, toServiceLang, type ServiceLang } from "@/lib/servicePageI18n";
 
 type GraphicContent = {
@@ -200,6 +201,12 @@ export default function GraphicDesign() {
   const lang = toServiceLang(currentLanguage);
   const copy = graphicByLang[lang];
 
+  const subsections = buildSubsections(lang, copy.subsectionTitles).map((sub) =>
+    sub.id === "fotomanipulacije"
+      ? { ...sub, workGallery: fotomanipulacijeGalleryByLang[lang] }
+      : sub,
+  );
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -212,7 +219,7 @@ export default function GraphicDesign() {
       intro={copy.intro}
       whatIoffer={copy.whatIoffer}
       serviceCategoriesTitle={copy.serviceCategoriesTitle}
-      subsections={buildSubsections(lang, copy.subsectionTitles)}
+      subsections={subsections}
       selectedWorkTitle={copy.selectedWorkTitle}
       selectedWorkIntro={copy.selectedWorkIntro}
       toolsTitle={copy.toolsTitle}

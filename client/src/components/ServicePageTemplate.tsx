@@ -2,17 +2,7 @@ import { Link } from "wouter";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { CheckCircle2, Wrench, ArrowRight } from "lucide-react";
-import type { ServiceTemplateLabels } from "@/lib/servicePageI18n";
-
-type ServiceSubsection = {
-  id: string;
-  h3: string;
-  intro: string;
-  includes: string[];
-  workPlaceholder: string;
-  toolsPlaceholder: string;
-  cta: string;
-};
+import type { LocalizedSubsection, ServiceTemplateLabels } from "@/lib/servicePageI18n";
 
 type ServicePageTemplateProps = {
   labels: ServiceTemplateLabels;
@@ -21,7 +11,7 @@ type ServicePageTemplateProps = {
   intro: string;
   whatIoffer: string[];
   serviceCategoriesTitle: string;
-  subsections: ServiceSubsection[];
+  subsections: LocalizedSubsection[];
   selectedWorkTitle: string;
   selectedWorkIntro: string;
   toolsTitle: string;
@@ -111,7 +101,9 @@ export default function ServicePageTemplate({
                 <h3 className="text-xl font-semibold tracking-tight text-neutral-900">{sub.h3}</h3>
                 <p className="mt-3 text-neutral-600 leading-relaxed">{sub.intro}</p>
 
-                <h4 className="mt-5 text-sm font-semibold uppercase tracking-wide text-neutral-700">What this includes</h4>
+                <h4 className="mt-5 text-sm font-semibold uppercase tracking-wide text-neutral-700">
+                  {labels.whatThisIncludes}
+                </h4>
                 <ul className="mt-3 grid gap-2 sm:grid-cols-2">
                   {sub.includes.map((item) => (
                     <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
@@ -121,12 +113,45 @@ export default function ServicePageTemplate({
                   ))}
                 </ul>
 
-                <div className="mt-5 grid gap-3 md:grid-cols-2">
-                  <div className="rounded-xl border border-dashed border-neutral-300 bg-neutral-50 p-4">
-                    <h4 className="text-sm font-semibold text-neutral-800">{labels.selectedWorkPlaceholder}</h4>
-                    <p className="mt-2 text-sm text-neutral-600">{sub.workPlaceholder}</p>
+                <div
+                  className={
+                    sub.workGallery?.length
+                      ? "mt-5 space-y-4"
+                      : "mt-5 grid gap-3 md:grid-cols-2"
+                  }
+                >
+                  <div
+                    className={`rounded-xl p-4 ${
+                      sub.workGallery?.length
+                        ? "border border-neutral-200 bg-neutral-50"
+                        : "border border-dashed border-neutral-300 bg-neutral-50"
+                    }`}
+                  >
+                    <h4 className="text-sm font-semibold text-neutral-800">
+                      {sub.workGallery?.length ? labels.workExamples : labels.selectedWorkPlaceholder}
+                    </h4>
+                    {sub.workGallery?.length ? (
+                      <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                        {sub.workGallery.map((img) => (
+                          <figure
+                            key={img.src}
+                            className="overflow-hidden rounded-lg border border-neutral-200 bg-neutral-100 shadow-sm"
+                          >
+                            <img
+                              src={img.src}
+                              alt={img.alt}
+                              loading="lazy"
+                              decoding="async"
+                              className="h-auto w-full max-h-[min(70vh,520px)] object-contain"
+                            />
+                          </figure>
+                        ))}
+                      </div>
+                    ) : (
+                      <p className="mt-2 text-sm text-neutral-600">{sub.workPlaceholder}</p>
+                    )}
                   </div>
-                  <div className="rounded-xl border border-dashed border-neutral-300 bg-neutral-50 p-4">
+                  <div className="rounded-xl border border-dashed border-neutral-300 bg-neutral-50 p-4 md:max-w-xl">
                     <h4 className="text-sm font-semibold text-neutral-800">{labels.toolsPlaceholder}</h4>
                     <p className="mt-2 text-sm text-neutral-600">{sub.toolsPlaceholder}</p>
                   </div>
