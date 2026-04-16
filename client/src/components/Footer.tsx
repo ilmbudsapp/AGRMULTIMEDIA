@@ -3,6 +3,7 @@ import { Link, useLocation } from "wouter";
 import { Facebook, Instagram, Linkedin, MessageCircle, Mail as MailIcon } from "lucide-react";
 import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_LINK } from "@/lib/contact";
 import { toServiceLang, type ServiceLang } from "@/lib/servicePageI18n";
+import FooterLegalBlock from "@/components/FooterLegalBlock";
 
 const FACEBOOK_URL = "https://www.facebook.com/halidosmani74";
 const INSTAGRAM_URL = "https://www.instagram.com/agrondesign/";
@@ -139,6 +140,10 @@ export default function Footer() {
               </li>
             </ul>
           </div>
+        </div>
+
+        <div className="mx-auto mb-12 w-full max-w-5xl">
+          <FooterLegalBlock />
         </div>
 
         <div className="border-t border-white/10 pt-8" data-testid="footer-bottom">
