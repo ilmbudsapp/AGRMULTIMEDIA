@@ -12,11 +12,6 @@ const SERVICES = [
     href: "/graphic-design",
   },
   {
-    title: "Professional Video Editing Services",
-    description: "Business-focused editing for short-form content, advertising clips, product promos, and website visuals.",
-    href: "/video-production",
-  },
-  {
     title: "AI Content Creation for Business Marketing",
     description: "AI image generation, AI product visuals, and AI video content built for practical campaign output.",
     href: "/ai-content-creation",

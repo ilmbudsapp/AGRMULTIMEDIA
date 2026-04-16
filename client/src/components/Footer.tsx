@@ -24,35 +24,30 @@ export default function Footer() {
   const serviceLabelsByLang: Record<ServiceLang, string[]> = {
     en: [
       "Graphic Design Services",
-      "Video Editing Services",
       "AI Content Creation Services",
       "Web Design and SEO Services",
       "Application Design and Development Services",
     ],
     de: [
       "Grafikdesign Services",
-      "Video Editing Services",
       "AI Content Creation Services",
       "Web Design und SEO Services",
       "Application Design und Development Services",
     ],
     it: [
       "Servizi Graphic Design",
-      "Servizi Video Editing",
       "Servizi AI Content Creation",
       "Servizi Web Design e SEO",
       "Servizi Application Design e Development",
     ],
     sr: [
       "Graphic Design usluge",
-      "Video Editing usluge",
       "AI Content Creation usluge",
       "Web Design i SEO usluge",
       "Application Design i Development usluge",
     ],
     al: [
       "Shërbime Graphic Design",
-      "Shërbime Video Editing",
       "Shërbime AI Content Creation",
       "Shërbime Web Design dhe SEO",
       "Shërbime Application Design dhe Development",
@@ -61,10 +56,9 @@ export default function Footer() {
   const currentLang = toServiceLang(currentLanguage);
   const services = [
     { label: serviceLabelsByLang[currentLang][0], href: "/graphic-design" },
-    { label: serviceLabelsByLang[currentLang][1], href: "/video-production" },
-    { label: serviceLabelsByLang[currentLang][2], href: "/ai-content-creation" },
-    { label: serviceLabelsByLang[currentLang][3], href: "/web-design" },
-    { label: serviceLabelsByLang[currentLang][4], href: "/application-design-development" },
+    { label: serviceLabelsByLang[currentLang][1], href: "/ai-content-creation" },
+    { label: serviceLabelsByLang[currentLang][2], href: "/web-design" },
+    { label: serviceLabelsByLang[currentLang][3], href: "/application-design-development" },
   ];
 
   return (

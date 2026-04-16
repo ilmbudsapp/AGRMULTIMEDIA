@@ -18,7 +18,6 @@ import PortfolioPage from "@/pages/PortfolioPage";
 import BlogIndexPage from "@/pages/BlogIndexPage";
 import WebDesign from "@/pages/web-design";
 import GraphicDesign from "@/pages/graphic-design";
-import VideoProduction from "@/pages/video-production";
 import DigitalMarketing from "@/pages/digital-marketing";
 import AIContentCreation from "@/pages/ai-content-creation";
 import ApplicationDesignDevelopment from "@/pages/application-design-development";
@@ -54,7 +53,6 @@ function Router() {
       <Route path="/blog" component={BlogIndexPage} />
       <Route path="/web-design" component={WebDesign} />
       <Route path="/graphic-design" component={GraphicDesign} />
-      <Route path="/video-production" component={VideoProduction} />
       <Route path="/digital-marketing" component={DigitalMarketing} />
       <Route path="/ai-content-creation" component={AIContentCreation} />
       <Route path="/application-design-development" component={ApplicationDesignDevelopment} />

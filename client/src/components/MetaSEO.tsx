@@ -20,9 +20,9 @@ const ROUTE_SEO_BY_LANG: Record<Lang, Record<string, RouteSeo>> = {
     "/services": {
       title: "Services for Small Businesses | AGR Multimedia",
       description:
-        "Explore five focused services: graphic design, video editing, AI content creation, web design + SEO, and custom application design.",
+        "Explore focused services: graphic design, AI content creation, web design + SEO, and custom application design.",
       keywords:
-        "small business services, graphic design services, video editing services, ai content creation, web design and seo, custom application design",
+        "small business services, graphic design services, ai content creation, web design and seo, custom application design",
     },
     "/graphic-design": {
       title: "Graphic Design Services for Small Businesses | AGR Multimedia",
@@ -30,13 +30,6 @@ const ROUTE_SEO_BY_LANG: Record<Lang, Record<string, RouteSeo>> = {
         "Logo design, branding systems, and marketing visuals that help small businesses look clear and professional.",
       keywords:
         "graphic design services for small businesses, logo design, branding services, business marketing visuals",
-    },
-    "/video-production": {
-      title: "Professional Video Editing Services | AGR Multimedia",
-      description:
-        "Professional video editing for social media, ad campaigns, websites, and business communication.",
-      keywords:
-        "professional video editing services, social media video editing, ad video editing, business video editing",
     },
     "/ai-content-creation": {
       title: "AI Content Creation for Business Marketing | AGR Multimedia",
@@ -71,9 +64,9 @@ const ROUTE_SEO_BY_LANG: Record<Lang, Record<string, RouteSeo>> = {
     "/services": {
       title: "Leistungen für kleine Unternehmen | AGR Multimedia",
       description:
-        "Fünf klare Leistungsbereiche: Grafikdesign, Videoschnitt, KI-Content, Webdesign + SEO und individuelle App-Konzepte.",
+        "Klare Leistungsbereiche: Grafikdesign, KI-Content, Webdesign + SEO und individuelle App-Konzepte.",
       keywords:
-        "leistungen für kleine unternehmen, grafikdesign dienstleistungen, videoschnitt, ki content erstellung, webdesign seo, app design",
+        "leistungen für kleine unternehmen, grafikdesign dienstleistungen, ki content erstellung, webdesign seo, app design",
     },
     "/graphic-design": {
       title: "Grafikdesign für kleine Unternehmen | AGR Multimedia",
@@ -81,13 +74,6 @@ const ROUTE_SEO_BY_LANG: Record<Lang, Record<string, RouteSeo>> = {
         "Logo-Design, Branding-Systeme und Marketing-Visuals für einen professionellen und klaren Markenauftritt.",
       keywords:
         "grafikdesign für kleine unternehmen, logo design, branding agentur, marketing visuals",
-    },
-    "/video-production": {
-      title: "Professionelle Videoschnitt Dienstleistungen | AGR Multimedia",
-      description:
-        "Videoschnitt für Social Media, Werbeanzeigen, Websites und professionelle Unternehmenskommunikation.",
-      keywords:
-        "professioneller videoschnitt, video editing dienstleistung, social media videoschnitt, werbevideo schnitt",
     },
     "/ai-content-creation": {
       title: "KI Content Creation für Business Marketing | AGR Multimedia",
@@ -122,9 +108,9 @@ const ROUTE_SEO_BY_LANG: Record<Lang, Record<string, RouteSeo>> = {
     "/services": {
       title: "Servizi per Piccole Imprese | AGR Multimedia",
       description:
-        "Cinque aree chiare: graphic design, video editing, contenuti AI, web design + SEO e design applicazioni custom.",
+        "Aree chiare: graphic design, contenuti AI, web design + SEO e design applicazioni custom.",
       keywords:
-        "servizi per piccole imprese, graphic design, video editing, contenuti ai, web design seo, applicazioni custom",
+        "servizi per piccole imprese, graphic design, contenuti ai, web design seo, applicazioni custom",
     },
     "/graphic-design": {
       title: "Graphic Design Services for Small Businesses | AGR Multimedia",
@@ -132,13 +118,6 @@ const ROUTE_SEO_BY_LANG: Record<Lang, Record<string, RouteSeo>> = {
         "Logo, branding e visual marketing per una comunicazione aziendale chiara e professionale.",
       keywords:
         "graphic design per piccole imprese, logo design, branding aziendale, visual marketing",
-    },
-    "/video-production": {
-      title: "Professional Video Editing Services | AGR Multimedia",
-      description:
-        "Montaggio video professionale per social media, campagne ads, siti web e comunicazione business.",
-      keywords:
-        "video editing professionale, montaggio video social, video ads business, servizi video",
     },
     "/ai-content-creation": {
       title: "AI Content Creation for Business Marketing | AGR Multimedia",
@@ -173,9 +152,9 @@ const ROUTE_SEO_BY_LANG: Record<Lang, Record<string, RouteSeo>> = {
     "/services": {
       title: "Usluge za mala preduzeća | AGR Multimedia",
       description:
-        "Pet jasnih oblasti: grafički dizajn, video editing, AI content creation, web dizajn + SEO i razvoj aplikacija.",
+        "Jasne oblasti: grafički dizajn, AI content creation, web dizajn + SEO i razvoj aplikacija.",
       keywords:
-        "usluge za mala preduzeca, graficki dizajn usluge, video editing usluge, ai content creation, web dizajn seo, razvoj aplikacija",
+        "usluge za mala preduzeca, graficki dizajn usluge, ai content creation, web dizajn seo, razvoj aplikacija",
     },
     "/graphic-design": {
       title: "Graphic Design Services for Small Businesses | AGR Multimedia",
@@ -183,13 +162,6 @@ const ROUTE_SEO_BY_LANG: Record<Lang, Record<string, RouteSeo>> = {
         "Logo dizajn, brending sistem i marketinški vizuali za profesionalan i dosledan nastup biznisa.",
       keywords:
         "graficki dizajn za mala preduzeca, logo dizajn, brending, marketinski vizuali",
-    },
-    "/video-production": {
-      title: "Professional Video Editing Services | AGR Multimedia",
-      description:
-        "Profesionalna video montaža za društvene mreže, oglase, web sajtove i poslovnu komunikaciju.",
-      keywords:
-        "profesionalna video montaza, video editing usluge, montaza za drustvene mreze, poslovni video",
     },
     "/ai-content-creation": {
       title: "AI Content Creation for Business Marketing | AGR Multimedia",
@@ -234,13 +206,6 @@ const ROUTE_SEO_BY_LANG: Record<Lang, Record<string, RouteSeo>> = {
         "Logo, branding dhe vizuale marketingu për një prezencë profesionale dhe të qartë biznesi.",
       keywords:
         "graphic design per biznese te vogla, logo design, branding, vizuale marketingu",
-    },
-    "/video-production": {
-      title: "Professional Video Editing Services | AGR Multimedia",
-      description:
-        "Montazh profesional video për rrjete sociale, reklama, faqe web dhe komunikim biznesi.",
-      keywords:
-        "video editing profesional, montazh video rrjete sociale, video reklamuese biznesi",
     },
     "/ai-content-creation": {
       title: "AI Content Creation for Business Marketing | AGR Multimedia",

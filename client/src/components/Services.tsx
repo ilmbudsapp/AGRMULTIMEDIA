@@ -1,4 +1,4 @@
-import { Code, Palette, Video, Megaphone, Camera, Settings, ArrowRight, Check } from "lucide-react";
+import { Code, Palette, Megaphone, Camera, Settings, ArrowRight, Check } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Link } from "wouter";
 
@@ -21,14 +21,6 @@ export default function Services() {
       features: t.services.items.graphicDesign.features,
       gradient: "from-purple-500 to-pink-500",
       link: "/graphic-design",
-    },
-    {
-      icon: <Video className="text-white w-6 h-6" />,
-      title: t.services.items.videoProduction.title,
-      description: t.services.items.videoProduction.description,
-      features: t.services.items.videoProduction.features,
-      gradient: "from-rose-500 to-orange-500",
-      link: "/video-production",
     },
     {
       icon: <Megaphone className="text-white w-6 h-6" />,
