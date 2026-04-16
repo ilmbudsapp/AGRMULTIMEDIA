@@ -82,10 +82,12 @@ export default function PackagingDesign() {
 
           {/* Featured Image */}
           <div className="w-full h-96 rounded-2xl overflow-hidden mb-12 shadow-2xl">
-            <img 
+            <img
               src="https://images.unsplash.com/photo-1588200908342-23b585c03e26?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600"
-              alt="Packaging Design Showcase"
+              alt="Packaging design case study — project hero"
               className="w-full h-full object-cover"
+              fetchPriority="high"
+              decoding="async"
             />
           </div>
 

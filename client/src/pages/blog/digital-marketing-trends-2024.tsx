@@ -62,8 +62,10 @@ export default function DigitalMarketingTrends2024() {
           <div className="w-full h-80 rounded-2xl overflow-hidden mb-8">
             <img 
               src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600"
-              alt="Digital Marketing Trends"
+              alt="Digital marketing analytics and strategy — article hero image"
               className="w-full h-full object-cover"
+              fetchPriority="high"
+              decoding="async"
             />
           </div>
 

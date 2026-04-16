@@ -96,6 +96,8 @@ export default function Consulting() {
                 alt="Digital strategy and marketing consulting workspace — AGR Multimedia Geislingen"
                 className="rounded-2xl shadow-2xl w-full h-auto object-contain"
                 data-testid="consulting-hero-image"
+                fetchPriority="high"
+                decoding="async"
               />
             </div>
           </div>

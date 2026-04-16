@@ -84,8 +84,10 @@ export default function CorporateVideo() {
           <div className="w-full h-96 rounded-2xl overflow-hidden mb-12 shadow-2xl relative">
             <img 
               src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600"
-              alt="Corporate Video Production"
+              alt="Corporate video production case study — project hero"
               className="w-full h-full object-cover"
+              fetchPriority="high"
+              decoding="async"
             />
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
               <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">

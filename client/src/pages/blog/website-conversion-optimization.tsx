@@ -62,8 +62,10 @@ export default function WebsiteConversionOptimization() {
           <div className="w-full h-80 rounded-2xl overflow-hidden mb-8">
             <img 
               src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600"
-              alt="Website Conversion Optimization"
+              alt="Web design and conversion optimization — article hero image"
               className="w-full h-full object-cover"
+              fetchPriority="high"
+              decoding="async"
             />
           </div>
 

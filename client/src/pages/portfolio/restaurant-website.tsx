@@ -82,10 +82,12 @@ export default function RestaurantWebsite() {
 
           {/* Featured Image */}
           <div className="w-full h-96 rounded-2xl overflow-hidden mb-12 shadow-2xl">
-            <img 
+            <img
               src="https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600"
-              alt="Restaurant Website"
+              alt="Restaurant web design case study — project hero"
               className="w-full h-full object-cover"
+              fetchPriority="high"
+              decoding="async"
             />
           </div>
 

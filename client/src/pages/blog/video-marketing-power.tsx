@@ -62,8 +62,10 @@ export default function VideoMarketingPower() {
           <div className="w-full h-80 rounded-2xl overflow-hidden mb-8 relative">
             <img 
               src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600"
-              alt="Video Marketing Power"
+              alt="Video marketing and AI multimedia production — article hero image"
               className="w-full h-full object-cover"
+              fetchPriority="high"
+              decoding="async"
             />
             <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
               <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">

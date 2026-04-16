@@ -75,7 +75,13 @@ export default function Footer() {
                   className="block w-fit rounded-sm outline-offset-4 transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white/40"
                   aria-label={tSpec.nav.home}
                 >
-                  <img src={logoImage} alt="AGR Multimedia" className="h-10 w-auto md:h-11" />
+                  <img
+                    src={logoImage}
+                    alt="AGR Multimedia"
+                    className="h-10 w-auto md:h-11"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </button>
               ) : (
                 <Link
@@ -83,7 +89,13 @@ export default function Footer() {
                   className="inline-block w-fit rounded-sm outline-offset-4 transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white/40"
                   aria-label={tSpec.nav.home}
                 >
-                  <img src={logoImage} alt="AGR Multimedia" className="h-10 w-auto md:h-11" />
+                  <img
+                    src={logoImage}
+                    alt="AGR Multimedia"
+                    className="h-10 w-auto md:h-11"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </Link>
               )}
             </div>

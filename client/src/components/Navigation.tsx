@@ -47,11 +47,23 @@ export default function Navigation() {
                 data-testid="logo-button"
                 aria-label={tSpec.nav.home}
               >
-                <img src={logoImage} alt="AGR Multimedia" className="h-7 md:h-8 w-auto" />
+                <img
+                  src={logoImage}
+                  alt="AGR Multimedia"
+                  className="h-7 md:h-8 w-auto"
+                  fetchPriority="high"
+                  decoding="async"
+                />
               </button>
             ) : (
               <Link href="/#hero-h1" className="flex items-center" data-testid="logo-button">
-                <img src={logoImage} alt="AGR Multimedia" className="h-7 md:h-8 w-auto" />
+                <img
+                  src={logoImage}
+                  alt="AGR Multimedia"
+                  className="h-7 md:h-8 w-auto"
+                  fetchPriority="high"
+                  decoding="async"
+                />
               </Link>
             )}
           </div>

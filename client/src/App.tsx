@@ -1,48 +1,49 @@
+import { Suspense, lazy, useEffect } from "react";
 import { Switch, Route } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { useEffect } from "react";
 import { initGA } from "./lib/analytics";
 import { useAnalytics } from "./hooks/use-analytics";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import { ErrorBoundary } from "./components/ErrorBoundary";
 import MetaSEO from "./components/MetaSEO";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
-import Home from "@/pages/home";
-import ServicesPage from "@/pages/ServicesPage";
-import AboutPage from "@/pages/AboutPage";
-import ContactPage from "@/pages/ContactPage";
-import PortfolioPage from "@/pages/PortfolioPage";
-import BlogIndexPage from "@/pages/BlogIndexPage";
-import WebDesign from "@/pages/web-design";
-import GraphicDesign from "@/pages/graphic-design";
-import DigitalMarketing from "@/pages/digital-marketing";
-import AIContentCreation from "@/pages/ai-content-creation";
-import ApplicationDesignDevelopment from "@/pages/application-design-development";
-import Photography from "@/pages/photography";
-import Consulting from "@/pages/consulting";
-import Impresum from "@/pages/impresum";
-import DigitalMarketingTrends2024 from "@/pages/blog/digital-marketing-trends-2024";
-import WebsiteConversionOptimization from "@/pages/blog/website-conversion-optimization";
-import VideoMarketingPower from "@/pages/blog/video-marketing-power";
-import FoodTruckWeb500 from "@/pages/blog/food-truck-web-500";
-import EcommerceSite from "@/pages/portfolio/ecommerce-site";
-import RestaurantWebsite from "@/pages/portfolio/restaurant-website";
-import BrandIdentity from "@/pages/portfolio/brand-identity";
-import CorporateVideo from "@/pages/portfolio/corporate-video";
-import ProductPhotography from "@/pages/portfolio/product-photography";
-import PackagingDesign from "@/pages/portfolio/packaging-design";
-import Privacy from "@/pages/privacy";
-import Terms from "@/pages/terms";
-import Cookies from "@/pages/cookies";
-import NotFound from "@/pages/not-found";
+import PageLoadingFallback from "@/components/PageLoadingFallback";
+
+const Home = lazy(() => import("@/pages/home"));
+const ServicesPage = lazy(() => import("@/pages/ServicesPage"));
+const AboutPage = lazy(() => import("@/pages/AboutPage"));
+const ContactPage = lazy(() => import("@/pages/ContactPage"));
+const PortfolioPage = lazy(() => import("@/pages/PortfolioPage"));
+const BlogIndexPage = lazy(() => import("@/pages/BlogIndexPage"));
+const WebDesign = lazy(() => import("@/pages/web-design"));
+const GraphicDesign = lazy(() => import("@/pages/graphic-design"));
+const DigitalMarketing = lazy(() => import("@/pages/digital-marketing"));
+const AIContentCreation = lazy(() => import("@/pages/ai-content-creation"));
+const ApplicationDesignDevelopment = lazy(() => import("@/pages/application-design-development"));
+const Photography = lazy(() => import("@/pages/photography"));
+const Consulting = lazy(() => import("@/pages/consulting"));
+const Impresum = lazy(() => import("@/pages/impresum"));
+const DigitalMarketingTrends2024 = lazy(() => import("@/pages/blog/digital-marketing-trends-2024"));
+const WebsiteConversionOptimization = lazy(() => import("@/pages/blog/website-conversion-optimization"));
+const VideoMarketingPower = lazy(() => import("@/pages/blog/video-marketing-power"));
+const FoodTruckWeb500 = lazy(() => import("@/pages/blog/food-truck-web-500"));
+const EcommerceSite = lazy(() => import("@/pages/portfolio/ecommerce-site"));
+const RestaurantWebsite = lazy(() => import("@/pages/portfolio/restaurant-website"));
+const BrandIdentity = lazy(() => import("@/pages/portfolio/brand-identity"));
+const CorporateVideo = lazy(() => import("@/pages/portfolio/corporate-video"));
+const ProductPhotography = lazy(() => import("@/pages/portfolio/product-photography"));
+const PackagingDesign = lazy(() => import("@/pages/portfolio/packaging-design"));
+const Privacy = lazy(() => import("@/pages/privacy"));
+const Terms = lazy(() => import("@/pages/terms"));
+const Cookies = lazy(() => import("@/pages/cookies"));
+const NotFound = lazy(() => import("@/pages/not-found"));
 
 function Router() {
-  // Track page views when routes change
   useAnalytics();
-  
+
   return (
     <Switch>
       <Route path="/" component={Home} />
@@ -78,13 +79,18 @@ function Router() {
 }
 
 function App() {
-  // Initialize Google Analytics when app loads
   useEffect(() => {
-    // Verify required environment variable is present
-    if (!import.meta.env.VITE_GA_MEASUREMENT_ID) {
-      console.warn('Missing required Google Analytics key: VITE_GA_MEASUREMENT_ID');
-    } else {
+    const loadGa = () => {
+      if (!import.meta.env.VITE_GA_MEASUREMENT_ID) {
+        console.warn("Missing required Google Analytics key: VITE_GA_MEASUREMENT_ID");
+        return;
+      }
       initGA();
+    };
+    if (typeof window !== "undefined" && "requestIdleCallback" in window) {
+      window.requestIdleCallback(loadGa, { timeout: 4500 });
+    } else {
+      window.setTimeout(loadGa, 2000);
     }
   }, []);
 
@@ -97,7 +103,9 @@ function App() {
               <TooltipProvider>
                 <div className="min-h-screen w-full max-w-[100vw] overflow-x-hidden">
                   <MetaSEO />
-                  <Router />
+                  <Suspense fallback={<PageLoadingFallback />}>
+                    <Router />
+                  </Suspense>
                   <WhatsAppFloat />
                 </div>
                 <Toaster />

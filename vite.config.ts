@@ -17,6 +17,20 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (!id.includes("node_modules")) return;
+          if (/node_modules\/(react\/|react-dom\/|scheduler\/)/.test(id)) {
+            return "react-vendor";
+          }
+          if (id.includes("@tanstack/react-query")) return "query";
+          if (id.includes("wouter")) return "wouter";
+          if (id.includes("gsap")) return "gsap";
+          if (id.includes("lucide-react")) return "lucide";
+        },
+      },
+    },
   },
   server: {
     fs: {

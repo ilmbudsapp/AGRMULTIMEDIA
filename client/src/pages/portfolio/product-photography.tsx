@@ -78,10 +78,12 @@ export default function ProductPhotography() {
 
           {/* Featured Image */}
           <div className="w-full h-96 rounded-2xl overflow-hidden mb-12 shadow-2xl">
-            <img 
+            <img
               src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600"
-              alt="Product Photography Studio"
+              alt="Product photography studio case study — project hero"
               className="w-full h-full object-cover"
+              fetchPriority="high"
+              decoding="async"
             />
           </div>
 
@@ -367,6 +369,8 @@ export default function ProductPhotography() {
                   src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600"
                   alt="Watch Product Photography"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div className="h-80 rounded-xl overflow-hidden shadow-lg">
@@ -374,6 +378,8 @@ export default function ProductPhotography() {
                   src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600"
                   alt="Headphones Product Photography"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div className="h-80 rounded-xl overflow-hidden shadow-lg">
@@ -381,6 +387,8 @@ export default function ProductPhotography() {
                   src="https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600"
                   alt="Perfume Product Photography"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>
