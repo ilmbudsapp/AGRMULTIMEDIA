@@ -2,6 +2,10 @@ import { useEffect } from "react";
 import ServicePageTemplate from "@/components/ServicePageTemplate";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { buildSubsections, getServiceTemplateLabels, toServiceLang, type ServiceLang } from "@/lib/servicePageI18n";
+import {
+  fixbikeBusinessWebsiteIntroByLang,
+  fixbikeWebDesignGalleryByLang,
+} from "@/data/fixbikeWebDesignGallery";
 
 type WebContent = {
   eyebrow: string;
@@ -43,8 +47,8 @@ const webByLang: Record<ServiceLang, WebContent> = {
       { id: "fast-loading-setup", h3: "Fast-Loading Website Setup" },
       { id: "local-seo", h3: "Local SEO Services for Businesses in Germany" },
     ],
-    selectedWorkTitle: "Selected Work Placeholder",
-    selectedWorkIntro: "Reserved for future web and SEO case examples.",
+    selectedWorkTitle: "More selected work",
+    selectedWorkIntro: "Room for additional client websites and SEO case studies beyond the examples in the categories above.",
     toolsTitle: "Tools / Software I Use",
     tools: ["Figma", "React + Vite", "Google Search Console", "On-page SEO audit tools", "Lighthouse and performance tools"],
     whyChooseTitle: "Why Choose This Service",
@@ -79,8 +83,8 @@ const webByLang: Record<ServiceLang, WebContent> = {
       { id: "fast-loading-setup", h3: "Fast-Loading Website Setup" },
       { id: "local-seo", h3: "Local SEO Services für Businesses in Deutschland" },
     ],
-    selectedWorkTitle: "Platzhalter für ausgewählte Arbeiten",
-    selectedWorkIntro: "Reserviert für zukünftige Web- und SEO-Fallbeispiele.",
+    selectedWorkTitle: "Weitere ausgewählte Arbeiten",
+    selectedWorkIntro: "Platz für zusätzliche Kundenwebsites und SEO-Fallstudien jenseits der Beispiele in den Kategorien oben.",
     toolsTitle: "Tools / Software, die ich nutze",
     tools: ["Figma", "React + Vite", "Google Search Console", "On-page SEO Audit Tools", "Lighthouse"],
     whyChooseTitle: "Warum diese Leistung wählen",
@@ -115,8 +119,8 @@ const webByLang: Record<ServiceLang, WebContent> = {
       { id: "fast-loading-setup", h3: "Fast-Loading Website Setup" },
       { id: "local-seo", h3: "Local SEO Services for Businesses in Germany" },
     ],
-    selectedWorkTitle: "Placeholder lavori selezionati",
-    selectedWorkIntro: "Riservato a futuri case web e SEO.",
+    selectedWorkTitle: "Altri lavori selezionati",
+    selectedWorkIntro: "Spazio per ulteriori siti clienti e casi SEO oltre agli esempi nelle categorie sopra.",
     toolsTitle: "Tools / Software che uso",
     tools: ["Figma", "React + Vite", "Google Search Console", "Tool audit SEO on-page", "Lighthouse"],
     whyChooseTitle: "Perché scegliere questo servizio",
@@ -151,8 +155,8 @@ const webByLang: Record<ServiceLang, WebContent> = {
       { id: "fast-loading-setup", h3: "Fast-Loading Website Setup" },
       { id: "local-seo", h3: "Local SEO Services for Businesses in Germany" },
     ],
-    selectedWorkTitle: "Placeholder za odabrane radove",
-    selectedWorkIntro: "Rezervisano za buduće web i SEO primere.",
+    selectedWorkTitle: "Još odabranih radova",
+    selectedWorkIntro: "Prostor za dodatne klijentske sajtove i SEO studije slučaja pored primera u kategorijama iznad.",
     toolsTitle: "Alati / softver koji koristim",
     tools: ["Figma", "React + Vite", "Google Search Console", "On-page SEO audit alati", "Lighthouse"],
     whyChooseTitle: "Zašto izabrati ovu uslugu",
@@ -187,8 +191,8 @@ const webByLang: Record<ServiceLang, WebContent> = {
       { id: "fast-loading-setup", h3: "Fast-Loading Website Setup" },
       { id: "local-seo", h3: "Local SEO Services for Businesses in Germany" },
     ],
-    selectedWorkTitle: "Placeholder për punë të zgjedhura",
-    selectedWorkIntro: "I rezervuar për shembuj të ardhshëm web dhe SEO.",
+    selectedWorkTitle: "Më shumë punë të zgjedhura",
+    selectedWorkIntro: "Hapësirë për faqe të tjera klientësh dhe studime SEO përtej shembujve në kategoritë më sipër.",
     toolsTitle: "Tools / Software që përdor",
     tools: ["Figma", "React + Vite", "Google Search Console", "Mjete auditimi SEO on-page", "Lighthouse"],
     whyChooseTitle: "Pse të zgjidhni këtë shërbim",
@@ -210,6 +214,16 @@ export default function WebDesign() {
   const lang = toServiceLang(currentLanguage);
   const copy = webByLang[lang];
 
+  const subsections = buildSubsections(lang, copy.subsectionTitles).map((sub) =>
+    sub.id === "business-website-design"
+      ? {
+          ...sub,
+          intro: fixbikeBusinessWebsiteIntroByLang[lang],
+          workGallery: fixbikeWebDesignGalleryByLang[lang],
+        }
+      : sub,
+  );
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -222,7 +236,7 @@ export default function WebDesign() {
       intro={copy.intro}
       whatIoffer={copy.whatIoffer}
       serviceCategoriesTitle={copy.serviceCategoriesTitle}
-      subsections={buildSubsections(lang, copy.subsectionTitles)}
+      subsections={subsections}
       selectedWorkTitle={copy.selectedWorkTitle}
       selectedWorkIntro={copy.selectedWorkIntro}
       toolsTitle={copy.toolsTitle}
