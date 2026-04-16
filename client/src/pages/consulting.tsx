@@ -56,9 +56,9 @@ export default function Consulting() {
               </Button>
             </Link>
             <div>
-              <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
+              <p className="text-2xl font-bold text-gray-900 dark:text-white">
                 {t.consulting?.hero?.title || "Konsalting & Strategijsko Savetovanje"}
-              </h1>
+              </p>
               <p className="text-sm text-gray-600 dark:text-gray-400">
                 {t.consulting?.hero?.subtitle || "Ekspertsko savetovanje za digitalni uspeh"}
               </p>
@@ -93,7 +93,7 @@ export default function Consulting() {
             <div className="relative">
               <img 
                 src={consultingImage} 
-                alt="Digital Consulting Workspace"
+                alt="Digital strategy and marketing consulting workspace — AGR Multimedia Geislingen"
                 className="rounded-2xl shadow-2xl w-full h-auto object-contain"
                 data-testid="consulting-hero-image"
               />

@@ -33,13 +33,13 @@ export default function PackagingDesign() {
               </Button>
             </Link>
             <div>
-              <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
+              <p className="text-2xl font-bold text-gray-900 dark:text-white">
                 {currentLanguage === 'sr' ? 'Packaging Dizajn' : 
                  currentLanguage === 'en' ? 'Packaging Design' :
                  currentLanguage === 'de' ? 'Verpackungsdesign' : 
                  currentLanguage === 'sq' ? 'Dizajni i Paketimit' :
                  'Packaging Dizajn'}
-              </h1>
+              </p>
               <p className="text-sm text-gray-600 dark:text-gray-400">
                 {currentLanguage === 'sr' ? 'Kreativna ambalažna rešenja' : 
                  currentLanguage === 'en' ? 'Creative packaging solutions' :
@@ -92,13 +92,13 @@ export default function PackagingDesign() {
           {/* Project Overview */}
           <div className="grid lg:grid-cols-3 gap-12 mb-16">
             <div className="lg:col-span-2">
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+              <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
                 {currentLanguage === 'sr' ? 'Kreativni Packaging Dizajn koji Privlači Pažnju' : 
                  currentLanguage === 'en' ? 'Creative Packaging Design that Attracts Attention' :
                  currentLanguage === 'de' ? 'Kreatives Verpackungsdesign, das Aufmerksamkeit erregt' : 
                  currentLanguage === 'sq' ? 'Dizajn Kreativ Paketimi që Tërheq Vëmendjen' :
                  'Kreativni Packaging Dizajn koji Privlači Pažnju'}
-              </h2>
+              </h1>
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
                 {currentLanguage === 'sr' ? 'Kreiram inovativna ambalažna rešenja koja ne samo što štite proizvod, već i pričaju priču vašeg brenda. Od luksuznih kutija za sminku do elegantnih flašica za parfem, svaki dizajn je pažljivo osmišljen da maksimizuje vizuelni uticaj i poboljša korisničko iskustvo.' : 
                  currentLanguage === 'en' ? 'I create innovative packaging solutions that not only protect the product, but also tell your brand story. From luxury makeup boxes to elegant perfume bottles, each design is carefully crafted to maximize visual impact and improve user experience.' :

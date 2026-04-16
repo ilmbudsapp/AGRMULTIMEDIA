@@ -4,6 +4,7 @@ import { Facebook, Instagram, Linkedin, MessageCircle, Mail as MailIcon } from "
 import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_LINK } from "@/lib/contact";
 import { toServiceLang, type ServiceLang } from "@/lib/servicePageI18n";
 import FooterLegalBlock from "@/components/FooterLegalBlock";
+import logoImage from "@assets/MULTIMEDIA AGRONDESIGN LOGO IN BIANCO_1755555880911.png";
 
 const FACEBOOK_URL = "https://www.facebook.com/halidosmani74";
 const INSTAGRAM_URL = "https://www.instagram.com/agrondesign/";
@@ -66,7 +67,26 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div data-testid="footer-brand">
-            <div className="text-xl font-bold text-white mb-4">AGR Multimedia</div>
+            <div className="mb-4">
+              {isHome ? (
+                <button
+                  type="button"
+                  onClick={() => scrollToSection("hero-h1")}
+                  className="block w-fit rounded-sm outline-offset-4 transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white/40"
+                  aria-label={tSpec.nav.home}
+                >
+                  <img src={logoImage} alt="AGR Multimedia" className="h-10 w-auto md:h-11" />
+                </button>
+              ) : (
+                <Link
+                  href="/#hero-h1"
+                  className="inline-block w-fit rounded-sm outline-offset-4 transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white/40"
+                  aria-label={tSpec.nav.home}
+                >
+                  <img src={logoImage} alt="AGR Multimedia" className="h-10 w-auto md:h-11" />
+                </Link>
+              )}
+            </div>
             <p className="text-gray-400 mb-6 text-sm">{t.footer.brand}</p>
             <div className="flex flex-wrap gap-3">
               <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2" aria-label="Facebook">

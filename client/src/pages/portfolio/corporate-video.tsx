@@ -33,13 +33,13 @@ export default function CorporateVideo() {
               </Button>
             </Link>
             <div>
-              <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
+              <p className="text-2xl font-bold text-gray-900 dark:text-white">
                 {currentLanguage === 'sr' ? 'Korporativni Video' : 
                  currentLanguage === 'en' ? 'Corporate Video' :
                  currentLanguage === 'de' ? 'Unternehmensvideo' : 
                  currentLanguage === 'sq' ? 'Video Korporativ' :
                  'Korporativni Video'}
-              </h1>
+              </p>
               <p className="text-sm text-gray-600 dark:text-gray-400">
                 {currentLanguage === 'sr' ? 'Predstavljanje kompanije kroz video' : 
                  currentLanguage === 'en' ? 'Presenting company through video' :
@@ -97,13 +97,13 @@ export default function CorporateVideo() {
           {/* Project Overview */}
           <div className="grid lg:grid-cols-3 gap-12 mb-16">
             <div className="lg:col-span-2">
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+              <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
                 {currentLanguage === 'sr' ? 'Profesionalna Korporativna Video Produkcija' : 
                  currentLanguage === 'en' ? 'Professional Corporate Video Production' :
                  currentLanguage === 'de' ? 'Professionelle Unternehmensvideoproduktion' : 
                  currentLanguage === 'sq' ? 'Prodhimi Profesional i Videos Korporative' :
                  'Profesionalna Korporativna Video Produkcija'}
-              </h2>
+              </h1>
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
                 {currentLanguage === 'sr' ? 'Kreiram korporativne video materijale koji efikasno prenose vrednosti, viziju i misiju vaše kompanije. Kombinujem profesionalnu produkciju sa naprednim editovanjem u Adobe Premiere Pro i After Effects za kreiranje video sadržaja koji angažuje publiku i gradi poverenje.' : 
                  currentLanguage === 'en' ? 'I create corporate video materials that effectively convey your company\'s values, vision and mission. I combine professional production with advanced editing in Adobe Premiere Pro and After Effects to create video content that engages audiences and builds trust.' :

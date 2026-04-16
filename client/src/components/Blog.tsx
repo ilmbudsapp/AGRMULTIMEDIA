@@ -2,16 +2,31 @@ import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Link } from "wouter";
 
-export default function Blog() {
+type BlogProps = { asPage?: boolean };
+
+type BlogPostCard = {
+  id: number;
+  slug: string;
+  title: string;
+  description: string;
+  image: string;
+  imageAlt?: string;
+  category: string;
+  date: string;
+  categoryColor: string;
+};
+
+export default function Blog({ asPage = false }: BlogProps) {
   const { t } = useLanguage();
   
-  const blogPosts = [
+  const blogPosts: BlogPostCard[] = [
     {
       id: 1,
       slug: "digital-marketing-trends-2024",
       title: t.blog.posts.trends.title,
       description: t.blog.posts.trends.description,
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
+      imageAlt: "Digital marketing analytics workspace — blog cover",
       category: t.blog.posts.trends.category,
       date: "07.03.2026",
       categoryColor: "bg-electric-blue"
@@ -22,6 +37,7 @@ export default function Blog() {
       title: t.blog.posts.conversion.title,
       description: t.blog.posts.conversion.description,
       image: "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
+      imageAlt: "UX and web design conversion optimization — blog cover",
       category: t.blog.posts.conversion.category,
       date: "07.03.2026",
       categoryColor: "bg-purple-500"
@@ -32,6 +48,7 @@ export default function Blog() {
       title: t.blog.posts.video.title,
       description: t.blog.posts.video.description,
       image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
+      imageAlt: "Video marketing and AI multimedia production — blog cover",
       category: t.blog.posts.video.category,
       date: "07.03.2026",
       categoryColor: "bg-red-500"
@@ -42,6 +59,7 @@ export default function Blog() {
       title: t.blog.posts.foodTruck.title,
       description: t.blog.posts.foodTruck.description,
       image: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
+      imageAlt: "Food truck business and local web design Geislingen — blog cover",
       category: t.blog.posts.foodTruck.category,
       date: "07.03.2026",
       categoryColor: "bg-green-500"
@@ -53,7 +71,15 @@ export default function Blog() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <p className="text-electric-blue font-semibold text-sm uppercase tracking-[0.2em] mb-3">{t.nav.blog}</p>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-navy mb-4 tracking-tight" data-testid="blog-title">{t.blog.title}</h2>
+          {asPage ? (
+            <h1 className="text-4xl md:text-5xl font-extrabold text-navy mb-4 tracking-tight" data-testid="blog-title">
+              {t.blog.title}
+            </h1>
+          ) : (
+            <h2 className="text-4xl md:text-5xl font-extrabold text-navy mb-4 tracking-tight" data-testid="blog-title">
+              {t.blog.title}
+            </h2>
+          )}
           <p className="text-xl text-gray-600 max-w-3xl mx-auto" data-testid="blog-subtitle">
             {t.blog.subtitle}
           </p>
@@ -68,7 +94,7 @@ export default function Blog() {
             >
               <img 
                 src={post.image} 
-                alt={post.title} 
+                alt={post.imageAlt ?? post.title} 
                 loading="lazy"
                 decoding="async"
                 className="w-full h-48 object-cover"
@@ -103,10 +129,12 @@ export default function Blog() {
                 </p>
                 <Link href={`/blog/${post.slug}`}>
                   <button 
+                    type="button"
                     className="inline-flex items-center text-electric-blue font-semibold hover:text-purple-500 transition-colors duration-300"
                     data-testid={`blog-post-cta-${post.id}`}
+                    aria-label={`${t.blog.readMore}: ${post.title}`}
                   >
-                    {t.blog.readMore} <ArrowRight className="w-4 h-4 ml-2" />
+                    {t.blog.readMore} <ArrowRight className="w-4 h-4 ml-2" aria-hidden />
                   </button>
                 </Link>
               </div>

@@ -33,13 +33,13 @@ export default function RestaurantWebsite() {
               </Button>
             </Link>
             <div>
-              <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
+              <p className="text-2xl font-bold text-gray-900 dark:text-white">
                 {currentLanguage === 'sr' ? 'Restoran Website' : 
                  currentLanguage === 'en' ? 'Restaurant Website' :
                  currentLanguage === 'de' ? 'Restaurant-Website' : 
                  currentLanguage === 'sq' ? 'Faqja e Restorantit' :
                  'Restoran Website'}
-              </h1>
+              </p>
               <p className="text-sm text-gray-600 dark:text-gray-400">
                 {currentLanguage === 'sr' ? 'Elegantno online prisustvo' : 
                  currentLanguage === 'en' ? 'Elegant online presence' :
@@ -92,13 +92,13 @@ export default function RestaurantWebsite() {
           {/* Project Overview */}
           <div className="grid lg:grid-cols-3 gap-12 mb-16">
             <div className="lg:col-span-2">
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+              <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
                 {currentLanguage === 'sr' ? 'Moderni Website za Restorane i Ugostiteljske Objekte' : 
                  currentLanguage === 'en' ? 'Modern Websites for Restaurants and Hospitality' :
                  currentLanguage === 'de' ? 'Moderne Websites für Restaurants und Gastronomie' : 
                  currentLanguage === 'sq' ? 'Faqe të Reja për Restorante dhe Hoteleri' :
                  'Moderni Website za Restorane i Ugostiteljske Objekte'}
-              </h2>
+              </h1>
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
                 {currentLanguage === 'sr' ? 'Kreiram elegantne web sajtove za restorane koji prikazuju atmosferu, jelovnik i omogućavaju lakše rezervacije. Kombinujem vizuelno atraktivan dizajn sa funkcionalnostima koje povećavaju broj gostiju i poboljšavaju korisničko iskustvo.' : 
                  currentLanguage === 'en' ? 'I create elegant restaurant websites that showcase atmosphere, menus, and enable easy reservations. I combine visually attractive design with features that increase guest numbers and improve user experience.' :

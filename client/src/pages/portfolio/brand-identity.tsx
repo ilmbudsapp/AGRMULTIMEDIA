@@ -33,13 +33,13 @@ export default function BrandIdentity() {
               </Button>
             </Link>
             <div>
-              <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
+              <p className="text-2xl font-bold text-gray-900 dark:text-white">
                 {currentLanguage === 'sr' ? 'Brend Identitet' : 
                  currentLanguage === 'en' ? 'Brand Identity' :
                  currentLanguage === 'de' ? 'Markenidentität' : 
                  currentLanguage === 'sq' ? 'Identiteti i Markës' :
                  'Brend Identitet'}
-              </h1>
+              </p>
               <p className="text-sm text-gray-600 dark:text-gray-400">
                 {currentLanguage === 'sr' ? 'Kompletan vizuelni identitet za startup' : 
                  currentLanguage === 'en' ? 'Complete visual identity for startup' :
@@ -92,13 +92,13 @@ export default function BrandIdentity() {
           {/* Project Overview */}
           <div className="grid lg:grid-cols-3 gap-12 mb-16">
             <div className="lg:col-span-2">
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+              <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
                 {currentLanguage === 'sr' ? 'Kreiranje Kompletnog Brendovskog Identiteta' : 
                  currentLanguage === 'en' ? 'Creating Complete Brand Identity' :
                  currentLanguage === 'de' ? 'Vollständige Markenidentität erstellen' : 
                  currentLanguage === 'sq' ? 'Krijimi i identitetit të plotë të markës' :
                  'Kreiranje Kompletnog Brendovskog Identiteta'}
-              </h2>
+              </h1>
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
                 {currentLanguage === 'sr' ? 'Razvijam jedinstvene vizuelne identitete koji odražavaju vrednosti, misiju i viziju vašeg brenda. Od logo dizajna do kompletnog brend bukova, kreiram koherentan identitet koji se izdvaja na tržištu i ostaje u sećanju korisnika.' : 
                  currentLanguage === 'en' ? 'I develop unique visual identities that reflect your brand\'s values, mission and vision. From logo design to complete brand books, I create coherent identity that stands out in the market and stays in users\' memory.' :

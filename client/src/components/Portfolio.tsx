@@ -10,9 +10,9 @@ import posterKong from "@assets/KING KONG_1755565210288.jpg";
 import powerFit from "@assets/generated_images/PowerFit_Pro_Brand_Identity_3cf59135.png";
 import printMockup from "@assets/generated_images/Print_Materials_Mockup_f741f1f6.png";
 
-type PortfolioProps = { featured?: boolean };
+type PortfolioProps = { featured?: boolean; asPage?: boolean };
 
-export default function Portfolio({ featured = false }: PortfolioProps) {
+export default function Portfolio({ featured = false, asPage = false }: PortfolioProps) {
   const { t, tSpec } = useLanguage();
   const [activeFilter, setActiveFilter] = useState('all');
 
@@ -59,9 +59,15 @@ export default function Portfolio({ featured = false }: PortfolioProps) {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`${featured ? "mb-12 md:mb-14 text-left max-w-2xl" : "text-center mb-16"}`}>
           <p className="text-xs font-medium uppercase tracking-[0.2em] text-white/40 mb-3">{tSpec.nav.portfolio}</p>
-          <h2 className="text-3xl md:text-4xl font-semibold text-white tracking-tight" data-testid="portfolio-title">
-            {tSpec.featuredPortfolio.heading}
-          </h2>
+          {asPage ? (
+            <h1 className="text-3xl md:text-4xl font-semibold text-white tracking-tight" data-testid="portfolio-title">
+              {tSpec.featuredPortfolio.heading}
+            </h1>
+          ) : (
+            <h2 className="text-3xl md:text-4xl font-semibold text-white tracking-tight" data-testid="portfolio-title">
+              {tSpec.featuredPortfolio.heading}
+            </h2>
+          )}
           <p className={`text-white/55 text-sm md:text-base leading-relaxed ${featured ? "mt-3" : "mt-4 text-gray-400 max-w-3xl mx-auto"}`}>
             {featured ? tSpec.featuredPortfolio.featuredIntro : t.portfolio.subtitle}
           </p>

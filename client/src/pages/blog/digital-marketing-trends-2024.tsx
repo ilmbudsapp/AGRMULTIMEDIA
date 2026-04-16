@@ -29,9 +29,9 @@ export default function DigitalMarketingTrends2024() {
               </Button>
             </Link>
             <div>
-              <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
+              <p className="text-2xl font-bold text-gray-900 dark:text-white">
                 {t.blogPost?.trends?.title || "Digital Marketing Trends 2024"}
-              </h1>
+              </p>
               <p className="text-sm text-gray-600 dark:text-gray-400">
                 {t.blogPost?.trends?.subtitle || "Stay ahead with the latest trends"}
               </p>

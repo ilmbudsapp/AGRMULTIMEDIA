@@ -29,9 +29,9 @@ export default function VideoMarketingPower() {
               </Button>
             </Link>
             <div>
-              <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
+              <p className="text-2xl font-bold text-gray-900 dark:text-white">
                 {t.blogPost?.video?.title || "The Power of Video Marketing"}
-              </h1>
+              </p>
               <p className="text-sm text-gray-600 dark:text-gray-400">
                 {t.blogPost?.video?.subtitle || "Engage audiences with visual storytelling"}
               </p>

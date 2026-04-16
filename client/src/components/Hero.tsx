@@ -39,7 +39,8 @@ export default function Hero() {
       <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-10 px-4 sm:gap-12 sm:px-6 lg:grid-cols-2 lg:gap-14 lg:px-8">
         <div className="order-1 text-center lg:order-none lg:text-left">
           <h1
-            className="text-[1.65rem] font-semibold leading-[1.15] tracking-tight text-neutral-900 sm:text-3xl md:text-[2.15rem] lg:text-[2.35rem]"
+            id="hero-h1"
+            className="scroll-mt-24 text-[1.65rem] font-semibold leading-[1.15] tracking-tight text-neutral-900 sm:text-3xl md:text-[2.15rem] lg:text-[2.35rem]"
             data-testid="hero-title"
           >
             {tSpec.hero.h1}

@@ -69,9 +69,9 @@ export default function Photography() {
               </Button>
             </Link>
             <div>
-              <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
+              <p className="text-2xl font-bold text-gray-900 dark:text-white">
                 {t.photography?.hero?.title || "Fotografija i Photomontaža"}
-              </h1>
+              </p>
               <p className="text-sm text-gray-600 dark:text-gray-400">
                 {t.photography?.hero?.subtitle || "Kreativna fotografija i digitalna umetnost"}
               </p>

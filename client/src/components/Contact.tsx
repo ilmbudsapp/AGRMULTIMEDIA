@@ -18,7 +18,12 @@ const EMAIL_LINK = "mailto:agron6922@gmail.com";
 
 type SubmitState = "idle" | "loading" | "success" | "error";
 
-export default function Contact() {
+type ContactProps = {
+  /** When true (dedicated /contact route), main heading is H1; on home, H2 under hero H1. */
+  asPage?: boolean;
+};
+
+export default function Contact({ asPage = false }: ContactProps) {
   const { t, currentLanguage } = useLanguage();
   const sectionRef = useRef<HTMLElement>(null);
   const mapsLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(t.contact.info.location)}`;
@@ -105,12 +110,21 @@ export default function Contact() {
         <p className="contact-reveal text-violet-400 font-semibold text-sm uppercase tracking-[0.2em] mb-3">
           {t.nav.contact}
         </p>
-        <h2
-          className="contact-reveal text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-tight"
-          data-testid="contact-title"
-        >
-          {t.contact.title}
-        </h2>
+        {asPage ? (
+          <h1
+            className="contact-reveal text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-tight"
+            data-testid="contact-title"
+          >
+            {t.contact.title}
+          </h1>
+        ) : (
+          <h2
+            className="contact-reveal text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-tight"
+            data-testid="contact-title"
+          >
+            {t.contact.title}
+          </h2>
+        )}
         <p
           className="contact-reveal text-xl text-gray-300 mb-8"
           data-testid="contact-subtitle"

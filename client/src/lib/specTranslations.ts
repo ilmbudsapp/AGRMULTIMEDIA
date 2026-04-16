@@ -121,6 +121,8 @@ export interface SpecTranslations {
   };
   // About page
   aboutPage: {
+    /** Single visible H1 for the About route */
+    pageH1: string;
     intro: string;
     skillsTitle: string;
     tools: string[];
@@ -155,19 +157,19 @@ const en: SpecTranslations = {
     moreAbout: 'Full profile & background',
   },
   hero: {
-    h1: 'Web design, branding & SEO for businesses that value clarity',
+    h1: 'Web design, AI multimedia & digital marketing — Geislingen studio, worldwide clients',
     subheadline:
-      'Websites, identity systems, AI-assisted video, and search optimisation—delivered with a calm, professional process.',
+      'Websites, branding, AI-assisted content, and SEO—delivered with a clear process from Geislingen an der Steige.',
     ctaPrimary: 'Get a quote',
     ctaSecondary: 'Selected work',
     availableIn: 'DE · EN · IT · SR · AL',
   },
   seo: {
-    title: "AGR Multimedia | Web Design, Graphics & AI for Small Businesses",
+    title: "AGR Multimedia Geislingen | Web Design, AI Multimedia & Digital Marketing",
     description:
-      "Professional websites, graphic design, video & AI content for small businesses. Free consultation! agron6922@gmail.com",
+      "Web design, AI multimedia, graphic design & SEO for small businesses — studio in Geislingen an der Steige, Germany. Free consultation: agron6922@gmail.com",
     keywords:
-      "web design, graphic design, ai content, digital marketing for small businesses, website creation, agr multimedia",
+      "web design Geislingen, AI multimedia, digital marketing, SEO, graphic design, small business website, AGR Multimedia",
   },
   heroProjects: {
     heading: 'Featured projects',
@@ -306,6 +308,7 @@ const en: SpecTranslations = {
     cta: "Not sure which package fits your project? Send me a short message and I'll help you choose the right setup.",
   },
   aboutPage: {
+    pageH1: "About AGR Multimedia — Web design, AI multimedia & digital marketing in Geislingen",
     intro: "I'm Agron Osmani, a freelance graphic designer, video editor and AI enthusiast based in Geislingen an der Steige. I create visuals, websites and videos that help small businesses and creators communicate clearly and look professional online.",
     skillsTitle: 'Skills & tools',
     tools: [
@@ -353,19 +356,19 @@ const de: SpecTranslations = {
     moreAbout: 'Zum vollständigen Profil',
   },
   hero: {
-    h1: 'Webdesign, Branding & SEO für klare Auftritte',
+    h1: 'Webdesign, KI-Multimedia & digitales Marketing — Studio Geislingen, Kunden weltweit',
     subheadline:
-      'Websites, visuelle Identität, KI-unterstütztes Video und Suchmaschinenoptimierung—strukturiert und ohne Schnickschnack.',
+      'Websites, Branding, KI-Inhalte und SEO—klarer Prozess aus Geislingen an der Steige.',
     ctaPrimary: 'Angebot anfragen',
     ctaSecondary: 'Ausgewählte Arbeiten',
     availableIn: 'DE · EN · IT · SR · AL',
   },
   seo: {
-    title: "AGR Multimedia | Webdesign, Grafik & KI für Kleinunternehmen",
+    title: "AGR Multimedia Geislingen | Webdesign, KI-Multimedia & digitales Marketing",
     description:
-      "Professionelle Websites, Grafikdesign, Video & KI-Content für Kleinunternehmen. Kostenlose Beratung! agron6922@gmail.com",
+      "Webdesign, KI-Multimedia, Grafikdesign & SEO für Kleinunternehmen — Studio in Geislingen an der Steige. Kostenlose Beratung: agron6922@gmail.com",
     keywords:
-      "webdesign, grafikdesign, ki inhalte, digitales marketing für kleinunternehmen, website erstellen, agr multimedia",
+      "Webdesign Geislingen, KI Multimedia, digitales Marketing, SEO, Grafikdesign, Website erstellen, AGR Multimedia",
   },
   heroProjects: {
     heading: 'Ausgewählte Projekte',
@@ -504,6 +507,7 @@ const de: SpecTranslations = {
     cta: 'Unsicher, welches Paket zu Ihrem Projekt passt? Schreiben Sie mir kurz – ich helfe bei der passenden Lösung.',
   },
   aboutPage: {
+    pageH1: "Über AGR Multimedia — Webdesign, KI-Multimedia & Marketing in Geislingen",
     intro: 'Ich bin Agron Osmani, freiberuflicher Grafikdesigner, Video-Editor und KI-Enthusiast in Geislingen an der Steige. Ich erstelle Visuals, Websites und Videos, mit denen kleine Unternehmen und Creator klar kommunizieren und online professionell auftreten.',
     skillsTitle: 'Skills & Tools',
     tools: [
@@ -551,19 +555,19 @@ const it: SpecTranslations = {
     moreAbout: 'Profilo completo',
   },
   hero: {
-    h1: 'Web design, branding e SEO per chi vuole chiarezza',
+    h1: 'Web design, AI multimedia e digital marketing — Geislingen e clienti globali',
     subheadline:
-      'Siti, identità visiva, video con supporto AI e ottimizzazione SEO—con un processo professionale e ordinato.',
+      'Siti, branding, contenuti AI e SEO—processo chiaro da Geislingen an der Steige.',
     ctaPrimary: 'Richiedi un preventivo',
     ctaSecondary: 'Lavori selezionati',
     availableIn: 'DE · EN · IT · SR · AL',
   },
   seo: {
-    title: "AGR Multimedia | Web Design, Grafica & AI per Piccole Imprese",
+    title: "AGR Multimedia Geislingen | Web Design, AI Multimedia & Digital Marketing",
     description:
-      "Siti web professionali, grafica, video e contenuti AI per piccole imprese. Consulenza gratuita! agron6922@gmail.com",
+      "Web design, AI multimedia, grafica e SEO per piccole imprese — studio a Geislingen an der Steige, Germania. Consulenza gratuita: agron6922@gmail.com",
     keywords:
-      "web design, grafica, contenuti ai, digital marketing per piccole imprese, sito web, agr multimedia",
+      "web design Geislingen, AI multimedia, digital marketing, SEO, grafica, piccole imprese, AGR Multimedia",
   },
   heroProjects: {
     heading: 'Progetti in evidenza',
@@ -702,6 +706,7 @@ const it: SpecTranslations = {
     cta: 'Non sei sicuro quale pacchetto si adatti al tuo progetto? Scrivimi e ti aiuto a scegliere la soluzione giusta.',
   },
   aboutPage: {
+    pageH1: "Chi è AGR Multimedia — Web design, AI multimedia e marketing a Geislingen",
     intro: 'Sono Agron Osmani, graphic designer, video editor e appassionato di AI con base a Geislingen an der Steige. Creo visual, siti e video che aiutano piccole imprese e creator a comunicare con chiarezza e a apparire professionali online.',
     skillsTitle: 'Competenze e strumenti',
     tools: [
@@ -749,19 +754,19 @@ const sr: SpecTranslations = {
     moreAbout: 'Kompletan profil',
   },
   hero: {
-    h1: 'Web dizajn, brending i SEO za ozbiljne brendove',
+    h1: 'Web dizajn, AI multimedija i digitalni marketing — studio Geislingen, klijenti globalno',
     subheadline:
-      'Sajtovi, vizuelni identitet, AI video i SEO—strukturisano, bez vizuelnog šuma.',
+      'Sajtovi, brending, AI sadržaj i SEO—jasan proces iz Geislingen an der Steige.',
     ctaPrimary: 'Zatraži ponudu',
     ctaSecondary: 'Izabrani radovi',
     availableIn: 'DE · EN · IT · SR · AL',
   },
   seo: {
-    title: "AGR Multimedia | Web Dizajn, Grafika & AI za Mala Preduzeća",
+    title: "AGR Multimedia Geislingen | Web dizajn, AI multimedija i digitalni marketing",
     description:
-      "Profesionalni web sajtovi, grafički dizajn, video i AI sadržaj za mala preduzeća. Besplatne konsultacije! agron6922@gmail.com",
+      "Web dizajn, AI multimedija, grafički dizajn i SEO za mala preduzeća — studio u Geislingen an der Steige, Nemačka. Besplatne konsultacije: agron6922@gmail.com",
     keywords:
-      "web dizajn, grafički dizajn, ai sadržaj, digitalni marketing za mala preduzeća, izrada web sajta, agr multimedia",
+      "web dizajn Geislingen, AI multimedija, digitalni marketing, SEO, grafički dizajn, izrada sajta, AGR Multimedia",
   },
   heroProjects: {
     heading: 'Izdvojeni projekti',
@@ -900,6 +905,7 @@ const sr: SpecTranslations = {
     cta: 'Niste sigurni koji paket je najbolji za vaš projekat? Pošaljite kratku poruku i pomoći ću vam da izaberete pravo rešenje.',
   },
   aboutPage: {
+    pageH1: "O AGR Multimedia — Web dizajn, AI multimedija i marketing u Geislingenu",
     intro: 'Ja sam Agron Osmani, slobodni grafički dizajner, video editor i entuzijasta za AI sa sedištem u Geislingen an der Steige. Kreiram vizuale, sajtove i video koji pomažu malim biznisima i kreatorima da jasno komuniciraju i izgledaju profesionalno na mreži.',
     skillsTitle: 'Veštine i alati',
     tools: [
@@ -947,19 +953,19 @@ const al: SpecTranslations = {
     moreAbout: 'Profili i plotë',
   },
   hero: {
-    h1: 'Web design, branding dhe SEO për biznese që duan qartësi',
+    h1: 'Web design, AI multimedia dhe marketing digjital — studio Geislingen, klientë globalisht',
     subheadline:
-      'Faqe interneti, identitet vizual, video me AI dhe SEO—proces i strukturuar dhe i qetë.',
+      'Faqe, branding, përmbajtje AI dhe SEO—proces i qartë nga Geislingen an der Steige.',
     ctaPrimary: 'Kërko ofertë',
     ctaSecondary: 'Punë të zgjedhura',
     availableIn: 'DE · EN · IT · SR · AL',
   },
   seo: {
-    title: "AGR Multimedia | Web Dizajn, Grafikë & AI për Biznese të Vogla",
+    title: "AGR Multimedia Geislingen | Web design, AI multimedia dhe marketing digjital",
     description:
-      "Faqe web profesionale, dizajn grafik, video dhe përmbajtje AI për biznese të vogla. Konsultë falas! agron6922@gmail.com",
+      "Web design, AI multimedia, dizajn grafik dhe SEO për biznese të vogla — studio në Geislingen an der Steige, Gjermani. Konsultë falas: agron6922@gmail.com",
     keywords:
-      "dizajn web, dizajn grafik, përmbajtje ai, marketing digjital për biznese të vogla, faqe interneti, agr multimedia",
+      "dizajn web Geislingen, AI multimedia, marketing digjital, SEO, dizajn grafik, faqe interneti, AGR Multimedia",
   },
   heroProjects: {
     heading: 'Projektet e veçuara',
@@ -1098,6 +1104,7 @@ const al: SpecTranslations = {
     cta: 'Nuk jeni i sigurt cili paket është i duhuri për projektin tuaj? Më dërgoni një mesazh të shkurtër dhe do t’ju ndihmoj të zgjidhni zgjidhjen e duhur.',
   },
   aboutPage: {
+    pageH1: "Rreth AGR Multimedia — Web design, AI multimedia dhe marketing në Geislingen",
     intro: 'Unë jam Agron Osmani, dizajner grafik i pavarur, editor video dhe entuziast AI me bazë në Geislingen an der Steige. Krijoj vizuale, faqe web dhe video që ndihmojnë bizneset e vogla dhe krijuesit të komunikojnë qartë dhe të duken profesionalisht online.',
     skillsTitle: 'Aftësi dhe mjete',
     tools: [

@@ -33,12 +33,12 @@ export default function EcommerceSite() {
               </Button>
             </Link>
             <div>
-              <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
+              <p className="text-2xl font-bold text-gray-900 dark:text-white">
 {currentLanguage === 'sr' ? 'E-commerce Sajt' : 
                  currentLanguage === 'en' ? 'E-commerce Site' :
                  currentLanguage === 'de' ? 'E-Commerce Website' : 
                  'E-commerce Sajt'}
-              </h1>
+              </p>
               <p className="text-sm text-gray-600 dark:text-gray-400">
 {currentLanguage === 'sr' ? 'Kompletan online shopping doživljaj' : 
                  currentLanguage === 'en' ? 'Complete online shopping experience' :
@@ -85,13 +85,13 @@ export default function EcommerceSite() {
           {/* Project Overview */}
           <div className="grid lg:grid-cols-3 gap-12 mb-16">
             <div className="lg:col-span-2">
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+              <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
                 {currentLanguage === 'sr' ? 'Profesionalni E-commerce Sajt za Modernu Trgovinu' : 
                  currentLanguage === 'en' ? 'Professional E-commerce Site for Modern Commerce' :
                  currentLanguage === 'de' ? 'Professionelle E-Commerce-Website für modernen Handel' : 
                  currentLanguage === 'sq' ? 'Faqe Profesionale E-commerce për Tregtinë Moderne' :
                  'Profesionalni E-commerce Sajt za Modernu Trgovinu'}
-              </h2>
+              </h1>
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
                 {currentLanguage === 'sr' ? 'Kreiram moderna e-commerce rešenja koja omogućavaju kompanijama da prodaju svoje proizvode online sa profesionalnim izgledom i funkcionalnostima koje povećavaju konverzije. Ovaj sajt kombinuje elegantan dizajn sa naprednim e-commerce funkcijama.' : 
                  currentLanguage === 'en' ? 'I create modern e-commerce solutions that enable companies to sell their products online with a professional look and features that increase conversions. This site combines elegant design with advanced e-commerce functionality.' :

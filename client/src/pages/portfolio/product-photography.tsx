@@ -33,9 +33,9 @@ export default function ProductPhotography() {
               </Button>
             </Link>
             <div>
-              <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
+              <p className="text-2xl font-bold text-gray-900 dark:text-white">
                 Product Photography
-              </h1>
+              </p>
               <p className="text-sm text-gray-600 dark:text-gray-400">
                 {currentLanguage === 'sr' ? 'Studijska fotografija proizvoda' : 
                  currentLanguage === 'en' ? 'Professional product photography' :
@@ -88,13 +88,13 @@ export default function ProductPhotography() {
           {/* Project Overview */}
           <div className="grid lg:grid-cols-3 gap-12 mb-16">
             <div className="lg:col-span-2">
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+              <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
                 {currentLanguage === 'sr' ? 'Profesionalna Studijska Fotografija Proizvoda' : 
                  currentLanguage === 'en' ? 'Professional Product Photography Studio' :
                  currentLanguage === 'de' ? 'Professionelles Produktfotografie-Studio' : 
                  currentLanguage === 'sq' ? 'Studio Profesionale e Fotografisë së Produkteve' :
                  'Profesionalna Studijska Fotografija Proizvoda'}
-              </h2>
+              </h1>
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
                 {currentLanguage === 'sr' ? 'Kreiram visokokvalitetne fotografije proizvoda koje ističu njihove najbolje karakteristike i privlače kupce. Korištenjem profesionalne studio opreme, kontrolisanog osvetljenja i naprednih tehnika fotografisanja, stvaram slike koje povećavaju prodaju i grade poverenje u brend.' : 
                  currentLanguage === 'en' ? 'I create high-quality product photographs that highlight their best characteristics and attract customers. Using professional studio equipment, controlled lighting and advanced photography techniques, I create images that increase sales and build brand trust.' :
