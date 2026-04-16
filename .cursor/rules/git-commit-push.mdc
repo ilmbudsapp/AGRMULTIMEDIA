@@ -1,0 +1,17 @@
+---
+description: After code changes, commit and push to origin (user preference)
+alwaysApply: true
+---
+
+# Git: commit and push
+
+When you finish a task that changes project files (code, config, assets meant to be versioned):
+
+1. Run `git status` to see what changed.
+2. Stage with `git add` (only intentional changes; do not commit secrets or local-only junk).
+3. Write a short, clear commit message (what changed and why).
+4. Run `git push` to `origin` on the current branch (usually `main`).
+
+Do this **without waiting for the user to ask**, unless they explicitly asked to **not** commit yet or the repo is in a broken state.
+
+If there is nothing to commit, skip.
