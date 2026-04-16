@@ -23,7 +23,7 @@ fs.mkdirSync(posterDir, { recursive: true });
 /** Seek ~5s in — many clips fade in from black in the first seconds. */
 const SEEK = "00:00:05";
 
-for (let i = 1; i <= 7; i++) {
+for (let i = 1; i <= 8; i++) {
   const num = String(i).padStart(2, "0");
   const input = path.join(videoDir, `${num}.mp4`);
   const output = path.join(posterDir, `${num}.jpg`);

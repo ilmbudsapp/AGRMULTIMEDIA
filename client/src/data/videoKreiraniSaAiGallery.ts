@@ -12,6 +12,7 @@ const clips: { src: string; poster: string }[] = [
   { src: `${V}/05.mp4`, poster: `${P}/05.jpg` },
   { src: `${V}/06.mp4`, poster: `${P}/06.jpg` },
   { src: `${V}/07.mp4`, poster: `${P}/07.jpg` },
+  { src: `${V}/08.mp4`, poster: `${P}/08.jpg` },
 ];
 
 export const videoKreiraniSaAiGalleryByLang: Record<ServiceLang, { src: string; title: string; poster: string }[]> = {
