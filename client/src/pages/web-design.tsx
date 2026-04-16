@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "wouter";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2, ExternalLink } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -14,6 +14,9 @@ type WebPageCopy = {
   offers: string[];
   processTitle: string;
   processSteps: { title: string; text: string }[];
+  projectTitle: string;
+  projectIntro: string;
+  projectLinkLabel: string;
   ctaTitle: string;
   ctaText: string;
   ctaButton: string;
@@ -39,6 +42,9 @@ const copyByLang: Record<ServiceLang, WebPageCopy> = {
       { title: "02 — Design & build", text: "Create custom website design with responsive layouts and modern visual direction." },
       { title: "03 — Launch & optimize", text: "Go live with SEO-friendly structure and practical improvements for growth." },
     ],
+    projectTitle: "Project preview — FixBike",
+    projectIntro: "I designed and built the FixBike website for Fahrradservice & E-Bike Service Neuwied.",
+    projectLinkLabel: "Visit fixbike.online",
     ctaTitle: "Need a modern website for your business?",
     ctaText: "Let's create it together.",
     ctaButton: "Request web design consultation",
@@ -62,6 +68,9 @@ const copyByLang: Record<ServiceLang, WebPageCopy> = {
       { title: "02 — Design & Umsetzung", text: "Custom Website-Design mit responsive Layouts und moderner Optik." },
       { title: "03 — Launch & Optimierung", text: "Livegang mit SEO-freundlicher Struktur und gezielten Verbesserungen." },
     ],
+    projectTitle: "Projektvorschau — FixBike",
+    projectIntro: "Ich habe die FixBike-Website für Fahrradservice & E-Bike Service Neuwied gestaltet und umgesetzt.",
+    projectLinkLabel: "fixbike.online besuchen",
     ctaTitle: "Brauchen Sie eine moderne Website für Ihr Unternehmen?",
     ctaText: "Lassen Sie sie uns gemeinsam umsetzen.",
     ctaButton: "Webdesign-Beratung anfragen",
@@ -85,6 +94,9 @@ const copyByLang: Record<ServiceLang, WebPageCopy> = {
       { title: "02 — Design & sviluppo", text: "Creo custom website design con layout responsive e look moderno." },
       { title: "03 — Lancio & ottimizzazione", text: "Pubblicazione con struttura SEO-friendly e miglioramenti pratici." },
     ],
+    projectTitle: "Project preview — FixBike",
+    projectIntro: "Ho progettato e realizzato il sito FixBike per Fahrradservice & E-Bike Service Neuwied.",
+    projectLinkLabel: "Visita fixbike.online",
     ctaTitle: "Need a modern website for your business?",
     ctaText: "Let's create it together.",
     ctaButton: "Richiedi consulenza web design",
@@ -108,6 +120,9 @@ const copyByLang: Record<ServiceLang, WebPageCopy> = {
       { title: "02 — Dizajn i izrada", text: "Radim custom website design sa responsive rasporedom i modernim izgledom." },
       { title: "03 — Lansiranje i optimizacija", text: "Objava sajta uz SEO-friendly strukturu i praktična poboljšanja." },
     ],
+    projectTitle: "Primer projekta — FixBike",
+    projectIntro: "Ja sam dizajnirao i izradio FixBike sajt za Fahrradservice & E-Bike Service Neuwied.",
+    projectLinkLabel: "Poseti fixbike.online",
     ctaTitle: "Need a modern website for your business?",
     ctaText: "Let's create it together.",
     ctaButton: "Zatraži web design konsultacije",
@@ -131,6 +146,9 @@ const copyByLang: Record<ServiceLang, WebPageCopy> = {
       { title: "02 — Dizajn & zhvillim", text: "Krijoj custom website design me layout responsive dhe stil modern." },
       { title: "03 — Publikim & optimizim", text: "Publikim me strukturë SEO-friendly dhe përmirësime praktike." },
     ],
+    projectTitle: "Project preview — FixBike",
+    projectIntro: "Unë e kam dizajnuar dhe zhvilluar faqen FixBike për Fahrradservice & E-Bike Service Neuwied.",
+    projectLinkLabel: "Hape fixbike.online",
     ctaTitle: "Need a modern website for your business?",
     ctaText: "Let's create it together.",
     ctaButton: "Kërko konsultë web design",
@@ -141,6 +159,10 @@ export default function WebDesign() {
   const { currentLanguage } = useLanguage();
   const lang = toServiceLang(currentLanguage);
   const copy = copyByLang[lang];
+  const fixbikeScreens = [
+    "/portfolio/web-design/fixbike-fahrradservice-neuwied-hero.png",
+    "/portfolio/web-design/fixbike-e-bike-vermietung.png",
+  ];
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -183,6 +205,31 @@ export default function WebDesign() {
                 </div>
               ))}
             </div>
+          </article>
+        </section>
+
+        <section id="project-preview" className="mx-auto mt-8 max-w-6xl px-4 sm:px-6 lg:px-8">
+          <article className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
+            <h2 className="text-2xl font-semibold tracking-tight">{copy.projectTitle}</h2>
+            <p className="mt-3 text-neutral-600">{copy.projectIntro}</p>
+            <div className="mt-5 grid gap-3 sm:grid-cols-2">
+              {fixbikeScreens.map((src) => (
+                <figure key={src} className="overflow-hidden rounded-lg border border-neutral-200 bg-neutral-100 shadow-sm">
+                  <img src={src} alt="FixBike website project screenshot" loading="lazy" decoding="async" className="h-auto w-full object-contain" />
+                </figure>
+              ))}
+            </div>
+            <p className="mt-4">
+              <a
+                href="https://fixbike.online/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-800 underline-offset-4 hover:underline"
+              >
+                <ExternalLink className="h-4 w-4 shrink-0" aria-hidden />
+                {copy.projectLinkLabel}
+              </a>
+            </p>
           </article>
         </section>
 
