@@ -2,6 +2,11 @@ import { useEffect } from "react";
 import ServicePageTemplate from "@/components/ServicePageTemplate";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { buildSubsections, getServiceTemplateLabels, toServiceLang, type ServiceLang } from "@/lib/servicePageI18n";
+import {
+  ilmbudsAppGalleryByLang,
+  ilmbudsCustomApplicationsIntroByLang,
+  ilmbudsPlayStoreLinkByLang,
+} from "@/data/ilmbudsAppPortfolio";
 
 type AppContent = {
   eyebrow: string;
@@ -42,8 +47,8 @@ const appByLang: Record<ServiceLang, AppContent> = {
       { id: "client-focused-web-applications", h3: "Client-Focused Web Applications" },
       { id: "digital-tools-small-businesses", h3: "Digital Business Tools for Companies" },
     ],
-    selectedWorkTitle: "Selected Work Placeholder",
-    selectedWorkIntro: "Reserved for future app and tool showcases after architecture approval.",
+    selectedWorkTitle: "More selected work",
+    selectedWorkIntro: "Room for additional shipped apps and internal tools beyond the example in the categories above.",
     toolsTitle: "Tools / Software I Use",
     tools: ["Figma", "React + TypeScript", "Node.js patterns", "API integration flows", "Versioned Git workflow"],
     whyChooseTitle: "Why Choose This Service",
@@ -77,8 +82,8 @@ const appByLang: Record<ServiceLang, AppContent> = {
       { id: "client-focused-web-applications", h3: "Client-Focused Web Applications" },
       { id: "digital-tools-small-businesses", h3: "Digital Business Tools for Companies" },
     ],
-    selectedWorkTitle: "Platzhalter für ausgewählte Arbeiten",
-    selectedWorkIntro: "Reserviert für zukünftige App- und Tool-Beispiele nach Architekturfreigabe.",
+    selectedWorkTitle: "Weitere ausgewählte Arbeiten",
+    selectedWorkIntro: "Platz für weitere veröffentlichte Apps und interne Tools jenseits des Beispiels in den Kategorien oben.",
     toolsTitle: "Tools / Software, die ich nutze",
     tools: ["Figma", "React + TypeScript", "Node.js Muster", "API Integrationen", "Versionierter Git-Workflow"],
     whyChooseTitle: "Warum diese Leistung wählen",
@@ -112,8 +117,8 @@ const appByLang: Record<ServiceLang, AppContent> = {
       { id: "client-focused-web-applications", h3: "Client-Focused Web Applications" },
       { id: "digital-tools-small-businesses", h3: "Digital Business Tools for Companies" },
     ],
-    selectedWorkTitle: "Placeholder lavori selezionati",
-    selectedWorkIntro: "Riservato a futuri showcase app e tool dopo approvazione architettura.",
+    selectedWorkTitle: "Altri lavori selezionati",
+    selectedWorkIntro: "Spazio per altre app pubblicate e tool interni oltre all'esempio nelle categorie sopra.",
     toolsTitle: "Tools / Software che uso",
     tools: ["Figma", "React + TypeScript", "Pattern Node.js", "Flussi integrazione API", "Workflow Git versionato"],
     whyChooseTitle: "Perché scegliere questo servizio",
@@ -147,8 +152,8 @@ const appByLang: Record<ServiceLang, AppContent> = {
       { id: "client-focused-web-applications", h3: "Client-Focused Web Applications" },
       { id: "digital-tools-small-businesses", h3: "Digital Business Tools for Companies" },
     ],
-    selectedWorkTitle: "Placeholder za odabrane radove",
-    selectedWorkIntro: "Rezervisano za buduće app i tool primere nakon odobrenja arhitekture.",
+    selectedWorkTitle: "Još odabranih radova",
+    selectedWorkIntro: "Prostor za dodatne objavljene aplikacije i interne alate pored primera u kategorijama iznad.",
     toolsTitle: "Alati / softver koji koristim",
     tools: ["Figma", "React + TypeScript", "Node.js obrasci", "API integracioni tokovi", "Verzionisan Git workflow"],
     whyChooseTitle: "Zašto izabrati ovu uslugu",
@@ -182,8 +187,8 @@ const appByLang: Record<ServiceLang, AppContent> = {
       { id: "client-focused-web-applications", h3: "Client-Focused Web Applications" },
       { id: "digital-tools-small-businesses", h3: "Digital Business Tools for Companies" },
     ],
-    selectedWorkTitle: "Placeholder për punë të zgjedhura",
-    selectedWorkIntro: "I rezervuar për shembuj të ardhshëm app dhe tools pas miratimit të arkitekturës.",
+    selectedWorkTitle: "Më shumë punë të zgjedhura",
+    selectedWorkIntro: "Hapësirë për aplikacione të tjera të publikuara dhe mjete të brendshme përtej shembullit në kategoritë më sipër.",
     toolsTitle: "Tools / Software që përdor",
     tools: ["Figma", "React + TypeScript", "Modele Node.js", "Flukse integrimi API", "Workflow Git i versionuar"],
     whyChooseTitle: "Pse të zgjidhni këtë shërbim",
@@ -205,6 +210,17 @@ export default function ApplicationDesignDevelopment() {
   const lang = toServiceLang(currentLanguage);
   const copy = appByLang[lang];
 
+  const subsections = buildSubsections(lang, copy.subsectionTitles).map((sub) =>
+    sub.id === "custom-business-applications"
+      ? {
+          ...sub,
+          intro: ilmbudsCustomApplicationsIntroByLang[lang],
+          workGallery: ilmbudsAppGalleryByLang[lang],
+          workGalleryExternalLink: ilmbudsPlayStoreLinkByLang[lang],
+        }
+      : sub,
+  );
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -217,7 +233,7 @@ export default function ApplicationDesignDevelopment() {
       intro={copy.intro}
       whatIoffer={copy.whatIoffer}
       serviceCategoriesTitle={copy.serviceCategoriesTitle}
-      subsections={buildSubsections(lang, copy.subsectionTitles)}
+      subsections={subsections}
       selectedWorkTitle={copy.selectedWorkTitle}
       selectedWorkIntro={copy.selectedWorkIntro}
       toolsTitle={copy.toolsTitle}
