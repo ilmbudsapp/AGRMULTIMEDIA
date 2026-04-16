@@ -32,34 +32,34 @@ const SERVICE_CARDS = [
 
 const cardTextByLang: Record<ServiceLang, { title: string; description: string }[]> = {
   en: [
-    { title: "Graphic Design Services", description: "Branding systems, logos, and marketing design assets for small businesses." },
-    { title: "AI Content Creation Services", description: "AI images, AI product visuals, and AI video assets for business marketing." },
-    { title: "Web Design and SEO Services", description: "Mobile-friendly websites with on-page SEO and clear structure optimization." },
-    { title: "Application Design and Development Services", description: "Custom app concepts, useful business tools, and prototype interfaces." },
+    { title: "Graphic design", description: "Branding systems, logos, and marketing design assets for small businesses." },
+    { title: "AI content creation", description: "AI-generated images, product visuals, and video assets for campaigns." },
+    { title: "Web design & SEO", description: "Mobile-friendly sites with on-page SEO and a clear, optimized structure." },
+    { title: "Apps & development", description: "Custom app concepts, internal tools, and prototype interfaces." },
   ],
   de: [
-    { title: "Graphic Design Services", description: "Branding-Systeme, Logos und Marketing-Design-Assets für kleine Unternehmen." },
-    { title: "AI Content Creation Services", description: "AI-Bilder, AI-Produktvisuals und AI-Video-Assets für Business-Marketing." },
-    { title: "Web Design und SEO Services", description: "Mobile-freundliche Websites mit On-page SEO und klarer Struktur-Optimierung." },
-    { title: "Application Design und Development Services", description: "Custom App-Konzepte, nützliche Business-Tools und Prototyp-Interfaces." },
+    { title: "Grafikdesign", description: "Branding-Systeme, Logos und Marketing-Design für kleine Unternehmen." },
+    { title: "KI-Inhaltserstellung", description: "KI-Bilder, Produktvisuals und KI-Videos für kampagnentaugliche Ergebnisse." },
+    { title: "Webdesign & SEO", description: "Mobile-first-Websites mit On-Page-SEO und klar optimierter Struktur." },
+    { title: "Apps & Entwicklung", description: "Individuelle App-Konzepte, interne Tools und Prototyp-Oberflächen." },
   ],
   it: [
-    { title: "Servizi Graphic Design", description: "Sistemi branding, logo e asset di design marketing per piccole imprese." },
-    { title: "Servizi AI Content Creation", description: "Immagini AI, visual prodotto AI e asset video AI per marketing business." },
-    { title: "Servizi Web Design e SEO", description: "Siti mobile-friendly con SEO on-page e ottimizzazione struttura chiara." },
-    { title: "Servizi Application Design e Development", description: "Concetti app custom, strumenti business utili e interfacce prototipo." },
+    { title: "Grafica", description: "Sistemi di brand, logotipi e materiali di comunicazione per piccole imprese." },
+    { title: "Contenuti con IA", description: "Immagini, visual di prodotto e video generati con intelligenza artificiale per le campagne." },
+    { title: "Web e SEO", description: "Siti ottimizzati per mobile, SEO on-page e struttura chiara." },
+    { title: "App e sviluppo", description: "Concept di app, strumenti interni e prototipi di interfaccia." },
   ],
   sr: [
-    { title: "Graphic Design usluge", description: "Brending sistemi, logo dizajn i marketinški dizajn materijali za mala preduzeća." },
-    { title: "AI Content Creation usluge", description: "AI slike, AI product visuals i AI video materijali za poslovni marketing." },
-    { title: "Web Design i SEO usluge", description: "Mobile-friendly sajtovi sa on-page SEO i jasnom optimizacijom strukture." },
-    { title: "Application Design i Development usluge", description: "Custom app koncepti, korisni business alati i prototip interfejsi." },
+    { title: "Grafički dizajn", description: "Brending sistemi, logotipi i marketinški materijali za mala preduzeća." },
+    { title: "AI sadržaj", description: "AI generisane slike, vizueli proizvoda i video materijal za kampanje." },
+    { title: "Veb dizajn i SEO", description: "Sajtovi prilagođeni mobilnim uređajima, on-page SEO i jasna struktura." },
+    { title: "Aplikacije i razvoj", description: "Koncepti aplikacija, interni alati i prototipi interfejsa." },
   ],
   al: [
-    { title: "Shërbime Graphic Design", description: "Sisteme branding, logo dhe materiale dizajni marketingu për biznese të vogla." },
-    { title: "Shërbime AI Content Creation", description: "Imazhe AI, AI product visuals dhe materiale video AI për marketing biznesi." },
-    { title: "Shërbime Web Design dhe SEO", description: "Faqe mobile-friendly me SEO on-page dhe optimizim të qartë strukture." },
-    { title: "Shërbime Application Design dhe Development", description: "Koncepte app custom, mjete business të dobishme dhe interface prototip." },
+    { title: "Dizajn grafik", description: "Sisteme brandi, logo dhe materiale komunikimi për biznese të vogla." },
+    { title: "Përmbajtje me IA", description: "Imazhe, pamje produkti dhe video të gjeneruara me IA për fushata." },
+    { title: "Ueb-i dhe SEO", description: "Faqe miqësore për celular, SEO në faqe dhe strukturë e optimizuar." },
+    { title: "Aplikacione dhe zhvillim", description: "Koncepte aplikacionesh, mjete të brendshme dhe prototipe ndërfaqeje." },
   ],
 };
 
@@ -96,7 +96,7 @@ const copyByLang: Record<ServiceLang, { eyebrow: string; title: string; subtitle
     eyebrow: "Shërbime",
     title: "Strukturë e qartë shërbimesh për rritjen e bizneseve të vogla",
     subtitle:
-      "Zgjidh shërbimin që të duhet. Çdo fushë ka faqe të dedikuar me scope të qartë, deliverable, tools dhe rrugë direkte për konsultim.",
+      "Zgjidh shërbimin që të duhet. Çdo fushë ka faqe të dedikuar me shtrirje të qartë, çfarë dorëzohet, mjetet e përdorura dhe një rrugë të drejtpërdrejtë konsultimi.",
     details: "Shiko detajet e shërbimit",
   },
 };

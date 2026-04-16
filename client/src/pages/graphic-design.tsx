@@ -64,7 +64,7 @@ const graphicByLang: Record<ServiceLang, GraphicContent> = {
   },
   de: {
     eyebrow: "Leistung",
-    h1: "Graphic Design Services für kleine Unternehmen",
+    h1: "Grafikdesign für kleine Unternehmen",
     intro: "Klare und praktische visuelle Kommunikation für Unternehmen, die professionelles Branding für Web, Social Media und Print brauchen.",
     whatIoffer: [
       "Markenkonsistente visuelle Systeme",
@@ -77,12 +77,12 @@ const graphicByLang: Record<ServiceLang, GraphicContent> = {
       { id: "fotomanipulacije", h3: "Fotomanipulation" },
       { id: "branding", h3: "Branding" },
       { id: "vizit-kartice", h3: "Visitenkarten" },
-      { id: "movie-poster", h3: "Filmplakat / Movie Poster" },
+      { id: "movie-poster", h3: "Filmplakat" },
       { id: "retush-radovi", h3: "Retusche-Arbeiten" },
     ],
     selectedWorkTitle: "Platzhalter für ausgewählte Arbeiten",
     selectedWorkIntro: "Dieser Bereich ist für kuratierte Projektbeispiele in der nächsten Phase reserviert.",
-    toolsTitle: "Tools / Software, die ich nutze",
+    toolsTitle: "Eingesetzte Tools und Software",
     tools: ["Adobe Illustrator", "Adobe Photoshop", "Adobe InDesign", "Figma", "Canva Pro"],
     whyChooseTitle: "Warum diese Leistung wählen",
     whyChoosePoints: [
@@ -98,7 +98,7 @@ const graphicByLang: Record<ServiceLang, GraphicContent> = {
   },
   it: {
     eyebrow: "Servizio",
-    h1: "Graphic Design Services per Piccole Imprese",
+    h1: "Servizi di grafica per piccole imprese",
     intro: "Comunicazione visiva chiara e pratica per aziende che vogliono un branding professionale su web, social e stampa.",
     whatIoffer: [
       "Sistemi visivi coerenti con il brand",
@@ -111,12 +111,12 @@ const graphicByLang: Record<ServiceLang, GraphicContent> = {
       { id: "fotomanipulacije", h3: "Fotomanipolazione" },
       { id: "branding", h3: "Branding" },
       { id: "vizit-kartice", h3: "Biglietti da visita" },
-      { id: "movie-poster", h3: "Movie poster / locandina" },
+      { id: "movie-poster", h3: "Locandina cinematografica" },
       { id: "retush-radovi", h3: "Lavori di ritocco" },
     ],
-    selectedWorkTitle: "Placeholder lavori selezionati",
+    selectedWorkTitle: "Esempi di lavori (in aggiornamento)",
     selectedWorkIntro: "Sezione riservata a esempi progetto curati nella prossima fase.",
-    toolsTitle: "Tools / Software che uso",
+    toolsTitle: "Strumenti e software che utilizzo",
     tools: ["Adobe Illustrator", "Adobe Photoshop", "Adobe InDesign", "Figma", "Canva Pro"],
     whyChooseTitle: "Perché scegliere questo servizio",
     whyChoosePoints: [
@@ -132,7 +132,7 @@ const graphicByLang: Record<ServiceLang, GraphicContent> = {
   },
   sr: {
     eyebrow: "Usluga",
-    h1: "Graphic Design Services za mala preduzeća",
+    h1: "Usluge grafičkog dizajna za mala preduzeća",
     intro: "Jasna i praktična vizuelna komunikacija za biznise kojima treba profesionalan brending za web, društvene mreže i štampu.",
     whatIoffer: [
       "Vizuelni sistem usklađen sa brendom",
@@ -145,10 +145,10 @@ const graphicByLang: Record<ServiceLang, GraphicContent> = {
       { id: "fotomanipulacije", h3: "Fotomanipulacije" },
       { id: "branding", h3: "Branding" },
       { id: "vizit-kartice", h3: "Vizit kartice" },
-      { id: "movie-poster", h3: "Movie poster" },
+      { id: "movie-poster", h3: "Filmski poster" },
       { id: "retush-radovi", h3: "Retuš radovi" },
     ],
-    selectedWorkTitle: "Placeholder za odabrane radove",
+    selectedWorkTitle: "Primeri odabranih radova (uskoro)",
     selectedWorkIntro: "Ovaj blok je rezervisan za kurirane primere radova u sledećoj fazi.",
     toolsTitle: "Alati / softver koji koristim",
     tools: ["Adobe Illustrator", "Adobe Photoshop", "Adobe InDesign", "Figma", "Canva Pro"],
@@ -161,12 +161,12 @@ const graphicByLang: Record<ServiceLang, GraphicContent> = {
     ],
     ctaTitle: "Treba vam jači vizuelni identitet?",
     ctaText: "Pošaljite postojeće materijale i pripremiću jasnu dizajn strukturu za sledeći korak.",
-    ctaButton: "Zatraži graphic design konsultacije",
+    ctaButton: "Zatraži konsultacije za grafički dizajn",
     localNote: "Dostupno za biznise u Nemačkoj i balkanske firme koje posluju u Nemačkoj.",
   },
   al: {
     eyebrow: "Shërbim",
-    h1: "Graphic Design Services për Biznese të Vogla",
+    h1: "Dizajn grafik për biznese të vogla",
     intro: "Komunikim vizual i qartë dhe praktik për biznese që kanë nevojë për branding profesional në web, social dhe print.",
     whatIoffer: [
       "Sistem vizual i qëndrueshëm me brandin",
@@ -182,9 +182,9 @@ const graphicByLang: Record<ServiceLang, GraphicContent> = {
       { id: "movie-poster", h3: "Poster filmi" },
       { id: "retush-radovi", h3: "Punë retushi" },
     ],
-    selectedWorkTitle: "Placeholder për punë të zgjedhura",
+    selectedWorkTitle: "Shembuj punësh të zgjedhura (së shpejti)",
     selectedWorkIntro: "Ky bllok është rezervuar për shembuj pune në fazën tjetër.",
-    toolsTitle: "Tools / Software që përdor",
+    toolsTitle: "Mjetet dhe softuerët që përdor",
     tools: ["Adobe Illustrator", "Adobe Photoshop", "Adobe InDesign", "Figma", "Canva Pro"],
     whyChooseTitle: "Pse të zgjidhni këtë shërbim",
     whyChoosePoints: [
@@ -195,7 +195,7 @@ const graphicByLang: Record<ServiceLang, GraphicContent> = {
     ],
     ctaTitle: "Keni nevojë për identitet vizual më të fortë?",
     ctaText: "Dërgoni materialet ekzistuese dhe unë do përgatis një strukturë të qartë dizajni për hapin tjetër.",
-    ctaButton: "Kërko konsultë graphic design",
+    ctaButton: "Kërko konsulencë për dizajn grafik",
     localNote: "I disponueshëm për biznese në Gjermani dhe biznese ballkanike që operojnë në Gjermani.",
   },
 };
