@@ -1,254 +1,206 @@
 import { useEffect } from "react";
-import ServicePageTemplate from "@/components/ServicePageTemplate";
+import { Link } from "wouter";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { buildSubsections, getServiceTemplateLabels, toServiceLang, type ServiceLang } from "@/lib/servicePageI18n";
-import {
-  fixbikeBusinessWebsiteIntroByLang,
-  fixbikeLiveSiteLinkByLang,
-  fixbikeWebDesignGalleryByLang,
-} from "@/data/fixbikeWebDesignGallery";
+import { toServiceLang, type ServiceLang } from "@/lib/servicePageI18n";
 
-type WebContent = {
+type WebPageCopy = {
   eyebrow: string;
   h1: string;
   intro: string;
-  whatIoffer: string[];
-  serviceCategoriesTitle: string;
-  subsectionTitles: { id: string; h3: string }[];
-  selectedWorkTitle: string;
-  selectedWorkIntro: string;
-  toolsTitle: string;
-  tools: string[];
-  whyChooseTitle: string;
-  whyChoosePoints: string[];
+  offerTitle: string;
+  offers: string[];
+  processTitle: string;
+  processSteps: { title: string; text: string }[];
   ctaTitle: string;
   ctaText: string;
   ctaButton: string;
-  localNote: string;
 };
 
-const webByLang: Record<ServiceLang, WebContent> = {
+const copyByLang: Record<ServiceLang, WebPageCopy> = {
   en: {
     eyebrow: "Service",
-    h1: "Web Design and SEO Services for Small Businesses",
-    intro: "Structured website and SEO service with clear architecture, mobile-first UX, and practical search visibility setup.",
-    whatIoffer: [
-      "Business website structure designed for clear conversion flow",
-      "SEO optimization as a visible and separate service layer",
-      "Mobile-friendly layouts and performance-first setup",
-      "Local SEO support for Germany-focused businesses",
+    h1: "Custom Web Design for Small Businesses",
+    intro:
+      "I provide web design services focused on modern business websites that look premium and convert clearly. Every project is built as responsive web design with SEO-friendly websites structure from day one.",
+    offerTitle: "What I offer",
+    offers: [
+      "Custom website design tailored to your offer and target audience",
+      "Responsive web design for mobile, tablet, and desktop screens",
+      "Business website design with clear structure and conversion flow",
+      "SEO-friendly websites with clean hierarchy and on-page fundamentals",
+      "Modern, fast-loading pages ready for marketing campaigns",
     ],
-    serviceCategoriesTitle: "Service Categories",
-    subsectionTitles: [
-      { id: "business-website-design", h3: "Business Website Design in Germany" },
-      { id: "landing-page-design", h3: "Landing Page Design" },
-      { id: "website-redesign", h3: "Website Redesign Services" },
-      { id: "seo-optimization", h3: "SEO Optimization for Small Business Websites" },
-      { id: "mobile-friendly-design", h3: "Mobile-Friendly Website Design" },
-      { id: "fast-loading-setup", h3: "Fast-Loading Website Setup" },
-      { id: "local-seo", h3: "Local SEO Services for Businesses in Germany" },
+    processTitle: "Quick process",
+    processSteps: [
+      { title: "01 — Strategy", text: "Define goals, pages, and conversion priorities for your business website." },
+      { title: "02 — Design & build", text: "Create custom website design with responsive layouts and modern visual direction." },
+      { title: "03 — Launch & optimize", text: "Go live with SEO-friendly structure and practical improvements for growth." },
     ],
-    selectedWorkTitle: "More selected work",
-    selectedWorkIntro: "Room for additional client websites and SEO case studies beyond the examples in the categories above.",
-    toolsTitle: "Tools / Software I Use",
-    tools: ["Figma", "React + Vite", "Google Search Console", "On-page SEO audit tools", "Lighthouse and performance tools"],
-    whyChooseTitle: "Why Choose This Service",
-    whyChoosePoints: [
-      "SEO, structure, and design are built together",
-      "Clear hierarchy for users and search engines",
-      "Mobile and speed optimization included by default",
-      "Local SEO angle aligned with Germany market reality",
-    ],
-    ctaTitle: "Need a cleaner website with better SEO structure?",
-    ctaText: "Send your website or service idea and I will propose a practical web + SEO architecture.",
-    ctaButton: "Request web and SEO consultation",
-    localNote: "Ideal for small businesses in Germany, including Baden-Württemberg and Balkan-owned companies in Germany.",
+    ctaTitle: "Need a modern website for your business?",
+    ctaText: "Let's create it together.",
+    ctaButton: "Request web design consultation",
   },
   de: {
     eyebrow: "Leistung",
-    h1: "Web Design and SEO Services für kleine Unternehmen",
-    intro: "Strukturierter Website- und SEO-Service mit klarer Architektur, mobile-first UX und praxisnaher Suchsichtbarkeit.",
-    whatIoffer: [
-      "Business-Website-Struktur mit klarem Conversion-Fokus",
-      "SEO-Optimierung als sichtbarer, separater Leistungsbereich",
-      "Mobile-freundliche Layouts und performance-orientiertes Setup",
-      "Local SEO Unterstützung für Unternehmen in Deutschland",
+    h1: "Custom Web Design für kleine Unternehmen",
+    intro:
+      "Ich biete web design services mit Fokus auf moderne Business-Websites, die professionell wirken und klar konvertieren. Jedes Projekt basiert auf responsive web design und einer SEO-friendly Website-Struktur.",
+    offerTitle: "Was ich anbiete",
+    offers: [
+      "Custom website design passend zu Angebot und Zielgruppe",
+      "Responsive web design für Mobil, Tablet und Desktop",
+      "Business website design mit klarer Struktur und Conversion-Fokus",
+      "SEO-friendly websites mit sauberer Hierarchie und On-page-Basis",
+      "Moderne, schnelle Seiten für Kampagnen und Wachstum",
     ],
-    serviceCategoriesTitle: "Service-Kategorien",
-    subsectionTitles: [
-      { id: "business-website-design", h3: "Business Website Design in Deutschland" },
-      { id: "landing-page-design", h3: "Landing Page Design" },
-      { id: "website-redesign", h3: "Website Redesign Services" },
-      { id: "seo-optimization", h3: "SEO Optimization für Small Business Websites" },
-      { id: "mobile-friendly-design", h3: "Mobile-Friendly Website Design" },
-      { id: "fast-loading-setup", h3: "Fast-Loading Website Setup" },
-      { id: "local-seo", h3: "Local SEO Services für Businesses in Deutschland" },
+    processTitle: "Schneller Prozess",
+    processSteps: [
+      { title: "01 — Strategie", text: "Ziele, Seitenstruktur und Conversion-Prioritäten werden klar definiert." },
+      { title: "02 — Design & Umsetzung", text: "Custom Website-Design mit responsive Layouts und moderner Optik." },
+      { title: "03 — Launch & Optimierung", text: "Livegang mit SEO-freundlicher Struktur und gezielten Verbesserungen." },
     ],
-    selectedWorkTitle: "Weitere ausgewählte Arbeiten",
-    selectedWorkIntro: "Platz für zusätzliche Kundenwebsites und SEO-Fallstudien jenseits der Beispiele in den Kategorien oben.",
-    toolsTitle: "Tools / Software, die ich nutze",
-    tools: ["Figma", "React + Vite", "Google Search Console", "On-page SEO Audit Tools", "Lighthouse"],
-    whyChooseTitle: "Warum diese Leistung wählen",
-    whyChoosePoints: [
-      "SEO, Struktur und Design werden gemeinsam aufgebaut",
-      "Klare Hierarchie für Nutzer und Suchmaschinen",
-      "Mobile- und Speed-Optimierung standardmäßig enthalten",
-      "Local SEO passend für den deutschen Markt",
-    ],
-    ctaTitle: "Brauchen Sie eine klarere Website mit besserer SEO-Struktur?",
-    ctaText: "Senden Sie Ihre Website oder Service-Idee und ich schlage eine praktische Web + SEO Architektur vor.",
-    ctaButton: "Web- und SEO-Beratung anfragen",
-    localNote: "Ideal für kleine Unternehmen in Deutschland, inkl. Baden-Württemberg und Balkan-Unternehmen in Deutschland.",
+    ctaTitle: "Brauchen Sie eine moderne Website für Ihr Unternehmen?",
+    ctaText: "Lassen Sie sie uns gemeinsam umsetzen.",
+    ctaButton: "Webdesign-Beratung anfragen",
   },
   it: {
     eyebrow: "Servizio",
-    h1: "Web Design and SEO Services for Small Businesses",
-    intro: "Servizio web + SEO strutturato con architettura chiara, UX mobile-first e setup concreto per visibilità organica.",
-    whatIoffer: [
-      "Struttura sito business con flusso conversione chiaro",
-      "SEO optimization visibile come parte separata del servizio",
-      "Layout mobile-friendly e setup orientato alle performance",
-      "Supporto local SEO per business in Germania",
+    h1: "Custom Web Design for Small Businesses",
+    intro:
+      "Offro web design services orientati a modern business websites con stile professionale e struttura chiara. Ogni progetto nasce come responsive web design con base SEO-friendly websites.",
+    offerTitle: "Cosa offro",
+    offers: [
+      "Custom website design su misura per offerta e pubblico",
+      "Responsive web design per mobile, tablet e desktop",
+      "Business website design con percorso chiaro verso la conversione",
+      "SEO-friendly websites con gerarchia pulita e fondamenta on-page",
+      "Pagine moderne e veloci pronte per campagne marketing",
     ],
-    serviceCategoriesTitle: "Categorie di servizio",
-    subsectionTitles: [
-      { id: "business-website-design", h3: "Business Website Design in Germany" },
-      { id: "landing-page-design", h3: "Landing Page Design" },
-      { id: "website-redesign", h3: "Website Redesign Services" },
-      { id: "seo-optimization", h3: "SEO Optimization for Small Business Websites" },
-      { id: "mobile-friendly-design", h3: "Mobile-Friendly Website Design" },
-      { id: "fast-loading-setup", h3: "Fast-Loading Website Setup" },
-      { id: "local-seo", h3: "Local SEO Services for Businesses in Germany" },
+    processTitle: "Quick process",
+    processSteps: [
+      { title: "01 — Strategia", text: "Definiamo obiettivi, pagine e priorità di conversione." },
+      { title: "02 — Design & sviluppo", text: "Creo custom website design con layout responsive e look moderno." },
+      { title: "03 — Lancio & ottimizzazione", text: "Pubblicazione con struttura SEO-friendly e miglioramenti pratici." },
     ],
-    selectedWorkTitle: "Altri lavori selezionati",
-    selectedWorkIntro: "Spazio per ulteriori siti clienti e casi SEO oltre agli esempi nelle categorie sopra.",
-    toolsTitle: "Tools / Software che uso",
-    tools: ["Figma", "React + Vite", "Google Search Console", "Tool audit SEO on-page", "Lighthouse"],
-    whyChooseTitle: "Perché scegliere questo servizio",
-    whyChoosePoints: [
-      "SEO, struttura e design sviluppati insieme",
-      "Gerarchia chiara per utenti e motori di ricerca",
-      "Ottimizzazione mobile e velocità inclusa",
-      "Approccio local SEO adatto al mercato tedesco",
-    ],
-    ctaTitle: "Ti serve un sito più chiaro con SEO migliore?",
-    ctaText: "Inviami sito o idea servizio e preparo un'architettura web + SEO concreta.",
-    ctaButton: "Richiedi consulenza web e SEO",
-    localNote: "Ideale per piccole imprese in Germania e business balcanici attivi nel mercato tedesco.",
+    ctaTitle: "Need a modern website for your business?",
+    ctaText: "Let's create it together.",
+    ctaButton: "Richiedi consulenza web design",
   },
   sr: {
     eyebrow: "Usluga",
-    h1: "Web Design and SEO Services za mala preduzeća",
-    intro: "Strukturisana web + SEO usluga sa jasnom arhitekturom, mobile-first UX pristupom i praktičnim setup-om za bolju pretragu.",
-    whatIoffer: [
-      "Struktura poslovnog sajta sa jasnim konverzionim tokom",
-      "SEO optimizacija kao vidljiv i poseban deo usluge",
-      "Mobile-friendly layout i performance-first setup",
-      "Lokalni SEO fokus za biznise u Nemačkoj",
+    h1: "Custom Web Design for Small Businesses",
+    intro:
+      "Nudim web design services fokusirane na modern business websites koje izgledaju profesionalno i vode ka jasnoj konverziji. Svaki projekat radim kao responsive web design sa SEO-friendly websites osnovom.",
+    offerTitle: "Šta nudim",
+    offers: [
+      "Custom website design prilagođen tvojoj ponudi i ciljnoj publici",
+      "Responsive web design za mobile, tablet i desktop",
+      "Business website design sa jasnom strukturom i konverzionim tokom",
+      "SEO-friendly websites sa čistom hijerarhijom i on-page osnovama",
+      "Moderan i brz sajt spreman za marketing kampanje",
     ],
-    serviceCategoriesTitle: "Kategorije usluga",
-    subsectionTitles: [
-      { id: "business-website-design", h3: "Business Website Design in Germany" },
-      { id: "landing-page-design", h3: "Landing Page Design" },
-      { id: "website-redesign", h3: "Website Redesign Services" },
-      { id: "seo-optimization", h3: "SEO Optimization for Small Business Websites" },
-      { id: "mobile-friendly-design", h3: "Mobile-Friendly Website Design" },
-      { id: "fast-loading-setup", h3: "Fast-Loading Website Setup" },
-      { id: "local-seo", h3: "Local SEO Services for Businesses in Germany" },
+    processTitle: "Brz proces",
+    processSteps: [
+      { title: "01 — Strategija", text: "Definišemo cilj, strukturu stranica i prioritete konverzije." },
+      { title: "02 — Dizajn i izrada", text: "Radim custom website design sa responsive rasporedom i modernim izgledom." },
+      { title: "03 — Lansiranje i optimizacija", text: "Objava sajta uz SEO-friendly strukturu i praktična poboljšanja." },
     ],
-    selectedWorkTitle: "Još odabranih radova",
-    selectedWorkIntro: "Prostor za dodatne klijentske sajtove i SEO studije slučaja pored primera u kategorijama iznad.",
-    toolsTitle: "Alati / softver koji koristim",
-    tools: ["Figma", "React + Vite", "Google Search Console", "On-page SEO audit alati", "Lighthouse"],
-    whyChooseTitle: "Zašto izabrati ovu uslugu",
-    whyChoosePoints: [
-      "SEO, struktura i dizajn se grade zajedno",
-      "Jasna hijerarhija za korisnike i pretraživače",
-      "Mobilna optimizacija i brzina su uključeni",
-      "Lokalni SEO pristup usklađen sa nemačkim tržištem",
-    ],
-    ctaTitle: "Treba vam čistiji sajt i bolja SEO struktura?",
-    ctaText: "Pošaljite sajt ili ideju usluge i predložiću praktičnu web + SEO arhitekturu.",
-    ctaButton: "Zatraži web i SEO konsultacije",
-    localNote: "Idealno za mala preduzeća u Nemačkoj, uključujući Baden-Württemberg i balkanske firme u Nemačkoj.",
+    ctaTitle: "Need a modern website for your business?",
+    ctaText: "Let's create it together.",
+    ctaButton: "Zatraži web design konsultacije",
   },
   al: {
     eyebrow: "Shërbim",
-    h1: "Web Design and SEO Services për Biznese të Vogla",
-    intro: "Shërbim i strukturuar web + SEO me arkitekturë të qartë, UX mobile-first dhe setup praktik për dukshmëri në kërkim.",
-    whatIoffer: [
-      "Strukturë faqeje biznesi me flow të qartë konvertimi",
-      "SEO optimization si shtresë e dukshme dhe e veçantë",
-      "Layout mobile-friendly dhe setup i fokusuar në performancë",
-      "Mbështetje local SEO për biznese në Gjermani",
+    h1: "Custom Web Design for Small Businesses",
+    intro:
+      "Ofroj web design services të fokusuara në modern business websites me pamje profesionale dhe strukturë që konverton. Çdo projekt ndërtohet si responsive web design me bazë SEO-friendly websites.",
+    offerTitle: "Çfarë ofroj",
+    offers: [
+      "Custom website design i përshtatur me ofertën dhe audiencën",
+      "Responsive web design për mobile, tablet dhe desktop",
+      "Business website design me strukturë të qartë dhe rrjedhë konvertimi",
+      "SEO-friendly websites me hierarki të pastër dhe bazë on-page",
+      "Faqe moderne dhe të shpejta gati për marketing",
     ],
-    serviceCategoriesTitle: "Kategoritë e shërbimit",
-    subsectionTitles: [
-      { id: "business-website-design", h3: "Business Website Design in Germany" },
-      { id: "landing-page-design", h3: "Landing Page Design" },
-      { id: "website-redesign", h3: "Website Redesign Services" },
-      { id: "seo-optimization", h3: "SEO Optimization for Small Business Websites" },
-      { id: "mobile-friendly-design", h3: "Mobile-Friendly Website Design" },
-      { id: "fast-loading-setup", h3: "Fast-Loading Website Setup" },
-      { id: "local-seo", h3: "Local SEO Services for Businesses in Germany" },
+    processTitle: "Proces i shpejtë",
+    processSteps: [
+      { title: "01 — Strategji", text: "Përcaktojmë objektivat, faqet kryesore dhe prioritetet e konvertimit." },
+      { title: "02 — Dizajn & zhvillim", text: "Krijoj custom website design me layout responsive dhe stil modern." },
+      { title: "03 — Publikim & optimizim", text: "Publikim me strukturë SEO-friendly dhe përmirësime praktike." },
     ],
-    selectedWorkTitle: "Më shumë punë të zgjedhura",
-    selectedWorkIntro: "Hapësirë për faqe të tjera klientësh dhe studime SEO përtej shembujve në kategoritë më sipër.",
-    toolsTitle: "Tools / Software që përdor",
-    tools: ["Figma", "React + Vite", "Google Search Console", "Mjete auditimi SEO on-page", "Lighthouse"],
-    whyChooseTitle: "Pse të zgjidhni këtë shërbim",
-    whyChoosePoints: [
-      "SEO, struktura dhe dizajni ndërtohen së bashku",
-      "Hierarki e qartë për përdorues dhe motorë kërkimi",
-      "Optimizimi mobile dhe shpejtësia të përfshira",
-      "Qasje local SEO e përshtatur për tregun gjerman",
-    ],
-    ctaTitle: "Keni nevojë për faqe më të qartë dhe SEO më të mirë?",
-    ctaText: "Dërgoni faqen ose idenë e shërbimit dhe unë propozoj arkitekturë praktike web + SEO.",
-    ctaButton: "Kërko konsultë web dhe SEO",
-    localNote: "Ideale për biznese të vogla në Gjermani, përfshirë Baden-Württemberg dhe biznese ballkanike në Gjermani.",
+    ctaTitle: "Need a modern website for your business?",
+    ctaText: "Let's create it together.",
+    ctaButton: "Kërko konsultë web design",
   },
 };
 
 export default function WebDesign() {
   const { currentLanguage } = useLanguage();
   const lang = toServiceLang(currentLanguage);
-  const copy = webByLang[lang];
-
-  const subsections = buildSubsections(lang, copy.subsectionTitles).map((sub) =>
-    sub.id === "business-website-design"
-      ? {
-          ...sub,
-          intro: fixbikeBusinessWebsiteIntroByLang[lang],
-          workGallery: fixbikeWebDesignGalleryByLang[lang],
-          workGalleryExternalLink: fixbikeLiveSiteLinkByLang[lang],
-        }
-      : sub,
-  );
+  const copy = copyByLang[lang];
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
-    <ServicePageTemplate
-      labels={getServiceTemplateLabels(lang)}
-      eyebrow={copy.eyebrow}
-      h1={copy.h1}
-      intro={copy.intro}
-      whatIoffer={copy.whatIoffer}
-      serviceCategoriesTitle={copy.serviceCategoriesTitle}
-      subsections={subsections}
-      selectedWorkTitle={copy.selectedWorkTitle}
-      selectedWorkIntro={copy.selectedWorkIntro}
-      toolsTitle={copy.toolsTitle}
-      tools={copy.tools}
-      whyChooseTitle={copy.whyChooseTitle}
-      whyChoosePoints={copy.whyChoosePoints}
-      ctaTitle={copy.ctaTitle}
-      ctaText={copy.ctaText}
-      ctaButton={copy.ctaButton}
-      localNote={copy.localNote}
-    />
+    <div className="min-h-screen w-full max-w-[100vw] overflow-x-hidden bg-[#f5f4f2] text-neutral-900">
+      <Navigation />
+      <main className="pb-20 pt-24">
+        <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-500">{copy.eyebrow}</p>
+          <h1 className="mt-4 max-w-4xl text-3xl font-semibold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+            {copy.h1}
+          </h1>
+          <p className="mt-6 max-w-3xl text-base leading-relaxed text-neutral-600 sm:text-lg">{copy.intro}</p>
+        </section>
+
+        <section id="what-i-offer" className="mx-auto mt-10 max-w-6xl px-4 sm:px-6 lg:px-8">
+          <article className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
+            <h2 className="text-2xl font-semibold tracking-tight">{copy.offerTitle}</h2>
+            <ul className="mt-5 grid gap-3 sm:grid-cols-2">
+              {copy.offers.map((item) => (
+                <li key={item} className="flex items-start gap-2 text-neutral-700">
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-emerald-600" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </article>
+        </section>
+
+        <section id="quick-process" className="mx-auto mt-8 max-w-6xl px-4 sm:px-6 lg:px-8">
+          <article className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
+            <h2 className="text-2xl font-semibold tracking-tight">{copy.processTitle}</h2>
+            <div className="mt-5 grid gap-4 md:grid-cols-3">
+              {copy.processSteps.map((step) => (
+                <div key={step.title} className="rounded-xl border border-neutral-200 bg-neutral-50 p-4">
+                  <h3 className="text-sm font-semibold tracking-wide text-neutral-800">{step.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-neutral-600">{step.text}</p>
+                </div>
+              ))}
+            </div>
+          </article>
+        </section>
+
+        <section id="contact-cta" className="mx-auto mt-8 max-w-6xl px-4 sm:px-6 lg:px-8">
+          <article className="rounded-2xl border border-neutral-200 bg-neutral-900 p-8 text-white shadow-[0_16px_40px_rgba(15,23,42,0.22)]">
+            <h2 className="text-2xl font-semibold tracking-tight">{copy.ctaTitle}</h2>
+            <p className="mt-3 max-w-2xl text-neutral-300">{copy.ctaText}</p>
+            <Link
+              href="/contact"
+              className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-neutral-900 transition hover:bg-neutral-200"
+            >
+              {copy.ctaButton}
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </article>
+        </section>
+      </main>
+      <Footer />
+    </div>
   );
 }

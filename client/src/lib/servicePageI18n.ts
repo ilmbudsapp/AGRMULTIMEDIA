@@ -16,6 +16,8 @@ export type LocalizedSubsection = {
   workGalleryExternalLink?: { href: string; label: string };
   /** When set, the template shows HTML5 video players (hosted under /public). */
   workVideoGallery?: { src: string; title: string; poster: string }[];
+  /** Minimal card mode used for media-first showcase sections. */
+  compactMediaOnly?: boolean;
 };
 
 export type ServiceTemplateLabels = {

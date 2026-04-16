@@ -22,6 +22,9 @@ type ServicePageTemplateProps = {
   ctaText: string;
   ctaButton: string;
   localNote?: string;
+  showcaseFirst?: boolean;
+  hideSelectedWorkSection?: boolean;
+  hideToolsSection?: boolean;
 };
 
 export default function ServicePageTemplate({
@@ -42,12 +45,16 @@ export default function ServicePageTemplate({
   ctaText,
   ctaButton,
   localNote,
+  showcaseFirst = false,
+  hideSelectedWorkSection = false,
+  hideToolsSection = false,
 }: ServicePageTemplateProps) {
   const anchorLinks = [
-    { href: "#what-i-offer", label: labels.whatIOffer },
-    { href: "#service-categories", label: labels.serviceCategories },
-    { href: "#selected-work-placeholder", label: labels.selectedWorkPlaceholder },
-    { href: "#tools-software", label: labels.toolsSoftware },
+    ...(showcaseFirst
+      ? [{ href: "#service-categories", label: labels.serviceCategories }, { href: "#what-i-offer", label: labels.whatIOffer }]
+      : [{ href: "#what-i-offer", label: labels.whatIOffer }, { href: "#service-categories", label: labels.serviceCategories }]),
+    ...(hideSelectedWorkSection ? [] : [{ href: "#selected-work-placeholder", label: labels.selectedWorkPlaceholder }]),
+    ...(hideToolsSection ? [] : [{ href: "#tools-software", label: labels.toolsSoftware }]),
     { href: "#why-choose", label: labels.whyChoose },
     { href: "#contact-cta", label: labels.contactCta },
   ];
@@ -79,7 +86,97 @@ export default function ServicePageTemplate({
           </nav>
         </section>
 
-        <section id="what-i-offer" className="mx-auto mt-10 max-w-6xl px-4 sm:px-6 lg:px-8">
+        <section id={showcaseFirst ? "service-categories" : "what-i-offer"} className="mx-auto mt-10 max-w-6xl px-4 sm:px-6 lg:px-8">
+          {showcaseFirst ? (
+            <>
+              <h2 className="text-2xl font-semibold tracking-tight">{serviceCategoriesTitle}</h2>
+              <div className="mt-5 space-y-5">
+                {subsections.map((sub) => {
+                  const hasVideoGallery = Boolean(sub.workVideoGallery?.length);
+                  const hasImageGallery = Boolean(sub.workGallery?.length);
+                  const hasWorkMedia = hasVideoGallery || hasImageGallery;
+
+                  return (
+                    <article key={sub.id} id={sub.id} className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
+                      <h3 className="text-xl font-semibold tracking-tight text-neutral-900">{sub.h3}</h3>
+                      {!sub.compactMediaOnly ? <p className="mt-3 text-neutral-600 leading-relaxed">{sub.intro}</p> : null}
+
+                      {!sub.compactMediaOnly ? (
+                        <>
+                          <h4 className="mt-5 text-sm font-semibold uppercase tracking-wide text-neutral-700">{labels.whatThisIncludes}</h4>
+                          <ul className="mt-3 grid gap-2 sm:grid-cols-2">
+                            {sub.includes.map((item) => (
+                              <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
+                                <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
+                                <span>{item}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </>
+                      ) : null}
+
+                      <div className={hasWorkMedia ? "mt-5 space-y-4" : "mt-5 grid gap-3 md:grid-cols-2"}>
+                        <div
+                          className={`rounded-xl p-4 ${
+                            hasWorkMedia ? "border border-neutral-200 bg-neutral-50" : "border border-dashed border-neutral-300 bg-neutral-50"
+                          }`}
+                        >
+                          <h4 className="text-sm font-semibold text-neutral-800">
+                            {hasVideoGallery ? labels.videoExamples : hasImageGallery ? labels.workExamples : labels.selectedWorkPlaceholder}
+                          </h4>
+                          {hasVideoGallery ? (
+                            <div className="mt-4 grid gap-4 sm:grid-cols-1 lg:grid-cols-2">
+                              {sub.workVideoGallery!.map((vid) => (
+                                <figure key={vid.src} className="overflow-hidden rounded-lg border border-neutral-200 bg-neutral-950 shadow-sm">
+                                  <video className="aspect-video w-full bg-neutral-900 object-contain" controls playsInline preload="none" poster={encodeURI(vid.poster)} aria-label={vid.title}>
+                                    <source src={encodeURI(vid.src)} type="video/mp4" />
+                                  </video>
+                                  <figcaption className="bg-neutral-50 px-2 py-2 text-center text-xs text-neutral-600">{vid.title}</figcaption>
+                                </figure>
+                              ))}
+                            </div>
+                          ) : hasImageGallery ? (
+                            <>
+                              <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                                {sub.workGallery!.map((img) => (
+                                  <figure key={img.src} className="overflow-hidden rounded-lg border border-neutral-200 bg-neutral-100 shadow-sm">
+                                    <img src={img.src} alt={img.alt} loading="lazy" decoding="async" className="h-auto w-full max-h-[min(70vh,520px)] object-contain" />
+                                  </figure>
+                                ))}
+                              </div>
+                              {sub.workGalleryExternalLink ? (
+                                <p className="mt-4">
+                                  <a href={sub.workGalleryExternalLink.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-800 underline-offset-4 hover:underline">
+                                    <ExternalLink className="h-4 w-4 shrink-0" aria-hidden />
+                                    {sub.workGalleryExternalLink.label}
+                                  </a>
+                                </p>
+                              ) : null}
+                            </>
+                          ) : (
+                            <p className="mt-2 text-sm text-neutral-600">{sub.workPlaceholder}</p>
+                          )}
+                        </div>
+                        {!sub.compactMediaOnly ? (
+                          <div className="rounded-xl border border-dashed border-neutral-300 bg-neutral-50 p-4 md:max-w-xl">
+                            <h4 className="text-sm font-semibold text-neutral-800">{labels.toolsPlaceholder}</h4>
+                            <p className="mt-2 text-sm text-neutral-600">{sub.toolsPlaceholder}</p>
+                          </div>
+                        ) : null}
+                      </div>
+
+                      {!sub.compactMediaOnly ? (
+                        <Link href="/contact" className="mt-5 inline-flex items-center gap-2 rounded-full border border-neutral-300 bg-white px-4 py-2 text-sm font-semibold text-neutral-800 transition hover:bg-neutral-100">
+                          {sub.cta}
+                          <ArrowRight className="h-4 w-4" />
+                        </Link>
+                      ) : null}
+                    </article>
+                  );
+                })}
+              </div>
+            </>
+          ) : (
           <article className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
             <h2 className="text-2xl font-semibold tracking-tight">{labels.whatIOffer}</h2>
             <ul className="mt-5 grid gap-3 sm:grid-cols-2">
@@ -91,9 +188,24 @@ export default function ServicePageTemplate({
               ))}
             </ul>
           </article>
+          )}
         </section>
 
-        <section id="service-categories" className="mx-auto mt-8 max-w-6xl px-4 sm:px-6 lg:px-8">
+        <section id={showcaseFirst ? "what-i-offer" : "service-categories"} className="mx-auto mt-8 max-w-6xl px-4 sm:px-6 lg:px-8">
+          {showcaseFirst ? (
+            <article className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
+              <h2 className="text-2xl font-semibold tracking-tight">{labels.whatIOffer}</h2>
+              <ul className="mt-5 grid gap-3 sm:grid-cols-2">
+                {whatIoffer.map((item) => (
+                  <li key={item} className="flex items-start gap-2 text-neutral-700">
+                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-emerald-600" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ) : (
+          <>
           <h2 className="text-2xl font-semibold tracking-tight">{serviceCategoriesTitle}</h2>
           <div className="mt-5 space-y-5">
             {subsections.map((sub) => {
@@ -215,8 +327,11 @@ export default function ServicePageTemplate({
               );
             })}
           </div>
+          </>
+          )}
         </section>
 
+        {!hideSelectedWorkSection ? (
         <section id="selected-work-placeholder" className="mx-auto mt-8 max-w-6xl px-4 sm:px-6 lg:px-8">
           <article className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
             <h2 className="text-2xl font-semibold tracking-tight">{selectedWorkTitle}</h2>
@@ -234,7 +349,9 @@ export default function ServicePageTemplate({
             </div>
           </article>
         </section>
+        ) : null}
 
+        {!hideToolsSection ? (
         <section id="tools-software" className="mx-auto mt-8 max-w-6xl px-4 sm:px-6 lg:px-8">
           <article className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
             <h2 className="text-2xl font-semibold tracking-tight">{toolsTitle}</h2>
@@ -248,6 +365,7 @@ export default function ServicePageTemplate({
             </ul>
           </article>
         </section>
+        ) : null}
 
         <section id="why-choose" className="mx-auto mt-8 max-w-6xl px-4 sm:px-6 lg:px-8">
           <article className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
