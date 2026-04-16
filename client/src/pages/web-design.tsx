@@ -4,6 +4,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { buildSubsections, getServiceTemplateLabels, toServiceLang, type ServiceLang } from "@/lib/servicePageI18n";
 import {
   fixbikeBusinessWebsiteIntroByLang,
+  fixbikeLiveSiteLinkByLang,
   fixbikeWebDesignGalleryByLang,
 } from "@/data/fixbikeWebDesignGallery";
 
@@ -220,6 +221,7 @@ export default function WebDesign() {
           ...sub,
           intro: fixbikeBusinessWebsiteIntroByLang[lang],
           workGallery: fixbikeWebDesignGalleryByLang[lang],
+          workGalleryExternalLink: fixbikeLiveSiteLinkByLang[lang],
         }
       : sub,
   );

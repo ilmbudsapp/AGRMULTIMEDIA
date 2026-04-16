@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { CheckCircle2, Wrench, ArrowRight } from "lucide-react";
+import { CheckCircle2, Wrench, ArrowRight, ExternalLink } from "lucide-react";
 import type { LocalizedSubsection, ServiceTemplateLabels } from "@/lib/servicePageI18n";
 
 type ServicePageTemplateProps = {
@@ -163,22 +163,37 @@ export default function ServicePageTemplate({
                         ))}
                       </div>
                     ) : hasImageGallery ? (
-                      <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                        {sub.workGallery!.map((img) => (
-                          <figure
-                            key={img.src}
-                            className="overflow-hidden rounded-lg border border-neutral-200 bg-neutral-100 shadow-sm"
-                          >
-                            <img
-                              src={img.src}
-                              alt={img.alt}
-                              loading="lazy"
-                              decoding="async"
-                              className="h-auto w-full max-h-[min(70vh,520px)] object-contain"
-                            />
-                          </figure>
-                        ))}
-                      </div>
+                      <>
+                        <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                          {sub.workGallery!.map((img) => (
+                            <figure
+                              key={img.src}
+                              className="overflow-hidden rounded-lg border border-neutral-200 bg-neutral-100 shadow-sm"
+                            >
+                              <img
+                                src={img.src}
+                                alt={img.alt}
+                                loading="lazy"
+                                decoding="async"
+                                className="h-auto w-full max-h-[min(70vh,520px)] object-contain"
+                              />
+                            </figure>
+                          ))}
+                        </div>
+                        {sub.workGalleryExternalLink ? (
+                          <p className="mt-4">
+                            <a
+                              href={sub.workGalleryExternalLink.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-800 underline-offset-4 hover:underline"
+                            >
+                              <ExternalLink className="h-4 w-4 shrink-0" aria-hidden />
+                              {sub.workGalleryExternalLink.label}
+                            </a>
+                          </p>
+                        ) : null}
+                      </>
                     ) : (
                       <p className="mt-2 text-sm text-neutral-600">{sub.workPlaceholder}</p>
                     )}

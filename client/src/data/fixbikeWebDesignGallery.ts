@@ -11,6 +11,16 @@ export const fixbikeBusinessWebsiteIntroByLang: Record<ServiceLang, string> = {
   al: "Shembull klienti: FixBike — Fahrradservice & E-Bike Service Neuwied. Faqe biznesi e fokusuar në konvertim për tregun gjerman, me CTA të qarta dhe faqe qiraje të strukturuara (screenshot-et më poshtë).",
 };
 
+const FIXBIKE_LIVE = "https://fixbike.online/";
+
+export const fixbikeLiveSiteLinkByLang: Record<ServiceLang, { href: string; label: string }> = {
+  en: { href: FIXBIKE_LIVE, label: "Visit fixbike.online — live client site" },
+  de: { href: FIXBIKE_LIVE, label: "fixbike.online besuchen — Live-Website des Kunden" },
+  it: { href: FIXBIKE_LIVE, label: "Visita fixbike.online — sito online del cliente" },
+  sr: { href: FIXBIKE_LIVE, label: "Posetite fixbike.online — live sajt klijenta" },
+  al: { href: FIXBIKE_LIVE, label: "Hapni fixbike.online — faqja live e klientit" },
+};
+
 export const fixbikeWebDesignGalleryByLang: Record<ServiceLang, { src: string; alt: string }[]> = {
   en: [
     {

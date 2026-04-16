@@ -12,6 +12,8 @@ export type LocalizedSubsection = {
   cta: string;
   /** When set, the template shows a real image grid instead of the work placeholder copy. */
   workGallery?: { src: string; alt: string }[];
+  /** Optional link shown under the image gallery (e.g. live client site). */
+  workGalleryExternalLink?: { href: string; label: string };
   /** When set, the template shows HTML5 video players (hosted under /public). */
   workVideoGallery?: { src: string; title: string; poster: string }[];
 };
