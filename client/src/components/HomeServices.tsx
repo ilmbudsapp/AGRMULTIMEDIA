@@ -150,45 +150,49 @@ export default function HomeServices() {
             </span>
           </Link>
 
-          {/* 2 — Video editing (Premiere / After Effects) */}
+          {/* 2 — Video editing (Premiere / After Effects): full-card link; videos stay interactive above overlay */}
           <div
             id="video-editing-services"
-            className="flex flex-col rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm lg:col-span-2"
+            className="group relative flex flex-col rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md lg:col-span-2"
           >
-            <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl border border-neutral-200 text-neutral-700">
-              <Film className="h-5 w-5" strokeWidth={1.7} />
-            </div>
-            <h3 className="text-lg font-semibold tracking-tight text-neutral-900">{sv.cardTitle}</h3>
-            <p className="mt-2 text-sm leading-relaxed text-neutral-600">{sv.cardDescription}</p>
-            <p className="mt-1 text-xs text-neutral-500">{sv.toolsHint}</p>
-
-            <div className="mt-5 grid grid-cols-2 gap-3 lg:grid-cols-3">
-              {VIDEO_CLIP_IDS.map((n) => (
-                <div
-                  key={n}
-                  className="overflow-hidden rounded-lg border border-neutral-200 bg-neutral-950 shadow-inner"
-                >
-                  <video
-                    controls
-                    playsInline
-                    preload="none"
-                    poster={posterSrc(n)}
-                    className="aspect-video w-full object-contain"
-                    aria-label={`${sv.videoAriaLabel} ${n}`}
-                  >
-                    <source src={clipSrc(n)} type="video/mp4" />
-                  </video>
-                </div>
-              ))}
-            </div>
-
             <Link
               href="/video-production"
-              className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-neutral-700 hover:text-neutral-900"
-            >
-              {copy.details}
-              <ArrowRight className="h-4 w-4" />
-            </Link>
+              className="absolute inset-0 z-10 rounded-2xl outline-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-neutral-400"
+              aria-label={`${sv.cardTitle} — ${copy.details}`}
+            />
+            <div className="relative z-20 flex flex-col pointer-events-none">
+              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl border border-neutral-200 text-neutral-700">
+                <Film className="h-5 w-5" strokeWidth={1.7} />
+              </div>
+              <h3 className="text-lg font-semibold tracking-tight text-neutral-900">{sv.cardTitle}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-neutral-600">{sv.cardDescription}</p>
+              <p className="mt-1 text-xs text-neutral-500">{sv.toolsHint}</p>
+
+              <div className="relative z-30 mt-5 grid grid-cols-2 gap-3 pointer-events-auto lg:grid-cols-3">
+                {VIDEO_CLIP_IDS.map((n) => (
+                  <div
+                    key={n}
+                    className="overflow-hidden rounded-lg border border-neutral-200 bg-neutral-950 shadow-inner"
+                  >
+                    <video
+                      controls
+                      playsInline
+                      preload="none"
+                      poster={posterSrc(n)}
+                      className="aspect-video w-full object-contain"
+                      aria-label={`${sv.videoAriaLabel} ${n}`}
+                    >
+                      <source src={clipSrc(n)} type="video/mp4" />
+                    </video>
+                  </div>
+                ))}
+              </div>
+
+              <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-neutral-700 group-hover:text-neutral-900">
+                {copy.details}
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+              </span>
+            </div>
           </div>
 
           {/* 3–5 — ostale kartice */}
