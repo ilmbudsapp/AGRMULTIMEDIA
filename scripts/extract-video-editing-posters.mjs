@@ -24,7 +24,7 @@ fs.mkdirSync(posterDir, { recursive: true });
 /** Seek into clip — adjust if thumbnails are black */
 const SEEK = "00:00:02";
 
-for (let i = 1; i <= 7; i++) {
+for (let i = 1; i <= 12; i++) {
   const sourceFile = i === 5 ? "5 osoba.mp4" : `${i}.mp4`;
   const input = path.join(videoDir, sourceFile);
   const output = path.join(posterDir, `${i}.jpg`);

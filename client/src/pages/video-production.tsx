@@ -16,7 +16,7 @@ import {
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getServiceTemplateLabels, toServiceLang, type ServiceLang } from "@/lib/servicePageI18n";
 
-const VIDEO_CLIP_IDS = [1, 2, 3, 4, 5, 6, 7] as const;
+const VIDEO_CLIP_IDS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] as const;
 
 function posterSrc(n: number) {
   return encodeURI(`/Video editing/posters/${n}.jpg`);
