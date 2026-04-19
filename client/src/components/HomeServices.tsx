@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { LayoutGrid, Palette, Sparkles, AppWindow, ArrowRight } from "lucide-react";
+import { LayoutGrid, Palette, Sparkles, AppWindow, ArrowRight, Film } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { toServiceLang, type ServiceLang } from "@/lib/servicePageI18n";
 
@@ -29,6 +29,16 @@ const SERVICE_CARDS = [
     Icon: AppWindow,
   },
 ] as const;
+
+const VIDEO_CLIP_IDS = [1, 2, 3, 4, 5, 6, 7] as const;
+
+function posterSrc(n: number) {
+  return encodeURI(`/Video editing/posters/${n}.jpg`);
+}
+
+function clipSrc(n: number) {
+  return encodeURI(`/Video editing/${n}.mp4`);
+}
 
 const cardTextByLang: Record<ServiceLang, { title: string; description: string }[]> = {
   en: [
@@ -75,21 +85,21 @@ const copyByLang: Record<ServiceLang, { eyebrow: string; title: string; subtitle
     eyebrow: "Leistungen",
     title: "Klare Service-Struktur für Wachstum kleiner Unternehmen",
     subtitle:
-      "Wählen Sie genau die Leistung, die Sie brauchen. Jeder Bereich hat eine eigene Seite mit klarem Umfang, Deliverables, Tools und direktem Beratungsweg.",
+      "Wählen Sie genau die Leistung, die Sie brauchen. Jeder Bereich hat eine eigene Seite mit klarem Umfang, konkreten Ergebnissen, eingesetzten Tools und direktem Beratungsweg.",
     details: "Service-Details ansehen",
   },
   it: {
     eyebrow: "Servizi",
     title: "Struttura servizi chiara per la crescita delle piccole imprese",
     subtitle:
-      "Scegli il servizio giusto per te. Ogni area ha una pagina dedicata con scope chiaro, deliverable, tools e percorso di consulenza diretto.",
+      "Scegli il servizio adatto a te. Ogni area ha una pagina dedicata con ambito chiaro, consegne previste, strumenti e percorso di consulenza diretto.",
     details: "Vedi dettagli servizio",
   },
   sr: {
     eyebrow: "Usluge",
     title: "Jasna struktura usluga za rast malih biznisa",
     subtitle:
-      "Izaberite tačno uslugu koja vam treba. Svaka oblast ima posebnu stranicu sa jasnim obimom, isporukom, alatima i direktnim putem do konsultacije.",
+      "Izaberite tačno uslugu koja vam treba. Svaka oblast ima posebnu stranicu sa jasnim obimom, šta se isporučuje, koji se alati koriste i direktan put do kontakta.",
     details: "Pogledaj detalje usluge",
   },
   al: {
@@ -102,10 +112,15 @@ const copyByLang: Record<ServiceLang, { eyebrow: string; title: string; subtitle
 };
 
 export default function HomeServices() {
-  const { currentLanguage } = useLanguage();
+  const { currentLanguage, tSpec } = useLanguage();
   const lang = toServiceLang(currentLanguage);
   const copy = copyByLang[lang];
   const cards = cardTextByLang[lang];
+  const sv = tSpec.servicesVideoEditing;
+
+  const graphicCard = SERVICE_CARDS[0];
+  const GraphicIcon = graphicCard.Icon;
+  const restCards = SERVICE_CARDS.slice(1);
 
   return (
     <section id="services-preview" className="scroll-mt-24 border-t border-neutral-200 bg-[#f8f7f4] py-20 md:py-24">
@@ -118,24 +133,85 @@ export default function HomeServices() {
           <p className="mt-4 text-base leading-relaxed text-neutral-600">{copy.subtitle}</p>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {SERVICE_CARDS.map(({ href, Icon }, index) => (
+        <div className="flex flex-col gap-4 lg:grid lg:grid-cols-3 lg:gap-4">
+          {/* 1 — Grafikdesign */}
+          <Link
+            href={graphicCard.href}
+            className="group flex min-h-[220px] flex-col rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md lg:col-span-1"
+          >
+            <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl border border-neutral-200 text-neutral-700">
+              <GraphicIcon className="h-5 w-5" strokeWidth={1.7} />
+            </div>
+            <h3 className="text-lg font-semibold tracking-tight text-neutral-900">{cards[0].title}</h3>
+            <p className="mt-2 flex-1 text-sm leading-relaxed text-neutral-600">{cards[0].description}</p>
+            <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-neutral-700 group-hover:text-neutral-900">
+              {copy.details}
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+            </span>
+          </Link>
+
+          {/* 2 — Video editing (Premiere / After Effects) */}
+          <div
+            id="video-editing-services"
+            className="flex flex-col rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm lg:col-span-2"
+          >
+            <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl border border-neutral-200 text-neutral-700">
+              <Film className="h-5 w-5" strokeWidth={1.7} />
+            </div>
+            <h3 className="text-lg font-semibold tracking-tight text-neutral-900">{sv.cardTitle}</h3>
+            <p className="mt-2 text-sm leading-relaxed text-neutral-600">{sv.cardDescription}</p>
+            <p className="mt-1 text-xs text-neutral-500">{sv.toolsHint}</p>
+
+            <div className="mt-5 grid grid-cols-2 gap-3 lg:grid-cols-3">
+              {VIDEO_CLIP_IDS.map((n) => (
+                <div
+                  key={n}
+                  className="overflow-hidden rounded-lg border border-neutral-200 bg-neutral-950 shadow-inner"
+                >
+                  <video
+                    controls
+                    playsInline
+                    preload="none"
+                    poster={posterSrc(n)}
+                    className="aspect-video w-full object-contain"
+                    aria-label={`${sv.videoAriaLabel} ${n}`}
+                  >
+                    <source src={clipSrc(n)} type="video/mp4" />
+                  </video>
+                </div>
+              ))}
+            </div>
+
             <Link
-              key={href}
-              href={href}
-              className="group flex min-h-[220px] flex-col rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+              href="/video-production"
+              className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-neutral-700 hover:text-neutral-900"
+            >
+              {copy.details}
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+
+          {/* 3–5 — ostale kartice */}
+          {restCards.map((item, i) => {
+            const ItemIcon = item.Icon;
+            return (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="group flex min-h-[220px] flex-col rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md lg:col-span-1"
             >
               <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl border border-neutral-200 text-neutral-700">
-                <Icon className="h-5 w-5" strokeWidth={1.7} />
+                <ItemIcon className="h-5 w-5" strokeWidth={1.7} />
               </div>
-              <h3 className="text-lg font-semibold tracking-tight text-neutral-900">{cards[index].title}</h3>
-              <p className="mt-2 flex-1 text-sm leading-relaxed text-neutral-600">{cards[index].description}</p>
+              <h3 className="text-lg font-semibold tracking-tight text-neutral-900">{cards[i + 1].title}</h3>
+              <p className="mt-2 flex-1 text-sm leading-relaxed text-neutral-600">{cards[i + 1].description}</p>
               <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-neutral-700 group-hover:text-neutral-900">
                 {copy.details}
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </span>
             </Link>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
