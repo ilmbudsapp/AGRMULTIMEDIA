@@ -1,5 +1,5 @@
 /** Site origin for canonical and multilingual alternates. */
-export const SITE_ORIGIN = "https://agrmultimedia.eu";
+export const SITE_ORIGIN = "https://www.agrmultimedia.eu";
 
 /** hreflang uses ISO 639-1; Albanian is `sq` while the app query param remains `lang=al`. */
 const LANG_ALTERNATES: { hreflang: string; langParam: string }[] = [

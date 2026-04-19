@@ -48,7 +48,8 @@ export default function MetaSEO() {
     setMetaContent("twitter-title", title);
     setMetaContent("twitter-description", description);
 
-    const canonicalFull = path === "/" ? "https://agrmultimedia.eu/" : `https://agrmultimedia.eu${path}`;
+    const canonicalFull =
+      path === "/" ? "https://www.agrmultimedia.eu/" : `https://www.agrmultimedia.eu${path}`;
     setLinkHref("canonical-url", canonicalFull);
     setMetaContent("og-url", canonicalFull);
     setMetaContent("twitter-url", canonicalFull);
