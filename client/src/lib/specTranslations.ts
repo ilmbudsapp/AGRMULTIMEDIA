@@ -73,6 +73,14 @@ export interface SpecTranslations {
     videoMotion: ServiceFlipCardCopy;
     aiContent: ServiceFlipCardCopy;
   };
+  /** Homepage: Adobe Premiere Pro / After Effects reel */
+  videoEditingShowcase: {
+    eyebrow: string;
+    title: string;
+    subtitle: string;
+    toolsLine: string;
+    videoAriaLabel: string;
+  };
   // Featured portfolio
   featuredPortfolio: {
     heading: string;
@@ -232,6 +240,13 @@ const en: SpecTranslations = {
       flipPrice: 'from €450',
       flipIncludes: 'Audits · On-page · Reporting',
     },
+  },
+  videoEditingShowcase: {
+    eyebrow: 'Video editing',
+    title: 'Video editing in Adobe Premiere Pro & After Effects',
+    subtitle: 'Selected clips from recent projects — press play to preview.',
+    toolsLine: 'Edited and composited in Adobe Premiere Pro and Adobe After Effects.',
+    videoAriaLabel: 'Edited video sample',
   },
   featuredPortfolio: {
     heading: 'Selected work',
@@ -432,6 +447,13 @@ const de: SpecTranslations = {
       flipIncludes: 'Audits · On-Page · Reporting',
     },
   },
+  videoEditingShowcase: {
+    eyebrow: 'Videobearbeitung',
+    title: 'Videobearbeitung mit Adobe Premiere Pro & After Effects',
+    subtitle: 'Ausgewählte Schnitte aus aktuellen Projekten — zum Ansehen abspielen.',
+    toolsLine: 'Schnitt und Compositing in Adobe Premiere Pro und Adobe After Effects.',
+    videoAriaLabel: 'Beispiel für bearbeitetes Video',
+  },
   featuredPortfolio: {
     heading: 'Ausgewählte Arbeiten',
     featuredIntro: 'Eine kuratierte Auswahl—das vollständige Portfolio auf Anfrage.',
@@ -630,6 +652,13 @@ const it: SpecTranslations = {
       flipPrice: 'da 450 €',
       flipIncludes: 'Audit · On-page · Report',
     },
+  },
+  videoEditingShowcase: {
+    eyebrow: 'Montaggio video',
+    title: 'Montaggio video con Adobe Premiere Pro e After Effects',
+    subtitle: 'Estratti da progetti recenti — premi play per l’anteprima.',
+    toolsLine: 'Montaggio e compositing in Adobe Premiere Pro e Adobe After Effects.',
+    videoAriaLabel: 'Campione di video montato',
   },
   featuredPortfolio: {
     heading: 'Lavori selezionati',
@@ -830,6 +859,13 @@ const sr: SpecTranslations = {
       flipIncludes: 'Audit · On-page · Izveštaji',
     },
   },
+  videoEditingShowcase: {
+    eyebrow: 'Video montaža',
+    title: 'Video montaža u Adobe Premiere Pro i Adobe After Effects',
+    subtitle: 'Izabrani isečci iz nedavnih projekata — pusti reprodukciju za pregled.',
+    toolsLine: 'Montaža i kompoziting u Adobe Premiere Pro i Adobe After Effects.',
+    videoAriaLabel: 'Primer montiranog videa',
+  },
   featuredPortfolio: {
     heading: 'Izabrani radovi',
     featuredIntro: 'Kuratirani izbor—ceo portfolio na zahtev.',
@@ -1028,6 +1064,13 @@ const al: SpecTranslations = {
       flipPrice: 'nga 450 €',
       flipIncludes: 'Audit · On-page · Raporte',
     },
+  },
+  videoEditingShowcase: {
+    eyebrow: 'Montim video',
+    title: 'Montim video me Adobe Premiere Pro dhe Adobe After Effects',
+    subtitle: 'Klipi të zgjedhur nga projektet e fundit — luaj për parapamje.',
+    toolsLine: 'Montim dhe kompozim në Adobe Premiere Pro dhe Adobe After Effects.',
+    videoAriaLabel: 'Shembull video të montuar',
   },
   featuredPortfolio: {
     heading: 'Punë të zgjedhura',

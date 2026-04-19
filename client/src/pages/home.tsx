@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import HomeServices from "@/components/HomeServices";
+import HomeVideoEditing from "@/components/HomeVideoEditing";
 import AboutHome from "@/components/AboutHome";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -22,6 +23,7 @@ export default function Home() {
       <main>
         <Hero />
         <HomeServices />
+        <HomeVideoEditing />
         <AboutHome />
         <Contact />
       </main>
