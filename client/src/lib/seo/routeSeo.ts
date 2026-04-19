@@ -270,6 +270,13 @@ const EXTRA_EN: Record<string, RouteSeo> = {
       "UX audits, analytics, and digital strategy consulting to grow your marketing and web presence.",
     keywords: "digital consulting, UX audit, digital marketing strategy, web design consulting, Geislingen",
   },
+  "/video-production": {
+    title: "Professional Video Editing | Premiere Pro & After Effects | AGR Multimedia",
+    description:
+      "Video editing for brands and campaigns — Adobe Premiere Pro, After Effects, and structured delivery for social, web, and ads.",
+    keywords:
+      "video editing, Adobe Premiere Pro, After Effects, Geislingen, corporate video, social video, video post-production",
+  },
   "/impresum": {
     title: "Impressum / Legal Notice | AGR Multimedia",
     description: "Legal disclosure and business details for AGR Multimedia in Germany.",
@@ -383,6 +390,13 @@ const EXTRA_DE: Record<string, RouteSeo> = {
       "UX-Audits, Analytics und Strategie für Wachstum im Web und Marketing.",
     keywords: "Digital Consulting, UX Audit, Marketingstrategie, Webdesign Beratung, Geislingen",
   },
+  "/video-production": {
+    title: "Professioneller Videoschnitt | Premiere Pro & After Effects | AGR Multimedia",
+    description:
+      "Videobearbeitung für Marken und Kampagnen — Adobe Premiere Pro, After Effects und strukturierte Auslieferung.",
+    keywords:
+      "Videoschnitt, Adobe Premiere Pro, After Effects, Geislingen, Unternehmensvideo, Social Video",
+  },
   "/impresum": {
     title: "Impressum | AGR Multimedia",
     description: "Gesetzliche Angaben und Kontaktdaten von AGR Multimedia in Deutschland.",
@@ -487,6 +501,13 @@ const EXTRA_IT: Record<string, RouteSeo> = {
     title: "Consulenza digitale | AGR Multimedia",
     description: "Audit UX, analytics e strategia per far crescere presenza web e marketing.",
     keywords: "consulenza digitale, UX audit, strategia marketing, Geislingen",
+  },
+  "/video-production": {
+    title: "Montaggio video professionale | Premiere Pro e After Effects | AGR Multimedia",
+    description:
+      "Montaggio video per brand e campagne — Adobe Premiere Pro, After Effects e consegna strutturata per social, web e ads.",
+    keywords:
+      "montaggio video, Adobe Premiere Pro, After Effects, Geislingen, video aziendale, post-produzione video",
   },
   "/impresum": {
     title: "Note legali (Impressum) | AGR Multimedia",
@@ -593,6 +614,13 @@ const EXTRA_SR: Record<string, RouteSeo> = {
     description: "UX revizije, analitika i strategija za rast prisustva na mreži.",
     keywords: "konsalting, UX audit, digitalni marketing strategija, Geislingen",
   },
+  "/video-production": {
+    title: "Profesionalni video montaža | Premiere Pro i After Effects | AGR Multimedia",
+    description:
+      "Montaža videa za brendove i kampanje — Adobe Premiere Pro, After Effects i strukturisana isporuka za web i društvene mreže.",
+    keywords:
+      "video montaža, Adobe Premiere Pro, After Effects, Geislingen, korporativni video, video postprodukcija",
+  },
   "/impresum": {
     title: "Impresum / pravne napomene | AGR Multimedia",
     description: "Pravne informacije i poslovni podaci za AGR Multimedia u Nemačkoj.",
@@ -697,6 +725,13 @@ const EXTRA_AL: Record<string, RouteSeo> = {
     title: "Konsulencë digjitale | AGR Multimedia",
     description: "Audit UX, analitikë dhe strategji për rritje në web dhe marketing.",
     keywords: "konsulencë digjitale, UX audit, strategji marketing, Geislingen",
+  },
+  "/video-production": {
+    title: "Montim profesional video | Premiere Pro dhe After Effects | AGR Multimedia",
+    description:
+      "Montim video për brende dhe fushata — Adobe Premiere Pro, After Effects dhe dorëzim i strukturuar për web dhe rrjete sociale.",
+    keywords:
+      "montim video, Adobe Premiere Pro, After Effects, Geislingen, video biznesi, post-produksion video",
   },
   "/impresum": {
     title: "Impresum | AGR Multimedia",

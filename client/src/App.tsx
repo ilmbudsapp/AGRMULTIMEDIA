@@ -24,6 +24,7 @@ const DigitalMarketing = lazy(() => import("@/pages/digital-marketing"));
 const AIContentCreation = lazy(() => import("@/pages/ai-content-creation"));
 const ApplicationDesignDevelopment = lazy(() => import("@/pages/application-design-development"));
 const Photography = lazy(() => import("@/pages/photography"));
+const VideoProduction = lazy(() => import("@/pages/video-production"));
 const Consulting = lazy(() => import("@/pages/consulting"));
 const Impresum = lazy(() => import("@/pages/impresum"));
 const DigitalMarketingTrends2024 = lazy(() => import("@/pages/blog/digital-marketing-trends-2024"));
@@ -58,6 +59,7 @@ function Router() {
       <Route path="/ai-content-creation" component={AIContentCreation} />
       <Route path="/application-design-development" component={ApplicationDesignDevelopment} />
       <Route path="/photography" component={Photography} />
+      <Route path="/video-production" component={VideoProduction} />
       <Route path="/consulting" component={Consulting} />
       <Route path="/impresum" component={Impresum} />
       <Route path="/blog/digital-marketing-trends-2024" component={DigitalMarketingTrends2024} />
