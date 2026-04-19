@@ -24,7 +24,7 @@ function posterSrc(n: number) {
 
 function clipSrc(n: number) {
   if (n === 5) {
-    return encodeURI("/Video editing/5 osoba.mp4");
+    return "/Video editing/5-osoba.mp4";
   }
   return encodeURI(`/Video editing/${n}.mp4`);
 }
@@ -265,7 +265,7 @@ export default function VideoProduction() {
             <video
               controls
               playsInline
-              preload="none"
+              preload="metadata"
               poster={posterSrc(n)}
               className="aspect-video w-full bg-neutral-900 object-contain"
               aria-label={`${clipAria} ${n}`}

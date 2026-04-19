@@ -11,6 +11,7 @@
     "check": "tsc",
     "extract-video-posters": "node scripts/extract-video-posters.mjs",
     "extract-video-editing-posters": "node scripts/extract-video-editing-posters.mjs",
+    "transcode-video-editing-mobile": "node scripts/transcode-video-editing-mobile-friendly.mjs",
     "db:push": "drizzle-kit push"
   },
   "dependencies": {
