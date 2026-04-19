@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { CheckCircle2, Wrench, ArrowRight, ExternalLink } from "lucide-react";
+import type { ReactNode } from "react";
 import type { LocalizedSubsection, ServiceTemplateLabels } from "@/lib/servicePageI18n";
 
 type ServicePageTemplateProps = {
@@ -25,6 +26,8 @@ type ServicePageTemplateProps = {
   showcaseFirst?: boolean;
   hideSelectedWorkSection?: boolean;
   hideToolsSection?: boolean;
+  /** When set, replaces the default placeholder slots under Selected work */
+  selectedWorkSlots?: ReactNode;
 };
 
 export default function ServicePageTemplate({
@@ -48,6 +51,7 @@ export default function ServicePageTemplate({
   showcaseFirst = false,
   hideSelectedWorkSection = false,
   hideToolsSection = false,
+  selectedWorkSlots,
 }: ServicePageTemplateProps) {
   const anchorLinks = [
     ...(showcaseFirst
@@ -336,6 +340,9 @@ export default function ServicePageTemplate({
           <article className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
             <h2 className="text-2xl font-semibold tracking-tight">{selectedWorkTitle}</h2>
             <p className="mt-3 text-neutral-600">{selectedWorkIntro}</p>
+            {selectedWorkSlots ? (
+              <div className="mt-5">{selectedWorkSlots}</div>
+            ) : (
             <div className="mt-5 grid gap-3 sm:grid-cols-3">
               <div className="rounded-xl border border-dashed border-neutral-300 bg-neutral-50 p-4 text-sm text-neutral-600">
                 {labels.selectedWorkSlot} 1 ({labels.futureProject})
@@ -347,6 +354,7 @@ export default function ServicePageTemplate({
                 {labels.selectedWorkSlot} 3 ({labels.futureProject})
               </div>
             </div>
+            )}
           </article>
         </section>
         ) : null}

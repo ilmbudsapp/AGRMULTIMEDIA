@@ -242,9 +242,8 @@ const en: SpecTranslations = {
   },
   servicesVideoEditing: {
     cardTitle: 'Video editing',
-    cardDescription:
-      'Edited in Adobe Premiere Pro and Adobe After Effects — selected clips from recent projects below.',
-    toolsHint: 'Adobe Premiere Pro · Adobe After Effects',
+    cardDescription: 'Adobe Premiere Pro and After Effects.',
+    toolsHint: 'Premiere Pro · After Effects',
     videoAriaLabel: 'Edited video clip',
   },
   featuredPortfolio: {
@@ -448,9 +447,8 @@ const de: SpecTranslations = {
   },
   servicesVideoEditing: {
     cardTitle: 'Videobearbeitung',
-    cardDescription:
-      'Bearbeitet mit Adobe Premiere Pro und After Effects — ausgewählte Schnitte aus aktuellen Projekten.',
-    toolsHint: 'Adobe Premiere Pro · Adobe After Effects',
+    cardDescription: 'Adobe Premiere Pro und After Effects.',
+    toolsHint: 'Premiere Pro · After Effects',
     videoAriaLabel: 'Bearbeiteter Videoclip',
   },
   featuredPortfolio: {
@@ -654,9 +652,8 @@ const it: SpecTranslations = {
   },
   servicesVideoEditing: {
     cardTitle: 'Montaggio video',
-    cardDescription:
-      'Lavorato in Adobe Premiere Pro e After Effects — estratti selezionati da progetti recenti.',
-    toolsHint: 'Adobe Premiere Pro · Adobe After Effects',
+    cardDescription: 'Adobe Premiere Pro e After Effects.',
+    toolsHint: 'Premiere Pro · After Effects',
     videoAriaLabel: 'Clip video montato',
   },
   featuredPortfolio: {
@@ -860,9 +857,8 @@ const sr: SpecTranslations = {
   },
   servicesVideoEditing: {
     cardTitle: 'Video montaža',
-    cardDescription:
-      'Montaža u Adobe Premiere Pro i After Effects — izabrani isečci iz nedavnih projekata.',
-    toolsHint: 'Adobe Premiere Pro · Adobe After Effects',
+    cardDescription: 'Adobe Premiere Pro i After Effects.',
+    toolsHint: 'Premiere Pro · After Effects',
     videoAriaLabel: 'Montirani video klip',
   },
   featuredPortfolio: {
@@ -1066,9 +1062,8 @@ const al: SpecTranslations = {
   },
   servicesVideoEditing: {
     cardTitle: 'Montim video',
-    cardDescription:
-      'Montuar në Adobe Premiere Pro dhe After Effects — klipa të zgjedhura nga projektet e fundit.',
-    toolsHint: 'Adobe Premiere Pro · Adobe After Effects',
+    cardDescription: 'Adobe Premiere Pro dhe After Effects.',
+    toolsHint: 'Premiere Pro · After Effects',
     videoAriaLabel: 'Klip video i montuar',
   },
   featuredPortfolio: {

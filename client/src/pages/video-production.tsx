@@ -3,6 +3,16 @@ import ServicePageTemplate from "@/components/ServicePageTemplate";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { buildSubsections, getServiceTemplateLabels, toServiceLang, type ServiceLang } from "@/lib/servicePageI18n";
 
+const VIDEO_CLIP_IDS = [1, 2, 3, 4, 5, 6, 7] as const;
+
+function posterSrc(n: number) {
+  return encodeURI(`/Video editing/posters/${n}.jpg`);
+}
+
+function clipSrc(n: number) {
+  return encodeURI(`/Video editing/${n}.mp4`);
+}
+
 type VideoContent = {
   eyebrow: string;
   h1: string;
@@ -36,8 +46,8 @@ const videoByLang: Record<ServiceLang, VideoContent> = {
       { id: "business-presentation-videos", h3: "Business Presentation Videos" },
       { id: "reels-tiktok-editing", h3: "Reels and TikTok Video Editing" },
     ],
-    selectedWorkTitle: "Selected Work Placeholder",
-    selectedWorkIntro: "Reserved for curated video projects in the next phase.",
+    selectedWorkTitle: "Sample clips",
+    selectedWorkIntro: "Recent cuts from commercial, social, and presentation work.",
     toolsTitle: "Tools / Software I Use",
     tools: ["Adobe Premiere Pro", "After Effects", "CapCut Pro", "DaVinci Resolve", "Frame.io review workflow"],
     whyChooseTitle: "Why Choose This Service",
@@ -84,8 +94,8 @@ const videoByLang: Record<ServiceLang, VideoContent> = {
       { id: "business-presentation-videos", h3: "Video di presentazione aziendale" },
       { id: "reels-tiktok-editing", h3: "Montaggio per Reels e TikTok" },
     ],
-    selectedWorkTitle: "Esempi di lavori (in aggiornamento)",
-    selectedWorkIntro: "Riservato a progetti video curati nella fase successiva.",
+    selectedWorkTitle: "Clip di esempio",
+    selectedWorkIntro: "Tagli recenti da progetti commerciali e social.",
     toolsTitle: "Strumenti e software che utilizzo",
     tools: ["Adobe Premiere Pro", "After Effects", "CapCut Pro", "DaVinci Resolve", "Frame.io"],
     whyChooseTitle: "Perché scegliere questo servizio",
@@ -108,8 +118,8 @@ const videoByLang: Record<ServiceLang, VideoContent> = {
       { id: "business-presentation-videos", h3: "Prezentacioni video za poslovanje" },
       { id: "reels-tiktok-editing", h3: "Montaža za Reels i TikTok" },
     ],
-    selectedWorkTitle: "Primeri odabranih radova (uskoro)",
-    selectedWorkIntro: "Rezervisano za kurirane video projekte u sledećoj fazi.",
+    selectedWorkTitle: "Primeri klipova",
+    selectedWorkIntro: "Skraćeni isečci iz nedavnih projekata.",
     toolsTitle: "Alati / softver koji koristim",
     tools: ["Adobe Premiere Pro", "After Effects", "CapCut Pro", "DaVinci Resolve", "Frame.io"],
     whyChooseTitle: "Zašto izabrati ovu uslugu",
@@ -132,8 +142,8 @@ const videoByLang: Record<ServiceLang, VideoContent> = {
       { id: "business-presentation-videos", h3: "Video prezantimi për biznes" },
       { id: "reels-tiktok-editing", h3: "Montim për Reels dhe TikTok" },
     ],
-    selectedWorkTitle: "Shembuj punësh të zgjedhura (së shpejti)",
-    selectedWorkIntro: "I rezervuar për projekte video të kuruara në fazën e ardhshme.",
+    selectedWorkTitle: "Shembuj klipesh",
+    selectedWorkIntro: "Prerje të fundit nga projekte komerciale dhe në rrjete sociale.",
     toolsTitle: "Mjetet dhe softuerët që përdor",
     tools: ["Adobe Premiere Pro", "After Effects", "CapCut Pro", "DaVinci Resolve", "Frame.io"],
     whyChooseTitle: "Pse të zgjidhni këtë shërbim",
@@ -146,13 +156,36 @@ const videoByLang: Record<ServiceLang, VideoContent> = {
 };
 
 export default function VideoProduction() {
-  const { currentLanguage } = useLanguage();
+  const { currentLanguage, tSpec } = useLanguage();
   const lang = toServiceLang(currentLanguage);
   const copy = videoByLang[lang];
+  const clipAria = tSpec.servicesVideoEditing.videoAriaLabel;
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const selectedWorkSlots = (
+    <div className="grid grid-cols-2 gap-3 lg:grid-cols-3">
+      {VIDEO_CLIP_IDS.map((n) => (
+        <div
+          key={n}
+          className="overflow-hidden rounded-lg border border-neutral-200 bg-neutral-950 shadow-inner"
+        >
+          <video
+            controls
+            playsInline
+            preload="none"
+            poster={posterSrc(n)}
+            className="aspect-video w-full object-contain"
+            aria-label={`${clipAria} ${n}`}
+          >
+            <source src={clipSrc(n)} type="video/mp4" />
+          </video>
+        </div>
+      ))}
+    </div>
+  );
 
   return (
     <ServicePageTemplate
@@ -165,6 +198,7 @@ export default function VideoProduction() {
       subsections={buildSubsections(lang, copy.subsectionTitles)}
       selectedWorkTitle={copy.selectedWorkTitle}
       selectedWorkIntro={copy.selectedWorkIntro}
+      selectedWorkSlots={selectedWorkSlots}
       toolsTitle={copy.toolsTitle}
       tools={copy.tools}
       whyChooseTitle={copy.whyChooseTitle}

@@ -30,47 +30,69 @@ const SERVICE_CARDS = [
   },
 ] as const;
 
-const VIDEO_CLIP_IDS = [1, 2, 3, 4, 5, 6, 7] as const;
+type HomeServiceCardLine = { title: string; description: string };
 
-function posterSrc(n: number) {
-  return encodeURI(`/Video editing/posters/${n}.jpg`);
-}
-
-function clipSrc(n: number) {
-  return encodeURI(`/Video editing/${n}.mp4`);
-}
-
-const cardTextByLang: Record<ServiceLang, { title: string; description: string }[]> = {
-  en: [
-    { title: "Graphic design", description: "Branding systems, logos, and marketing design assets for small businesses." },
-    { title: "AI content creation", description: "AI-generated images, product visuals, and video assets for campaigns." },
-    { title: "Web design & SEO", description: "Mobile-friendly sites with on-page SEO and a clear, optimized structure." },
-    { title: "Apps & development", description: "Custom app concepts, internal tools, and prototype interfaces." },
-  ],
-  de: [
-    { title: "Grafikdesign", description: "Branding-Systeme, Logos und Marketing-Design für kleine Unternehmen." },
-    { title: "KI-Inhaltserstellung", description: "KI-Bilder, Produktvisuals und KI-Videos für kampagnentaugliche Ergebnisse." },
-    { title: "Webdesign & SEO", description: "Mobile-first-Websites mit On-Page-SEO und klar optimierter Struktur." },
-    { title: "Apps & Entwicklung", description: "Individuelle App-Konzepte, interne Tools und Prototyp-Oberflächen." },
-  ],
-  it: [
-    { title: "Grafica", description: "Sistemi di brand, logotipi e materiali di comunicazione per piccole imprese." },
-    { title: "Contenuti con IA", description: "Immagini, visual di prodotto e video generati con intelligenza artificiale per le campagne." },
-    { title: "Web e SEO", description: "Siti ottimizzati per mobile, SEO on-page e struttura chiara." },
-    { title: "App e sviluppo", description: "Concept di app, strumenti interni e prototipi di interfaccia." },
-  ],
-  sr: [
-    { title: "Grafički dizajn", description: "Brending sistemi, logotipi i marketinški materijali za mala preduzeća." },
-    { title: "AI sadržaj", description: "AI generisane slike, vizueli proizvoda i video materijal za kampanje." },
-    { title: "Veb dizajn i SEO", description: "Sajtovi prilagođeni mobilnim uređajima, on-page SEO i jasna struktura." },
-    { title: "Aplikacije i razvoj", description: "Koncepti aplikacija, interni alati i prototipi interfejsa." },
-  ],
-  al: [
-    { title: "Dizajn grafik", description: "Sisteme brandi, logo dhe materiale komunikimi për biznese të vogla." },
-    { title: "Përmbajtje me IA", description: "Imazhe, pamje produkti dhe video të gjeneruara me IA për fushata." },
-    { title: "Ueb-i dhe SEO", description: "Faqe miqësore për celular, SEO në faqe dhe strukturë e optimizuar." },
-    { title: "Aplikacione dhe zhvillim", description: "Koncepte aplikacionesh, mjete të brendshme dhe prototipe ndërfaqeje." },
-  ],
+const cardTextByLang: Record<ServiceLang, { grid: HomeServiceCardLine[]; video: HomeServiceCardLine }> = {
+  en: {
+    grid: [
+      { title: "Graphic design", description: "Branding systems, logos, and marketing design assets for small businesses." },
+      { title: "AI content creation", description: "AI-generated images, product visuals, and video assets for campaigns." },
+      { title: "Web design & SEO", description: "Mobile-friendly sites with on-page SEO and a clear, optimized structure." },
+      { title: "Apps & development", description: "Custom app concepts, internal tools, and prototype interfaces." },
+    ],
+    video: {
+      title: "Video editing",
+      description: "Cuts for ads, social, and reels — Premiere Pro & After Effects.",
+    },
+  },
+  de: {
+    grid: [
+      { title: "Grafikdesign", description: "Branding-Systeme, Logos und Marketing-Design für kleine Unternehmen." },
+      { title: "KI-Inhaltserstellung", description: "KI-Bilder, Produktvisuals und KI-Videos für kampagnentaugliche Ergebnisse." },
+      { title: "Webdesign & SEO", description: "Mobile-first-Websites mit On-Page-SEO und klar optimierter Struktur." },
+      { title: "Apps & Entwicklung", description: "Individuelle App-Konzepte, interne Tools und Prototyp-Oberflächen." },
+    ],
+    video: {
+      title: "Videoschnitt",
+      description: "Schnitte für Ads, Social & Reels — Premiere Pro & After Effects.",
+    },
+  },
+  it: {
+    grid: [
+      { title: "Grafica", description: "Sistemi di brand, logotipi e materiali di comunicazione per piccole imprese." },
+      { title: "Contenuti con IA", description: "Immagini, visual di prodotto e video generati con intelligenza artificiale per le campagne." },
+      { title: "Web e SEO", description: "Siti ottimizzati per mobile, SEO on-page e struttura chiara." },
+      { title: "App e sviluppo", description: "Concept di app, strumenti interni e prototipi di interfaccia." },
+    ],
+    video: {
+      title: "Montaggio video",
+      description: "Tagli per social, reel e ads — Premiere Pro e After Effects.",
+    },
+  },
+  sr: {
+    grid: [
+      { title: "Grafički dizajn", description: "Brending sistemi, logotipi i marketinški materijali za mala preduzeća." },
+      { title: "AI sadržaj", description: "AI generisane slike, vizueli proizvoda i video materijal za kampanje." },
+      { title: "Veb dizajn i SEO", description: "Sajtovi prilagođeni mobilnim uređajima, on-page SEO i jasna struktura." },
+      { title: "Aplikacije i razvoj", description: "Koncepti aplikacija, interni alati i prototipi interfejsa." },
+    ],
+    video: {
+      title: "Video montaža",
+      description: "Montaža za reklame, društvene mreže i kratke formate — Premiere & After Effects.",
+    },
+  },
+  al: {
+    grid: [
+      { title: "Dizajn grafik", description: "Sisteme brandi, logo dhe materiale komunikimi për biznese të vogla." },
+      { title: "Përmbajtje me IA", description: "Imazhe, pamje produkti dhe video të gjeneruara me IA për fushata." },
+      { title: "Ueb-i dhe SEO", description: "Faqe miqësore për celular, SEO në faqe dhe strukturë e optimizuar." },
+      { title: "Aplikacione dhe zhvillim", description: "Koncepte aplikacionesh, mjete të brendshme dhe prototipe ndërfaqeje." },
+    ],
+    video: {
+      title: "Montim video",
+      description: "Për social, reklama dhe prezantime — Premiere Pro dhe After Effects.",
+    },
+  },
 };
 
 const copyByLang: Record<ServiceLang, { eyebrow: string; title: string; subtitle: string; details: string }> = {
@@ -112,11 +134,10 @@ const copyByLang: Record<ServiceLang, { eyebrow: string; title: string; subtitle
 };
 
 export default function HomeServices() {
-  const { currentLanguage, tSpec } = useLanguage();
+  const { currentLanguage } = useLanguage();
   const lang = toServiceLang(currentLanguage);
   const copy = copyByLang[lang];
-  const cards = cardTextByLang[lang];
-  const sv = tSpec.servicesVideoEditing;
+  const cardLines = cardTextByLang[lang];
 
   const graphicCard = SERVICE_CARDS[0];
   const GraphicIcon = graphicCard.Icon;
@@ -142,58 +163,30 @@ export default function HomeServices() {
             <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl border border-neutral-200 text-neutral-700">
               <GraphicIcon className="h-5 w-5" strokeWidth={1.7} />
             </div>
-            <h3 className="text-lg font-semibold tracking-tight text-neutral-900">{cards[0].title}</h3>
-            <p className="mt-2 flex-1 text-sm leading-relaxed text-neutral-600">{cards[0].description}</p>
+            <h3 className="text-lg font-semibold tracking-tight text-neutral-900">{cardLines.grid[0].title}</h3>
+            <p className="mt-2 flex-1 text-sm leading-relaxed text-neutral-600">{cardLines.grid[0].description}</p>
             <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-neutral-700 group-hover:text-neutral-900">
               {copy.details}
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </span>
           </Link>
 
-          {/* 2 — Video editing (Premiere / After Effects): full-card link; videos stay interactive above overlay */}
-          <div
+          {/* 2 — Video editing */}
+          <Link
             id="video-editing-services"
-            className="group relative flex flex-col rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md lg:col-span-2"
+            href="/video-production"
+            className="group flex min-h-[220px] flex-col rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md lg:col-span-2"
           >
-            <Link
-              href="/video-production"
-              className="absolute inset-0 z-10 rounded-2xl outline-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-neutral-400"
-              aria-label={`${sv.cardTitle} — ${copy.details}`}
-            />
-            <div className="relative z-20 flex flex-col pointer-events-none">
-              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl border border-neutral-200 text-neutral-700">
-                <Film className="h-5 w-5" strokeWidth={1.7} />
-              </div>
-              <h3 className="text-lg font-semibold tracking-tight text-neutral-900">{sv.cardTitle}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-neutral-600">{sv.cardDescription}</p>
-              <p className="mt-1 text-xs text-neutral-500">{sv.toolsHint}</p>
-
-              <div className="relative z-30 mt-5 grid grid-cols-2 gap-3 pointer-events-auto lg:grid-cols-3">
-                {VIDEO_CLIP_IDS.map((n) => (
-                  <div
-                    key={n}
-                    className="overflow-hidden rounded-lg border border-neutral-200 bg-neutral-950 shadow-inner"
-                  >
-                    <video
-                      controls
-                      playsInline
-                      preload="none"
-                      poster={posterSrc(n)}
-                      className="aspect-video w-full object-contain"
-                      aria-label={`${sv.videoAriaLabel} ${n}`}
-                    >
-                      <source src={clipSrc(n)} type="video/mp4" />
-                    </video>
-                  </div>
-                ))}
-              </div>
-
-              <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-neutral-700 group-hover:text-neutral-900">
-                {copy.details}
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-              </span>
+            <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl border border-neutral-200 text-neutral-700">
+              <Film className="h-5 w-5" strokeWidth={1.7} />
             </div>
-          </div>
+            <h3 className="text-lg font-semibold tracking-tight text-neutral-900">{cardLines.video.title}</h3>
+            <p className="mt-2 flex-1 text-sm leading-relaxed text-neutral-600">{cardLines.video.description}</p>
+            <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-neutral-700 group-hover:text-neutral-900">
+              {copy.details}
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+            </span>
+          </Link>
 
           {/* 3–5 — ostale kartice */}
           {restCards.map((item, i) => {
@@ -207,8 +200,8 @@ export default function HomeServices() {
               <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl border border-neutral-200 text-neutral-700">
                 <ItemIcon className="h-5 w-5" strokeWidth={1.7} />
               </div>
-              <h3 className="text-lg font-semibold tracking-tight text-neutral-900">{cards[i + 1].title}</h3>
-              <p className="mt-2 flex-1 text-sm leading-relaxed text-neutral-600">{cards[i + 1].description}</p>
+              <h3 className="text-lg font-semibold tracking-tight text-neutral-900">{cardLines.grid[i + 1].title}</h3>
+              <p className="mt-2 flex-1 text-sm leading-relaxed text-neutral-600">{cardLines.grid[i + 1].description}</p>
               <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-neutral-700 group-hover:text-neutral-900">
                 {copy.details}
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
