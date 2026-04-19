@@ -14,7 +14,7 @@ import {
   Layers,
 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { toServiceLang, type ServiceLang } from "@/lib/servicePageI18n";
+import { getServiceTemplateLabels, toServiceLang, type ServiceLang } from "@/lib/servicePageI18n";
 
 const VIDEO_CLIP_IDS = [1, 2, 3, 4, 5, 6, 7] as const;
 
@@ -42,6 +42,8 @@ type VideoPageCopy = {
   ctaQuote: string;
   samplesTitle: string;
   samplesIntro: string;
+  /** Footer label before index, e.g. "Editing clip 1" — matches AI gallery figcaption style */
+  clipCaptionPrefix: string;
   localNote: string;
 };
 
@@ -81,6 +83,7 @@ const copyByLang: Record<ServiceLang, VideoPageCopy> = {
     ctaQuote: "Request a Quote",
     samplesTitle: "Sample clips",
     samplesIntro: "Recent cuts — press play to preview style and pacing.",
+    clipCaptionPrefix: "Editing clip",
     localNote: "Serving Geislingen, the Stuttgart region, and remote teams across the EU.",
   },
   de: {
@@ -118,6 +121,7 @@ const copyByLang: Record<ServiceLang, VideoPageCopy> = {
     ctaQuote: "Angebot anfragen",
     samplesTitle: "Beispielclips",
     samplesIntro: "Kurz Hineinhören — Stil und Tempo zeigen sich direkt im Player.",
+    clipCaptionPrefix: "Schnittbeispiel",
     localNote: "Geislingen, Region Stuttgart — dazu Remote-Teams EU-weit.",
   },
   it: {
@@ -155,6 +159,7 @@ const copyByLang: Record<ServiceLang, VideoPageCopy> = {
     ctaQuote: "Richiedi un preventivo",
     samplesTitle: "Clip di esempio",
     samplesIntro: "Anteprima rapida di stile e ritmo.",
+    clipCaptionPrefix: "Clip montaggio",
     localNote: "Geislingen e regione — anche progetti remote in UE.",
   },
   sr: {
@@ -191,6 +196,7 @@ const copyByLang: Record<ServiceLang, VideoPageCopy> = {
     ctaQuote: "Zatraži ponudu",
     samplesTitle: "Primeri klipova",
     samplesIntro: "Kratki pregled stila i tempa.",
+    clipCaptionPrefix: "Montažni klip",
     localNote: "Geislingen, region Štutgart — i daljinski timovi u EU.",
   },
   al: {
@@ -240,30 +246,35 @@ export default function VideoProduction() {
   const lang = toServiceLang(currentLanguage);
   const copy = copyByLang[lang];
   const clipAria = tSpec.servicesVideoEditing.videoAriaLabel;
+  const tmplLabels = getServiceTemplateLabels(lang);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  /** Same grid + player chrome as AI video gallery (`ServicePageTemplate` + digital-marketing page): 2 cols on large screens, larger players */
   const selectedWorkSlots = (
-    <div className="grid grid-cols-2 gap-3 lg:grid-cols-3">
-      {VIDEO_CLIP_IDS.map((n) => (
-        <div
-          key={n}
-          className="overflow-hidden rounded-lg border border-neutral-200 bg-neutral-950 shadow-inner"
-        >
-          <video
-            controls
-            playsInline
-            preload="none"
-            poster={posterSrc(n)}
-            className="aspect-video w-full object-contain"
-            aria-label={`${clipAria} ${n}`}
-          >
-            <source src={clipSrc(n)} type="video/mp4" />
-          </video>
-        </div>
-      ))}
+    <div className="rounded-xl border border-neutral-200 bg-neutral-50 p-4">
+      <h4 className="text-sm font-semibold text-neutral-800">{tmplLabels.videoExamples}</h4>
+      <div className="mt-4 grid gap-4 sm:grid-cols-1 lg:grid-cols-2">
+        {VIDEO_CLIP_IDS.map((n) => (
+          <figure key={n} className="overflow-hidden rounded-lg border border-neutral-200 bg-neutral-950 shadow-sm">
+            <video
+              controls
+              playsInline
+              preload="none"
+              poster={posterSrc(n)}
+              className="aspect-video w-full bg-neutral-900 object-contain"
+              aria-label={`${clipAria} ${n}`}
+            >
+              <source src={clipSrc(n)} type="video/mp4" />
+            </video>
+            <figcaption className="bg-neutral-50 px-2 py-2 text-center text-xs text-neutral-600">
+              {copy.clipCaptionPrefix} {n}
+            </figcaption>
+          </figure>
+        ))}
+      </div>
     </div>
   );
 
