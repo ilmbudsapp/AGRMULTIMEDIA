@@ -23,6 +23,9 @@ function posterSrc(n: number) {
 }
 
 function clipSrc(n: number) {
+  if (n === 5) {
+    return encodeURI("/Video editing/5 osoba.mp4");
+  }
   return encodeURI(`/Video editing/${n}.mp4`);
 }
 

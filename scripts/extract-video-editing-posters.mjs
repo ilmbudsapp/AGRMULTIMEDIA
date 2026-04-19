@@ -1,5 +1,6 @@
 /**
  * Extract JPG posters from MP4s in client/public/Video editing/
+ * Slot 5 uses source file `5 osoba.mp4` (poster still named `posters/5.jpg`).
  * Run: npm run extract-video-editing-posters
  */
 import { execFileSync } from "node:child_process";
@@ -24,13 +25,14 @@ fs.mkdirSync(posterDir, { recursive: true });
 const SEEK = "00:00:02";
 
 for (let i = 1; i <= 7; i++) {
-  const input = path.join(videoDir, `${i}.mp4`);
+  const sourceFile = i === 5 ? "5 osoba.mp4" : `${i}.mp4`;
+  const input = path.join(videoDir, sourceFile);
   const output = path.join(posterDir, `${i}.jpg`);
   if (!fs.existsSync(input)) {
     console.warn("skip missing", input);
     continue;
   }
-  console.log("Extracting poster", `${i}.jpg`, "from", `${i}.mp4`);
+  console.log("Extracting poster", `${i}.jpg`, "from", sourceFile);
   execFileSync(
     ffmpegPath,
     [
