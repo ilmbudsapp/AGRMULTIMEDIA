@@ -1,7 +1,7 @@
 import { Link } from "wouter";
-import { LayoutGrid, Palette, Sparkles, AppWindow, ArrowRight } from "lucide-react";
+import { LayoutGrid, Palette, Sparkles, AppWindow, ArrowRight, Film } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { getPremiumTranslations } from "@/lib/premiumI18n";
+import { toServiceLang, type ServiceLang } from "@/lib/servicePageI18n";
 
 const SERVICE_CARDS = [
   {
@@ -16,22 +16,99 @@ const SERVICE_CARDS = [
 ] as const;
 
 export default function HomeServices() {
-  const { currentLanguage } = useLanguage();
-  const premium = getPremiumTranslations(currentLanguage);
+  const { currentLanguage, tSpec } = useLanguage();
+  const lang = toServiceLang(currentLanguage);
+
+  const serviceLinesByLang: Record<
+    ServiceLang,
+    { eyebrow: string; heading: string; subtitle: string; details: string }
+  > = {
+    en: {
+      eyebrow: "Services",
+      heading: "Clear service structure for small business growth",
+      subtitle:
+        "Choose the exact service you need. Each area has a dedicated page with clear scope, deliverables, tools, and a direct consultation path.",
+      details: "View service details",
+    },
+    de: {
+      eyebrow: "Leistungen",
+      heading: "Klare Service-Struktur fur Wachstum kleiner Unternehmen",
+      subtitle:
+        "Wahlen Sie die Leistung, die Sie brauchen. Jeder Bereich hat eine eigene Seite mit klarem Umfang, Ergebnissen und direktem Beratungsweg.",
+      details: "Service-Details ansehen",
+    },
+    it: {
+      eyebrow: "Servizi",
+      heading: "Struttura servizi chiara per la crescita delle piccole imprese",
+      subtitle:
+        "Scegli il servizio giusto. Ogni area ha una pagina dedicata con ambito chiaro, consegne e percorso diretto di consulenza.",
+      details: "Vedi dettagli servizio",
+    },
+    sr: {
+      eyebrow: "Usluge",
+      heading: "Jasna struktura usluga za rast malih biznisa",
+      subtitle:
+        "Izaberi tacno uslugu koja ti treba. Svaka oblast ima posebnu stranicu sa jasnim obimom, isporukom i direktnim putem do konsultacije.",
+      details: "Pogledaj detalje usluge",
+    },
+    al: {
+      eyebrow: "Sherbime",
+      heading: "Strukture e qarte sherbimesh per rritjen e bizneseve te vogla",
+      subtitle:
+        "Zgjidh sherbimin qe te duhet. Cdo fushe ka faqe te dedikuar me shtrirje te qarte dhe rruge direkte konsultimi.",
+      details: "Shiko detajet e sherbimit",
+    },
+  };
+
+  const copy = serviceLinesByLang[lang];
+  const cards = [
+    { ...SERVICE_CARDS[0], title: tSpec.servicesPreview.graphicBranding.title, description: tSpec.servicesPreview.graphicBranding.description },
+    { ...SERVICE_CARDS[1], title: tSpec.servicesPreview.aiContent.title, description: tSpec.servicesPreview.aiContent.description },
+    { ...SERVICE_CARDS[2], title: tSpec.servicesPreview.webUi.title, description: tSpec.servicesPreview.webUi.description },
+    {
+      title: tSpec.servicesVideoEditing.cardTitle,
+      description: tSpec.servicesVideoEditing.cardDescription,
+      href: "/video-production",
+      Icon: Film,
+    },
+    {
+      ...SERVICE_CARDS[3],
+      title:
+        lang === "de"
+          ? "Apps & Entwicklung"
+          : lang === "it"
+            ? "App e sviluppo"
+            : lang === "sr"
+              ? "Aplikacije i razvoj"
+              : lang === "al"
+                ? "Aplikacione dhe zhvillim"
+                : "Apps & Development",
+      description:
+        lang === "de"
+          ? "Individuelle App-Konzepte, nutzliche Business-Tools und Prototyp-Oberflachen."
+          : lang === "it"
+            ? "Concept app personalizzati, strumenti utili per il business e prototipi di interfaccia."
+            : lang === "sr"
+              ? "Prilagodjeni koncepti aplikacija, korisni poslovni alati i prototipi interfejsa."
+              : lang === "al"
+                ? "Koncepte aplikacionesh te personalizuara, mjete biznesi dhe prototipe nderfaqesh."
+                : "Custom app concepts, useful business tools, and prototype interfaces.",
+    },
+  ];
 
   return (
     <section id="services-preview" className="premium-section scroll-mt-24 border-t border-[#333333] py-20 md:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 max-w-3xl">
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-blue-300/80">{premium.services.eyebrow}</p>
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-blue-300/80">{copy.eyebrow}</p>
           <h2 className="text-3xl font-semibold tracking-tight text-white md:text-4xl">
-            {premium.services.heading}
+            {copy.heading}
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-white/70">{premium.services.description}</p>
+          <p className="mt-4 text-base leading-relaxed text-white/70">{copy.subtitle}</p>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-2">
-          {SERVICE_CARDS.map((item, i) => {
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {cards.map((item) => {
             const ItemIcon = item.Icon;
             return (
               <Link
@@ -42,9 +119,10 @@ export default function HomeServices() {
                 <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl border border-[#333333] text-blue-200">
                   <ItemIcon className="h-5 w-5" strokeWidth={1.7} />
                 </div>
-                <h3 className="text-lg font-semibold tracking-tight text-white">{premium.services.items[i].title}</h3>
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-white/70">{premium.services.items[i].description}</p>
+                <h3 className="text-lg font-semibold tracking-tight text-white">{item.title}</h3>
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-white/70">{item.description}</p>
                 <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-blue-200 group-hover:text-white">
+                  {copy.details}
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </span>
               </Link>
