@@ -234,10 +234,10 @@ const en: SpecTranslations = {
       flipIncludes: 'Social cuts · AI visuals · Motion basics',
     },
     aiContent: {
-      title: 'SEO optimisation',
-      description: 'Technical SEO, content structure, and ongoing improvements so the right people find you.',
+      title: 'Projects built with AI — photo / video',
+      description: 'AI-assisted photo and video production for campaigns, social media, and brand storytelling.',
       flipPrice: 'from €450',
-      flipIncludes: 'Audits · On-page · Reporting',
+      flipIncludes: 'AI visuals · Photo · Video',
     },
   },
   servicesVideoEditing: {
@@ -439,10 +439,10 @@ const de: SpecTranslations = {
       flipIncludes: 'Social-Formate · AI-Visuals · Motion-Basics',
     },
     aiContent: {
-      title: 'SEO-Optimierung',
-      description: 'Technisches SEO, Content-Struktur und laufende Verbesserungen für bessere Sichtbarkeit.',
+      title: 'Mit KI umgesetzte Projekte — Foto / Video',
+      description: 'KI-gestützte Foto- und Videoproduktion für Kampagnen, Social Media und Markenauftritt.',
       flipPrice: 'ab 450 €',
-      flipIncludes: 'Audits · On-Page · Reporting',
+      flipIncludes: 'KI-Visuals · Foto · Video',
     },
   },
   servicesVideoEditing: {
@@ -644,10 +644,10 @@ const it: SpecTranslations = {
       flipIncludes: 'Formati social · Visual AI · Motion base',
     },
     aiContent: {
-      title: 'Ottimizzazione SEO',
-      description: 'SEO tecnica, struttura dei contenuti e miglioramenti continui per farti trovare.',
+      title: 'Progetti realizzati con IA — foto / video',
+      description: 'Produzione foto e video assistita da IA per campagne, social e narrazione del brand.',
       flipPrice: 'da 450 €',
-      flipIncludes: 'Audit · On-page · Report',
+      flipIncludes: 'Visual IA · Foto · Video',
     },
   },
   servicesVideoEditing: {
@@ -849,10 +849,10 @@ const sr: SpecTranslations = {
       flipIncludes: 'Social formati · AI vizuali · Osnovna animacija',
     },
     aiContent: {
-      title: 'SEO optimizacija',
-      description: 'Tehnički SEO, struktura sadržaja i kontinuirana poboljšanja za bolju vidljivost.',
+      title: 'Projekti realizovani sa AI — foto / video',
+      description: 'AI podrška za foto i video produkciju — kampanje, društvene mreže i brend.',
       flipPrice: 'od 450 €',
-      flipIncludes: 'Audit · On-page · Izveštaji',
+      flipIncludes: 'AI vizuali · Foto · Video',
     },
   },
   servicesVideoEditing: {
@@ -1054,10 +1054,10 @@ const al: SpecTranslations = {
       flipIncludes: 'Formate sociale · Vizuale me IA · Motion bazë',
     },
     aiContent: {
-      title: 'Optimizim SEO',
-      description: 'SEO teknik, strukturë përmbajtjeje dhe përmirësime të vazhdueshme për dukshmëri më të mirë.',
+      title: 'Projekte të realizuara me IA — foto / video',
+      description: 'Produksion foto dhe video me ndihmën e IA-së për fushata, rrjete sociale dhe historinë e markës.',
       flipPrice: 'nga 450 €',
-      flipIncludes: 'Audit · On-page · Raporte',
+      flipIncludes: 'Vizuale IA · Foto · Video',
     },
   },
   servicesVideoEditing: {
