@@ -9,14 +9,23 @@ function caseStudioAsset(fileName: string): string {
   return encodeURI(`${CASE_DIR}${fileName}`);
 }
 
-export default function CaseStudyThearRealm() {
+type CaseStudyThearRealmProps = {
+  /** When true, section is first below the fixed nav (extra top padding, no top border). */
+  leadSection?: boolean;
+};
+
+export default function CaseStudyThearRealm({ leadSection = false }: CaseStudyThearRealmProps) {
   const { currentLanguage } = useLanguage();
   const t = getThearRealmCaseCopy(currentLanguage);
 
   return (
     <section
       id="case-studies"
-      className="premium-section scroll-mt-24 border-t border-[#333333] py-20 md:py-28"
+      className={
+        leadSection
+          ? "premium-section scroll-mt-24 border-b border-[#333333] pt-[5.25rem] pb-20 md:pb-28"
+          : "premium-section scroll-mt-24 border-t border-[#333333] py-20 md:py-28"
+      }
       aria-labelledby="case-studio-heading"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">

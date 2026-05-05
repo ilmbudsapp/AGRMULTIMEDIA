@@ -21,9 +21,9 @@ export default function Home() {
     <div className="min-h-screen w-full max-w-[100vw] overflow-x-hidden bg-[#07070b]">
       <Navigation />
       <main>
-        <Hero />
+        <CaseStudyThearRealm leadSection />
+        <Hero belowLeadSection />
         <HomeServices />
-        <CaseStudyThearRealm />
         <AboutHome />
         <Contact />
       </main>

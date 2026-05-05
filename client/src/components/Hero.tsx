@@ -6,7 +6,12 @@ import { getPremiumTranslations } from "@/lib/premiumI18n";
 const PROMO_VIDEO = encodeURI("/Werbung Finito FULL HD COMPRESSO.mp4");
 const VIDEO_POSTER = "/hero-workspace.png";
 
-export default function Hero() {
+type HeroProps = {
+  /** When Hero follows another full-width section (e.g. Case Studio), skip extra top offset for the fixed nav. */
+  belowLeadSection?: boolean;
+};
+
+export default function Hero({ belowLeadSection = false }: HeroProps) {
   const { currentLanguage } = useLanguage();
   const premium = getPremiumTranslations(currentLanguage);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -31,7 +36,11 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="premium-section relative scroll-mt-20 border-b border-[#333333] pt-[5.25rem] pb-20 md:pt-28 md:pb-28"
+      className={
+        belowLeadSection
+          ? "premium-section relative scroll-mt-20 border-b border-[#333333] pt-14 pb-20 md:pt-20 md:pb-28"
+          : "premium-section relative scroll-mt-20 border-b border-[#333333] pt-[5.25rem] pb-20 md:pt-28 md:pb-28"
+      }
     >
       <video
         ref={videoRef}
