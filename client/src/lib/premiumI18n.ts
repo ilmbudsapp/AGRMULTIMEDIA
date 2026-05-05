@@ -140,7 +140,7 @@ const de: PremiumTranslations = {
 
 const sr: PremiumTranslations = {
   hero: {
-    heading: "Video oglasi visokog uticaja koji povecavaju prodaju i angaovanje.",
+    heading: "Video oglasi visokog uticaja koji povećavaju prodaju i angažman.",
     subheading:
       "Pretvaramo poruku vaseg brenda u video sadrzaj koji donosi visoke konverzije. 20 godina iskustva u vizuelnom pripovedanju.",
     primaryCta: "Pokreni projekat",
