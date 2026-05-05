@@ -5,6 +5,7 @@ import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_LINK } from "@/lib/contact";
 import { toServiceLang, type ServiceLang } from "@/lib/servicePageI18n";
 import FooterLegalBlock from "@/components/FooterLegalBlock";
 import logoImage from "@assets/MULTIMEDIA AGRONDESIGN LOGO IN BIANCO_1755555880911.png";
+import { getPremiumTranslations } from "@/lib/premiumI18n";
 
 const FACEBOOK_URL = "https://www.facebook.com/halidosmani74";
 const INSTAGRAM_URL = "https://www.instagram.com/agrondesign/";
@@ -13,6 +14,7 @@ const EMAIL_LINK = "mailto:agron6922@gmail.com";
 
 export default function Footer() {
   const { t, tSpec, currentLanguage } = useLanguage();
+  const premium = getPremiumTranslations(currentLanguage);
   const [location] = useLocation();
   const isHome = location === "/";
 
@@ -63,7 +65,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#0a0a0f] border-t border-white/10 text-white py-16">
+    <footer className="bg-[#0a0a0a] border-t border-[#333333] text-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div data-testid="footer-brand">
@@ -176,10 +178,10 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-500 text-sm">{t.footer.copyright}</p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/privacy" className="text-gray-500 hover:text-white text-sm transition-colors">{t.footer.privacy}</Link>
+              <Link href="/privacy" className="text-gray-500 hover:text-white text-sm transition-colors">{premium.legal.datenschutz}</Link>
               <Link href="/terms" className="text-gray-500 hover:text-white text-sm transition-colors">{t.footer.terms}</Link>
               <Link href="/cookies" className="text-gray-500 hover:text-white text-sm transition-colors">{t.footer.cookies}</Link>
-              <Link href="/impresum" className="text-gray-500 hover:text-white text-sm transition-colors">{t.footer.impresum}</Link>
+              <Link href="/impresum" className="text-gray-500 hover:text-white text-sm transition-colors">{premium.legal.impressum}</Link>
             </div>
           </div>
         </div>

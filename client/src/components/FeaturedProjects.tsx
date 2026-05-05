@@ -2,12 +2,14 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { useCallback, useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { getPremiumTranslations } from "@/lib/premiumI18n";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function FeaturedProjects() {
-  const { tSpec, currentLanguage } = useLanguage();
-  const projects = tSpec.heroProjects.projects;
+  const { currentLanguage } = useLanguage();
+  const premium = getPremiumTranslations(currentLanguage);
+  const projects = premium.caseStudies.cards;
   const sectionRef = useRef<HTMLElement>(null);
 
   const runReveal = useCallback(() => {
@@ -38,33 +40,38 @@ export default function FeaturedProjects() {
   }, [runReveal, currentLanguage]);
 
   return (
-    <section ref={sectionRef} className="relative py-16 sm:py-20 bg-light-section">
+    <section id="case-studies" ref={sectionRef} className="premium-section relative py-16 sm:py-20 border-y border-[#333333]">
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10 sm:mb-12 featured-reveal">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-navy tracking-tight">
-            {tSpec.heroProjects.heading}
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight">
+            {premium.caseStudies.heading}
           </h2>
+          <p className="mt-4 text-white/70 max-w-2xl mx-auto">{premium.caseStudies.description}</p>
         </div>
 
         <div className="grid gap-6 sm:gap-8 md:grid-cols-3">
           {projects.map((project, index) => (
             <article
               key={index}
-              className="featured-reveal relative overflow-hidden rounded-2xl bg-white border border-gray-200/80 shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_18px_45px_rgba(0,0,0,0.1)] transition-shadow duration-300"
+              className="featured-reveal premium-card premium-card-hover relative overflow-hidden p-6"
             >
-              <div className="h-32 sm:h-36 bg-gradient-to-r from-electric-blue/20 via-purple-500/20 to-pink-500/20" />
-              <div className="p-6 sm:p-7">
-                <h3 className="text-lg sm:text-xl font-semibold text-navy mb-2">
-                  {project.title}
-                </h3>
-                <p className="text-sm sm:text-base text-gray-600 mb-3">
-                  {project.description}
-                </p>
-                {project.result && (
-                  <p className="text-xs sm:text-sm text-emerald-600 font-medium">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/8 via-transparent to-purple-500/10 pointer-events-none" />
+              <div className="relative">
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-6">{project.title}</h3>
+                <div className="space-y-4">
+                  <p className="text-sm text-white/70">
+                    <span className="text-blue-300 font-semibold">{premium.caseStudies.problemLabel}: </span>
+                    {project.problem}
+                  </p>
+                  <p className="text-sm text-white/70">
+                    <span className="text-blue-300 font-semibold">{premium.caseStudies.solutionLabel}: </span>
+                    {project.solution}
+                  </p>
+                  <p className="text-sm text-white/90">
+                    <span className="text-emerald-300 font-semibold">{premium.caseStudies.resultLabel}: </span>
                     {project.result}
                   </p>
-                )}
+                </div>
               </div>
             </article>
           ))}

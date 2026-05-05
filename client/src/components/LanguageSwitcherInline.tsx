@@ -26,8 +26,8 @@ export default function LanguageSwitcherInline() {
               }}
               className={`transition-colors duration-200 ${
                 isActive
-                  ? "text-white font-semibold"
-                  : "text-white/70 hover:text-white"
+                  ? "text-blue-200 font-semibold"
+                  : "text-white/65 hover:text-white"
               }`}
               aria-label={`Switch to ${code.toUpperCase()}`}
             >

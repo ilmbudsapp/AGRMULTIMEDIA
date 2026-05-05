@@ -35,7 +35,7 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/[0.08] bg-[#07070b]/90 backdrop-blur-md">
+    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-[#333333] bg-[#0a0a0a]/85 backdrop-blur-xl">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-14 md:h-16">
           <div className="flex-shrink-0">
@@ -75,7 +75,7 @@ export default function Navigation() {
                   key={item.id}
                   type="button"
                   onClick={() => scrollToSection(item.section!)}
-                  className="text-[0.9375rem] text-white/75 hover:text-white transition-colors"
+                  className="text-[0.9375rem] text-white/75 hover:text-blue-200 transition-colors"
                   data-testid={`nav-${item.id}`}
                 >
                   {item.label}
@@ -84,7 +84,7 @@ export default function Navigation() {
                 <Link
                   key={item.id}
                   href={item.href}
-                  className="text-[0.9375rem] text-white/75 hover:text-white transition-colors"
+                  className="text-[0.9375rem] text-white/75 hover:text-blue-200 transition-colors"
                   data-testid={`nav-${item.id}`}
                 >
                   {item.label}
@@ -95,7 +95,7 @@ export default function Navigation() {
               <button
                 type="button"
                 onClick={() => scrollToSection("contact")}
-                className="rounded-full bg-white px-5 py-2 text-[0.875rem] font-semibold text-[#0a0a0f] hover:bg-white/90 transition-colors"
+                className="premium-cta rounded-full px-5 py-2 text-[0.875rem] font-semibold hover:brightness-110 transition"
                 data-testid="nav-contact-cta"
               >
                 {tSpec.nav.ctaQuote}
@@ -103,7 +103,7 @@ export default function Navigation() {
             ) : (
               <Link
                 href={contactHref}
-                className="rounded-full bg-white px-5 py-2 text-[0.875rem] font-semibold text-[#0a0a0f] hover:bg-white/90 transition-colors"
+                className="premium-cta rounded-full px-5 py-2 text-[0.875rem] font-semibold hover:brightness-110 transition"
                 data-testid="nav-contact-cta"
               >
                 {tSpec.nav.ctaQuote}
@@ -129,7 +129,7 @@ export default function Navigation() {
       </div>
 
       {isMenuOpen && (
-        <div className="md:hidden border-t border-white/[0.08] bg-[#07070b]" data-testid="mobile-menu">
+        <div className="md:hidden border-t border-[#333333] bg-[#0a0a0a]" data-testid="mobile-menu">
           <div className="px-4 py-4 space-y-1 max-w-6xl mx-auto">
             {navItems.map((item) =>
               isHomePage && item.section ? (

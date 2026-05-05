@@ -1,12 +1,14 @@
 import { useEffect, useRef } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { getPremiumTranslations } from "@/lib/premiumI18n";
 
 /** Public folder; spaces encoded for reliable load */
 const PROMO_VIDEO = encodeURI("/Werbung Finito FULL HD COMPRESSO.mp4");
 const VIDEO_POSTER = "/hero-workspace.png";
 
 export default function Hero() {
-  const { tSpec } = useLanguage();
+  const { currentLanguage } = useLanguage();
+  const premium = getPremiumTranslations(currentLanguage);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -29,58 +31,67 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative scroll-mt-20 border-b border-neutral-200/80 bg-gradient-to-br from-[#faf9f7] via-[#f3f2ee] to-[#e8eaef] pt-[5.25rem] pb-14 md:pt-28 md:pb-20"
+      className="premium-section relative scroll-mt-20 border-b border-[#333333] pt-[5.25rem] pb-20 md:pt-28 md:pb-28"
     >
+      <video
+        ref={videoRef}
+        className="absolute inset-0 h-full w-full object-cover opacity-30"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        poster={VIDEO_POSTER}
+        aria-hidden
+      >
+        <source src={PROMO_VIDEO} type="video/mp4" />
+      </video>
+      <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/70 to-[#0a0a0a]/95" aria-hidden />
       <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_100%_20%,rgba(99,102,241,0.06),transparent_55%)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_100%_20%,rgba(59,130,246,0.2),transparent_55%)]"
         aria-hidden
       />
 
       <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-10 px-4 sm:gap-12 sm:px-6 lg:grid-cols-2 lg:gap-14 lg:px-8">
-        <div className="order-1 text-center lg:order-none lg:text-left">
+        <div className="order-1 text-center lg:order-none lg:text-left animate-fade-in-up">
           <h1
             id="hero-h1"
-            className="scroll-mt-24 text-[1.65rem] font-semibold leading-[1.15] tracking-tight text-neutral-900 sm:text-3xl md:text-[2.15rem] lg:text-[2.35rem]"
+            className="scroll-mt-24 text-[1.9rem] font-semibold leading-[1.12] tracking-tight text-white sm:text-4xl md:text-[2.5rem] lg:text-[2.85rem]"
             data-testid="hero-title"
           >
-            {tSpec.hero.h1}
+            {premium.hero.heading}
           </h1>
           <p
-            className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-neutral-600 lg:mx-0 lg:max-w-[28rem]"
+            className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-white/75 lg:mx-0 lg:max-w-[34rem]"
             data-testid="hero-subtitle"
           >
-            {tSpec.hero.subheadline}
+            {premium.hero.subheading}
           </p>
 
           <div className="mt-9 flex flex-col items-stretch justify-center gap-3 sm:flex-row lg:justify-start">
             <button
               type="button"
               onClick={() => scrollTo("contact")}
-              className="min-h-[48px] rounded-full bg-neutral-900 px-8 py-3 text-[0.9375rem] font-semibold text-white shadow-sm transition hover:bg-neutral-800"
+              className="premium-cta min-h-[48px] rounded-full px-8 py-3 text-[0.9375rem] font-semibold shadow-[0_0_30px_rgba(59,130,246,0.35)] transition hover:brightness-110"
               data-testid="hero-cta-primary"
             >
-              {tSpec.hero.ctaPrimary}
+              {premium.hero.primaryCta}
             </button>
             <button
               type="button"
-              onClick={() => scrollTo("portfolio")}
-              className="min-h-[48px] rounded-full border border-neutral-300 bg-white/80 px-8 py-3 text-[0.9375rem] font-medium text-neutral-800 shadow-sm backdrop-blur-sm transition hover:bg-white"
+              onClick={() => scrollTo("case-studies")}
+              className="min-h-[48px] rounded-full border border-white/20 bg-white/5 px-8 py-3 text-[0.9375rem] font-medium text-white backdrop-blur-sm transition hover:scale-[1.02] hover:border-blue-300/50"
               data-testid="hero-cta-secondary"
             >
-              {tSpec.hero.ctaSecondary}
+              {premium.hero.secondaryCta}
             </button>
           </div>
-
-          <p className="mt-8 text-[0.6875rem] font-medium uppercase tracking-[0.16em] text-neutral-400">
-            {tSpec.hero.availableIn}
-          </p>
         </div>
 
-        <div className="order-2 w-full max-w-lg justify-self-center p-2 sm:p-3 lg:order-none lg:max-w-none lg:justify-self-end">
-          <div className="relative overflow-hidden rounded-2xl bg-neutral-900 shadow-[0_2px_4px_rgba(15,23,42,0.05),0_14px_32px_-8px_rgba(15,23,42,0.22),0_32px_64px_-14px_rgba(15,23,42,0.32),0_52px_88px_-22px_rgba(15,23,42,0.24)] ring-1 ring-neutral-900/10">
+        <div className="order-2 w-full max-w-lg justify-self-center p-2 sm:p-3 lg:order-none lg:max-w-none lg:justify-self-end animate-fade-in-up animate-fade-in-up-delay-2">
+          <div className="premium-card relative overflow-hidden shadow-[0_2px_4px_rgba(15,23,42,0.05),0_14px_32px_-8px_rgba(15,23,42,0.22),0_32px_64px_-14px_rgba(15,23,42,0.32),0_52px_88px_-22px_rgba(15,23,42,0.24)]">
             <div className="relative aspect-video w-full">
               <video
-                ref={videoRef}
                 className="absolute inset-0 h-full w-full object-cover"
                 autoPlay
                 muted
@@ -92,6 +103,7 @@ export default function Hero() {
               >
                 <source src={PROMO_VIDEO} type="video/mp4" />
               </video>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
             </div>
           </div>
         </div>
