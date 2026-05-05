@@ -9,6 +9,10 @@ const CS1_DIR = "/Case Studio 1/";
 const CS1_IMAGES = ["01.jpg", "02.png", "03.png"] as const;
 const CS1_VIDEO = "04.mp4";
 
+const CS2_DIR = "/Case Studio 2/";
+const CS2_LOGO = "01 Logo.jpg";
+const CS2_VIDEO = "7.mp4";
+
 function studioAsset(baseDir: string, fileName: string): string {
   return encodeURI(`${baseDir}${fileName}`);
 }
@@ -18,6 +22,7 @@ export default function CaseStudyThearRealm() {
   const t = getCaseStudioCopy(currentLanguage);
   const tr = t.thearRealm;
   const cs = t.comingSoon;
+  const kf = t.kerimFoundation;
 
   return (
     <section
@@ -123,6 +128,49 @@ export default function CaseStudyThearRealm() {
                 aria-label={cs.videoAriaLabel}
               >
                 <source src={studioAsset(CS1_DIR, CS1_VIDEO)} type="video/mp4" />
+              </video>
+            </div>
+          </div>
+        </div>
+
+        {/* KERIM FOUNDATION — Case Studio 2 */}
+        <div
+          className="mt-14 rounded-[12px] border border-[#333333] bg-white/[0.02] p-6 shadow-[0_8px_40px_rgba(0,0,0,0.25)] backdrop-blur-sm md:p-10"
+          aria-labelledby="kerim-foundation-heading"
+        >
+          <h3
+            id="kerim-foundation-heading"
+            className="text-center text-lg font-bold uppercase tracking-[0.14em] text-white md:text-left md:text-xl lg:text-2xl"
+          >
+            {kf.innerSectionHeading}
+          </h3>
+          <p className="mt-6 text-base leading-relaxed text-white/75">{kf.intro}</p>
+          <p className="mt-6 text-base font-medium text-white/90">{kf.materialsCaption}</p>
+
+          <div id="kerim-foundation-panel" className="mt-10 space-y-10 scroll-mt-28">
+            <figure className="premium-card mx-auto max-w-lg overflow-hidden p-4 md:p-6">
+              <img
+                src={studioAsset(CS2_DIR, CS2_LOGO)}
+                alt=""
+                className="mx-auto max-h-[min(70vh,520px)] w-full object-contain"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+
+            <p className="text-sm leading-relaxed text-white/65 md:text-base">{kf.logoFontsNote}</p>
+
+            <p className="text-base leading-relaxed text-white/85 md:text-lg">{kf.toolsClosing}</p>
+
+            <div className="premium-card overflow-hidden p-0">
+              <video
+                className="aspect-video w-full bg-black object-contain"
+                controls
+                playsInline
+                preload="metadata"
+                aria-label={kf.videoAriaLabel}
+              >
+                <source src={studioAsset(CS2_DIR, CS2_VIDEO)} type="video/mp4" />
               </video>
             </div>
           </div>

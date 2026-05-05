@@ -14,6 +14,12 @@ export type ComingSoonProjectBlock = CaseStudioProjectBlock & {
   materialsCaption: string;
 };
 
+export type KerimFoundationBlock = CaseStudioProjectBlock & {
+  materialsCaption: string;
+  /** Logo wordmark typography (from design / visual reference) */
+  logoFontsNote: string;
+};
+
 export type CaseStudioCopy = {
   caseStudioHeading: string;
   materialsIntro: string;
@@ -21,6 +27,7 @@ export type CaseStudioCopy = {
   fontsNote: string;
   thearRealm: CaseStudioProjectBlock & { clientLinkLabel: string };
   comingSoon: ComingSoonProjectBlock;
+  kerimFoundation: KerimFoundationBlock;
 };
 
 const sr: CaseStudioCopy = {
@@ -47,6 +54,17 @@ const sr: CaseStudioCopy = {
       "Ovo je rezultat mog rada u Adobe Premiere Pro, After Effects i Adobe Photoshop.",
     videoAriaLabel: "Coming Soon intro — ilahije, izvorni materijal i finalni klip",
   },
+  kerimFoundation: {
+    innerSectionHeading: "KERIM FOUNDATION",
+    intro:
+      "Kerim Foundation je nevladina humanitarna organizacija koja deluje na Kosovu, u Nemačkoj i u Italiji. Ovaj video im je značajno pomogao u marketingu — da budu vidljiviji javnosti i da jasnije predstave svoje aktivnosti.",
+    materialsCaption: "Ispod je logo koji sam dizajnirao, zatim finalni promotivni video klip.",
+    logoFontsNote:
+      "Tipografija na logotipu (sva slova velika, serif): vizuelno u klasi Trajan Pro ili Cinzel Bold. Tačan naziv fonta proveri u Adobe Illustrator izvorniku (.ai) — iz JPG eksporta se font ne može pouzdano automatski pročitati.",
+    toolsClosing:
+      "Logo: Adobe Illustrator. Video: Adobe Premiere Pro, After Effects i Adobe Photoshop.",
+    videoAriaLabel: "Kerim Foundation — promotivni video",
+  },
 };
 
 const en: CaseStudioCopy = {
@@ -70,6 +88,17 @@ const en: CaseStudioCopy = {
     toolsClosing:
       "This is the outcome of my work in Adobe Premiere Pro, After Effects, and Adobe Photoshop.",
     videoAriaLabel: "Coming Soon intro — ilahiye, source material and final clip",
+  },
+  kerimFoundation: {
+    innerSectionHeading: "KERIM FOUNDATION",
+    intro:
+      "Kerim Foundation is a non-governmental humanitarian organisation active in Kosovo, Germany, and Italy. This video significantly strengthened their marketing — helping them reach audiences more clearly and communicate what they do.",
+    materialsCaption: "Below is the logo I designed, followed by the final promotional video.",
+    logoFontsNote:
+      "Logo typography (all-caps serif wordmark): visually close to Trajan Pro or Cinzel Bold. Confirm the exact font in your Illustrator (.ai) source — it cannot be detected reliably from a raster JPG export.",
+    toolsClosing:
+      "Logo: Adobe Illustrator. Video: Adobe Premiere Pro, After Effects, and Adobe Photoshop.",
+    videoAriaLabel: "Kerim Foundation — promotional video",
   },
 };
 
@@ -97,6 +126,17 @@ const de: CaseStudioCopy = {
       "Das ist das Ergebnis meiner Arbeit mit Adobe Premiere Pro, After Effects und Adobe Photoshop.",
     videoAriaLabel: "Coming Soon Intro — Ilahije, Ausgangsmaterial und finaler Clip",
   },
+  kerimFoundation: {
+    innerSectionHeading: "KERIM FOUNDATION",
+    intro:
+      "Kerim Foundation ist eine gemeinnützige Nichtregierungsorganisation mit Aktivitäten in Kosovo, Deutschland und Italien. Dieses Video hat ihr Marketing spürbar gestärkt — mit klarerer Sichtbarkeit und besserer Vermittlung ihrer Arbeit.",
+    materialsCaption: "Unten das von mir gestaltete Logo, anschließend das finale Werbevideo.",
+    logoFontsNote:
+      "Logo-Typografie (Versalien, Serif): visuell nah an Trajan Pro oder Cinzel Bold. Den exakten Fontnamen bitte in der Illustrator-Datei (.ai) prüfen — aus JPG-Export nicht zuverlässig automatisch auslesbar.",
+    toolsClosing:
+      "Logo: Adobe Illustrator. Video: Adobe Premiere Pro, After Effects und Adobe Photoshop.",
+    videoAriaLabel: "Kerim Foundation — Werbevideo",
+  },
 };
 
 const it: CaseStudioCopy = {
@@ -123,6 +163,17 @@ const it: CaseStudioCopy = {
       "Questo è il risultato del mio lavoro con Adobe Premiere Pro, After Effects e Adobe Photoshop.",
     videoAriaLabel: "Coming Soon intro — ilahiye, materiale sorgente e clip finale",
   },
+  kerimFoundation: {
+    innerSectionHeading: "KERIM FOUNDATION",
+    intro:
+      "Kerim Foundation è un’organizzazione umanitaria non governativa attiva in Kosovo, Germania e Italia. Questo video ha rafforzato in modo significativo il loro marketing — con maggiore visibilità e comunicazione più chiara delle attività.",
+    materialsCaption: "Di seguito il logo che ho progettato, poi il video promozionale finale.",
+    logoFontsNote:
+      "Tipografia del logo (maiuscole, serif): visivamente affine a Trajan Pro o Cinzel Bold. Conferma il nome esatto del font nel file Illustrator (.ai) — dall’export JPG non è identificabile in modo affidabile.",
+    toolsClosing:
+      "Logo: Adobe Illustrator. Video: Adobe Premiere Pro, After Effects e Adobe Photoshop.",
+    videoAriaLabel: "Kerim Foundation — video promozionale",
+  },
 };
 
 const al: CaseStudioCopy = {
@@ -148,6 +199,17 @@ const al: CaseStudioCopy = {
     toolsClosing:
       "Ky është rezultati i punës time në Adobe Premiere Pro, After Effects dhe Adobe Photoshop.",
     videoAriaLabel: "Coming Soon intro — ilahije, material burimor dhe klipi final",
+  },
+  kerimFoundation: {
+    innerSectionHeading: "KERIM FOUNDATION",
+    intro:
+      "Kerim Foundation është një organizatë joqeveritare humanitare aktive në Kosovë, Gjermani dhe Itali. Ky video i përforcoi dukshëm marketingun — më dukshmëri dhe komunikim më të qartë të aktiviteteve të tyre.",
+    materialsCaption: "Më poshtë logoja që dizajnova, më pas videoja përfundimtare promovuese.",
+    logoFontsNote:
+      "Tipografia e logos (shkronja të mëdha, serif): vizualisht afër Trajan Pro ose Cinzel Bold. Verifiko emrin e saktë të fontit në skedarin Illustrator (.ai) — nga eksporti JPG nuk lexohet në mënyrë të besueshme.",
+    toolsClosing:
+      "Logo: Adobe Illustrator. Video: Adobe Premiere Pro, After Effects dhe Adobe Photoshop.",
+    videoAriaLabel: "Kerim Foundation — video promovuese",
   },
 };
 
