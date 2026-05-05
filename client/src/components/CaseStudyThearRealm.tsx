@@ -20,20 +20,24 @@ export default function CaseStudyThearRealm() {
       aria-labelledby="case-studio-heading"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <h2
-          id="case-studio-heading"
-          className="text-center text-3xl font-bold uppercase tracking-[0.22em] text-white md:text-4xl lg:text-5xl"
-        >
+        {/* Outer: Case Studio */}
+        <h2 id="case-studio-heading" className="text-3xl font-semibold tracking-tight text-white md:text-4xl">
           {t.caseStudioHeading}
         </h2>
-        <p className="mx-auto mt-6 max-w-3xl text-center text-base leading-relaxed text-white/75 md:text-lg">
-          {t.materialsIntro}
-        </p>
+        <p className="mt-4 max-w-3xl text-base leading-relaxed text-white/75 md:text-lg">{t.materialsIntro}</p>
 
-        <div className="mt-14 border-t border-[#333333] pt-14">
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-blue-300/80">{t.projectEyebrow}</p>
-          <h3 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">{t.sectionTitle}</h3>
-          <p className="mt-6 max-w-3xl text-base leading-relaxed text-white/75">{t.intro}</p>
+        {/* Inner: PROJEKAT ZA THEAR REALM TV — entire project material */}
+        <div
+          className="mt-12 rounded-[12px] border border-[#333333] bg-white/[0.02] p-6 shadow-[0_8px_40px_rgba(0,0,0,0.25)] backdrop-blur-sm md:p-10"
+          aria-labelledby="thear-realm-project-heading"
+        >
+          <h3
+            id="thear-realm-project-heading"
+            className="text-center text-lg font-bold uppercase tracking-[0.14em] text-white md:text-left md:text-xl lg:text-2xl"
+          >
+            {t.innerSectionHeading}
+          </h3>
+          <p className="mt-6 text-base leading-relaxed text-white/75">{t.intro}</p>
 
           <a
             href="#thear-realm-tv-panel"

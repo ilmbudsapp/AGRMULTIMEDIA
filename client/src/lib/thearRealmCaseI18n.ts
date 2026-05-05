@@ -1,25 +1,23 @@
 import type { Language } from "@/lib/i18n";
 
 export type ThearRealmCaseCopy = {
-  /** Main section title — shown in ALL CAPS */
+  /** Outer section name */
   caseStudioHeading: string;
-  /** Intro line: client work from supplied materials */
+  /** Intro under Case Studio */
   materialsIntro: string;
-  projectEyebrow: string;
-  sectionTitle: string;
+  /** Inner subsection title */
+  innerSectionHeading: string;
   intro: string;
-  /** Clickable client strip — scrolls to gallery + video */
   clientLinkLabel: string;
   toolsClosing: string;
   videoAriaLabel: string;
 };
 
 const sr: ThearRealmCaseCopy = {
-  caseStudioHeading: "CASE STUDIO",
+  caseStudioHeading: "Case Studio",
   materialsIntro:
     "Projekti koje sam uradio za klijente od materijala koji mi je dostavljen.",
-  projectEyebrow: "Istaknuti projekat",
-  sectionTitle: "THEAR REALM TV — od fotografija do promotivnog video klipa",
+  innerSectionHeading: "PROJEKAT ZA THEAR REALM TV",
   intro:
     "Radio sam kratak video klip za klijenta koji je prikupljao donacije na Kickstarter platformi. Reč je o web televiziji THEAR REALM TV — televiziji koja se brine o mačkama lutalicama: tim putuje zemljama trećeg sveta, pronalazi mačke lutalice i zbrinjava ih hranom, lekovima i smeštajem. Od dostavljenih fotografija mačaka kreirao sam video klip za web televiziju THEAR REALM TV.",
   clientLinkLabel: "KLIJENT IZ WEB TV : THEAR REALM TV",
@@ -29,10 +27,9 @@ const sr: ThearRealmCaseCopy = {
 };
 
 const en: ThearRealmCaseCopy = {
-  caseStudioHeading: "CASE STUDIO",
+  caseStudioHeading: "Case Studio",
   materialsIntro: "Projects I created for clients using the materials they provided.",
-  projectEyebrow: "Featured project",
-  sectionTitle: "THEAR REALM TV — from photos to a promotional video clip",
+  innerSectionHeading: "PROJECT FOR THEAR REALM TV",
   intro:
     "I produced a short video for a client raising donations on Kickstarter. THEAR REALM TV is a web television dedicated to stray cats: the team travels through developing countries, finds strays, and cares for them with food, medicine, and shelter. Using the cat photos provided by the client, I created this video clip for the THEAR REALM TV web television.",
   clientLinkLabel: "WEB TV CLIENT: THEAR REALM TV",
@@ -42,11 +39,10 @@ const en: ThearRealmCaseCopy = {
 };
 
 const de: ThearRealmCaseCopy = {
-  caseStudioHeading: "CASE STUDIO",
+  caseStudioHeading: "Case Studio",
   materialsIntro:
     "Projekte, die ich für Kunden aus den mir bereitgestellten Materialien umgesetzt habe.",
-  projectEyebrow: "Hervorgehobenes Projekt",
-  sectionTitle: "THEAR REALM TV — von Fotos zum Werbevideo",
+  innerSectionHeading: "PROJEKT FÜR THEAR REALM TV",
   intro:
     "Ich habe einen kurzen Videoclip für einen Kunden erstellt, der auf Kickstarter Spenden sammelte. THEAR REALM TV ist ein Web-TV mit Fokus auf streunende Katzen: Das Team reist durch Länder des globalen Südens, findet Streunerkatzen und versorgt sie mit Futter, Medikamenten und Unterkunft. Aus den zur Verfügung gestellten Katzenfotos entstand dieser Videoclip für das Web-TV THEAR REALM TV.",
   clientLinkLabel: "WEB-TV-KUNDE: THEAR REALM TV",
@@ -56,11 +52,10 @@ const de: ThearRealmCaseCopy = {
 };
 
 const it: ThearRealmCaseCopy = {
-  caseStudioHeading: "CASE STUDIO",
+  caseStudioHeading: "Case Studio",
   materialsIntro:
     "Progetti realizzati per i clienti a partire dal materiale che mi è stato fornito.",
-  projectEyebrow: "Progetto in evidenza",
-  sectionTitle: "THEAR REALM TV — dalle foto al video promozionale",
+  innerSectionHeading: "PROGETTO PER THEAR REALM TV",
   intro:
     "Ho realizzato un breve video per un cliente che raccoglieva donazioni su Kickstarter. THEAR REALM TV è una web television dedicata ai gatti randagi: il team viaggia nei Paesi in via di sviluppo, trova i gatti e li assiste con cibo, medicine e alloggio. Dalle foto dei gatti fornite dal cliente ho creato questo video per la web TV THEAR REALM TV.",
   clientLinkLabel: "CLIENTE WEB TV: THEAR REALM TV",
@@ -70,11 +65,10 @@ const it: ThearRealmCaseCopy = {
 };
 
 const al: ThearRealmCaseCopy = {
-  caseStudioHeading: "CASE STUDIO",
+  caseStudioHeading: "Case Studio",
   materialsIntro:
     "Projekte që kam realizuar për klientët duke përdorur materialet që më janë dhënë.",
-  projectEyebrow: "Projekt i veçuar",
-  sectionTitle: "THEAR REALM TV — nga fotot në klip promovues",
+  innerSectionHeading: "PROJEKT PËR THEAR REALM TV",
   intro:
     "Krijova një klip të shkurtër video për një klient që mblidhte donacione në Kickstarter. THEAR REALM TV është një televizion në internet për macet endacake: stafi udhëton në vendet në zhvillim, i gjen macet dhe i përkujdeset me ushqim, ilaçe dhe strehim. Nga fotografitë e macave që më dhanë, krijova këtë klip për televizionin në internet THEAR REALM TV.",
   clientLinkLabel: "KLIENT NGA WEB TV: THEAR REALM TV",
