@@ -235,7 +235,7 @@ export default function PricingModels() {
         <div className="mt-10 text-center">
           <a
             href="#contact"
-            className="premium-button inline-flex px-8 py-3 text-sm font-semibold tracking-[0.08em] transition duration-200 hover:scale-[1.03] md:text-base"
+            className="premium-button inline-flex px-8 py-3 text-sm font-semibold tracking-[0.08em] text-white transition duration-200 hover:scale-[1.03] md:text-base"
           >
             {copy.cta}
           </a>
