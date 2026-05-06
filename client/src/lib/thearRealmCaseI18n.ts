@@ -50,17 +50,17 @@ const sr: CaseStudioCopy = {
   websitesHeading: "WEB SAJT PROJEKTI",
   websiteProjects: {
     first: {
-      title: "Website for Bicycle Service & e-Bike Rental",
+      title: "Web sajt za servis bicikala i iznajmljivanje e-bicikala",
       description:
-        "Modern and fast website created for a bicycle service and e-bike rental business. Designed to attract local customers and provide a clear overview of services. Website: https://fixbike.online/",
-      cta: "View Website",
+        "Moderan i brz web sajt napravljen za biznis servisa bicikala i iznajmljivanja e-bicikala. Dizajniran je da privuče lokalne klijente i pruži jasan pregled usluga. Web sajt: https://fixbike.online/",
+      cta: "Pogledaj web sajt",
       href: "https://fixbike.online/",
     },
     second: {
-      title: "Website for FixBike (Bicycle Repair Service)",
+      title: "Web sajt za FixBike (servis za popravku bicikala)",
       description:
-        "Clean and user-friendly website built for a local bicycle repair business. Focused on simple navigation and fast customer contact. Website: https://fixbike.online/",
-      cta: "View Website",
+        "Čist i jednostavan web sajt napravljen za lokalni servis za popravku bicikala. Fokus je na lakoj navigaciji i brzom kontaktu sa klijentima. Web sajt: https://fixbike.online/",
+      cta: "Pogledaj web sajt",
       href: "https://fixbike.online/",
     },
   },
