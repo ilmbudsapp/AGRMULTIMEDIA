@@ -3,7 +3,8 @@ import { Menu, X } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Link, useLocation } from "wouter";
 import LanguageSwitcherInline from "./LanguageSwitcherInline";
-import logoImage from "@assets/MULTIMEDIA AGRONDESIGN LOGO IN BIANCO_1755555880911.png";
+
+const logoImage = "/agr-logo-white.png";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,33 +40,15 @@ export default function Navigation() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-14 md:h-16">
           <div className="flex-shrink-0">
-            {isHomePage ? (
-              <button
-                type="button"
-                onClick={() => scrollToSection("hero-h1")}
-                className="flex items-center"
-                data-testid="logo-button"
-                aria-label={tSpec.nav.home}
-              >
-                <img
-                  src={logoImage}
-                  alt="AGR Multimedia"
-                  className="h-7 md:h-8 w-auto"
-                  fetchPriority="high"
-                  decoding="async"
-                />
-              </button>
-            ) : (
-              <Link href="/#hero-h1" className="flex items-center" data-testid="logo-button">
-                <img
-                  src={logoImage}
-                  alt="AGR Multimedia"
-                  className="h-7 md:h-8 w-auto"
-                  fetchPriority="high"
-                  decoding="async"
-                />
-              </Link>
-            )}
+            <Link href="/" className="flex items-center" data-testid="logo-button" aria-label={tSpec.nav.home}>
+              <img
+                src={logoImage}
+                alt="AGR Multimedia"
+                className="h-8 w-auto object-contain md:h-10"
+                fetchPriority="high"
+                decoding="async"
+              />
+            </Link>
           </div>
 
           <div className="hidden md:flex items-center gap-7 lg:gap-8">
