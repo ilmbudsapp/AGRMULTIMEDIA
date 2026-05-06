@@ -35,6 +35,7 @@ const COPY: Record<string, PricingCopy> = {
         "Basic SEO setup",
         "Monthly maintenance",
         "2 small updates included per month",
+        "Domain paid separately",
       ],
     },
     cardTwo: {
@@ -70,6 +71,7 @@ const COPY: Record<string, PricingCopy> = {
         "Grundlegendes SEO-Setup",
         "Monatliche Wartung",
         "2 kleine Updates pro Monat inklusive",
+        "Domain wird separat bezahlt",
       ],
     },
     cardTwo: {
@@ -105,6 +107,7 @@ const COPY: Record<string, PricingCopy> = {
         "Setup SEO di base",
         "Manutenzione mensile",
         "2 piccoli aggiornamenti inclusi al mese",
+        "Dominio pagato separatamente",
       ],
     },
     cardTwo: {
@@ -140,6 +143,7 @@ const COPY: Record<string, PricingCopy> = {
         "Osnovni SEO setup",
         "Mesečno održavanje",
         "2 male izmene mesečno uključene",
+        "Domen se plaća odvojeno",
       ],
     },
     cardTwo: {
@@ -175,6 +179,7 @@ const COPY: Record<string, PricingCopy> = {
         "SEO bazë i konfiguruar",
         "Mirëmbajtje mujore",
         "2 përditësime të vogla të përfshira në muaj",
+        "Domeni paguhet veçmas",
       ],
     },
     cardTwo: {
