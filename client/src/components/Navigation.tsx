@@ -31,6 +31,13 @@ export default function Navigation() {
     setIsMenuOpen(false);
   };
 
+  const handleLogoClick = () => {
+    if (isHomePage) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+    setIsMenuOpen(false);
+  };
+
   const navItems: { id: string; label: string; href: string; section?: string }[] = [
     { id: "home", label: tSpec.nav.home, href: "/", section: "hero-h1" },
     { id: "services", label: tSpec.nav.services, href: "/services", section: "services-preview" },
@@ -48,7 +55,13 @@ export default function Navigation() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-14 md:h-16">
           <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center gap-3" data-testid="logo-button" aria-label={tSpec.nav.home}>
+            <Link
+              href="/"
+              onClick={handleLogoClick}
+              className="flex items-center gap-3"
+              data-testid="logo-button"
+              aria-label={tSpec.nav.home}
+            >
               <img
                 src={logoImage}
                 alt="AGR Multimedia"
