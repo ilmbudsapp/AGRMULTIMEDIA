@@ -71,6 +71,15 @@ export default function CaseStudyThearRealm() {
           <article className="rounded-[12px] border border-[#333333] bg-white/[0.02] p-6 shadow-[0_8px_40px_rgba(0,0,0,0.25)] backdrop-blur-sm md:p-8">
             <h4 className="text-xl font-semibold text-white md:text-2xl">{t.websiteProjects.second.title}</h4>
             <p className="mt-4 max-w-4xl text-base leading-relaxed text-white/75">{t.websiteProjects.second.description}</p>
+            <figure className="premium-card mt-6 overflow-hidden p-0">
+              <img
+                src={studioAsset(FIXBIKE_DIR, "02.png")}
+                alt={t.websiteProjects.second.title}
+                className="aspect-[16/9] w-full object-cover"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
             <a
               href={t.websiteProjects.second.href}
               target="_blank"
