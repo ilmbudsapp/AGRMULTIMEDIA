@@ -17,7 +17,7 @@ export default function Navigation() {
     de: "WEBDESIGN & SEO IN GEISLINGEN AN DER STEIGE",
     it: "WEBDESIGN & SEO A GEISLINGEN AN DER STEIGE",
     sr: "WEBDESIGN & SEO U GEISLINGEN AN DER STEIGE",
-    al: "WEBDESIGN & SEO NE GEISLINGEN AN DER STEIGE",
+    al: "WEBDESIGN & SEO NË GEISLINGEN AN DER STEIGE",
   };
   const logoSeoText = logoSeoTextByLang[currentLanguage] ?? logoSeoTextByLang.en;
 
