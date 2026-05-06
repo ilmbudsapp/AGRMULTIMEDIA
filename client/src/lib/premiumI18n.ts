@@ -36,11 +36,10 @@ type PremiumTranslations = {
 
 const en: PremiumTranslations = {
   hero: {
-    heading: "High-Impact Video Ads that Drive Sales & Engagement.",
-    subheading:
-      "Transforming your brand's message into high-converting video content. 20 years of expertise in visual storytelling.",
-    primaryCta: "Start a Project",
-    secondaryCta: "View My Case Studies",
+    heading: "Web Design Geislingen an der Steige",
+    subheading: "Modern and fast websites for small businesses",
+    primaryCta: "Contact Me",
+    secondaryCta: "View Projects",
   },
   services: {
     eyebrow: "Capabilities",
@@ -88,11 +87,10 @@ const en: PremiumTranslations = {
 
 const de: PremiumTranslations = {
   hero: {
-    heading: "Hochwirksame Videoanzeigen, die Umsatz und Engagement steigern.",
-    subheading:
-      "Wir verwandeln Ihre Markenbotschaft in hochkonvertierende Videoinhalte. 20 Jahre Erfahrung im visuellen Storytelling.",
-    primaryCta: "Projekt starten",
-    secondaryCta: "Meine Fallstudien ansehen",
+    heading: "Webdesign Geislingen an der Steige",
+    subheading: "Moderne und schnelle Websites fur kleine Unternehmen",
+    primaryCta: "Kontaktieren Sie mich",
+    secondaryCta: "Projekte ansehen",
   },
   services: {
     eyebrow: "Leistungen",
@@ -140,11 +138,10 @@ const de: PremiumTranslations = {
 
 const sr: PremiumTranslations = {
   hero: {
-    heading: "Video oglasi visokog uticaja koji povećavaju prodaju i angažman.",
-    subheading:
-      "Pretvaramo poruku vaseg brenda u video sadrzaj koji donosi visoke konverzije. 20 godina iskustva u vizuelnom pripovedanju.",
-    primaryCta: "Pokreni projekat",
-    secondaryCta: "Pogledaj studije slucaja",
+    heading: "Web dizajn Geislingen an der Steige",
+    subheading: "Moderne i brze web stranice koje donose nove klijente",
+    primaryCta: "Kontaktirajte me",
+    secondaryCta: "Pogledajte projekte",
   },
   services: {
     eyebrow: "Usluge",
@@ -192,11 +189,10 @@ const sr: PremiumTranslations = {
 
 const it: PremiumTranslations = {
   hero: {
-    heading: "Video ads ad alto impatto che aumentano vendite e coinvolgimento.",
-    subheading:
-      "Trasformiamo il messaggio del tuo brand in contenuti video ad alta conversione. 20 anni di esperienza nello storytelling visivo.",
-    primaryCta: "Avvia un progetto",
-    secondaryCta: "Guarda i miei casi studio",
+    heading: "Web design Geislingen an der Steige",
+    subheading: "Siti web moderni e veloci per piccole imprese",
+    primaryCta: "Contattami",
+    secondaryCta: "Vedi progetti",
   },
   services: {
     eyebrow: "Servizi",
@@ -244,11 +240,10 @@ const it: PremiumTranslations = {
 
 const al: PremiumTranslations = {
   hero: {
-    heading: "Video reklama me impakt te larte qe rrisin shitjet dhe angazhimin.",
-    subheading:
-      "E kthejme mesazhin e markes suaj ne permbajtje video me konvertim te larte. 20 vite eksperience ne storytelling vizual.",
-    primaryCta: "Nis nje projekt",
-    secondaryCta: "Shiko studimet e rasteve",
+    heading: "Web dizajn Geislingen an der Steige",
+    subheading: "Faqe moderne dhe te shpejta per biznese te vogla",
+    primaryCta: "Me kontakto",
+    secondaryCta: "Shiko projektet",
   },
   services: {
     eyebrow: "Sherbime",
