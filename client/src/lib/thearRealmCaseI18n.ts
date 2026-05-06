@@ -99,7 +99,7 @@ const sr: CaseStudioCopy = {
 };
 
 const en: CaseStudioCopy = {
-  caseStudioHeading: "PROJEKTI ZA NAŠE KLIJENTE",
+  caseStudioHeading: "PROJECTS FOR OUR CLIENTS",
   materialsIntro:
     "Take a look at some of the projects we have completed for our clients. We focus on quality, modern design, and results that help businesses grow.",
   websitesHeading: "WEBSITE PROJECTS",
@@ -153,7 +153,7 @@ const en: CaseStudioCopy = {
 };
 
 const de: CaseStudioCopy = {
-  caseStudioHeading: "PROJEKTI ZA NAŠE KLIJENTE",
+  caseStudioHeading: "PROJEKTE FÜR UNSERE KUNDEN",
   materialsIntro:
     "Werfen Sie einen Blick auf einige unserer Projekte für Kunden. Unser Fokus liegt auf Qualität, modernem Design und Ergebnissen, die Unternehmen beim Wachstum unterstützen.",
   websitesHeading: "WEBSITE-PROJEKTE",
@@ -208,7 +208,7 @@ const de: CaseStudioCopy = {
 };
 
 const it: CaseStudioCopy = {
-  caseStudioHeading: "PROJEKTI ZA NAŠE KLIJENTE",
+  caseStudioHeading: "PROGETTI PER I NOSTRI CLIENTI",
   materialsIntro:
     "Dai un’occhiata ad alcuni dei progetti realizzati per i nostri clienti. Ci concentriamo su qualità, design moderno e risultati che aiutano le aziende a crescere.",
   websitesHeading: "PROGETTI WEB",
@@ -263,7 +263,7 @@ const it: CaseStudioCopy = {
 };
 
 const al: CaseStudioCopy = {
-  caseStudioHeading: "PROJEKTI ZA NAŠE KLIJENTE",
+  caseStudioHeading: "PROJEKTE PËR KLIENTËT TANË",
   materialsIntro:
     "Shikoni disa nga projektet që kemi realizuar për klientët tanë. Fokusohemi në cilësi, dizajn modern dhe rezultate që ndihmojnë bizneset të rriten.",
   websitesHeading: "PROJEKTE WEBSITE",
