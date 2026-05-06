@@ -20,6 +20,26 @@ function studioAsset(baseDir: string, fileName: string): string {
   return encodeURI(`${baseDir}${fileName}`);
 }
 
+function renderDescriptionWithLinks(text: string) {
+  const urlRegex = /(https?:\/\/[^\s]+)/g;
+  return text.split(urlRegex).map((part, index) => {
+    if (/^https?:\/\//.test(part)) {
+      return (
+        <a
+          key={`${part}-${index}`}
+          href={part}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline decoration-white/30 underline-offset-4 transition hover:text-white"
+        >
+          {part}
+        </a>
+      );
+    }
+    return <span key={`text-${index}`}>{part}</span>;
+  });
+}
+
 export default function CaseStudyThearRealm() {
   const { currentLanguage } = useLanguage();
   const t = getCaseStudioCopy(currentLanguage);
@@ -44,7 +64,9 @@ export default function CaseStudyThearRealm() {
 
           <article className="rounded-[12px] border border-[#333333] bg-white/[0.02] p-6 shadow-[0_8px_40px_rgba(0,0,0,0.25)] backdrop-blur-sm md:p-8">
             <h4 className="text-xl font-semibold text-white md:text-2xl">{t.websiteProjects.first.title}</h4>
-            <p className="mt-4 max-w-4xl text-base leading-relaxed text-white/75">{t.websiteProjects.first.description}</p>
+            <p className="mt-4 max-w-4xl text-base leading-relaxed text-white/75">
+              {renderDescriptionWithLinks(t.websiteProjects.first.description)}
+            </p>
             <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
               {FIXBIKE_IMAGES.map((file) => (
                 <figure key={file} className="premium-card overflow-hidden p-0">
@@ -70,7 +92,9 @@ export default function CaseStudyThearRealm() {
 
           <article className="rounded-[12px] border border-[#333333] bg-white/[0.02] p-6 shadow-[0_8px_40px_rgba(0,0,0,0.25)] backdrop-blur-sm md:p-8">
             <h4 className="text-xl font-semibold text-white md:text-2xl">{t.websiteProjects.second.title}</h4>
-            <p className="mt-4 max-w-4xl text-base leading-relaxed text-white/75">{t.websiteProjects.second.description}</p>
+            <p className="mt-4 max-w-4xl text-base leading-relaxed text-white/75">
+              {renderDescriptionWithLinks(t.websiteProjects.second.description)}
+            </p>
             <figure className="premium-card mt-6 overflow-hidden p-0">
               <img
                 src={studioAsset(FIXBIKE_DIR, "02.png")}
