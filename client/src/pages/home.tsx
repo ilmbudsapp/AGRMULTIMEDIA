@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import HomeServices from "@/components/HomeServices";
 import CaseStudyThearRealm from "@/components/CaseStudyThearRealm";
+import WhyChooseMe from "@/components/WhyChooseMe";
 import AboutHome from "@/components/AboutHome";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -23,6 +24,7 @@ export default function Home() {
       <main>
         <Hero />
         <CaseStudyThearRealm />
+        <WhyChooseMe />
         <HomeServices />
         <AboutHome />
         <Contact />
