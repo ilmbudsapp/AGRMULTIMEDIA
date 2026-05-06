@@ -8,10 +8,18 @@ const logoImage = "/agr-logo-white.png";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { tSpec } = useLanguage();
+  const { tSpec, currentLanguage } = useLanguage();
   const [location] = useLocation();
 
   const isHomePage = location === "/";
+  const logoSeoTextByLang: Record<string, string> = {
+    de: "webdesign geislingen an der steige",
+    en: "web design geislingen an der steige",
+    it: "web design geislingen an der steige",
+    sr: "web dizajn geislingen an der steige",
+    al: "web dizajn geislingen an der steige",
+  };
+  const logoSeoText = logoSeoTextByLang[currentLanguage] ?? logoSeoTextByLang.en;
 
   const scrollToSection = (sectionId: string) => {
     if (isHomePage) {
@@ -40,7 +48,7 @@ export default function Navigation() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-14 md:h-16">
           <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center" data-testid="logo-button" aria-label={tSpec.nav.home}>
+            <Link href="/" className="flex items-center gap-3" data-testid="logo-button" aria-label={tSpec.nav.home}>
               <img
                 src={logoImage}
                 alt="AGR Multimedia"
@@ -48,6 +56,9 @@ export default function Navigation() {
                 fetchPriority="high"
                 decoding="async"
               />
+              <span className="hidden text-xs font-medium lowercase tracking-[0.08em] text-white/80 lg:inline">
+                {logoSeoText}
+              </span>
             </Link>
           </div>
 
