@@ -13,6 +13,7 @@ type PremiumTranslations = {
     subheading: string;
     primaryCta: string;
     secondaryCta: string;
+    ctaMeta: string;
   };
   services: {
     eyebrow: string;
@@ -38,8 +39,9 @@ const en: PremiumTranslations = {
   hero: {
     heading: "Web Design Geislingen an der Steige",
     subheading: "Modern and fast websites for small businesses",
-    primaryCta: "Contact Me",
+    primaryCta: "Get a Free Consultation",
     secondaryCta: "View Projects",
+    ctaMeta: "Free consultation • No obligation • Response within 24h",
   },
   services: {
     eyebrow: "Capabilities",
@@ -89,8 +91,9 @@ const de: PremiumTranslations = {
   hero: {
     heading: "Webdesign Geislingen an der Steige",
     subheading: "Moderne und schnelle Websites fur kleine Unternehmen",
-    primaryCta: "Kontaktieren Sie mich",
+    primaryCta: "Kostenlose Beratung anfordern",
     secondaryCta: "Projekte ansehen",
+    ctaMeta: "Kostenlose Beratung • Unverbindlich • Antwort innerhalb von 24h",
   },
   services: {
     eyebrow: "Leistungen",
@@ -140,8 +143,9 @@ const sr: PremiumTranslations = {
   hero: {
     heading: "Web dizajn Geislingen an der Steige",
     subheading: "Moderne i brze web stranice koje donose nove klijente",
-    primaryCta: "Kontaktirajte me",
+    primaryCta: "Zatražite besplatnu konsultaciju",
     secondaryCta: "Pogledajte projekte",
+    ctaMeta: "Besplatna konsultacija • Bez obaveza • Odgovor u roku od 24h",
   },
   services: {
     eyebrow: "Usluge",
@@ -191,8 +195,9 @@ const it: PremiumTranslations = {
   hero: {
     heading: "Web design Geislingen an der Steige",
     subheading: "Siti web moderni e veloci per piccole imprese",
-    primaryCta: "Contattami",
+    primaryCta: "Richiedi una consulenza gratuita",
     secondaryCta: "Vedi progetti",
+    ctaMeta: "Consulenza gratuita • Senza impegno • Risposta entro 24h",
   },
   services: {
     eyebrow: "Servizi",
@@ -242,8 +247,9 @@ const al: PremiumTranslations = {
   hero: {
     heading: "Web dizajn Geislingen an der Steige",
     subheading: "Faqe moderne dhe te shpejta per biznese te vogla",
-    primaryCta: "Me kontakto",
+    primaryCta: "Kërko konsultë falas",
     secondaryCta: "Shiko projektet",
+    ctaMeta: "Konsultë falas • Pa detyrim • Përgjigje brenda 24 orëve",
   },
   services: {
     eyebrow: "Sherbime",

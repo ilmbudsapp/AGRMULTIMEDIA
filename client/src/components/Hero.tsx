@@ -72,7 +72,7 @@ export default function Hero() {
             <button
               type="button"
               onClick={() => scrollTo("contact")}
-              className="premium-cta min-h-[48px] rounded-full px-8 py-3 text-[0.9375rem] font-semibold shadow-[0_0_30px_rgba(59,130,246,0.35)] transition hover:brightness-110"
+              className="premium-cta min-h-[48px] rounded-full px-8 py-3 text-[0.9375rem] font-semibold shadow-[0_0_30px_rgba(59,130,246,0.35)] transition duration-200 hover:scale-[1.03] hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300/70"
               data-testid="hero-cta-primary"
             >
               {premium.hero.primaryCta}
@@ -80,12 +80,13 @@ export default function Hero() {
             <button
               type="button"
               onClick={() => scrollTo("case-studies")}
-              className="min-h-[48px] rounded-full border border-white/20 bg-white/5 px-8 py-3 text-[0.9375rem] font-medium text-white backdrop-blur-sm transition hover:scale-[1.02] hover:border-blue-300/50"
+              className="min-h-[48px] rounded-full border border-white/20 bg-white/5 px-8 py-3 text-[0.9375rem] font-medium text-white backdrop-blur-sm transition duration-200 hover:scale-[1.02] hover:border-blue-300/50"
               data-testid="hero-cta-secondary"
             >
               {premium.hero.secondaryCta}
             </button>
           </div>
+          <p className="mt-3 text-center text-xs text-white/70 sm:text-sm lg:text-left">{premium.hero.ctaMeta}</p>
         </div>
 
         <div className="order-2 w-full max-w-lg justify-self-center p-2 sm:p-3 lg:order-none lg:max-w-none lg:justify-self-end animate-fade-in-up animate-fade-in-up-delay-2">

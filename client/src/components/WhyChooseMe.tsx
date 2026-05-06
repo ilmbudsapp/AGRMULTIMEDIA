@@ -7,6 +7,7 @@ type WhyChooseMeCopy = {
   ctaBadge: string;
   ctaLead: string;
   ctaButton: string;
+  ctaMeta: string;
 };
 
 const COPY: Record<string, WhyChooseMeCopy> = {
@@ -20,7 +21,8 @@ const COPY: Record<string, WhyChooseMeCopy> = {
     ],
     ctaBadge: "FREE CONSULTATION",
     ctaLead: "Free consultation - let's talk about your project.",
-    ctaButton: "Contact Me",
+    ctaButton: "Get a Free Consultation",
+    ctaMeta: "Free consultation • No obligation • Response within 24h",
   },
   de: {
     title: "WARUM MICH WÄHLEN",
@@ -32,7 +34,8 @@ const COPY: Record<string, WhyChooseMeCopy> = {
     ],
     ctaBadge: "KOSTENLOSE BERATUNG",
     ctaLead: "Kostenlose Beratung - lassen Sie uns uber Ihr Projekt sprechen.",
-    ctaButton: "Kontaktieren Sie mich",
+    ctaButton: "Kostenlose Beratung anfordern",
+    ctaMeta: "Kostenlose Beratung • Unverbindlich • Antwort innerhalb von 24h",
   },
   it: {
     title: "PERCHÉ SCEGLIERE ME",
@@ -44,7 +47,8 @@ const COPY: Record<string, WhyChooseMeCopy> = {
     ],
     ctaBadge: "CONSULENZA GRATUITA",
     ctaLead: "Consulenza gratuita - parliamo del tuo progetto.",
-    ctaButton: "Contattami",
+    ctaButton: "Richiedi una consulenza gratuita",
+    ctaMeta: "Consulenza gratuita • Senza impegno • Risposta entro 24h",
   },
   sr: {
     title: "ZAŠTO IZABRATI MENE",
@@ -56,7 +60,8 @@ const COPY: Record<string, WhyChooseMeCopy> = {
     ],
     ctaBadge: "BESPLATNA KONSULTACIJA",
     ctaLead: "Besplatna konsultacija - hajde da pričamo o vašem projektu.",
-    ctaButton: "Kontaktirajte me",
+    ctaButton: "Zatražite besplatnu konsultaciju",
+    ctaMeta: "Besplatna konsultacija • Bez obaveza • Odgovor u roku od 24h",
   },
   al: {
     title: "PSE TË ZGJIDHNI MUA",
@@ -68,7 +73,8 @@ const COPY: Record<string, WhyChooseMeCopy> = {
     ],
     ctaBadge: "KONSULTË FALAS",
     ctaLead: "Konsulte falas - le te flasim per projektin tuaj.",
-    ctaButton: "Me kontakto",
+    ctaButton: "Kërko konsultë falas",
+    ctaMeta: "Konsultë falas • Pa detyrim • Përgjigje brenda 24 orëve",
   },
 };
 
@@ -96,9 +102,13 @@ export default function WhyChooseMe() {
             {copy.ctaBadge}
           </span>
           <p className="relative mt-4 text-lg font-semibold text-white md:text-xl">{copy.ctaLead}</p>
-          <a href="#contact" className="premium-button relative mt-5 inline-flex">
+          <a
+            href="#contact"
+            className="premium-button relative mt-5 inline-flex transition duration-200 hover:scale-[1.03] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300/70"
+          >
             {copy.ctaButton}
           </a>
+          <p className="relative mt-3 text-xs text-white/75 md:text-sm">{copy.ctaMeta}</p>
         </div>
       </div>
     </section>
