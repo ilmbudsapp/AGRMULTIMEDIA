@@ -8,11 +8,18 @@ const logoImage = "/agr-logo-white.png";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { tSpec } = useLanguage();
+  const { tSpec, currentLanguage } = useLanguage();
   const [location] = useLocation();
 
   const isHomePage = location === "/";
-  const logoSeoText = "WEBDESIGN & SEO IN GEISLINGEN AN DER STEIGE";
+  const logoSeoTextByLang: Record<string, string> = {
+    en: "WEBDESIGN & SEO IN GEISLINGEN AN DER STEIGE",
+    de: "WEBDESIGN & SEO IN GEISLINGEN AN DER STEIGE",
+    it: "WEBDESIGN & SEO A GEISLINGEN AN DER STEIGE",
+    sr: "WEBDESIGN & SEO U GEISLINGEN AN DER STEIGE",
+    al: "WEBDESIGN & SEO NE GEISLINGEN AN DER STEIGE",
+  };
+  const logoSeoText = logoSeoTextByLang[currentLanguage] ?? logoSeoTextByLang.en;
 
   const scrollToSection = (sectionId: string) => {
     if (isHomePage) {
