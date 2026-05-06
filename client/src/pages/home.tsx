@@ -5,6 +5,7 @@ import HomeServices from "@/components/HomeServices";
 import CaseStudyThearRealm from "@/components/CaseStudyThearRealm";
 import TrustIntro from "@/components/TrustIntro";
 import WhyChooseMe from "@/components/WhyChooseMe";
+import Testimonials from "@/components/Testimonials";
 import AboutHome from "@/components/AboutHome";
 import HomeFinalCta from "@/components/HomeFinalCta";
 import Contact from "@/components/Contact";
@@ -27,6 +28,7 @@ export default function Home() {
         <Hero />
         <TrustIntro />
         <WhyChooseMe />
+        <Testimonials />
         <CaseStudyThearRealm />
         <HomeServices />
         <AboutHome />
