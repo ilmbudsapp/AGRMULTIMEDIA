@@ -3,8 +3,10 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import HomeServices from "@/components/HomeServices";
 import CaseStudyThearRealm from "@/components/CaseStudyThearRealm";
+import TrustIntro from "@/components/TrustIntro";
 import WhyChooseMe from "@/components/WhyChooseMe";
 import AboutHome from "@/components/AboutHome";
+import HomeFinalCta from "@/components/HomeFinalCta";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -23,10 +25,12 @@ export default function Home() {
       <Navigation />
       <main>
         <Hero />
-        <CaseStudyThearRealm />
+        <TrustIntro />
         <WhyChooseMe />
+        <CaseStudyThearRealm />
         <HomeServices />
         <AboutHome />
+        <HomeFinalCta />
         <Contact />
       </main>
       <Footer />
