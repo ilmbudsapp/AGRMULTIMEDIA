@@ -45,7 +45,7 @@ export default function HomeFinalCta() {
           <p className="mx-auto max-w-3xl text-2xl font-semibold tracking-tight text-white md:text-4xl">{copy.lead}</p>
           <a
             href="#contact"
-            className="premium-button mt-8 inline-flex px-8 py-3 text-base transition duration-200 hover:scale-[1.03] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300/70 md:text-lg"
+            className="premium-button mt-8 inline-flex px-8 py-3 text-base font-semibold tracking-[0.01em] text-white shadow-[0_10px_30px_rgba(59,130,246,0.35)] transition duration-200 hover:scale-[1.03] hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300/70 md:text-lg"
           >
             {copy.button}
           </a>
