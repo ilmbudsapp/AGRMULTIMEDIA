@@ -20,9 +20,22 @@ export type KerimFoundationBlock = CaseStudioProjectBlock & {
   logoFontsNote: string;
 };
 
+export type CaseStudioWebsiteProject = {
+  title: string;
+  description: string;
+  cta: string;
+  href: string;
+};
+
 export type CaseStudioCopy = {
   caseStudioHeading: string;
   materialsIntro: string;
+  websitesHeading: string;
+  websiteProjects: {
+    first: CaseStudioWebsiteProject;
+    second: CaseStudioWebsiteProject;
+  };
+  finalCta: string;
   /** Which fonts the site uses (Inter from Google Fonts) */
   fontsNote: string;
   thearRealm: CaseStudioProjectBlock & { clientLinkLabel: string };
@@ -31,9 +44,27 @@ export type CaseStudioCopy = {
 };
 
 const sr: CaseStudioCopy = {
-  caseStudioHeading: "Case Studio",
+  caseStudioHeading: "PROJEKTI ZA NAŠE KLIJENTE",
   materialsIntro:
-    "Projekti koje sam uradio za klijente od materijala koji mi je dostavljen.",
+    "Pogledajte neke od projekata koje smo realizovali za naše klijente. Fokusirani smo na kvalitet, moderan dizajn i rezultate koji pomažu biznisima da rastu.",
+  websitesHeading: "WEB SAJT PROJEKTI",
+  websiteProjects: {
+    first: {
+      title: "Website for Bicycle Service & e-Bike Rental",
+      description:
+        "Modern and fast website created for a bicycle service and e-bike rental business. Designed to attract local customers and provide a clear overview of services.",
+      cta: "View Website",
+      href: "https://fixbike.online/",
+    },
+    second: {
+      title: "Website for FixBike (Bicycle Repair Service)",
+      description:
+        "Clean and user-friendly website built for a local bicycle repair business. Focused on simple navigation and fast customer contact.",
+      cta: "View Website",
+      href: "https://fixbike.online/",
+    },
+  },
+  finalCta: "Želite sličan projekat za vaš biznis? Kontaktirajte me.",
   fontsNote:
     "Fontovi na ovom sajtu: Inter (Google Fonts), uz rezervu system-ui / sans-serif.",
   thearRealm: {
@@ -68,8 +99,27 @@ const sr: CaseStudioCopy = {
 };
 
 const en: CaseStudioCopy = {
-  caseStudioHeading: "Case Studio",
-  materialsIntro: "Projects I created for clients using the materials they provided.",
+  caseStudioHeading: "PROJEKTI ZA NAŠE KLIJENTE",
+  materialsIntro:
+    "Take a look at some of the projects we have completed for our clients. We focus on quality, modern design, and results that help businesses grow.",
+  websitesHeading: "WEBSITE PROJECTS",
+  websiteProjects: {
+    first: {
+      title: "Website for Bicycle Service & e-Bike Rental",
+      description:
+        "Modern and fast website created for a bicycle service and e-bike rental business. Designed to attract local customers and provide a clear overview of services.",
+      cta: "View Website",
+      href: "https://fixbike.online/",
+    },
+    second: {
+      title: "Website for FixBike (Bicycle Repair Service)",
+      description:
+        "Clean and user-friendly website built for a local bicycle repair business. Focused on simple navigation and fast customer contact.",
+      cta: "View Website",
+      href: "https://fixbike.online/",
+    },
+  },
+  finalCta: "Want a similar project for your business? Contact me.",
   fontsNote: "Site typography uses Inter (Google Fonts), with system-ui / sans-serif as fallback.",
   thearRealm: {
     innerSectionHeading: "PROJECT FOR THEAR REALM TV",
@@ -103,9 +153,27 @@ const en: CaseStudioCopy = {
 };
 
 const de: CaseStudioCopy = {
-  caseStudioHeading: "Case Studio",
+  caseStudioHeading: "PROJEKTI ZA NAŠE KLIJENTE",
   materialsIntro:
-    "Projekte, die ich für Kunden aus den mir bereitgestellten Materialien umgesetzt habe.",
+    "Werfen Sie einen Blick auf einige unserer Projekte für Kunden. Unser Fokus liegt auf Qualität, modernem Design und Ergebnissen, die Unternehmen beim Wachstum unterstützen.",
+  websitesHeading: "WEBSITE-PROJEKTE",
+  websiteProjects: {
+    first: {
+      title: "Website für Fahrradservice & E-Bike-Verleih",
+      description:
+        "Moderne und schnelle Website für ein Fahrradservice- und E-Bike-Verleih-Unternehmen. Entwickelt, um lokale Kunden anzuziehen und einen klaren Überblick über die Leistungen zu geben.",
+      cta: "Website ansehen",
+      href: "https://fixbike.online/",
+    },
+    second: {
+      title: "Website für FixBike (Fahrradreparatur-Service)",
+      description:
+        "Klare und benutzerfreundliche Website für einen lokalen Fahrradreparaturbetrieb. Fokus auf einfacher Navigation und schneller Kundenkontaktaufnahme.",
+      cta: "Website ansehen",
+      href: "https://fixbike.online/",
+    },
+  },
+  finalCta: "Möchten Sie ein ähnliches Projekt für Ihr Unternehmen? Kontaktieren Sie mich.",
   fontsNote:
     "Typografie der Website: Inter (Google Fonts), mit system-ui / sans-serif als Fallback.",
   thearRealm: {
@@ -140,9 +208,27 @@ const de: CaseStudioCopy = {
 };
 
 const it: CaseStudioCopy = {
-  caseStudioHeading: "Case Studio",
+  caseStudioHeading: "PROJEKTI ZA NAŠE KLIJENTE",
   materialsIntro:
-    "Progetti realizzati per i clienti a partire dal materiale che mi è stato fornito.",
+    "Dai un’occhiata ad alcuni dei progetti realizzati per i nostri clienti. Ci concentriamo su qualità, design moderno e risultati che aiutano le aziende a crescere.",
+  websitesHeading: "PROGETTI WEB",
+  websiteProjects: {
+    first: {
+      title: "Sito web per assistenza biciclette e noleggio e-bike",
+      description:
+        "Sito moderno e veloce creato per un’attività di assistenza biciclette e noleggio e-bike. Progettato per attirare clienti locali e offrire una panoramica chiara dei servizi.",
+      cta: "Vedi sito web",
+      href: "https://fixbike.online/",
+    },
+    second: {
+      title: "Sito web per FixBike (servizio riparazione biciclette)",
+      description:
+        "Sito pulito e intuitivo realizzato per un’attività locale di riparazione biciclette. Focus su navigazione semplice e contatto rapido con i clienti.",
+      cta: "Vedi sito web",
+      href: "https://fixbike.online/",
+    },
+  },
+  finalCta: "Vuoi un progetto simile per la tua attività? Contattami.",
   fontsNote:
     "Tipografia del sito: Inter (Google Fonts), con fallback system-ui / sans-serif.",
   thearRealm: {
@@ -177,9 +263,27 @@ const it: CaseStudioCopy = {
 };
 
 const al: CaseStudioCopy = {
-  caseStudioHeading: "Case Studio",
+  caseStudioHeading: "PROJEKTI ZA NAŠE KLIJENTE",
   materialsIntro:
-    "Projekte që kam realizuar për klientët duke përdorur materialet që më janë dhënë.",
+    "Shikoni disa nga projektet që kemi realizuar për klientët tanë. Fokusohemi në cilësi, dizajn modern dhe rezultate që ndihmojnë bizneset të rriten.",
+  websitesHeading: "PROJEKTE WEBSITE",
+  websiteProjects: {
+    first: {
+      title: "Website për servis biçikletash dhe qira e-bike",
+      description:
+        "Website modern dhe i shpejtë i krijuar për një biznes servisi biçikletash dhe qiraje e-bike. I dizajnuar për tërheqjen e klientëve lokalë dhe prezantim të qartë të shërbimeve.",
+      cta: "Shiko website",
+      href: "https://fixbike.online/",
+    },
+    second: {
+      title: "Website për FixBike (servis riparimi biçikletash)",
+      description:
+        "Website i pastër dhe i lehtë për përdorim për një biznes lokal të riparimit të biçikletave. Fokus në navigim të thjeshtë dhe kontakt të shpejtë me klientët.",
+      cta: "Shiko website",
+      href: "https://fixbike.online/",
+    },
+  },
+  finalCta: "Dëshironi një projekt të ngjashëm për biznesin tuaj? Më kontaktoni.",
   fontsNote:
     "Tipografia e sajtit: Inter (Google Fonts), me rezervë system-ui / sans-serif.",
   thearRealm: {

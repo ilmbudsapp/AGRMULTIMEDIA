@@ -13,6 +13,9 @@ const CS2_DIR = "/Case Studio 2/";
 const CS2_LOGO = "01 Logo.jpg";
 const CS2_VIDEO = "7.mp4";
 
+const FIXBIKE_DIR = "/Case Studio FixBike/";
+const FIXBIKE_IMAGES = ["01.png", "02.png", "03.png", "04.png"] as const;
+
 function studioAsset(baseDir: string, fileName: string): string {
   return encodeURI(`${baseDir}${fileName}`);
 }
@@ -35,7 +38,49 @@ export default function CaseStudyThearRealm() {
           {t.caseStudioHeading}
         </h2>
         <p className="mt-4 max-w-3xl text-base leading-relaxed text-white/75 md:text-lg">{t.materialsIntro}</p>
-        <p className="mt-3 max-w-3xl text-sm leading-relaxed text-white/50">{t.fontsNote}</p>
+
+        <div className="mt-12 space-y-8">
+          <h3 className="text-sm font-semibold uppercase tracking-[0.12em] text-white/70">{t.websitesHeading}</h3>
+
+          <article className="rounded-[12px] border border-[#333333] bg-white/[0.02] p-6 shadow-[0_8px_40px_rgba(0,0,0,0.25)] backdrop-blur-sm md:p-8">
+            <h4 className="text-xl font-semibold text-white md:text-2xl">{t.websiteProjects.first.title}</h4>
+            <p className="mt-4 max-w-4xl text-base leading-relaxed text-white/75">{t.websiteProjects.first.description}</p>
+            <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+              {FIXBIKE_IMAGES.map((file) => (
+                <figure key={file} className="premium-card overflow-hidden p-0">
+                  <img
+                    src={studioAsset(FIXBIKE_DIR, file)}
+                    alt={t.websiteProjects.first.title}
+                    className="aspect-[16/9] w-full object-cover"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </figure>
+              ))}
+            </div>
+            <a
+              href={t.websiteProjects.first.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="premium-button mt-6 inline-flex"
+            >
+              {t.websiteProjects.first.cta}
+            </a>
+          </article>
+
+          <article className="rounded-[12px] border border-[#333333] bg-white/[0.02] p-6 shadow-[0_8px_40px_rgba(0,0,0,0.25)] backdrop-blur-sm md:p-8">
+            <h4 className="text-xl font-semibold text-white md:text-2xl">{t.websiteProjects.second.title}</h4>
+            <p className="mt-4 max-w-4xl text-base leading-relaxed text-white/75">{t.websiteProjects.second.description}</p>
+            <a
+              href={t.websiteProjects.second.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="premium-button mt-6 inline-flex"
+            >
+              {t.websiteProjects.second.cta}
+            </a>
+          </article>
+        </div>
 
         {/* PROJEKAT ZA THEAR REALM TV */}
         <div
@@ -175,6 +220,8 @@ export default function CaseStudyThearRealm() {
             </div>
           </div>
         </div>
+
+        <p className="mt-14 text-center text-lg font-medium text-white md:text-xl">{t.finalCta}</p>
       </div>
     </section>
   );
