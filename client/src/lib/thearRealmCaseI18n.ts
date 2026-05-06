@@ -52,14 +52,14 @@ const sr: CaseStudioCopy = {
     first: {
       title: "Website for Bicycle Service & e-Bike Rental",
       description:
-        "Modern and fast website created for a bicycle service and e-bike rental business. Designed to attract local customers and provide a clear overview of services.",
+        "Modern and fast website created for a bicycle service and e-bike rental business. Designed to attract local customers and provide a clear overview of services. Website: https://fixbike.online/",
       cta: "View Website",
       href: "https://fixbike.online/",
     },
     second: {
       title: "Website for FixBike (Bicycle Repair Service)",
       description:
-        "Clean and user-friendly website built for a local bicycle repair business. Focused on simple navigation and fast customer contact.",
+        "Clean and user-friendly website built for a local bicycle repair business. Focused on simple navigation and fast customer contact. Website: https://fixbike.online/",
       cta: "View Website",
       href: "https://fixbike.online/",
     },
@@ -107,14 +107,14 @@ const en: CaseStudioCopy = {
     first: {
       title: "Website for Bicycle Service & e-Bike Rental",
       description:
-        "Modern and fast website created for a bicycle service and e-bike rental business. Designed to attract local customers and provide a clear overview of services.",
+        "Modern and fast website created for a bicycle service and e-bike rental business. Designed to attract local customers and provide a clear overview of services. Website: https://fixbike.online/",
       cta: "View Website",
       href: "https://fixbike.online/",
     },
     second: {
       title: "Website for FixBike (Bicycle Repair Service)",
       description:
-        "Clean and user-friendly website built for a local bicycle repair business. Focused on simple navigation and fast customer contact.",
+        "Clean and user-friendly website built for a local bicycle repair business. Focused on simple navigation and fast customer contact. Website: https://fixbike.online/",
       cta: "View Website",
       href: "https://fixbike.online/",
     },
@@ -161,14 +161,14 @@ const de: CaseStudioCopy = {
     first: {
       title: "Website für Fahrradservice & E-Bike-Verleih",
       description:
-        "Moderne und schnelle Website für ein Fahrradservice- und E-Bike-Verleih-Unternehmen. Entwickelt, um lokale Kunden anzuziehen und einen klaren Überblick über die Leistungen zu geben.",
+        "Moderne und schnelle Website für ein Fahrradservice- und E-Bike-Verleih-Unternehmen. Entwickelt, um lokale Kunden anzuziehen und einen klaren Überblick über die Leistungen zu geben. Website: https://fixbike.online/",
       cta: "Website ansehen",
       href: "https://fixbike.online/",
     },
     second: {
       title: "Website für FixBike (Fahrradreparatur-Service)",
       description:
-        "Klare und benutzerfreundliche Website für einen lokalen Fahrradreparaturbetrieb. Fokus auf einfacher Navigation und schneller Kundenkontaktaufnahme.",
+        "Klare und benutzerfreundliche Website für einen lokalen Fahrradreparaturbetrieb. Fokus auf einfacher Navigation und schneller Kundenkontaktaufnahme. Website: https://fixbike.online/",
       cta: "Website ansehen",
       href: "https://fixbike.online/",
     },
@@ -216,14 +216,14 @@ const it: CaseStudioCopy = {
     first: {
       title: "Sito web per assistenza biciclette e noleggio e-bike",
       description:
-        "Sito moderno e veloce creato per un’attività di assistenza biciclette e noleggio e-bike. Progettato per attirare clienti locali e offrire una panoramica chiara dei servizi.",
+        "Sito moderno e veloce creato per un’attività di assistenza biciclette e noleggio e-bike. Progettato per attirare clienti locali e offrire una panoramica chiara dei servizi. Website: https://fixbike.online/",
       cta: "Vedi sito web",
       href: "https://fixbike.online/",
     },
     second: {
       title: "Sito web per FixBike (servizio riparazione biciclette)",
       description:
-        "Sito pulito e intuitivo realizzato per un’attività locale di riparazione biciclette. Focus su navigazione semplice e contatto rapido con i clienti.",
+        "Sito pulito e intuitivo realizzato per un’attività locale di riparazione biciclette. Focus su navigazione semplice e contatto rapido con i clienti. Website: https://fixbike.online/",
       cta: "Vedi sito web",
       href: "https://fixbike.online/",
     },
@@ -271,14 +271,14 @@ const al: CaseStudioCopy = {
     first: {
       title: "Website për servis biçikletash dhe qira e-bike",
       description:
-        "Website modern dhe i shpejtë i krijuar për një biznes servisi biçikletash dhe qiraje e-bike. I dizajnuar për tërheqjen e klientëve lokalë dhe prezantim të qartë të shërbimeve.",
+        "Website modern dhe i shpejtë i krijuar për një biznes servisi biçikletash dhe qiraje e-bike. I dizajnuar për tërheqjen e klientëve lokalë dhe prezantim të qartë të shërbimeve. Website: https://fixbike.online/",
       cta: "Shiko website",
       href: "https://fixbike.online/",
     },
     second: {
       title: "Website për FixBike (servis riparimi biçikletash)",
       description:
-        "Website i pastër dhe i lehtë për përdorim për një biznes lokal të riparimit të biçikletave. Fokus në navigim të thjeshtë dhe kontakt të shpejtë me klientët.",
+        "Website i pastër dhe i lehtë për përdorim për një biznes lokal të riparimit të biçikletave. Fokus në navigim të thjeshtë dhe kontakt të shpejtë me klientët. Website: https://fixbike.online/",
       cta: "Shiko website",
       href: "https://fixbike.online/",
     },
