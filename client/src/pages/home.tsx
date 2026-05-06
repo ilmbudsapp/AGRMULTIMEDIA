@@ -6,6 +6,7 @@ import CaseStudyThearRealm from "@/components/CaseStudyThearRealm";
 import TrustIntro from "@/components/TrustIntro";
 import WhyChooseMe from "@/components/WhyChooseMe";
 import Testimonials from "@/components/Testimonials";
+import PricingModels from "@/components/PricingModels";
 import AboutHome from "@/components/AboutHome";
 import HomeFinalCta from "@/components/HomeFinalCta";
 import Contact from "@/components/Contact";
@@ -30,6 +31,7 @@ export default function Home() {
         <WhyChooseMe />
         <Testimonials />
         <CaseStudyThearRealm />
+        <PricingModels />
         <HomeServices />
         <AboutHome />
         <HomeFinalCta />
