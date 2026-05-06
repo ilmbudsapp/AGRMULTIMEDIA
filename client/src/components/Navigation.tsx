@@ -8,18 +8,11 @@ const logoImage = "/agr-logo-white.png";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { tSpec, currentLanguage } = useLanguage();
+  const { tSpec } = useLanguage();
   const [location] = useLocation();
 
   const isHomePage = location === "/";
-  const logoSeoTextByLang: Record<string, string> = {
-    de: "webdesign geislingen an der steige",
-    en: "web design geislingen an der steige",
-    it: "web design geislingen an der steige",
-    sr: "web dizajn geislingen an der steige",
-    al: "web dizajn geislingen an der steige",
-  };
-  const logoSeoText = logoSeoTextByLang[currentLanguage] ?? logoSeoTextByLang.en;
+  const logoSeoText = "WEBDESIGN & SEO IN GEISLINGEN AN DER STEIGE";
 
   const scrollToSection = (sectionId: string) => {
     if (isHomePage) {
@@ -56,7 +49,7 @@ export default function Navigation() {
                 fetchPriority="high"
                 decoding="async"
               />
-              <span className="hidden text-xs font-medium lowercase tracking-[0.08em] text-white/80 lg:inline">
+              <span className="max-w-[185px] text-[10px] font-medium uppercase leading-tight tracking-[0.08em] text-white/80 sm:max-w-none sm:text-xs">
                 {logoSeoText}
               </span>
             </Link>
