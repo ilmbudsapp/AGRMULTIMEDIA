@@ -8,7 +8,8 @@
     <title>AGR Multimedia | Web Dizajn, Grafika & AI za Mala Preduzeća</title>
     <meta name="description" id="meta-description" content="Profesionalni web sajtovi, grafički dizajn, video i AI sadržaj za mala preduzeća. Besplatne konsultacije! agron6922@gmail.com" />
     <meta name="keywords" id="meta-keywords" content="web dizajn, grafički dizajn, ai sadržaj, digitalni marketing za mala preduzeća, izrada web sajta, agr multimedia" />
-    <meta name="author" content="AGR Multimedia" />
+    <meta name="author" content="Agron Osmani, AGR Multimedia" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     
     <!-- Open Graph Meta Tags for Social Sharing -->
     <meta property="og:title" id="og-title" content="AGR Multimedia | Web Dizajn, Grafika & AI za Mala Preduzeća" />
@@ -16,6 +17,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" id="og-url" content="https://www.agrmultimedia.eu/" />
     <meta property="og:image" content="https://www.agrmultimedia.eu/og-image.jpg" />
+    <meta property="og:site_name" content="AGR Multimedia" />
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -45,61 +47,108 @@
       />
     </noscript>
 
-    <!-- Structured Data for SEO -->
+    <!-- Structured Data: Organization + Author + FAQ -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "AGR Multimedia",
-        "url": "https://www.agrmultimedia.eu",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Geislingen an der Steige",
-            "addressRegion": "Baden-Württemberg",
-            "addressCountry": "DE"
-        },
-        "areaServed": ["DE", "AT", "CH", "EU"],
-        "telephone": "+4915560873124",
-        "email": "agron6922@gmail.com",
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+4915560873124",
-            "email": "agron6922@gmail.com",
-            "contactType": "customer service",
-            "availableLanguage": ["sr", "en", "de", "it", "al"]
-        },
-        "sameAs": [
-            "https://www.facebook.com/halidosmani74",
-            "https://www.instagram.com/agrondesign/",
-            "https://www.linkedin.com/in/agron-osmani-228947266/",
-            "https://wa.me/4915560873124"
-        ],
-        "makesOffer": [
+        "@graph": [
             {
-                "@type": "Offer",
-                "name": "Web Design",
-                "category": "Web Design"
+                "@type": "Organization",
+                "@id": "https://www.agrmultimedia.eu/#organization",
+                "name": "AGR Multimedia",
+                "url": "https://www.agrmultimedia.eu",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://www.agrmultimedia.eu/agr-logo-white.png"
+                },
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Geislingen an der Steige",
+                    "addressRegion": "Baden-Württemberg",
+                    "addressCountry": "DE"
+                },
+                "areaServed": ["DE", "AT", "CH", "EU"],
+                "telephone": "+4915560873124",
+                "email": "agron6922@gmail.com",
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "+4915560873124",
+                    "email": "agron6922@gmail.com",
+                    "contactType": "customer service",
+                    "availableLanguage": ["sr", "en", "de", "it", "al"]
+                },
+                "sameAs": [
+                    "https://www.facebook.com/halidosmani74",
+                    "https://www.instagram.com/agrondesign/",
+                    "https://www.linkedin.com/in/agron-osmani-228947266/",
+                    "https://wa.me/4915560873124"
+                ],
+                "makesOffer": [
+                    { "@type": "Offer", "name": "Web Design", "category": "Web Design" },
+                    { "@type": "Offer", "name": "Graphics & Branding", "category": "Graphic Design" },
+                    { "@type": "Offer", "name": "Video & Motion", "category": "Video Production" },
+                    { "@type": "Offer", "name": "Digital Marketing & AI", "category": "Digital Marketing" }
+                ]
             },
             {
-                "@type": "Offer",
-                "name": "Graphics & Branding",
-                "category": "Graphic Design"
+                "@type": "Person",
+                "@id": "https://www.agrmultimedia.eu/#person",
+                "name": "Agron Osmani",
+                "url": "https://www.linkedin.com/in/agron-osmani-228947266/",
+                "jobTitle": "Founder & Creative Lead",
+                "worksFor": { "@id": "https://www.agrmultimedia.eu/#organization" }
             },
             {
-                "@type": "Offer",
-                "name": "Video & Motion",
-                "category": "Video Production"
-            },
-            {
-                "@type": "Offer",
-                "name": "Digital Marketing & AI",
-                "category": "Digital Marketing"
+                "@type": "FAQPage",
+                "@id": "https://www.agrmultimedia.eu/#faq",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Zašto izabrati AGR Multimedia za web dizajn i grafiku?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Kombinujemo tehničku SEO-prijateljsku strukturu, pristupačnost i performanse sa dizajnom koji podržava konverzije. Umesto generičkih šablona gradimo hijerarhiju sadržaja i vizuelni jezik prilagođen vašoj publici, uz primere u portfolio delu sajta."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Kako izgleda proces izrade sajta od prvog poziva do objave?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Kreće od briefinga i predloga strukture stranica, zatim dizajn i razvoj u iteracijama sa jasnim rokovima. Pre objave testiramo forme, brzinu i mobilni prikaz; po potrebi usklađujemo sadržaj sa digitalnim marketingom i SEO koracima koje možete pratiti."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Šta sve obuhvata ponuda za mala preduzeća u EU?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Web i landing stranice, grafički identitet i štampa, video produkcija, kao i AI-pomoć pri kreiranju sadržaja uz ljudsku reviziju kvaliteta — sve sa ciljem merljivih rezultata za mala preduzeća u Nemačkoj, Austriji, Švajcarskoj i širom EU."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Koliko brzo možete očekivati odgovor i pokretanje projekta?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Na upite obično odgovaramo u roku od 24 sata i dogovaramo sledeće korake (ciljevi, obim, rokovi). Najbrži način je kontakt forma ili direktan poziv — dobijate predlog bez obaveze."
+                        }
+                    }
+                ]
             }
         ]
     }
     </script>
 </head>
 <body>
+    <noscript>
+        <div style="padding: 2rem; max-width: 42rem; margin: 0 auto; background: #07070b; color: #e5e5e5; font-family: system-ui, sans-serif; line-height: 1.65;">
+            <h1 style="font-size: 1.5rem; color: #fff;">AGR Multimedia — Web dizajn i grafika</h1>
+            <p>Studio za web dizajn, grafički dizajn, video i digitalni marketing za mala preduzeća. Bazirani smo u Geislingen an der Steige (Nemačka) i radimo sa klijentima u EU.</p>
+            <p><a href="/services" style="color: #93c5fd;">Usluge</a> · <a href="/web-design" style="color: #93c5fd;">Web dizajn</a> · <a href="/graphic-design" style="color: #93c5fd;">Grafika</a> · <a href="/portfolio" style="color: #93c5fd;">Portfolio</a> · <a href="/contact" style="color: #93c5fd;">Kontakt</a> · <a href="/terms" style="color: #93c5fd;">Uslovi korišćenja</a></p>
+            <p>Za punu funkcionalnost uključite JavaScript u pregledaču.</p>
+        </div>
+    </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
 </body>

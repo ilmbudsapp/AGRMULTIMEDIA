@@ -37,7 +37,7 @@ type PremiumTranslations = {
 
 const en: PremiumTranslations = {
   hero: {
-    heading: "Web Design Geislingen an der Steige",
+    heading: "AGR Multimedia — Web Design & Graphics, Geislingen an der Steige",
     subheading: "Modern and fast websites for small businesses",
     primaryCta: "Get a Free Consultation",
     secondaryCta: "View Projects",
@@ -89,7 +89,7 @@ const en: PremiumTranslations = {
 
 const de: PremiumTranslations = {
   hero: {
-    heading: "Webdesign Geislingen an der Steige",
+    heading: "AGR Multimedia — Webdesign & Grafik, Geislingen an der Steige",
     subheading: "Moderne und schnelle Websites fur kleine Unternehmen",
     primaryCta: "Kostenlose Beratung anfordern",
     secondaryCta: "Projekte ansehen",
@@ -141,7 +141,7 @@ const de: PremiumTranslations = {
 
 const sr: PremiumTranslations = {
   hero: {
-    heading: "Web dizajn Geislingen an der Steige",
+    heading: "AGR Multimedia — Web dizajn i grafika, Geislingen an der Steige",
     subheading: "Moderne i brze web stranice koje donose nove klijente",
     primaryCta: "Zatražite besplatnu konsultaciju",
     secondaryCta: "Pogledajte projekte",
@@ -193,7 +193,7 @@ const sr: PremiumTranslations = {
 
 const it: PremiumTranslations = {
   hero: {
-    heading: "Web design Geislingen an der Steige",
+    heading: "AGR Multimedia — Web design e grafica, Geislingen an der Steige",
     subheading: "Siti web moderni e veloci per piccole imprese",
     primaryCta: "Richiedi una consulenza gratuita",
     secondaryCta: "Vedi progetti",
@@ -245,7 +245,7 @@ const it: PremiumTranslations = {
 
 const al: PremiumTranslations = {
   hero: {
-    heading: "Web dizajn Geislingen an der Steige",
+    heading: "AGR Multimedia — Web dizajn dhe grafikë, Geislingen an der Steige",
     subheading: "Faqe moderne dhe te shpejta per biznese te vogla",
     primaryCta: "Kërko konsultë falas",
     secondaryCta: "Shiko projektet",

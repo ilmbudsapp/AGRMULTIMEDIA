@@ -3,6 +3,7 @@ import { Menu, X } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Link, useLocation } from "wouter";
 import LanguageSwitcherInline from "./LanguageSwitcherInline";
+import { NAV_LANDMARK_LABEL } from "@/lib/a11yLandmarks";
 
 const logoImage = "/agr-logo-white.png";
 
@@ -51,7 +52,10 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-[#333333] bg-[#0a0a0a]/85 backdrop-blur-xl">
+    <nav
+      className="fixed top-0 left-0 right-0 z-50 border-b border-[#333333] bg-[#0a0a0a]/85 backdrop-blur-xl"
+      aria-label={NAV_LANDMARK_LABEL[currentLanguage]}
+    >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-14 md:h-16">
           <div className="flex-shrink-0">
