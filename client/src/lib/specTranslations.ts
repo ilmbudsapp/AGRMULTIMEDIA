@@ -29,7 +29,6 @@ export interface SpecTranslations {
   seo: {
     title: string;
     description: string;
-    keywords: string;
   };
   // Featured projects under hero
   heroProjects: {
@@ -172,11 +171,10 @@ const en: SpecTranslations = {
     availableIn: 'DE · EN · IT · SR · AL',
   },
   seo: {
-    title: "AGR Multimedia Geislingen | Web Design, AI Multimedia & Digital Marketing",
+    title:
+      "AGR Multimedia — Web design, graphics & AI — Geislingen an der Steige",
     description:
       "Web design, AI multimedia, graphic design & SEO for small businesses — studio in Geislingen an der Steige, Germany. Free consultation: agron6922@gmail.com",
-    keywords:
-      "web design Geislingen, AI multimedia, digital marketing, SEO, graphic design, small business website, AGR Multimedia",
   },
   heroProjects: {
     heading: 'Featured projects',
@@ -377,11 +375,9 @@ const de: SpecTranslations = {
     availableIn: 'DE · EN · IT · SR · AL',
   },
   seo: {
-    title: "AGR Multimedia Geislingen | Webdesign, KI-Multimedia & digitales Marketing",
+    title: "AGR Multimedia — Webdesign, Grafik & KI — Geislingen an der Steige",
     description:
       "Webdesign, KI-Multimedia, Grafikdesign & SEO für Kleinunternehmen — Studio in Geislingen an der Steige. Kostenlose Beratung: agron6922@gmail.com",
-    keywords:
-      "Webdesign Geislingen, KI Multimedia, digitales Marketing, SEO, Grafikdesign, Website erstellen, AGR Multimedia",
   },
   heroProjects: {
     heading: 'Ausgewählte Projekte',
@@ -582,11 +578,9 @@ const it: SpecTranslations = {
     availableIn: 'DE · EN · IT · SR · AL',
   },
   seo: {
-    title: "AGR Multimedia Geislingen | Web Design, AI Multimedia & Digital Marketing",
+    title: "AGR Multimedia — Web design, grafica e AI — Geislingen an der Steige",
     description:
       "Web design, AI multimedia, grafica e SEO per piccole imprese — studio a Geislingen an der Steige, Germania. Consulenza gratuita: agron6922@gmail.com",
-    keywords:
-      "web design Geislingen, AI multimedia, digital marketing, SEO, grafica, piccole imprese, AGR Multimedia",
   },
   heroProjects: {
     heading: 'Progetti in evidenza',
@@ -787,11 +781,9 @@ const sr: SpecTranslations = {
     availableIn: 'DE · EN · IT · SR · AL',
   },
   seo: {
-    title: "AGR Multimedia Geislingen | Web dizajn, AI multimedija i digitalni marketing",
+    title: "AGR Multimedia — Web dizajn, grafika i AI — Geislingen an der Steige",
     description:
       "Web dizajn, AI multimedija, grafički dizajn i SEO za mala preduzeća — studio u Geislingen an der Steige, Nemačka. Besplatne konsultacije: agron6922@gmail.com",
-    keywords:
-      "web dizajn Geislingen, AI multimedija, digitalni marketing, SEO, grafički dizajn, izrada sajta, AGR Multimedia",
   },
   heroProjects: {
     heading: 'Izdvojeni projekti',
@@ -992,11 +984,9 @@ const al: SpecTranslations = {
     availableIn: 'DE · EN · IT · SR · AL',
   },
   seo: {
-    title: "AGR Multimedia Geislingen | Web design, AI multimedia dhe marketing digjital",
+    title: "AGR Multimedia — Web dizajn, grafikë dhe AI — Geislingen an der Steige",
     description:
       "Web design, AI multimedia, dizajn grafik dhe SEO për biznese të vogla — studio në Geislingen an der Steige, Gjermani. Konsultë falas: agron6922@gmail.com",
-    keywords:
-      "dizajn web Geislingen, AI multimedia, marketing digjital, SEO, dizajn grafik, faqe interneti, AGR Multimedia",
   },
   heroProjects: {
     heading: 'Projektet e veçuara',

@@ -11,6 +11,15 @@ export function SeoLink({ href, children }: { href: string; children: React.Reac
 
 const L = SeoLink;
 
+/** Stable fragment ids for TOC / anchors (same across all languages). */
+export function SeoTopicHeading({ id, children }: { id: string; children: React.ReactNode }) {
+  return (
+    <h3 id={id} className="mt-10 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+      {children}
+    </h3>
+  );
+}
+
 /** ~520+ words — detailed services + multi-perspective for GEO / trust signals */
 export function SrBody() {
   return (
@@ -36,9 +45,9 @@ export function SrBody() {
         .
       </p>
 
-      <h3 className="mt-10 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+      <SeoTopicHeading id="seo-topic-web">
         Web dizajn — šta konkretno dobijate u saradnji sa nama
-      </h3>
+      </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
         Ne radimo „sajt radi sajta”. Počinjemo od cilja: ko je idealan posetilac, šta treba da uradi na stranici (poziv,
         forma, rezervacija), i koja poruka se mora pročitati u prvih deset sekundi. Informaciona arhitektura (koje stranice
@@ -49,9 +58,9 @@ export function SrBody() {
         <L href="/portfolio">portfoliju</L>.
       </p>
 
-      <h3 className="mt-10 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+      <SeoTopicHeading id="seo-topic-graphic">
         Grafički dizajn — brend, štampa i digitalni set koji ostaje dosledan
-      </h3>
+      </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
         Vizuelni identitet nije samo logo: to su pravila upotrebe boja i tipografije, odnos fotografije prema ilustraciji,
         ton komunikacije na baneru i na vizitkarti. Za lokalne usluge često radimo flajere, menije, plakate i društvene
@@ -61,9 +70,9 @@ export function SrBody() {
         varijante koje su realne za vaš budžet i rokove.
       </p>
 
-      <h3 className="mt-10 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+      <SeoTopicHeading id="seo-topic-ai">
         AI rešenja — šta ubrzava produkciju, a gde je čovek nezamenljiv
-      </h3>
+      </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
         AI koristimo kao alat za istraživanje varijanti, skicu copy-ja, razne vizuelne pravce i ponavljanje dosadnih
         zadataka (formatiranje, varijante dimenzija, batch obrada). To skraćuje vreme i smanjuje cenu iteracija. Međutim,
@@ -73,9 +82,9 @@ export function SrBody() {
         stranici <L href="/ai-content-creation">AI sadržaj i produkcija</L>.
       </p>
 
-      <h3 className="mt-10 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+      <SeoTopicHeading id="seo-topic-ai-tradeoffs">
         Prednosti i mane AI u dizajnu — iskreno, iz prakse
-      </h3>
+      </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
         Prednosti: brža eksploracija ideja, više varijanti layouta u kraćem roku, lakše prilagođavanje više jezika,
         ušteda pri ponovljenim formatima. Mane: bez smernica brenda lako završite na generičkom izgledu; tekst može zvučati
@@ -84,9 +93,9 @@ export function SrBody() {
         alata i iskustva, uz jasnu podelu odgovornosti i kontrolu kvaliteta pre objave.
       </p>
 
-      <h3 className="mt-10 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+      <SeoTopicHeading id="seo-topic-hybrid">
         Naš pristup naspram čistog šablona ili pristupa „samo AI bez dizajn tima”
-      </h3>
+      </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
         Gotovi šabloni su jeftini na početku, ali često koštaju na konverzijama: isti izgled kao konkurencija, teško
         objašnjavanje jedinstvene ponude, ograničenja kada treba da porastete. Čist AI pristup bez dizajnerskog okvira
@@ -104,18 +113,18 @@ export function SrBody() {
         <L href="/about">O nama</L>.
       </p>
 
-      <h3 className="mt-10 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+      <SeoTopicHeading id="seo-topic-why">
         Zašto izabrati AGR Multimedia?
-      </h3>
+      </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
         Jedan tim pokriva web, grafiku i produkciju sadržaja; jezik saradnje može biti srpski, engleski, nemački,
         italijanski ili albanski — što smanjuje prevodilačke gubitke u briefingu. Držimo se rokova i dokumentujemo šta je
         u dogovoru, kako biste znali šta dobijate u svakoj fazi.
       </p>
 
-      <h3 className="mt-10 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+      <SeoTopicHeading id="seo-topic-kickoff">
         Kako izgleda start projekta i šta doneti na prvi poziv?
-      </h3>
+      </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
         Nakon upita (obično odgovor u roku od 24 sata) zakazujemo kratak poziv ili pisani briefing: ciljevi, reference koje
         volite, materijale koje već imate. Za složenije tražimo primer konkurentnih sajtova koji vam se dopadaju —
@@ -148,9 +157,9 @@ export function EnBody() {
         .
       </p>
 
-      <h3 className="mt-10 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+      <SeoTopicHeading id="seo-topic-web">
         Web design — what you actually get when we work together
-      </h3>
+      </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
         We do not ship “a website for the sake of it”. We start from goals: who should visit, what they should do (call,
         form, booking), and which message must land in the first seconds. Information architecture is defined before
@@ -159,9 +168,9 @@ export function EnBody() {
         under <L href="/digital-marketing">digital marketing</L>. Live examples sit in the <L href="/portfolio">portfolio</L>.
       </p>
 
-      <h3 className="mt-10 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+      <SeoTopicHeading id="seo-topic-graphic">
         Graphic design — brand systems for print and digital
-      </h3>
+      </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
         Visual identity is more than a logo: colour and type rules, photography vs illustration balance, and tone across
         banners and business cards. For local businesses we produce flyers, menus, posters, and social formats that stay
@@ -169,9 +178,9 @@ export function EnBody() {
         ads live inside one system — so you do not end up with five accidental “brand versions” across channels.
       </p>
 
-      <h3 className="mt-10 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+      <SeoTopicHeading id="seo-topic-ai">
         AI solutions — acceleration vs human judgement
-      </h3>
+      </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
         We use AI to explore variants, draft copy directions, visual routes, and repetitive production tasks (resizing,
         batch formatting). That shortens timelines and iteration cost. Trust-critical decisions — final messaging,
@@ -179,9 +188,9 @@ export function EnBody() {
         on the <L href="/ai-content-creation">AI content</L> page.
       </p>
 
-      <h3 className="mt-10 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+      <SeoTopicHeading id="seo-topic-ai-tradeoffs">
         Pros and cons of AI in design — a balanced view
-      </h3>
+      </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
         Pros: faster exploration, more layout variants, easier multilingual drafts, savings on repeated formats. Cons:
         without brand guardrails you risk generic aesthetics; copy may sound fluent but hollow; proposals may ignore legal
@@ -189,14 +198,14 @@ export function EnBody() {
         tooling with experience and QA before anything goes live.
       </p>
 
-      <h3 className="mt-10 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+      <SeoTopicHeading id="seo-topic-hybrid">
         Our hybrid approach vs templates-only or AI-only workflows
-      </h3>
+      </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
         Templates are cheap upfront but often cost conversions: same look as competitors, weak differentiation, limits when
         you scale. AI-only flows without design leadership can move fast yet miss brand coherence and compliance. Our
         hybrid model pairs a design system with structured feedback loops and AI where it truly helps — so you keep speed
-        and         accountability, including before users hit “Submit” on the <L href="/contact">contact page</L>.
+        and accountability, including before users hit “Submit” on the <L href="/contact">contact page</L>.
       </p>
 
       <p className="mt-8 text-[0.9375rem] leading-relaxed text-white/80">
@@ -206,17 +215,17 @@ export function EnBody() {
         <L href="/impresum">legal notice</L>, and background on <L href="/about">about</L>.
       </p>
 
-      <h3 className="mt-10 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+      <SeoTopicHeading id="seo-topic-why">
         Why choose AGR Multimedia?
-      </h3>
+      </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
         One team spans web, graphics, and content production; we work in Serbian, English, German, Italian, and Albanian
         — reducing briefing noise. We document scope and milestones so expectations stay transparent.
       </p>
 
-      <h3 className="mt-10 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+      <SeoTopicHeading id="seo-topic-kickoff">
         How do projects start and what should you prepare?
-      </h3>
+      </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
         After your enquiry (typically answered within 24 hours) we schedule a short call or written briefing: goals,
         references you like, assets you already own. Articles in the <L href="/blog">blog</L> help you understand
@@ -238,43 +247,43 @@ export function DeBody() {
         <L href="/privacy-policy">Privacy Policy</L>.
       </p>
 
-      <h3 className="mt-10 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+      <SeoTopicHeading id="seo-topic-web">
         Webdesign — Deliverables und Qualitätslinien
-      </h3>
+      </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
         Wir starten mit Zielen und Informationsarchitektur, dann UX und UI. Performance, Mobile-First und technische SEO-Basics
         gehören dazu. Kampagnen flankieren wir über <L href="/digital-marketing">Digital Marketing</L>. Beispiele im{" "}
         <L href="/portfolio">Portfolio</L>.
       </p>
 
-      <h3 className="mt-10 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+      <SeoTopicHeading id="seo-topic-graphic">
         Grafikdesign — ein System für Print und Digital
-      </h3>
+      </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
         Identität bedeutet Farben, Typografie, Bildsprache und Einheit zwischen Flyer, Menükarte und Social Posts.
         Druckdaten und Web-Exporte folgen denselben Regeln — weniger „Versions-Chaos“ über Kanäle hinweg.
       </p>
 
-      <h3 className="mt-10 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+      <SeoTopicHeading id="seo-topic-ai">
         KI im Kreativprozess — Tempo und menschliche Freigabe
-      </h3>
+      </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
         KI hilft bei Varianten, Textentwürfen und wiederholenden Produktionsschritten. Finale Botschaften, Markenkonformität
         und Verantwortung vor Livegang bleiben beim Team — Details auf der Seite <L href="/ai-content-creation">KI-Inhalte</L>.
       </p>
 
-      <h3 className="mt-10 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+      <SeoTopicHeading id="seo-topic-ai-tradeoffs">
         Vor- und Nachteile von KI im Design
-      </h3>
+      </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
         Vorteile: Geschwindigkeit, mehr Varianten, Skalierung. Risiken: Generischer Look, inhaltsleere Texte,
         Compliance-Themen (Barrierefreiheit, Werbeaussagen). Wir kombinieren KI mit QA und Markenführung statt
         „Ein-Klick-Wunder“ zu verkaufen.
       </p>
 
-      <h3 className="mt-10 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+      <SeoTopicHeading id="seo-topic-hybrid">
         Hybrid vs. reine Vorlagen oder KI ohne Designführung
-      </h3>
+      </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
         Templates sparen kurzfristig Kosten, kosten aber oft Conversion. Reine KI ohne Leitplanken birgt Markenbrüche. Unser
         Hybridmodell verbindet Systemdesign, Feedback-Schleifen und KI dort, wo sie Mehrwert liefert — bis zum Absenden auf
@@ -291,17 +300,17 @@ export function DeBody() {
         <L href="/privacy-policy">Datenschutzerklärung</L> und im <L href="/impresum">Impressum</L>.
       </p>
 
-      <h3 className="mt-10 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+      <SeoTopicHeading id="seo-topic-why">
         Warum AGR Multimedia?
-      </h3>
+      </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
         Ein Team für Web, Grafik und Content; Arbeitssprachen Serbisch, Englisch, Deutsch, Italienisch, Albanisch. Klare
         Scope-Dokumentation und Terminorientierung.
       </p>
 
-      <h3 className="mt-10 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+      <SeoTopicHeading id="seo-topic-kickoff">
         Projektstart — was wir vom ersten Gespräch brauchen
-      </h3>
+      </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
         Nach Ihrer Anfrage (meist Antwort innerhalb von 24 Stunden) klären wir Ziele und Referenzen. Im{" "}
         <L href="/blog">Blog</L> finden Sie vertiefende Artikel zu Conversion und Video.
@@ -320,42 +329,42 @@ export function ItBody() {
         ; chi siamo: <L href="/about">chi siamo</L>; privacy: <L href="/privacy-policy">privacy policy</L>.
       </p>
 
-      <h3 className="mt-10 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+      <SeoTopicHeading id="seo-topic-web">
         Web design — obiettivi, architettura e conversioni
-      </h3>
+      </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
         Partiamo da metriche chiare e dalla struttura delle pagine prima della grafica. Prestazioni, mobile e basi SEO
         tecnici sono inclusi. Collegamento alle campagne tramite <L href="/digital-marketing">digital marketing</L>. Casi in{" "}
         <L href="/portfolio">portfolio</L>.
       </p>
 
-      <h3 className="mt-10 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+      <SeoTopicHeading id="seo-topic-graphic">
         Grafica — coerenza tra stampa e digitale
-      </h3>
+      </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
         Costruiamo palette, tipografie e regole d&apos;uso così flyer, menu e social non divergono. File stampa e export
         digitali seguono lo stesso sistema visivo.
       </p>
 
-      <h3 className="mt-10 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+      <SeoTopicHeading id="seo-topic-ai">
         AI nel processo creativo
-      </h3>
+      </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
         L&apos;AI accelera varianti e attività ripetitive; messaggi finali, conformità al brand e revisione restano umane.
         Approfondimenti su <L href="/ai-content-creation">contenuti AI</L>.
       </p>
 
-      <h3 className="mt-10 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+      <SeoTopicHeading id="seo-topic-ai-tradeoffs">
         Pro e contro dell&apos;AI nel design
-      </h3>
+      </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
         Pro: velocità e scala. Contro: genericità, testi vuoti, rischi di accessibilità. Offriamo un approccio ibrido con QA,
         non promesse miracolistiche.
       </p>
 
-      <h3 className="mt-10 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+      <SeoTopicHeading id="seo-topic-hybrid">
         Approccio ibrido vs solo template o solo AI
-      </h3>
+      </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
         I template riducono costi iniziali ma spesso omogeneizzano l&apos;offerta. Solo AI senza direzione creativa rischia
         incoerenze. Combiniamo sistema di design, feedback e AI mirata fino al modulo su{" "}
@@ -370,17 +379,17 @@ export function ItBody() {
         checklist di revisione per contrasto e tono di voce allineato al brand. Per il team: <L href="/about">chi siamo</L>.
       </p>
 
-      <h3 className="mt-10 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+      <SeoTopicHeading id="seo-topic-why">
         Perché scegliere AGR Multimedia?
-      </h3>
+      </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
         Un team per web, grafica e produzione; lingue serbo, inglese, tedesco, italiano, albanese. Scope e milestone
         documentati.
       </p>
 
-      <h3 className="mt-10 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+      <SeoTopicHeading id="seo-topic-kickoff">
         Come inizia un progetto
-      </h3>
+      </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
         Dopo la richiesta rispondiamo rapidamente e definiamo briefing e riferimenti. Nel <L href="/blog">blog</L> trovi
         articoli pratici su conversion e video.
@@ -399,43 +408,43 @@ export function AlBody() {
         <L href="/about">rreth nesh</L>; privatësia: <L href="/privacy-policy">politika e privatësisë</L>.
       </p>
 
-      <h3 className="mt-10 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+      <SeoTopicHeading id="seo-topic-web">
         Web dizajn — qëllime dhe strukturë
-      </h3>
+      </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
         Fillojmë nga qëllimet dhe arkitektura e informacionit. Performanca, mobile dhe baza SEO janë të përfshira. Shembuj në{" "}
         <L href="/portfolio">portfolio</L>; kampanja përmes <L href="/digital-marketing">marketingut digjital</L>.
       </p>
 
-      <h3 className="mt-10 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+      <SeoTopicHeading id="seo-topic-graphic">
         Grafikë — sistem i njëjtë për print dhe digital
-      </h3>
+      </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
         Identiteti përfshin ngjyra, tipografi dhe ton mes flyerëve dhe rrjeteve sociale. Skedarët për print dhe eksportet
         digitale ndjekin të njëjtat rregulla.
       </p>
 
-      <h3 className="mt-10 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+      <SeoTopicHeading id="seo-topic-ai">
         AI në procesin kreativ
-      </h3>
+      </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
         AI përdoret për variante dhe detaje të përsëritura; vendimet përfundimtare dhe përputhja me markën kalojnë në
         revizion njerëzor. Më shumë te <L href="/ai-content-creation">përmbajtja me AI</L>.
       </p>
 
-      <h3 className="mt-10 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+      <SeoTopicHeading id="seo-topic-ai-tradeoffs">
         Anët për dhe kundër AI në dizajn
-      </h3>
+      </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
         Pro: shpejtësi dhe shumë variante. Kundër: pamje gjenerike dhe tekst pa thellësi. Ne ofrojmë qasje hibride me kontroll
         cilësie, jo „një klik magjik”.
       </p>
 
-      <h3 className="mt-10 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+      <SeoTopicHeading id="seo-topic-hybrid">
         Qasja jonë hibride vs vetëm shabllone ose vetëm AI
-      </h3>
+      </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        Shabllonet janë të lira në fillim por shpesh dobësojnë diferencimin.         Vetëm AI pa udhëheqje dizajni rrezikon
+        Shabllonet janë të lira në fillim por shpesh dobësojnë diferencimin. Vetëm AI pa udhëheqje dizajni rrezikon
         qëllimshmërinë e markës. Kombinojmë sistem dizajni, feedback dhe AI deri te forma në{" "}
         <L href="/contact">kontakt</L>.
       </p>
@@ -447,17 +456,17 @@ export function AlBody() {
         Transparenca ligjore: <L href="/privacy-policy">politika e privatësisë</L> dhe <L href="/about">rreth nesh</L>.
       </p>
 
-      <h3 className="mt-10 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+      <SeoTopicHeading id="seo-topic-why">
         Pse AGR Multimedia?
-      </h3>
+      </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
         Një ekip për web, grafikë dhe përmbajtje; gjuhë: serbisht, anglisht, gjermanisht, italisht, shqip. Dokumentim i qartë
         i scope-it.
       </p>
 
-      <h3 className="mt-10 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+      <SeoTopicHeading id="seo-topic-kickoff">
         Si fillon projekti
-      </h3>
+      </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
         Pas kërkesës përgjigjemi shpejt dhe përçlodhim briefing-un. Artikuj në <L href="/blog">blog</L> për konvertim dhe
         video.

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>AGR Multimedia — Blog</title>
+  <link href="https://www.agrmultimedia.eu/feed.atom.xml" rel="self" />
+  <link href="https://www.agrmultimedia.eu/blog" />
+  <updated>2026-03-07T12:00:00Z</updated>
+  <id>https://www.agrmultimedia.eu/feed.atom.xml</id>
+  <author>
+    <name>Agron Osmani</name>
+    <email>agron6922@gmail.com</email>
+  </author>
+  <entry>
+    <title>Digital Marketing Trends 2024</title>
+    <link href="https://www.agrmultimedia.eu/blog/digital-marketing-trends-2024" />
+    <id>https://www.agrmultimedia.eu/blog/digital-marketing-trends-2024</id>
+    <updated>2026-03-07T12:00:00Z</updated>
+    <summary>Insights on digital marketing trends for small businesses — studio notes from AGR Multimedia.</summary>
+  </entry>
+  <entry>
+    <title>Website Conversion Optimization</title>
+    <link href="https://www.agrmultimedia.eu/blog/website-conversion-optimization" />
+    <id>https://www.agrmultimedia.eu/blog/website-conversion-optimization</id>
+    <updated>2026-03-07T12:00:00Z</updated>
+    <summary>Practical conversion and UX patterns for business websites.</summary>
+  </entry>
+  <entry>
+    <title>Video Marketing Power</title>
+    <link href="https://www.agrmultimedia.eu/blog/video-marketing-power" />
+    <id>https://www.agrmultimedia.eu/blog/video-marketing-power</id>
+    <updated>2026-03-07T12:00:00Z</updated>
+    <summary>Short-form video and AI-assisted multimedia for marketing teams.</summary>
+  </entry>
+  <entry>
+    <title>Food Truck Web €500</title>
+    <link href="https://www.agrmultimedia.eu/blog/food-truck-web-500" />
+    <id>https://www.agrmultimedia.eu/blog/food-truck-web-500</id>
+    <updated>2026-03-07T12:00:00Z</updated>
+    <summary>Case-style notes on affordable web presence for local food businesses.</summary>
+  </entry>
+</feed>

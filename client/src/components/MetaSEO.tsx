@@ -27,7 +27,6 @@ export default function MetaSEO() {
   useEffect(() => {
     let title = tSpec.seo.title;
     let description = tSpec.seo.description;
-    let keywords = tSpec.seo.keywords;
 
     const path = normalizePathname(location);
     const lang = (["de", "en", "it", "sr", "al"].includes(currentLanguage) ? currentLanguage : "en") as SeoLang;
@@ -35,15 +34,25 @@ export default function MetaSEO() {
     if (routeSeo) {
       title = routeSeo.title;
       description = routeSeo.description;
-      keywords = routeSeo.keywords;
     }
 
     document.title = title;
     setMetaContent("meta-description", description);
-    setMetaContent("meta-keywords", keywords);
 
     setMetaContent("og-title", title);
     setMetaContent("og-description", description);
+
+    const ogLocale =
+      lang === "sr"
+        ? "sr_RS"
+        : lang === "de"
+          ? "de_DE"
+          : lang === "it"
+            ? "it_IT"
+            : lang === "al"
+              ? "sq_AL"
+              : "en_US";
+    setMetaContent("og-locale", ogLocale);
 
     setMetaContent("twitter-title", title);
     setMetaContent("twitter-description", description);
@@ -57,7 +66,7 @@ export default function MetaSEO() {
     document.documentElement.lang = lang === "al" ? "sq" : lang;
 
     syncHreflangAlternates(path);
-  }, [currentLanguage, location, tSpec.seo.title, tSpec.seo.description, tSpec.seo.keywords]);
+  }, [currentLanguage, location, tSpec.seo.title, tSpec.seo.description]);
 
   return null;
 }
