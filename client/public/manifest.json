@@ -1,0 +1,26 @@
+{
+  "name": "AGR Multimedia — Web dizajn, grafika i digitalni marketing",
+  "short_name": "AGR Multimedia",
+  "description": "Profesionalni web sajtovi, grafički dizajn, video i AI sadržaj za mala preduzeća.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0a0a0f",
+  "theme_color": "#0a0a0f",
+  "lang": "sr",
+  "icons": [
+    {
+      "src": "/agr-logo-white.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon",
+      "purpose": "any"
+    }
+  ]
+}

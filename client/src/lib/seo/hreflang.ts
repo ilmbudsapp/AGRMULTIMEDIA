@@ -19,6 +19,10 @@ function langPageUrl(pathname: string, langParam: string): string {
 /** Injects / refreshes hreflang link tags for the current pathname (SPA-safe). */
 export function syncHreflangAlternates(pathname: string): void {
   document.querySelectorAll('link[data-seo-hreflang="1"]').forEach((el) => el.remove());
+  document.querySelectorAll('link[rel="alternate"][hreflang]').forEach((el) => {
+    const href = el.getAttribute("href") ?? "";
+    if (href.includes("agrmultimedia.eu")) el.remove();
+  });
   for (const { hreflang, langParam } of LANG_ALTERNATES) {
     const link = document.createElement("link");
     link.rel = "alternate";

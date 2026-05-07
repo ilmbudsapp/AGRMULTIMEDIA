@@ -287,6 +287,11 @@ const EXTRA_EN: Record<string, RouteSeo> = {
     description: "How AGR Multimedia collects, uses, and protects your personal data.",
     keywords: "privacy policy, GDPR, AGR Multimedia, data protection",
   },
+  "/privacy-policy": {
+    title: "Privacy Policy | AGR Multimedia",
+    description: "How AGR Multimedia collects, uses, and protects your personal data.",
+    keywords: "privacy policy, GDPR, AGR Multimedia, data protection",
+  },
   "/terms": {
     title: "Terms of Service | AGR Multimedia",
     description: "Terms and conditions for using AGR Multimedia websites and services.",
@@ -407,6 +412,11 @@ const EXTRA_DE: Record<string, RouteSeo> = {
     description: "Informationen zur Verarbeitung personenbezogener Daten bei AGR Multimedia.",
     keywords: "Datenschutz, DSGVO, AGR Multimedia",
   },
+  "/privacy-policy": {
+    title: "Datenschutz | AGR Multimedia",
+    description: "Informationen zur Verarbeitung personenbezogener Daten bei AGR Multimedia.",
+    keywords: "Datenschutz, DSGVO, AGR Multimedia",
+  },
   "/terms": {
     title: "AGB | AGR Multimedia",
     description: "Allgemeine Geschäftsbedingungen für die Nutzung der Website und Leistungen.",
@@ -515,6 +525,11 @@ const EXTRA_IT: Record<string, RouteSeo> = {
     keywords: "impressum, AGR Multimedia, Geislingen",
   },
   "/privacy": {
+    title: "Privacy policy | AGR Multimedia",
+    description: "Come AGR Multimedia tratta i dati personali degli utenti.",
+    keywords: "privacy, GDPR, AGR Multimedia",
+  },
+  "/privacy-policy": {
     title: "Privacy policy | AGR Multimedia",
     description: "Come AGR Multimedia tratta i dati personali degli utenti.",
     keywords: "privacy, GDPR, AGR Multimedia",
@@ -631,6 +646,11 @@ const EXTRA_SR: Record<string, RouteSeo> = {
     description: "Kako AGR Multimedia prikuplja i štiti lične podatke.",
     keywords: "privatnost, GDPR, AGR Multimedia",
   },
+  "/privacy-policy": {
+    title: "Politika privatnosti | AGR Multimedia",
+    description: "Kako AGR Multimedia prikuplja i štiti lične podatke.",
+    keywords: "privatnost, GDPR, AGR Multimedia",
+  },
   "/terms": {
     title: "Uslovi korišćenja | AGR Multimedia",
     description: "Uslovi korišćenja sajta i usluga AGR Multimedia.",
@@ -739,6 +759,11 @@ const EXTRA_AL: Record<string, RouteSeo> = {
     keywords: "impresum, AGR Multimedia, Geislingen",
   },
   "/privacy": {
+    title: "Politika e privatësisë | AGR Multimedia",
+    description: "Si trajtohen të dhënat personale nga AGR Multimedia.",
+    keywords: "privatësi, GDPR, AGR Multimedia",
+  },
+  "/privacy-policy": {
     title: "Politika e privatësisë | AGR Multimedia",
     description: "Si trajtohen të dhënat personale nga AGR Multimedia.",
     keywords: "privatësi, GDPR, AGR Multimedia",

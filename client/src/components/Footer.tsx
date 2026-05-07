@@ -143,10 +143,24 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-6 text-white">{t.footer.company}</h4>
             <ul className="space-y-3">
               <li>
-                {isHome ? <button type="button" onClick={() => scrollToSection("about")} className="text-gray-400 hover:text-white transition-colors duration-300 text-left">{tSpec.nav.about}</button> : <Link href="/#about" className="text-gray-400 hover:text-white">{tSpec.nav.about}</Link>}
+                <Link href="/about" className="text-gray-400 hover:text-white transition-colors duration-300 block">
+                  {tSpec.nav.about}
+                </Link>
               </li>
               <li>
-                {isHome ? <button type="button" onClick={() => scrollToSection("contact")} className="text-gray-400 hover:text-white transition-colors duration-300 text-left">{tSpec.nav.contact}</button> : <Link href="/contact" className="text-gray-400 hover:text-white">{tSpec.nav.contact}</Link>}
+                {isHome ? (
+                  <button
+                    type="button"
+                    onClick={() => scrollToSection("contact")}
+                    className="text-gray-400 hover:text-white transition-colors duration-300 text-left"
+                  >
+                    {tSpec.nav.contact}
+                  </button>
+                ) : (
+                  <Link href="/contact" className="text-gray-400 hover:text-white">
+                    {tSpec.nav.contact}
+                  </Link>
+                )}
               </li>
             </ul>
           </div>
@@ -178,7 +192,9 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-500 text-sm">{t.footer.copyright}</p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/privacy" className="text-gray-500 hover:text-white text-sm transition-colors">{premium.legal.datenschutz}</Link>
+              <Link href="/privacy-policy" className="text-gray-500 hover:text-white text-sm transition-colors">
+                {premium.legal.datenschutz}
+              </Link>
               <Link href="/terms" className="text-gray-500 hover:text-white text-sm transition-colors">{t.footer.terms}</Link>
               <Link href="/cookies" className="text-gray-500 hover:text-white text-sm transition-colors">{t.footer.cookies}</Link>
               <Link href="/impresum" className="text-gray-500 hover:text-white text-sm transition-colors">{premium.legal.impressum}</Link>

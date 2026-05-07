@@ -26,8 +26,14 @@
     <meta name="twitter:url" id="twitter-url" content="https://www.agrmultimedia.eu/" />
     <meta name="twitter:image" content="https://www.agrmultimedia.eu/og-image.jpg" />
     <link rel="canonical" id="canonical-url" href="https://www.agrmultimedia.eu/" />
-    
-    <!-- hreflang alternates for each route are injected at runtime (MetaSEO + ?lang=) -->
+    <!-- Multilingual alternates (homepage); MetaSEO refreshes these on SPA navigation -->
+    <link rel="alternate" hreflang="sr" href="https://www.agrmultimedia.eu/?lang=sr" />
+    <link rel="alternate" hreflang="en" href="https://www.agrmultimedia.eu/?lang=en" />
+    <link rel="alternate" hreflang="de" href="https://www.agrmultimedia.eu/?lang=de" />
+    <link rel="alternate" hreflang="it" href="https://www.agrmultimedia.eu/?lang=it" />
+    <link rel="alternate" hreflang="sq" href="https://www.agrmultimedia.eu/?lang=al" />
+    <link rel="alternate" hreflang="x-default" href="https://www.agrmultimedia.eu/?lang=sr" />
+    <link rel="manifest" href="/manifest.json" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     
@@ -94,8 +100,22 @@
                 "@type": "Person",
                 "@id": "https://www.agrmultimedia.eu/#person",
                 "name": "Agron Osmani",
+                "givenName": "Agron",
+                "familyName": "Osmani",
                 "url": "https://www.linkedin.com/in/agron-osmani-228947266/",
-                "jobTitle": "Founder & Creative Lead",
+                "sameAs": [
+                    "https://www.linkedin.com/in/agron-osmani-228947266/"
+                ],
+                "jobTitle": "CEO & Founder",
+                "description": "Founder and creative lead of AGR Multimedia; expertise in web design, graphic systems, AI-assisted multimedia production, and digital marketing for SMEs in Germany and the EU.",
+                "knowsAbout": [
+                    "Web design",
+                    "Graphic design",
+                    "Brand identity",
+                    "AI-assisted content production",
+                    "Digital marketing",
+                    "Video production"
+                ],
                 "worksFor": { "@id": "https://www.agrmultimedia.eu/#organization" }
             },
             {
@@ -145,7 +165,7 @@
         <div style="padding: 2rem; max-width: 42rem; margin: 0 auto; background: #07070b; color: #e5e5e5; font-family: system-ui, sans-serif; line-height: 1.65;">
             <h1 style="font-size: 1.5rem; color: #fff;">AGR Multimedia — Web dizajn i grafika</h1>
             <p>Studio za web dizajn, grafički dizajn, video i digitalni marketing za mala preduzeća. Bazirani smo u Geislingen an der Steige (Nemačka) i radimo sa klijentima u EU.</p>
-            <p><a href="/services" style="color: #93c5fd;">Usluge</a> · <a href="/web-design" style="color: #93c5fd;">Web dizajn</a> · <a href="/graphic-design" style="color: #93c5fd;">Grafika</a> · <a href="/portfolio" style="color: #93c5fd;">Portfolio</a> · <a href="/contact" style="color: #93c5fd;">Kontakt</a> · <a href="/terms" style="color: #93c5fd;">Uslovi korišćenja</a></p>
+            <p><a href="/about" style="color: #93c5fd;">O nama</a> · <a href="/services" style="color: #93c5fd;">Usluge</a> · <a href="/web-design" style="color: #93c5fd;">Web dizajn</a> · <a href="/graphic-design" style="color: #93c5fd;">Grafika</a> · <a href="/portfolio" style="color: #93c5fd;">Portfolio</a> · <a href="/contact" style="color: #93c5fd;">Kontakt</a> · <a href="/privacy-policy" style="color: #93c5fd;">Politika privatnosti</a> · <a href="/terms" style="color: #93c5fd;">Uslovi korišćenja</a></p>
             <p>Za punu funkcionalnost uključite JavaScript u pregledaču.</p>
         </div>
     </noscript>

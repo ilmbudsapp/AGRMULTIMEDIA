@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Link } from "wouter";
+import AuthorByline from "@/components/AuthorByline";
 
 type BlogProps = { asPage?: boolean };
 
@@ -83,8 +84,13 @@ export default function Blog({ asPage = false }: BlogProps) {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto" data-testid="blog-subtitle">
             {t.blog.subtitle}
           </p>
+          {asPage ? (
+            <div className="mt-8 max-w-3xl mx-auto">
+              <AuthorByline variant="darkOnLight" />
+            </div>
+          ) : null}
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogPosts.map((post) => (
             <article 

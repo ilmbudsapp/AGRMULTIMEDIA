@@ -73,6 +73,7 @@ function Router() {
       <Route path="/portfolio/product-photography" component={ProductPhotography} />
       <Route path="/portfolio/packaging-design" component={PackagingDesign} />
       <Route path="/privacy" component={Privacy} />
+      <Route path="/privacy-policy" component={Privacy} />
       <Route path="/terms" component={Terms} />
       <Route path="/cookies" component={Cookies} />
       <Route component={NotFound} />
