@@ -15,7 +15,7 @@ export default function TrustIntro() {
   return (
     <section id="trust-intro" className="premium-section scroll-mt-24 border-t border-[#333333] bg-white/[0.02] py-10 md:py-12">
       <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-        <p className="text-base leading-relaxed text-white/85 md:text-lg">{text}</p>
+        <h2 className="text-base font-semibold leading-relaxed text-white/85 md:text-lg">{text}</h2>
       </div>
     </section>
   );

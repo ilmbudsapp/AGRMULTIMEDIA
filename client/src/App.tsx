@@ -9,6 +9,7 @@ import { useAnalytics } from "./hooks/use-analytics";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import { ErrorBoundary } from "./components/ErrorBoundary";
 import MetaSEO from "./components/MetaSEO";
+import SkipToContent from "./components/SkipToContent";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import PageLoadingFallback from "@/components/PageLoadingFallback";
 
@@ -105,6 +106,7 @@ function App() {
             <ErrorBoundary>
               <TooltipProvider>
                 <div className="min-h-screen w-full max-w-[100vw] overflow-x-hidden">
+                  <SkipToContent />
                   <MetaSEO />
                   <Suspense fallback={<PageLoadingFallback />}>
                     <Router />

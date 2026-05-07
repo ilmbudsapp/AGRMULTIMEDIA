@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <div className="min-h-screen w-full max-w-[100vw] overflow-x-hidden bg-[#07070b]">
       <Navigation />
-      <main aria-label={MAIN_LANDMARK_LABEL[currentLanguage]}>
+      <main id="main-content" aria-label={MAIN_LANDMARK_LABEL[currentLanguage]}>
         <Hero />
         <TrustIntro />
         <HomeSeoSection />

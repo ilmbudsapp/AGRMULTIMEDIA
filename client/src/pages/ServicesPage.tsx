@@ -187,7 +187,7 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen w-full max-w-[100vw] overflow-x-hidden bg-[#f5f4f2]">
       <Navigation />
-      <main className="pb-20 pt-24">
+      <main id="main-content" className="pb-20 pt-24">
         <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-500">{copy.eyebrow}</p>
           <h1 className="mt-4 max-w-4xl text-3xl font-semibold tracking-tight text-neutral-900 sm:text-4xl lg:text-5xl">

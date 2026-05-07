@@ -6,7 +6,9 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen w-full max-w-[100vw] overflow-x-hidden bg-[#0a0a0f]">
       <Navigation />
-      <Contact asPage />
+      <main id="main-content">
+        <Contact asPage />
+      </main>
       <Footer />
     </div>
   );

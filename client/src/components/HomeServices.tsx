@@ -115,6 +115,7 @@ export default function HomeServices() {
                 key={item.href}
                 href={item.href}
                 className="premium-card premium-card-hover group flex min-h-[220px] flex-col p-6"
+                aria-label={`${item.title}: ${copy.details}`}
               >
                 <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl border border-[#333333] text-blue-200">
                   <ItemIcon className="h-5 w-5" strokeWidth={1.7} />

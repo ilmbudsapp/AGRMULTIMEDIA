@@ -2,37 +2,60 @@ import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import brandingImage from "@/assets/branding-image.jpg";
+import { ABOUT_JSON_LD_SNIPPET } from "@/lib/aboutJsonLdSnippet";
 
-/** Kompaktna „About“ sekcija na početnoj — bez statistika i dugačkih skill gridova */
+const CODE_CAPTION: Record<string, string> = {
+  en: "Example: minimal Organization JSON-LD (Schema.org) for search engines",
+  de: "Beispiel: minimales Organization-JSON-LD (Schema.org) für Suchmaschinen",
+  it: "Esempio: JSON-LD Organization (Schema.org) per i motori di ricerca",
+  sr: "Primer: minimalan Organization JSON-LD (Schema.org) za pretraživače",
+  al: "Shembull: JSON-LD Organization (Schema.org) minimal për kërkuesit",
+};
+
+/** Kompaktna „About“ sekcija na početnoj */
 export default function AboutHome() {
-  const { t, tSpec } = useLanguage();
+  const { t, tSpec, currentLanguage } = useLanguage();
+  const cap = CODE_CAPTION[currentLanguage] ?? CODE_CAPTION.en;
+  const moreAboutLabel = `${tSpec.homeAbout.moreAbout} (about page)`;
 
   return (
-    <section id="about" className="premium-section scroll-mt-24 py-20 md:py-28 border-t border-[#333333]">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
-          <div>
-            <p className="text-xs font-medium uppercase tracking-[0.2em] text-blue-300/80 mb-3">{tSpec.nav.about}</p>
-            <h2 className="text-3xl md:text-4xl font-semibold text-white tracking-tight">{t.about.title}</h2>
-            <p className="mt-4 text-white/75 leading-relaxed">{tSpec.homeAbout.lead}</p>
-            <p className="mt-4 text-white/70 leading-relaxed text-sm md:text-base">{t.about.storyP1}</p>
+    <section id="about" className="premium-section scroll-mt-24 border-t border-[#333333] py-20 md:py-28">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+          <article className="min-w-0">
+            <p className="mb-3 text-xs font-medium uppercase tracking-[0.2em] text-blue-300/80">{tSpec.nav.about}</p>
+            <h2 className="text-3xl font-semibold tracking-tight text-white md:text-4xl">{t.about.title}</h2>
+            <p className="mt-4 leading-relaxed text-white/75">{tSpec.homeAbout.lead}</p>
+            <p className="mt-4 text-sm leading-relaxed text-white/70 md:text-base">{t.about.storyP1}</p>
+
+            <figure className="mt-8 overflow-hidden rounded-xl border border-white/10 bg-[#0a0a12] p-4 text-left">
+              <figcaption className="mb-2 text-xs font-medium text-white/80 md:text-sm">{cap}</figcaption>
+              <pre className="max-h-48 overflow-x-auto overflow-y-auto text-[0.7rem] leading-relaxed text-emerald-100/95 md:text-xs">
+                <code>{ABOUT_JSON_LD_SNIPPET}</code>
+              </pre>
+            </figure>
+
             <Link
               href="/about"
               className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-blue-200 underline-offset-4 hover:underline"
+              aria-label={moreAboutLabel}
             >
               {tSpec.homeAbout.moreAbout}
-              <ArrowRight className="h-4 w-4" />
+              <ArrowRight className="h-4 w-4" aria-hidden />
             </Link>
-          </div>
-          <div className="premium-card premium-card-hover relative overflow-hidden">
-            <img
-              src={brandingImage}
-              alt=""
-              className="w-full h-auto object-cover aspect-[4/3] md:aspect-auto"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
+          </article>
+
+          <aside className="min-w-0" aria-label="AGR Multimedia branding visual">
+            <div className="premium-card premium-card-hover relative overflow-hidden">
+              <img
+                src={brandingImage}
+                alt="AGR Multimedia branding and design workspace"
+                className="aspect-[4/3] h-auto w-full object-cover md:aspect-auto"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </aside>
         </div>
       </div>
     </section>

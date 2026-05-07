@@ -139,14 +139,18 @@ export default function Testimonials() {
         <h2 className="text-center text-3xl font-semibold tracking-tight text-white md:text-4xl">{copy.heading}</h2>
         <div className="mt-10 grid gap-4 md:grid-cols-3">
           {copy.items.map((item, index) => (
-            <blockquote key={`${item.name}-${index}`} className="premium-card rounded-2xl p-6 shadow-[0_8px_30px_rgba(0,0,0,0.25)] md:p-7">
-              <p className="text-base leading-relaxed text-white/85">&ldquo;{item.quote}&rdquo;</p>
-              <p className="mt-5 text-sm tracking-[0.08em] text-yellow-300/90">★★★★★</p>
-              <footer>
-                <p className="mt-3 font-semibold text-white">{item.name}</p>
-                <p className="text-sm text-white/60">{item.business}</p>
-              </footer>
-            </blockquote>
+            <article key={`${item.name}-${index}`}>
+              <blockquote className="premium-card h-full rounded-2xl p-6 shadow-[0_8px_30px_rgba(0,0,0,0.25)] md:p-7">
+                <p className="text-base leading-relaxed text-white/85">&ldquo;{item.quote}&rdquo;</p>
+                <p className="mt-5 text-sm tracking-[0.08em] text-yellow-300/90" aria-hidden>
+                  ★★★★★
+                </p>
+                <footer>
+                  <p className="mt-3 font-semibold text-white">{item.name}</p>
+                  <p className="text-sm text-white/60">{item.business}</p>
+                </footer>
+              </blockquote>
+            </article>
           ))}
         </div>
       </div>

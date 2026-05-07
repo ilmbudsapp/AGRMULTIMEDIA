@@ -3,7 +3,8 @@ import { Menu, X } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Link, useLocation } from "wouter";
 import LanguageSwitcherInline from "./LanguageSwitcherInline";
-import { NAV_LANDMARK_LABEL } from "@/lib/a11yLandmarks";
+import { NAV_LANDMARK_LABEL, NAV_MOBILE_TOGGLE, NAV_SCROLL_ON_PAGE_HINT } from "@/lib/a11yLandmarks";
+import type { Language } from "@/lib/i18n";
 
 const logoImage = "/agr-logo-white.png";
 
@@ -51,6 +52,10 @@ export default function Navigation() {
     setIsMenuOpen(false);
   };
 
+  const lang = currentLanguage as Language;
+  const scrollHint = NAV_SCROLL_ON_PAGE_HINT[lang] ?? NAV_SCROLL_ON_PAGE_HINT.en;
+  const mobileToggle = NAV_MOBILE_TOGGLE[lang] ?? NAV_MOBILE_TOGGLE.en;
+
   return (
     <nav
       className="fixed top-0 left-0 right-0 z-50 border-b border-[#333333] bg-[#0a0a0a]/85 backdrop-blur-xl"
@@ -88,6 +93,7 @@ export default function Navigation() {
                   onClick={() => scrollToSection(item.section!)}
                   className="text-[0.9375rem] text-white/75 hover:text-blue-200 transition-colors"
                   data-testid={`nav-${item.id}`}
+                  aria-label={`${item.label} ${scrollHint}`}
                 >
                   {item.label}
                 </button>
@@ -108,6 +114,7 @@ export default function Navigation() {
                 onClick={() => scrollToSection("contact")}
                 className="premium-cta rounded-full px-5 py-2 text-[0.875rem] font-semibold hover:brightness-110 transition"
                 data-testid="nav-contact-cta"
+                aria-label={`${tSpec.nav.ctaQuote} ${scrollHint}`}
               >
                 {tSpec.nav.ctaQuote}
               </button>
@@ -131,7 +138,8 @@ export default function Navigation() {
               className="text-white/90 p-1"
               data-testid="mobile-menu-toggle"
               aria-expanded={isMenuOpen}
-              aria-label="Menu"
+              aria-controls="site-mobile-menu-panel"
+              aria-label={isMenuOpen ? mobileToggle.close : mobileToggle.open}
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -139,9 +147,15 @@ export default function Navigation() {
         </div>
       </div>
 
-      {isMenuOpen && (
-        <div className="md:hidden border-t border-[#333333] bg-[#0a0a0a]" data-testid="mobile-menu">
-          <div className="px-4 py-4 space-y-1 max-w-6xl mx-auto">
+      <div
+        id="site-mobile-menu-panel"
+        className="md:hidden border-t border-[#333333] bg-[#0a0a0a]"
+        data-testid="mobile-menu"
+        role="region"
+        aria-label={NAV_LANDMARK_LABEL[lang]}
+        hidden={!isMenuOpen}
+      >
+        <div className="mx-auto max-w-6xl space-y-1 px-4 py-4">
             {navItems.map((item) =>
               isHomePage && item.section ? (
                 <button
@@ -150,6 +164,7 @@ export default function Navigation() {
                   onClick={() => scrollToSection(item.section!)}
                   className="block w-full text-left py-3 text-white/85 text-[0.9375rem]"
                   data-testid={`mobile-nav-${item.id}`}
+                  aria-label={`${item.label} ${scrollHint}`}
                 >
                   {item.label}
                 </button>
@@ -171,6 +186,7 @@ export default function Navigation() {
                 onClick={contactScroll}
                 className="mt-3 w-full rounded-full bg-white py-3 text-center text-[0.875rem] font-semibold text-[#0a0a0f]"
                 data-testid="mobile-nav-contact"
+                aria-label={`${tSpec.nav.ctaQuote} ${scrollHint}`}
               >
                 {tSpec.nav.ctaQuote}
               </button>
@@ -186,7 +202,6 @@ export default function Navigation() {
             )}
           </div>
         </div>
-      )}
     </nav>
   );
 }

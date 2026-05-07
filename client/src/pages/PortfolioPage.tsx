@@ -6,9 +6,9 @@ export default function PortfolioPage() {
   return (
     <div className="min-h-screen w-full max-w-[100vw] overflow-x-hidden bg-[#0a0a0f]">
       <Navigation />
-      <div className="pt-24">
+      <main id="main-content" className="pt-24">
         <Portfolio asPage />
-      </div>
+      </main>
       <Footer />
     </div>
   );

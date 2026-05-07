@@ -1,5 +1,7 @@
 import { CheckCircle2 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import type { Language } from "@/lib/i18n";
+import { NAV_SCROLL_ON_PAGE_HINT } from "@/lib/a11yLandmarks";
 
 type WhyChooseMeCopy = {
   title: string;
@@ -81,6 +83,8 @@ const COPY: Record<string, WhyChooseMeCopy> = {
 export default function WhyChooseMe() {
   const { currentLanguage } = useLanguage();
   const copy = COPY[currentLanguage] ?? COPY.en;
+  const lang = currentLanguage as Language;
+  const scrollHint = NAV_SCROLL_ON_PAGE_HINT[lang] ?? NAV_SCROLL_ON_PAGE_HINT.en;
 
   return (
     <section id="why-choose-me" className="premium-section scroll-mt-24 border-t border-[#333333] py-20 md:py-24">
@@ -104,6 +108,7 @@ export default function WhyChooseMe() {
           <p className="relative mt-4 text-lg font-semibold text-white md:text-xl">{copy.ctaLead}</p>
           <a
             href="#contact"
+            aria-label={`${copy.ctaButton} ${scrollHint}`}
             className="premium-button relative mt-5 inline-flex transition duration-200 hover:scale-[1.03] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300/70"
           >
             {copy.ctaButton}
