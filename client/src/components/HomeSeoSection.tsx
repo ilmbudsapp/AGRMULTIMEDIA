@@ -58,12 +58,15 @@ type SectionCopy = {
   quoteAttribution: string;
   collaborationStepsTitle: string;
   collaborationSteps: string[];
+  /** Key facts for scanners (Label: value). */
+  kvLines: [string, string][];
 };
 
 const SECTION_COPY: Record<SectionLangKey, SectionCopy> = {
   sr: {
     eyebrow: "AGR Multimedia",
-    title: "Web dizajn, grafika, AI i digitalni marketing za mala preduzeća",
+    title:
+      "Kako AGR Multimedia isporučuje web dizajn, grafiku i AI marketing malim preduzećima u EU?",
     subtitle:
       "Mi pripremamo ovaj sadržaj da bude jasan mala preduzećima u EU. Ovde je detaljan pregled usluga, našeg toka rada i odgovornog korišćenja veštačke inteligencije. Pored toga, linkovi vode ka stranici usluga, O nama i politici privatnosti. Stoga brzo pronalazite ono što vam treba pre prvog razgovora.",
     aria: "Tekstualni pregled usluga, AI perspektiva i kontakt",
@@ -121,10 +124,16 @@ const SECTION_COPY: Record<SectionLangKey, SectionCopy> = {
       "Testiranje performansi, mobilnog prikaza i formi pre javnog puštanja.",
       "Objava, osnovno praćenje i dogovor o sledećim koracima (marketing, sadržaj, širenje).",
     ],
+    kvLines: [
+      ["Lokacija", "Geislingen an der Steige (Baden-Württemberg, DE)"],
+      ["Jezici saradnje", "sr, en, de, it, sq — 5 jezika"],
+      ["Odgovor na upit", "obično do 24 sata"],
+      ["Primarna zona", "EU (mala preduzeća)"],
+    ],
   },
   en: {
     eyebrow: "AGR Multimedia",
-    title: "Web design, graphics, AI & digital marketing for small businesses",
+    title: "How does AGR Multimedia deliver web design, graphics, and AI marketing for EU small businesses?",
     subtitle:
       "We publish this guide so your team knows exactly how we work. It is a full overview of services, our delivery process, and responsible AI use. In addition, internal links jump to services, about, and privacy. Therefore you can orient quickly before you email us or book a call.",
     aria: "Services overview, AI perspectives, and contact paths",
@@ -182,10 +191,17 @@ const SECTION_COPY: Record<SectionLangKey, SectionCopy> = {
       "Performance, mobile, and form QA before public launch.",
       "Go-live, baseline checks, and next steps (marketing, content, expansion).",
     ],
+    kvLines: [
+      ["Location", "Geislingen an der Steige (Baden-Württemberg, DE)"],
+      ["Languages", "sr, en, de, it, sq — five languages"],
+      ["Typical reply time", "within 24 hours"],
+      ["Primary market", "EU small businesses"],
+    ],
   },
   de: {
     eyebrow: "AGR Multimedia",
-    title: "Webdesign, Grafik, KI & Digitalmarketing für kleine Unternehmen",
+    title:
+      "Wie liefert AGR Multimedia Webdesign, Grafik und KI-Digitalmarketing für kleine Unternehmen in der EU?",
     subtitle:
       "Wir schreiben diesen Leitfaden bewusst ausführlich für kleine Unternehmen in der EU. Sie finden hier Leistungen, unseren Ablauf und einen klaren Umgang mit KI. Außerdem führen Links zu Service-Seiten, Über uns und Datenschutz. Damit Sie sich vor dem ersten Gespräch schnell orientieren können.",
     aria: "Leistungen, KI-Perspektive und Kontakt",
@@ -243,10 +259,17 @@ const SECTION_COPY: Record<SectionLangKey, SectionCopy> = {
       "Performance-, Mobile- und Formulartests vor dem Livegang.",
       "Launch, Basis-Monitoring und nächste Schritte (Marketing, Content, Ausbau).",
     ],
+    kvLines: [
+      ["Standort", "Geislingen an der Steige (Baden-Württemberg, DE)"],
+      ["Sprachen", "sr, en, de, it, sq — fünf Sprachen"],
+      ["Reaktionszeit", "in der Regel innerhalb von 24 Stunden"],
+      ["Schwerpunkt", "KMU in der EU"],
+    ],
   },
   it: {
     eyebrow: "AGR Multimedia",
-    title: "Web design, grafica, AI e digital marketing per le PMI",
+    title:
+      "Come AGR Multimedia offre web design, grafica e digital marketing con AI alle PMI nell’UE?",
     subtitle:
       "Pubblichiamo questa guida perché i team capiscano come lavoriamo noi. Qui trovi servizi, il nostro metodo e un uso responsabile dell'intelligenza artificiale. Inoltre i link portano a servizi, chi siamo e privacy. Perciò ti orienti in pochi minuti prima della prima call.",
     aria: "Panoramica servizi, prospettive AI e contatti",
@@ -304,10 +327,17 @@ const SECTION_COPY: Record<SectionLangKey, SectionCopy> = {
       "Test su performance, mobile e moduli prima del go-live.",
       "Pubblicazione, controlli base e prossimi passi (marketing, contenuti, scalabilità).",
     ],
+    kvLines: [
+      ["Sede", "Geislingen an der Steige (Baden-Württemberg, DE)"],
+      ["Lingue", "sr, en, de, it, sq — cinque lingue"],
+      ["Tempo di risposta", "di solito entro 24 ore"],
+      ["Mercato principale", "PMI nell’UE"],
+    ],
   },
   al: {
     eyebrow: "AGR Multimedia",
-    title: "Web dizajn, grafikë, AI dhe marketing digjital për biznese të vogla",
+    title:
+      "Si e ofron AGR Multimedia web dizajn, grafikë dhe marketing digjital me AI për SME në BE?",
     subtitle:
       "Ne e kemi shkruar këtë udhëzues që ekipet të dinë qartë si punojmë ne. Këtu janë shërbimet, mënyra jonë e punës dhe përdorimi i përgjegjshëm i AI. Për më tepër, lidhjet çojnë te shërbimet, rreth nesh dhe privatësia. Prandaj orientoheni shpejt para kontaktit të parë.",
     aria: "Shërbime, perspektiva AI dhe kontakt",
@@ -365,6 +395,12 @@ const SECTION_COPY: Record<SectionLangKey, SectionCopy> = {
       "Teste performance, mobile dhe formularësh para publikimit.",
       "Go-live, kontroll bazë dhe hapat e radhës (marketing, përmbajtje, zgjerim).",
     ],
+    kvLines: [
+      ["Vendndodhja", "Geislingen an der Steige (Baden-Württemberg, DE)"],
+      ["Gjuhët", "sr, en, de, it, sq — pesë gjuhë"],
+      ["Koha e përgjigjes", "zakonisht brenda 24 orëve"],
+      ["Tregu kryesor", "SME në BE"],
+    ],
   },
 };
 
@@ -380,7 +416,6 @@ export default function HomeSeoSection() {
     >
       <article className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <header className="border-b border-white/10 pb-8">
-          <VisibleAuthorCredit className="mb-3" />
           <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
             <img
               src="/agr-logo-white.png"
@@ -399,6 +434,7 @@ export default function HomeSeoSection() {
               >
                 {copy.title}
               </h2>
+              <VisibleAuthorCredit className="mt-3" />
             </div>
           </div>
           <div className="mt-4 rounded-lg border border-white/10 bg-white/[0.04] px-4 py-3">
@@ -471,6 +507,15 @@ export default function HomeSeoSection() {
             ))}
           </ul>
         </div>
+
+        <dl className="my-8 grid gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-4 text-sm text-white/85 sm:grid-cols-2">
+          {copy.kvLines.map(([label, val]) => (
+            <div key={label}>
+              <dt className="font-semibold text-blue-200">{label}:</dt>
+              <dd className="mt-0.5 leading-relaxed text-white/80">{val}</dd>
+            </div>
+          ))}
+        </dl>
 
         <nav
           className="mb-10 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-4"

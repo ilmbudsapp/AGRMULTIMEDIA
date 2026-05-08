@@ -29,10 +29,14 @@ export function SrBody() {
         Naš fokus su mala preduzeća u EU koje žele jasniji nastup na webu.
       </p>
       <p className="mb-4 text-[0.9375rem] leading-relaxed text-white/80">
-        Dok neki dizajneri preferiraju isključivo tradicionalne metode, mi u AGR Multimedia smatramo da je simbioza AI-a i
-        ljudske kreativnosti superiornija jer donosi brzinu iteracija bez gubitka odgovornosti prema brendu. Međutim,
-        poštujemo i čiste ručne procese kada je to jedini etički ili pravni izbor za vas. Pored toga, ja lično nadgledam
-        ključne odluke pre objave — naša misija je merljiv rezultat, ne samo lep ekran.
+        Dok neki dizajneri vole isključivo tradicionalne metode, mi u AGR Multimedia smatramo da simbioza AI-a i ljudske
+        kreativnosti daje brže iteracije. Pritom ne gubimo odgovornost prema brendu. Međutim, poštujemo i potpuno ručne
+        procese kada je to pravi izbor za vas. Pored toga, ja lično nadgledam ključne odluke pre objave. Naša misija je
+        merljiv rezultat, a ne samo lep ekran.
+      </p>
+      <p className="mb-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Za razliku od šablonskih rešenja, AGR Multimedia koristi personalizovan AI pristup. Mi ručno vodimo glas brenda i
+        odluke koje grade poverenje. Stoga klijent uvek vidi gde alat pomaže, a gde završavamo ručno.
       </p>
       <p className="mb-6 text-[0.9375rem] leading-relaxed text-white/80">
         Ovaj tekst objašnjava kako radimo <L href="/web-design">web dizajn</L>, <L href="/graphic-design">grafički dizajn</L>{" "}
@@ -77,6 +81,7 @@ export function SrBody() {
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
         Priprema za štampu ide uz digitalne izlaske u jednom sistemu. Pored toga, izbegavate pet „verzija” brenda po kanalima.
         Ako brend već postoji, mi ga doterivamo. Ako počinjemo od nule, vodimo vas kroz realne varijante za budžet i rok.
+        Shodno tome, svaka izmena ima verziju — na primer „v2 meni“ ili „letak Q3“.
       </p>
 
       <SeoTopicHeading id="seo-topic-ai">
@@ -88,7 +93,8 @@ export function SrBody() {
       </p>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
         Vi znate šta je mašinski predlog, a šta ručno doterano. Više o tokovima čitate na{" "}
-        <L href="/ai-content-creation">AI sadržaj i produkcija</L>. Na kraju, ja biram šta ide uživo.
+        <L href="/ai-content-creation">AI sadržaj i produkcija</L>. Na kraju, ja biram šta ide uživo. Na primer, ako kampanja
+        ima pravni rizik, šaljemo tekst na dodatnu proveru pre objave.
       </p>
 
       <SeoTopicHeading id="seo-topic-ai-tradeoffs">
@@ -129,7 +135,9 @@ export function SrBody() {
         Zato briefing ostaje čist i bez gubitaka u prevodu.
       </p>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        Rokove držimo u pisanom obimu. Mi dokumentujemo milestone-e da znate šta sledi u svakoj fazi saradnje.
+        Rokove držimo u pisanom obimu. Mi dokumentujemo milestone-e da znate šta sledi u svakoj fazi saradnje. Pored toga,
+        držimo kratak zapis o dogovoru — scope, rokovi i kanali komunikacije. Na primer, ako treba hitna izmena na sajtu,
+        dogovaramo prioritet umesto haosa u inbox-u.
       </p>
 
       <SeoTopicHeading id="seo-topic-kickoff">
@@ -155,10 +163,14 @@ export function EnBody() {
         businesses that want clearer positioning online.
       </p>
       <p className="mb-4 text-[0.9375rem] leading-relaxed text-white/80">
-        While some designers insist on purely traditional craft, we believe the symbiosis of AI and human creativity is
-        stronger because it speeds iteration without losing brand accountability. However, we still honour fully manual
-        workflows when that is the right ethical choice for you. In addition, I personally review launch decisions — our
-        mission is measurable outcomes, not only pretty pixels.
+        Some designers insist on purely traditional craft. We believe the mix of AI and human creativity is stronger. It
+        speeds iteration without losing brand accountability. However, we still honour fully manual workflows when that is the
+        right ethical choice for you. In addition, I personally review launch decisions. Our mission is measurable outcomes, not
+        only pretty pixels.
+      </p>
+      <p className="mb-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Unlike template-only solutions, AGR Multimedia uses a personalized AI approach. I still lead the brand voice and
+        trust-critical decisions. Therefore you see where the tool helps and where we finish by hand.
       </p>
       <p className="mb-6 text-[0.9375rem] leading-relaxed text-white/80">
         This guide explains how we deliver <L href="/web-design">web design</L>, <L href="/graphic-design">graphic design</L>,
@@ -201,7 +213,8 @@ export function EnBody() {
       </p>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
         Print-ready files and web exports share one system. In addition, you avoid five accidental brand versions. If your
-        brand exists, we refine it. If we start fresh, we guide realistic options for budget and time.
+        brand exists, we refine it. If we start fresh, we guide realistic options for budget and time. Consequently every
+        change has a version label, for example “menu v2” or “Q3 flyer”.
       </p>
 
       <SeoTopicHeading id="seo-topic-ai">
@@ -213,7 +226,8 @@ export function EnBody() {
       </p>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
         You always know what is machine-suggested versus hand-finished. Read more on <L href="/ai-content-creation">AI content</L>.
-        Finally, I decide what goes live when stakes are high.
+        Finally, I decide what goes live when stakes are high. For instance, if copy touches regulated claims, we add an extra
+        review pass before launch.
       </p>
 
       <SeoTopicHeading id="seo-topic-ai-tradeoffs">
@@ -254,7 +268,9 @@ export function EnBody() {
         keeps briefings precise.
       </p>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        We document scope and milestones. Therefore you always know the next step in our collaboration.
+        We document scope and milestones. Therefore you always know the next step in our collaboration. We also keep a short
+        written summary of decisions — channels, deadlines, and owners. Meanwhile, if you need an urgent site tweak, we agree
+        priorities instead of flooding everyone with ad hoc tasks.
       </p>
 
       <SeoTopicHeading id="seo-topic-kickoff">
@@ -282,8 +298,12 @@ export function DeBody() {
       <p className="mb-4 text-[0.9375rem] leading-relaxed text-white/80">
         Während manche Designer nur klassische Methoden nutzen, halten wir die Symbiose aus KI und menschlicher Kreativität
         für stärker. Sie beschleunigt Iterationen ohne Markenverantwortung zu verlieren. Dennoch respektieren wir rein manuelle
-        Prozesse, wenn das für Sie richtig ist. Außerdem prüfe ich persönlich kritische Launch-Entscheidungen — unsere Mission
+        Prozesse, wenn das für Sie richtig ist. Außerdem prüfe ich persönlich kritische Launch-Entscheidungen. Unsere Mission
         sind messbare Ergebnisse.
+      </p>
+      <p className="mb-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Anders als reine Vorlagen setzen wir auf einen personalisierten KI-Workflow. Ich führe Markenstimme und
+        vertrauenskritische Entscheidungen. Daher sehen Sie klar, wo automatisiert wird und wo wir freigeben.
       </p>
       <p className="mb-6 text-[0.9375rem] leading-relaxed text-white/80">
         Hier beschreiben wir <L href="/web-design">Webdesign</L>, <L href="/graphic-design">Grafik und Branding</L> und{" "}
@@ -314,7 +334,8 @@ export function DeBody() {
         zusammen.
       </p>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        Druckdaten und Web-Exporte folgen einem System. Dadurch vermeiden wir Versions-Chaos über Kanäle hinweg.
+        Druckdaten und Web-Exporte folgen einem System. Dadurch vermeiden wir Versions-Chaos über Kanäle hinweg. Zudem
+        benennen wir Dateien einheitlich, zum Beispiel „Flyer_Q3_v2“. So bleibt die Freigabe nachvollziehbar.
       </p>
 
       <SeoTopicHeading id="seo-topic-ai">
@@ -362,7 +383,9 @@ export function DeBody() {
         bleibt das Briefing präzise.
       </p>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        Wir dokumentieren Scope und Meilensteine. Folglich wissen Sie immer, was als Nächstes kommt.
+        Wir dokumentieren Scope und Meilensteine. Folglich wissen Sie immer, was als Nächstes kommt. Außerdem halten wir kurze
+        Beschlüsse fest — Kanäle, Termine, Verantwortliche. Im Übrigen klären wir bei Dringlichkeiten Prioritäten statt
+        Ad-hoc-Chaos.
       </p>
 
       <SeoTopicHeading id="seo-topic-kickoff">
@@ -389,9 +412,13 @@ export function ItBody() {
       </p>
       <p className="mb-4 text-[0.9375rem] leading-relaxed text-white/80">
         Alcuni designer scelgono solo metodi tradizionali. Noi crediamo che la simbiosi tra intelligenza artificiale e
-        creatività umana sia più forte perché accelera le iterazioni senza perdere responsabilità sul brand. Tuttavia rispettiamo
-        anche processi completamente manuali quando serve. Inoltre supervisiono io le decisioni critiche prima del go-live —
-        la nostra missione sono risultati misurabili.
+        creatività umana sia più forte. Essa accelera le iterazioni senza perdere responsabilità sul brand. Tuttavia rispettiamo
+        anche processi completamente manuali quando serve. Inoltre supervisiono io le decisioni critiche prima del go-live. La
+        nostra missione sono risultati misurabili.
+      </p>
+      <p className="mb-4 text-[0.9375rem] leading-relaxed text-white/80">
+        A differenza delle sole soluzioni template, usiamo un flusso AI personalizzato. Io guido voce del brand e scelte di
+        fiducia. Perciò capite dove il tool aiuta e dove rifiniamo a mano.
       </p>
       <p className="mb-6 text-[0.9375rem] leading-relaxed text-white/80">
         Questa guida copre <L href="/web-design">web design</L>, <L href="/graphic-design">grafica e branding</L>,{" "}
@@ -421,7 +448,8 @@ export function ItBody() {
         Il brand non è solo logo. Costruiamo palette e tipografie coerenti. Flyer e social seguono le stesse regole.
       </p>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        File stampa ed export digitali vivono nello stesso sistema. Così eviti versioni casuali tra i canali.
+        File stampa ed export digitali vivono nello stesso sistema. Così eviti versioni casuali tra i canali. In più nominiamo
+        i file in modo coerente, ad esempio „menu_v2“. Dunque la revisione resta tracciabile.
       </p>
 
       <SeoTopicHeading id="seo-topic-ai">
@@ -471,7 +499,8 @@ export function ItBody() {
         resta pulito.
       </p>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        Documentiamo scope e milestone. Quindi sai sempre il passo successivo con noi.
+        Documentiamo scope e milestone. Quindi sai sempre il passo successivo con noi. Inoltre teniamo note brevi su decisioni,
+        canali e scadenze. Nel frattempo, se serve un fix urgente, concordiamo priorità invece di task casuali.
       </p>
 
       <SeoTopicHeading id="seo-topic-kickoff">
@@ -497,9 +526,13 @@ export function AlBody() {
       </p>
       <p className="mb-4 text-[0.9375rem] leading-relaxed text-white/80">
         Ndërsa disa dizajnerë parapëlqejnë vetëm metoda tradicionale, ne në AGR Multimedia besojmë se simbioza e AI-së dhe
-        kreativitetit njerëzor është superiore sepse përshpejton iteracionet pa humbur përgjegjësinë ndaj markës. Megjithatë
+        kreativitetit njerëzor është superiore. Ajo përshpejton iteracionet pa humbur përgjegjësinë ndaj markës. Megjithatë
         respektojmë edhe procese krejtësisht manuale kur është zgjedhja e duhur. Për më tepër, unë personalisht mbikëqyr
-        vendimet kritike para publikimit — misioni ynë janë rezultate të matshme.
+        vendimet kritike para publikimit. Misioni ynë janë rezultate të matshme.
+      </p>
+      <p className="mb-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Ndryshe nga zgjidhjet vetëm me shabllone, ne përdorim një qasje të personalizuar me AI. Unë udhëheq zërin e markës dhe
+        vendimet e besimit. Prandaj shihni qartë ku ndihmon mjeti dhe ku përfundojmë dorazi.
       </p>
       <p className="mb-6 text-[0.9375rem] leading-relaxed text-white/80">
         Kjo faqe shpjegon <L href="/web-design">web dizajn</L>, <L href="/graphic-design">grafikë dhe branding</L>, dhe{" "}
@@ -529,7 +562,8 @@ export function AlBody() {
         Brendi është më shumë se logo. Ne përcaktojmë ngjyra dhe tipografi të njëtrajtshme. Flyerët dhe rrjetet sociale përputhen.
       </p>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        Skedarët për print dhe eksportet digitale ndjekin të njëjtin sistem. Kështu shmangni versione të rastësishme.
+        Skedarët për print dhe eksportet digitale ndjekin të njëjtin sistem. Kështu shmangni versione të rastësishme. Gjithashtu
+        përdorim emërtim të qëndrueshëm skedarësh, për shembull „menu_v2“. Me këtë, miratimet mbeten të gjurmueshme.
       </p>
 
       <SeoTopicHeading id="seo-topic-ai">
@@ -576,7 +610,8 @@ export function AlBody() {
         briefing-un të qartë.
       </p>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        Ne dokumentojmë scope dhe milestone. Pra e dini gjithmonë hapi tjetër me ne.
+        Ne dokumentojmë scope dhe milestone. Pra e dini gjithmonë hapi tjetër me ne. Për më tepër mbajmë shënime të shkurtra për
+        vendime dhe afate. Ndërkaq, për ndryshime urgjente, përcaktojmë prioritete në vend të detyrave të rastit.
       </p>
 
       <SeoTopicHeading id="seo-topic-kickoff">

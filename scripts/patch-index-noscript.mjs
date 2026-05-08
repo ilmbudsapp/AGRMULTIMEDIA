@@ -1,250 +1,19 @@
-<!DOCTYPE html>
-<html lang="sr" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <meta name="theme-color" content="#0a0a0f" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <title>AGR Multimedia — Web, grafika i AI · Geislingen</title>
-    <meta name="description" id="meta-description" content="Profesionalni web sajtovi, grafički dizajn, video i AI sadržaj za mala preduzeća. Besplatne konsultacije! agron6922@gmail.com" />
-    <meta name="author" content="Agron Osmani, AGR Multimedia" />
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-    
-    <!-- Open Graph Meta Tags for Social Sharing -->
-    <meta property="og:title" id="og-title" content="AGR Multimedia — Web, grafika i AI · Geislingen" />
-    <meta property="og:description" id="og-description" content="Profesionalni web sajtovi, grafički dizajn, video i AI sadržaj za mala preduzeća. Besplatne konsultacije! agron6922@gmail.com" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" id="og-url" content="https://www.agrmultimedia.eu/" />
-    <meta property="og:image" content="https://www.agrmultimedia.eu/og-image.jpg" />
-    <meta property="og:site_name" content="AGR Multimedia" />
-    <meta property="og:locale" id="og-locale" content="sr_RS" />
-    
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" id="twitter-title" content="AGR Multimedia — Web, grafika i AI · Geislingen" />
-    <meta name="twitter:description" id="twitter-description" content="Profesionalni web sajtovi, grafički dizajn, video i AI sadržaj za mala preduzeća. Besplatne konsultacije! agron6922@gmail.com" />
-    <meta name="twitter:url" id="twitter-url" content="https://www.agrmultimedia.eu/" />
-    <meta name="twitter:image" content="https://www.agrmultimedia.eu/og-image.jpg" />
-    <link rel="canonical" id="canonical-url" href="https://www.agrmultimedia.eu/" />
-    <link rel="author" href="https://www.linkedin.com/in/agron-osmani-228947266/" />
-    <!-- Multilingual alternates (homepage); MetaSEO refreshes these on SPA navigation -->
-    <link rel="alternate" hreflang="sr" href="https://www.agrmultimedia.eu/?lang=sr" />
-    <link rel="alternate" hreflang="en" href="https://www.agrmultimedia.eu/?lang=en" />
-    <link rel="alternate" hreflang="de" href="https://www.agrmultimedia.eu/?lang=de" />
-    <link rel="alternate" hreflang="it" href="https://www.agrmultimedia.eu/?lang=it" />
-    <link rel="alternate" hreflang="sq" href="https://www.agrmultimedia.eu/?lang=al" />
-    <link rel="alternate" hreflang="x-default" href="https://www.agrmultimedia.eu/?lang=sr" />
-    <link rel="alternate" type="application/atom+xml" title="AGR Multimedia — Blog" href="https://www.agrmultimedia.eu/feed.atom.xml" />
-    <link rel="manifest" href="/manifest.json" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    
-    <!-- Google Fonts: non-blocking load (improves first paint) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap"
-      rel="stylesheet"
-      media="print"
-      onload="this.media='all'"
-    />
-    <noscript>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap"
-        rel="stylesheet"
-      />
-    </noscript>
+/**
+ * One-off generator: merges head from client/index.html with expanded <noscript> body.
+ * Run: node scripts/patch-index-noscript.mjs
+ */
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 
-    <!-- Structured Data: Organization + Author + FAQ -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@graph": [
-            {
-                "@type": "Organization",
-                "@id": "https://www.agrmultimedia.eu/#organization",
-                "name": "AGR Multimedia",
-                "url": "https://www.agrmultimedia.eu",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://www.agrmultimedia.eu/agr-logo-white.png"
-                },
-                "address": {
-                    "@type": "PostalAddress",
-                    "addressLocality": "Geislingen an der Steige",
-                    "addressRegion": "Baden-Württemberg",
-                    "addressCountry": "DE"
-                },
-                "areaServed": ["DE", "AT", "CH", "EU"],
-                "telephone": "+4915560873124",
-                "email": "agron6922@gmail.com",
-                "contactPoint": {
-                    "@type": "ContactPoint",
-                    "telephone": "+4915560873124",
-                    "email": "agron6922@gmail.com",
-                    "contactType": "customer service",
-                    "availableLanguage": ["sr", "en", "de", "it", "al"]
-                },
-                "sameAs": [
-                    "https://www.facebook.com/halidosmani74",
-                    "https://www.instagram.com/agrondesign/",
-                    "https://www.linkedin.com/in/agron-osmani-228947266/",
-                    "https://wa.me/4915560873124"
-                ],
-                "makesOffer": [
-                    { "@type": "Offer", "name": "Web Design", "category": "Web Design" },
-                    { "@type": "Offer", "name": "Graphics & Branding", "category": "Graphic Design" },
-                    { "@type": "Offer", "name": "Video & Motion", "category": "Video Production" },
-                    { "@type": "Offer", "name": "Digital Marketing & AI", "category": "Digital Marketing" }
-                ]
-            },
-            {
-                "@type": "Person",
-                "@id": "https://www.agrmultimedia.eu/#person",
-                "name": "Agron Osmani",
-                "givenName": "Agron",
-                "familyName": "Osmani",
-                "url": "https://www.linkedin.com/in/agron-osmani-228947266/",
-                "sameAs": [
-                    "https://www.linkedin.com/in/agron-osmani-228947266/"
-                ],
-                "jobTitle": "CEO & Founder",
-                "description": "Founder and creative lead of AGR Multimedia; expertise in web design, graphic systems, AI-assisted multimedia production, and digital marketing for SMEs in Germany and the EU.",
-                "knowsAbout": [
-                    "Web design",
-                    "Graphic design",
-                    "Brand identity",
-                    "AI-assisted content production",
-                    "Digital marketing",
-                    "Video production"
-                ],
-                "worksFor": { "@id": "https://www.agrmultimedia.eu/#organization" }
-            },
-            {
-                "@type": "FAQPage",
-                "@id": "https://www.agrmultimedia.eu/#faq",
-                "mainEntity": [
-                    {
-                        "@type": "Question",
-                        "name": "Zašto izabrati AGR Multimedia za web dizajn i grafiku?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Kombinujemo tehničku SEO-prijateljsku strukturu, pristupačnost i performanse sa dizajnom koji podržava konverzije. Umesto generičkih šablona gradimo hijerarhiju sadržaja i vizuelni jezik prilagođen vašoj publici, uz primere u portfolio delu sajta."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "Kako izgleda proces izrade sajta od prvog poziva do objave?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Kreće od briefinga i predloga strukture stranica, zatim dizajn i razvoj u iteracijama sa jasnim rokovima. Pre objave testiramo forme, brzinu i mobilni prikaz; po potrebi usklađujemo sadržaj sa digitalnim marketingom i SEO koracima koje možete pratiti."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "Šta sve obuhvata ponuda za mala preduzeća u EU?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Web i landing stranice, grafički identitet i štampa, video produkcija, kao i AI-pomoć pri kreiranju sadržaja uz ljudsku reviziju kvaliteta — sve sa ciljem merljivih rezultata za mala preduzeća u Nemačkoj, Austriji, Švajcarskoj i širom EU."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "Koliko brzo možete očekivati odgovor i pokretanje projekta?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Na upite obično odgovaramo u roku od 24 sata i dogovaramo sledeće korake (ciljevi, obim, rokovi). Najbrži način je kontakt forma ili direktan poziv — dobijate predlog bez obaveze."
-                        }
-                    }
-                ]
-            },
-            {
-                "@type": "WebSite",
-                "@id": "https://www.agrmultimedia.eu/#website",
-                "url": "https://www.agrmultimedia.eu/",
-                "name": "AGR Multimedia",
-                "publisher": { "@id": "https://www.agrmultimedia.eu/#organization" },
-                "inLanguage": ["sr-Latn", "en", "de", "it", "sq"],
-                "copyrightYear": 2026,
-                "potentialAction": {
-                    "@type": "SearchAction",
-                    "target": {
-                        "@type": "EntryPoint",
-                        "urlTemplate": "https://www.agrmultimedia.eu/blog?q={search_term_string}"
-                    },
-                    "query-input": "required name=search_term_string"
-                }
-            },
-            {
-                "@type": "WebPage",
-                "@id": "https://www.agrmultimedia.eu/#webpage",
-                "url": "https://www.agrmultimedia.eu/",
-                "name": "AGR Multimedia",
-                "isPartOf": { "@id": "https://www.agrmultimedia.eu/#website" },
-                "speakable": {
-                    "@type": "SpeakableSpecification",
-                    "cssSelector": ["#hero-h1", "#seo-section-title", "#seo-visible-byline", "#seo-takeaways"]
-                }
-            },
-            {
-                "@type": "HowTo",
-                "name": "Kako započeti saradnju na web projektu sa AGR Multimedia",
-                "totalTime": "P7D",
-                "step": [
-                    {
-                        "@type": "HowToStep",
-                        "position": 1,
-                        "name": "Upit ili konsultacija",
-                        "text": "Pošaljite upit putem kontakt forme ili poziva; odgovaramo obično u roku od 24 sata."
-                    },
-                    {
-                        "@type": "HowToStep",
-                        "position": 2,
-                        "name": "Briefing i ciljevi",
-                        "text": "Dogovaramo ciljeve, reference i obim (stranice, brend, rokovi)."
-                    },
-                    {
-                        "@type": "HowToStep",
-                        "position": 3,
-                        "name": "Struktura i dizajn",
-                        "text": "Definišemo informacionu arhitekturu, zatim vizuelni koncept i iteracije."
-                    },
-                    {
-                        "@type": "HowToStep",
-                        "position": 4,
-                        "name": "Razvoj i testiranje",
-                        "text": "Implementacija, performanse, mobilni prikaz i tehnički SEO pre objave."
-                    },
-                    {
-                        "@type": "HowToStep",
-                        "position": 5,
-                        "name": "Objava i podrška",
-                        "text": "Publikacija, osnovno praćenje i dogovor o sledećim koracima po potrebi."
-                    }
-                ]
-            },
-            {
-                "@type": "BreadcrumbList",
-                "@id": "https://www.agrmultimedia.eu/#breadcrumb",
-                "itemListElement": [
-                    {
-                        "@type": "ListItem",
-                        "position": 1,
-                        "name": "Početna",
-                        "item": "https://www.agrmultimedia.eu/"
-                    },
-                    {
-                        "@type": "ListItem",
-                        "position": 2,
-                        "name": "Usluge",
-                        "item": "https://www.agrmultimedia.eu/services"
-                    }
-                ]
-            }
-        ]
-    }
-    </script>
-</head>
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const root = path.join(__dirname, "..");
+const indexPath = path.join(root, "client", "index.html");
+let src = fs.readFileSync(indexPath, "utf8");
+const headEnd = src.indexOf("</head>") + "</head>".length;
+const head = src.slice(0, headEnd);
+
+const body = `
 <body>
     <noscript>
         <nav role="navigation" aria-label="Glavna navigacija na sajtu AGR Multimedia" style="padding:0.75rem 1.5rem;background:#0a0a0f;border-bottom:1px solid #333;font-family:system-ui,sans-serif;font-size:0.9rem;color:#e5e5e5;">
@@ -394,4 +163,7 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
 </body>
-</html>
+</html>`;
+
+fs.writeFileSync(indexPath, head + body, "utf8");
+console.log("Updated client/index.html noscript + landmarks.");
