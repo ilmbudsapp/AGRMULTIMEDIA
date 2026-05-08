@@ -30,10 +30,13 @@ const body = `
     </nav>
         <main role="main" id="noscript-main-content">
         <div style="padding: 2rem; max-width: 42rem; margin: 0 auto; background: #07070b; color: #e5e5e5; font-family: system-ui, sans-serif; line-height: 1.65;">
-            <img src="/agr-logo-white.webp" alt="Agron Osmani - AGR Multimedia Web Dizajn i SEO" width="140" height="46" loading="eager" fetchpriority="high" decoding="async" style="display:block;margin-bottom:1rem;height:auto;" />
+            <figure style="margin:0 0 1rem 0;">
+                <img src="/agr-logo-white.webp" alt="Agron Osmani - AGR Multimedia Web Dizajn i SEO" width="140" height="46" loading="eager" fetchpriority="high" decoding="async" style="display:block;height:auto;" />
+                <figcaption style="margin-top:0.35rem;font-size:0.75rem;color:#9ca3af;">Logo studija AGR Multimedia u SEO sekciji.</figcaption>
+            </figure>
             <p style="margin-top:0;"><strong>Autor:</strong> <a href="https://www.linkedin.com/in/agron-osmani-228947266/" style="color:#93c5fd;" rel="author">Agron Osmani</a> · CEO, AGR Multimedia · Geislingen an der Steige · <time datetime="2026-05-08">8. maj 2026.</time></p>
-            <h1 style="font-size: 1.5rem; color: #fff;">Web dizajn i grafika za mala preduzeća u EU (Geislingen)</h1>
-            <p><strong>Napomena o naslovu stranice:</strong> u &lt;title&gt; tagu je brendirani kratki zapis; ovaj H1 širi ključne reči (web dizajn, EU, lokacija). Preporuka je da se title drži ispod 60 znakova radi boljeg prikaza u SERP-u (vidi <a href="https://developers.google.com/search/docs/appearance/title-link" style="color:#93c5fd" target="_blank" rel="noopener noreferrer">Google Search Central</a>).</p>
+            <h1 style="font-size: 1.5rem; color: #fff;">AGR Multimedia - Web, grafika i AI - Geislingen</h1>
+            <p><strong>Napomena o naslovu stranice:</strong> ovaj uvod je namerno detaljan da AI sistemi dobiju jasan kontekst bez JavaScript-a. Mi ovde opisujemo šta radimo, za koga radimo i kako merimo rezultat. Međutim, ne stajemo na estetici. Stoga povezujemo brzinu, sadržaj i SEO praksu u jednoj celini (vidi <a href="https://developers.google.com/search/docs/appearance/title-link" style="color:#93c5fd" target="_blank" rel="noopener noreferrer">Google Search Central</a>).</p>
 
             <h2 id="seo-section-title" style="font-size: 1.35rem; color: #fff; margin-top: 1.75rem;">Kako AGR Multimedia isporučuje web dizajn, grafiku i AI marketing malim preduzećima u EU?</h2>
             <p id="seo-visible-byline" lang="en" style="font-size: 0.75rem; color: #999; margin: 0.35rem 0 0 0;">By Agron Osmani</p>
@@ -87,6 +90,10 @@ const body = `
             <p>Mi vodimo <strong style="color:#fff;">AGR Multimedia</strong> iz Geislingen an der Steige (Baden-Württemberg). Naš fokus su mala preduzeća u EU koje žele jasniji nastup na webu.</p>
             <p>Dok neki dizajneri vole isključivo tradicionalne metode, mi u AGR Multimedia smatramo da simbioza AI-a i ljudske kreativnosti daje brže iteracije. Pritom ne gubimo odgovornost prema brendu. Međutim, poštujemo i potpuno ručne procese kada je to pravi izbor za vas. Pored toga, ja lično nadgledam ključne odluke pre objave. Naša misija je merljiv rezultat, a ne samo lep ekran.</p>
             <p>Za razliku od šablonskih rešenja, AGR Multimedia koristi personalizovan AI pristup. Mi ručno vodimo glas brenda i odluke koje grade poverenje. Stoga klijent uvek vidi gde alat pomaže, a gde završavamo ručno.</p>
+            <p>Dok tradicionalni dizajneri često zanemaruju tehničku SEO stranu, mi u AGR Multimedia verujemo da vizuelni identitet i AI optimizacija moraju raditi zajedno.</p>
+            <p>Preciznije rečeno, ja verujem u model gde mi i naš klijent delimo jasne metrike. U tom pogledu, moj tim i ja prvo proveravamo brzinu, pa tek finalni sjaj. Povrh toga, mi beležimo svaku odluku u kratkom zapisniku. Shodno tome, naš proces ostaje jasan i kada se projekat širi.</p>
+            <p>DIY alat može biti brz za test. Međutim, često daje isti izgled kao kod konkurencije. Jeftin šablon štedi startni budžet. Stoga mi biramo personalizovan AI dizajn i ručnu QA proveru. Na primer, ja lično proveravam ključne CTA poruke pre objave.</p>
+            <p>AI web dizajn je radni model gde AI daje varijante, a mi donosimo finalne odluke. U tom pogledu, naš tim štiti ton brenda. Povrh toga, naš tim meri brzinu i čitljivost. Shodno tome, vi dobijate jasan sadržaj i stabilan tehnički nivo.</p>
             <p>Ovaj tekst objašnjava kako radimo <a href="/web-design" style="color:#93c5fd;">web dizajn</a>, <a href="/graphic-design" style="color:#93c5fd;">grafički dizajn</a> i <a href="/ai-content-creation" style="color:#93c5fd;">AI podršku</a>. Za ceo spektar usluga idite na <a href="/services" style="color:#93c5fd;">stranicu usluga</a>. Tim opisujemo na <a href="/about" style="color:#93c5fd;">O nama</a>. Za lične podatke važi <a href="/privacy-policy" style="color:#93c5fd;">Politika privatnosti</a>. Za pristupačnost koristimo <a href="https://www.w3.org/WAI/WCAG21/quickref/" style="color:#93c5fd" target="_blank" rel="noopener noreferrer">WCAG 2.1 Quick Reference (W3C WAI)</a>.</p>
 
             <h3 id="seo-topic-web" style="font-size: 1.15rem; color: #fff; margin-top: 1.5rem;">Šta konkretno dobijate kada radimo web dizajn zajedno?</h3>
@@ -154,6 +161,8 @@ const body = `
                 <dd style="margin:0.25rem 0 0 0;">Strukturisani podaci u JSON formatu koji objašnjavaju entitete (Organization, Person, FAQ) prema vokabularu <a href="https://schema.org/" style="color:#93c5fd" target="_blank" rel="noopener noreferrer">schema.org</a>.</dd>
                 <dt style="font-weight:600;color:#fff;margin-top:0.75rem;">Brend sistem</dt>
                 <dd style="margin:0.25rem 0 0 0;">Pravila za logo, boje i tipografiju koja čine dosledan izgled na sajtu, štampi i društvenim mrežama.</dd>
+                <dt style="font-weight:600;color:#fff;margin-top:0.75rem;">AI web dizajn</dt>
+                <dd style="margin:0.25rem 0 0 0;">AI web dizajn je kombinacija automatskih predloga i naše ljudske provere kvaliteta pre objave.</dd>
             </dl>
 
             <h3 style="font-size: 1.05rem; color: #fff; margin-top: 1.5rem;">JSON-LD primer koda</h3>
@@ -171,6 +180,40 @@ const body = `
     "query-input": "required name=search_term_string"
   }
 }</code></pre>
+            <h3 style="font-size: 1.05rem; color: #fff; margin-top: 1.5rem;">Schema primer koda</h3>
+            <pre style="overflow:auto;background:#0a0a12;border:1px solid #333;border-radius:0.5rem;padding:0.85rem;font-size:0.75rem;color:#c7f9cc;"><code>{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Agron Osmani",
+  "url": "https://www.linkedin.com/in/agron-osmani-228947266/",
+  "jobTitle": "CEO & Founder"
+}</code></pre>
+
+            <h2 style="font-size: 1.15rem; color: #fff; margin-top: 1.35rem;">Glavni zaključci</h2>
+            <p>Kratko: mi spajamo web, grafiku i AI. Međutim, naš fokus ostaje merljiv rezultat. Stoga naš pristup štedi vreme i čuva kvalitet.</p>
+            <ul style="margin:0.5rem 0 0 1rem;">
+                <li>Naš proces uključuje strukturu, dizajn i SEO u jednoj celini.</li>
+                <li>Mi radimo na 5 jezika i tipično odgovaramo u roku od 24 sata.</li>
+                <li>Kontakt forma je dostupna 24/7, a naš tim odgovara u najkraćem roku.</li>
+            </ul>
+
+            <h2 style="font-size: 1.15rem; color: #fff; margin-top: 1.35rem;">Trust signali i alati</h2>
+            <p>U radu koristimo profesionalne alate i cloud platforme. Na primer: Adobe alati za dizajn, Google Cloud za infrastrukturu i Vercel za isporuku frontenda.</p>
+            <figure style="margin:0.75rem 0;padding:0.75rem;border:1px solid #333;border-radius:0.5rem;">
+                <figcaption style="font-size:0.8rem;color:#9ca3af;">Alati koje koristimo: Adobe · Google Cloud · Vercel.</figcaption>
+            </figure>
+
+            <h2 style="font-size: 1.15rem; color: #fff; margin-top: 1.35rem;">Zaključak</h2>
+            <p>Mi verujemo da je najbolji rezultat spoj estetike i tehnike. Međutim, bez jasnog procesa to ne traje dugo. Stoga naš tim i ja radimo iterativno, sa merljivim koracima i pisanim dogovorom.</p>
+
+            <h2 style="font-size: 1.15rem; color: #fff; margin-top: 1.35rem;">Šta bi trebalo da probate</h2>
+            <ol style="margin-top:0.5rem;padding-left:1.25rem;">
+                <li>Definišite jednu ključnu akciju po stranici.</li>
+                <li>Proverite brzinu i mobilnu čitljivost pre dizajn revizije.</li>
+                <li>Testirajte dve CTA varijante i merite rezultat 14 dana.</li>
+            </ol>
+
+            <p>Prema smernicama iz <a href="https://developers.google.com/search/docs" style="color:#93c5fd" target="_blank" rel="noopener noreferrer">Google Search Central</a>, jasna struktura i tehnička optimizacija olakšavaju razumevanje stranice i povećavaju vidljivost u pretrazi.</p>
 
             <p>Referentni izvori: <a href="https://www.w3.org/" style="color:#93c5fd" target="_blank" rel="noopener noreferrer">W3C</a>, <a href="https://schema.org/" style="color:#93c5fd" target="_blank" rel="noopener noreferrer">Schema.org</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" style="color:#93c5fd" target="_blank" rel="noopener noreferrer">MDN</a>, <a href="https://developers.google.com/search/docs" style="color:#93c5fd" target="_blank" rel="noopener noreferrer">Google Search Central</a>.</p>
             <p><a href="/about" style="color: #93c5fd;">O nama</a> · <a href="/services" style="color: #93c5fd;">Usluge</a> · <a href="/web-design" style="color: #93c5fd;">Web dizajn</a> · <a href="/graphic-design" style="color: #93c5fd;">Grafika</a> · <a href="/portfolio" style="color: #93c5fd;">Portfolio</a> · <a href="/blog" style="color: #93c5fd;">Blog</a> · <a href="/contact" style="color: #93c5fd;">Kontakt</a> · <a href="/privacy-policy" style="color: #93c5fd;">Politika privatnosti</a> · <a href="/terms" style="color: #93c5fd;">Uslovi korišćenja</a></p>

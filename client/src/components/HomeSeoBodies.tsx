@@ -40,6 +40,21 @@ export function SrBody() {
       <p className="mb-4 text-[0.9375rem] leading-relaxed text-white/80">
         Dok tradicionalni dizajneri često zanemaruju tehničku SEO stranu, mi u AGR Multimedia verujemo da vizuelni identitet i AI optimizacija moraju raditi zajedno.
       </p>
+      <p className="mb-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Preciznije rečeno, ja verujem u model gde mi i naš klijent delimo jasne metrike. U tom pogledu, moj tim i ja
+        prvo proveravamo brzinu, pa tek finalni sjaj. Povrh toga, mi beležimo svaku odluku u kratkom zapisniku. Shodno
+        tome, naš proces ostaje jasan i kada se projekat širi.
+      </p>
+      <p className="mb-4 text-[0.9375rem] leading-relaxed text-white/80">
+        DIY alati su korisni za početak. Međutim, često nude isti izgled kao konkurencija. Jeftini šabloni štede vreme, ali
+        retko prate vaš kontekst. Mi zato gradimo personalizovan AI dizajn i našu ručnu kontrolu. Na primer, ja proveravam
+        ključne CTA poruke pre objave. Stoga naš rezultat bolje prati vaš cilj.
+      </p>
+      <p className="mb-4 text-[0.9375rem] leading-relaxed text-white/80">
+        AI web dizajn je proces gde algoritam ubrza predloge, a mi donosimo finalne odluke. U tom pogledu, naš tim štiti
+        ton brenda i tačnost sadržaja. Povrh toga, naš rad uključuje merenje brzine i čitljivosti. Shodno tome, vi dobijate
+        i estetiku i tehničku stabilnost.
+      </p>
       <p className="mb-6 text-[0.9375rem] leading-relaxed text-white/80">
         Ovaj tekst objašnjava kako radimo <L href="/web-design">web dizajn</L>, <L href="/graphic-design">grafički dizajn</L>{" "}
         i <L href="/ai-content-creation">AI podršku</L>. Za ceo spektar usluga idite na <L href="/services">stranicu usluga</L>.
