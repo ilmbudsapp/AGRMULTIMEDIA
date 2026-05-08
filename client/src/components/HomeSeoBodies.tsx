@@ -37,6 +37,9 @@ export function SrBody() {
       <p className="mb-4 text-[0.9375rem] leading-relaxed text-white/80">
         Dok se tradicionalne agencije često drže samo estetike, mi balansiramo vizuelni identitet i tehničku AI optimizaciju. Jer u 2026. godini jedno bez drugog retko donosi rezultate. Međutim, lep izgled i dalje važi — mora da radi zajedno sa brzinom sajta i jasnom porukom.
       </p>
+      <p className="mb-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Dok tradicionalni dizajneri često zanemaruju tehničku SEO stranu, mi u AGR Multimedia verujemo da vizuelni identitet i AI optimizacija moraju raditi zajedno.
+      </p>
       <p className="mb-6 text-[0.9375rem] leading-relaxed text-white/80">
         Ovaj tekst objašnjava kako radimo <L href="/web-design">web dizajn</L>, <L href="/graphic-design">grafički dizajn</L>{" "}
         i <L href="/ai-content-creation">AI podršku</L>. Za ceo spektar usluga idite na <L href="/services">stranicu usluga</L>.

@@ -262,7 +262,7 @@
     </nav>
         <main role="main" id="noscript-main-content">
         <div style="padding: 2rem; max-width: 42rem; margin: 0 auto; background: #07070b; color: #e5e5e5; font-family: system-ui, sans-serif; line-height: 1.65;">
-            <img src="/agr-logo-white.png" alt="Agron Osmani - AGR Multimedia Web Dizajn i SEO" width="140" height="46" loading="lazy" decoding="async" style="display:block;margin-bottom:1rem;height:auto;" />
+            <img src="/agr-logo-white.webp" alt="Agron Osmani - AGR Multimedia Web Dizajn i SEO" width="140" height="46" loading="eager" fetchpriority="high" decoding="async" style="display:block;margin-bottom:1rem;height:auto;" />
             <p style="margin-top:0;"><strong>Autor:</strong> <a href="https://www.linkedin.com/in/agron-osmani-228947266/" style="color:#93c5fd;" rel="author">Agron Osmani</a> · CEO, AGR Multimedia · Geislingen an der Steige · <time datetime="2026-05-08">8. maj 2026.</time></p>
             <h1 style="font-size: 1.5rem; color: #fff;">Web dizajn i grafika za mala preduzeća u EU (Geislingen)</h1>
             <p><strong>Napomena o naslovu stranice:</strong> u &lt;title&gt; tagu je brendirani kratki zapis; ovaj H1 širi ključne reči (web dizajn, EU, lokacija). Preporuka je da se title drži ispod 60 znakova radi boljeg prikaza u SERP-u (vidi <a href="https://developers.google.com/search/docs/appearance/title-link" style="color:#93c5fd" target="_blank" rel="noopener noreferrer">Google Search Central</a>).</p>
@@ -299,6 +299,9 @@
                 <div style="margin-bottom:0.75rem;"><dt style="font-weight:600;color:#93c5fd;display:inline;">Odgovor na upit:</dt> <dd style="display:inline;margin:0;">obično do 24 sata</dd></div>
                 <div><dt style="font-weight:600;color:#93c5fd;display:inline;">Primarna zona:</dt> <dd style="display:inline;margin:0;">EU (mala preduzeća)</dd></div>
             </dl>
+
+            <h2 style="font-size: 1.15rem; color: #fff; margin-top: 1.35rem;">Usluge</h2>
+            <p>Mi pokrivamo web dizajn, grafiku, video i AI podršku. Međutim, obim prilagođavamo vašem budžetu. Na primer, možemo početi od jedne landing stranice.</p>
 
             <nav aria-label="Sadržaj na ovoj stranici" style="margin:1.25rem 0;padding:1rem;border:1px solid #444;border-radius:0.5rem;">
                 <p style="margin:0 0 0.5rem 0;font-weight:600;color:#fff;">Na ovoj stranici</p>
@@ -361,6 +364,7 @@
 
             <blockquote cite="https://www.linkedin.com/in/agron-osmani-228947266/" style="margin:1.25rem 0;padding-left:1rem;border-left:4px solid #60a5fa;color:#ddd;font-style:italic;">„Merljivost mora da bude dogovorena pre dizajna — inače lep izgled ostaje samo estetika bez odgovornosti za rezultat.” — <span style="font-style:normal;color:#aaa;">Agron Osmani · CEO, AGR Multimedia</span></blockquote>
 
+            <h2 style="font-size: 1.15rem; color: #fff; margin-top: 1.35rem;">Proces</h2>
             <p><strong>Pet koraka od prvog upita do objave</strong></p>
             <ol style="margin-top:0.5rem;padding-left:1.25rem;">
                 <li>Upit ili konsultacija — ciljevi, budžet i rokovi u jednoj poruci.</li>
@@ -370,6 +374,8 @@
                 <li>Objava, osnovno praćenje i dogovor o sledećim koracima (marketing, sadržaj, širenje).</li>
             </ol>
 
+            <h2 style="font-size: 1.15rem; color: #fff; margin-top: 1.35rem;">FAQ</h2>
+            <p>Mi odgovaramo na upite brzo. Dakle, najčešća pitanja rešavamo pre starta. Međutim, detaljan opseg dogovaramo na prvom pozivu.</p>
             <h3 style="font-size: 1.05rem; color: #fff; margin-top: 1.5rem;">Ključni pojmovi</h3>
             <dl style="margin:1rem 0;padding-left:0;">
                 <dt style="font-weight:600;color:#fff;margin-top:0.75rem;">On-page SEO</dt>
@@ -381,6 +387,22 @@
                 <dt style="font-weight:600;color:#fff;margin-top:0.75rem;">Brend sistem</dt>
                 <dd style="margin:0.25rem 0 0 0;">Pravila za logo, boje i tipografiju koja čine dosledan izgled na sajtu, štampi i društvenim mrežama.</dd>
             </dl>
+
+            <h3 style="font-size: 1.05rem; color: #fff; margin-top: 1.5rem;">JSON-LD primer koda</h3>
+            <pre style="overflow:auto;background:#0a0a12;border:1px solid #333;border-radius:0.5rem;padding:0.85rem;font-size:0.75rem;color:#c7f9cc;"><code>{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "AGR Multimedia",
+  "url": "https://www.agrmultimedia.eu/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://www.agrmultimedia.eu/blog?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}</code></pre>
 
             <p>Referentni izvori: <a href="https://www.w3.org/" style="color:#93c5fd" target="_blank" rel="noopener noreferrer">W3C</a>, <a href="https://schema.org/" style="color:#93c5fd" target="_blank" rel="noopener noreferrer">Schema.org</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" style="color:#93c5fd" target="_blank" rel="noopener noreferrer">MDN</a>, <a href="https://developers.google.com/search/docs" style="color:#93c5fd" target="_blank" rel="noopener noreferrer">Google Search Central</a>.</p>
             <p><a href="/about" style="color: #93c5fd;">O nama</a> · <a href="/services" style="color: #93c5fd;">Usluge</a> · <a href="/web-design" style="color: #93c5fd;">Web dizajn</a> · <a href="/graphic-design" style="color: #93c5fd;">Grafika</a> · <a href="/portfolio" style="color: #93c5fd;">Portfolio</a> · <a href="/blog" style="color: #93c5fd;">Blog</a> · <a href="/contact" style="color: #93c5fd;">Kontakt</a> · <a href="/privacy-policy" style="color: #93c5fd;">Politika privatnosti</a> · <a href="/terms" style="color: #93c5fd;">Uslovi korišćenja</a></p>

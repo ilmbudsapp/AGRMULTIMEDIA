@@ -1,19 +1,46 @@
 import sharp from "sharp";
+import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, "..");
 
+const SOURCE_EXTENSIONS = new Set([".png", ".jpg", ".jpeg"]);
+
+async function walk(dir) {
+  const entries = await fs.readdir(dir, { withFileTypes: true });
+  const files = [];
+  for (const entry of entries) {
+    const fullPath = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      files.push(...(await walk(fullPath)));
+      continue;
+    }
+    files.push(fullPath);
+  }
+  return files;
+}
+
+async function convertTree(baseDir) {
+  const files = await walk(baseDir);
+  let converted = 0;
+  for (const file of files) {
+    const ext = path.extname(file).toLowerCase();
+    if (!SOURCE_EXTENSIONS.has(ext)) continue;
+    const out = file.slice(0, -ext.length) + ".webp";
+    await sharp(file).webp({ quality: 84 }).toFile(out);
+    converted += 1;
+  }
+  return converted;
+}
+
 async function main() {
   const pub = path.join(root, "client", "public");
-  await sharp(path.join(pub, "hero-workspace.png")).webp({ quality: 84 }).toFile(path.join(pub, "hero-workspace.webp"));
-  await sharp(path.join(pub, "agr-logo-white.png")).webp({ quality: 90 }).toFile(path.join(pub, "agr-logo-white.webp"));
-
   const assets = path.join(root, "client", "src", "assets");
-  await sharp(path.join(assets, "branding-image.jpg")).webp({ quality: 82 }).toFile(path.join(assets, "branding-image.webp"));
-
-  console.log("Wrote hero-workspace.webp, agr-logo-white.webp, branding-image.webp");
+  const convertedPublic = await convertTree(pub);
+  const convertedAssets = await convertTree(assets);
+  console.log(`Converted ${convertedPublic} images in public and ${convertedAssets} in src/assets to WebP.`);
 }
 
 main().catch((e) => {

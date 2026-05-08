@@ -34,6 +34,15 @@ export default function Hero() {
       id="home"
       className="premium-section relative scroll-mt-20 border-b border-[#333333] pt-[5.25rem] pb-20 md:pt-28 md:pb-28"
     >
+      <img
+        src={VIDEO_POSTER}
+        alt=""
+        aria-hidden
+        loading="eager"
+        fetchPriority="high"
+        decoding="async"
+        className="sr-only"
+      />
       <video
         ref={videoRef}
         className="absolute inset-0 h-full w-full object-cover opacity-30"
