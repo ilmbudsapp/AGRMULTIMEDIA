@@ -5,6 +5,7 @@ import VisibleAuthorCredit from "@/components/VisibleAuthorCredit";
 import HomeSeoDefinitions from "@/components/HomeSeoDefinitions";
 import { SrBody, EnBody, DeBody, ItBody, AlBody } from "@/components/HomeSeoBodies";
 import { SEO_TOPIC_IDS } from "@/lib/seoTopicIds";
+import { WEBSITE_JSON_LD_SNIPPET } from "@/lib/websiteJsonLdSnippet";
 
 function bodyForLang(lang: Language) {
   switch (lang) {
@@ -60,6 +61,11 @@ type SectionCopy = {
   collaborationSteps: string[];
   /** Key facts for scanners (Label: value). */
   kvLines: [string, string][];
+  /** Short H2 label before collaboration steps list. */
+  processH2: string;
+  logoCaption: string;
+  jsonLdExampleTitle: string;
+  jsonLdExampleCaption: string;
 };
 
 const SECTION_COPY: Record<SectionLangKey, SectionCopy> = {
@@ -130,6 +136,10 @@ const SECTION_COPY: Record<SectionLangKey, SectionCopy> = {
       ["Odgovor na upit", "obično do 24 sata"],
       ["Primarna zona", "EU (mala preduzeća)"],
     ],
+    processH2: "Proces rada",
+    logoCaption: "Beli logo studija AGR Multimedia uz tekstualnu SEO zonu na početnoj strani.",
+    jsonLdExampleTitle: "Primer: WebSite JSON-LD (Schema.org)",
+    jsonLdExampleCaption: "Strukturisani podatak za sajt i SearchAction — kao referenca za tehničku konsistentnost.",
   },
   en: {
     eyebrow: "AGR Multimedia",
@@ -197,6 +207,10 @@ const SECTION_COPY: Record<SectionLangKey, SectionCopy> = {
       ["Typical reply time", "within 24 hours"],
       ["Primary market", "EU small businesses"],
     ],
+    processH2: "Our workflow",
+    logoCaption: "AGR Multimedia studio wordmark beside the homepage SEO article.",
+    jsonLdExampleTitle: "Example: WebSite JSON-LD (Schema.org)",
+    jsonLdExampleCaption: "Structured data for the site entity plus SearchAction wiring.",
   },
   de: {
     eyebrow: "AGR Multimedia",
@@ -265,6 +279,10 @@ const SECTION_COPY: Record<SectionLangKey, SectionCopy> = {
       ["Reaktionszeit", "in der Regel innerhalb von 24 Stunden"],
       ["Schwerpunkt", "KMU in der EU"],
     ],
+    processH2: "Unser Ablauf",
+    logoCaption: "Weißes Studio-Logo neben dem SEO-Artikel auf der Startseite.",
+    jsonLdExampleTitle: "Beispiel: WebSite JSON-LD (Schema.org)",
+    jsonLdExampleCaption: "Strukturierte Daten für Website und Suchaktion als Referenz.",
   },
   it: {
     eyebrow: "AGR Multimedia",
@@ -333,6 +351,10 @@ const SECTION_COPY: Record<SectionLangKey, SectionCopy> = {
       ["Tempo di risposta", "di solito entro 24 ore"],
       ["Mercato principale", "PMI nell’UE"],
     ],
+    processH2: "Il processo",
+    logoCaption: "Marchio chiaro dello studio accanto alla guida SEO nella homepage.",
+    jsonLdExampleTitle: "Esempio: WebSite JSON-LD (Schema.org)",
+    jsonLdExampleCaption: "Dati strutturati per il sito e l’azione di ricerca.",
   },
   al: {
     eyebrow: "AGR Multimedia",
@@ -401,6 +423,10 @@ const SECTION_COPY: Record<SectionLangKey, SectionCopy> = {
       ["Koha e përgjigjes", "zakonisht brenda 24 orëve"],
       ["Tregu kryesor", "SME në BE"],
     ],
+    processH2: "Procesi i punës",
+    logoCaption: "Logo i studios pranë zonës SEO në faqen kryesore.",
+    jsonLdExampleTitle: "Shembull: WebSite JSON-LD (Schema.org)",
+    jsonLdExampleCaption: "Të dhëna të strukturuara për faqen dhe veprimin e kërkimit.",
   },
 };
 
@@ -417,15 +443,22 @@ export default function HomeSeoSection() {
       <article className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <header className="border-b border-white/10 pb-8">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
-            <img
-              src="/agr-logo-white.png"
-              alt="Agron Osmani - AGR Multimedia Web Dizajn i SEO"
-              width={140}
-              height={46}
-              loading="lazy"
-              decoding="async"
-              className="h-11 w-auto shrink-0 opacity-90"
-            />
+            <figure className="shrink-0">
+              <picture>
+                <source srcSet="/agr-logo-white.webp" type="image/webp" />
+                <img
+                  src="/agr-logo-white.png"
+                  alt="Agron Osmani - AGR Multimedia Web Dizajn i SEO"
+                  width={140}
+                  height={46}
+                  decoding="async"
+                  className="h-11 w-auto opacity-90"
+                />
+              </picture>
+              <figcaption className="mt-1 max-w-[11rem] text-[0.65rem] leading-snug text-white/45">
+                {copy.logoCaption}
+              </figcaption>
+            </figure>
             <div className="min-w-0 flex-1">
               <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-blue-300/90">{copy.eyebrow}</p>
               <h2
@@ -543,11 +576,17 @@ export default function HomeSeoSection() {
           <footer className="mt-3 text-xs not-italic text-white/55">{copy.quoteAttribution}</footer>
         </blockquote>
 
-        <section className="border-t border-white/10 pt-10" aria-labelledby="seo-collab-steps-heading">
-          <h3 id="seo-collab-steps-heading" className="text-lg font-semibold text-white">
+        <section className="border-t border-white/10 pt-10" aria-labelledby="seo-process-h2">
+          <h2 id="seo-process-h2" className="text-xl font-semibold tracking-tight text-white md:text-2xl">
+            {copy.processH2}
+          </h2>
+          <p id="seo-collab-lead" className="mt-2 text-sm text-white/75">
             {copy.collaborationStepsTitle}
-          </h3>
-          <ol className="mt-4 list-decimal space-y-2 pl-5 text-sm leading-relaxed text-white/80 marker:text-blue-300/80">
+          </p>
+          <ol
+            className="mt-4 list-decimal space-y-2 pl-5 text-sm leading-relaxed text-white/80 marker:text-blue-300/80"
+            aria-labelledby="seo-collab-lead"
+          >
             {copy.collaborationSteps.map((step) => (
               <li key={step}>{step}</li>
             ))}
@@ -555,9 +594,9 @@ export default function HomeSeoSection() {
         </section>
 
         <section className="mt-12 border-t border-white/10 pt-10" aria-labelledby="seo-faq-heading">
-          <h3 id="seo-faq-heading" className="text-lg font-semibold text-white">
+          <h2 id="seo-faq-heading" className="text-xl font-semibold tracking-tight text-white md:text-2xl">
             {copy.faqTitle}
-          </h3>
+          </h2>
           <div className="mt-4 space-y-3">
             {copy.faq.map((item) => (
               <details
@@ -571,6 +610,20 @@ export default function HomeSeoSection() {
               </details>
             ))}
           </div>
+        </section>
+
+        <section className="mt-12 border-t border-white/10 pt-10" aria-labelledby="seo-jsonld-example-heading">
+          <h3 id="seo-jsonld-example-heading" className="text-lg font-semibold text-white">
+            {copy.jsonLdExampleTitle}
+          </h3>
+          <figure className="mt-4 overflow-hidden rounded-lg border border-white/10 bg-[#0a0a12]">
+            <figcaption className="border-b border-white/10 px-4 py-2 text-xs text-white/75">
+              {copy.jsonLdExampleCaption}
+            </figcaption>
+            <pre className="max-h-56 overflow-auto p-4 text-[0.7rem] leading-relaxed text-emerald-100/95 md:text-xs">
+              <code>{WEBSITE_JSON_LD_SNIPPET}</code>
+            </pre>
+          </figure>
         </section>
 
         <HomeSeoDefinitions />

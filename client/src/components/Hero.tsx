@@ -4,7 +4,8 @@ import { getPremiumTranslations } from "@/lib/premiumI18n";
 
 /** Public folder; spaces encoded for reliable load */
 const PROMO_VIDEO = encodeURI("/Werbung Finito FULL HD COMPRESSO.mp4");
-const VIDEO_POSTER = "/hero-workspace.png";
+/** WebP poster first for LCP; PNG fallback via preload in index.html if needed */
+const VIDEO_POSTER = "/hero-workspace.webp";
 
 export default function Hero() {
   const { currentLanguage } = useLanguage();
@@ -40,7 +41,7 @@ export default function Hero() {
         muted
         loop
         playsInline
-        preload="metadata"
+        preload="auto"
         poster={VIDEO_POSTER}
         aria-hidden
       >
@@ -89,7 +90,7 @@ export default function Hero() {
           <p className="mt-3 text-center text-xs text-white/70 sm:text-sm lg:text-left">{premium.hero.ctaMeta}</p>
         </div>
 
-        <div className="order-2 w-full max-w-lg justify-self-center p-2 sm:p-3 lg:order-none lg:max-w-none lg:justify-self-end animate-fade-in-up animate-fade-in-up-delay-2">
+        <figure className="order-2 w-full max-w-lg justify-self-center p-2 sm:p-3 lg:order-none lg:max-w-none lg:justify-self-end animate-fade-in-up animate-fade-in-up-delay-2">
           <div className="premium-card relative overflow-hidden shadow-[0_2px_4px_rgba(15,23,42,0.05),0_14px_32px_-8px_rgba(15,23,42,0.22),0_32px_64px_-14px_rgba(15,23,42,0.32),0_52px_88px_-22px_rgba(15,23,42,0.24)]">
             <div className="relative aspect-video w-full">
               <video
@@ -107,7 +108,10 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
             </div>
           </div>
-        </div>
+          <figcaption className="mt-2 text-center text-xs text-white/55">
+            Showreel preview — studio montage without sound (AGR Multimedia).
+          </figcaption>
+        </figure>
       </div>
     </section>
   );

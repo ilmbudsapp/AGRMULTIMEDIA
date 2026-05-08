@@ -25,35 +25,35 @@ export default function HomeServices() {
   > = {
     en: {
       eyebrow: "Services",
-      heading: "Clear service structure for small business growth",
+      heading: "Our services",
       subtitle:
         "Choose the exact service you need. Each area has a dedicated page with clear scope, deliverables, tools, and a direct consultation path.",
       details: "View service details",
     },
     de: {
       eyebrow: "Leistungen",
-      heading: "Klare Service-Struktur fur Wachstum kleiner Unternehmen",
+      heading: "Unsere Leistungen",
       subtitle:
         "Wahlen Sie die Leistung, die Sie brauchen. Jeder Bereich hat eine eigene Seite mit klarem Umfang, Ergebnissen und direktem Beratungsweg.",
       details: "Service-Details ansehen",
     },
     it: {
       eyebrow: "Servizi",
-      heading: "Struttura servizi chiara per la crescita delle piccole imprese",
+      heading: "I nostri servizi",
       subtitle:
         "Scegli il servizio giusto. Ogni area ha una pagina dedicata con ambito chiaro, consegne e percorso diretto di consulenza.",
       details: "Vedi dettagli servizio",
     },
     sr: {
       eyebrow: "Usluge",
-      heading: "Jasna struktura usluga za rast malih biznisa",
+      heading: "Naše usluge",
       subtitle:
-        "Izaberi tacno uslugu koja ti treba. Svaka oblast ima posebnu stranicu sa jasnim obimom, isporukom i direktnim putem do konsultacije.",
+        "Izaberi tačno uslugu koja ti treba. Svaka oblast ima posebnu stranicu sa jasnim obimom, isporukom i direktnim putem do konsultacije.",
       details: "Pogledaj detalje usluge",
     },
     al: {
       eyebrow: "Sherbime",
-      heading: "Strukture e qarte sherbimesh per rritjen e bizneseve te vogla",
+      heading: "Sherbimet tona",
       subtitle:
         "Zgjidh sherbimin qe te duhet. Cdo fushe ka faqe te dedikuar me shtrirje te qarte dhe rruge direkte konsultimi.",
       details: "Shiko detajet e sherbimit",

@@ -29,14 +29,13 @@ export function SrBody() {
         Naš fokus su mala preduzeća u EU koje žele jasniji nastup na webu.
       </p>
       <p className="mb-4 text-[0.9375rem] leading-relaxed text-white/80">
-        Dok neki dizajneri vole isključivo tradicionalne metode, mi u AGR Multimedia smatramo da simbioza AI-a i ljudske
-        kreativnosti daje brže iteracije. Pritom ne gubimo odgovornost prema brendu. Međutim, poštujemo i potpuno ručne
-        procese kada je to pravi izbor za vas. Pored toga, ja lično nadgledam ključne odluke pre objave. Naša misija je
-        merljiv rezultat, a ne samo lep ekran.
+        Dok neki dizajneri vole isključivo tradicionalne metode, mi smatramo da simbioza AI-a i čoveka ubrzava iteracije. Pritom ne gubimo odgovornost prema brendu. Međutim, poštujemo ručne procese kada je to pravi izbor za vas. Ja lično nadgledam ključne odluke pre objave. Naša misija je merljiv rezultat, a ne samo lep ekran.
       </p>
       <p className="mb-4 text-[0.9375rem] leading-relaxed text-white/80">
-        Za razliku od šablonskih rešenja, AGR Multimedia koristi personalizovan AI pristup. Mi ručno vodimo glas brenda i
-        odluke koje grade poverenje. Stoga klijent uvek vidi gde alat pomaže, a gde završavamo ručno.
+        Za razliku od šablonskih rešenja, AGR Multimedia koristi personalizovan AI pristup. Mi ručno vodimo glas brenda i odluke koje grade poverenje. Stoga klijent uvek vidi gde alat pomaže, a gde završavamo ručno.
+      </p>
+      <p className="mb-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Dok se tradicionalne agencije često drže samo estetike, mi balansiramo vizuelni identitet i tehničku AI optimizaciju. Jer u 2026. godini jedno bez drugog retko donosi rezultate. Međutim, lep izgled i dalje važi — mora da radi zajedno sa brzinom sajta i jasnom porukom.
       </p>
       <p className="mb-6 text-[0.9375rem] leading-relaxed text-white/80">
         Ovaj tekst objašnjava kako radimo <L href="/web-design">web dizajn</L>, <L href="/graphic-design">grafički dizajn</L>{" "}
@@ -172,6 +171,11 @@ export function EnBody() {
         Unlike template-only solutions, AGR Multimedia uses a personalized AI approach. I still lead the brand voice and
         trust-critical decisions. Therefore you see where the tool helps and where we finish by hand.
       </p>
+      <p className="mb-4 text-[0.9375rem] leading-relaxed text-white/80">
+        While traditional studios sometimes chase aesthetics alone, we balance visual identity with technical AI optimisation
+        and speed. In 2026, one without the other rarely drives outcomes. However, craft still matters — it must pair with
+        performance and clear messaging.
+      </p>
       <p className="mb-6 text-[0.9375rem] leading-relaxed text-white/80">
         This guide explains how we deliver <L href="/web-design">web design</L>, <L href="/graphic-design">graphic design</L>,
         and <L href="/ai-content-creation">AI-assisted workflows</L>. Services live on <L href="/services">services</L>.
@@ -305,6 +309,11 @@ export function DeBody() {
         Anders als reine Vorlagen setzen wir auf einen personalisierten KI-Workflow. Ich führe Markenstimme und
         vertrauenskritische Entscheidungen. Daher sehen Sie klar, wo automatisiert wird und wo wir freigeben.
       </p>
+      <p className="mb-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Viele klassische Agenturen betonen nur Ästhetik. Wir balancieren Markenbild, technische KI-Optimierung und Speed.
+        Im Jahr 2026 liefert eines ohne das andere selten Wirkung. Dennoch bleibt Design wichtig — es muss Performance und
+        Botschaft tragen.
+      </p>
       <p className="mb-6 text-[0.9375rem] leading-relaxed text-white/80">
         Hier beschreiben wir <L href="/web-design">Webdesign</L>, <L href="/graphic-design">Grafik und Branding</L> und{" "}
         <L href="/ai-content-creation">KI-Abläufe</L>. Überblick unter <L href="/services">Leistungen</L>. Teaminfos unter{" "}
@@ -420,6 +429,11 @@ export function ItBody() {
         A differenza delle sole soluzioni template, usiamo un flusso AI personalizzato. Io guido voce del brand e scelte di
         fiducia. Perciò capite dove il tool aiuta e dove rifiniamo a mano.
       </p>
+      <p className="mb-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Molte agenzie tradizionali inseguono solo l&apos;estetica. Noi bilanciamo identità visiva, AI tecnica e velocità. Nel
+        2026, raramente basta solo uno dei due. Tuttavia l&apos;aspetto resta centrale — deve andare con performance e
+        messaggio.
+      </p>
       <p className="mb-6 text-[0.9375rem] leading-relaxed text-white/80">
         Questa guida copre <L href="/web-design">web design</L>, <L href="/graphic-design">grafica e branding</L>,{" "}
         <L href="/ai-content-creation">flussi AI</L>. Servizi su <L href="/services">servizi</L>. Team su{" "}
@@ -533,6 +547,11 @@ export function AlBody() {
       <p className="mb-4 text-[0.9375rem] leading-relaxed text-white/80">
         Ndryshe nga zgjidhjet vetëm me shabllone, ne përdorim një qasje të personalizuar me AI. Unë udhëheq zërin e markës dhe
         vendimet e besimit. Prandaj shihni qartë ku ndihmon mjeti dhe ku përfundojmë dorazi.
+      </p>
+      <p className="mb-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Shumë agjenci tradicionale kërkojnë vetëm estetikë. Ne balancojmë identitetin vizual me optimizim teknik të AI-së dhe
+        shpejtësinë. Në 2026, rrallë mjafton vetëm njëra anë. Megjithatë pamja mbetet e rëndësishme — duhet të përputhet me
+        performancën dhe mesazhin.
       </p>
       <p className="mb-6 text-[0.9375rem] leading-relaxed text-white/80">
         Kjo faqe shpjegon <L href="/web-design">web dizajn</L>, <L href="/graphic-design">grafikë dhe branding</L>, dhe{" "}

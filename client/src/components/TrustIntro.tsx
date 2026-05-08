@@ -10,27 +10,27 @@ const TRUST_COPY: Record<
   en: {
     h2: "Helping small businesses grow with modern, fast websites",
     body:
-      "We focus on clarity before decoration: structure, performance, and messaging that fits your audience. However, a polished layout alone does not guarantee enquiries—for example, if your calls-to-action are vague, visitors leave. Therefore we align page maps with real goals (calls, forms, bookings). In short: better UX, clearer offers, and technical SEO foundations that support discovery. We personally sanity-check priorities with you before any major design gate.",
+      "We focus on clarity before decoration: structure, performance, and messaging that fits your audience. However, a polished layout alone does not guarantee enquiries. For example, vague calls-to-action still fail. Therefore we align page maps with real goals like calls, forms, or bookings. In short: better UX, clearer offers, and technical SEO that supports discovery. I believe my experience in brand and site speed gives you an edge. In addition, we keep written clarity on deadlines. We personally sanity-check priorities with you before any major design gate. I trust this mix of craft and data more than style-only work.",
   },
   de: {
     h2: "Ich helfe kleinen Unternehmen mit modernen, schnellen Websites zu wachsen",
     body:
-      "Zuerst Klarheit, dann Oberfläche: Informationsarchitektur, Performance und Botschaften passend zur Zielgruppe. Allerdings reicht ein schönes Layout allein nicht aus—wenn zum Beispiel CTAs unklar sind, springen Nutzer ab. Deshalb verknüpfen wir Seitenstruktur mit messbaren Zielen (Anruf, Formular, Buchung). Kurz gesagt: bessere UX, klarere Angebote und technische SEO-Basics für Auffindbarkeit.",
+      "Zuerst Klarheit, dann Oberfläche: Informationsarchitektur, Performance und passende Botschaften. Allerdings reicht schönes Layout allein nicht. Wenn CTAs unklar sind, springen Nutzer ab. Deshalb verbinden wir Seitenstruktur mit messbaren Zielen. Zum Beispiel Anruf, Formular oder Buchung. Kurz: bessere UX, klarere Angebote und technisches SEO. Mein Erfahrungswert in Marke und Performance unterstützt genau das. Zudem halten wir Fristen schriftlich fest. Zusammen prüfen wir Prioritäten vor großen Designschritten. Ich vertraue auf diesen Mix.",
   },
   it: {
     h2: "Aiuto le piccole imprese a crescere con siti moderni e veloci",
     body:
-      "Mettiamo la chiarezza prima della forma: architettura dell’informazione, performance e messaggi coerenti con il pubblico. Tuttavia, un layout curato da solo non basta—se, ad esempio, le call-to-action sono ambigue, gli utenti escono. Per questo allineiamo la mappa delle pagine a obiettivi reali (chiamate, moduli, prenotazioni). In breve: UX migliore, offerta più chiara e basi SEO tecniche per essere trovati.",
+      "Mettiamo la chiarezza prima della forma: architettura, performance e messaggi coerenti. Tuttavia, un layout curato da solo non basta. Se le call-to-action sono ambigue, l’utente esce. Per questo allineiamo la mappa delle pagine a obiettivi reali. Ad esempio chiamate, moduli o prenotazioni. In breve: UX migliore, offerta più chiara e SEO tecnico. La mia esperienza su brand e velocità aiuta qui. Inoltre garantiamo chiarezza scritta sulle scadenze. Controlliamo insieme le priorità prima delle prove più grandi. Io credo in questo equilibrio.",
   },
   sr: {
     h2: "Pomažem malim biznisima da rastu uz moderne i brze web stranice",
     body:
-      "Prvo jasnoća, pa tek vizuelni šmek: struktura stranica, performanse i poruke prilagođene publici. Međutim, sam „lep” dizajn ne donosi upite ako su pozivi na akciju nejasni—na primer, posetilac ne zna da li da pozove, pošalje formu ili rezerviše. Zato usklađujemo mapu sadržaja sa stvarnim ciljevima (poziv, forma, zakazivanje). Drugim rečima: bolji UX, jasnija ponuda i tehnički SEO temelji koji pomažu da vas klijenti pronađu. Mi lično proveravamo prioritete sa vama pre većih dizajn koraka.",
+      "Prvo dolazi jasnoća, pa tek lepa pozadina. Struktura stranica, performanse i poruke prate vašu publiku. Međutim, sam „lep” dizajn ne donosi upite ako pozivi na akciju nisu jasni. Na primer, posetilac ne zna da li da pozove, pošalje formu ili rezerviše. Zato usklađujemo mapu sadržaja sa jasnim ciljevima. Ti ciljevi su poziv, forma ili zakazivanje. Drugim rečima: bolji UX i tehnički SEO koji pomažu da vas pronađu. Mi lično proveravamo prioritete sa vama pre većih dizajn koraka. Ja verujem da moje iskustvo u brendu i brzini sajta daje prednost. Pored toga, mi garantujemo jasnu komunikaciju o rokovima u pisanom obliku. Stoga spajamo estetiku i merljivost, a ne samo lep ekran.",
   },
   al: {
     h2: "Ndihmoj bizneset e vogla të rriten me faqe moderne dhe të shpejta",
     body:
-      "Fillojmë nga qartësia para estetikës: arkitektura e informacionit, performanca dhe mesazhet për audiencën. Megjithatë, vetëm një pamje e bukur nuk mjafton—për shembull, nëse thirrjet për veprim janë të paqarta, vizitorët largohen. Prandaj përputhim hartën e faqeve me objektiva të matshëm (telefon, formular, rezervim). Me pak fjalë: UX më i mirë, ofertë më e qartë dhe baza SEO teknike për u gjetur në kërkim.",
+      "Fillojmë nga qartësia para estetikës: arkitektura e informacionit, performanca dhe mesazhet e përshtatshme. Megjithatë, një pamje e bukur nuk mjafton vetëm. Nëse thirrjet për veprim janë të paqarta, vizitorët largohen. Prandaj përputhim hartën e faqeve me objektiva të matshëm. Për shembull, telefon, formular ose rezervim. Me pak fjalë: UX më i mirë, ofertë më e qartë dhe SEO teknike. Unë besoj se eksperienca ime në markë dhe shpejtësi ndihmon. Për më tepër, ne garantojmë qartësi me shkrim mbi afatet. Së bashku verifikojmë prioritetet para hapave të mëdhenj.",
   },
 };
 
