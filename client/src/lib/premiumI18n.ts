@@ -37,7 +37,7 @@ type PremiumTranslations = {
 
 const en: PremiumTranslations = {
   hero: {
-    heading: "AGR Multimedia — Web Design & Graphics, Geislingen an der Steige",
+    heading: "Modern websites & brand systems for SMEs — AGR Multimedia, Geislingen",
     subheading: "Modern and fast websites for small businesses",
     primaryCta: "Get a Free Consultation",
     secondaryCta: "View Projects",
@@ -89,7 +89,7 @@ const en: PremiumTranslations = {
 
 const de: PremiumTranslations = {
   hero: {
-    heading: "AGR Multimedia — Webdesign & Grafik, Geislingen an der Steige",
+    heading: "Moderne Websites und Branding für KMU — AGR Multimedia, Geislingen",
     subheading: "Moderne und schnelle Websites fur kleine Unternehmen",
     primaryCta: "Kostenlose Beratung anfordern",
     secondaryCta: "Projekte ansehen",
@@ -141,7 +141,7 @@ const de: PremiumTranslations = {
 
 const sr: PremiumTranslations = {
   hero: {
-    heading: "AGR Multimedia — Web dizajn i grafika, Geislingen an der Steige",
+    heading: "Moderne web stranice i dosledan brend za mala preduzeća — AGR Multimedia",
     subheading: "Moderne i brze web stranice koje donose nove klijente",
     primaryCta: "Zatražite besplatnu konsultaciju",
     secondaryCta: "Pogledajte projekte",
@@ -193,7 +193,7 @@ const sr: PremiumTranslations = {
 
 const it: PremiumTranslations = {
   hero: {
-    heading: "AGR Multimedia — Web design e grafica, Geislingen an der Steige",
+    heading: "Siti web e identità visiva per PMI — AGR Multimedia, Geislingen",
     subheading: "Siti web moderni e veloci per piccole imprese",
     primaryCta: "Richiedi una consulenza gratuita",
     secondaryCta: "Vedi progetti",
@@ -245,7 +245,7 @@ const it: PremiumTranslations = {
 
 const al: PremiumTranslations = {
   hero: {
-    heading: "AGR Multimedia — Web dizajn dhe grafikë, Geislingen an der Steige",
+    heading: "Faqe moderne dhe sistem vizual për SME — AGR Multimedia, Geislingen",
     subheading: "Faqe moderne dhe te shpejta per biznese te vogla",
     primaryCta: "Kërko konsultë falas",
     secondaryCta: "Shiko projektet",

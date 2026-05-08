@@ -51,6 +51,12 @@ type SectionCopy = {
   tocLabels: string[];
   faqTitle: string;
   faq: { q: string; a: string }[];
+  /** Short answer-style lead for AEO (directly under H2). */
+  answerLead: string;
+  expertQuote: string;
+  quoteAttribution: string;
+  collaborationStepsTitle: string;
+  collaborationSteps: string[];
 };
 
 const SECTION_COPY: Record<SectionLangKey, SectionCopy> = {
@@ -78,13 +84,13 @@ const SECTION_COPY: Record<SectionLangKey, SectionCopy> = {
     tocNavAria: "Sadržaj na ovoj stranici",
     tocTitle: "Na ovoj stranici",
     tocLabels: [
-      "Web dizajn — šta dobijate",
-      "Grafički dizajn i brend",
-      "AI u produkciji",
+      "Šta dobijate u web dizajnu?",
+      "Brend: štampa i ekran",
+      "Gde AI pomaže, gde ne",
       "Prednosti i mane AI",
-      "Hibrid vs šablon",
-      "Zašto AGR Multimedia",
-      "Kako početi projekat",
+      "Zašto hibrid model?",
+      "Zašto baš mi?",
+      "Kako početi projekat?",
     ],
     faqTitle: "Česta pitanja",
     faq: [
@@ -100,6 +106,19 @@ const SECTION_COPY: Record<SectionLangKey, SectionCopy> = {
         q: "Šta tačno ulazi u „web dizajn” kod vas?",
         a: "Zavisi od briefa: informaciona arhitektura, vizuelni koncept, razvoj, osnovni tehnički SEO, performanse i mobilni prikaz — sve dokumentovano pre objave. Za širi obim vide stranicu Usluge i portfolio.",
       },
+    ],
+    answerLead:
+      "Ukratko: pravimo brze, SEO-prijateljske stranice i dosledan brend; AI koristimo samo gde skraćuje vreme — uz ljudsku kontrolu pre objave.",
+    expertQuote:
+      "„Merljivost mora da bude dogovorena pre dizajna — inače lep izgled ostaje samo estetika bez odgovornosti za rezultat.”",
+    quoteAttribution: "Agron Osmani · CEO, AGR Multimedia · Geislingen an der Steige",
+    collaborationStepsTitle: "Pet koraka od prvog upita do objave",
+    collaborationSteps: [
+      "Upit ili konsultacija — ciljevi, budžet i rokovi u jednoj poruci.",
+      "Briefing i struktura stranica (informaciona arhitektura, stubovi poruka).",
+      "Dizajn i razvoj u iteracijama — vaš feedback pre svake faze.",
+      "Testiranje performansi, mobilnog prikaza i formi pre javnog puštanja.",
+      "Objava, osnovno praćenje i dogovor o sledećim koracima (marketing, sadržaj, širenje).",
     ],
   },
   en: {
@@ -149,6 +168,19 @@ const SECTION_COPY: Record<SectionLangKey, SectionCopy> = {
         a: "Depends on the brief: IA, UI design, development, baseline technical SEO, performance, and mobile QA — documented before launch. See Services and Portfolio for scope examples.",
       },
     ],
+    answerLead:
+      "In short: we ship fast, SEO-aware websites and consistent brand systems — using AI only where it saves time, with human review before anything goes live.",
+    expertQuote:
+      "“If we cannot state what success looks like before design starts, we only ship decoration — not outcomes.”",
+    quoteAttribution: "Agron Osmani · CEO, AGR Multimedia · Geislingen an der Steige",
+    collaborationStepsTitle: "Five steps from first enquiry to launch",
+    collaborationSteps: [
+      "Enquiry or consultation — goals, budget, and timeline in one thread.",
+      "Briefing and page structure (information architecture, core messages).",
+      "Design and development in iterations — your feedback gates each phase.",
+      "Performance, mobile, and form QA before public launch.",
+      "Go-live, baseline checks, and next steps (marketing, content, expansion).",
+    ],
   },
   de: {
     eyebrow: "AGR Multimedia",
@@ -196,6 +228,19 @@ const SECTION_COPY: Record<SectionLangKey, SectionCopy> = {
         q: "Was gehört zu Webdesign?",
         a: "Je nach Briefing: IA, UI, Umsetzung, Basis-SEO, Performance und Mobile-QA — dokumentiert vor Livegang. Details unter Leistungen und Portfolio.",
       },
+    ],
+    answerLead:
+      "Kurz: Wir liefern schnelle, SEO-fähige Websites und konsistente Markensysteme — KI nur dort, wo sie Zeit spart, mit menschlicher Freigabe vor Go-live.",
+    expertQuote:
+      "„Ohne klare Erfolgskriterien vor dem Design bleibt nur Dekoration — keine messbare Wirkung.“",
+    quoteAttribution: "Agron Osmani · CEO, AGR Multimedia · Geislingen an der Steige",
+    collaborationStepsTitle: "Fünf Schritte vom ersten Kontakt bis zum Launch",
+    collaborationSteps: [
+      "Anfrage oder Erstgespräch — Ziele, Budget und Timing.",
+      "Briefing und Seitenstruktur (Informationsarchitektur, Kernbotschaften).",
+      "Design und Umsetzung in Iterationen — Ihr Feedback steuert die Phasen.",
+      "Performance-, Mobile- und Formulartests vor dem Livegang.",
+      "Launch, Basis-Monitoring und nächste Schritte (Marketing, Content, Ausbau).",
     ],
   },
   it: {
@@ -245,6 +290,19 @@ const SECTION_COPY: Record<SectionLangKey, SectionCopy> = {
         a: "Dipende dal brief: IA, UI, sviluppo, SEO tecnico di base, performance e QA mobile — documentato prima del go-live. Vedi Servizi e Portfolio.",
       },
     ],
+    answerLead:
+      "In sintesi: siti veloci e SEO-ready, identità coerente — l’AI solo dove accelera, sempre con revisione umana prima della pubblicazione.",
+    expertQuote:
+      "“Senza definire il successo prima della progettazione, il design resta solo estetica — non risultati.”",
+    quoteAttribution: "Agron Osmani · CEO, AGR Multimedia · Geislingen an der Steige",
+    collaborationStepsTitle: "Cinque passaggi dalla prima richiesta al lancio",
+    collaborationSteps: [
+      "Richiesta o call — obiettivi, budget e tempistiche.",
+      "Briefing e struttura delle pagine (architettura dell’informazione, messaggi chiave).",
+      "Design e sviluppo in iterazioni — il tuo feedback tra una fase e l’altra.",
+      "Test su performance, mobile e moduli prima del go-live.",
+      "Pubblicazione, controlli base e prossimi passi (marketing, contenuti, scalabilità).",
+    ],
   },
   al: {
     eyebrow: "AGR Multimedia",
@@ -293,6 +351,19 @@ const SECTION_COPY: Record<SectionLangKey, SectionCopy> = {
         a: "Var nga brief-i: IA, UI, zhvillim, SEO bazë, performanca dhe QA mobile — dokumentuar para publikimit. Shiko Shërbimet dhe Portfolio.",
       },
     ],
+    answerLead:
+      "Shkurt: faqe të shpejta miqësore me SEO dhe sistem vizual konsistent — AI vetëm ku kursen kohë, me kontroll njerëzor para publikimit.",
+    expertQuote:
+      "„Pa matën e suksesit përpara dizajnit, mbetet vetëm estetikë — jo rezultate të matshme.“",
+    quoteAttribution: "Agron Osmani · CEO, AGR Multimedia · Geislingen an der Steige",
+    collaborationStepsTitle: "Pesë hapa nga pyetja e parë deri te publikimi",
+    collaborationSteps: [
+      "Pyetje ose konsultë — qëllime, buxhet dhe afate.",
+      "Briefing dhe struktura faqesh (arkitektura e informacionit, mesazhet kryesore).",
+      "Dizajn dhe zhvillim në iteracione — feedback-u juaj drejton fazat.",
+      "Teste performance, mobile dhe formularësh para publikimit.",
+      "Go-live, kontroll bazë dhe hapat e radhës (marketing, përmbajtje, zgjerim).",
+    ],
   },
 };
 
@@ -319,6 +390,9 @@ export default function HomeSeoSection() {
             <AuthorByline className="!text-white/95" />
           </div>
           <p className="mt-4 text-sm leading-relaxed text-white/70">{copy.subtitle}</p>
+          <p id="seo-answer-lead" className="mt-3 text-sm font-medium leading-relaxed text-white/90">
+            {copy.answerLead}
+          </p>
         </header>
 
         <aside
@@ -400,6 +474,25 @@ export default function HomeSeoSection() {
         </nav>
 
         <div className="prose-seo border-t border-white/10 pt-10">{bodyForLang(currentLanguage)}</div>
+
+        <blockquote
+          cite="https://www.linkedin.com/in/agron-osmani-228947266/"
+          className="my-12 border-l-4 border-blue-400/45 bg-white/[0.02] py-4 pl-5 pr-2 text-[0.9375rem] italic leading-relaxed text-white/85"
+        >
+          <p>{copy.expertQuote}</p>
+          <footer className="mt-3 text-xs not-italic text-white/55">{copy.quoteAttribution}</footer>
+        </blockquote>
+
+        <section className="border-t border-white/10 pt-10" aria-labelledby="seo-collab-steps-heading">
+          <h3 id="seo-collab-steps-heading" className="text-lg font-semibold text-white">
+            {copy.collaborationStepsTitle}
+          </h3>
+          <ol className="mt-4 list-decimal space-y-2 pl-5 text-sm leading-relaxed text-white/80 marker:text-blue-300/80">
+            {copy.collaborationSteps.map((step) => (
+              <li key={step}>{step}</li>
+            ))}
+          </ol>
+        </section>
 
         <section className="mt-12 border-t border-white/10 pt-10" aria-labelledby="seo-faq-heading">
           <h3 id="seo-faq-heading" className="text-lg font-semibold text-white">

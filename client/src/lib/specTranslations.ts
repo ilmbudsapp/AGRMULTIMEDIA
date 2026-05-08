@@ -171,8 +171,7 @@ const en: SpecTranslations = {
     availableIn: 'DE · EN · IT · SR · AL',
   },
   seo: {
-    title:
-      "AGR Multimedia — Web design, graphics & AI — Geislingen an der Steige",
+    title: "AGR Multimedia — Web Design & Graphics · Geislingen",
     description:
       "Web design, AI multimedia, graphic design & SEO for small businesses — studio in Geislingen an der Steige, Germany. Free consultation: agron6922@gmail.com",
   },
@@ -375,7 +374,7 @@ const de: SpecTranslations = {
     availableIn: 'DE · EN · IT · SR · AL',
   },
   seo: {
-    title: "AGR Multimedia — Webdesign, Grafik & KI — Geislingen an der Steige",
+    title: "AGR Multimedia — Webdesign & Grafik · Geislingen",
     description:
       "Webdesign, KI-Multimedia, Grafikdesign & SEO für Kleinunternehmen — Studio in Geislingen an der Steige. Kostenlose Beratung: agron6922@gmail.com",
   },
@@ -578,7 +577,7 @@ const it: SpecTranslations = {
     availableIn: 'DE · EN · IT · SR · AL',
   },
   seo: {
-    title: "AGR Multimedia — Web design, grafica e AI — Geislingen an der Steige",
+    title: "AGR Multimedia — Web design e grafica · Geislingen",
     description:
       "Web design, AI multimedia, grafica e SEO per piccole imprese — studio a Geislingen an der Steige, Germania. Consulenza gratuita: agron6922@gmail.com",
   },
@@ -984,7 +983,7 @@ const al: SpecTranslations = {
     availableIn: 'DE · EN · IT · SR · AL',
   },
   seo: {
-    title: "AGR Multimedia — Web dizajn, grafikë dhe AI — Geislingen an der Steige",
+    title: "AGR Multimedia — Web dizajn & grafikë · Geislingen",
     description:
       "Web design, AI multimedia, dizajn grafik dhe SEO për biznese të vogla — studio në Geislingen an der Steige, Gjermani. Konsultë falas: agron6922@gmail.com",
   },
