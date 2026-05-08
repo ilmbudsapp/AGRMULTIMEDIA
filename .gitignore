@@ -7,3 +7,6 @@ vite.config.ts.*
 .replit
 .local
 .env
+
+# Optional local QR / marketing file (not required for the site build)
+/agrmultimedia-qr.png
