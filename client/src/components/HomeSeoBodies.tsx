@@ -20,20 +20,25 @@ export function SeoTopicHeading({ id, children }: { id: string; children: React.
   );
 }
 
-/** ~520+ words — detailed services + multi-perspective for GEO / trust signals */
+/** ~520+ words — Grade-A polish: short sentences, transitions, first person, multi-perspective */
 export function SrBody() {
   return (
     <>
+      <p className="mb-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Mi vodimo <strong className="text-white">AGR Multimedia</strong> iz Geislingen an der Steige (Baden-Württemberg).
+        Naš fokus su mala preduzeća u EU koje žele jasniji nastup na webu.
+      </p>
+      <p className="mb-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Dok neki dizajneri preferiraju isključivo tradicionalne metode, mi u AGR Multimedia smatramo da je simbioza AI-a i
+        ljudske kreativnosti superiornija jer donosi brzinu iteracija bez gubitka odgovornosti prema brendu. Međutim,
+        poštujemo i čiste ručne procese kada je to jedini etički ili pravni izbor za vas. Pored toga, ja lično nadgledam
+        ključne odluke pre objave — naša misija je merljiv rezultat, ne samo lep ekran.
+      </p>
       <p className="mb-6 text-[0.9375rem] leading-relaxed text-white/80">
-        <strong className="text-white">AGR Multimedia</strong> je digitalni studio iz Geislingen an der Steige
-        (Baden-Württemberg, Nemačka) koji pomaže malim preduzećima da budu jasniji na tržištu — od prvog utiska na sajtu do
-        materijala koji nosite u štampi i na društvenim mrežama. Ovaj tekst objašnjava kako radimo{" "}
-        <L href="/web-design">web dizajn</L>, <L href="/graphic-design">grafički dizajn</L> i{" "}
-        <L href="/ai-content-creation">AI podršku</L>, bez „magijskih” formula: cilj su merljivi rezultati (više upita,
-        bolje razumevanje ponude, konzistentan brend). Za pregled celokupnih linija usluga pogledajte{" "}
-        <L href="/services">stranicu usluga</L>; tim i filozofija su na <L href="/about">O nama</L>, a obradu ličnih
-        podataka na <L href="/privacy-policy">Politici privatnosti</L>. Za smernice o pristupačnosti koristimo i javne
-        resurse kao što je{" "}
+        Ovaj tekst objašnjava kako radimo <L href="/web-design">web dizajn</L>, <L href="/graphic-design">grafički dizajn</L>{" "}
+        i <L href="/ai-content-creation">AI podršku</L>. Za ceo spektar usluga idite na <L href="/services">stranicu usluga</L>.
+        Tim opisujemo na <L href="/about">O nama</L>. Za lične podatke važi <L href="/privacy-policy">Politika privatnosti</L>.
+        Za pristupačnost koristimo{" "}
         <a
           href="https://www.w3.org/WAI/WCAG21/quickref/"
           target="_blank"
@@ -49,73 +54,70 @@ export function SrBody() {
         Šta konkretno dobijate kada radimo web dizajn zajedno?
       </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        Ne radimo „sajt radi sajta”. Počinjemo od cilja: ko je idealan posetilac, šta treba da uradi na stranici (poziv,
-        forma, rezervacija), i koja poruka se mora pročitati u prvih deset sekundi. Informaciona arhitektura (koje stranice
-        postoje i kako su povezane) piše se pre vizuelnog koncepta. U implementaciji vodimo računa o brzini učitavanja,
-        čitljivosti na mobilnom telefonu i tehničkim osnovama za SEO — semantički naslovi, smisleni linkovi, tekst koji
-        ljudi stvarno žele da pročitaju. Kada je potrebno, spajamo sajt sa kampanjama i sadržajem koji opisujemo u delu o{" "}
-        <L href="/digital-marketing">digitalnom marketingu</L>. Reference i živi primeri nalaze se u{" "}
+        Mi ne radimo „sajt radi sajta”. Prvo pitamo ko je idealan posetilac i šta treba da uradi. Na primer, poziv, forma
+        ili rezervacija moraju biti jasni u prvih deset sekundi. Zato informacionu arhitekturu pišemo pre vizuelnog koncepta.
+      </p>
+      <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
+        U implementaciji čuvamo brzinu učitavanja i mobilnu čitljivost. Stoga dodajemo semantičke naslove i smislene linkove.
+        Kampanje povezujemo sa delom o <L href="/digital-marketing">digitalnom marketingu</L>. Reference su u{" "}
         <L href="/portfolio">portfoliju</L>.
       </p>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        Sa druge strane, gotovi šabloni ili brzi page-builder-i mogu smanjiti početni trošak i brzo pokazati demo stranicu.
-        Međutim, kada vam treba jasan diferenc od konkurencije i ista pravila brenda na sajtu, u štampi i u oglasima,
-        potrebna je struktura i dizajn odluke — zato biramo šta ima smisla automatizovati, a šta ručno kontrolisati pre
-        objave.
+        Sa druge strane, šabloni i page-builder-i mogu smanjiti početni trošak. Međutim, kada vam treba diferenc i isti brend
+        na sajtu i u štampi, treba nam struktura — biramo šta automatizujemo, a šta ručno potvrđujemo.
       </p>
 
       <SeoTopicHeading id="seo-topic-graphic">
         Kako izgleda grafički dizajn koji ostaje dosledan u štampi i na ekranu?
       </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        Vizuelni identitet nije samo logo: to su pravila upotrebe boja i tipografije, odnos fotografije prema ilustraciji,
-        ton komunikacije na baneru i na vizitkarti. Za lokalne usluge često radimo flajere, menije, plakate i društvene
-        formate koji izgledaju profesionalno i u štampi i na ekranu. Priprema datoteka za štampu (bleed, CMYK kada je
-        potrebno), kao i digitalni izlazi za web i oglase, spadaju u isti sistem — da ne dobijete pet različitih „verzija”
-        brenda kroz kanale. Kada brend već postoji, možemo ga srediti i proširiti; kada počinjemo od nule, vodimo vas kroz
-        varijante koje su realne za vaš budžet i rokove.
+        Za nas brend nije samo logo. To su pravila boja, tipografije i fotografije. Mi pravimo flajere, menije i društvene
+        formate koji izgledaju jednako u štampi i na telefonu.
+      </p>
+      <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Priprema za štampu ide uz digitalne izlaske u jednom sistemu. Pored toga, izbegavate pet „verzija” brenda po kanalima.
+        Ako brend već postoji, mi ga doterivamo. Ako počinjemo od nule, vodimo vas kroz realne varijante za budžet i rok.
       </p>
 
       <SeoTopicHeading id="seo-topic-ai">
         Gde AI ubrzava produkciju, a gde je čovek neophodan?
       </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        AI koristimo kao alat za istraživanje varijanti, skicu copy-ja, razne vizuelne pravce i ponavljanje dosadnih
-        zadataka (formatiranje, varijante dimenzija, batch obrada). To skraćuje vreme i smanjuje cenu iteracija. Međutim,
-        odluke koje utiču na poverenje — konačna poruka, fotografija koja predstavlja vašu radionicu, ton koji ne zvuči
-        generički — uvek prolaze ljudsku reviziju. Klijent dobija objašnjenje šta je mašinski predlog, a šta ručno
-        doterano, kako biste znali šta objavljujete u svoje ime. Detaljnije o AI tokovima i šta ulazi u paket pročitajte na
-        stranici <L href="/ai-content-creation">AI sadržaj i produkcija</L>.
+        Mi koristimo AI za varijante, skicu teksta i dosadne zadatke poput dimenzija paketa. To skraćuje vreme. Međutim,
+        poruke koje grade poverenje uvek prolaze ljudsku reviziju.
+      </p>
+      <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Vi znate šta je mašinski predlog, a šta ručno doterano. Više o tokovima čitate na{" "}
+        <L href="/ai-content-creation">AI sadržaj i produkcija</L>. Na kraju, ja biram šta ide uživo.
       </p>
 
       <SeoTopicHeading id="seo-topic-ai-tradeoffs">
         Kakve su prednosti i mane AI u dizajnu — praktično gledano?
       </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        Prednosti: brža eksploracija ideja, više varijanti layouta u kraćem roku, lakše prilagođavanje više jezika,
-        ušteda pri ponovljenim formatima. Mane: bez smernica brenda lako završite na generičkom izgledu; tekst može zvučati
-        „glatko” ali prazan po smislu; vizuelni predlozi ponekad ignorišu zakonske ili tehničke ograničenja (pristupačnost,
-        kontrast, truth-in-advertising). Zato ne prodajemo „AI sajt u jednom kliku” kao gotovo rešenje — već kombinaciju
-        alata i iskustva, uz jasnu podelu odgovornosti i kontrolu kvaliteta pre objave.
+        Prednosti su brža ideja i više layout varijanti. Mane su generički izgled i „glatki” tekstovi bez dubine. Zato mi ne
+        prodajemo čarobni jedan klik.
+      </p>
+      <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Na primer, kontrast i pristupačnost moraju ostati ispravni. Stoga kombinujemo alate i iskustvo. Pre objave radimo
+        kontrolu kvaliteta zajedno sa vama.
       </p>
 
       <SeoTopicHeading id="seo-topic-hybrid">
         Zašto je hibrid bolji od čistog šablona ili „samo AI bez dizajn tima”?
       </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        Gotovi šabloni su jeftini na početku, ali često koštaju na konverzijama: isti izgled kao konkurencija, teško
-        objašnjavanje jedinstvene ponude, ograničenja kada treba da porastete. Čist AI pristup bez dizajnerskog okvira
-        može dati brzu sliku, ali retko nosi duboku konsistentnost brenda i pravnu/UX sigurnost. Mi radimo hibrid:
-        dizajn sistem + iteracije sa jasnim feedbackom + AI gde pomaže. Tako dobijate i brzinu i odgovornost — zna se ko
-        projektuje koheziju, a ko je odgovoran za finalni kvalitet pre nego što korisnik klikne „Pošalji” na{" "}
-        <L href="/contact">kontakt stranici</L>.
+        Šabloni koštaju manje na početku. Ali često slabije konvertuju jer izgledaju kao konkurencija. Čist AI bez vođenja
+        riskira haos u brendu.
+      </p>
+      <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Mi radimo hibrid: dizajn sistem, feedback i AI gde pomaže. Tako dobijate brzinu i odgovornost do klika „Pošalji” na{" "}
+        <L href="/contact">kontaktu</L>.
       </p>
 
       <p className="mt-8 text-[0.9375rem] leading-relaxed text-white/80">
-        Za web projekat pravimo jasnu mapu stranica i stubove poruka pre vizuelnog dizajna, da marketing i vlasnik firme
-        vide isti „film”. Za grafiku definišemo export pravila (štampa vs digital) i kako se isti element ponavlja na
-        Instagramu i na flajeru. AI izlazi dobijaju verziju i napomenu šta je odobreno za objavu. Pravne informacije:
-        <L href="/privacy-policy">Politika privatnosti</L>, <L href="/impresum">Impressum</L>, i uvod u tim na{" "}
+        Za web pravimo mapu stranica pre UI-ja. Za grafiku definišemo export pravila. AI izlazi dobijaju oznaku verzije.
+        Pravno: <L href="/privacy-policy">Politika privatnosti</L>, <L href="/impresum">Impressum</L>,{" "}
         <L href="/about">O nama</L>.
       </p>
 
@@ -123,19 +125,23 @@ export function SrBody() {
         Zašto baš AGR Multimedia za web i grafiku?
       </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        Jedan tim pokriva web, grafiku i produkciju sadržaja; jezik saradnje može biti srpski, engleski, nemački,
-        italijanski ili albanski — što smanjuje prevodilačke gubitke u briefingu. Držimo se rokova i dokumentujemo šta je
-        u dogovoru, kako biste znali šta dobijate u svakoj fazi.
+        Mi pokrivamo web, grafiku i sadržaj u jednom timu. Radimo na srpskom, engleskom, nemačkom, italijanskom i albanskom.
+        Zato briefing ostaje čist i bez gubitaka u prevodu.
+      </p>
+      <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Rokove držimo u pisanom obimu. Mi dokumentujemo milestone-e da znate šta sledi u svakoj fazi saradnje.
       </p>
 
       <SeoTopicHeading id="seo-topic-kickoff">
         Kako izgleda start projekta i šta doneti na prvi poziv?
       </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        Nakon upita (obično odgovor u roku od 24 sata) zakazujemo kratak poziv ili pisani briefing: ciljevi, reference koje
-        volite, materijale koje već imate. Za složenije tražimo primer konkurentnih sajtova koji vam se dopadaju —
-        ne radi kopiranja, već da razumemo nivo očekivanja. Blog objave kao što su one u <L href="/blog">blog sekciji</L>{" "}
-        mogu vam pomoći da unapred razumete teme oko konverzije i video marketinga pre nego što krenemo u izradu.
+        Nakon upita mi obično odgovorimo za 24 sata. Zatim zakazujemo kratak poziv ili pismo. Molimo vas da ponesete ciljeve,
+        reference i materijale koje već imate.
+      </p>
+      <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Za složenije projekte tražimo primere sajtova koji vam se dopadaju — ne radi kopiranja, već da razumemo očekivanja.
+        Blog na <L href="/blog">blog stranici</L> pomaže oko konverzije i video tema pre nego što krenemo u izradu.
       </p>
     </>
   );
@@ -144,14 +150,21 @@ export function SrBody() {
 export function EnBody() {
   return (
     <>
+      <p className="mb-4 text-[0.9375rem] leading-relaxed text-white/80">
+        We run <strong className="text-white">AGR Multimedia</strong> from Geislingen an der Steige. Our focus is EU small
+        businesses that want clearer positioning online.
+      </p>
+      <p className="mb-4 text-[0.9375rem] leading-relaxed text-white/80">
+        While some designers insist on purely traditional craft, we believe the symbiosis of AI and human creativity is
+        stronger because it speeds iteration without losing brand accountability. However, we still honour fully manual
+        workflows when that is the right ethical choice for you. In addition, I personally review launch decisions — our
+        mission is measurable outcomes, not only pretty pixels.
+      </p>
       <p className="mb-6 text-[0.9375rem] leading-relaxed text-white/80">
-        <strong className="text-white">AGR Multimedia</strong> is a Germany-based digital studio helping small businesses
-        become clearer in the market — from first impressions on the web to print and social assets. This guide explains
-        how we deliver <L href="/web-design">web design</L>, <L href="/graphic-design">graphic design</L>, and{" "}
-        <L href="/ai-content-creation">AI-assisted workflows</L> without hype: the goal is measurable outcomes (more
-        enquiries, clearer offers, consistent branding). See the full service lines on <L href="/services">services</L>,
-        our background on <L href="/about">about</L>, and how we handle personal data in the{" "}
-        <L href="/privacy-policy">privacy policy</L>. For accessibility baselines we reference{" "}
+        This guide explains how we deliver <L href="/web-design">web design</L>, <L href="/graphic-design">graphic design</L>,
+        and <L href="/ai-content-creation">AI-assisted workflows</L>. Services live on <L href="/services">services</L>.
+        Background sits on <L href="/about">about</L>. Data handling is in the <L href="/privacy-policy">privacy policy</L>.
+        For accessibility we cite{" "}
         <a
           href="https://www.w3.org/WAI/WCAG21/quickref/"
           target="_blank"
@@ -167,80 +180,93 @@ export function EnBody() {
         What do you actually get from our web design collaboration?
       </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        We do not ship “a website for the sake of it”. We start from goals: who should visit, what they should do (call,
-        form, booking), and which message must land in the first seconds. Information architecture is defined before
-        visual design. Implementation focuses on performance, mobile readability, and SEO foundations — semantic headings,
-        meaningful internal links, and copy humans want to read. When needed, we align the site with campaigns described
-        under <L href="/digital-marketing">digital marketing</L>. Live examples sit in the <L href="/portfolio">portfolio</L>.
+        We do not ship vanity pages. First we ask who visits and what they must do. For example, calls, forms, or bookings
+        should feel obvious within seconds. Therefore we define information architecture before visual design.
       </p>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        On the other hand, templates and DIY builders can reduce upfront cost and ship a quick demo. However, when you
-        need differentiation and one coherent brand across web, print, and ads, you need structure and accountable design
-        decisions — therefore we choose what to automate and what must stay human-reviewed.
+        In build-out we protect performance and mobile readability. So we add semantic headings and meaningful links. We tie
+        campaigns to <L href="/digital-marketing">digital marketing</L>. Proof sits in the <L href="/portfolio">portfolio</L>.
+      </p>
+      <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
+        On the other hand, templates cut startup cost. However, when you need differentiation, we require structure. We pick
+        what we automate and what stays human-reviewed.
       </p>
 
       <SeoTopicHeading id="seo-topic-graphic">
         How do we keep brand systems consistent for print and digital?
       </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        Visual identity is more than a logo: colour and type rules, photography vs illustration balance, and tone across
-        banners and business cards. For local businesses we produce flyers, menus, posters, and social formats that stay
-        consistent in print and on screen. Print-ready files (bleed, CMYK when required) and digital exports for web and
-        ads live inside one system — so you do not end up with five accidental “brand versions” across channels.
+        Brand is more than a logo for us. It is colour, type, and photography rules. We ship flyers, menus, and social
+        templates that match print and screen.
+      </p>
+      <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Print-ready files and web exports share one system. In addition, you avoid five accidental brand versions. If your
+        brand exists, we refine it. If we start fresh, we guide realistic options for budget and time.
       </p>
 
       <SeoTopicHeading id="seo-topic-ai">
         Where does AI accelerate work — and where is human judgement essential?
       </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        We use AI to explore variants, draft copy directions, visual routes, and repetitive production tasks (resizing,
-        batch formatting). That shortens timelines and iteration cost. Trust-critical decisions — final messaging,
-        photography that represents your workshop, tone that does not sound generic — always pass human review. Read more
-        on the <L href="/ai-content-creation">AI content</L> page.
+        We use AI for variants, draft copy, and boring resizing tasks. That saves days. However, trust-led messaging always
+        passes human review.
+      </p>
+      <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
+        You always know what is machine-suggested versus hand-finished. Read more on <L href="/ai-content-creation">AI content</L>.
+        Finally, I decide what goes live when stakes are high.
       </p>
 
       <SeoTopicHeading id="seo-topic-ai-tradeoffs">
         What are the pros and cons of AI in design — honestly?
       </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        Pros: faster exploration, more layout variants, easier multilingual drafts, savings on repeated formats. Cons:
-        without brand guardrails you risk generic aesthetics; copy may sound fluent but hollow; proposals may ignore legal
-        or accessibility constraints. We therefore do not sell “one-click AI websites” as finished products — we combine
-        tooling with experience and QA before anything goes live.
+        Pros include faster exploration and more layout ideas. Cons include generic visuals and hollow copy. Therefore we do
+        not sell magic one-click sites.
+      </p>
+      <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
+        For instance, contrast and accessibility law still matter. So we pair tools with experience. Before launch we run QA
+        together with you.
       </p>
 
       <SeoTopicHeading id="seo-topic-hybrid">
         Why is a hybrid approach stronger than templates-only or AI-only workflows?
       </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        Templates are cheap upfront but often cost conversions: same look as competitors, weak differentiation, limits when
-        you scale. AI-only flows without design leadership can move fast yet miss brand coherence and compliance. Our
-        hybrid model pairs a design system with structured feedback loops and AI where it truly helps — so you keep speed
-        and accountability, including before users hit “Submit” on the <L href="/contact">contact page</L>.
+        Templates cost less upfront. Yet they often hurt conversions because everyone looks the same. Pure AI without
+        creative leadership risks brand drift.
+      </p>
+      <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Our hybrid pairs a design system, feedback loops, and AI where it truly helps. Thus you keep speed and accountability
+        up to the <L href="/contact">contact page</L>.
       </p>
 
       <p className="mt-8 text-[0.9375rem] leading-relaxed text-white/80">
-        For websites we align page maps and core messages before UI design so stakeholders share one roadmap. For brand
-        work we document export rules for print vs social so colours stay consistent. AI outputs are labelled by version and
-        approval status. Legal transparency: <L href="/privacy-policy">privacy policy</L>,{" "}
-        <L href="/impresum">legal notice</L>, and background on <L href="/about">about</L>.
+        For websites we align page maps before UI work. For brand work we document export rules. AI outputs carry version
+        labels. Legal paths: <L href="/privacy-policy">privacy policy</L>, <L href="/impresum">legal notice</L>,{" "}
+        <L href="/about">about</L>.
       </p>
 
       <SeoTopicHeading id="seo-topic-why">
         Why choose AGR Multimedia for web and brand work?
       </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        One team spans web, graphics, and content production; we work in Serbian, English, German, Italian, and Albanian
-        — reducing briefing noise. We document scope and milestones so expectations stay transparent.
+        One team covers web, graphics, and content for us. We work in Serbian, English, German, Italian, and Albanian. That
+        keeps briefings precise.
+      </p>
+      <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
+        We document scope and milestones. Therefore you always know the next step in our collaboration.
       </p>
 
       <SeoTopicHeading id="seo-topic-kickoff">
         How do projects start and what should you prepare?
       </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        After your enquiry (typically answered within 24 hours) we schedule a short call or written briefing: goals,
-        references you like, assets you already own. Articles in the <L href="/blog">blog</L> help you understand
-        conversion and video topics before production kicks in.
+        After your enquiry we usually reply within 24 hours. Next we book a short call or written brief. Please bring goals,
+        references, and assets you already own.
+      </p>
+      <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
+        For complex builds we may ask for example sites you admire — not to copy, but to learn expectations. Meanwhile our{" "}
+        <L href="/blog">blog</L> explains conversion and video topics before production starts.
       </p>
     </>
   );
@@ -249,87 +275,106 @@ export function EnBody() {
 export function DeBody() {
   return (
     <>
+      <p className="mb-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Wir führen <strong className="text-white">AGR Multimedia</strong> in Geislingen an der Steige. Unser Schwerpunkt
+        liegt auf kleinen Unternehmen in der EU.
+      </p>
+      <p className="mb-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Während manche Designer nur klassische Methoden nutzen, halten wir die Symbiose aus KI und menschlicher Kreativität
+        für stärker. Sie beschleunigt Iterationen ohne Markenverantwortung zu verlieren. Dennoch respektieren wir rein manuelle
+        Prozesse, wenn das für Sie richtig ist. Außerdem prüfe ich persönlich kritische Launch-Entscheidungen — unsere Mission
+        sind messbare Ergebnisse.
+      </p>
       <p className="mb-6 text-[0.9375rem] leading-relaxed text-white/80">
-        <strong className="text-white">AGR Multimedia</strong> ist ein Digitalstudio in Geislingen an der Steige und
-        unterstützt kleine Unternehmen bei klarer Positionierung — von der Website bis zu Print- und Social-Assets. Hier
-        beschreiben wir <L href="/web-design">Webdesign</L>, <L href="/graphic-design">Grafik & Branding</L> und{" "}
-        <L href="/ai-content-creation">KI-gestützte Abläufe</L> realistisch. Gesamtüberblick:{" "}
-        <L href="/services">Leistungen</L>, Team: <L href="/about">Über uns</L>, Datenschutz:{" "}
-        <L href="/privacy-policy">Privacy Policy</L>.
+        Hier beschreiben wir <L href="/web-design">Webdesign</L>, <L href="/graphic-design">Grafik und Branding</L> und{" "}
+        <L href="/ai-content-creation">KI-Abläufe</L>. Überblick unter <L href="/services">Leistungen</L>. Teaminfos unter{" "}
+        <L href="/about">Über uns</L>. Datenschutz in der <L href="/privacy-policy">Privacy Policy</L>.
       </p>
 
       <SeoTopicHeading id="seo-topic-web">
         Was liefert Webdesign bei uns konkret?
       </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        Wir starten mit Zielen und Informationsarchitektur, dann UX und UI. Performance, Mobile-First und technische SEO-Basics
-        gehören dazu. Kampagnen flankieren wir über <L href="/digital-marketing">Digital Marketing</L>. Beispiele im{" "}
-        <L href="/portfolio">Portfolio</L>.
+        Wir starten ohne Vanity-Pages. Zuerst klären wir Ziele und Informationsarchitektur. Dann folgen UX und UI.
       </p>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        Andererseits können Templates und Baukästen die Startkosten senken und schnell eine Demo liefern. Wenn Sie sich jedoch
-        von Wettbewerbern abheben und dieselben Markenregeln auf Website, Print und Ads brauchen, brauchen Sie klare
-        Entscheidungen — deshalb trennen wir sinnvoll Automation und menschliche Freigabe.
+        Performance und Mobile-First gehören dazu. Zudem pflegen wir technische SEO-Basics. Kampagnen binden wir über{" "}
+        <L href="/digital-marketing">Digital Marketing</L> ein. Beispiele liegen im <L href="/portfolio">Portfolio</L>.
+      </p>
+      <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Andererseits senken Templates die Startkosten. Wenn Sie sich jedoch differenzieren müssen, brauchen wir klare Regeln.
+        Daher trennen wir Automation und Freigabe bewusst.
       </p>
 
       <SeoTopicHeading id="seo-topic-graphic">
         Wie bleiben Grafik und Branding zwischen Print und Digital konsistent?
       </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        Identität bedeutet Farben, Typografie, Bildsprache und Einheit zwischen Flyer, Menükarte und Social Posts.
-        Druckdaten und Web-Exporte folgen denselben Regeln — weniger „Versions-Chaos“ über Kanäle hinweg.
+        Identität ist mehr als ein Logo. Wir definieren Farben, Typografie und Bildsprache. Flyer und Social-Posts wirken so
+        zusammen.
+      </p>
+      <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Druckdaten und Web-Exporte folgen einem System. Dadurch vermeiden wir Versions-Chaos über Kanäle hinweg.
       </p>
 
       <SeoTopicHeading id="seo-topic-ai">
         Wo beschleunigt KI den Prozess — und wo bleibt der Mensch unverzichtbar?
       </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        KI hilft bei Varianten, Textentwürfen und wiederholenden Produktionsschritten. Finale Botschaften, Markenkonformität
-        und Verantwortung vor Livegang bleiben beim Team — Details auf der Seite <L href="/ai-content-creation">KI-Inhalte</L>.
+        KI hilft bei Varianten und wiederholenden Schritten. Das spart Zeit. Dennoch bleiben Vertrauensbotschaften beim Team.
+      </p>
+      <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Mehr lesen Sie bei <L href="/ai-content-creation">KI-Inhalten</L>. Am Ende entscheide ich mit Ihnen, was live geht.
       </p>
 
       <SeoTopicHeading id="seo-topic-ai-tradeoffs">
         Welche Vor- und Nachteile hat KI im Design — realistisch betrachtet?
       </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        Vorteile: Geschwindigkeit, mehr Varianten, Skalierung. Risiken: Generischer Look, inhaltsleere Texte,
-        Compliance-Themen (Barrierefreiheit, Werbeaussagen). Wir kombinieren KI mit QA und Markenführung statt
-        „Ein-Klick-Wunder“ zu verkaufen.
+        Vorteile sind Tempo und Variantenreichtum. Risiken sind generischer Look und leere Texte. Deshalb verkaufen wir kein
+        Ein-Klick-Wunder.
+      </p>
+      <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Zum Beispiel gelten Barrierefreiheit und Werbeaussagen weiter. Daher kombinieren wir KI mit QA vor dem Livegang.
       </p>
 
       <SeoTopicHeading id="seo-topic-hybrid">
         Warum Hybrid schlägt „nur Vorlage“ oder „nur KI ohne Lead“?
       </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        Templates sparen kurzfristig Kosten, kosten aber oft Conversion. Reine KI ohne Leitplanken birgt Markenbrüche. Unser
-        Hybridmodell verbindet Systemdesign, Feedback-Schleifen und KI dort, wo sie Mehrwert liefert — bis zum Absenden auf
-        der <L href="/contact">Kontaktseite</L>.
+        Vorlagen sind billig am Start. Sie kosten aber oft Conversion. Reine KI ohne Lead riskiert Markenbrüche.
+      </p>
+      <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Unser Hybrid verbindet Systemdesign, Feedback und KI mit Mehrwert. So bleibt Verantwortung bis zur{" "}
+        <L href="/contact">Kontaktseite</L> klar.
       </p>
 
       <p className="mt-8 text-[0.9375rem] leading-relaxed text-white/80">
-        Für Webprojekte dokumentieren wir wireframes oder strukturierte Seitenlisten, damit Marketing und Geschäftsführung
-        dieselbe Erwartung teilen. Beim Grafikteil legen wir Styleguides und Exportregeln fest — etwa Social-Snippets im
-        gleichen Raster wie Druckunterlagen. KI-gestützte Varianten exportieren wir mit Versionsnamen und kurzen
-        Freigabehinweisen, damit nachvollziehbar bleibt, welche Datei live gehen darf. Wenn Sie bereits eine Agentur
-        haben, können wir als Spezialist für Umsetzung und Produktion ergänzen; wenn Sie ein kompaktes Studio suchen,
-        liefern wir End-to-end von der ersten Skizze bis zur Übergabe der Assets. Rechtliche Transparenz finden Sie in der{" "}
-        <L href="/privacy-policy">Datenschutzerklärung</L> und im <L href="/impresum">Impressum</L>.
+        Für Web dokumentieren wir Seitenlisten vor dem UI. Für Grafik legen wir Exportregeln fest. KI-Dateien erhalten
+        Versionsnamen. Rechtliches: <L href="/privacy-policy">Datenschutzerklärung</L>, <L href="/impresum">Impressum</L>.
       </p>
 
       <SeoTopicHeading id="seo-topic-why">
         Warum AGR Multimedia für Web und Grafik?
       </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        Ein Team für Web, Grafik und Content; Arbeitssprachen Serbisch, Englisch, Deutsch, Italienisch, Albanisch. Klare
-        Scope-Dokumentation und Terminorientierung.
+        Ein Team deckt Web, Grafik und Content ab. Wir sprechen Serbisch, Englisch, Deutsch, Italienisch und Albanisch. Dadurch
+        bleibt das Briefing präzise.
+      </p>
+      <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Wir dokumentieren Scope und Meilensteine. Folglich wissen Sie immer, was als Nächstes kommt.
       </p>
 
       <SeoTopicHeading id="seo-topic-kickoff">
         Wie startet ein Projekt — und was sollten Sie vorbereiten?
       </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        Nach Ihrer Anfrage (meist Antwort innerhalb von 24 Stunden) klären wir Ziele und Referenzen. Im{" "}
-        <L href="/blog">Blog</L> finden Sie vertiefende Artikel zu Conversion und Video.
+        Nach Ihrer Anfrage antworten wir meist in 24 Stunden. Danach folgt ein kurzes Gespräch oder Briefing. Bitte bringen Sie
+        Ziele, Referenzen und bestehende Assets mit.
+      </p>
+      <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Für komplexe Projekte fragen wir nach Beispielseiten — nicht zum Kopieren, sondern zum Verständnis. Nebenbei hilft der{" "}
+        <L href="/blog">Blog</L> zu Conversion und Video.
       </p>
     </>
   );
@@ -338,82 +383,106 @@ export function DeBody() {
 export function ItBody() {
   return (
     <>
+      <p className="mb-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Noi gestiamo <strong className="text-white">AGR Multimedia</strong> a Geislingen an der Steige. Il nostro pubblico sono
+        PMI dell&apos;UE che vogliono chiarezza online.
+      </p>
+      <p className="mb-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Alcuni designer scelgono solo metodi tradizionali. Noi crediamo che la simbiosi tra intelligenza artificiale e
+        creatività umana sia più forte perché accelera le iterazioni senza perdere responsabilità sul brand. Tuttavia rispettiamo
+        anche processi completamente manuali quando serve. Inoltre supervisiono io le decisioni critiche prima del go-live —
+        la nostra missione sono risultati misurabili.
+      </p>
       <p className="mb-6 text-[0.9375rem] leading-relaxed text-white/80">
-        <strong className="text-white">AGR Multimedia</strong> è uno studio digitale con sede a Geislingen an der Steige.
-        Questa guida illustra <L href="/web-design">web design</L>, <L href="/graphic-design">grafica e branding</L> e{" "}
-        <L href="/ai-content-creation">flussi con AI</L> in modo trasparente. Servizi completi: <L href="/services">servizi</L>
-        ; chi siamo: <L href="/about">chi siamo</L>; privacy: <L href="/privacy-policy">privacy policy</L>.
+        Questa guida copre <L href="/web-design">web design</L>, <L href="/graphic-design">grafica e branding</L>,{" "}
+        <L href="/ai-content-creation">flussi AI</L>. Servizi su <L href="/services">servizi</L>. Team su{" "}
+        <L href="/about">chi siamo</L>. Privacy nella <L href="/privacy-policy">privacy policy</L>.
       </p>
 
       <SeoTopicHeading id="seo-topic-web">
         Cosa ottieni concretamente nel nostro web design?
       </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        Partiamo da metriche chiare e dalla struttura delle pagine prima della grafica. Prestazioni, mobile e basi SEO
-        tecnici sono inclusi. Collegamento alle campagne tramite <L href="/digital-marketing">digital marketing</L>. Casi in{" "}
-        <L href="/portfolio">portfolio</L>.
+        Non vendiamo pagine vuote. Prima definiamo metriche e architettura delle informazioni. Poi segue la grafica.
       </p>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        D&apos;altra parte, template e builder possono ridurre i costi iniziali e accelerare una demo. Tuttavia, quando ti serve
-        differenziazione e un solo sistema di marca tra web, stampa e annunci, servono decisioni responsabili — per questo
-        scegliamo cosa automatizzare e cosa revisionare a mano.
+        Prestazioni, mobile e SEO tecnico sono inclusi. In più colleghiamo le campagne tramite{" "}
+        <L href="/digital-marketing">digital marketing</L>. Casi nel <L href="/portfolio">portfolio</L>.
+      </p>
+      <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
+        D&apos;altra parte i template abbassano i costi iniziali. Però quando serve differenziazione servono regole chiare.
+        Perciò decidiamo cosa automatizzare e cosa revisionare a mano.
       </p>
 
       <SeoTopicHeading id="seo-topic-graphic">
         Come manteniamo coerenza tra stampa e digitale?
       </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        Costruiamo palette, tipografie e regole d&apos;uso così flyer, menu e social non divergono. File stampa e export
-        digitali seguono lo stesso sistema visivo.
+        Il brand non è solo logo. Costruiamo palette e tipografie coerenti. Flyer e social seguono le stesse regole.
+      </p>
+      <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
+        File stampa ed export digitali vivono nello stesso sistema. Così eviti versioni casuali tra i canali.
       </p>
 
       <SeoTopicHeading id="seo-topic-ai">
         Dove l&apos;AI accelera — e dove serve il giudizio umano?
       </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        L&apos;AI accelera varianti e attività ripetitive; messaggi finali, conformità al brand e revisione restano umane.
-        Approfondimenti su <L href="/ai-content-creation">contenuti AI</L>.
+        L&apos;AI accelera varianti e compiti ripetitivi. In questo modo risparmiamo giorni. Nonostante ciò i messaggi di
+        fiducia restano umani.
+      </p>
+      <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Dettagli su <L href="/ai-content-creation">contenuti AI</L>. Infine decidiamo insieme cosa pubblicare.
       </p>
 
       <SeoTopicHeading id="seo-topic-ai-tradeoffs">
         Quali sono pro e contro dell&apos;AI nel design — senza slogan?
       </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        Pro: velocità e scala. Contro: genericità, testi vuoti, rischi di accessibilità. Offriamo un approccio ibrido con QA,
-        non promesse miracolistiche.
+        Pro: velocità e più varianti. Contro: genericità e testi vuoti. Dunque non vendiamo miracoli in un clic.
+      </p>
+      <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Ad esempio contrasto e accessibilità restano obbligatori. Pertanto combiniamo tool ed esperienza prima del lancio.
       </p>
 
       <SeoTopicHeading id="seo-topic-hybrid">
         Perché un approccio ibrido batte solo template o solo AI?
       </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        I template riducono costi iniziali ma spesso omogeneizzano l&apos;offerta. Solo AI senza direzione creativa rischia
-        incoerenze. Combiniamo sistema di design, feedback e AI mirata fino al modulo su{" "}
+        I template riducono il costo iniziale. Spesso però omogeneizzano l&apos;offerta. Solo AI senza direzione rischia
+        incoerenze.
+      </p>
+      <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Il nostro ibrido unisce sistema di design, feedback e AI mirata fino al modulo{" "}
         <L href="/contact">contatti</L>.
       </p>
 
       <p className="mt-8 text-[0.9375rem] leading-relaxed text-white/80">
-        Nei progetti web definiamo KPI condivisi (contatti, prenotazioni, download) e li colleghiamo a tracking essenziale,
-        senza sovraccaricare la cookie banner policy descritta nella{" "}
-        <L href="/privacy-policy">privacy policy</L>. In ambito grafico integriamo mockup con varianti colore per ambienti
-        diversi (dark shop vs landing chiara) così le decisioni non dipendono da un singolo schermo. Flussi AI includono
-        checklist di revisione per contrasto e tono di voce allineato al brand. Per il team: <L href="/about">chi siamo</L>.
+        Nei progetti web definiamo KPI condivisi senza appesantire la cookie policy della{" "}
+        <L href="/privacy-policy">privacy policy</L>. In grafica allineiamo mockup e palette. Per il team:{" "}
+        <L href="/about">chi siamo</L>.
       </p>
 
       <SeoTopicHeading id="seo-topic-why">
         Perché scegliere AGR Multimedia per web e brand?
       </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        Un team per web, grafica e produzione; lingue serbo, inglese, tedesco, italiano, albanese. Scope e milestone
-        documentati.
+        Un team unico copre web, grafica e produzione. Parliamo serbo, inglese, tedesco, italiano e albanese. Così il briefing
+        resta pulito.
+      </p>
+      <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Documentiamo scope e milestone. Quindi sai sempre il passo successivo con noi.
       </p>
 
       <SeoTopicHeading id="seo-topic-kickoff">
         Come inizia un progetto — e cosa preparare?
       </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        Dopo la richiesta rispondiamo rapidamente e definiamo briefing e riferimenti. Nel <L href="/blog">blog</L> trovi
-        articoli pratici su conversion e video.
+        Dopo la richiesta rispondiamo rapidamente. Poi fissiamo call o briefing scritto. Porta obiettivi, reference e asset.
+      </p>
+      <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Per progetti complessi chiediamo esempi che ami — non per copiare, ma per capire attese. Nel frattempo il{" "}
+        <L href="/blog">blog</L> aiuta su conversion e video.
       </p>
     </>
   );
@@ -422,80 +491,103 @@ export function ItBody() {
 export function AlBody() {
   return (
     <>
+      <p className="mb-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Ne drejtojmë <strong className="text-white">AGR Multimedia</strong> në Geislingen an der Steige. Fokusi ynë janë bizneset
+        e vogla në BE që duan pozicionim më të qartë online.
+      </p>
+      <p className="mb-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Ndërsa disa dizajnerë parapëlqejnë vetëm metoda tradicionale, ne në AGR Multimedia besojmë se simbioza e AI-së dhe
+        kreativitetit njerëzor është superiore sepse përshpejton iteracionet pa humbur përgjegjësinë ndaj markës. Megjithatë
+        respektojmë edhe procese krejtësisht manuale kur është zgjedhja e duhur. Për më tepër, unë personalisht mbikëqyr
+        vendimet kritike para publikimit — misioni ynë janë rezultate të matshme.
+      </p>
       <p className="mb-6 text-[0.9375rem] leading-relaxed text-white/80">
-        <strong className="text-white">AGR Multimedia</strong> është studio digjitale në Geislingen an der Steige. Kjo faqe
-        shpjegon <L href="/web-design">web dizajn</L>, <L href="/graphic-design">grafikë dhe branding</L> dhe{" "}
-        <L href="/ai-content-creation">rrjedha me AI</L>. Shërbimet: <L href="/services">shërbimet</L>; rreth nesh:{" "}
-        <L href="/about">rreth nesh</L>; privatësia: <L href="/privacy-policy">politika e privatësisë</L>.
+        Kjo faqe shpjegon <L href="/web-design">web dizajn</L>, <L href="/graphic-design">grafikë dhe branding</L>, dhe{" "}
+        <L href="/ai-content-creation">rrjedha me AI</L>. Shërbimet: <L href="/services">shërbimet</L>. Rreth nesh:{" "}
+        <L href="/about">rreth nesh</L>. Privatësia: <L href="/privacy-policy">politika e privatësisë</L>.
       </p>
 
       <SeoTopicHeading id="seo-topic-web">
         Çfarë merrni konkretisht nga web dizajni ynë?
       </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        Fillojmë nga qëllimet dhe arkitektura e informacionit. Performanca, mobile dhe baza SEO janë të përfshira. Shembuj në{" "}
-        <L href="/portfolio">portfolio</L>; kampanja përmes <L href="/digital-marketing">marketingut digjital</L>.
+        Ne nuk shesim faqe boshe. Së pari përcaktojmë qëllimet dhe arkitekturën e informacionit. Pastaj vjen dizajni vizual.
       </p>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        Në anën tjetër, shabllonet dhe builder-at mund të ulën koston fillestare dhe të nxjerrin një demo të shpejtë. Por kur ju
-        duhet diferencim dhe i njëjti sistem marke në web, print dhe reklama, na duhen vendime të qarta — prandaj përzgjedhim
-        çfarë automatizohet dhe çfarë kontrollohet manualisht.
+        Performanca dhe mobile janë të përfshira. Gjithashtu lidhim kampanjat përmes{" "}
+        <L href="/digital-marketing">marketingut digjital</L>. Shembuj gjenden në <L href="/portfolio">portfolio</L>.
+      </p>
+      <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Në anën tjetër, shabllonet ulën koston fillestare. Por kur ju duhet diferencim, na duhen rregulla të qarta. Prandaj
+        vendosim çfarë automatizohet dhe çfarë kontrollohet dorazi.
       </p>
 
       <SeoTopicHeading id="seo-topic-graphic">
         Si qëndron i njëtrajtshëm brendi në print dhe në ekran?
       </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        Identiteti përfshin ngjyra, tipografi dhe ton mes flyerëve dhe rrjeteve sociale. Skedarët për print dhe eksportet
-        digitale ndjekin të njëjtat rregulla.
+        Brendi është më shumë se logo. Ne përcaktojmë ngjyra dhe tipografi të njëtrajtshme. Flyerët dhe rrjetet sociale përputhen.
+      </p>
+      <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Skedarët për print dhe eksportet digitale ndjekin të njëjtin sistem. Kështu shmangni versione të rastësishme.
       </p>
 
       <SeoTopicHeading id="seo-topic-ai">
         Ku AI përshpejton — dhe kur është i domosdoshëm njeriu?
       </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        AI përdoret për variante dhe detaje të përsëritura; vendimet përfundimtare dhe përputhja me markën kalojnë në
-        revizion njerëzor. Më shumë te <L href="/ai-content-creation">përmbajtja me AI</L>.
+        Ne përdorim AI për variante dhe detaje të përsëritura. Kjo kursen kohë. Megjithatë mesazhet e besimit kalojnë në revizion
+        njerëzor.
+      </p>
+      <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Lexoni më shumë te <L href="/ai-content-creation">përmbajtja me AI</L>. Në fund vendosim bashkë çfarë publikohet.
       </p>
 
       <SeoTopicHeading id="seo-topic-ai-tradeoffs">
         Cilat janë përfitimet dhe kufizimet e AI në dizajn — sinqerisht?
       </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        Pro: shpejtësi dhe shumë variante. Kundër: pamje gjenerike dhe tekst pa thellësi. Ne ofrojmë qasje hibride me kontroll
-        cilësie, jo „një klik magjik”.
+        Pro: shpejtësi dhe më shumë variante. Kundër: pamje gjenerike dhe tekst pa thellësi. Prandaj nuk shesim magji me një klik.
+      </p>
+      <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Për shembull kontrasti dhe aksesibiliteti mbeten të detyrueshëm. Prandaj kombinojmë mjetet me cilësi para publikimit.
       </p>
 
       <SeoTopicHeading id="seo-topic-hybrid">
         Pse qasja hibride fiton ndaj vetëm shablloneve ose vetëm AI-së?
       </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        Shabllonet janë të lira në fillim por shpesh dobësojnë diferencimin. Vetëm AI pa udhëheqje dizajni rrezikon
-        qëllimshmërinë e markës. Kombinojmë sistem dizajni, feedback dhe AI deri te forma në{" "}
-        <L href="/contact">kontakt</L>.
+        Shabllonet janë të lira në fillim. Shpesh dobësojnë diferencimin. Vetëm AI pa udhëheqje rrezikon markën.
+      </p>
+      <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Qasja jonë hibride bashkon sistem dizajni, feedback dhe AI deri te forma në <L href="/contact">kontakt</L>.
       </p>
 
       <p className="mt-8 text-[0.9375rem] leading-relaxed text-white/80">
-        Për projektet e uebit dokumentojmë strukturën e faqeve dhe mesazhet kryesore para se të fillojë dizajni vizual, që
-        ekipi të mirëkuptojë të njëjtat prioritete. Në grafikë përcaktojmë si përdoren ngjyrat në print dhe në ekran, për të
-        shmangur mospërputhjet midis menut dhe postimeve. AI përdoret me lista kontrolli për cilësi dhe me etiketa versioni.
-        Transparenca ligjore: <L href="/privacy-policy">politika e privatësisë</L> dhe <L href="/about">rreth nesh</L>.
+        Për projektet e uebit dokumentojmë strukturën para UI-së. Në grafikë përputhim palette. Transparenca:{" "}
+        <L href="/privacy-policy">politika e privatësisë</L> dhe <L href="/about">rreth nesh</L>.
       </p>
 
       <SeoTopicHeading id="seo-topic-why">
         Pse të zgjidhni AGR Multimedia për web dhe grafikë?
       </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        Një ekip për web, grafikë dhe përmbajtje; gjuhë: serbisht, anglisht, gjermanisht, italisht, shqip. Dokumentim i qartë
-        i scope-it.
+        Një ekip mbulon web, grafikë dhe përmbajtje. Flasim serbisht, anglisht, gjermanisht, italisht dhe shqip. Kjo e bën
+        briefing-un të qartë.
+      </p>
+      <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Ne dokumentojmë scope dhe milestone. Pra e dini gjithmonë hapi tjetër me ne.
       </p>
 
       <SeoTopicHeading id="seo-topic-kickoff">
         Si fillon projekti — dhe çfarë të përgatisni?
       </SeoTopicHeading>
       <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
-        Pas kërkesës përgjigjemi shpejt dhe përçlodhim briefing-un. Artikuj në <L href="/blog">blog</L> për konvertim dhe
-        video.
+        Pas kërkesës përgjigjemi shpejt. Pastaj caktojmë telefonatë ose briefing. Sillni qëllime, referenca dhe materiale ekzistuese.
+      </p>
+      <p className="mt-4 text-[0.9375rem] leading-relaxed text-white/80">
+        Për projekte komplekse kërkojmë shembuj që ju pëlqejnë — jo për kopjim, por për pritshmëri. Ndërkaq blogu në{" "}
+        <L href="/blog">blog</L> ndihmon për konvertim dhe video.
       </p>
     </>
   );

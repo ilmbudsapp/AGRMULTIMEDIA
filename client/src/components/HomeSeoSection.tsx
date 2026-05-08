@@ -1,6 +1,7 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import type { Language } from "@/lib/i18n";
 import AuthorByline from "@/components/AuthorByline";
+import VisibleAuthorCredit from "@/components/VisibleAuthorCredit";
 import HomeSeoDefinitions from "@/components/HomeSeoDefinitions";
 import { SrBody, EnBody, DeBody, ItBody, AlBody } from "@/components/HomeSeoBodies";
 import { SEO_TOPIC_IDS } from "@/lib/seoTopicIds";
@@ -64,7 +65,7 @@ const SECTION_COPY: Record<SectionLangKey, SectionCopy> = {
     eyebrow: "AGR Multimedia",
     title: "Web dizajn, grafika, AI i digitalni marketing za mala preduzeća",
     subtitle:
-      "Detaljan pregled usluga, načina rada i odgovornog korišćenja AI — sa internim linkovima ka ključnim stranicama.",
+      "Mi pripremamo ovaj sadržaj da bude jasan mala preduzećima u EU. Ovde je detaljan pregled usluga, našeg toka rada i odgovornog korišćenja veštačke inteligencije. Pored toga, linkovi vode ka stranici usluga, O nama i politici privatnosti. Stoga brzo pronalazite ono što vam treba pre prvog razgovora.",
     aria: "Tekstualni pregled usluga, AI perspektiva i kontakt",
     asideAria: "Autoritativni izvori i otvoreni standardi",
     asideLead: "Rad usklađujemo sa javnim specifikacijama i referencama:",
@@ -108,7 +109,7 @@ const SECTION_COPY: Record<SectionLangKey, SectionCopy> = {
       },
     ],
     answerLead:
-      "Ukratko: pravimo brze, SEO-prijateljske stranice i dosledan brend; AI koristimo samo gde skraćuje vreme — uz ljudsku kontrolu pre objave.",
+      "Ukratko: naša misija su brze, SEO-prijateljske stranice i dosledan brend. AI koristimo gde ubrzava rad. Međutim, ja lično pazim da odluke koje grade poverenje ostanu ljudske. Pre objave proveravamo performanse i jasnoću poruke — za vas, ne samo za algoritam.",
     expertQuote:
       "„Merljivost mora da bude dogovorena pre dizajna — inače lep izgled ostaje samo estetika bez odgovornosti za rezultat.”",
     quoteAttribution: "Agron Osmani · CEO, AGR Multimedia · Geislingen an der Steige",
@@ -125,7 +126,7 @@ const SECTION_COPY: Record<SectionLangKey, SectionCopy> = {
     eyebrow: "AGR Multimedia",
     title: "Web design, graphics, AI & digital marketing for small businesses",
     subtitle:
-      "In-depth services overview, workflow, and balanced AI guidance — with links to key sections of this site.",
+      "We publish this guide so your team knows exactly how we work. It is a full overview of services, our delivery process, and responsible AI use. In addition, internal links jump to services, about, and privacy. Therefore you can orient quickly before you email us or book a call.",
     aria: "Services overview, AI perspectives, and contact paths",
     asideAria: "Authoritative references and open standards",
     asideLead: "Our work aligns with public specifications from:",
@@ -169,7 +170,7 @@ const SECTION_COPY: Record<SectionLangKey, SectionCopy> = {
       },
     ],
     answerLead:
-      "In short: we ship fast, SEO-aware websites and consistent brand systems — using AI only where it saves time, with human review before anything goes live.",
+      "In short: our mission is fast, SEO-aware websites and a coherent brand. We use AI where it saves time. However, I personally review trust-critical choices before launch. After that, we still check performance and clarity — for your customers, not only for bots.",
     expertQuote:
       "“If we cannot state what success looks like before design starts, we only ship decoration — not outcomes.”",
     quoteAttribution: "Agron Osmani · CEO, AGR Multimedia · Geislingen an der Steige",
@@ -186,7 +187,7 @@ const SECTION_COPY: Record<SectionLangKey, SectionCopy> = {
     eyebrow: "AGR Multimedia",
     title: "Webdesign, Grafik, KI & Digitalmarketing für kleine Unternehmen",
     subtitle:
-      "Ausführlicher Leistungsüberblick, Arbeitsweise und ein ausgewogener Blick auf KI — mit Links zu allen Bereichen.",
+      "Wir schreiben diesen Leitfaden bewusst ausführlich für kleine Unternehmen in der EU. Sie finden hier Leistungen, unseren Ablauf und einen klaren Umgang mit KI. Außerdem führen Links zu Service-Seiten, Über uns und Datenschutz. Damit Sie sich vor dem ersten Gespräch schnell orientieren können.",
     aria: "Leistungen, KI-Perspektive und Kontakt",
     asideAria: "Normative Referenzen und offene Standards",
     asideLead: "Ausrichtung an öffentlichen Spezifikationen:",
@@ -230,7 +231,7 @@ const SECTION_COPY: Record<SectionLangKey, SectionCopy> = {
       },
     ],
     answerLead:
-      "Kurz: Wir liefern schnelle, SEO-fähige Websites und konsistente Markensysteme — KI nur dort, wo sie Zeit spart, mit menschlicher Freigabe vor Go-live.",
+      "Kurz: Unsere Mission sind schnelle, SEO-fähige Websites und ein konsistentes Markenbild. KI nutzen wir dort, wo sie Zeit spart. Dennoch prüfe ich persönlich vertrauenskritische Entscheidungen vor dem Livegang. Außerdem testen wir Performance und Klarheit der Botschaft — für Ihre Kundschaft.",
     expertQuote:
       "„Ohne klare Erfolgskriterien vor dem Design bleibt nur Dekoration — keine messbare Wirkung.“",
     quoteAttribution: "Agron Osmani · CEO, AGR Multimedia · Geislingen an der Steige",
@@ -247,7 +248,7 @@ const SECTION_COPY: Record<SectionLangKey, SectionCopy> = {
     eyebrow: "AGR Multimedia",
     title: "Web design, grafica, AI e digital marketing per le PMI",
     subtitle:
-      "Panoramica approfondita dei servizi, del metodo e del ruolo dell'AI — con collegamenti interni utili.",
+      "Pubblichiamo questa guida perché i team capiscano come lavoriamo noi. Qui trovi servizi, il nostro metodo e un uso responsabile dell'intelligenza artificiale. Inoltre i link portano a servizi, chi siamo e privacy. Perciò ti orienti in pochi minuti prima della prima call.",
     aria: "Panoramica servizi, prospettive AI e contatti",
     asideAria: "Fonti autorevoli e standard aperti",
     asideLead: "Allineamento alle specifiche pubbliche:",
@@ -291,7 +292,7 @@ const SECTION_COPY: Record<SectionLangKey, SectionCopy> = {
       },
     ],
     answerLead:
-      "In sintesi: siti veloci e SEO-ready, identità coerente — l’AI solo dove accelera, sempre con revisione umana prima della pubblicazione.",
+      "In sintesi: la nostra missione sono siti veloci, SEO-ready e un brand coerente. Usiamo l'intelligenza artificiale dove accelera. Tuttavia supervisiono io le scelte che creano fiducia prima del go-live. Inoltre controlliamo performance e chiarezza — per i vostri clienti.",
     expertQuote:
       "“Senza definire il successo prima della progettazione, il design resta solo estetica — non risultati.”",
     quoteAttribution: "Agron Osmani · CEO, AGR Multimedia · Geislingen an der Steige",
@@ -308,7 +309,7 @@ const SECTION_COPY: Record<SectionLangKey, SectionCopy> = {
     eyebrow: "AGR Multimedia",
     title: "Web dizajn, grafikë, AI dhe marketing digjital për biznese të vogla",
     subtitle:
-      "Përmbledhje e thelluar e shërbimeve, mënyrës së punës dhe përdorimit të përgjegjshëm të AI.",
+      "Ne e kemi shkruar këtë udhëzues që ekipet të dinë qartë si punojmë ne. Këtu janë shërbimet, mënyra jonë e punës dhe përdorimi i përgjegjshëm i AI. Për më tepër, lidhjet çojnë te shërbimet, rreth nesh dhe privatësia. Prandaj orientoheni shpejt para kontaktit të parë.",
     aria: "Shërbime, perspektiva AI dhe kontakt",
     asideAria: "Burime autoritative dhe standarde të hapura",
     asideLead: "Puna jonë përputhet me specifikimet publike:",
@@ -352,7 +353,7 @@ const SECTION_COPY: Record<SectionLangKey, SectionCopy> = {
       },
     ],
     answerLead:
-      "Shkurt: faqe të shpejta miqësore me SEO dhe sistem vizual konsistent — AI vetëm ku kursen kohë, me kontroll njerëzor para publikimit.",
+      "Shkurt: misioni ynë janë faqe të shpejta miqësore me SEO dhe një sistem marke qëndror. AI përdoret ku kursen kohë. Megjithatë unë personalisht kontrolloj vendimet që ndërtojnë besimin para publikimit. Gjithashtu verifikojmë performancën dhe qartësinë — për klientët tuaj.",
     expertQuote:
       "„Pa matën e suksesit përpara dizajnit, mbetet vetëm estetikë — jo rezultate të matshme.“",
     quoteAttribution: "Agron Osmani · CEO, AGR Multimedia · Geislingen an der Steige",
@@ -379,13 +380,27 @@ export default function HomeSeoSection() {
     >
       <article className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <header className="border-b border-white/10 pb-8">
-          <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-blue-300/90">{copy.eyebrow}</p>
-          <h2
-            id="seo-section-title"
-            className="text-2xl font-semibold tracking-tight text-white sm:text-3xl"
-          >
-            {copy.title}
-          </h2>
+          <VisibleAuthorCredit className="mb-3" />
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
+            <img
+              src="/agr-logo-white.png"
+              alt="Agron Osmani - AGR Multimedia Web Dizajn i SEO"
+              width={140}
+              height={46}
+              loading="lazy"
+              decoding="async"
+              className="h-11 w-auto shrink-0 opacity-90"
+            />
+            <div className="min-w-0 flex-1">
+              <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-blue-300/90">{copy.eyebrow}</p>
+              <h2
+                id="seo-section-title"
+                className="text-2xl font-semibold tracking-tight text-white sm:text-3xl"
+              >
+                {copy.title}
+              </h2>
+            </div>
+          </div>
           <div className="mt-4 rounded-lg border border-white/10 bg-white/[0.04] px-4 py-3">
             <AuthorByline className="!text-white/95" />
           </div>

@@ -10,7 +10,7 @@ const TRUST_COPY: Record<
   en: {
     h2: "Helping small businesses grow with modern, fast websites",
     body:
-      "We focus on clarity before decoration: structure, performance, and messaging that fits your audience. However, a polished layout alone does not guarantee enquiries—for example, if your calls-to-action are vague, visitors leave. Therefore we align page maps with real goals (calls, forms, bookings). In short: better UX, clearer offers, and technical SEO foundations that support discovery.",
+      "We focus on clarity before decoration: structure, performance, and messaging that fits your audience. However, a polished layout alone does not guarantee enquiries—for example, if your calls-to-action are vague, visitors leave. Therefore we align page maps with real goals (calls, forms, bookings). In short: better UX, clearer offers, and technical SEO foundations that support discovery. We personally sanity-check priorities with you before any major design gate.",
   },
   de: {
     h2: "Ich helfe kleinen Unternehmen mit modernen, schnellen Websites zu wachsen",
@@ -25,7 +25,7 @@ const TRUST_COPY: Record<
   sr: {
     h2: "Pomažem malim biznisima da rastu uz moderne i brze web stranice",
     body:
-      "Prvo jasnoća, pa tek vizuelni šmek: struktura stranica, performanse i poruke prilagođene publici. Međutim, sam „lep” dizajn ne donosi upite ako su pozivi na akciju nejasni—na primer, posetilac ne zna da li da pozove, pošalje formu ili rezerviše. Zato usklađujemo mapu sadržaja sa stvarnim ciljevima (poziv, forma, zakazivanje). Drugim rečima: bolji UX, jasnija ponuda i tehnički SEO temelji koji pomažu da vas klijenti pronađu.",
+      "Prvo jasnoća, pa tek vizuelni šmek: struktura stranica, performanse i poruke prilagođene publici. Međutim, sam „lep” dizajn ne donosi upite ako su pozivi na akciju nejasni—na primer, posetilac ne zna da li da pozove, pošalje formu ili rezerviše. Zato usklađujemo mapu sadržaja sa stvarnim ciljevima (poziv, forma, zakazivanje). Drugim rečima: bolji UX, jasnija ponuda i tehnički SEO temelji koji pomažu da vas klijenti pronađu. Mi lično proveravamo prioritete sa vama pre većih dizajn koraka.",
   },
   al: {
     h2: "Ndihmoj bizneset e vogla të rriten me faqe moderne dhe të shpejta",

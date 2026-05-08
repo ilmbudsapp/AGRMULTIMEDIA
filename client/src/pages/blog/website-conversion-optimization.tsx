@@ -7,6 +7,7 @@ import { Link } from "wouter";
 import { useEffect } from "react";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
+import VisibleAuthorCredit from "@/components/VisibleAuthorCredit";
 
 export default function WebsiteConversionOptimization() {
   const { t } = useLanguage();
@@ -68,6 +69,8 @@ export default function WebsiteConversionOptimization() {
               decoding="async"
             />
           </div>
+
+          <VisibleAuthorCredit variant="light" className="mb-4" />
 
           {/* Article Content */}
           <article className="prose prose-lg max-w-none">

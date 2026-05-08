@@ -2,6 +2,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { useEffect } from "react";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
+import VisibleAuthorCredit from "@/components/VisibleAuthorCredit";
 
 export default function FoodTruckWeb500() {
   const { t } = useLanguage();
@@ -17,6 +18,7 @@ export default function FoodTruckWeb500() {
       {/* Simple hero */}
       <div className="pt-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
+          <VisibleAuthorCredit variant="light" className="mb-3 !text-gray-400" />
           <h1 className="text-4xl font-bold text-white mb-4">{post.title}</h1>
           <p className="text-gray-400 text-lg mb-10 leading-relaxed">{post.description}</p>
           <img
