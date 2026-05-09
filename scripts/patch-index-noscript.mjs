@@ -52,30 +52,45 @@ const body = `
                 <p style="margin:0;font-size:0.65rem;letter-spacing:0.16em;text-transform:uppercase;color:#34d399;">AI i optimizacija pretrage</p>
                 <h2 id="opt-excel-h2" style="font-size:1.22rem;color:#fff;margin:0.45rem 0 0.85rem 0;line-height:1.3;">Izuzetnost u optimizaciji: tehnički SEO, AEO i GEO</h2>
                 <p style="margin:0 0 0.75rem 0;">Usklađujemo sajt za klasičnu pretragu, odgovorne sisteme i generativno pronalaženje — uz merljive skorove i jasnu kvalitetnu granicu. Godine 2026. „malo bolje“ više nije dovoljno: korisnici i AI sistemi očekuju brze, proverljive i strukturisane odgovore. <strong>Grade A</strong> signal znači da vas brend izgleda tehnički uredno i pouzdano pre nego što neko pročita ceo uvod.</p>
-                <p style="margin:0 0 1rem 0;">Optimizujemo za Google i klasičnu pretragu, a sadržaj strukturišemo tako da modeli kao ChatGPT i Gemini mogu tačno da citiraju vaše stranice kada predlažu rešenja. Tri stuba: <strong>SEO i tehnička izvrsnost</strong> (indeksiranje, performanse, Core Web Vitals, strukturisani podaci); <strong>AEO</strong> (jasni odgovori i definicije za sisteme odgovora); <strong>GEO / Generative Engine Optimization</strong> (jasnoća i pouzdani izvori za generativne modele).</p>
-                <p style="margin:0 0 0.65rem 0;font-weight:600;color:#a7f3d0;">Tabela referentnih skorova (primer audit izveštaja)</p>
+                <p style="margin:0 0 1rem 0;">Optimizujemo za Google i klasičnu pretragu, a sadržaj strukturišemo tako da modeli kao ChatGPT i Gemini mogu tačno da citiraju vaše stranice kada predlažu rešenja. Tri stuba: <strong>SEO i tehnička izvrsnost</strong> (indeksiranje, performanse, Core Web Vitals, strukturisani podaci); <strong>AEO</strong> (jasni odgovori i definicije za sisteme odgovora); <strong>GEO / Generative Engine Optimization</strong> (transparentnost i pouzdani izvori za generativne modele).</p>
+                <p style="margin:0 0 0.65rem 0;font-weight:600;color:#a7f3d0;">fixbike.online — skorovi posle optimizacije (9. maj 2026.)</p>
                 <table style="width:100%;border-collapse:collapse;margin:0.5rem 0 1rem;font-size:0.88rem;">
-                    <caption style="text-align:left;font-weight:600;color:#fff;padding-bottom:0.4rem;">Merenje po oblastima — SEO: 94, AEO: 83, GEO: 90, ukupno: 87 (Grade A)</caption>
+                    <caption style="text-align:left;font-weight:600;color:#fff;padding-bottom:0.4rem;">Merenje po oblastima — SEO 88, AEO 85, GEO 90, ukupno 88 (Grade A)</caption>
                     <thead><tr style="border-bottom:1px solid #444;"><th scope="col" style="text-align:left;padding:0.35rem;">Oblast</th><th scope="col" style="text-align:left;padding:0.35rem;">Skor</th></tr></thead>
                     <tbody>
-                        <tr style="border-bottom:1px solid #333;"><td style="padding:0.35rem;">SEO</td><td style="padding:0.35rem;color:#6ee7b7;">94</td></tr>
-                        <tr style="border-bottom:1px solid #333;"><td style="padding:0.35rem;">AEO</td><td style="padding:0.35rem;color:#6ee7b7;">83</td></tr>
+                        <tr style="border-bottom:1px solid #333;"><td style="padding:0.35rem;">SEO</td><td style="padding:0.35rem;color:#6ee7b7;">88</td></tr>
+                        <tr style="border-bottom:1px solid #333;"><td style="padding:0.35rem;">AEO</td><td style="padding:0.35rem;color:#6ee7b7;">85</td></tr>
                         <tr style="border-bottom:1px solid #333;"><td style="padding:0.35rem;">GEO</td><td style="padding:0.35rem;color:#6ee7b7;">90</td></tr>
-                        <tr><td style="padding:0.35rem;font-weight:600;">Ukupno</td><td style="padding:0.35rem;font-weight:600;color:#6ee7b7;">87 — Grade A</td></tr>
+                        <tr><td style="padding:0.35rem;font-weight:600;">Ukupno</td><td style="padding:0.35rem;font-weight:600;color:#6ee7b7;">88 — Grade A</td></tr>
                     </tbody>
                 </table>
-                <h3 style="font-size:1.05rem;color:#fff;margin:1rem 0 0.5rem 0;">Studija slučaja (pregled) — pre i posle</h3>
-                <p style="margin:0 0 0.75rem 0;">Primer: regionalni servis brend <strong>FixBike</strong> — iz rizične (narandžaste) zone u zelenu posle tehničkih i on-page izmena. Ispod su placeholder polja za screenshot izveštaja (pre / posle); finalne slike dodajete naknadno.</p>
-                <div style="display:grid;grid-template-columns:1fr;gap:0.75rem;margin:0.75rem 0;">
-                    <div style="border:1px solid rgba(251,146,60,0.45);border-radius:0.5rem;padding:0.75rem;background:rgba(124,45,18,0.15);">
-                        <p style="margin:0;font-size:0.75rem;font-weight:600;text-transform:uppercase;color:#fdba74;">Pre (placeholder)</p>
-                        <p style="margin:0.35rem 0 0;font-size:0.8rem;color:#cbd5e1;">Polje za screenshot izveštaja — narandžasta / rizična zona.</p>
+                <h3 style="font-size:1.05rem;color:#fff;margin:1rem 0 0.5rem 0;">Studija slučaja — fixbike.online (pre i posle)</h3>
+                <p style="margin:0 0 0.75rem 0;">Isti domen, dva snimka stanja: <strong>8. maj 2026.</strong> (Critical · Grade F, ukupno 49) naspram <strong>9. maj 2026.</strong> (Excellent · Grade A, ukupno 88) — interval kraći od 24 sata.</p>
+                <div style="display:grid;grid-template-columns:1fr;gap:0.85rem;margin:0.85rem 0;">
+                    <div style="border:2px solid rgba(239,68,68,0.55);border-radius:0.5rem;overflow:hidden;background:rgba(69,10,10,0.25);">
+                        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:0.5rem;padding:0.5rem 0.75rem;background:rgba(127,29,29,0.35);border-bottom:1px solid rgba(239,68,68,0.35);">
+                            <span style="font-size:0.72rem;font-weight:700;text-transform:uppercase;color:#fecaca;">Pre — 8. maj 2026.</span>
+                            <span style="font-size:0.65rem;font-weight:800;text-transform:uppercase;color:#fff;background:#b91c1c;padding:0.2rem 0.5rem;border-radius:999px;">Critical · Grade F</span>
+                        </div>
+                        <img src="/fixbike-before.jpg" alt="SEO AEO GEO izveštaj fixbike.online — 8. maj 2026, ukupno Grade F" width="1200" height="675" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;" />
+                        <p style="margin:0;padding:0.45rem 0.65rem;font-family:ui-monospace,monospace;font-size:0.78rem;color:#fecaca;text-align:center;">Ukupno 49 · SEO 71 · AEO 31 · GEO 24</p>
                     </div>
-                    <div style="border:1px solid rgba(52,211,153,0.45);border-radius:0.5rem;padding:0.75rem;background:rgba(6,78,59,0.2);">
-                        <p style="margin:0;font-size:0.75rem;font-weight:600;text-transform:uppercase;color:#6ee7b7;">Posle (placeholder)</p>
-                        <p style="margin:0.35rem 0 0;font-size:0.8rem;color:#cbd5e1;">Polje za screenshot izveštaja — zelena zona nakon optimizacije.</p>
+                    <div style="border:2px solid rgba(52,211,153,0.55);border-radius:0.5rem;overflow:hidden;background:rgba(6,78,59,0.2);">
+                        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:0.5rem;padding:0.5rem 0.75rem;background:rgba(6,95,70,0.35);border-bottom:1px solid rgba(52,211,153,0.35);">
+                            <span style="font-size:0.72rem;font-weight:700;text-transform:uppercase;color:#a7f3d0;">Posle — 9. maj 2026.</span>
+                            <span style="font-size:0.65rem;font-weight:800;text-transform:uppercase;color:#fff;background:#059669;padding:0.2rem 0.5rem;border-radius:999px;">Excellent · Grade A</span>
+                        </div>
+                        <img src="/fixbike-after.jpg" alt="SEO AEO GEO izveštaj fixbike.online — 9. maj 2026, ukupno Grade A" width="1200" height="675" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;" />
+                        <p style="margin:0;padding:0.45rem 0.65rem;font-family:ui-monospace,monospace;font-size:0.78rem;color:#a7f3d0;text-align:center;">Ukupno 88 · SEO 88 · AEO 85 · GEO 90</p>
                     </div>
                 </div>
+                <p style="margin:0.85rem 0 0.65rem;font-weight:600;color:#fff;">Ključni skokovi u performansama</p>
+                <ul style="margin:0 0 0.85rem 1.1rem;line-height:1.6;font-size:0.88rem;">
+                    <li><strong>GEO:</strong> skok sa 24 na 90 (<strong>+66</strong> poena).</li>
+                    <li><strong>AEO:</strong> skok sa 31 na 85 (<strong>+54</strong> poena).</li>
+                    <li><strong>SEO:</strong> skok sa 71 na 88 (<strong>+17</strong> poena).</li>
+                </ul>
+                <p style="margin:0 0 1rem 0;font-size:0.92rem;">Ovaj primer pokazuje transformaciju lokalnog biznisa iz digitalne nevidljivosti (Grade F) u apsolutnog lidera (Grade A) za manje od 24 sata. Fokusiranjem na Generative Engine Optimization (GEO), povećali smo vidljivost za AI modele za neverovatnih 275%.</p>
                 <p style="margin:1rem 0 0;"><a href="https://www.agrmultimedia.eu/contact" style="display:inline-block;padding:0.65rem 1.25rem;border-radius:999px;background:linear-gradient(90deg,#059669,#10b981);color:#fff;font-weight:600;text-decoration:none;">Zatražite besplatnu SEO/AI analizu vašeg sajta</a></p>
             </section>
 

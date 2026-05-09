@@ -1,13 +1,101 @@
+import { useEffect, useRef, useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getPremiumTranslations } from "@/lib/premiumI18n";
 import { Search, BotMessageSquare, Sparkles } from "lucide-react";
 
-const SCORES = {
-  seo: 94,
-  aeo: 83,
+/** Post-optimization benchmark — fixbike.online (May 9, 2026) */
+const SCORES_AFTER = {
+  seo: 88,
+  aeo: 85,
   geo: 90,
-  overall: 87,
+  overall: 88,
 } as const;
+
+const FIXBIKE_IMG = {
+  before: "/fixbike-before.jpg",
+  after: "/fixbike-after.jpg",
+} as const;
+
+function useCountUp(end: number, durationMs: number, active: boolean): number {
+  const [value, setValue] = useState(0);
+  useEffect(() => {
+    if (!active || end === 0) {
+      setValue(active ? end : 0);
+      return;
+    }
+    let startAt: number | null = null;
+    let frame = 0;
+    const step = (now: number) => {
+      if (startAt === null) startAt = now;
+      const t = Math.min((now - startAt) / durationMs, 1);
+      const eased = 1 - (1 - t) ** 2;
+      setValue(Math.round(end * eased));
+      if (t < 1) frame = requestAnimationFrame(step);
+    };
+    frame = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(frame);
+  }, [end, durationMs, active]);
+  return value;
+}
+
+function useInViewOnce<T extends HTMLElement>(options?: IntersectionObserverInit) {
+  const ref = useRef<T | null>(null);
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el || visible) return;
+    const obs = new IntersectionObserver(
+      ([e]) => {
+        if (e?.isIntersecting) {
+          setVisible(true);
+          obs.disconnect();
+        }
+      },
+      { threshold: 0.15, rootMargin: "0px 0px -10% 0px", ...options },
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, [visible, options]);
+  return { ref, visible };
+}
+
+function JumpCard({
+  title,
+  delta,
+  from,
+  to,
+  accent,
+}: {
+  title: string;
+  delta: number;
+  from: number;
+  to: number;
+  accent: "geo" | "aeo" | "seo";
+}) {
+  const { ref, visible } = useInViewOnce<HTMLDivElement>();
+  const animatedDelta = useCountUp(delta, 1200, visible);
+  const accentRing =
+    accent === "geo"
+      ? "ring-violet-400/40 shadow-[0_0_24px_rgba(139,92,246,0.25)]"
+      : accent === "aeo"
+        ? "ring-sky-400/40 shadow-[0_0_24px_rgba(56,189,248,0.2)]"
+        : "ring-emerald-400/35 shadow-[0_0_24px_rgba(52,211,153,0.2)]";
+
+  return (
+    <div
+      ref={ref}
+      className={`rounded-2xl border border-white/[0.08] bg-[#0a1018]/95 p-5 ring-1 ${accentRing} animate-[fade-in-up_0.6s_ease-out_both]`}
+    >
+      <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-white/45">{title}</p>
+      <p className="mt-2 font-mono text-3xl font-bold tabular-nums text-emerald-300">
+        +{animatedDelta}
+      </p>
+      <p className="mt-2 font-mono text-sm tabular-nums text-white/65">
+        {from} → {to}
+      </p>
+    </div>
+  );
+}
 
 export default function OptimizationExcellence() {
   const { currentLanguage } = useLanguage();
@@ -50,6 +138,12 @@ export default function OptimizationExcellence() {
       aria-labelledby="optimization-excellence-heading"
       className="premium-section relative scroll-mt-24 overflow-hidden border-t border-[#333333] bg-[#07070b] py-20 md:py-28"
     >
+      <style>{`
+        @keyframes fade-in-up {
+          from { opacity: 0; transform: translateY(8px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+      `}</style>
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.35]"
         aria-hidden
@@ -103,9 +197,12 @@ export default function OptimizationExcellence() {
             <div>
               <p className="text-sm font-medium text-emerald-300/95">{t.tableCaption}</p>
               <p className="mt-1 text-xs text-white/45">{t.gradeLine}</p>
+              <p className="mt-2 text-xs font-medium text-white/55">
+                <span className="text-emerald-400/90">{t.caseSite}</span>
+              </p>
             </div>
             <span className="inline-flex items-center rounded-full border border-emerald-400/40 bg-emerald-500/15 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-emerald-200">
-              Grade A
+              Grade A · {SCORES_AFTER.overall}
             </span>
           </div>
 
@@ -125,19 +222,27 @@ export default function OptimizationExcellence() {
               <tbody className="text-white/85">
                 <tr className="border-b border-white/[0.06]">
                   <td className="px-4 py-3">{t.rowSeo}</td>
-                  <td className="px-4 py-3 font-mono text-emerald-300">{SCORES.seo}</td>
+                  <td className="px-4 py-3 font-mono text-lg font-semibold tabular-nums text-emerald-300">
+                    {SCORES_AFTER.seo}
+                  </td>
                 </tr>
                 <tr className="border-b border-white/[0.06]">
                   <td className="px-4 py-3">{t.rowAeo}</td>
-                  <td className="px-4 py-3 font-mono text-emerald-300">{SCORES.aeo}</td>
+                  <td className="px-4 py-3 font-mono text-lg font-semibold tabular-nums text-emerald-300">
+                    {SCORES_AFTER.aeo}
+                  </td>
                 </tr>
                 <tr className="border-b border-white/[0.06]">
                   <td className="px-4 py-3">{t.rowGeo}</td>
-                  <td className="px-4 py-3 font-mono text-emerald-300">{SCORES.geo}</td>
+                  <td className="px-4 py-3 font-mono text-lg font-semibold tabular-nums text-emerald-300">
+                    {SCORES_AFTER.geo}
+                  </td>
                 </tr>
                 <tr className="bg-emerald-500/10">
                   <td className="px-4 py-3 font-semibold text-white">{t.rowOverall}</td>
-                  <td className="px-4 py-3 font-mono text-lg font-semibold text-emerald-200">{SCORES.overall}</td>
+                  <td className="px-4 py-3 font-mono text-xl font-bold tabular-nums text-emerald-200">
+                    {SCORES_AFTER.overall}
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -149,26 +254,60 @@ export default function OptimizationExcellence() {
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-white/75">{t.caseLead}</p>
 
           <div className="mt-6 grid gap-4 md:grid-cols-2">
-            <figure className="overflow-hidden rounded-2xl border border-orange-500/35 bg-gradient-to-b from-orange-950/50 to-[#0a0a0f]">
-              <figcaption className="border-b border-orange-500/25 bg-orange-500/10 px-4 py-2 text-center text-xs font-semibold uppercase tracking-wide text-orange-200">
-                {t.beforeLabel}
-              </figcaption>
-              <div className="flex min-h-[200px] flex-col items-center justify-center gap-2 px-4 py-10 text-center">
-                <span className="rounded-lg border border-dashed border-orange-400/40 px-3 py-8 text-xs text-orange-200/80">
-                  {t.placeholderNote}
+            <figure className="overflow-hidden rounded-2xl border border-red-500/40 bg-gradient-to-b from-red-950/35 to-[#0a0a0f] shadow-[0_0_40px_rgba(239,68,68,0.08)]">
+              <figcaption className="flex flex-wrap items-center justify-between gap-2 border-b border-red-500/30 bg-red-950/40 px-4 py-2.5">
+                <span className="text-xs font-semibold uppercase tracking-wide text-red-100">{t.beforeLabel}</span>
+                <span className="rounded-full border border-red-400/50 bg-red-600/90 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white shadow-sm">
+                  {t.beforeBadge}
                 </span>
+              </figcaption>
+              <div className="px-3 pb-3 pt-3">
+                <img
+                  src={FIXBIKE_IMG.before}
+                  alt={t.imgAltBefore}
+                  width={1200}
+                  height={675}
+                  loading="lazy"
+                  decoding="async"
+                  className="h-auto w-full rounded-lg border border-white/[0.06] object-cover object-top shadow-inner"
+                />
+                <p className="mt-2 text-center font-mono text-[11px] text-red-200/90">{t.statsBeforeSummary}</p>
+                <p className="text-center text-[11px] text-white/40">{t.beforeDate}</p>
               </div>
             </figure>
-            <figure className="overflow-hidden rounded-2xl border border-emerald-500/35 bg-gradient-to-b from-emerald-950/40 to-[#0a0a0f]">
-              <figcaption className="border-b border-emerald-500/25 bg-emerald-500/10 px-4 py-2 text-center text-xs font-semibold uppercase tracking-wide text-emerald-200">
-                {t.afterLabel}
-              </figcaption>
-              <div className="flex min-h-[200px] flex-col items-center justify-center gap-2 px-4 py-10 text-center">
-                <span className="rounded-lg border border-dashed border-emerald-400/40 px-3 py-8 text-xs text-emerald-200/90">
-                  {t.placeholderNote}
+
+            <figure className="overflow-hidden rounded-2xl border border-emerald-500/45 bg-gradient-to-b from-emerald-950/45 to-[#0a0a0f] shadow-[0_0_48px_rgba(52,211,153,0.12)]">
+              <figcaption className="flex flex-wrap items-center justify-between gap-2 border-b border-emerald-500/30 bg-emerald-950/35 px-4 py-2.5">
+                <span className="text-xs font-semibold uppercase tracking-wide text-emerald-100">{t.afterLabel}</span>
+                <span className="rounded-full border border-emerald-400/55 bg-emerald-600/95 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white shadow-sm">
+                  {t.afterBadge}
                 </span>
+              </figcaption>
+              <div className="px-3 pb-3 pt-3">
+                <img
+                  src={FIXBIKE_IMG.after}
+                  alt={t.imgAltAfter}
+                  width={1200}
+                  height={675}
+                  loading="lazy"
+                  decoding="async"
+                  className="h-auto w-full rounded-lg border border-white/[0.06] object-cover object-top shadow-inner"
+                />
+                <p className="mt-2 text-center font-mono text-[11px] text-emerald-200/95">{t.statsAfterSummary}</p>
+                <p className="text-center text-[11px] text-white/40">{t.afterDate}</p>
               </div>
             </figure>
+          </div>
+
+          <p className="mt-8 max-w-3xl text-base leading-relaxed text-white/85">{t.caseNarrative}</p>
+
+          <div className="mt-8">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-white/55">{t.jumpTitle}</p>
+            <div className="mt-4 grid gap-4 sm:grid-cols-3">
+              <JumpCard title={t.rowGeo} delta={66} from={24} to={90} accent="geo" />
+              <JumpCard title={t.rowAeo} delta={54} from={31} to={85} accent="aeo" />
+              <JumpCard title={t.rowSeo} delta={17} from={71} to={88} accent="seo" />
+            </div>
           </div>
         </div>
 
