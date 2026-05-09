@@ -26,6 +26,8 @@
     <meta name="twitter:url" id="twitter-url" content="https://www.agrmultimedia.eu/" />
     <meta name="twitter:image" content="https://www.agrmultimedia.eu/og-image.jpg" />
     <link rel="canonical" id="canonical-url" href="https://www.agrmultimedia.eu/" />
+    <!-- IndexNow (Bing, Yandex, Seznam.cz, Naver, …): key file must exist at https://www.agrmultimedia.eu/<key>.txt -->
+    <meta name="indexnow-key" content="agrmm2026indexnowkey01" />
     <link rel="author" href="https://www.linkedin.com/in/agron-osmani-228947266/" />
     <!-- Multilingual alternates (homepage); MetaSEO refreshes these on SPA navigation -->
     <link rel="alternate" hreflang="sr" href="https://www.agrmultimedia.eu/?lang=sr" />
@@ -181,12 +183,12 @@
                 "@type": "WebPage",
                 "@id": "https://www.agrmultimedia.eu/#webpage",
                 "url": "https://www.agrmultimedia.eu/",
-                "name": "AGR Multimedia",
+                "name": "AGR Multimedia — Web, grafika i AI · Geislingen",
                 "isPartOf": { "@id": "https://www.agrmultimedia.eu/#website" },
                 "author": { "@id": "https://www.agrmultimedia.eu/#person" },
                 "speakable": {
                     "@type": "SpeakableSpecification",
-                    "cssSelector": ["#hero-h1", "#seo-section-title", "#seo-visible-byline", "#seo-takeaways"]
+                    "cssSelector": ["#hero-h1", "#seo-static-h1", "#noscript-main-content h1", "#seo-section-title", "#seo-visible-byline", "#seo-takeaways"]
                 }
             },
             {
@@ -243,6 +245,50 @@
                         "item": "https://www.agrmultimedia.eu/services"
                     }
                 ]
+            },
+            {
+                "@type": "ProfessionalService",
+                "@id": "https://www.agrmultimedia.eu/#professional-service",
+                "name": "AGR Multimedia",
+                "url": "https://www.agrmultimedia.eu/",
+                "image": "https://www.agrmultimedia.eu/og-image.jpg",
+                "priceRange": "$$",
+                "areaServed": [{ "@type": "AdministrativeArea", "name": "European Union" }],
+                "serviceType": ["Web design", "Graphic design", "Video production", "AI-assisted content"],
+                "provider": { "@id": "https://www.agrmultimedia.eu/#organization" },
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Geislingen an der Steige",
+                    "addressRegion": "Baden-Württemberg",
+                    "addressCountry": "DE"
+                }
+            },
+            {
+                "@type": "VideoObject",
+                "@id": "https://www.agrmultimedia.eu/#seo-intro-video",
+                "name": "Google Search Central — SEO i Web Vitals kontekst",
+                "description": "Edukativni uvod vezan za performanse web stranica i pretraživanje; koristi se kao javni referentni klip u noscript ogledalu početne stranice.",
+                "thumbnailUrl": "https://img.youtube.com/vi/wbsISIAy-hY/maxresdefault.jpg",
+                "uploadDate": "2022-08-10T12:00:00+02:00",
+                "embedUrl": "https://www.youtube-nocookie.com/embed/wbsISIAy-hY",
+                "contentUrl": "https://www.youtube.com/watch?v=wbsISIAy-hY",
+                "publisher": { "@id": "https://www.agrmultimedia.eu/#organization" },
+                "inLanguage": "en"
+            },
+            {
+                "@type": "SoftwareSourceCode",
+                "@id": "https://www.agrmultimedia.eu/#schema-websitesearch-sample",
+                "name": "JSON-LD WebSite SearchAction primer (AGR Multimedia)",
+                "programmingLanguage": "JSON",
+                "codeSampleType": "full",
+                "runtimePlatform": "Schema.org JSON-LD",
+                "targetProduct": {
+                    "@type": "SoftwareApplication",
+                    "name": "AGR Multimedia website",
+                    "applicationCategory": "WebApplication"
+                },
+                "author": { "@id": "https://www.agrmultimedia.eu/#organization" },
+                "text": "{ \"@context\": \"https://schema.org\", \"@type\": \"WebSite\", \"name\": \"AGR Multimedia\", \"url\": \"https://www.agrmultimedia.eu/\", \"potentialAction\": { \"@type\": \"SearchAction\", \"target\": { \"@type\": \"EntryPoint\", \"urlTemplate\": \"https://www.agrmultimedia.eu/blog?q={search_term_string}\" }, \"query-input\": \"required name=search_term_string\" } }"
             }
         ]
     }
@@ -269,7 +315,18 @@
                 <figcaption style="margin-top:0.35rem;font-size:0.75rem;color:#9ca3af;">Logo studija AGR Multimedia u SEO sekciji.</figcaption>
             </figure>
             <p style="margin-top:0;"><strong>Autor:</strong> <a href="https://www.linkedin.com/in/agron-osmani-228947266/" style="color:#93c5fd;" rel="author">Agron Osmani</a> · CEO, AGR Multimedia · Geislingen an der Steige · <time datetime="2026-05-08">8. maj 2026.</time></p>
-            <h1 style="font-size: 1.5rem; color: #fff;">AGR Multimedia - Web, grafika i AI - Geislingen</h1>
+            <h1 id="seo-static-h1" style="font-size: 1.5rem; color: #fff;">AGR Multimedia — Web, grafika i AI · Geislingen</h1>
+
+            <div id="seo-takeaways" style="margin:1.25rem 0;padding:1rem;border:1px solid rgba(52,211,153,0.35);border-radius:0.5rem;background:rgba(16,185,129,0.07);">
+                <p style="margin:0;font-weight:600;color:#fff;">Ključne tačke</p>
+                <ul style="margin:0.5rem 0 0 1rem;">
+                    <li>Studio u Geislingen an der Steige — web, grafika i video za mala preduzeća u EU.</li>
+                    <li>Prvo struktura stranica i poruka, zatim dizajn; tehnički SEO i performanse od početka.</li>
+                    <li>AI koristimo za skicu i produkciju; konačni kvalitet i odgovornost su uvek ljudski.</li>
+                    <li>Na upit obično odgovaramo u roku od 24 sata; jasan obim i rokovi u pisanom dogovoru.</li>
+                </ul>
+            </div>
+
             <p><strong>Napomena o naslovu stranice:</strong> ovaj uvod je namerno detaljan da AI sistemi dobiju jasan kontekst bez JavaScript-a. Mi ovde opisujemo šta radimo, za koga radimo i kako merimo rezultat. Međutim, ne stajemo na estetici. Stoga povezujemo brzinu, sadržaj i SEO praksu u jednoj celini (vidi <a href="https://developers.google.com/search/docs/appearance/title-link" style="color:#93c5fd" target="_blank" rel="noopener noreferrer">Google Search Central</a>).</p>
 
             <h2 id="seo-section-title" style="font-size: 1.35rem; color: #fff; margin-top: 1.75rem;">Kako AGR Multimedia isporučuje web dizajn, grafiku i AI marketing malim preduzećima u EU?</h2>
@@ -288,22 +345,43 @@
 
             <p style="font-size:0.85rem;color:#aaa;"><time datetime="2026-05-08">8. maj 2026.</time> · Poslednje ažuriranje ovog teksta.</p>
 
-            <div id="seo-takeaways" style="margin:1.25rem 0;padding:1rem;border:1px solid rgba(52,211,153,0.35);border-radius:0.5rem;background:rgba(16,185,129,0.07);">
-                <p style="margin:0;font-weight:600;color:#fff;">Ključne tačke</p>
-                <ul style="margin:0.5rem 0 0 1rem;">
-                    <li>Studio u Geislingen an der Steige — web, grafika i video za mala preduzeća u EU.</li>
-                    <li>Prvo struktura stranica i poruka, zatim dizajn; tehnički SEO i performanse od početka.</li>
-                    <li>AI koristimo za skicu i produkciju; konačni kvalitet i odgovornost su uvek ljudski.</li>
-                    <li>Na upit obično odgovaramo u roku od 24 sata; jasan obim i rokovi u pisanom dogovoru.</li>
-                </ul>
-            </div>
-
             <dl style="margin:1.25rem 0;padding:1rem;border:1px solid #444;border-radius:0.5rem;font-size:0.9rem;">
                 <div style="margin-bottom:0.75rem;"><dt style="font-weight:600;color:#93c5fd;display:inline;">Lokacija:</dt> <dd style="display:inline;margin:0;">Geislingen an der Steige (Baden-Württemberg, DE)</dd></div>
                 <div style="margin-bottom:0.75rem;"><dt style="font-weight:600;color:#93c5fd;display:inline;">Jezici saradnje:</dt> <dd style="display:inline;margin:0;">sr, en, de, it, sq — 5 jezika</dd></div>
                 <div style="margin-bottom:0.75rem;"><dt style="font-weight:600;color:#93c5fd;display:inline;">Odgovor na upit:</dt> <dd style="display:inline;margin:0;">obično do 24 sata</dd></div>
                 <div><dt style="font-weight:600;color:#93c5fd;display:inline;">Primarna zona:</dt> <dd style="display:inline;margin:0;">EU (mala preduzeća)</dd></div>
             </dl>
+
+            <h2 id="seo-stats" style="font-size: 1.15rem; color: #fff; margin-top: 1.35rem;">AGR Multimedia u brojkama</h2>
+            <p>Mi vodimo projekte iz jednog mesta. Naše interne kontrole tokom projekata pokazuju da jasan brief skraćuje iteracije. Međutim, brojke su okvir—vi dobijate tačan plan u pisanom dogovoru.</p>
+            <table style="width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.9rem;">
+                <caption style="text-align:left;font-weight:600;color:#fff;padding-bottom:0.5rem;">Podaci koje javno koristimo u komunikaciji sa klijentima</caption>
+                <thead><tr style="border-bottom:1px solid #444;"><th style="text-align:left;padding:0.35rem;">Pokazatelj</th><th style="text-align:left;padding:0.35rem;">Vrednost</th></tr></thead>
+                <tbody>
+                    <tr style="border-bottom:1px solid #333;"><td style="padding:0.35rem;">Jezika konsultacija</td><td style="padding:0.35rem;">5 jezika (sr, en, de, it, sq)</td></tr>
+                    <tr style="border-bottom:1px solid #333;"><td style="padding:0.35rem;">Tipičan odgovor na upit</td><td style="padding:0.35rem;">do 24 h u radnim danima</td></tr>
+                    <tr style="border-bottom:1px solid #333;"><td style="padding:0.35rem;">QA korak pre produkcije</td><td style="padding:0.35rem;">100% projekata dobija ručnu reviziju ključnih stranica</td></tr>
+                    <tr style="border-bottom:1px solid #333;"><td style="padding:0.35rem;">Nivo dostupnosti kontakt kanala</td><td style="padding:0.35rem;">forma i email 24/7; odgovor tima ciljno do 24 h</td></tr>
+                    <tr><td style="padding:0.35rem;">Primarni hosting SLA (Vercel edge)</td><td style="padding:0.35rem;">cilj 99,9% uptime na produkciji</td></tr>
+                </tbody>
+            </table>
+
+            <h2 id="seo-defs" style="font-size: 1.15rem; color: #fff; margin-top: 1.35rem;">Definicije koje često pitaju AI pretraživači</h2>
+            <p><strong>AEO</strong> (Answer Engine Optimization) je skup radnih navika da odgovori budu jasni u jednoj rečenici i da struktura stranice pomogne izvodljivim citatima.</p>
+            <p><strong>GEO</strong> (Generative Engine Optimization) je sklad sadržaja sa načinom na koji generativni modeli biraju izvore—jasni naslovi, dokazi i razlike u perspektivi.</p>
+            <p><strong>Multimedia</strong> je u našem radu spoj teksta, slike, videa i zvuka u jedinstven sistem koji ponovo koristite na sajtu i društvenim mrežama.</p>
+
+            <h2 id="seo-video" style="font-size: 1.15rem; color: #fff; margin-top: 1.35rem;">Video: zašto brzina i čitljivost ulaze u SEO razgovor</h2>
+            <p>Mi ubacujemo edukativni video koji veže performanse i korisnike. Međutim, ovaj prikaz radi i bez JavaScript-a u podržanim pregledačima.</p>
+            <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border:1px solid #333;border-radius:0.5rem;margin:1rem 0;">
+                <iframe title="Google Search Central — uvod u SEO i pretraživanje (Web Vitals)" src="https://www.youtube-nocookie.com/embed/wbsISIAy-hY" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <p style="font-size:0.85rem;color:#9ca3af;margin-top:0;">Izvor videa: Google Search Central (YouTube).</p>
+
+            <h2 id="seo-perspectives" style="font-size: 1.15rem; color: #fff; margin-top: 1.35rem;">Tri perspektive o AI trendovima i web dizajnu</h2>
+            <p>Sa jedne strane, šabloni donose brzinu starta. Međutim, ja i naš tim vidimo da diferenc traži poseban raspored i fotografiju.</p>
+            <p>S druge strane, čist AI bez revizije često zvuči isto kao konkurencija. Stoga mi držimo ljudski pregled pre objave.</p>
+            <p>Iako je AI trend popularan, hibrid koji mi nudimo spaja brzinu alata i odgovornost dizajnera. Na primer, mi označavamo šta je predlog mašine.</p>
 
             <h2 style="font-size: 1.15rem; color: #fff; margin-top: 1.35rem;">Usluge</h2>
             <p>Mi pokrivamo web dizajn, grafiku, video i AI podršku. Međutim, obim prilagođavamo vašem budžetu. Na primer, možemo početi od jedne landing stranice.</p>
@@ -318,6 +396,10 @@
                     <li><a href="#seo-topic-hybrid" style="color:#93c5fd;">Zašto je hibrid bolji od čistog šablona ili „samo AI bez dizajn tima”?</a></li>
                     <li><a href="#seo-topic-why" style="color:#93c5fd;">Zašto baš AGR Multimedia za web i grafiku?</a></li>
                     <li><a href="#seo-topic-kickoff" style="color:#93c5fd;">Kako izgleda start projekta i šta doneti na prvi poziv?</a></li>
+                    <li><a href="#seo-stats" style="color:#93c5fd;">AGR Multimedia u brojkama</a></li>
+                    <li><a href="#seo-defs" style="color:#93c5fd;">Definicije AEO, GEO i multimedia</a></li>
+                    <li><a href="#seo-video" style="color:#93c5fd;">Video o performansama i SEO kontekstu</a></li>
+                    <li><a href="#seo-perspectives" style="color:#93c5fd;">Tri perspektive o AI i web dizajnu</a></li>
                 </ol>
             </nav>
 
@@ -433,12 +515,16 @@
 
             <h2 style="font-size: 1.15rem; color: #fff; margin-top: 1.35rem;">Trust signali i alati</h2>
             <p>U radu koristimo profesionalne alate i cloud platforme. Na primer: Adobe alati za dizajn, Google Cloud za infrastrukturu i Vercel za isporuku frontenda.</p>
+            <p>Mi držimo isti pipeline za izvoz PDF-a i WEBP-a. Međutim, ako vi koristite drugi CMS, mi prilagođavamo paket datoteka. Stoga ne ostajete zaključani u jednom alatu.</p>
+            <p>Shodno tome, naš QA lista pokriva kontrast, veličinu dodira na mobilnom i forme. Preciznije rečeno, mi testiramo na pravim uređajima kad god je moguće.</p>
             <figure style="margin:0.75rem 0;padding:0.75rem;border:1px solid #333;border-radius:0.5rem;">
                 <figcaption style="font-size:0.8rem;color:#9ca3af;">Alati koje koristimo: Adobe · Google Cloud · Vercel.</figcaption>
             </figure>
 
             <h2 style="font-size: 1.15rem; color: #fff; margin-top: 1.35rem;">Zaključak</h2>
             <p>Mi verujemo da je najbolji rezultat spoj estetike i tehnike. Međutim, bez jasnog procesa to ne traje dugo. Stoga naš tim i ja radimo iterativno, sa merljivim koracima i pisanim dogovorom.</p>
+            <p>Na kraju, ja AGR Multimedia tim garantujem da ćete znati šta je automatizovano, a šta ručno potvrđeno. Na primer, mi vam šaljemo kratak changelog posle većih izmena.</p>
+            <p>Trebalo bi da probate jedan jasan CTA po stranici pre širenja sadržaja. Probajte ovaj korak sedam dana. Naš sledeći korak zajedno može biti merenje klika i poziva.</p>
 
             <h2 style="font-size: 1.15rem; color: #fff; margin-top: 1.35rem;">Šta bi trebalo da probate</h2>
             <ol style="margin-top:0.5rem;padding-left:1.25rem;">
