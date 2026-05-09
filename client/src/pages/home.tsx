@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import HomeServices from "@/components/HomeServices";
 import CaseStudyThearRealm from "@/components/CaseStudyThearRealm";
 import TrustIntro from "@/components/TrustIntro";
+import OptimizationExcellence from "@/components/OptimizationExcellence";
 import HomeSeoSection from "@/components/HomeSeoSection";
 import WhyChooseMe from "@/components/WhyChooseMe";
 import Testimonials from "@/components/Testimonials";
@@ -33,6 +34,7 @@ export default function Home() {
       <main id="main-content" aria-label={MAIN_LANDMARK_LABEL[currentLanguage]}>
         <Hero />
         <TrustIntro />
+        <OptimizationExcellence />
         <HomeSeoSection />
         <WhyChooseMe />
         <Testimonials />
