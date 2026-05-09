@@ -53,6 +53,24 @@ const body = `
                 <h2 id="opt-excel-h2" style="font-size:1.22rem;color:#fff;margin:0.45rem 0 0.85rem 0;line-height:1.3;">Izuzetnost u optimizaciji: tehnički SEO, AEO i GEO</h2>
                 <p style="margin:0 0 0.75rem 0;">Usklađujemo sajt za klasičnu pretragu, odgovorne sisteme i generativno pronalaženje — uz merljive skorove i jasnu kvalitetnu granicu. Godine 2026. „malo bolje“ više nije dovoljno: korisnici i AI sistemi očekuju brze, proverljive i strukturisane odgovore. <strong>Grade A</strong> signal znači da vas brend izgleda tehnički uredno i pouzdano pre nego što neko pročita ceo uvod.</p>
                 <p style="margin:0 0 1rem 0;">Optimizujemo za Google i klasičnu pretragu, a sadržaj strukturišemo tako da modeli kao ChatGPT i Gemini mogu tačno da citiraju vaše stranice kada predlažu rešenja. Tri stuba: <strong>SEO i tehnička izvrsnost</strong> (indeksiranje, performanse, Core Web Vitals, strukturisani podaci); <strong>AEO</strong> (jasni odgovori i definicije za sisteme odgovora); <strong>GEO / Generative Engine Optimization</strong> (transparentnost i pouzdani izvori za generativne modele).</p>
+                <div id="agr-multimedia-benchmark" style="margin:1.25rem 0;padding:1rem 1.1rem;border:1px solid rgba(129,140,248,0.38);border-radius:0.65rem;background:linear-gradient(165deg,rgba(49,46,129,0.35),rgba(7,7,11,0.92));">
+                    <p style="margin:0;font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:#a5b4fc;">Naš sopstveni benchmark</p>
+                    <h3 style="font-size:1.05rem;color:#fff;margin:0.45rem 0 0.55rem 0;line-height:1.35;">Isti standard primenjujemo na agrmultimedia.eu</h3>
+                    <p style="margin:0 0 0.65rem;font-size:0.9rem;">Naš sajt nije samo vizit karta, već dokaz naše ekspertize. Dokazujemo naš standard kroz SEO skor od 92, osiguravajući da naša tehnologija uvek prati najnovije algoritme pretrage.</p>
+                    <p style="margin:0 0 0.75rem;padding:0.65rem;border-radius:0.45rem;border:1px solid rgba(129,140,248,0.35);background:rgba(67,56,202,0.2);font-size:0.82rem;line-height:1.55;">Sistem je klasifikovao sajt kao SaaS tip (50% pouzdanosti klasifikacije), što dodatno naglašava našu tehničku dubinu i funkcionalnost koju gradimo.</p>
+                    <p style="margin:0 0 0.45rem;font-size:0.72rem;color:#9ca3af;">www.agrmultimedia.eu — izveštaj od 9. maj 2026.</p>
+                    <img src="/agrmultimedia-benchmark.jpg" alt="SEO AEO GEO izveštaj za www.agrmultimedia.eu — ukupno Grade A, SEO 92, AEO 83, GEO 78, tip sajta SaaS" width="1200" height="675" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;border-radius:0.45rem;border:1px solid rgba(255,255,255,0.08);" />
+                    <table style="width:100%;border-collapse:collapse;margin:0.75rem 0 0;font-size:0.85rem;">
+                        <caption style="text-align:left;font-weight:600;color:#e0e7ff;padding-bottom:0.35rem;">www.agrmultimedia.eu — trenutni skorovi (9. maj 2026.)</caption>
+                        <thead><tr style="border-bottom:1px solid #444;"><th scope="col" style="text-align:left;padding:0.35rem;">Oblast</th><th scope="col" style="text-align:left;padding:0.35rem;">Skor</th></tr></thead>
+                        <tbody>
+                            <tr style="border-bottom:1px solid #333;"><td style="padding:0.35rem;">SEO</td><td style="padding:0.35rem;color:#6ee7b7;">92</td></tr>
+                            <tr style="border-bottom:1px solid #333;"><td style="padding:0.35rem;">AEO</td><td style="padding:0.35rem;color:#6ee7b7;">83</td></tr>
+                            <tr style="border-bottom:1px solid #333;"><td style="padding:0.35rem;">GEO</td><td style="padding:0.35rem;color:#6ee7b7;">78</td></tr>
+                            <tr><td style="padding:0.35rem;font-weight:600;">Ukupno</td><td style="padding:0.35rem;font-weight:600;color:#c7d2fe;">86 — Grade A</td></tr>
+                        </tbody>
+                    </table>
+                </div>
                 <p style="margin:0 0 0.65rem 0;font-weight:600;color:#a7f3d0;">fixbike.online — skorovi posle optimizacije (9. maj 2026.)</p>
                 <table style="width:100%;border-collapse:collapse;margin:0.5rem 0 1rem;font-size:0.88rem;">
                     <caption style="text-align:left;font-weight:600;color:#fff;padding-bottom:0.4rem;">Merenje po oblastima — SEO 88, AEO 85, GEO 90, ukupno 88 (Grade A)</caption>

@@ -16,6 +16,16 @@ const FIXBIKE_IMG = {
   after: "/fixbike-after.jpg",
 } as const;
 
+/** Current audit — www.agrmultimedia.eu (May 9, 2026) */
+const SCORES_AGR = {
+  seo: 92,
+  aeo: 83,
+  geo: 78,
+  overall: 86,
+} as const;
+
+const AGR_BENCHMARK_IMG = "/agrmultimedia-benchmark.jpg";
+
 function useCountUp(end: number, durationMs: number, active: boolean): number {
   const [value, setValue] = useState(0);
   useEffect(() => {
@@ -190,6 +200,71 @@ export default function OptimizationExcellence() {
               <p className="mt-2 text-sm leading-relaxed text-white/70">{p.body}</p>
             </article>
           ))}
+        </div>
+
+        <div
+          id="agr-multimedia-benchmark"
+          className="mt-14 rounded-2xl border border-indigo-500/35 bg-gradient-to-br from-indigo-950/50 via-[#0a0e18] to-[#07070b] p-6 shadow-[0_0_48px_rgba(99,102,241,0.14)] md:p-8"
+        >
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-indigo-300/90">{t.benchmarkEyebrow}</p>
+          <h3 className="mt-3 text-xl font-semibold tracking-tight text-white md:text-2xl">{t.benchmarkTitle}</h3>
+          <p className="mt-5 max-w-3xl text-base leading-relaxed text-white/80">{t.benchmarkTrust}</p>
+          <p className="mt-5 rounded-xl border border-indigo-400/25 bg-indigo-500/[0.12] px-4 py-3 text-sm leading-relaxed text-indigo-50/95">
+            {t.benchmarkSaasNote}
+          </p>
+          <p className="mt-3 text-xs text-white/45">{t.benchmarkReportMeta}</p>
+          <div className="mt-5 overflow-hidden rounded-xl border border-white/[0.08] bg-white/[0.02] shadow-inner">
+            <img
+              src={AGR_BENCHMARK_IMG}
+              alt={t.benchmarkImgAlt}
+              width={1200}
+              height={675}
+              loading="lazy"
+              decoding="async"
+              className="h-auto w-full object-cover object-top"
+            />
+          </div>
+          <div className="mt-6 overflow-x-auto rounded-xl border border-white/[0.08]">
+            <table className="w-full min-w-[280px] border-collapse text-left text-sm">
+              <caption className="sr-only">{t.benchmarkTableCaption}</caption>
+              <thead>
+                <tr className="border-b border-white/[0.1] bg-white/[0.03]">
+                  <th scope="col" className="px-4 py-3 font-semibold text-white/90">
+                    {t.colArea}
+                  </th>
+                  <th scope="col" className="px-4 py-3 font-semibold text-indigo-200">
+                    {t.colScore}
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="text-white/85">
+                <tr className="border-b border-white/[0.06]">
+                  <td className="px-4 py-3">{t.rowSeo}</td>
+                  <td className="px-4 py-3 font-mono text-lg font-semibold tabular-nums text-emerald-300">
+                    {SCORES_AGR.seo}
+                  </td>
+                </tr>
+                <tr className="border-b border-white/[0.06]">
+                  <td className="px-4 py-3">{t.rowAeo}</td>
+                  <td className="px-4 py-3 font-mono text-lg font-semibold tabular-nums text-emerald-300">
+                    {SCORES_AGR.aeo}
+                  </td>
+                </tr>
+                <tr className="border-b border-white/[0.06]">
+                  <td className="px-4 py-3">{t.rowGeo}</td>
+                  <td className="px-4 py-3 font-mono text-lg font-semibold tabular-nums text-emerald-300">
+                    {SCORES_AGR.geo}
+                  </td>
+                </tr>
+                <tr className="bg-indigo-500/10">
+                  <td className="px-4 py-3 font-semibold text-white">{t.rowOverall}</td>
+                  <td className="px-4 py-3 font-mono text-xl font-bold tabular-nums text-indigo-100">
+                    {SCORES_AGR.overall} — Grade A
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
         <div className="mt-14 rounded-2xl border border-emerald-500/25 bg-[#0c1018]/90 p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-md md:p-8">

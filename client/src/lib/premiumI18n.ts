@@ -56,6 +56,13 @@ type PremiumTranslations = {
     imgAltBefore: string;
     imgAltAfter: string;
     cta: string;
+    benchmarkEyebrow: string;
+    benchmarkTitle: string;
+    benchmarkTrust: string;
+    benchmarkSaasNote: string;
+    benchmarkReportMeta: string;
+    benchmarkImgAlt: string;
+    benchmarkTableCaption: string;
   };
   services: {
     eyebrow: string;
@@ -135,6 +142,16 @@ const en: PremiumTranslations = {
     imgAltBefore: "SEO AEO GEO audit report for fixbike.online — May 8 2026, Grade F overall",
     imgAltAfter: "SEO AEO GEO audit report for fixbike.online — May 9 2026, Grade A overall",
     cta: "Request a free SEO/AI analysis of your site",
+    benchmarkEyebrow: "Our own benchmark",
+    benchmarkTitle: "We apply the same bar to agrmultimedia.eu",
+    benchmarkTrust:
+      "Our site is not just a business card—it is proof of our expertise. We demonstrate our standard with an SEO score of 92, keeping our technology aligned with the latest search algorithms.",
+    benchmarkSaasNote:
+      "The audit engine classified this site as SaaS-type (50% confidence)—a useful signal of technical depth, productized delivery, and real functionality under the hood.",
+    benchmarkReportMeta: "www.agrmultimedia.eu — report generated May 9, 2026",
+    benchmarkImgAlt:
+      "SEO AEO GEO report for www.agrmultimedia.eu — overall Grade A, SEO 92, AEO 83, GEO 78, site type SaaS",
+    benchmarkTableCaption: "www.agrmultimedia.eu — current scores (May 9, 2026)",
   },
   services: {
     eyebrow: "Capabilities",
@@ -238,6 +255,16 @@ const de: PremiumTranslations = {
     imgAltBefore: "SEO/AEO/GEO Audit fixbike.online — 8. Mai 2026, Gesamt Grade F",
     imgAltAfter: "SEO/AEO/GEO Audit fixbike.online — 9. Mai 2026, Gesamt Grade A",
     cta: "Kostenlose SEO/KI-Analyse Ihrer Website anfordern",
+    benchmarkEyebrow: "Unser eigener Benchmark",
+    benchmarkTitle: "Wir messen auch agrmultimedia.eu an derselben Leiste",
+    benchmarkTrust:
+      "Unsere Website ist keine reine Visitenkarte, sondern ein Nachweis unserer Expertise. Mit einem SEO-Score von 92 zeigen wir unseren Standard und halten unsere Technologie an aktuelle Suchalgorithmen ausgerichtet.",
+    benchmarkSaasNote:
+      "Das Audit-System hat die Seite als SaaS-Typ klassifiziert (50 % Konfidenz)—ein zusätzliches Signal für technische Tiefe und echte Funktionalität hinter dem Auftritt.",
+    benchmarkReportMeta: "www.agrmultimedia.eu — Bericht vom 9. Mai 2026",
+    benchmarkImgAlt:
+      "SEO/AEO/GEO Bericht www.agrmultimedia.eu — Gesamt Grade A, SEO 92, AEO 83, GEO 78, Site-Typ SaaS",
+    benchmarkTableCaption: "www.agrmultimedia.eu — aktuelle Werte (9. Mai 2026)",
   },
   services: {
     eyebrow: "Leistungen",
@@ -341,6 +368,16 @@ const sr: PremiumTranslations = {
     imgAltBefore: "SEO/AEO/GEO izveštaj za fixbike.online — 8. maj 2026, ukupno Grade F",
     imgAltAfter: "SEO/AEO/GEO izveštaj za fixbike.online — 9. maj 2026, ukupno Grade A",
     cta: "Zatražite besplatnu SEO/AI analizu vašeg sajta",
+    benchmarkEyebrow: "Naš sopstveni benchmark",
+    benchmarkTitle: "Isti standard primenjujemo na agrmultimedia.eu",
+    benchmarkTrust:
+      "Naš sajt nije samo vizit karta, već dokaz naše ekspertize. Dokazujemo naš standard kroz SEO skor od 92, osiguravajući da naša tehnologija uvek prati najnovije algoritme pretrage.",
+    benchmarkSaasNote:
+      "Sistem je klasifikovao sajt kao SaaS tip (50% pouzdanosti klasifikacije), što dodatno naglašava našu tehničku dubinu i funkcionalnost koju gradimo.",
+    benchmarkReportMeta: "www.agrmultimedia.eu — izveštaj od 9. maj 2026.",
+    benchmarkImgAlt:
+      "SEO/AEO/GEO izveštaj za www.agrmultimedia.eu — ukupno Grade A, SEO 92, AEO 83, GEO 78, tip sajta SaaS",
+    benchmarkTableCaption: "www.agrmultimedia.eu — trenutni skorovi (9. maj 2026.)",
   },
   services: {
     eyebrow: "Usluge",
@@ -444,6 +481,16 @@ const it: PremiumTranslations = {
     imgAltBefore: "Report SEO/AEO/GEO fixbike.online — 8 mag 2026, totale Grade F",
     imgAltAfter: "Report SEO/AEO/GEO fixbike.online — 9 mag 2026, totale Grade A",
     cta: "Richiedi un’analisi SEO/AI gratuita del tuo sito",
+    benchmarkEyebrow: "Il nostro benchmark interno",
+    benchmarkTitle: "Applichiamo la stessa soglia anche ad agrmultimedia.eu",
+    benchmarkTrust:
+      "Il nostro sito non è solo un biglietto da visita: è la prova della nostra expertise. Lo dimostriamo con uno score SEO di 92, mantenendo lo stack allineato agli algoritmi di ricerca piu recenti.",
+    benchmarkSaasNote:
+      "Il motore di audit ha classificato il sito come tipo SaaS (confidenza 50%)—un segnale ulteriore di profondita tecnica e funzionalita reale.",
+    benchmarkReportMeta: "www.agrmultimedia.eu — report del 9 maggio 2026",
+    benchmarkImgAlt:
+      "Report SEO/AEO/GEO www.agrmultimedia.eu — totale Grade A, SEO 92, AEO 83, GEO 78, tipo sito SaaS",
+    benchmarkTableCaption: "www.agrmultimedia.eu — punteggi attuali (9 maggio 2026)",
   },
   services: {
     eyebrow: "Servizi",
@@ -547,6 +594,16 @@ const al: PremiumTranslations = {
     imgAltBefore: "Raport SEO/AEO/GEO për fixbike.online — 8 maj 2026, total Grade F",
     imgAltAfter: "Raport SEO/AEO/GEO për fixbike.online — 9 maj 2026, total Grade A",
     cta: "Kërko analizë falas SEO/AI të faqes suaj",
+    benchmarkEyebrow: "Benchmark-i ynë",
+    benchmarkTitle: "E njëjta shiritë matjeje për agrmultimedia.eu",
+    benchmarkTrust:
+      "Faqja jonë nuk është thjesht një kartëvizitë, por provë e ekspertizës sonë. E dëshmojmë standardin me një skor SEO 92 dhe mbajmë teknologjinë të përputhur me algoritmet më të fundit të kërkimit.",
+    benchmarkSaasNote:
+      "Motori i auditimit e klasifikoi faqen si tip SaaS (50% besueshmëri)—një sinjal shtesë për thellësi teknike dhe funksionalitet të ndërtuar mirë.",
+    benchmarkReportMeta: "www.agrmultimedia.eu — raporti i 9 maj 2026",
+    benchmarkImgAlt:
+      "Raport SEO/AEO/GEO për www.agrmultimedia.eu — total Grade A, SEO 92, AEO 83, GEO 78, lloji SaaS",
+    benchmarkTableCaption: "www.agrmultimedia.eu — rezultatet aktuale (9 maj 2026)",
   },
   services: {
     eyebrow: "Sherbime",
