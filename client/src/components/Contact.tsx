@@ -4,7 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { PHONE_DISPLAY, PHONE_TEL } from "@/lib/contact";
-import { submitContactForm } from "@/lib/contactSubmit";
+import { getEmailJsErrorMessage, isEmailJsConfigured, sendContactViaEmailJs } from "@/lib/emailjsContact";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
@@ -78,31 +78,29 @@ export default function Contact({ asPage = false }: ContactProps) {
       return;
     }
 
+    if (!isEmailJsConfigured()) {
+      setSubmitState("error");
+      setFeedback(t.contact.error.emailjsMissing);
+      return;
+    }
+
     setSubmitState("loading");
     try {
-      const result = await submitContactForm({
-        name: n,
-        email: em,
+      await sendContactViaEmailJs({
+        fromName: n,
+        fromEmail: em,
         message: msg,
         subject: t.contact.form.emailSubject,
       });
-      if (result.ok) {
-        setSubmitState("success");
-        setName("");
-        setEmail("");
-        setMessage("");
-      } else {
-        setSubmitState("error");
-        setFeedback(
-          result.detail
-            ? `${t.contact.error.description} (${result.detail})`
-            : t.contact.error.description,
-        );
-      }
+      setSubmitState("success");
+      setName("");
+      setEmail("");
+      setMessage("");
     } catch (err) {
       setSubmitState("error");
-      setFeedback(t.contact.error.description);
-      if (import.meta.env.DEV) console.error("[contact]", err);
+      const detail = getEmailJsErrorMessage(err);
+      setFeedback(`${t.contact.error.description} (${detail})`);
+      if (import.meta.env.DEV) console.error("[EmailJS]", err);
     }
   }
 
