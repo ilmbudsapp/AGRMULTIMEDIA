@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.agrmultimedia.eu/sitemap.xml
-
+Sitemap: https://agrmultimedia.eu/sitemap.xml

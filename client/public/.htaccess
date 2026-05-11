@@ -1,0 +1,23 @@
+# agrmultimedia.eu — static crawler files; SPA fallback for app routes
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  RewriteRule ^(sitemap\.xml|robots\.txt|feed\.atom\.xml|llms\.txt|manifest\.json|agrmm2026indexnowkey01\.txt)$ - [L]
+
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+<IfModule mod_mime.c>
+  AddType application/xml .xml
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "^(sitemap\.xml|feed\.atom\.xml)$">
+    Header set Content-Type "application/xml; charset=UTF-8"
+  </FilesMatch>
+</IfModule>
