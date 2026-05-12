@@ -26,5 +26,5 @@ if (!sitemap.startsWith("<?xml")) {
   process.exit(1);
 }
 
-console.log(`OK: client/public assets are deployed from ${outputDir}`);
-console.log("OK: sitemap.xml is available at /sitemap.xml on the production host");
+console.log(`OK: production static files are deployed from ${outputDir}`);
+console.log("OK: root sitemap.xml is published at /sitemap.xml");

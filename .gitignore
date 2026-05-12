@@ -10,3 +10,6 @@ vite.config.ts.*
 
 # Optional local QR / marketing file (not required for the site build)
 /agrmultimedia-qr.png
+
+# Generated from root sitemap.xml during build
+client/public/sitemap.xml
