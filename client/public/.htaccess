@@ -1,16 +1,16 @@
-# agrmultimedia.eu — static sitemap/robots; no SPA rewrite; no compression on XML
+# agrmultimedia.eu — direct bypass for crawler files; SPA fallback only after
 Options -MultiViews
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
 
-  RewriteRule ^sitemap\.xml$ - [END]
-  RewriteRule ^robots\.txt$ - [END]
-  RewriteRule ^feed\.atom\.xml$ - [END]
-  RewriteRule ^llms\.txt$ - [END]
-  RewriteRule ^manifest\.json$ - [END]
-  RewriteRule ^agrmm2026indexnowkey01\.txt$ - [END]
+  RewriteRule ^sitemap\.xml$ - [L,NC]
+  RewriteRule ^robots\.txt$ - [L,NC]
+  RewriteRule ^feed\.atom\.xml$ - [L,NC]
+  RewriteRule ^llms\.txt$ - [L,NC]
+  RewriteRule ^manifest\.json$ - [L,NC]
+  RewriteRule ^agrmm2026indexnowkey01\.txt$ - [L,NC]
 
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
