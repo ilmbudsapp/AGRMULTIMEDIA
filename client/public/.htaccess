@@ -1,9 +1,14 @@
-# agrmultimedia.eu — static crawler files; SPA fallback for app routes
+# agrmultimedia.eu — crawler files as static XML/text; SPA fallback for app routes
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
 
-  RewriteRule ^(sitemap\.xml|robots\.txt|feed\.atom\.xml|llms\.txt|manifest\.json|agrmm2026indexnowkey01\.txt)$ - [L]
+  RewriteRule ^sitemap\.xml$ - [L]
+  RewriteRule ^robots\.txt$ - [L]
+  RewriteRule ^feed\.atom\.xml$ - [L]
+  RewriteRule ^llms\.txt$ - [L]
+  RewriteRule ^manifest\.json$ - [L]
+  RewriteRule ^agrmm2026indexnowkey01\.txt$ - [L]
 
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
@@ -12,12 +17,33 @@
   RewriteRule ^ index.html [L]
 </IfModule>
 
+<IfModule mod_authz_core.c>
+  <FilesMatch "^(sitemap\.xml|robots\.txt|feed\.atom\.xml)$">
+    Require all granted
+  </FilesMatch>
+</IfModule>
+
 <IfModule mod_mime.c>
   AddType application/xml .xml
+  <Files "sitemap.xml">
+    ForceType application/xml
+  </Files>
+  <Files "feed.atom.xml">
+    ForceType application/xml
+  </Files>
 </IfModule>
 
 <IfModule mod_headers.c>
-  <FilesMatch "^(sitemap\.xml|feed\.atom\.xml)$">
+  <Files "sitemap.xml">
     Header set Content-Type "application/xml; charset=UTF-8"
-  </FilesMatch>
+    Header unset X-Robots-Tag
+  </Files>
+  <Files "robots.txt">
+    Header set Content-Type "text/plain; charset=UTF-8"
+    Header unset X-Robots-Tag
+  </Files>
+  <Files "feed.atom.xml">
+    Header set Content-Type "application/xml; charset=UTF-8"
+    Header unset X-Robots-Tag
+  </Files>
 </IfModule>
