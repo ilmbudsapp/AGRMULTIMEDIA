@@ -338,14 +338,14 @@ export default function TonisAutopflegeDemo() {
         <div className="pointer-events-none absolute inset-0 z-0 bg-[#030306]" aria-hidden="true" />
 
         <motion.div
-          className="pointer-events-none absolute left-0 right-0 top-[4.75rem] z-0 flex justify-center px-4 md:top-[5rem] md:px-8"
+          className="pointer-events-none absolute left-0 right-0 top-[4.5rem] z-0 flex justify-center px-2 sm:px-4 md:top-[4.75rem] md:px-6 lg:px-10"
           style={reduceMotion ? undefined : { y: videoY }}
         >
-          <div className="relative w-full max-w-5xl overflow-hidden rounded-2xl border border-white/[0.07] bg-black shadow-[0_28px_90px_rgba(0,0,0,0.65)] ring-1 ring-black/40">
-            <div className="relative mx-auto aspect-[21/9] w-full max-h-[min(42vh,420px)] min-h-[160px] sm:max-h-[min(46vh,460px)] md:max-h-[min(48vh,500px)]">
+          <div className="relative w-full max-w-[min(100%,1680px)] overflow-hidden rounded-xl border border-white/[0.07] bg-black shadow-[0_28px_90px_rgba(0,0,0,0.65)] ring-1 ring-black/40 sm:rounded-2xl">
+            <div className="relative mx-auto aspect-[21/9] w-full min-h-[220px] max-h-[min(64vh,820px)] sm:min-h-[260px] sm:max-h-[min(68vh,880px)] md:max-h-[min(72vh,920px)]">
               <video
                 key={heroVideoSrc}
-                className="tonis-hero-video absolute inset-0 h-full w-full object-contain"
+                className="tonis-hero-video absolute inset-0 h-full w-full object-cover object-center"
                 autoPlay
                 muted
                 playsInline
