@@ -356,6 +356,12 @@ const EXTRA_EN: Record<string, RouteSeo> = {
     description: "Structural and graphic packaging design for retail and online brands.",
     keywords: "packaging design, graphic design, brand packaging, Geislingen",
   },
+  "/demo/tonis-autopflege": {
+    title: "Toni's Autopflege Göppingen — demo landing (AGR Multimedia)",
+    description:
+      "Demo presentation: premium car care — interior cleaning, polish, ceramic coating. Developed by AGR Multimedia.",
+    keywords: "Autopflege Göppingen, demo, car detailing, AGR Multimedia",
+  },
 };
 
 const EXTRA_DE: Record<string, RouteSeo> = {
@@ -477,6 +483,12 @@ const EXTRA_DE: Record<string, RouteSeo> = {
     description: "Grafik- und Verpackungsdesign für Retail und Marken.",
     keywords: "Verpackungsdesign, Grafikdesign, Geislingen",
   },
+  "/demo/tonis-autopflege": {
+    title: "Toni's Autopflege | Premium-Fahrzeugpflege Göppingen (Demo)",
+    description:
+      "Demo-Landingpage: Lackaufbereitung, Innenreinigung, Politur, Keramikversiegelung — Entwicklung AGR Multimedia.",
+    keywords: "Autopflege Göppingen, Lackpflege, Keramikversiegelung, Demo",
+  },
 };
 
 const EXTRA_IT: Record<string, RouteSeo> = {
@@ -593,6 +605,12 @@ const EXTRA_IT: Record<string, RouteSeo> = {
     title: "Case study packaging design | AGR Multimedia",
     description: "Design di packaging per retail e brand.",
     keywords: "packaging design, graphic design, Geislingen",
+  },
+  "/demo/tonis-autopflege": {
+    title: "Toni's Autopflege Göppingen — landing demo | AGR Multimedia",
+    description:
+      "Presentazione demo: cura auto premium, lucidatura, coating ceramico — sviluppo AGR Multimedia.",
+    keywords: "Autopflege, Göppingen, demo, AGR Multimedia",
   },
 };
 
@@ -711,6 +729,12 @@ const EXTRA_SR: Record<string, RouteSeo> = {
     description: "Grafički dizajn pakovanja za maloprodaju i brendove.",
     keywords: "pakovanje dizajn, grafički dizajn, Geislingen",
   },
+  "/demo/tonis-autopflege": {
+    title: "Toni's Autopflege Göppingen — demo landing | AGR Multimedia",
+    description:
+      "Demo prezentacija: premium nega automobila — razvoj AGR Multimedia.",
+    keywords: "Autopflege, Göppingen, demo",
+  },
 };
 
 const EXTRA_AL: Record<string, RouteSeo> = {
@@ -827,6 +851,12 @@ const EXTRA_AL: Record<string, RouteSeo> = {
     title: "Case study dizajn paketimi | AGR Multimedia",
     description: "Dizajn paketimi për shitje me pakicë dhe marka.",
     keywords: "packaging design, graphic design, Geislingen",
+  },
+  "/demo/tonis-autopflege": {
+    title: "Toni's Autopflege Göppingen — demo landing | AGR Multimedia",
+    description:
+      "Paraqitje demo: kujdes premium për automjet — zhvillim AGR Multimedia.",
+    keywords: "Autopflege, Göppingen, demo",
   },
 };
 

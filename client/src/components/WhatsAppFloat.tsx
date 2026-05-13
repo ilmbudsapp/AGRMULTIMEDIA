@@ -1,9 +1,14 @@
+import { useLocation } from "wouter";
 import { WHATSAPP_LINK } from "@/lib/contact";
 
 /**
  * Fiksni plutajući WhatsApp — otvara wa.me u novom tabu / aplikaciji na telefonu.
  */
 export default function WhatsAppFloat() {
+  const [loc] = useLocation();
+  if (loc.startsWith("/demo/")) {
+    return null;
+  }
   return (
     <a
       href={WHATSAPP_LINK}
