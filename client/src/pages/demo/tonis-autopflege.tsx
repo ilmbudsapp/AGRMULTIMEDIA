@@ -8,10 +8,29 @@ import {
   useTransform,
   type Variants,
 } from "framer-motion";
+import { PHONE_DISPLAY, WHATSAPP_E164_DIGITS } from "@/lib/contact";
 
 const DEMO_BASE = "/demo/tonis-autopflege";
-const LOGO_FILE = "TONY LOGO WEBP.webp";
+const LOGO_FILE = "TONY LOGO ISECEN.webp";
 const LOGO_SRC = `${DEMO_BASE}/${encodeURIComponent(LOGO_FILE)}`;
+
+function digitsOnly(s: string): string {
+  return s.replace(/\D/g, "");
+}
+
+function formatWaDisplay(digits: string): string {
+  if (!digits.startsWith("49") || digits.length < 11) return `+${digits}`;
+  const r = digits.slice(2);
+  return `+49 ${r.slice(0, 3)} ${r.slice(3)}`.trim();
+}
+
+const TONI_WA_DIGITS_RAW = digitsOnly(String(import.meta.env.VITE_TONI_WHATSAPP_E164 ?? ""));
+/** Toni's number in .env (VITE_TONI_WHATSAPP_E164); until set, main site WhatsApp is used as fallback. */
+const TONI_WA_DIGITS = TONI_WA_DIGITS_RAW.length >= 10 ? TONI_WA_DIGITS_RAW : WHATSAPP_E164_DIGITS;
+const TONI_WA_HREF = `https://wa.me/${TONI_WA_DIGITS}`;
+const TONI_WA_LABEL =
+  (import.meta.env.VITE_TONI_WHATSAPP_DISPLAY as string | undefined)?.trim() ||
+  (TONI_WA_DIGITS_RAW.length >= 10 ? formatWaDisplay(TONI_WA_DIGITS) : PHONE_DISPLAY);
 const HERO_VIDEO_PRIMARY = `${DEMO_BASE}/${encodeURIComponent("Tony Video Klip kompresovan.mp4")}`;
 const HERO_VIDEO_FALLBACK = "/Video%20Ai/01.mp4";
 const HERO_POSTER = `${DEMO_BASE}/hero-poster.webp`;
@@ -171,8 +190,8 @@ export default function TonisAutopflegeDemo() {
   const LogoImg = ({ className }: { className?: string }) => (
     <img
       src={LOGO_SRC}
-      width={220}
-      height={64}
+      width={320}
+      height={96}
       alt="Toni's Autopflege"
       className={className}
       decoding="async"
@@ -244,17 +263,10 @@ export default function TonisAutopflegeDemo() {
           <motion.div whileHover={reduceMotion ? {} : { scale: 1.02 }} whileTap={{ scale: 0.98 }}>
             <Link
               href="/"
-              className="group relative flex items-center gap-2 rounded-xl bg-white/90 px-2 py-1.5 shadow-sm ring-1 ring-zinc-200/80 outline-none transition hover:ring-[#c9a227]/40 focus-visible:ring-2 focus-visible:ring-[#c9a227]/70"
+              className="group block rounded-sm outline-none ring-offset-2 ring-offset-zinc-100 transition focus-visible:ring-2 focus-visible:ring-[#c9a227]/80"
               title="Zur AGR Multimedia Startseite"
             >
-              <span
-                className="absolute -inset-1 -z-10 rounded-xl opacity-0 blur-xl transition group-hover:opacity-100"
-                style={{
-                  background: "radial-gradient(circle at center, rgba(201,162,39,0.28), transparent 70%)",
-                  animation: reduceMotion ? undefined : "tonis-glow-pulse 2.8s ease-in-out infinite",
-                }}
-              />
-              <LogoImg className="h-10 w-auto object-contain md:h-11" />
+              <LogoImg className="h-[52px] w-auto object-contain object-left md:h-[60px] md:min-h-[60px]" />
               <span className="sr-only">Zur AGR Multimedia Startseite</span>
             </Link>
           </motion.div>
@@ -678,6 +690,26 @@ export default function TonisAutopflegeDemo() {
           </Link>
         </p>
       </footer>
+
+      <motion.a
+        href={TONI_WA_HREF}
+        target="_blank"
+        rel="noopener noreferrer"
+        whileHover={reduceMotion ? {} : { scale: 1.04 }}
+        whileTap={{ scale: 0.97 }}
+        className="fixed z-[60] flex items-center gap-2.5 rounded-full border border-white/20 bg-[#25D366] py-3 pl-3.5 pr-4 text-white shadow-[0_10px_40px_rgba(0,0,0,0.35)] transition hover:shadow-[0_14px_44px_rgba(37,211,102,0.45)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-200 [bottom:calc(1rem+env(safe-area-inset-bottom,0px))] [right:calc(1rem+env(safe-area-inset-right,0px))] max-[380px]:pr-3"
+        aria-label={`WhatsApp — ${TONI_WA_LABEL}`}
+      >
+        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/20">
+          <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" className="block" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.883 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+          </svg>
+        </span>
+        <span className="min-w-0 text-left leading-tight">
+          <span className="block text-sm font-bold tracking-wide">WhatsApp</span>
+          <span className="block truncate text-[11px] font-semibold text-white/90">{TONI_WA_LABEL}</span>
+        </span>
+      </motion.a>
     </div>
   );
 }
