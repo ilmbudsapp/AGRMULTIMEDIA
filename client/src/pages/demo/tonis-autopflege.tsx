@@ -1,5 +1,5 @@
-import { useEffect, useMemo, useRef, useState } from "react";
-import { Link } from "wouter";
+import { useEffect, useMemo, useRef, useState, type MouseEvent } from "react";
+import { Link, useLocation } from "wouter";
 import {
   motion,
   useReducedMotion,
@@ -72,6 +72,12 @@ function scrollToId(id: string) {
   document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
+function normalizePath(p: string): string {
+  const q = p.split("?")[0] ?? p;
+  if (q.length > 1 && q.endsWith("/")) return q.slice(0, -1);
+  return q || "/";
+}
+
 function useDemoFonts() {
   const [ready, setReady] = useState(false);
   useEffect(() => {
@@ -99,8 +105,16 @@ function useDemoFonts() {
 export default function TonisAutopflegeDemo() {
   const reduceMotion = useReducedMotion();
   const fontsReady = useDemoFonts();
+  const [location] = useLocation();
   const [heroVideoSrc, setHeroVideoSrc] = useState(HERO_VIDEO_PRIMARY);
   const heroRef = useRef<HTMLElement | null>(null);
+
+  const onDemoHomeLogoClick = (e: MouseEvent<HTMLAnchorElement>) => {
+    if (normalizePath(location) !== DEMO_BASE) return;
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+    scrollToId("hero");
+  };
 
   const { scrollYProgress } = useScroll({
     target: heroRef,
@@ -262,12 +276,13 @@ export default function TonisAutopflegeDemo() {
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3.5 md:px-8">
           <motion.div whileHover={reduceMotion ? {} : { scale: 1.02 }} whileTap={{ scale: 0.98 }}>
             <Link
-              href="/"
+              href={DEMO_BASE}
+              onClick={onDemoHomeLogoClick}
               className="group block rounded-sm outline-none ring-offset-2 ring-offset-zinc-100 transition focus-visible:ring-2 focus-visible:ring-[#c9a227]/80"
-              title="Zur AGR Multimedia Startseite"
+              title="Zur Startseite (Diese Seite)"
             >
               <LogoImg className="h-[52px] w-auto object-contain object-left md:h-[60px] md:min-h-[60px]" />
-              <span className="sr-only">Zur AGR Multimedia Startseite</span>
+              <span className="sr-only">Zur Startseite — Toni&apos;s Autopflege Demo</span>
             </Link>
           </motion.div>
           <nav className="hidden items-center gap-8 text-[13px] font-semibold uppercase tracking-[0.18em] text-zinc-950 md:flex">
@@ -338,9 +353,10 @@ export default function TonisAutopflegeDemo() {
             transition={{ duration: 0.85, ease: easeOut }}
           >
             <Link
-              href="/"
+              href={DEMO_BASE}
+              onClick={onDemoHomeLogoClick}
               className="group relative inline-block"
-              title="Zur AGR Multimedia Startseite"
+              title="Zur Startseite (Diese Seite)"
             >
               <motion.div
                 whileHover={reduceMotion ? {} : { scale: 1.03 }}
@@ -349,7 +365,7 @@ export default function TonisAutopflegeDemo() {
                 <LogoImg className="mx-auto h-auto w-[min(86vw,480px)] object-contain drop-shadow-[0_8px_48px_rgba(0,0,0,0.6)] transition duration-500 group-hover:drop-shadow-[0_12px_56px_rgba(201,162,39,0.35)]" />
               </motion.div>
               <span className="mt-3 block text-[11px] font-medium uppercase tracking-[0.35em] text-[#c9a227]/70 opacity-0 transition group-hover:opacity-100 md:text-xs">
-                AGR Multimedia · Home
+                Zurück zum Seitenanfang
               </span>
             </Link>
           </motion.div>
