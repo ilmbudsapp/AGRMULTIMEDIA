@@ -262,6 +262,26 @@ const body = `
 
             <h2 style="font-size: 1.15rem; color: #fff; margin-top: 1.35rem;">FAQ</h2>
             <p>Mi odgovaramo na upite brzo. Dakle, najčešća pitanja rešavamo pre starta. Međutim, detaljan opseg dogovaramo na prvom pozivu.</p>
+            <section id="noscript-faq-aeo-geo" lang="sr" style="margin:1rem 0;padding:1rem 1.1rem;border:1px solid rgba(52,211,153,0.28);border-radius:0.55rem;background:rgba(16,185,129,0.06);">
+                <h3 id="noscript-faq-schema-mirror-h3" style="font-size:1.05rem;color:#fff;margin:0 0 0.65rem 0;">Česta pitanja (tekst bez JavaScript-a, usklađeno sa FAQPage šemom)</h3>
+                <p style="margin:0 0 0.85rem 0;font-size:0.88rem;color:#d1d5db;line-height:1.55;">Isti sadržaj kao u JSON-LD FAQPage kada je JS uključen; prevod na en/de/it/sq je u React aplikaciji.</p>
+                <dl style="margin:0;font-size:0.88rem;line-height:1.55;color:#e5e7eb;">
+                    <dt style="font-weight:600;color:#93c5fd;margin-top:0.65rem;">Zašto izabrati AGR Multimedia za web dizajn i grafiku?</dt>
+                    <dd style="margin:0.35rem 0 0 0;color:#d1d5db;">Kombinujemo tehničku SEO-prijateljsku strukturu, pristupačnost i performanse sa dizajnom koji podržava konverzije. Umesto generičkih šablona gradimo hijerarhiju sadržaja i vizuelni jezik prilagođen vašoj publici, uz primere u portfolio delu sajta.</dd>
+                    <dt style="font-weight:600;color:#93c5fd;margin-top:0.65rem;">Kako izgleda proces izrade sajta od prvog poziva do objave?</dt>
+                    <dd style="margin:0.35rem 0 0 0;color:#d1d5db;">Kreće od briefinga i predloga strukture stranica, zatim dizajn i razvoj u iteracijama sa jasnim rokovima. Pre objave testiramo forme, brzinu i mobilni prikaz; po potrebi usklađujemo sadržaj sa digitalnim marketingom i SEO koracima koje možete pratiti.</dd>
+                    <dt style="font-weight:600;color:#93c5fd;margin-top:0.65rem;">Šta sve obuhvata ponuda za mala preduzeća u EU?</dt>
+                    <dd style="margin:0.35rem 0 0 0;color:#d1d5db;">Web i landing stranice, grafički identitet i štampa, video produkcija, kao i AI-pomoć pri kreiranju sadržaja uz ljudsku reviziju kvaliteta — sve sa ciljem merljivih rezultata za mala preduzeća u Nemačkoj, Austriji, Švajcarskoj i širom EU.</dd>
+                    <dt style="font-weight:600;color:#93c5fd;margin-top:0.65rem;">Koliko brzo možete očekivati odgovor i pokretanje projekta?</dt>
+                    <dd style="margin:0.35rem 0 0 0;color:#d1d5db;">Na upite obično odgovaramo u roku od 24 sata i dogovaramo sledeće korake (ciljevi, obim, rokovi). Najbrži način je kontakt forma ili direktan poziv — dobijate predlog bez obaveze.</dd>
+                    <dt style="font-weight:600;color:#93c5fd;margin-top:0.65rem;">Šta je AEO i šta je GEO u kontekstu web sadržaja?</dt>
+                    <dd style="margin:0.35rem 0 0 0;color:#d1d5db;">AEO (Answer Engine Optimization) je praksa pisanja i strukture stranice tako da sistemi odgovora mogu da izvuku jedan jasan citat. GEO (Generative Engine Optimization) je sadržaj sa definicijama, povezanim izvorima i uravnoteženim perspektivama da generativna pretraga može bezbedno da sumarizuje ponudu. AGR Multimedia ih uključuje zajedno sa tehničkim SEO i performansama.</dd>
+                    <dt style="font-weight:600;color:#93c5fd;margin-top:0.65rem;">Zašto su spoljašnji linkovi važni kada AI pretraživači citiraju stranicu?</dt>
+                    <dd style="margin:0.35rem 0 0 0;color:#d1d5db;">Javni izvori (npr. Google Search Central, HTTP Archive) omogućavaju proveru tvrdnji o performansama i smernicama. To podiže pouzdanost za GEO i E-E-A-T signale; operativna obećanja (rok odgovora, obim) ostaju u pisanoj ponudi.</dd>
+                    <dt style="font-weight:600;color:#93c5fd;margin-top:0.65rem;">Kako izgleda „odgovor prvo” na početku ključne stranice?</dt>
+                    <dd style="margin:0.35rem 0 0 0;color:#d1d5db;">Prva rečenica direktno odgovara na glavno korisničko pitanje, zatim sledi lista ili podnaslovi sa detaljima. Taj raspored olakšava skeniranje i pomaže AEO izvodima bez gubitka konteksta.</dd>
+                </dl>
+            </section>
             <h3 style="font-size: 1.05rem; color: #fff; margin-top: 1.5rem;">Ključni pojmovi</h3>
             <dl style="margin:1rem 0;padding-left:0;">
                 <dt style="font-weight:600;color:#fff;margin-top:0.75rem;">On-page SEO</dt>

@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import HomeGeoInsight from "@/components/HomeGeoInsight";
+import HomeFaqJsonLd from "@/components/HomeFaqJsonLd";
 import HomeServices from "@/components/HomeServices";
 import CaseStudyThearRealm from "@/components/CaseStudyThearRealm";
 import TrustIntro from "@/components/TrustIntro";
@@ -46,6 +47,7 @@ export default function Home() {
         <AboutHome />
         <HomeFinalCta />
         <Contact />
+        <HomeFaqJsonLd />
       </main>
       <Footer />
     </div>
