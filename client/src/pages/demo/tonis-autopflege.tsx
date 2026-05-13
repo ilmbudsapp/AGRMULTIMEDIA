@@ -1,17 +1,26 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "wouter";
-import { motion, useReducedMotion } from "framer-motion";
+import {
+  motion,
+  useReducedMotion,
+  useScroll,
+  useSpring,
+  useTransform,
+  type Variants,
+} from "framer-motion";
 
 const DEMO_BASE = "/demo/tonis-autopflege";
-const LOGO_SRC = `${DEMO_BASE}/${encodeURIComponent("TONI LOGO WEBP.webp")}`;
-/** Client video: place `hero.mp4` in `public/demo/tonis-autopflege/`. Until then, a project clip is used. */
-const HERO_VIDEO_PRIMARY = `${DEMO_BASE}/hero.mp4`;
+const LOGO_FILE = "TONY LOGO WEBP.webp";
+const LOGO_SRC = `${DEMO_BASE}/${encodeURIComponent(LOGO_FILE)}`;
+const HERO_VIDEO_PRIMARY = `${DEMO_BASE}/${encodeURIComponent("Tony Video Klip kompresovan.mp4")}`;
 const HERO_VIDEO_FALLBACK = "/Video%20Ai/01.mp4";
 const HERO_POSTER = `${DEMO_BASE}/hero-poster.webp`;
 
-const GALLERY = ["01", "02", "03", "04", "05", "06"].map(
-  (n) => `${DEMO_BASE}/gallery-${n}.webp`,
-);
+const GALLERY_COUNT = 13;
+const GALLERY = Array.from({ length: GALLERY_COUNT }, (_, i) => {
+  const n = String(i + 1).padStart(2, "0");
+  return `${DEMO_BASE}/gallery-${n}.webp`;
+});
 
 const LEISTUNGEN = [
   {
@@ -28,7 +37,7 @@ const LEISTUNGEN = [
   },
   {
     title: "Keramikversiegelung",
-    text: "Langanhaltender Schutz mit hydrophober Oberfläche: weniger Verschmutzung, bessere Ausbeulung und UV-Stabilität.",
+    text: "Langanhaltender Schutz mit hydrophober Oberfläche: weniger Verschmutzung, bessere Perleffekt und UV-Stabilität.",
   },
   {
     title: "Detailing & Feinarbeit",
@@ -44,10 +53,38 @@ function scrollToId(id: string) {
   document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
+function useDemoFonts() {
+  const [ready, setReady] = useState(false);
+  useEffect(() => {
+    const href =
+      "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Syne:wght@500;600;700;800&display=swap";
+    const id = "tonis-demo-fonts-v2";
+    if (document.getElementById(id)) {
+      setReady(true);
+      return;
+    }
+    const link = document.createElement("link");
+    link.id = id;
+    link.rel = "stylesheet";
+    link.href = href;
+    link.onload = () => setReady(true);
+    document.head.appendChild(link);
+  }, []);
+  return ready;
+}
+
 export default function TonisAutopflegeDemo() {
   const reduceMotion = useReducedMotion();
-  const [fontsLoaded, setFontsLoaded] = useState(false);
+  const fontsReady = useDemoFonts();
   const [heroVideoSrc, setHeroVideoSrc] = useState(HERO_VIDEO_PRIMARY);
+  const heroRef = useRef<HTMLElement | null>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"],
+  });
+  const rawParallax = useTransform(scrollYProgress, [0, 1], ["0%", "22%"]);
+  const videoY = useSpring(rawParallax, { stiffness: 100, damping: 28, mass: 0.6 });
 
   useEffect(() => {
     const prevLang = document.documentElement.lang;
@@ -57,339 +94,563 @@ export default function TonisAutopflegeDemo() {
     };
   }, []);
 
-  useEffect(() => {
-    const href =
-      "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap";
-    const id = "tonis-demo-fonts";
-    if (document.getElementById(id)) {
-      setFontsLoaded(true);
-      return;
-    }
-    const link = document.createElement("link");
-    link.id = id;
-    link.rel = "stylesheet";
-    link.href = href;
-    link.onload = () => setFontsLoaded(true);
-    document.head.appendChild(link);
-  }, []);
+  const easeOut = [0.16, 1, 0.3, 1] as const;
 
-  const motionProps = useMemo(
+  const containerSlow: Variants = useMemo(
     () =>
       reduceMotion
-        ? { initial: false, animate: { opacity: 1, y: 0 } }
-        : { initial: { opacity: 0, y: 16 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true, margin: "-40px" } },
+        ? { hidden: {}, visible: { transition: { staggerChildren: 0 } } }
+        : {
+            hidden: {},
+            visible: {
+              transition: { staggerChildren: 0.09, delayChildren: 0.08 },
+            },
+          },
     [reduceMotion],
+  );
+
+  const fadeUp: Variants = useMemo(
+    () =>
+      reduceMotion
+        ? { hidden: { opacity: 1, y: 0 }, visible: { opacity: 1, y: 0 } }
+        : {
+            hidden: { opacity: 0, y: 36, filter: "blur(10px)" },
+            visible: {
+              opacity: 1,
+              y: 0,
+              filter: "blur(0px)",
+              transition: { duration: 0.75, ease: easeOut },
+            },
+          },
+    [reduceMotion],
+  );
+
+  const cardPop: Variants = useMemo(
+    () =>
+      reduceMotion
+        ? { hidden: { opacity: 1, y: 0, scale: 1 }, visible: { opacity: 1, y: 0, scale: 1 } }
+        : {
+            hidden: { opacity: 0, y: 50, scale: 0.92, rotateX: -6 },
+            visible: {
+              opacity: 1,
+              y: 0,
+              scale: 1,
+              rotateX: 0,
+              transition: { type: "spring", stiffness: 120, damping: 18 },
+            },
+          },
+    [reduceMotion],
+  );
+
+  const galleryItem: Variants = useMemo(
+    () =>
+      reduceMotion
+        ? { hidden: { opacity: 1 }, visible: { opacity: 1 } }
+        : {
+            hidden: { opacity: 0, scale: 0.85, y: 60, rotate: -2 },
+            visible: {
+              opacity: 1,
+              scale: 1,
+              y: 0,
+              rotate: 0,
+              transition: { type: "spring", stiffness: 90, damping: 17 },
+            },
+          },
+    [reduceMotion],
+  );
+
+  const fontSans = fontsReady ? '"Plus Jakarta Sans", system-ui, sans-serif' : "system-ui, sans-serif";
+  const fontDisplay = fontsReady ? '"Syne", system-ui, sans-serif' : "system-ui, sans-serif";
+
+  const LogoImg = ({ className }: { className?: string }) => (
+    <img
+      src={LOGO_SRC}
+      width={220}
+      height={64}
+      alt="Toni's Autopflege"
+      className={className}
+      decoding="async"
+      fetchPriority="high"
+    />
   );
 
   return (
     <div
-      className="min-h-[100dvh] bg-[#050508] text-[#e8e4dc] antialiased"
-      style={{
-        fontFamily: fontsLoaded ? '"DM Sans", system-ui, sans-serif' : "system-ui, sans-serif",
-      }}
+      className="relative min-h-[100dvh] overflow-x-hidden bg-[#030306] text-[#ece8e2] antialiased selection:bg-[#c9a227]/35 selection:text-white"
+      style={{ fontFamily: fontSans }}
     >
+      <style>{`
+        @keyframes tonis-orbit {
+          0% { transform: translate(0, 0) scale(1); }
+          33% { transform: translate(12px, -18px) scale(1.05); }
+          66% { transform: translate(-10px, 10px) scale(0.98); }
+          100% { transform: translate(0, 0) scale(1); }
+        }
+        @keyframes tonis-glow-pulse {
+          0%, 100% { opacity: 0.35; transform: scale(1); }
+          50% { opacity: 0.55; transform: scale(1.08); }
+        }
+        @keyframes tonis-border-spin {
+          to { transform: rotate(360deg); }
+        }
+        .tonis-grain {
+          pointer-events: none;
+          position: fixed;
+          inset: 0;
+          z-index: 1;
+          opacity: 0.045;
+          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        }
+      `}</style>
+      <div className="tonis-grain" aria-hidden="true" />
+      <div
+        className="pointer-events-none fixed -left-40 top-20 h-[420px] w-[420px] rounded-full bg-[#c9a227]/12 blur-[120px]"
+        style={{ animation: reduceMotion ? undefined : "tonis-orbit 18s ease-in-out infinite" }}
+        aria-hidden="true"
+      />
+      <div
+        className="pointer-events-none fixed -right-32 bottom-32 h-[380px] w-[380px] rounded-full bg-amber-600/10 blur-[100px]"
+        style={{ animation: reduceMotion ? undefined : "tonis-orbit 22s ease-in-out infinite reverse" }}
+        aria-hidden="true"
+      />
+
       <a
         href="#kontakt"
-        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-[#c9a227] focus:px-4 focus:py-2 focus:text-black focus:outline-none"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-[#c9a227] focus:px-4 focus:py-2 focus:text-black focus:outline-none"
       >
         Zum Kontaktformular springen
       </a>
 
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-[#c9a227]/15 bg-[#050508]/80 backdrop-blur-md">
-        <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 md:px-6">
-          <button
-            type="button"
-            onClick={() => scrollToId("hero")}
-            className="flex items-center gap-2 text-left transition-opacity hover:opacity-90"
-          >
-            <img
-              src={LOGO_SRC}
-              width={180}
-              height={52}
-              alt="Toni's Autopflege — Logo"
-              className="h-9 w-auto object-contain md:h-10"
-              decoding="async"
-              fetchPriority="high"
-            />
-          </button>
-          <nav className="hidden items-center gap-6 text-sm font-medium tracking-wide text-[#c9a227]/90 md:flex">
-            <button type="button" onClick={() => scrollToId("leistungen")} className="hover:text-[#e6cf6b]">
-              Leistungen
-            </button>
-            <button type="button" onClick={() => scrollToId("galerie")} className="hover:text-[#e6cf6b]">
-              Galerie
-            </button>
-            <button type="button" onClick={() => scrollToId("ueber-uns")} className="hover:text-[#e6cf6b]">
-              Über uns
-            </button>
-            <button
-              type="button"
-              onClick={() => scrollToId("kontakt")}
-              className="rounded-full border border-[#c9a227]/50 px-4 py-1.5 text-[#f5e6b8] hover:border-[#c9a227] hover:bg-[#c9a227]/10"
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-white/[0.06] bg-[#030306]/75 backdrop-blur-xl backdrop-saturate-150">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3.5 md:px-8">
+          <motion.div whileHover={reduceMotion ? {} : { scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+            <Link
+              href="/"
+              className="group relative flex items-center gap-2 rounded-xl outline-none ring-[#c9a227]/0 transition focus-visible:ring-2 focus-visible:ring-[#c9a227]/60"
+              title="Zur AGR Multimedia Startseite"
             >
-              Kontakt
-            </button>
+              <span
+                className="absolute -inset-1 -z-10 rounded-xl opacity-0 blur-xl transition group-hover:opacity-100"
+                style={{
+                  background: "radial-gradient(circle at center, rgba(201,162,39,0.45), transparent 70%)",
+                  animation: reduceMotion ? undefined : "tonis-glow-pulse 2.8s ease-in-out infinite",
+                }}
+              />
+              <LogoImg className="h-10 w-auto object-contain drop-shadow-[0_0_24px_rgba(201,162,39,0.2)] transition group-hover:drop-shadow-[0_0_32px_rgba(201,162,39,0.45)] md:h-11" />
+              <span className="sr-only">Zur AGR Multimedia Startseite</span>
+            </Link>
+          </motion.div>
+          <nav className="hidden items-center gap-8 text-[13px] font-semibold uppercase tracking-[0.2em] text-zinc-400 md:flex">
+            {(["leistungen", "galerie", "ueber-uns", "kontakt"] as const).map((id) => (
+              <button
+                key={id}
+                type="button"
+                onClick={() => scrollToId(id)}
+                className="group relative text-zinc-300 transition hover:text-[#f0d78c]"
+              >
+                <span className="absolute -bottom-1 left-0 h-px w-0 bg-gradient-to-r from-[#c9a227] to-[#f5e6b8] transition-all duration-300 group-hover:w-full" />
+                {id === "leistungen" && "Leistungen"}
+                {id === "galerie" && "Galerie"}
+                {id === "ueber-uns" && "Über uns"}
+                {id === "kontakt" && "Kontakt"}
+              </button>
+            ))}
           </nav>
-          <button
+          <motion.button
             type="button"
             onClick={() => scrollToId("kontakt")}
-            className="rounded-full bg-[#c9a227] px-4 py-2 text-xs font-semibold uppercase tracking-wider text-black md:hidden"
+            whileHover={reduceMotion ? {} : { scale: 1.04 }}
+            whileTap={{ scale: 0.97 }}
+            className="rounded-full bg-gradient-to-r from-[#c9a227] via-[#e8cf72] to-[#c9a227] px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-black shadow-[0_0_28px_rgba(201,162,39,0.35)] md:hidden"
           >
             Anfrage
-          </button>
+          </motion.button>
         </div>
       </header>
 
-      <section id="hero" className="relative flex min-h-[100dvh] items-center justify-center overflow-hidden pt-16">
-        <video
-          key={heroVideoSrc}
-          className="absolute inset-0 h-full w-full object-cover"
-          autoPlay
-          muted
-          playsInline
-          loop
-          poster={HERO_POSTER}
-          preload="metadata"
-          aria-hidden="true"
-          onError={() => {
-            setHeroVideoSrc((prev) => (prev === HERO_VIDEO_PRIMARY ? HERO_VIDEO_FALLBACK : prev));
-          }}
-        >
-          <source src={heroVideoSrc} type="video/mp4" />
-        </video>
+      <section
+        id="hero"
+        ref={heroRef}
+        className="relative flex min-h-[100dvh] items-center justify-center overflow-hidden pt-20"
+      >
+        <motion.div className="absolute inset-0 overflow-hidden" style={{ y: videoY }}>
+          <video
+            key={heroVideoSrc}
+            className="h-[115%] w-full scale-105 object-cover"
+            autoPlay
+            muted
+            playsInline
+            loop
+            poster={HERO_POSTER}
+            preload="metadata"
+            aria-hidden="true"
+            onError={() => {
+              setHeroVideoSrc((prev) => (prev === HERO_VIDEO_PRIMARY ? HERO_VIDEO_FALLBACK : prev));
+            }}
+          >
+            <source src={heroVideoSrc} type="video/mp4" />
+          </video>
+        </motion.div>
         <div
-          className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/55 to-[#050508]"
+          className="absolute inset-0 bg-gradient-to-b from-[#030306]/88 via-[#030306]/55 to-[#030306]"
           aria-hidden="true"
         />
-        <div className="relative z-10 mx-auto flex max-w-3xl flex-col items-center px-4 text-center">
-          <motion.div {...motionProps} transition={{ duration: 0.55 }}>
-            <img
-              src={LOGO_SRC}
-              width={640}
-              height={186}
-              alt=""
-              aria-hidden
-              className="mx-auto mb-8 h-auto w-[min(88vw,440px)] drop-shadow-[0_0_40px_rgba(201,162,39,0.25)]"
-              decoding="async"
-              fetchPriority="high"
-            />
-            <p
-              className="mb-3 text-xs font-semibold uppercase tracking-[0.35em] text-[#c9a227]/85 md:text-sm"
-              style={{ fontFamily: '"DM Sans", system-ui, sans-serif' }}
+        <div
+          className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(201,162,39,0.18),transparent)]"
+          aria-hidden="true"
+        />
+
+        <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center px-5 pb-24 pt-8 text-center md:px-10">
+          <motion.div
+            className="mb-10 md:mb-12"
+            initial={reduceMotion ? false : { opacity: 0, scale: 0.9, y: 24 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.85, ease: easeOut }}
+          >
+            <Link
+              href="/"
+              className="group relative inline-block"
+              title="Zur AGR Multimedia Startseite"
             >
-              Premium Fahrzeugpflege · Göppingen
-            </p>
-            <h1
-              className="mb-5 text-balance text-4xl font-semibold leading-tight text-white md:text-5xl lg:text-6xl"
-              style={{ fontFamily: '"Cormorant Garamond", Georgia, serif' }}
+              <motion.div
+                whileHover={reduceMotion ? {} : { scale: 1.03 }}
+                transition={{ type: "spring", stiffness: 280, damping: 22 }}
+              >
+                <LogoImg className="mx-auto h-auto w-[min(86vw,480px)] object-contain drop-shadow-[0_8px_48px_rgba(0,0,0,0.6)] transition duration-500 group-hover:drop-shadow-[0_12px_56px_rgba(201,162,39,0.35)]" />
+              </motion.div>
+              <span className="mt-3 block text-[11px] font-medium uppercase tracking-[0.35em] text-[#c9a227]/70 opacity-0 transition group-hover:opacity-100 md:text-xs">
+                AGR Multimedia · Home
+              </span>
+            </Link>
+          </motion.div>
+
+          <motion.div
+            variants={containerSlow}
+            initial="hidden"
+            animate="visible"
+            className="max-w-3xl"
+          >
+            <motion.p
+              variants={fadeUp}
+              className="mb-4 text-xs font-bold uppercase tracking-[0.45em] text-[#d4b84a] md:text-sm"
+            >
+              Premium Autopflege · Göppingen
+            </motion.p>
+            <motion.h1
+              variants={fadeUp}
+              className="text-balance text-4xl font-extrabold leading-[1.05] tracking-tight text-white md:text-6xl lg:text-7xl"
+              style={{ fontFamily: fontDisplay }}
             >
               Glanz, der bleibt.
-              <span className="block text-[#c9a227]">Pflege auf höchstem Niveau.</span>
-            </h1>
-            <p className="mx-auto mb-8 max-w-xl text-pretty text-base leading-relaxed text-stone-300 md:text-lg">
-              Lackaufbereitung, Innenreinigung, Politur und Keramikversiegelung — präzise ausgeführt, mit
-              professionellen Produkten und Liebe zum Detail.
-            </p>
-            <div className="flex flex-wrap items-center justify-center gap-3">
-              <button
+              <span className="mt-2 block bg-gradient-to-r from-[#f5e6b8] via-[#c9a227] to-[#a67c00] bg-clip-text text-transparent">
+                Perfektion im Detail.
+              </span>
+            </motion.h1>
+            <motion.p
+              variants={fadeUp}
+              className="mx-auto mt-6 max-w-xl text-pretty text-base leading-relaxed text-zinc-400 md:text-lg"
+            >
+              Lackaufbereitung, Innenreinigung, Politur und Keramikversiegelung — mit professionellen Produkten und
+              ruhiger Handarbeit.
+            </motion.p>
+            <motion.div variants={fadeUp} className="mt-10 flex flex-wrap justify-center gap-4">
+              <motion.button
                 type="button"
                 onClick={() => scrollToId("kontakt")}
-                className="rounded-full bg-[#c9a227] px-8 py-3 text-sm font-semibold text-black shadow-[0_0_32px_rgba(201,162,39,0.35)] transition hover:bg-[#d4b03a]"
+                whileHover={reduceMotion ? {} : { scale: 1.04, boxShadow: "0 0 40px rgba(201,162,39,0.45)" }}
+                whileTap={{ scale: 0.98 }}
+                className="relative overflow-hidden rounded-full bg-gradient-to-r from-[#c9a227] via-[#f0d78c] to-[#c9a227] px-10 py-3.5 text-sm font-bold text-black shadow-[0_0_32px_rgba(201,162,39,0.25)]"
               >
-                Termin anfragen
-              </button>
-              <button
+                <span className="relative">Termin anfragen</span>
+              </motion.button>
+              <motion.button
                 type="button"
                 onClick={() => scrollToId("leistungen")}
-                className="rounded-full border border-white/20 px-8 py-3 text-sm font-medium text-white/90 backdrop-blur-sm transition hover:border-[#c9a227]/50 hover:text-[#f5e6b8]"
+                whileHover={reduceMotion ? {} : { scale: 1.03 }}
+                whileTap={{ scale: 0.98 }}
+                className="rounded-full border border-white/15 bg-white/[0.04] px-9 py-3.5 text-sm font-semibold text-white backdrop-blur-md transition hover:border-[#c9a227]/40 hover:text-[#f5e6b8]"
               >
                 Leistungen
-              </button>
-            </div>
+              </motion.button>
+            </motion.div>
           </motion.div>
         </div>
-        <div
-          className="pointer-events-none absolute bottom-6 left-1/2 z-10 -translate-x-1/2 text-[#c9a227]/50"
+
+        <motion.div
+          className="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2 text-[#c9a227]/50"
+          initial={reduceMotion ? false : { opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.2, duration: 0.6 }}
           aria-hidden="true"
         >
-          <span className="block h-8 w-px bg-gradient-to-b from-[#c9a227] to-transparent" />
-        </div>
+          <span className="text-[10px] font-semibold uppercase tracking-[0.4em]">Scroll</span>
+          <motion.span
+            className="flex h-10 w-5 justify-center rounded-full border border-[#c9a227]/30 pt-2"
+            animate={reduceMotion ? {} : { y: [0, 6, 0] }}
+            transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <span className="h-1.5 w-1.5 rounded-full bg-[#c9a227]" />
+          </motion.span>
+        </motion.div>
       </section>
 
-      <section id="galerie" className="scroll-mt-20 border-t border-[#c9a227]/10 bg-[#08080c] py-20 md:py-28">
-        <div className="mx-auto max-w-6xl px-4 md:px-6">
-          <motion.div {...motionProps} transition={{ duration: 0.5 }}>
+      <section id="galerie" className="scroll-mt-24 border-t border-white/[0.06] py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-4 md:px-8">
+          <motion.div
+            initial={reduceMotion ? false : { opacity: 0, y: 28 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.7, ease: easeOut }}
+            className="mb-14 text-center"
+          >
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.4em] text-[#c9a227]/80">Portfolio</p>
             <h2
-              className="mb-2 text-center text-3xl font-semibold text-white md:text-4xl"
-              style={{ fontFamily: '"Cormorant Garamond", Georgia, serif' }}
+              className="text-4xl font-extrabold text-white md:text-5xl"
+              style={{ fontFamily: fontDisplay }}
             >
               Galerie
             </h2>
-            <p className="mx-auto mb-12 max-w-2xl text-center text-stone-400">
-              Ausgewählte Arbeiten — alle Bilder als WebP für schnelle Ladezeiten. Sobald Ihre Fotos vorliegen,
-              ersetzen Sie einfach die Dateien im Projektordner (gleiche Dateinamen).
+            <p className="mx-auto mt-4 max-w-xl text-zinc-500">
+              Ausgewählte Aufbereitungen — optimiert als WebP für schnelles Laden auf dem Smartphone.
             </p>
           </motion.div>
-          <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3">
+
+          <motion.div
+            className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-60px" }}
+            variants={{
+              hidden: {},
+              visible: {
+                transition: { staggerChildren: reduceMotion ? 0 : 0.07, delayChildren: 0.05 },
+              },
+            }}
+          >
             {GALLERY.map((src, i) => (
               <motion.figure
                 key={src}
-                {...motionProps}
-                transition={{ duration: 0.45, delay: reduceMotion ? 0 : i * 0.05 }}
-                className="group relative aspect-square overflow-hidden rounded-lg border border-[#c9a227]/10 bg-[#0c0c10] shadow-[0_20px_50px_rgba(0,0,0,0.45)]"
+                variants={galleryItem}
+                whileHover={
+                  reduceMotion
+                    ? {}
+                    : {
+                        scale: 1.02,
+                        y: -6,
+                        transition: { type: "spring", stiffness: 400, damping: 22 },
+                      }
+                }
+                className="group relative aspect-[4/5] overflow-hidden rounded-2xl border border-white/[0.08] bg-zinc-900/40 shadow-[0_24px_60px_rgba(0,0,0,0.45)] md:aspect-square"
               >
+                <div
+                  className="pointer-events-none absolute inset-0 z-10 opacity-0 transition duration-500 group-hover:opacity-100"
+                  style={{
+                    background:
+                      "linear-gradient(135deg, transparent 40%, rgba(201,162,39,0.12) 50%, transparent 60%)",
+                    backgroundSize: "250% 250%",
+                  }}
+                />
                 <img
                   src={src}
                   alt={`Referenz ${i + 1}`}
-                  className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.04]"
-                  loading="lazy"
+                  className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+                  loading={i < 3 ? "eager" : "lazy"}
                   decoding="async"
-                  width={600}
-                  height={600}
+                  sizes="(max-width: 768px) 50vw, 33vw"
                 />
-                <figcaption className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-3 text-xs font-medium text-[#c9a227]/90 opacity-0 transition group-hover:opacity-100">
-                  WebP · optimiert
+                <figcaption className="pointer-events-none absolute inset-x-0 bottom-0 z-20 translate-y-full bg-gradient-to-t from-black via-black/70 to-transparent p-4 text-left text-xs font-semibold uppercase tracking-wider text-[#f5e6b8] transition duration-500 group-hover:translate-y-0">
+                  Referenz {i + 1}
                 </figcaption>
               </motion.figure>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      <section id="leistungen" className="scroll-mt-20 py-20 md:py-28">
-        <div className="mx-auto max-w-6xl px-4 md:px-6">
-          <motion.div {...motionProps} transition={{ duration: 0.5 }}>
-            <h2
-              className="mb-2 text-center text-3xl font-semibold text-white md:text-4xl"
-              style={{ fontFamily: '"Cormorant Garamond", Georgia, serif' }}
-            >
+      <section id="leistungen" className="scroll-mt-24 border-t border-white/[0.06] bg-[#06060b] py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-4 md:px-8">
+          <motion.div
+            initial={reduceMotion ? false : { opacity: 0, y: 28 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.7, ease: easeOut }}
+            className="mb-16 text-center"
+          >
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.4em] text-[#c9a227]/80">Service</p>
+            <h2 className="text-4xl font-extrabold text-white md:text-5xl" style={{ fontFamily: fontDisplay }}>
               Leistungen
             </h2>
-            <p className="mx-auto mb-14 max-w-2xl text-center text-stone-400">
-              Umfassende Autopflege mit klaren Schwerpunkten — von der Innenraumhygiene bis zur Keramikversiegelung.
-            </p>
           </motion.div>
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <motion.div
+            className="grid gap-5 md:grid-cols-2 lg:grid-cols-3"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-40px" }}
+            variants={{
+              hidden: {},
+              visible: { transition: { staggerChildren: reduceMotion ? 0 : 0.1 } },
+            }}
+          >
             {LEISTUNGEN.map((item, i) => (
               <motion.article
                 key={item.title}
-                {...motionProps}
-                transition={{ duration: 0.45, delay: reduceMotion ? 0 : i * 0.04 }}
-                className="rounded-xl border border-[#c9a227]/12 bg-gradient-to-br from-[#0f0f14] to-[#08080c] p-6 shadow-inner"
+                variants={cardPop}
+                whileHover={
+                  reduceMotion
+                    ? {}
+                    : {
+                        y: -10,
+                        boxShadow: "0 28px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(201,162,39,0.25)",
+                      }
+                }
+                className="relative overflow-hidden rounded-2xl border border-white/[0.07] bg-gradient-to-br from-zinc-900/90 to-[#050508] p-7"
               >
-                <div className="mb-3 h-px w-12 bg-[#c9a227]/60" />
-                <h3 className="mb-2 text-lg font-semibold text-[#e6cf6b]">{item.title}</h3>
-                <p className="text-sm leading-relaxed text-stone-400">{item.text}</p>
+                <div
+                  className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-[#c9a227]/10 blur-3xl"
+                  aria-hidden="true"
+                />
+                <div className="mb-4 inline-flex rounded-full border border-[#c9a227]/25 bg-[#c9a227]/10 px-3 py-1 text-[11px] font-bold uppercase tracking-widest text-[#e6cf6b]">
+                  {String(i + 1).padStart(2, "0")}
+                </div>
+                <h3 className="mb-3 text-xl font-bold text-white" style={{ fontFamily: fontDisplay }}>
+                  {item.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-zinc-500">{item.text}</p>
               </motion.article>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      <section id="ueber-uns" className="scroll-mt-20 border-t border-[#c9a227]/10 bg-[#08080c] py-20 md:py-28">
-        <div className="mx-auto max-w-3xl px-4 text-center md:px-6">
-          <motion.div {...motionProps} transition={{ duration: 0.5 }}>
-            <h2
-              className="mb-6 text-3xl font-semibold text-white md:text-4xl"
-              style={{ fontFamily: '"Cormorant Garamond", Georgia, serif' }}
-            >
+      <section id="ueber-uns" className="scroll-mt-24 py-24 md:py-32">
+        <div className="mx-auto max-w-3xl px-4 text-center md:px-8">
+          <motion.div
+            initial={reduceMotion ? false : { opacity: 0, y: 32 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.75, ease: easeOut }}
+          >
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.4em] text-[#c9a227]/80">Team</p>
+            <h2 className="mb-8 text-4xl font-extrabold text-white md:text-5xl" style={{ fontFamily: fontDisplay }}>
               Über uns
             </h2>
-            <p className="text-pretty text-lg leading-relaxed text-stone-300 md:text-xl">
-              <strong className="font-semibold text-white">Toni&apos;s Autopflege</strong> steht in Göppingen für
-              handwerkliche Qualität und ehrliche Beratung. Wir behandeln jedes Fahrzeug so, als wäre es unser eigenes
-              — mit Zeit, Ruhe und den richtigen Verfahren für Lack, Interieur und Langzeitschutz.
+            <p className="text-pretty text-lg leading-relaxed text-zinc-400 md:text-xl">
+              <strong className="font-bold text-white">Toni&apos;s Autopflege</strong> in Göppingen steht für
+              handwerkliche Qualität und ehrliche Beratung — mit Ruhe, Sorgfalt und den richtigen Verfahren für Lack,
+              Interieur und Langzeitschutz.
             </p>
-            <p className="mt-6 text-pretty leading-relaxed text-stone-500">
-              Diese Seite ist eine Demo-Präsentation. Inhalte und Kontaktdaten können vor dem Livegang angepasst
-              werden.
+            <motion.div
+              className="mx-auto mt-10 h-px max-w-xs bg-gradient-to-r from-transparent via-[#c9a227]/50 to-transparent"
+              initial={reduceMotion ? false : { scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.9, ease: easeOut }}
+            />
+            <p className="mt-8 text-sm text-zinc-600">
+              Demo-Auftritt · Texte und Kontakt können vor dem Livegang final angepasst werden.
             </p>
           </motion.div>
         </div>
       </section>
 
-      <section id="kontakt" className="scroll-mt-20 py-20 md:py-28">
-        <div className="mx-auto max-w-lg px-4 md:px-6">
-          <motion.div {...motionProps} transition={{ duration: 0.5 }}>
-            <h2
-              className="mb-2 text-center text-3xl font-semibold text-white md:text-4xl"
-              style={{ fontFamily: '"Cormorant Garamond", Georgia, serif' }}
-            >
+      <section id="kontakt" className="scroll-mt-24 border-t border-white/[0.06] bg-[#06060b] py-24 md:py-32">
+        <div className="mx-auto max-w-lg px-4 md:px-8">
+          <motion.div
+            initial={reduceMotion ? false : { opacity: 0, y: 28 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, ease: easeOut }}
+          >
+            <h2 className="mb-2 text-center text-4xl font-extrabold text-white md:text-5xl" style={{ fontFamily: fontDisplay }}>
               Kontakt
             </h2>
-            <p className="mb-8 text-center text-stone-400">
-              Unverbindliche Anfrage — wir melden uns mit Terminvorschlägen und einer transparenten Einschätzung.
+            <p className="mb-10 text-center text-zinc-500">
+              Unverbindliche Anfrage — wir melden uns mit Terminvorschlägen.
             </p>
-            <form
-              className="space-y-4 rounded-2xl border border-[#c9a227]/20 bg-[#0c0c10] p-6 shadow-[0_0_60px_rgba(201,162,39,0.08)]"
+            <motion.form
+              className="relative overflow-hidden rounded-2xl border border-white/[0.08] bg-zinc-900/30 p-8 shadow-[0_0_80px_rgba(201,162,39,0.06)] backdrop-blur-xl"
+              initial={reduceMotion ? false : { opacity: 0, rotateX: 8 }}
+              whileInView={{ opacity: 1, rotateX: 0 }}
+              viewport={{ once: true }}
+              transition={{ type: "spring", stiffness: 80, damping: 18 }}
+              style={{ transformPerspective: 1200 }}
               onSubmit={(e) => {
                 e.preventDefault();
                 const fd = new FormData(e.currentTarget);
                 const name = String(fd.get("name") ?? "").trim();
                 const email = String(fd.get("email") ?? "").trim();
                 const msg = String(fd.get("message") ?? "").trim();
-                const body = encodeURIComponent(
-                  `Name: ${name}\nE-Mail: ${email}\n\nNachricht:\n${msg}`,
-                );
+                const body = encodeURIComponent(`Name: ${name}\nE-Mail: ${email}\n\nNachricht:\n${msg}`);
                 window.location.href = `mailto:kontakt@tonis-autopflege.de?subject=${encodeURIComponent("Anfrage Autopflege")}&body=${body}`;
               }}
             >
-              <div>
-                <label htmlFor="tonis-name" className="mb-1 block text-sm text-stone-400">
-                  Name
-                </label>
-                <input
-                  id="tonis-name"
-                  name="name"
-                  required
-                  className="w-full rounded-lg border border-white/10 bg-[#050508] px-4 py-2.5 text-white outline-none ring-[#c9a227]/40 focus:ring-2"
-                  autoComplete="name"
+              {!reduceMotion && (
+                <div
+                  className="pointer-events-none absolute -inset-px rounded-2xl opacity-50"
+                  style={{
+                    background: "conic-gradient(from 0deg, transparent, rgba(201,162,39,0.35), transparent 40%)",
+                    animation: "tonis-border-spin 8s linear infinite",
+                  }}
                 />
+              )}
+              <div className="relative space-y-5">
+                <div>
+                  <label htmlFor="tonis-name" className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-zinc-500">
+                    Name
+                  </label>
+                  <input
+                    id="tonis-name"
+                    name="name"
+                    required
+                    className="w-full rounded-xl border border-white/10 bg-[#030306]/80 px-4 py-3 text-white outline-none transition focus:border-[#c9a227]/50 focus:ring-2 focus:ring-[#c9a227]/20"
+                    autoComplete="name"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="tonis-email" className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-zinc-500">
+                    E-Mail
+                  </label>
+                  <input
+                    id="tonis-email"
+                    name="email"
+                    type="email"
+                    required
+                    className="w-full rounded-xl border border-white/10 bg-[#030306]/80 px-4 py-3 text-white outline-none transition focus:border-[#c9a227]/50 focus:ring-2 focus:ring-[#c9a227]/20"
+                    autoComplete="email"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="tonis-msg" className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-zinc-500">
+                    Nachricht / Fahrzeug
+                  </label>
+                  <textarea
+                    id="tonis-msg"
+                    name="message"
+                    required
+                    rows={4}
+                    className="w-full resize-y rounded-xl border border-white/10 bg-[#030306]/80 px-4 py-3 text-white outline-none transition focus:border-[#c9a227]/50 focus:ring-2 focus:ring-[#c9a227]/20"
+                    placeholder="Modell, Zustand, gewünschte Leistungen …"
+                  />
+                </div>
+                <motion.button
+                  type="submit"
+                  whileHover={reduceMotion ? {} : { scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="relative w-full overflow-hidden rounded-full bg-gradient-to-r from-[#c9a227] to-[#a67c00] py-3.5 text-sm font-bold text-black"
+                >
+                  Anfrage senden
+                </motion.button>
+                <p className="text-center text-xs text-zinc-600">Öffnet Ihr E-Mail-Programm.</p>
               </div>
-              <div>
-                <label htmlFor="tonis-email" className="mb-1 block text-sm text-stone-400">
-                  E-Mail
-                </label>
-                <input
-                  id="tonis-email"
-                  name="email"
-                  type="email"
-                  required
-                  className="w-full rounded-lg border border-white/10 bg-[#050508] px-4 py-2.5 text-white outline-none ring-[#c9a227]/40 focus:ring-2"
-                  autoComplete="email"
-                />
-              </div>
-              <div>
-                <label htmlFor="tonis-msg" className="mb-1 block text-sm text-stone-400">
-                  Nachricht / Fahrzeug
-                </label>
-                <textarea
-                  id="tonis-msg"
-                  name="message"
-                  required
-                  rows={4}
-                  className="w-full resize-y rounded-lg border border-white/10 bg-[#050508] px-4 py-2.5 text-white outline-none ring-[#c9a227]/40 focus:ring-2"
-                  placeholder="z. B. Modell, Zustand, gewünschte Leistungen …"
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full rounded-full bg-[#c9a227] py-3 text-sm font-semibold text-black transition hover:bg-[#d4b03a]"
-              >
-                Anfrage senden
-              </button>
-              <p className="text-center text-xs text-stone-500">
-                Öffnet Ihr E-Mail-Programm — Adresse bei Bedarf im Code anpassen.
-              </p>
-            </form>
+            </motion.form>
           </motion.div>
         </div>
       </section>
 
-      <footer className="border-t border-[#c9a227]/10 py-10 text-center text-sm text-stone-500">
+      <footer className="border-t border-white/[0.06] py-12 text-center text-sm text-zinc-600">
         <p>
           Demo-Entwicklung:{" "}
-          <Link href="/" className="text-[#c9a227]/80 underline-offset-2 hover:text-[#e6cf6b] hover:underline">
+          <Link href="/" className="font-semibold text-[#c9a227]/90 underline-offset-4 hover:text-[#f0d78c] hover:underline">
             AGR Multimedia
           </Link>
         </p>

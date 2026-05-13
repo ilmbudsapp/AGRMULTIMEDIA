@@ -13,3 +13,9 @@ vite.config.ts.*
 
 # Generated from root sitemap.xml during build
 client/public/sitemap.xml
+
+# Toni demo: WebP outputs committed; re-run `npm run tonis:convert` after new JPEG drops
+client/public/demo/tonis-autopflege/*.jpeg
+client/public/demo/tonis-autopflege/*.jpg
+client/public/demo/tonis-autopflege/*.JPEG
+client/public/demo/tonis-autopflege/*.JPG
