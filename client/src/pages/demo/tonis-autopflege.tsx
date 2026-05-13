@@ -243,6 +243,20 @@ export default function TonisAutopflegeDemo() {
           opacity: 0.045;
           background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
         }
+        .tonis-hero-video {
+          filter: contrast(1.07) saturate(1.08) brightness(1.03);
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .tonis-hero-video {
+            filter: none;
+          }
+        }
+        .tonis-hero-cinema-mesh {
+          background-image:
+            linear-gradient(to right, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(0, 0, 0, 0.07) 1px, transparent 1px);
+          background-size: 9px 9px;
+        }
       `}</style>
       <div className="tonis-grain" aria-hidden="true" />
       <div
@@ -307,36 +321,58 @@ export default function TonisAutopflegeDemo() {
       <section
         id="hero"
         ref={heroRef}
-        className="relative flex min-h-[100dvh] items-center justify-center overflow-hidden pt-20"
+        className="relative flex min-h-[100dvh] flex-col items-center justify-center overflow-hidden bg-[#030306] pt-20"
       >
-        <motion.div className="absolute inset-0 overflow-hidden" style={{ y: videoY }}>
-          <video
-            key={heroVideoSrc}
-            className="h-[115%] w-full scale-105 object-cover"
-            autoPlay
-            muted
-            playsInline
-            loop
-            poster={HERO_POSTER}
-            preload="metadata"
-            aria-hidden="true"
-            onError={() => {
-              setHeroVideoSrc((prev) => (prev === HERO_VIDEO_PRIMARY ? HERO_VIDEO_FALLBACK : prev));
-            }}
-          >
-            <source src={heroVideoSrc} type="video/mp4" />
-          </video>
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[#030306]" aria-hidden="true" />
+
+        <motion.div
+          className="pointer-events-none absolute left-0 right-0 top-[4.75rem] z-0 flex justify-center px-4 md:top-[5rem] md:px-8"
+          style={reduceMotion ? undefined : { y: videoY }}
+        >
+          <div className="relative w-full max-w-5xl overflow-hidden rounded-2xl border border-white/[0.07] bg-black shadow-[0_28px_90px_rgba(0,0,0,0.65)] ring-1 ring-black/40">
+            <div className="relative mx-auto aspect-[21/9] w-full max-h-[min(42vh,420px)] min-h-[160px] sm:max-h-[min(46vh,460px)] md:max-h-[min(48vh,500px)]">
+              <video
+                key={heroVideoSrc}
+                className="tonis-hero-video absolute inset-0 h-full w-full object-contain"
+                autoPlay
+                muted
+                playsInline
+                loop
+                poster={HERO_POSTER}
+                preload="auto"
+                aria-hidden="true"
+                onError={() => {
+                  setHeroVideoSrc((prev) => (prev === HERO_VIDEO_PRIMARY ? HERO_VIDEO_FALLBACK : prev));
+                }}
+              >
+                <source src={heroVideoSrc} type="video/mp4" />
+              </video>
+              <div
+                className="tonis-hero-cinema-mesh pointer-events-none absolute inset-0 z-[2] opacity-[0.55] mix-blend-overlay"
+                aria-hidden="true"
+              />
+              <div
+                className="pointer-events-none absolute inset-0 z-[3] bg-gradient-to-b from-black/35 via-transparent to-black/50"
+                aria-hidden="true"
+              />
+              <div
+                className="pointer-events-none absolute inset-0 z-[4] shadow-[inset_0_0_100px_rgba(0,0,0,0.5),inset_0_0_40px_rgba(0,0,0,0.35)]"
+                aria-hidden="true"
+              />
+            </div>
+          </div>
         </motion.div>
+
         <div
-          className="absolute inset-0 bg-gradient-to-b from-[#030306]/88 via-[#030306]/55 to-[#030306]"
+          className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-b from-[#030306]/92 via-[#030306]/55 to-[#030306]"
           aria-hidden="true"
         />
         <div
-          className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(201,162,39,0.18),transparent)]"
+          className="pointer-events-none absolute inset-0 z-[1] bg-[radial-gradient(ellipse_75%_55%_at_50%_18%,rgba(201,162,39,0.12),transparent_62%)]"
           aria-hidden="true"
         />
 
-        <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center px-5 pb-24 pt-8 text-center md:px-10">
+        <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center px-5 pb-24 pt-6 text-center md:px-10 md:pt-10">
           <motion.div
             className="mb-10 md:mb-12"
             initial={reduceMotion ? false : { opacity: 0, scale: 0.9, y: 24 }}
