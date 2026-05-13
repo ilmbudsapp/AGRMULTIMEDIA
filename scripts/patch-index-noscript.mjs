@@ -37,6 +37,7 @@ const body = `
             </figure>
             <p style="margin-top:0;"><strong>Autor:</strong> <a href="https://www.linkedin.com/in/agron-osmani-228947266/" style="color:#93c5fd;" rel="author">Agron Osmani</a> · CEO, AGR Multimedia · Geislingen an der Steige · <time datetime="2026-05-08">8. maj 2026.</time></p>
             <h1 id="seo-static-h1" style="font-size: 1.5rem; color: #fff;">AGR Multimedia — Web, grafika i AI · Geislingen</h1>
+            <p style="margin-top:0.75rem;line-height:1.65;">Mi u AGR Multimedia iz <strong>Geislingen an der Steige</strong> radimo <a href="/web-design" style="color:#93c5fd;">web dizajn</a>, <a href="/graphic-design" style="color:#93c5fd;">grafiku</a>, video i <a href="/ai-content-creation" style="color:#93c5fd;">AI podršku</a> malim preduzećima u Nemačkoj i EU. Ovaj tekst je u noscript bloku da pretraživači i AI alati bez JavaScript-a odmah vide lokaciju i ključne usluge.</p>
 
             <div id="seo-takeaways" style="margin:1.25rem 0;padding:1rem;border:1px solid rgba(52,211,153,0.35);border-radius:0.5rem;background:rgba(16,185,129,0.07);">
                 <p style="margin:0;font-weight:600;color:#fff;">Ključne tačke</p>
@@ -59,7 +60,10 @@ const body = `
                     <p style="margin:0 0 0.65rem;font-size:0.9rem;">Naš sajt nije samo vizit karta, već dokaz naše ekspertize. Dokazujemo naš standard kroz SEO skor od 92, osiguravajući da naša tehnologija uvek prati najnovije algoritme pretrage.</p>
                     <p style="margin:0 0 0.75rem;padding:0.65rem;border-radius:0.45rem;border:1px solid rgba(129,140,248,0.35);background:rgba(67,56,202,0.2);font-size:0.82rem;line-height:1.55;">Sistem je klasifikovao sajt kao SaaS tip (50% pouzdanosti klasifikacije), što dodatno naglašava našu tehničku dubinu i funkcionalnost koju gradimo.</p>
                     <p style="margin:0 0 0.45rem;font-size:0.72rem;color:#9ca3af;">www.agrmultimedia.eu — izveštaj od 9. maj 2026.</p>
-                    <img src="/agrmultimedia-benchmark.jpg" alt="SEO AEO GEO izveštaj za www.agrmultimedia.eu — ukupno Grade A, SEO 92, AEO 83, GEO 78, tip sajta SaaS" width="1200" height="675" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;border-radius:0.45rem;border:1px solid rgba(255,255,255,0.08);" />
+                    <picture>
+                        <source type="image/webp" srcset="/agrmultimedia-benchmark-640.webp 640w, /agrmultimedia-benchmark-960.webp 960w, /agrmultimedia-benchmark.webp 1200w" sizes="100vw" />
+                        <img src="/agrmultimedia-benchmark.jpg" alt="SEO AEO GEO izveštaj za www.agrmultimedia.eu — ukupno Grade A, SEO 92, AEO 83, GEO 78, tip sajta SaaS" width="1200" height="675" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;border-radius:0.45rem;border:1px solid rgba(255,255,255,0.08);" />
+                    </picture>
                     <table style="width:100%;border-collapse:collapse;margin:0.75rem 0 0;font-size:0.85rem;">
                         <caption style="text-align:left;font-weight:600;color:#e0e7ff;padding-bottom:0.35rem;">www.agrmultimedia.eu — trenutni skorovi (9. maj 2026.)</caption>
                         <thead><tr style="border-bottom:1px solid #444;"><th scope="col" style="text-align:left;padding:0.35rem;">Oblast</th><th scope="col" style="text-align:left;padding:0.35rem;">Skor</th></tr></thead>
@@ -90,7 +94,10 @@ const body = `
                             <span style="font-size:0.72rem;font-weight:700;text-transform:uppercase;color:#fecaca;">Pre — 8. maj 2026.</span>
                             <span style="font-size:0.65rem;font-weight:800;text-transform:uppercase;color:#fff;background:#b91c1c;padding:0.2rem 0.5rem;border-radius:999px;">Critical · Grade F</span>
                         </div>
-                        <img src="/fixbike-before.jpg" alt="SEO AEO GEO izveštaj fixbike.online — 8. maj 2026, ukupno Grade F" width="1200" height="675" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;" />
+                        <picture>
+                            <source type="image/webp" srcset="/fixbike-before-640.webp 640w, /fixbike-before-960.webp 960w, /fixbike-before.webp 1200w" sizes="100vw" />
+                            <img src="/fixbike-before.jpg" alt="SEO AEO GEO izveštaj fixbike.online — 8. maj 2026, ukupno Grade F" width="1200" height="675" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;" />
+                        </picture>
                         <p style="margin:0;padding:0.45rem 0.65rem;font-family:ui-monospace,monospace;font-size:0.78rem;color:#fecaca;text-align:center;">Ukupno 49 · SEO 71 · AEO 31 · GEO 24</p>
                     </div>
                     <div style="border:2px solid rgba(52,211,153,0.55);border-radius:0.5rem;overflow:hidden;background:rgba(6,78,59,0.2);">
@@ -98,7 +105,10 @@ const body = `
                             <span style="font-size:0.72rem;font-weight:700;text-transform:uppercase;color:#a7f3d0;">Posle — 9. maj 2026.</span>
                             <span style="font-size:0.65rem;font-weight:800;text-transform:uppercase;color:#fff;background:#059669;padding:0.2rem 0.5rem;border-radius:999px;">Excellent · Grade A</span>
                         </div>
-                        <img src="/fixbike-after.jpg" alt="SEO AEO GEO izveštaj fixbike.online — 9. maj 2026, ukupno Grade A" width="1200" height="675" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;" />
+                        <picture>
+                            <source type="image/webp" srcset="/fixbike-after-640.webp 640w, /fixbike-after-960.webp 960w, /fixbike-after.webp 1200w" sizes="100vw" />
+                            <img src="/fixbike-after.jpg" alt="SEO AEO GEO izveštaj fixbike.online — 9. maj 2026, ukupno Grade A" width="1200" height="675" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;" />
+                        </picture>
                         <p style="margin:0;padding:0.45rem 0.65rem;font-family:ui-monospace,monospace;font-size:0.78rem;color:#a7f3d0;text-align:center;">Ukupno 88 · SEO 88 · AEO 85 · GEO 90</p>
                     </div>
                 </div>

@@ -6,8 +6,6 @@ import LanguageSwitcherInline from "./LanguageSwitcherInline";
 import { NAV_LANDMARK_LABEL, NAV_MOBILE_TOGGLE, NAV_SCROLL_ON_PAGE_HINT } from "@/lib/a11yLandmarks";
 import type { Language } from "@/lib/i18n";
 
-const logoImage = "/agr-logo-white.png";
-
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { tSpec, currentLanguage } = useLanguage();
@@ -71,13 +69,16 @@ export default function Navigation() {
               data-testid="logo-button"
               aria-label={tSpec.nav.home}
             >
-              <img
-                src={logoImage}
-                alt="AGR Multimedia"
-                className="h-9 w-auto object-contain mix-blend-screen md:h-11"
-                fetchPriority="high"
-                decoding="async"
-              />
+              <picture>
+                <source srcSet="/agr-logo-white.webp" type="image/webp" />
+                <img
+                  src="/agr-logo-white.png"
+                  alt="AGR Multimedia"
+                  className="h-9 w-auto object-contain mix-blend-screen md:h-11"
+                  fetchPriority="high"
+                  decoding="async"
+                />
+              </picture>
               <span className="max-w-[185px] text-[10px] font-medium uppercase leading-tight tracking-[0.08em] text-white/80 sm:max-w-none sm:text-xs">
                 {logoSeoText}
               </span>

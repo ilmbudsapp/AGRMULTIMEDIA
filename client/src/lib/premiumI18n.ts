@@ -87,7 +87,8 @@ type PremiumTranslations = {
 const en: PremiumTranslations = {
   hero: {
     heading: "Modern websites & brand systems for SMEs — AGR Multimedia, Geislingen",
-    subheading: "Modern and fast websites for small businesses",
+    subheading:
+      "We at AGR Multimedia build fast, SEO-ready websites, graphic systems, and practical AI workflows for SMEs. My experience in Geislingen an der Steige shows that clear messaging, technical SEO, and citable facts lift conversions and answer-engine visibility.",
     primaryCta: "Get a Free Consultation",
     secondaryCta: "View Projects",
     ctaMeta: "Free consultation • No obligation • Response within 24h",
@@ -200,7 +201,8 @@ const en: PremiumTranslations = {
 const de: PremiumTranslations = {
   hero: {
     heading: "Moderne Websites und Branding für KMU — AGR Multimedia, Geislingen",
-    subheading: "Moderne und schnelle Websites fur kleine Unternehmen",
+    subheading:
+      "Wir bei AGR Multimedia liefern schnelle, SEO-taugliche Websites, Markengrafik und praxisnahe KI-Workflows für KMU. Meine Erfahrung in Geislingen an der Steige zeigt: klare Botschaften, technisches SEO und belegbare Fakten steigern Conversions und Sichtbarkeit in Answer Engines.",
     primaryCta: "Kostenlose Beratung anfordern",
     secondaryCta: "Projekte ansehen",
     ctaMeta: "Kostenlose Beratung • Unverbindlich • Antwort innerhalb von 24h",
@@ -313,7 +315,8 @@ const de: PremiumTranslations = {
 const sr: PremiumTranslations = {
   hero: {
     heading: "Moderne web stranice i dosledan brend za mala preduzeća — AGR Multimedia",
-    subheading: "Moderne i brze web stranice koje donose nove klijente",
+    subheading:
+      "Mi u AGR Multimedia pravimo brze web stranice spremne za SEO, grafičke sisteme i praktične AI tokove za mala preduzeća. Moje iskustvo u Geislingen an der Steige pokazuje da jasna poruka, tehnički SEO i proverljivi izvori podižu konverzije i vidljivost u sistemima odgovora.",
     primaryCta: "Zatražite besplatnu konsultaciju",
     secondaryCta: "Pogledajte projekte",
     ctaMeta: "Besplatna konsultacija • Bez obaveza • Odgovor u roku od 24h",
@@ -426,7 +429,8 @@ const sr: PremiumTranslations = {
 const it: PremiumTranslations = {
   hero: {
     heading: "Siti web e identità visiva per PMI — AGR Multimedia, Geislingen",
-    subheading: "Siti web moderni e veloci per piccole imprese",
+    subheading:
+      "Noi in AGR Multimedia realizziamo siti veloci e pronti per il SEO, sistemi grafici e workflow AI pratici per le PMI. La mia esperienza a Geislingen an der Steige mostra che messaggi chiari, SEO tecnico e fatti citabili aumentano conversioni e visibilità nei motori di risposta.",
     primaryCta: "Richiedi una consulenza gratuita",
     secondaryCta: "Vedi progetti",
     ctaMeta: "Consulenza gratuita • Senza impegno • Risposta entro 24h",
@@ -539,7 +543,8 @@ const it: PremiumTranslations = {
 const al: PremiumTranslations = {
   hero: {
     heading: "Faqe moderne dhe sistem vizual për SME — AGR Multimedia, Geislingen",
-    subheading: "Faqe moderne dhe te shpejta per biznese te vogla",
+    subheading:
+      "Ne në AGR Multimedia ndërtojmë faqe të shpejta të gatshme për SEO, sisteme grafike dhe rrjedha AI praktike për SME. Përvoja ime në Geislingen an der Steige tregon se mesazhet e qarta, SEO teknik dhe faktet e citueshme rrisin konvertimet dhe dukshmërinë në motorët e përgjigjes.",
     primaryCta: "Kërko konsultë falas",
     secondaryCta: "Shiko projektet",
     ctaMeta: "Konsultë falas • Pa detyrim • Përgjigje brenda 24 orëve",

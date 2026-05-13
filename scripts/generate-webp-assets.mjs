@@ -35,12 +35,37 @@ async function convertTree(baseDir) {
   return converted;
 }
 
+/** Responsive WebP variants for large audit screenshots (referenced with srcset in OptimizationExcellence). */
+async function writeAuditWebpWidths(pubDir) {
+  const files = ["agrmultimedia-benchmark.jpg", "fixbike-before.jpg", "fixbike-after.jpg"];
+  const widths = [640, 960];
+  let n = 0;
+  for (const rel of files) {
+    const abs = path.join(pubDir, rel);
+    try {
+      await fs.access(abs);
+    } catch {
+      continue;
+    }
+    const stem = rel.replace(/\.(jpe?g|png)$/i, "");
+    for (const w of widths) {
+      const out = path.join(pubDir, `${stem}-${w}.webp`);
+      await sharp(abs).resize({ width: w, withoutEnlargement: true }).webp({ quality: 82 }).toFile(out);
+      n += 1;
+    }
+  }
+  return n;
+}
+
 async function main() {
   const pub = path.join(root, "client", "public");
   const assets = path.join(root, "client", "src", "assets");
   const convertedPublic = await convertTree(pub);
   const convertedAssets = await convertTree(assets);
-  console.log(`Converted ${convertedPublic} images in public and ${convertedAssets} in src/assets to WebP.`);
+  const auditWidths = await writeAuditWebpWidths(pub);
+  console.log(
+    `Converted ${convertedPublic} images in public and ${convertedAssets} in src/assets to WebP; wrote ${auditWidths} audit width variants.`,
+  );
 }
 
 main().catch((e) => {

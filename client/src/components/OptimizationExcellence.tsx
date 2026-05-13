@@ -12,8 +12,8 @@ const SCORES_AFTER = {
 } as const;
 
 const FIXBIKE_IMG = {
-  before: "/fixbike-before.jpg",
-  after: "/fixbike-after.jpg",
+  beforeStem: "/fixbike-before",
+  afterStem: "/fixbike-after",
 } as const;
 
 /** Current audit — www.agrmultimedia.eu (May 9, 2026) */
@@ -24,7 +24,26 @@ const SCORES_AGR = {
   overall: 86,
 } as const;
 
-const AGR_BENCHMARK_IMG = "/agrmultimedia-benchmark.jpg";
+const AGR_BENCHMARK_STEM = "/agrmultimedia-benchmark";
+
+function AuditScreenshotPicture({
+  stem,
+  alt,
+  className,
+}: {
+  stem: string;
+  alt: string;
+  className: string;
+}) {
+  const jpg = `${stem}.jpg`;
+  const webpSrcSet = `${stem}-640.webp 640w, ${stem}-960.webp 960w, ${stem}.webp 1200w`;
+  return (
+    <picture>
+      <source type="image/webp" srcSet={webpSrcSet} sizes="(max-width: 768px) 100vw, (max-width: 1100px) 50vw, 520px" />
+      <img src={jpg} alt={alt} width={1200} height={675} loading="lazy" decoding="async" className={className} />
+    </picture>
+  );
+}
 
 function useCountUp(end: number, durationMs: number, active: boolean): number {
   const [value, setValue] = useState(0);
@@ -214,13 +233,9 @@ export default function OptimizationExcellence() {
           </p>
           <p className="mt-3 text-xs text-white/45">{t.benchmarkReportMeta}</p>
           <div className="mt-5 overflow-hidden rounded-xl border border-white/[0.08] bg-white/[0.02] shadow-inner">
-            <img
-              src={AGR_BENCHMARK_IMG}
+            <AuditScreenshotPicture
+              stem={AGR_BENCHMARK_STEM}
               alt={t.benchmarkImgAlt}
-              width={1200}
-              height={675}
-              loading="lazy"
-              decoding="async"
               className="h-auto w-full object-cover object-top"
             />
           </div>
@@ -337,13 +352,9 @@ export default function OptimizationExcellence() {
                 </span>
               </figcaption>
               <div className="px-3 pb-3 pt-3">
-                <img
-                  src={FIXBIKE_IMG.before}
+                <AuditScreenshotPicture
+                  stem={FIXBIKE_IMG.beforeStem}
                   alt={t.imgAltBefore}
-                  width={1200}
-                  height={675}
-                  loading="lazy"
-                  decoding="async"
                   className="h-auto w-full rounded-lg border border-white/[0.06] object-cover object-top shadow-inner"
                 />
                 <p className="mt-2 text-center font-mono text-[11px] text-red-200/90">{t.statsBeforeSummary}</p>
@@ -359,13 +370,9 @@ export default function OptimizationExcellence() {
                 </span>
               </figcaption>
               <div className="px-3 pb-3 pt-3">
-                <img
-                  src={FIXBIKE_IMG.after}
+                <AuditScreenshotPicture
+                  stem={FIXBIKE_IMG.afterStem}
                   alt={t.imgAltAfter}
-                  width={1200}
-                  height={675}
-                  loading="lazy"
-                  decoding="async"
                   className="h-auto w-full rounded-lg border border-white/[0.06] object-cover object-top shadow-inner"
                 />
                 <p className="mt-2 text-center font-mono text-[11px] text-emerald-200/95">{t.statsAfterSummary}</p>

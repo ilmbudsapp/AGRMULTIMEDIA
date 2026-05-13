@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
+import HomeGeoInsight from "@/components/HomeGeoInsight";
 import HomeServices from "@/components/HomeServices";
 import CaseStudyThearRealm from "@/components/CaseStudyThearRealm";
 import TrustIntro from "@/components/TrustIntro";
@@ -33,6 +34,7 @@ export default function Home() {
       <Navigation />
       <main id="main-content" aria-label={MAIN_LANDMARK_LABEL[currentLanguage]}>
         <Hero />
+        <HomeGeoInsight />
         <TrustIntro />
         <OptimizationExcellence />
         <HomeSeoSection />
