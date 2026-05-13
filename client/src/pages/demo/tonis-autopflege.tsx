@@ -11,8 +11,8 @@ import {
 import { WHATSAPP_E164_DIGITS } from "@/lib/contact";
 
 const DEMO_BASE = "/demo/tonis-autopflege";
-const LOGO_FILE = "TONY LOGO SA BELIM SLOVIMA.webp";
-const LOGO_SRC = `${DEMO_BASE}/${encodeURIComponent(LOGO_FILE)}`;
+const LOGO_HEADER_SRC = `${DEMO_BASE}/${encodeURIComponent("TONY LOGO ISECEN.webp")}`;
+const LOGO_HERO_SRC = `${DEMO_BASE}/${encodeURIComponent("TONY LOGO SA BELIM SLOVIMA.webp")}`;
 
 function digitsOnly(s: string): string {
   return s.replace(/\D/g, "");
@@ -192,11 +192,23 @@ export default function TonisAutopflegeDemo() {
   /** Eurostile Extended Black: @font-face (local + optional woff2); sonst Orbitron 900 */
   const fontHeroHeadline = '"Eurostile Extd", "Orbitron", system-ui, sans-serif';
 
-  const LogoImg = ({ className }: { className?: string }) => (
+  const HeaderLogoImg = ({ className }: { className?: string }) => (
     <img
-      src={LOGO_SRC}
+      src={LOGO_HEADER_SRC}
       width={320}
       height={96}
+      alt="Toni's Autopflege"
+      className={className}
+      decoding="async"
+      fetchPriority="high"
+    />
+  );
+
+  const HeroLogoImg = ({ className }: { className?: string }) => (
+    <img
+      src={LOGO_HERO_SRC}
+      width={480}
+      height={140}
       alt="Toni's Autopflege"
       className={className}
       decoding="async"
@@ -286,7 +298,7 @@ export default function TonisAutopflegeDemo() {
               className="group block rounded-sm outline-none ring-offset-2 ring-offset-zinc-100 transition focus-visible:ring-2 focus-visible:ring-[#c9a227]/80"
               title="Zur Startseite (Diese Seite)"
             >
-              <LogoImg className="h-[52px] w-auto object-contain object-left md:h-[60px] md:min-h-[60px]" />
+              <HeaderLogoImg className="h-[52px] w-auto object-contain object-left md:h-[60px] md:min-h-[60px]" />
               <span className="sr-only">Zur Startseite — Toni&apos;s Autopflege Demo</span>
             </Link>
           </motion.div>
@@ -372,7 +384,31 @@ export default function TonisAutopflegeDemo() {
           aria-hidden="true"
         />
 
-        <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center px-5 pb-24 pt-8 text-center md:px-10 md:pt-14">
+        <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center px-5 pb-24 pt-6 text-center md:px-10 md:pt-10">
+          <motion.div
+            className="mb-10 md:mb-12"
+            initial={reduceMotion ? false : { opacity: 0, scale: 0.9, y: 24 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.85, ease: easeOut }}
+          >
+            <Link
+              href={DEMO_BASE}
+              onClick={onDemoHomeLogoClick}
+              className="group relative inline-block"
+              title="Zur Startseite (Diese Seite)"
+            >
+              <motion.div
+                whileHover={reduceMotion ? {} : { scale: 1.03 }}
+                transition={{ type: "spring", stiffness: 280, damping: 22 }}
+              >
+                <HeroLogoImg className="mx-auto h-auto w-[min(86vw,480px)] object-contain drop-shadow-[0_8px_48px_rgba(0,0,0,0.6)] transition duration-500 group-hover:drop-shadow-[0_12px_56px_rgba(201,162,39,0.35)]" />
+              </motion.div>
+              <span className="mt-3 block text-[11px] font-medium uppercase tracking-[0.35em] text-[#c9a227]/70 opacity-0 transition group-hover:opacity-100 md:text-xs">
+                Zurück zum Seitenanfang
+              </span>
+            </Link>
+          </motion.div>
+
           <motion.div
             variants={containerSlow}
             initial="hidden"
