@@ -164,7 +164,10 @@ export default function HomeSeoDefinitions() {
   const pack = DL_COPY[langKey(currentLanguage)];
 
   return (
-    <section className="mt-12 border-t border-white/10 pt-10" aria-labelledby="seo-dl-heading">
+    <section
+      className="mt-12 border-t border-white/10 pt-10 text-white [&_dd]:text-white"
+      aria-labelledby="seo-dl-heading"
+    >
       <h3 id="seo-dl-heading" className="text-lg font-semibold tracking-tight text-white">
         {pack.heading}
       </h3>
@@ -172,7 +175,7 @@ export default function HomeSeoDefinitions() {
         {pack.rows.map((row) => (
           <div key={row.term}>
             <dt className="text-base font-semibold text-blue-200">{row.term}</dt>
-            <dd className="mt-1.5 text-[0.9375rem] leading-relaxed text-white/80">{row.def}</dd>
+            <dd className="mt-1.5 text-[0.9375rem] leading-relaxed">{row.def}</dd>
           </div>
         ))}
       </dl>
