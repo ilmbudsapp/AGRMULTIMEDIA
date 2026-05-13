@@ -386,7 +386,7 @@ export default function TonisAutopflegeDemo() {
 
         <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center px-5 pb-24 pt-6 text-center md:px-10 md:pt-10">
           <motion.div
-            className="mb-10 md:mb-12"
+            className="mb-6 md:mb-10"
             initial={reduceMotion ? false : { opacity: 0, scale: 0.9, y: 24 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.85, ease: easeOut }}
@@ -401,7 +401,7 @@ export default function TonisAutopflegeDemo() {
                 whileHover={reduceMotion ? {} : { scale: 1.03 }}
                 transition={{ type: "spring", stiffness: 280, damping: 22 }}
               >
-                <HeroLogoImg className="mx-auto h-auto w-[min(86vw,480px)] object-contain drop-shadow-[0_8px_48px_rgba(0,0,0,0.6)] transition duration-500 group-hover:drop-shadow-[0_12px_56px_rgba(201,162,39,0.35)]" />
+                <HeroLogoImg className="mx-auto h-auto w-full max-w-[200px] object-contain drop-shadow-[0_8px_48px_rgba(0,0,0,0.6)] transition duration-500 group-hover:drop-shadow-[0_12px_56px_rgba(201,162,39,0.35)] sm:max-w-[240px] md:max-w-[300px] lg:max-w-[380px]" />
               </motion.div>
               <span className="mt-3 block text-[11px] font-medium uppercase tracking-[0.35em] text-[#c9a227]/70 opacity-0 transition group-hover:opacity-100 md:text-xs">
                 Zurück zum Seitenanfang
