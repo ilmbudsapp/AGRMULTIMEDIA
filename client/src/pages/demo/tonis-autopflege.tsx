@@ -56,19 +56,23 @@ function scrollToId(id: string) {
 function useDemoFonts() {
   const [ready, setReady] = useState(false);
   useEffect(() => {
-    const href =
-      "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Syne:wght@500;600;700;800&display=swap";
+    const googleHref =
+      "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Syne:wght@500;600;700;800&family=Orbitron:wght@700;800;900&display=swap";
     const id = "tonis-demo-fonts-v2";
-    if (document.getElementById(id)) {
-      setReady(true);
-      return;
+
+    const markReady = () => setReady(true);
+
+    if (!document.getElementById(id)) {
+      const link = document.createElement("link");
+      link.id = id;
+      link.rel = "stylesheet";
+      link.href = googleHref;
+      link.onload = markReady;
+      link.onerror = markReady;
+      document.head.appendChild(link);
+    } else {
+      markReady();
     }
-    const link = document.createElement("link");
-    link.id = id;
-    link.rel = "stylesheet";
-    link.href = href;
-    link.onload = () => setReady(true);
-    document.head.appendChild(link);
   }, []);
   return ready;
 }
@@ -161,6 +165,8 @@ export default function TonisAutopflegeDemo() {
 
   const fontSans = fontsReady ? '"Plus Jakarta Sans", system-ui, sans-serif' : "system-ui, sans-serif";
   const fontDisplay = fontsReady ? '"Syne", system-ui, sans-serif' : "system-ui, sans-serif";
+  /** Eurostile Extended Black: @font-face (local + optional woff2); sonst Orbitron 900 */
+  const fontHeroHeadline = '"Eurostile Extd", "Orbitron", system-ui, sans-serif';
 
   const LogoImg = ({ className }: { className?: string }) => (
     <img
@@ -180,6 +186,18 @@ export default function TonisAutopflegeDemo() {
       style={{ fontFamily: fontSans }}
     >
       <style>{`
+        @font-face {
+          font-family: 'Eurostile Extd';
+          font-style: normal;
+          font-weight: 900;
+          font-display: swap;
+          src:
+            local('Eurostile Extended Black'),
+            local('Eurostile T OT Condensed Bold'),
+            local('Eurostile Bold Extended'),
+            local('Eurostile Extended'),
+            url('/demo/tonis-autopflege/fonts/EurostileExtd-Black.woff2') format('woff2');
+        }
         @keyframes tonis-orbit {
           0% { transform: translate(0, 0) scale(1); }
           33% { transform: translate(12px, -18px) scale(1.05); }
@@ -221,34 +239,34 @@ export default function TonisAutopflegeDemo() {
         Zum Kontaktformular springen
       </a>
 
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-white/[0.06] bg-[#030306]/75 backdrop-blur-xl backdrop-saturate-150">
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-zinc-200/90 bg-zinc-100/95 shadow-[0_1px_0_rgba(255,255,255,0.8),0_8px_30px_rgba(0,0,0,0.06)] backdrop-blur-xl backdrop-saturate-150">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3.5 md:px-8">
           <motion.div whileHover={reduceMotion ? {} : { scale: 1.02 }} whileTap={{ scale: 0.98 }}>
             <Link
               href="/"
-              className="group relative flex items-center gap-2 rounded-xl outline-none ring-[#c9a227]/0 transition focus-visible:ring-2 focus-visible:ring-[#c9a227]/60"
+              className="group relative flex items-center gap-2 rounded-xl bg-white/90 px-2 py-1.5 shadow-sm ring-1 ring-zinc-200/80 outline-none transition hover:ring-[#c9a227]/40 focus-visible:ring-2 focus-visible:ring-[#c9a227]/70"
               title="Zur AGR Multimedia Startseite"
             >
               <span
                 className="absolute -inset-1 -z-10 rounded-xl opacity-0 blur-xl transition group-hover:opacity-100"
                 style={{
-                  background: "radial-gradient(circle at center, rgba(201,162,39,0.45), transparent 70%)",
+                  background: "radial-gradient(circle at center, rgba(201,162,39,0.28), transparent 70%)",
                   animation: reduceMotion ? undefined : "tonis-glow-pulse 2.8s ease-in-out infinite",
                 }}
               />
-              <LogoImg className="h-10 w-auto object-contain drop-shadow-[0_0_24px_rgba(201,162,39,0.2)] transition group-hover:drop-shadow-[0_0_32px_rgba(201,162,39,0.45)] md:h-11" />
+              <LogoImg className="h-10 w-auto object-contain md:h-11" />
               <span className="sr-only">Zur AGR Multimedia Startseite</span>
             </Link>
           </motion.div>
-          <nav className="hidden items-center gap-8 text-[13px] font-semibold uppercase tracking-[0.2em] text-zinc-400 md:flex">
+          <nav className="hidden items-center gap-8 text-[13px] font-semibold uppercase tracking-[0.18em] text-zinc-950 md:flex">
             {(["leistungen", "galerie", "ueber-uns", "kontakt"] as const).map((id) => (
               <button
                 key={id}
                 type="button"
                 onClick={() => scrollToId(id)}
-                className="group relative text-zinc-300 transition hover:text-[#f0d78c]"
+                className="group relative text-zinc-950 transition hover:text-black"
               >
-                <span className="absolute -bottom-1 left-0 h-px w-0 bg-gradient-to-r from-[#c9a227] to-[#f5e6b8] transition-all duration-300 group-hover:w-full" />
+                <span className="absolute -bottom-1 left-0 h-px w-0 bg-gradient-to-r from-[#b8860b] to-[#c9a227] transition-all duration-300 group-hover:w-full" />
                 {id === "leistungen" && "Leistungen"}
                 {id === "galerie" && "Galerie"}
                 {id === "ueber-uns" && "Über uns"}
@@ -338,11 +356,16 @@ export default function TonisAutopflegeDemo() {
             </motion.p>
             <motion.h1
               variants={fadeUp}
-              className="text-balance text-4xl font-extrabold leading-[1.05] tracking-tight text-white md:text-6xl lg:text-7xl"
-              style={{ fontFamily: fontDisplay }}
+              className="text-balance text-4xl font-black leading-[1.08] tracking-[0.02em] text-white md:text-6xl lg:text-7xl"
+              style={{
+                fontFamily: fontHeroHeadline,
+                fontWeight: 900,
+                textShadow:
+                  "0 2px 3px rgba(0,0,0,0.85), 0 12px 48px rgba(0,0,0,0.75), 0 0 1px rgba(0,0,0,1)",
+              }}
             >
               Glanz, der bleibt.
-              <span className="mt-2 block bg-gradient-to-r from-[#f5e6b8] via-[#c9a227] to-[#a67c00] bg-clip-text text-transparent">
+              <span className="mt-2 block text-[#f4e4a8] md:text-[#fcefb7]" style={{ textShadow: "0 2px 4px rgba(0,0,0,0.9), 0 0 40px rgba(201,162,39,0.45)" }}>
                 Perfektion im Detail.
               </span>
             </motion.h1>
