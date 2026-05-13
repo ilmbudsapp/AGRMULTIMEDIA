@@ -31,6 +31,14 @@ const DL_COPY: Record<LangKey, { heading: string; rows: DefRow[] }> = {
         term: "Brend sistem",
         def: "Pravila za logo, boje i tipografiju koja čine dosledan izgled na sajtu, štampi i društvenim mrežama.",
       },
+      {
+        term: "AEO (Answer Engine Optimization)",
+        def: "Format pisanja i strukture stranice tako da sistemi odgovora mogu da izvuku jedan jasan citat bez nagađanja — kratki uvod, definicije i liste.",
+      },
+      {
+        term: "GEO (Generative Engine Optimization)",
+        def: "Sadržaj pripremljen da generativna pretraga može tačno da sumarizuje ponudu: jasni naslovi, proverljivi izvori i uravnotežene perspektive.",
+      },
     ],
   },
   en: {
@@ -51,6 +59,14 @@ const DL_COPY: Record<LangKey, { heading: string; rows: DefRow[] }> = {
       {
         term: "Brand system",
         def: "Rules for logo, colour, and type that keep web, print, and social assets visually consistent.",
+      },
+      {
+        term: "AEO (Answer Engine Optimization)",
+        def: "Writing and page structure so answer engines can extract one clear quote without guessing — short lead, definitions, and lists.",
+      },
+      {
+        term: "GEO (Generative Engine Optimization)",
+        def: "Content shaped so generative search can summarize your offer accurately: clear headings, verifiable sources, and balanced viewpoints.",
       },
     ],
   },
@@ -73,6 +89,14 @@ const DL_COPY: Record<LangKey, { heading: string; rows: DefRow[] }> = {
         term: "Markensystem",
         def: "Regeln zu Logo, Farben und Typografie für konsistente Darstellung auf Web, Print und Social Media.",
       },
+      {
+        term: "AEO (Answer Engine Optimization)",
+        def: "Schreibweise und Seitenstruktur, damit Answer Engines ein klares Zitat ziehen können — kurze Lead-Antwort, Definitionen, Listen.",
+      },
+      {
+        term: "GEO (Generative Engine Optimization)",
+        def: "Inhalte so aufbereitet, dass generative Suche Ihr Angebot korrekt zusammenfassen kann: klare Überschriften, belegbare Quellen, ausgewogene Perspektiven.",
+      },
     ],
   },
   it: {
@@ -94,6 +118,14 @@ const DL_COPY: Record<LangKey, { heading: string; rows: DefRow[] }> = {
         term: "Sistema di marca",
         def: "Regole su logo, colori e tipografia per coerenza tra web, stampa e social.",
       },
+      {
+        term: "AEO (Answer Engine Optimization)",
+        def: "Scrittura e struttura così che i motori di risposta estraggano una citazione chiara — lead breve, definizioni ed elenchi.",
+      },
+      {
+        term: "GEO (Generative Engine Optimization)",
+        def: "Contenuti pensati perché la ricerca generativa riassuma correttamente l’offerta: titoli chiari, fonti verificabili, prospettive equilibrate.",
+      },
     ],
   },
   al: {
@@ -114,6 +146,14 @@ const DL_COPY: Record<LangKey, { heading: string; rows: DefRow[] }> = {
       {
         term: "Sistemi i markës",
         def: "Rregulla për logo, ngjyra dhe tipografi për konsistencë në web, print dhe rrjetet sociale.",
+      },
+      {
+        term: "AEO (Answer Engine Optimization)",
+        def: "Strukturë dhe shkrim që motorët e përgjigjes të nxjerrin një citim të qartë — hyrje e shkurtër, përkufizime dhe lista.",
+      },
+      {
+        term: "GEO (Generative Engine Optimization)",
+        def: "Përmbajtje e përgatitur që kërkimi gjenerativ të përmbledhë ofertën saktë: tituj të qartë, burime të verifikueshme, kënde të balancuara.",
       },
     ],
   },

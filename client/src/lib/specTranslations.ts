@@ -173,7 +173,7 @@ const en: SpecTranslations = {
   seo: {
     title: "AGR Multimedia — Web Design & Graphics · Geislingen",
     description:
-      "Web design, AI multimedia, graphic design & SEO for small businesses — studio in Geislingen an der Steige, Germany. Free consultation: agron6922@gmail.com",
+      "Web design, AI multimedia, graphic design & SEO for small businesses — studio in Geislingen an der Steige, Germany. We structure pages for AEO (answer-ready excerpts) and GEO (citable claims). Free consultation: agron6922@gmail.com",
   },
   heroProjects: {
     heading: 'Featured projects',
@@ -376,7 +376,7 @@ const de: SpecTranslations = {
   seo: {
     title: "AGR Multimedia — Webdesign & Grafik · Geislingen",
     description:
-      "Webdesign, KI-Multimedia, Grafikdesign & SEO für Kleinunternehmen — Studio in Geislingen an der Steige. Kostenlose Beratung: agron6922@gmail.com",
+      "Webdesign, KI-Multimedia, Grafikdesign & SEO für Kleinunternehmen — Studio in Geislingen an der Steige. Wir strukturieren Inhalte für AEO (Antwort-Snippets) und GEO (belegbare Aussagen). Kostenlose Beratung: agron6922@gmail.com",
   },
   heroProjects: {
     heading: 'Ausgewählte Projekte',
@@ -579,7 +579,7 @@ const it: SpecTranslations = {
   seo: {
     title: "AGR Multimedia — Web design e grafica · Geislingen",
     description:
-      "Web design, AI multimedia, grafica e SEO per piccole imprese — studio a Geislingen an der Steige, Germania. Consulenza gratuita: agron6922@gmail.com",
+      "Web design, AI multimedia, grafica e SEO per piccole imprese — studio a Geislingen an der Steige, Germania. Strutturiamo le pagine per AEO (estratti pronti) e GEO (affermazioni con fonti). Consulenza gratuita: agron6922@gmail.com",
   },
   heroProjects: {
     heading: 'Progetti in evidenza',
@@ -782,7 +782,7 @@ const sr: SpecTranslations = {
   seo: {
     title: "AGR Multimedia — Web dizajn, grafika i AI — Geislingen an der Steige",
     description:
-      "Web dizajn, AI multimedija, grafički dizajn i SEO za mala preduzeća — studio u Geislingen an der Steige, Nemačka. Besplatne konsultacije: agron6922@gmail.com",
+      "Web dizajn, AI multimedija, grafički dizajn i SEO za mala preduzeća — studio u Geislingen an der Steige, Nemačka. Strukturiramo stranice za AEO (izvodljive odgovore) i GEO (tvrdnje sa izvorima). Besplatne konsultacije: agron6922@gmail.com",
   },
   heroProjects: {
     heading: 'Izdvojeni projekti',
@@ -985,7 +985,7 @@ const al: SpecTranslations = {
   seo: {
     title: "AGR Multimedia — Web dizajn & grafikë · Geislingen",
     description:
-      "Web design, AI multimedia, dizajn grafik dhe SEO për biznese të vogla — studio në Geislingen an der Steige, Gjermani. Konsultë falas: agron6922@gmail.com",
+      "Web design, AI multimedia, dizajn grafik dhe SEO për biznese të vogla — studio në Geislingen an der Steige, Gjermani. Strukturojmë faqet për AEO (përgjigje të nxjerrshme) dhe GEO (afirmime me burime të verifikuara). Konsultë falas: agron6922@gmail.com",
   },
   heroProjects: {
     heading: 'Projektet e veçuara',

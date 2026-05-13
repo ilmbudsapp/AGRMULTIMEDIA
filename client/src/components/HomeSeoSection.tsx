@@ -116,9 +116,21 @@ const SECTION_COPY: Record<SectionLangKey, SectionCopy> = {
         q: "Šta tačno ulazi u „web dizajn” kod vas?",
         a: "Zavisi od briefa: informaciona arhitektura, vizuelni koncept, razvoj, osnovni tehnički SEO, performanse i mobilni prikaz — sve dokumentovano pre objave. Za širi obim vide stranicu Usluge i portfolio.",
       },
+      {
+        q: "Koja je razlika između AEO i GEO u praksi?",
+        a: "AEO cilja izvodljive citate u odgovornim površinama (npr. AI odgovori, istaknuti isječci). GEO cilja da generativna pretraga tačno sumarizuje vašu ponudu uz kontekst i reference. Mi oba tretiramo kao sloj iznad klasičnog SEO-a i performansi.",
+      },
+      {
+        q: "Zašto linkujete spoljašnje izvore u marketing tekstovima?",
+        a: "Zato što GEO i E-E-A-T traže proverljivost. Mi navodimo javne smernice (npr. Google Search Central) kad tvrdimo industrijske standarde; interne obećanja (npr. vreme odgovora) ostaju u pisanoj ponudi.",
+      },
+      {
+        q: "Kako izgleda „jedan odgovor na vrh” za vašu firmu?",
+        a: "Definišemo glavno korisničko pitanje, prva rečenica postaje direktan odgovor, zatim detalji u listama ili podnaslovima. Taj raspored ubrzava skeniranje i pomaže AEO izvodima.",
+      },
     ],
     answerLead:
-      "Ukratko: naša misija su brze, SEO-prijateljske stranice i dosledan brend. AI koristimo gde ubrzava rad. Međutim, ja lično pazim da odluke koje grade poverenje ostanu ljudske. Pre objave proveravamo performanse i jasnoću poruke — za vas, ne samo za algoritam.",
+      "AEO (optimizacija za sisteme odgovora) znači da stranica odmah daje jedan jasan odgovor i skener-friendly strukturu. GEO (optimizacija za generativnu pretragu) znači definicije, povezane izvore i uravnotežene pasuse koje modeli mogu bezbedno da sumarizuju. Mi u AGR Multimedia to spajamo sa tehničkim SEO i Core Web Vitals; ja lično potpisujem ključne odluke poverenja pre objave.",
     expertQuote:
       "„Merljivost mora da bude dogovorena pre dizajna — inače lep izgled ostaje samo estetika bez odgovornosti za rezultat.”",
     quoteAttribution: "Agron Osmani · CEO, AGR Multimedia · Geislingen an der Steige",
@@ -187,9 +199,21 @@ const SECTION_COPY: Record<SectionLangKey, SectionCopy> = {
         q: "What is included in web design?",
         a: "Depends on the brief: IA, UI design, development, baseline technical SEO, performance, and mobile QA — documented before launch. See Services and Portfolio for scope examples.",
       },
+      {
+        q: "How do AEO and GEO differ in practice?",
+        a: "AEO targets extractable quotes for answer surfaces (AI overviews, featured snippets). GEO targets safe, accurate summaries in generative search with context and citations. We treat both as layers on top of classic SEO and performance work.",
+      },
+      {
+        q: "Why do you cite external sources in copy?",
+        a: "Because GEO and E-E-A-T rely on verifiability. We link to public documentation (for example Google Search Central) when we state industry norms; operational promises (such as reply time) stay in your written proposal.",
+      },
+      {
+        q: "What does “answer-first layout” look like for my business?",
+        a: "We agree the primary user question, write the first sentence as the direct answer, then details in lists or subheads. That pattern speeds scanning and helps answer engines lift the right snippet.",
+      },
     ],
     answerLead:
-      "In short: our mission is fast, SEO-aware websites and a coherent brand. We use AI where it saves time. However, I personally review trust-critical choices before launch. After that, we still check performance and clarity — for your customers, not only for bots.",
+      "AEO (answer-engine optimization) means the page opens with one quotable answer plus a scannable outline. GEO (generative-engine optimization) means definitions, linked sources, and balanced perspectives that models can summarize safely. At AGR Multimedia we pair both with technical SEO and Core Web Vitals; I personally sign off trust-critical copy before launch.",
     expertQuote:
       "“If we cannot state what success looks like before design starts, we only ship decoration — not outcomes.”",
     quoteAttribution: "Agron Osmani · CEO, AGR Multimedia · Geislingen an der Steige",
@@ -259,9 +283,21 @@ const SECTION_COPY: Record<SectionLangKey, SectionCopy> = {
         q: "Was gehört zu Webdesign?",
         a: "Je nach Briefing: IA, UI, Umsetzung, Basis-SEO, Performance und Mobile-QA — dokumentiert vor Livegang. Details unter Leistungen und Portfolio.",
       },
+      {
+        q: "Wie unterscheiden sich AEO und GEO in der Praxis?",
+        a: "AEO zielt auf extrahierbare Zitate für Answer-Oberflächen (KI-Übersichten, Featured Snippets). GEO zielt auf korrekte, kontextreiche Zusammenfassungen in generativer Suche mit Belegen. Wir behandeln beides als Schicht über klassischem SEO und Performance.",
+      },
+      {
+        q: "Warum verlinken Sie externe Quellen?",
+        a: "Weil GEO und E-E-A-T Überprüfbarkeit brauchen. Wir verlinken öffentliche Leitfäden (z. B. Google Search Central) bei Branchennormen; operative Zusagen (z. B. Antwortzeit) stehen im schriftlichen Angebot.",
+      },
+      {
+        q: "Wie sieht „Antwort zuerst“ für mein Unternehmen aus?",
+        a: "Wir definieren die Kernfrage der Nutzer, setzen die erste Satzzeile als direkte Antwort und liefern Details in Listen oder Zwischenüberschriften. Das hilft AEO-Zitaten und dem schnellen Scannen.",
+      },
     ],
     answerLead:
-      "Kurz: Unsere Mission sind schnelle, SEO-fähige Websites und ein konsistentes Markenbild. KI nutzen wir dort, wo sie Zeit spart. Dennoch prüfe ich persönlich vertrauenskritische Entscheidungen vor dem Livegang. Außerdem testen wir Performance und Klarheit der Botschaft — für Ihre Kundschaft.",
+      "AEO (Answer-Engine-Optimierung) bedeutet: Seite beginnt mit einer zitierfähigen Antwort und einer scanbaren Gliederung. GEO (Generative-Engine-Optimierung) bedeutet: Definitionen, verlinkte Quellen und ausgewogene Perspektiven, die Modelle sicher zusammenfassen können. Wir bei AGR Multimedia verbinden das mit technischem SEO und Core Web Vitals; ich gebe vertrauenskritische Texte persönlich vor dem Livegang frei.",
     expertQuote:
       "„Ohne klare Erfolgskriterien vor dem Design bleibt nur Dekoration — keine messbare Wirkung.“",
     quoteAttribution: "Agron Osmani · CEO, AGR Multimedia · Geislingen an der Steige",
@@ -331,9 +367,21 @@ const SECTION_COPY: Record<SectionLangKey, SectionCopy> = {
         q: "Cosa include il web design?",
         a: "Dipende dal brief: IA, UI, sviluppo, SEO tecnico di base, performance e QA mobile — documentato prima del go-live. Vedi Servizi e Portfolio.",
       },
+      {
+        q: "Come differiscono AEO e GEO in pratica?",
+        a: "L’AEO punta a citazioni estraribili per superfici di risposta (overview IA, snippet). Il GEO punta a riassunti corretti in ricerca generativa con contesto e fonti. Entrambi li trattiamo come strato sopra SEO classico e performance.",
+      },
+      {
+        q: "Perché citate fonti esterne?",
+        a: "Perché GEO ed E-E-A-T richiedono verificabilità. Collegiamo documentazione pubblica (es. Google Search Central) per norme di settore; promesse operative (es. tempi di risposta) restano in proposta scritta.",
+      },
+      {
+        q: "Che aspetto ha il layout “risposta per prima” per la mia azienda?",
+        a: "Definiamo la domanda principale dell’utente, la prima frase è la risposta diretta, poi dettagli in elenchi o sottotitoli. Aiuta gli estratti AEO e la lettura rapida.",
+      },
     ],
     answerLead:
-      "In sintesi: la nostra missione sono siti veloci, SEO-ready e un brand coerente. Usiamo l'intelligenza artificiale dove accelera. Tuttavia supervisiono io le scelte che creano fiducia prima del go-live. Inoltre controlliamo performance e chiarezza — per i vostri clienti.",
+      "L’AEO (answer engine optimization) significa aprire la pagina con una risposta citabile e un indice scansionabile. Il GEO (generative engine optimization) significa definizioni, fonti collegate e prospettive equilibrate che i modelli possono riassumere in sicurezza. Noi in AGR Multimedia accoppiamo tutto a SEO tecnico e Core Web Vitals; supervisiono io i testi sensibili per la fiducia prima del go-live.",
     expertQuote:
       "“Senza definire il successo prima della progettazione, il design resta solo estetica — non risultati.”",
     quoteAttribution: "Agron Osmani · CEO, AGR Multimedia · Geislingen an der Steige",
@@ -403,9 +451,21 @@ const SECTION_COPY: Record<SectionLangKey, SectionCopy> = {
         q: "Çfarë përfshin web dizajni?",
         a: "Var nga brief-i: IA, UI, zhvillim, SEO bazë, performanca dhe QA mobile — dokumentuar para publikimit. Shiko Shërbimet dhe Portfolio.",
       },
+      {
+        q: "Si ndryshojnë AEO dhe GEO në praktikë?",
+        a: "AEO synon citate të nxjerrshme për sipërfaqet e përgjigjes (përmbledhje me AI, snippet). GEO synon përmbledhje të sakta në kërkim gjenerativ me kontekst dhe burime. Të dyja i trajtojmë si shtresë mbi SEO klasik dhe performancën.",
+      },
+      {
+        q: "Pse lidhni burime të jashtme?",
+        a: "Sepse GEO dhe E-E-A-T kërkojnë verifikueshmëri. Ne lidhim dokumentacion publik (p.sh. Google Search Central) për normat e industrisë; premtimet operative (p.sh. koha e përgjigjes) mbeten në ofertë me shkrim.",
+      },
+      {
+        q: "Si duket struktura “përgjigje së pari” për biznesin tim?",
+        a: "Përcaktojmë pyetjen kryesore të përdoruesit, fjalia e parë është përgjigje e drejtpërdrejtë, pastaj detajet në lista ose nënnënështra. Kjo ndihmon nxjerrjen AEO dhe leximin e shpejtë.",
+      },
     ],
     answerLead:
-      "Shkurt: misioni ynë janë faqe të shpejta miqësore me SEO dhe një sistem marke qëndror. AI përdoret ku kursen kohë. Megjithatë unë personalisht kontrolloj vendimet që ndërtojnë besimin para publikimit. Gjithashtu verifikojmë performancën dhe qartësinë — për klientët tuaj.",
+      "AEO (optimizimi për motorët e përgjigjes) do të thotë faqja fillon me një përgjigje të citueshme dhe strukturë të skanueshme. GEO (optimizimi për kërkimin gjenerativ) do të thotë përkufizime, burime të lidhura dhe kënde të balancuara që modelet i përmbledhin me siguri. Ne në AGR Multimedia i bashkojmë me SEO teknik dhe Core Web Vitals; unë personalisht miratoj kopjen kritike për besimin para publikimit.",
     expertQuote:
       "„Pa matën e suksesit përpara dizajnit, mbetet vetëm estetikë — jo rezultate të matshme.“",
     quoteAttribution: "Agron Osmani · CEO, AGR Multimedia · Geislingen an der Steige",
