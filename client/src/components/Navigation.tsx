@@ -62,12 +62,12 @@ export default function Navigation() {
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-14 w-full min-w-0 items-center justify-between gap-6 md:h-16 md:gap-8">
-          {/* Brand block: logo + tagline stay one unit on the left; tagline only when there is room */}
-          <div className="flex min-w-0 shrink items-center gap-4 lg:gap-6">
+          {/* Brand block: logo + tagline one line, tight to logo; tagline from lg up */}
+          <div className="flex min-w-0 shrink items-center">
             <Link
               href="/"
               onClick={handleLogoClick}
-              className="flex min-w-0 items-center gap-4 lg:gap-6 outline-offset-4"
+              className="flex min-w-0 items-center gap-1.5 md:gap-2 outline-offset-4"
               data-testid="logo-button"
               aria-label={tSpec.nav.home}
             >
@@ -81,7 +81,7 @@ export default function Navigation() {
                   decoding="async"
                 />
               </picture>
-              <span className="hidden max-w-[11rem] text-[10px] font-medium uppercase leading-tight tracking-[0.08em] text-white/80 lg:inline xl:max-w-none xl:text-xs">
+              <span className="hidden whitespace-nowrap text-[9px] font-medium uppercase leading-none tracking-[0.06em] text-white/80 lg:inline xl:text-[10px] 2xl:text-xs">
                 {logoSeoText}
               </span>
             </Link>
