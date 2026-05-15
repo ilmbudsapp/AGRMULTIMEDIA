@@ -67,7 +67,7 @@ export default function Navigation() {
             <Link
               href="/"
               onClick={handleLogoClick}
-              className="flex min-w-0 items-center gap-1.5 md:gap-2 outline-offset-4"
+              className="flex min-w-0 items-center gap-0.5 md:gap-1 outline-offset-4"
               data-testid="logo-button"
               aria-label={tSpec.nav.home}
             >
