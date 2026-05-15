@@ -151,6 +151,21 @@ export default function Footer() {
                 {isHome ? (
                   <button
                     type="button"
+                    onClick={() => scrollToSection("bewertungen")}
+                    className="text-gray-400 hover:text-white transition-colors duration-300 text-left"
+                  >
+                    {tSpec.nav.reviews}
+                  </button>
+                ) : (
+                  <Link href="/#bewertungen" className="text-gray-400 hover:text-white transition-colors duration-300 block">
+                    {tSpec.nav.reviews}
+                  </Link>
+                )}
+              </li>
+              <li>
+                {isHome ? (
+                  <button
+                    type="button"
                     onClick={() => scrollToSection("contact")}
                     className="text-gray-400 hover:text-white transition-colors duration-300 text-left"
                   >

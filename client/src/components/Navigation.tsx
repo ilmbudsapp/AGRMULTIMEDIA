@@ -42,6 +42,7 @@ export default function Navigation() {
     { id: "home", label: tSpec.nav.home, href: "/", section: "hero-h1" },
     { id: "services", label: tSpec.nav.services, href: "/services", section: "services-preview" },
     { id: "about", label: tSpec.nav.about, href: "/about", section: "about" },
+    { id: "reviews", label: tSpec.nav.reviews, href: "/#bewertungen", section: "bewertungen" },
   ];
 
   const contactHref = isHomePage ? "/#contact" : "/contact";

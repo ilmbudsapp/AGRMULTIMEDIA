@@ -56,10 +56,25 @@ export interface SpecTranslations {
     services: string;
     portfolio: string;
     about: string;
+    /** Google Maps reviews anchor on home */
+    reviews: string;
     blog: string;
     contact: string;
     /** Primary header CTA → #contact */
     ctaQuote: string;
+  };
+  /** Real Google Maps quotes (review body stays original in data file) */
+  reviewsSection: {
+    title: string;
+    subtitle: string;
+    /** aria-label for semantic section / role=region */
+    ariaRegion: string;
+    platformGoogleMaps: string;
+    /** Screen reader text for the 5-star row (all listed reviews are 5/5) */
+    ratingScreenReader: string;
+    /** Secondary CTA: official Google Business Profile */
+    mapsCta: string;
+    mapsCtaAriaLabel: string;
   };
   // Services preview (4 flip cards on home)
   servicesPreview: {
@@ -203,9 +218,19 @@ const en: SpecTranslations = {
     services: 'Services',
     portfolio: 'Portfolio',
     about: 'About',
+    reviews: 'Reviews',
     blog: 'Blog',
     contact: 'Contact',
     ctaQuote: 'Get a quote',
+  },
+  reviewsSection: {
+    title: 'Google reviews',
+    subtitle: 'What our clients say — original quotes as published on Google Maps.',
+    ariaRegion: 'Google Maps customer reviews for AGR Multimedia',
+    platformGoogleMaps: 'Google Maps',
+    ratingScreenReader: 'Rating: 5 out of 5 stars',
+    mapsCta: 'All reviews on Google Maps',
+    mapsCtaAriaLabel: 'Open AGR Multimedia on Google Maps in a new tab',
   },
   servicesPreview: {
     title: 'What I do',
@@ -406,9 +431,19 @@ const de: SpecTranslations = {
     services: 'Leistungen',
     portfolio: 'Portfolio',
     about: 'Über mich',
+    reviews: 'Bewertungen',
     blog: 'Blog',
     contact: 'Kontakt',
     ctaQuote: 'Angebot anfragen',
+  },
+  reviewsSection: {
+    title: 'Google-Bewertungen',
+    subtitle: 'Was unsere Kunden sagen — Originaltexte wie auf Google Maps veröffentlicht.',
+    ariaRegion: 'Kundenbewertungen aus Google Maps für AGR Multimedia',
+    platformGoogleMaps: 'Google Maps',
+    ratingScreenReader: 'Bewertung: 5 von 5 Sternen',
+    mapsCta: 'Alle Bewertungen auf Google Maps',
+    mapsCtaAriaLabel: 'AGR Multimedia auf Google Maps öffnen — neuer Tab',
   },
   servicesPreview: {
     title: 'Schwerpunkte',
@@ -609,9 +644,19 @@ const it: SpecTranslations = {
     services: 'Servizi',
     portfolio: 'Portfolio',
     about: 'Chi sono',
+    reviews: 'Recensioni',
     blog: 'Blog',
     contact: 'Contatti',
     ctaQuote: 'Richiedi un preventivo',
+  },
+  reviewsSection: {
+    title: 'Recensioni Google',
+    subtitle: 'Cosa dicono i clienti — citazioni originali pubblicate su Google Maps.',
+    ariaRegion: 'Recensioni dei clienti su Google Maps per AGR Multimedia',
+    platformGoogleMaps: 'Google Maps',
+    ratingScreenReader: 'Valutazione: 5 stelle su 5',
+    mapsCta: 'Tutte le recensioni su Google Maps',
+    mapsCtaAriaLabel: 'Apri AGR Multimedia su Google Maps in una nuova scheda',
   },
   servicesPreview: {
     title: 'Cosa faccio',
@@ -812,9 +857,19 @@ const sr: SpecTranslations = {
     services: 'Usluge',
     portfolio: 'Portfolio',
     about: 'O meni',
+    reviews: 'Recenzije',
     blog: 'Blog',
     contact: 'Kontakt',
     ctaQuote: 'Zatraži ponudu',
+  },
+  reviewsSection: {
+    title: 'Google recenzije',
+    subtitle: 'Šta kažu naši klijenti — originalni citati objavljeni na Google Maps-u.',
+    ariaRegion: 'Recenzije klijenata sa Google Maps-a za AGR Multimedia',
+    platformGoogleMaps: 'Google Maps',
+    ratingScreenReader: 'Ocena: 5 od 5 zvezdica',
+    mapsCta: 'Sve recenzije na Google Maps-u',
+    mapsCtaAriaLabel: 'Otvori AGR Multimedia na Google Maps-u — novi tab',
   },
   servicesPreview: {
     title: ' Oblasti rada',
@@ -1015,9 +1070,19 @@ const al: SpecTranslations = {
     services: 'Shërbime',
     portfolio: 'Portfolio',
     about: 'Rreth meje',
+    reviews: 'Vlerësime',
     blog: 'Blog',
     contact: 'Kontakt',
     ctaQuote: 'Kërko ofertë',
+  },
+  reviewsSection: {
+    title: 'Vlerësime në Google',
+    subtitle: 'Çfarë thonë klientët — citate origjinale sipas botimit në Google Maps.',
+    ariaRegion: 'Vlerësime të klientëve në Google Maps për AGR Multimedia',
+    platformGoogleMaps: 'Google Maps',
+    ratingScreenReader: 'Vlerësimi: 5 nga 5 yje',
+    mapsCta: 'Të gjitha vlerësimet në Google Maps',
+    mapsCtaAriaLabel: 'Hap AGR Multimedia në Google Maps — skedë e re',
   },
   servicesPreview: {
     title: 'Fokusi im',
