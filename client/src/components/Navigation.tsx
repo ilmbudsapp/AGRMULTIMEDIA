@@ -82,7 +82,7 @@ export default function Navigation() {
                   decoding="async"
                 />
               </picture>
-              <span className="flex min-w-0 flex-col text-[8px] font-medium uppercase leading-[1.15] tracking-[0.04em] text-white/80 sm:text-[9px] md:leading-tight md:tracking-[0.05em] lg:text-[9px] xl:text-[10px] 2xl:text-xs">
+              <span className="flex min-w-0 flex-col text-[8px] font-medium uppercase leading-[1.15] tracking-[0.04em] text-[#5da3f9] sm:text-[9px] md:leading-tight md:tracking-[0.05em] lg:text-[9px] xl:text-[10px] 2xl:text-xs">
                 <span className="whitespace-nowrap">{logoSeoLine1}</span>
                 <span className="whitespace-nowrap">{logoSeoLine2}</span>
               </span>
