@@ -86,14 +86,14 @@ export default function Navigation() {
             </Link>
           </div>
 
-          <div className="hidden md:flex items-center gap-7 lg:gap-8">
+          <div className="hidden md:flex md:flex-nowrap md:items-center md:gap-4 lg:gap-5 min-w-0">
             {navItems.map((item) =>
               isHomePage && item.section ? (
                 <button
                   key={item.id}
                   type="button"
                   onClick={() => scrollToSection(item.section!)}
-                  className="text-[0.9375rem] text-white/75 hover:text-blue-200 transition-colors"
+                  className="shrink-0 whitespace-nowrap text-[0.875rem] leading-none text-white/75 hover:text-blue-200 transition-colors lg:text-[0.9rem]"
                   data-testid={`nav-${item.id}`}
                   aria-label={`${item.label} ${scrollHint}`}
                 >
@@ -103,7 +103,7 @@ export default function Navigation() {
                 <Link
                   key={item.id}
                   href={item.href}
-                  className="text-[0.9375rem] text-white/75 hover:text-blue-200 transition-colors"
+                  className="shrink-0 whitespace-nowrap text-[0.875rem] leading-none text-white/75 hover:text-blue-200 transition-colors lg:text-[0.9rem]"
                   data-testid={`nav-${item.id}`}
                 >
                   {item.label}
@@ -114,7 +114,7 @@ export default function Navigation() {
               <button
                 type="button"
                 onClick={() => scrollToSection("contact")}
-                className="premium-cta rounded-full px-5 py-2 text-[0.875rem] font-semibold hover:brightness-110 transition"
+                className="premium-cta shrink-0 whitespace-nowrap rounded-full px-4 py-2 text-[0.8125rem] font-semibold hover:brightness-110 transition lg:px-5 lg:text-[0.875rem]"
                 data-testid="nav-contact-cta"
                 aria-label={`${tSpec.nav.ctaQuote} ${scrollHint}`}
               >
@@ -123,7 +123,7 @@ export default function Navigation() {
             ) : (
               <Link
                 href={contactHref}
-                className="premium-cta rounded-full px-5 py-2 text-[0.875rem] font-semibold hover:brightness-110 transition"
+                className="premium-cta shrink-0 whitespace-nowrap rounded-full px-4 py-2 text-[0.8125rem] font-semibold hover:brightness-110 transition lg:px-5 lg:text-[0.875rem]"
                 data-testid="nav-contact-cta"
               >
                 {tSpec.nav.ctaQuote}

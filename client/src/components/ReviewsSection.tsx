@@ -1,5 +1,6 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { AGR_GOOGLE_REVIEWS, GOOGLE_MAPS_PLACE_URL } from "@/data/agrGoogleReviews";
+import GoogleLogoMark from "@/components/GoogleLogoMark";
 import { ExternalLink, Star } from "lucide-react";
 
 const ORGANIZATION_ID = "https://www.agrmultimedia.eu/#organization";
@@ -97,9 +98,17 @@ export default function ReviewsSection() {
                 <blockquote
                   lang="de"
                   cite={GOOGLE_MAPS_PLACE_URL}
-                  className="review-card premium-card flex h-full min-h-0 flex-col rounded-2xl p-6 shadow-[0_8px_30px_rgba(0,0,0,0.25)] md:p-7"
+                  className="review-card premium-card relative flex h-full min-h-0 flex-col rounded-2xl p-6 shadow-[0_8px_30px_rgba(0,0,0,0.25)] md:p-7"
                 >
-                  <p className="grow text-base leading-relaxed text-white/85">&ldquo;{rev.text}&rdquo;</p>
+                  <div
+                    className="pointer-events-none absolute right-5 top-5 md:right-6 md:top-6"
+                    aria-hidden
+                  >
+                    <GoogleLogoMark className="h-6 w-6 opacity-95 drop-shadow-sm" />
+                  </div>
+                  <p className="grow pr-10 text-base leading-relaxed text-white/85 md:pr-12">
+                    &ldquo;{rev.text}&rdquo;
+                  </p>
                   <footer className="mt-5 border-t border-white/10 pt-4">
                     <div className="flex flex-wrap items-center justify-between gap-2">
                       <div className="flex min-w-0 flex-wrap items-center gap-2 gap-y-1">
@@ -123,11 +132,12 @@ export default function ReviewsSection() {
               href={GOOGLE_MAPS_PLACE_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="premium-cta inline-flex items-center gap-2 rounded-full px-6 py-3 text-[0.875rem] font-semibold transition hover:brightness-110"
+              className="premium-cta inline-flex items-center gap-2.5 rounded-full px-6 py-3 text-[0.875rem] font-semibold transition hover:brightness-110"
               aria-label={mapsCtaAriaLabel}
             >
+              <GoogleLogoMark className="h-5 w-5 shrink-0" />
+              <span className="leading-none">{mapsCta}</span>
               <ExternalLink className="size-4 shrink-0 opacity-90" aria-hidden />
-              {mapsCta}
             </a>
           </div>
         </div>
