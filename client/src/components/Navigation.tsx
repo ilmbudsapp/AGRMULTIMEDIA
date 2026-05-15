@@ -60,17 +60,18 @@ export default function Navigation() {
       className="fixed top-0 left-0 right-0 z-50 border-b border-[#333333] bg-[#0a0a0a]/85 backdrop-blur-xl"
       aria-label={NAV_LANDMARK_LABEL[currentLanguage]}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-14 md:h-16">
-          <div className="flex-shrink-0">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="flex h-14 w-full min-w-0 items-center justify-between gap-6 md:h-16 md:gap-8">
+          {/* Brand block: logo + tagline stay one unit on the left; tagline only when there is room */}
+          <div className="flex min-w-0 shrink items-center gap-4 lg:gap-6">
             <Link
               href="/"
               onClick={handleLogoClick}
-              className="flex items-center gap-3"
+              className="flex min-w-0 items-center gap-4 lg:gap-6 outline-offset-4"
               data-testid="logo-button"
               aria-label={tSpec.nav.home}
             >
-              <picture>
+              <picture className="shrink-0">
                 <source srcSet="/agr-logo-white.webp" type="image/webp" />
                 <img
                   src="/agr-logo-white.png"
@@ -80,13 +81,13 @@ export default function Navigation() {
                   decoding="async"
                 />
               </picture>
-              <span className="max-w-[185px] text-[10px] font-medium uppercase leading-tight tracking-[0.08em] text-white/80 sm:max-w-none sm:text-xs">
+              <span className="hidden max-w-[11rem] text-[10px] font-medium uppercase leading-tight tracking-[0.08em] text-white/80 lg:inline xl:max-w-none xl:text-xs">
                 {logoSeoText}
               </span>
             </Link>
           </div>
 
-          <div className="hidden md:flex md:flex-nowrap md:items-center md:gap-4 lg:gap-5 min-w-0">
+          <div className="hidden shrink-0 md:flex md:flex-nowrap md:items-center md:gap-4 lg:gap-5">
             {navItems.map((item) =>
               isHomePage && item.section ? (
                 <button
