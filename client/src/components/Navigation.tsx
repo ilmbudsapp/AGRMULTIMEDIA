@@ -12,14 +12,15 @@ export default function Navigation() {
   const [location] = useLocation();
 
   const isHomePage = location === "/";
-  const logoSeoTextByLang: Record<string, string> = {
-    en: "WEBDESIGN & SEO IN GEISLINGEN AN DER STEIGE",
-    de: "WEBDESIGN & SEO IN GEISLINGEN AN DER STEIGE",
-    it: "WEBDESIGN & SEO A GEISLINGEN AN DER STEIGE",
-    sr: "WEBDESIGN & SEO U GEISLINGEN AN DER STEIGE",
-    al: "WEBDESIGN & SEO NË GEISLINGEN AN DER STEIGE",
+  /** Two-line stack (mobile + desktop): line1 + line2, location always second line */
+  const logoSeoLinesByLang: Record<string, readonly [string, string]> = {
+    en: ["WEBDESIGN & SEO IN", "GEISLINGEN AN DER STEIGE"],
+    de: ["WEBDESIGN & SEO IN", "GEISLINGEN AN DER STEIGE"],
+    it: ["WEBDESIGN & SEO A", "GEISLINGEN AN DER STEIGE"],
+    sr: ["WEBDESIGN & SEO U", "GEISLINGEN AN DER STEIGE"],
+    al: ["WEBDESIGN & SEO NË", "GEISLINGEN AN DER STEIGE"],
   };
-  const logoSeoText = logoSeoTextByLang[currentLanguage] ?? logoSeoTextByLang.en;
+  const [logoSeoLine1, logoSeoLine2] = logoSeoLinesByLang[currentLanguage] ?? logoSeoLinesByLang.en;
 
   const scrollToSection = (sectionId: string) => {
     if (isHomePage) {
@@ -62,7 +63,7 @@ export default function Navigation() {
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-14 w-full min-w-0 items-center justify-between gap-6 md:h-16 md:gap-8">
-          {/* Brand block: logo + tagline one line, tight to logo; tagline from lg up */}
+          {/* Brand: logo + two-line SEO tagline (visible on mobile too) */}
           <div className="flex min-w-0 shrink items-center">
             <Link
               href="/"
@@ -81,8 +82,9 @@ export default function Navigation() {
                   decoding="async"
                 />
               </picture>
-              <span className="hidden whitespace-nowrap text-[9px] font-medium uppercase leading-none tracking-[0.06em] text-white/80 lg:inline xl:text-[10px] 2xl:text-xs">
-                {logoSeoText}
+              <span className="flex min-w-0 flex-col text-[8px] font-medium uppercase leading-[1.15] tracking-[0.04em] text-white/80 sm:text-[9px] md:leading-tight md:tracking-[0.05em] lg:text-[9px] xl:text-[10px] 2xl:text-xs">
+                <span className="whitespace-nowrap">{logoSeoLine1}</span>
+                <span className="whitespace-nowrap">{logoSeoLine2}</span>
               </span>
             </Link>
           </div>
