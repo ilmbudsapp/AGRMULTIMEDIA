@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import HomeGeoInsight from "@/components/HomeGeoInsight";
@@ -19,15 +18,6 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Home() {
   const { currentLanguage } = useLanguage();
-
-  useEffect(() => {
-    const id = window.location.hash.replace(/^#/, "");
-    if (!id) return;
-    const t = window.setTimeout(() => {
-      document.getElementById(id)?.scrollIntoView({ block: "start", behavior: "auto" });
-    }, 0);
-    return () => window.clearTimeout(t);
-  }, []);
 
   return (
     <div className="min-h-screen w-full max-w-[100vw] overflow-x-hidden bg-[#07070b]">

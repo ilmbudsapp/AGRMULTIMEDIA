@@ -1,48 +1,26 @@
-import { useState } from "react";
+﻿import { useState, type MouseEvent } from "react";
 import { Menu, X } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Link, useLocation } from "wouter";
 import LanguageSwitcherInline from "./LanguageSwitcherInline";
 import { NAV_LANDMARK_LABEL, NAV_MOBILE_TOGGLE } from "@/lib/a11yLandmarks";
 import type { Language } from "@/lib/i18n";
-import { scrollToElementById, scrollWindowToTop } from "@/lib/instantScroll";
+import { scrollWindowToTop } from "@/lib/instantScroll";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { tSpec, currentLanguage } = useLanguage();
-  const [location, setLocation] = useLocation();
+  const [location] = useLocation();
 
   const closeMenu = () => setIsMenuOpen(false);
 
-  /** Scroll to hero and clear #about (wouter ignores Link to "/" when already on home). */
-  const goToHome = () => {
-    closeMenu();
-    if (location === "/") {
-      window.history.replaceState(null, "", "/");
-      scrollWindowToTop();
-      return;
-    }
-    setLocation("/");
-  };
-
-  const goToAbout = () => {
-    closeMenu();
-    if (location === "/") {
-      window.history.replaceState(null, "", "/#about");
-      scrollToElementById("about");
-      return;
-    }
-    setLocation("/");
-    window.history.replaceState(null, "", "/#about");
-  };
-
-  const navItems: { id: string; label: string; href: string; isHome?: boolean; isAbout?: boolean }[] = [
+  const navItems: { id: string; label: string; href: string; isHome?: boolean }[] = [
     { id: "home", label: tSpec.nav.home, href: "/", isHome: true },
     { id: "webdesign", label: tSpec.nav.webdesignSeo, href: "/webdesign-seo" },
     { id: "video", label: tSpec.nav.videoProduction, href: "/videoproduktion" },
     { id: "portfolio", label: tSpec.nav.portfolio, href: "/portfolio" },
     { id: "reviews", label: tSpec.nav.reviews, href: "/bewertungen" },
-    { id: "about", label: tSpec.nav.about, href: "/#about", isAbout: true },
+    { id: "about", label: tSpec.nav.about, href: "/about" },
   ];
 
   const lang = currentLanguage as Language;
@@ -50,6 +28,17 @@ export default function Navigation() {
 
   const linkClass =
     "shrink-0 whitespace-nowrap text-[0.875rem] leading-none text-white/75 hover:text-blue-200 transition-colors lg:text-[0.9rem]";
+
+  const onHomeClick = (e: MouseEvent) => {
+    if (location === "/") {
+      e.preventDefault();
+      closeMenu();
+      window.history.replaceState(null, "", "/");
+      scrollWindowToTop();
+    } else {
+      closeMenu();
+    }
+  };
 
   return (
     <nav
@@ -61,14 +50,7 @@ export default function Navigation() {
           <div className="flex shrink-0 items-center">
             <Link
               href="/"
-              onClick={(e) => {
-                if (location === "/") {
-                  e.preventDefault();
-                  goToHome();
-                } else {
-                  closeMenu();
-                }
-              }}
+              onClick={onHomeClick}
               className="flex shrink-0 items-center outline-offset-4"
               data-testid="logo-button"
               aria-label={tSpec.nav.home}
@@ -87,42 +69,20 @@ export default function Navigation() {
           </div>
 
           <div className="hidden min-w-0 shrink md:flex md:flex-nowrap md:items-center md:gap-2.5 lg:gap-3 xl:gap-4">
-            {navItems.map((item) =>
-              item.isAbout ? (
-                <button
-                  key={item.id}
-                  type="button"
-                  onClick={goToAbout}
-                  className={`${linkClass} cursor-pointer border-0 bg-transparent p-0`}
-                  data-testid={`nav-${item.id}`}
-                >
-                  {item.label}
-                </button>
-              ) : item.isHome ? (
-                <Link
-                  key={item.id}
-                  href={item.href}
-                  onClick={(e) => {
-                    if (location === "/") {
-                      e.preventDefault();
-                      goToHome();
-                    } else {
-                      closeMenu();
-                    }
-                  }}
-                  className={linkClass}
-                  data-testid={`nav-${item.id}`}
-                >
-                  {item.label}
-                </Link>
-              ) : (
-                <Link key={item.id} href={item.href} className={linkClass} data-testid={`nav-${item.id}`}>
-                  {item.label}
-                </Link>
-              ),
-            )}
+            {navItems.map((item) => (
+              <Link
+                key={item.id}
+                href={item.href}
+                onClick={item.isHome ? onHomeClick : closeMenu}
+                className={linkClass}
+                data-testid={`nav-${item.id}`}
+              >
+                {item.label}
+              </Link>
+            ))}
             <Link
               href="/kontakt"
+              onClick={closeMenu}
               className="premium-cta shrink-0 whitespace-nowrap rounded-full px-4 py-2 text-[0.8125rem] font-semibold transition hover:brightness-110 lg:px-5 lg:text-[0.875rem]"
               data-testid="nav-contact-cta"
             >
@@ -157,46 +117,17 @@ export default function Navigation() {
         hidden={!isMenuOpen}
       >
         <div className="mx-auto max-w-6xl space-y-1 px-4 py-4">
-          {navItems.map((item) =>
-            item.isAbout ? (
-              <button
-                key={item.id}
-                type="button"
-                onClick={goToAbout}
-                className="block w-full whitespace-nowrap py-3 text-left text-[0.9375rem] text-white/85"
-                data-testid={`mobile-nav-${item.id}`}
-              >
-                {item.label}
-              </button>
-            ) : item.isHome ? (
-              <Link
-                key={item.id}
-                href={item.href}
-                className="block w-full whitespace-nowrap py-3 text-[0.9375rem] text-white/85"
-                data-testid={`mobile-nav-${item.id}`}
-                onClick={(e) => {
-                  if (location === "/") {
-                    e.preventDefault();
-                    goToHome();
-                  } else {
-                    closeMenu();
-                  }
-                }}
-              >
-                {item.label}
-              </Link>
-            ) : (
-              <Link
-                key={item.id}
-                href={item.href}
-                className="block w-full whitespace-nowrap py-3 text-[0.9375rem] text-white/85"
-                data-testid={`mobile-nav-${item.id}`}
-                onClick={closeMenu}
-              >
-                {item.label}
-              </Link>
-            ),
-          )}
+          {navItems.map((item) => (
+            <Link
+              key={item.id}
+              href={item.href}
+              className="block w-full whitespace-nowrap py-3 text-[0.9375rem] text-white/85"
+              data-testid={`mobile-nav-${item.id}`}
+              onClick={item.isHome ? onHomeClick : closeMenu}
+            >
+              {item.label}
+            </Link>
+          ))}
           <Link
             href="/kontakt"
             className="mt-3 block w-full rounded-full bg-white py-3 text-center text-[0.875rem] font-semibold text-[#0a0a0f]"

@@ -1,14 +1,15 @@
 import { useEffect } from "react";
 import { useLocation } from "wouter";
 
-/** Scroll window to top on every client-side route change. */
+/** Scroll window to top instantly on every client-side route change. */
 export default function ScrollToTop() {
   const [location] = useLocation();
 
   useEffect(() => {
-    // Hash targets (e.g. /#about) are handled on the home page — do not flash scroll-to-top first.
-    if (window.location.hash) return;
-    window.scrollTo(0, 0);
+    if (typeof history !== "undefined" && "scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }, [location]);
 
   return null;

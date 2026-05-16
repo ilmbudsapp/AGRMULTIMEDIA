@@ -95,7 +95,7 @@ export default function Footer() {
                 </button>
               ) : (
                 <Link
-                  href="/#hero-h1"
+                  href="/"
                   className="inline-block w-fit rounded-sm outline-offset-4 transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white/40"
                   aria-label={tSpec.nav.home}
                 >
@@ -158,19 +158,9 @@ export default function Footer() {
                   </li>
                 ))}
                 <li>
-                  {isHome ? (
-                    <button
-                      type="button"
-                      onClick={() => scrollToSection("about")}
-                      className="text-gray-400 hover:text-white transition-colors duration-300 text-left"
-                    >
-                      {tSpec.nav.about}
-                    </button>
-                  ) : (
-                    <Link href="/#about" className="text-gray-400 hover:text-white transition-colors duration-300 block">
-                      {tSpec.nav.about}
-                    </Link>
-                  )}
+                  <Link href="/about" className="text-gray-400 hover:text-white transition-colors duration-300 block">
+                    {tSpec.nav.about}
+                  </Link>
                 </li>
               </ul>
             </div>

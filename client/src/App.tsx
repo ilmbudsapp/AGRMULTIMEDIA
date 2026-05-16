@@ -14,6 +14,7 @@ import SkipToContent from "./components/SkipToContent";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import PageLoadingFallback from "@/components/PageLoadingFallback";
 import ScrollToTop from "@/components/ScrollToTop";
+import LegacyHashRedirect from "@/components/LegacyHashRedirect";
 
 const Home = lazy(() => import("@/pages/home"));
 const ServicesPage = lazy(() => import("@/pages/ServicesPage"));
@@ -118,6 +119,7 @@ function App() {
                   <SkipToContent />
                   <MetaSEO />
                   <ScrollToTop />
+                  <LegacyHashRedirect />
                   <Suspense fallback={<PageLoadingFallback />}>
                     <Router />
                   </Suspense>
