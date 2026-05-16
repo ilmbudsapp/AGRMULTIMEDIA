@@ -115,20 +115,17 @@ export interface SpecTranslations {
     pageTitle: string;
     pageLead: string;
     pillarWeb: string;
-    pillarVideo: string;
     tonis: {
       title: string;
-      subtitle: string;
       description: string;
       liveCta: string;
-      demoCta: string;
       gradeBadge: string;
     };
-    kickstarter: {
+    fixbike: {
       title: string;
-      subtitle: string;
       description: string;
-      servicesCta: string;
+      liveCta: string;
+      gradeBadge: string;
     };
   };
   // Why work with me
@@ -308,24 +305,21 @@ const en: SpecTranslations = {
   portfolioPage: {
     pageTitle: 'Portfolio',
     pageLead:
-      'Selected web and video projects with measurable SEO, conversion, and campaign outcomes — built in Geislingen for clients in Germany and beyond.',
+      'Selected web design projects with measurable SEO, AEO, GEO and conversion results — built in Geislingen for clients in Germany and beyond.',
     pillarWeb: 'Web design & SEO',
-    pillarVideo: 'Video production & editing',
     tonis: {
-      title: "Toni's Autopflege Göppingen",
-      subtitle: 'Full transformation, SEO, AEO and GEO optimization (Grade A)',
+      title: "Toni's Autopflege — Göppingen",
       description:
-        'Website expanded from a basic 3-word presence to 1,461 words of optimized content. Technical SEO score raised to 94 points, with full optimization for AI search (AEO) and local search (GEO). Web App Manifest and PWA readiness integrated.',
+        'Complete website transformation optimized to the highest level (Grade A). Word count raised from 3 to 1,461 with advanced SEO, AEO and GEO structures and PWA support integrated.',
       liveCta: 'View live website',
-      demoCta: 'View studio demo',
       gradeBadge: 'Grade A · SEO 94',
     },
-    kickstarter: {
-      title: 'theirrealmtv CAT',
-      subtitle: 'Promo video for a Kickstarter campaign',
+    fixbike: {
+      title: 'FixBike',
       description:
-        'Visually striking, high-converting, cost-effective video material for a global crowdfunding campaign — delivered on a very tight timeline.',
-      servicesCta: 'Video production services',
+        'Professional website for bicycle repair and service. Optimized for fast load times, excellent local SEO (GEO) visibility and maximum customer conversion.',
+      liveCta: 'View live website',
+      gradeBadge: 'Grade A · GEO',
     },
   },
   whyMe: {
@@ -546,24 +540,21 @@ const de: SpecTranslations = {
   portfolioPage: {
     pageTitle: 'Portfolio',
     pageLead:
-      'Ausgewählte Web- und Video-Projekte mit messbarem SEO-, Conversion- und Kampagnen-Ergebnis — entwickelt in Geislingen für Kunden in Deutschland und darüber hinaus.',
+      'Ausgewählte Webdesign-Projekte mit messbarem SEO-, AEO-, GEO- und Conversion-Ergebnis — entwickelt in Geislingen für Kunden in Deutschland und darüber hinaus.',
     pillarWeb: 'Webdesign & SEO',
-    pillarVideo: 'Videoproduktion & Montage',
     tonis: {
-      title: "Toni's Autopflege Göppingen",
-      subtitle: 'Komplette Transformation, SEO, AEO und GEO-Optimierung (Grade A)',
+      title: "Toni's Autopflege — Göppingen",
       description:
-        'Webseite von nur drei Wörtern auf 1.461 Wörter optimierten Inhalts erweitert. Technischer SEO-Score auf 94 Punkte angehoben, mit vollständiger Optimierung für KI-Suche (AEO) und lokale Suche (GEO). Web App Manifest und PWA-Bereitschaft integriert.',
-      liveCta: 'Webseite live ansehen',
-      demoCta: 'Studio-Demo ansehen',
+        'Komplette Transformation der Website und Optimierung auf höchstem Niveau (Grade A). Wortanzahl von 3 auf 1.461 erhöht, mit integrierten SEO-, AEO- und GEO-Strukturen sowie PWA-Unterstützung.',
+      liveCta: 'Website live ansehen',
       gradeBadge: 'Grade A · SEO 94',
     },
-    kickstarter: {
-      title: 'theirrealmtv CAT',
-      subtitle: 'Promo-Video für Kickstarter-Kampagne',
+    fixbike: {
+      title: 'FixBike',
       description:
-        'Visuell eindrucksvolles, hochkonvertierendes und kosteneffizientes Videomaterial für eine globale Crowdfunding-Kampagne — in sehr kurzer Zeit umgesetzt.',
-      servicesCta: 'Videoproduktion',
+        'Professionelle Webseite für Fahrradreparatur und Service. Optimiert für schnelle Ladezeiten, exzellente lokale SEO (GEO) Sichtbarkeit und maximale Kundenkonvertierung.',
+      liveCta: 'Website live ansehen',
+      gradeBadge: 'Grade A · GEO',
     },
   },
   whyMe: {
@@ -784,24 +775,21 @@ const it: SpecTranslations = {
   portfolioPage: {
     pageTitle: 'Portfolio',
     pageLead:
-      'Progetti web e video selezionati con risultati misurabili in SEO, conversione e campagne — studio a Geislingen per clienti in Germania e oltre.',
+      'Progetti web selezionati con risultati misurabili in SEO, AEO, GEO e conversione — studio a Geislingen per clienti in Germania e oltre.',
     pillarWeb: 'Web design e SEO',
-    pillarVideo: 'Produzione video e montaggio',
     tonis: {
-      title: "Toni's Autopflege Göppingen",
-      subtitle: 'Trasformazione completa, SEO, AEO e GEO (Grade A)',
+      title: "Toni's Autopflege — Göppingen",
       description:
-        'Sito espanso da 3 parole di base a 1.461 parole di contenuto ottimizzato. Punteggio SEO tecnico portato a 94 punti, con ottimizzazione per ricerca AI (AEO) e locale (GEO). Web App Manifest e prontezza PWA integrati.',
+        'Trasformazione completa del sito ottimizzata al massimo livello (Grade A). Contenuto da 3 a 1.461 parole con strutture SEO, AEO e GEO avanzate e supporto PWA.',
       liveCta: 'Sito live',
-      demoCta: 'Demo studio',
       gradeBadge: 'Grade A · SEO 94',
     },
-    kickstarter: {
-      title: 'theirrealmtv CAT',
-      subtitle: 'Video promo per campagna Kickstarter',
+    fixbike: {
+      title: 'FixBike',
       description:
-        'Materiale video visivamente d’impatto, ad alta conversione ed economico per una campagna crowdfunding globale — consegnato in tempi molto stretti.',
-      servicesCta: 'Servizi video',
+        'Sito professionale per riparazione e servizio biciclette. Ottimizzato per tempi di caricamento rapidi, eccellente visibilità SEO locale (GEO) e massima conversione clienti.',
+      liveCta: 'Sito live',
+      gradeBadge: 'Grade A · GEO',
     },
   },
   whyMe: {
@@ -1022,24 +1010,21 @@ const sr: SpecTranslations = {
   portfolioPage: {
     pageTitle: 'Portfolio',
     pageLead:
-      'Izabrani web i video projekti sa merljivim SEO, konverzijom i kampanjama — studio u Geislingen za klijente u Nemačkoj i šire.',
+      'Izabrani web projekti sa merljivim SEO, AEO, GEO i konverzijom — studio u Geislingen za klijente u Nemačkoj i šire.',
     pillarWeb: 'Web dizajn i SEO',
-    pillarVideo: 'Video produkcija i montaža',
     tonis: {
-      title: "Toni's Autopflege Göppingen",
-      subtitle: 'Kompletna transformacija, SEO, AEO i GEO optimizacija (Grade A)',
+      title: "Toni's Autopflege — Göppingen",
       description:
-        'Web sajt podignut sa bazičnih 3 reči na moćnih 1.461 reč optimizovanog sadržaja. Tehnički SEO skor podignut na 94 poena, sa punom optimizacijom za AI pretraživače (AEO) i lokalnu pretragu (GEO). Integrisan Web App Manifest i PWA spremnost.',
+        'Kompletna transformacija veb sajta i optimizacija do najvišeg nivoa (Grade A). Broj reči podignut sa 3 na 1.461, sa integrisanim naprednim SEO, AEO i GEO strukturama i PWA podrškom.',
       liveCta: 'Pogledaj live sajt',
-      demoCta: 'Studio demo',
       gradeBadge: 'Grade A · SEO 94',
     },
-    kickstarter: {
-      title: 'theirrealmtv CAT',
-      subtitle: 'Promo video za Kickstarter kampanju',
+    fixbike: {
+      title: 'FixBike',
       description:
-        'Kreiranje vizuelno upečatljivog, visokokonvertujućeg i kostenefikasnog video materijala za globalnu crowdfunding kampanju u veoma kratkom roku.',
-      servicesCta: 'Video produkcija',
+        'Profesionalni veb sajt za popravku i servis bicikala. Optimizovan za brzo učitavanje, odličnu lokalnu SEO (GEO) vidljivost i maksimalnu konverziju klijenata.',
+      liveCta: 'Pogledaj live sajt',
+      gradeBadge: 'Grade A · GEO',
     },
   },
   whyMe: {
@@ -1260,24 +1245,21 @@ const al: SpecTranslations = {
   portfolioPage: {
     pageTitle: 'Portfolio',
     pageLead:
-      'Projekte web dhe video të përzgjedhura me rezultate të matshme SEO, konvertimi dhe fushata — studio në Geislingen për klientë në Gjermani dhe më gjerë.',
+      'Projekte web të përzgjedhura me rezultate të matshme SEO, AEO, GEO dhe konvertimi — studio në Geislingen për klientë në Gjermani dhe më gjerë.',
     pillarWeb: 'Web design dhe SEO',
-    pillarVideo: 'Produksion video dhe montazh',
     tonis: {
-      title: "Toni's Autopflege Göppingen",
-      subtitle: 'Transformim i plotë, SEO, AEO dhe GEO optimizim (Grade A)',
+      title: "Toni's Autopflege — Göppingen",
       description:
-        'Faqja u zgjerua nga 3 fjalë bazike në 1.461 fjalë përmbajtjeje të optimizuar. Rezultati teknik SEO u ngrit në 94 pikë, me optimizim të plotë për kërkim me AI (AEO) dhe lokal (GEO). Web App Manifest dhe gatishmëri PWA të integruara.',
+        'Transformim i plotë i faqes dhe optimizim në nivelin më të lartë (Grade A). Nga 3 në 1.461 fjalë me struktura SEO, AEO dhe GEO të avancuara dhe mbështetje PWA.',
       liveCta: 'Shiko faqen live',
-      demoCta: 'Demo studio',
       gradeBadge: 'Grade A · SEO 94',
     },
-    kickstarter: {
-      title: 'theirrealmtv CAT',
-      subtitle: 'Video promo për fushatën Kickstarter',
+    fixbike: {
+      title: 'FixBike',
       description:
-        'Material video vizualisht i fuqishëm, me konvertim të lartë dhe kosto-efektiv për një fushatë global crowdfunding — dorëzuar në afat shumë të shkurtër.',
-      servicesCta: 'Produksion video',
+        'Faqe profesionale për riparim dhe servis biçikletash. E optimizuar për ngarkim të shpejtë, dukshmëri të shkëlqyer SEO lokale (GEO) dhe konvertim maksimal të klientëve.',
+      liveCta: 'Shiko faqen live',
+      gradeBadge: 'Grade A · GEO',
     },
   },
   whyMe: {
