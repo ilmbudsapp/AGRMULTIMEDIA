@@ -21,7 +21,7 @@ export interface PortfolioPageCopy {
   categories: {
     web: { title: string; intro: string };
     video: { title: string; intro: string };
-    videoEditing: { title: string; description: string; badge: string; cta: string };
+    videoEditing: { title: string; description: string; badge: string; cta: string; clipAriaLabel: string };
     aiVideo: { title: string; description: string; cta: string; clipAriaLabel: string };
     graphic: { title: string; intro: string };
     brandGraphics: { title: string; description: string };
@@ -65,6 +65,7 @@ const en: PortfolioPageCopy = {
         "High-end video editing with Adobe Premiere Pro — 100% handcrafted storytelling, pacing and dynamics.",
       badge: "Adobe Premiere Pro",
       cta: "Request video editing",
+      clipAriaLabel: "Premiere Pro editing clip {n}",
     },
     aiVideo: {
       title: "AI video creation",
@@ -145,6 +146,7 @@ const de: PortfolioPageCopy = {
         "High-End Videoschnitt mit Adobe Premiere Pro (100% Handarbeit, Storytelling & Dynamik).",
       badge: "Adobe Premiere Pro",
       cta: "Video-Schnitt anfragen",
+      clipAriaLabel: "Premiere-Pro-Schnitt {n}",
     },
     aiVideo: {
       title: "KI-Video-Kreation",
@@ -225,6 +227,7 @@ const sr: PortfolioPageCopy = {
         "High-end video montaža u Adobe Premiere Pro — 100% ručni rad, storytelling i dinamika.",
       badge: "Adobe Premiere Pro",
       cta: "Zatraži video montažu",
+      clipAriaLabel: "Premiere Pro montaža {n}",
     },
     aiVideo: {
       title: "AI video kreacija",
@@ -305,6 +308,7 @@ const it: PortfolioPageCopy = {
         "Montaggio video high-end con Adobe Premiere Pro — storytelling, ritmo e dinamica al 100% artigianali.",
       badge: "Adobe Premiere Pro",
       cta: "Richiedi montaggio video",
+      clipAriaLabel: "Montaggio Premiere Pro {n}",
     },
     aiVideo: {
       title: "Creazione video con IA",
@@ -385,6 +389,7 @@ const al: PortfolioPageCopy = {
         "Montazh video high-end me Adobe Premiere Pro — 100% punë manuale, storytelling dhe dinamikë.",
       badge: "Adobe Premiere Pro",
       cta: "Kërko montazh video",
+      clipAriaLabel: "Montazh Premiere Pro {n}",
     },
     aiVideo: {
       title: "Krijim video me AI",

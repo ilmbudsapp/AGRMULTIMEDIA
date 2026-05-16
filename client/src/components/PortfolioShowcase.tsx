@@ -11,19 +11,16 @@ import {
 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import AiVideoClipGrid from "@/components/AiVideoClipGrid";
+import VideoEditingClipGrid from "@/components/VideoEditingClipGrid";
 import { brandingGalleryByLang } from "@/data/brandingGallery";
 import { fotoKreiraneSaAiGalleryByLang } from "@/data/fotoKreiraneSaAiGallery";
 import type { PortfolioFilterId } from "@/lib/portfolioPageI18n";
-import { getCaseStudioCopy } from "@/lib/thearRealmCaseI18n";
 import { toServiceLang } from "@/lib/servicePageI18n";
 
 const TONIS_LIVE = "https://www.tonis-autopflege-goeppingen.de";
 const FIXBIKE_LIVE = "https://fixbike.online/";
 const TONIS_IMG = "/demo/tonis-autopflege/hero-poster.webp";
 const FIXBIKE_IMG = "/portfolio/web-design/fixbike-fahrradservice-neuwied-hero.webp";
-const THEAR_VIDEO = encodeURI("/Case Studio/THEAR REALM TV-Video clip.mp4");
-const THEAR_POSTER = encodeURI("/Case Studio/06.jpg");
-
 const LIVE_BTN =
   "inline-flex items-center gap-2 rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-[#0a0a0f] transition hover:bg-white/90";
 
@@ -172,11 +169,6 @@ export default function PortfolioShowcase() {
 
   const brandSamples = useMemo(() => brandingGalleryByLang[lang].slice(0, 6), [lang]);
   const aiPhotoSamples = useMemo(() => fotoKreiraneSaAiGalleryByLang[lang].slice(0, 6), [lang]);
-  const thearVideoAria = useMemo(
-    () => getCaseStudioCopy(currentLanguage).thearRealm.videoAriaLabel,
-    [currentLanguage],
-  );
-
   const filters: { id: PortfolioFilterId; label: string }[] = [
     { id: "all", label: p.filters.all },
     { id: "web", label: p.filters.web },
@@ -190,8 +182,6 @@ export default function PortfolioShowcase() {
   const showUx = filter === "all";
 
   const webPillarClass = "border-[#5da3f9]/40 bg-[#5da3f9]/15 text-[#93c5fd]";
-  const videoPillarClass = "border-amber-400/30 bg-amber-500/15 text-amber-100";
-
   return (
     <section className="py-16 md:py-24" aria-labelledby="portfolio-showcase-heading">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -281,33 +271,27 @@ export default function PortfolioShowcase() {
               intro={p.categories.video.intro}
             >
               <div className="grid gap-8 lg:grid-cols-2">
-                <div className="flex flex-col">
-                  <div className="mb-6">
-                    <div className="flex items-center gap-2">
-                      <Clapperboard className="h-5 w-5 text-amber-300" aria-hidden />
-                      <h3 className="text-lg font-semibold text-amber-100">{p.categories.videoEditing.title}</h3>
-                    </div>
-                    <p className="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
-                      {p.categories.videoEditing.description}
-                    </p>
+                <article className="flex flex-col rounded-2xl border border-amber-400/20 bg-amber-500/[0.06] p-6 md:p-8">
+                  <div className="flex items-center gap-2">
+                    <Clapperboard className="h-5 w-5 text-amber-300" aria-hidden />
+                    <h3 className="text-lg font-semibold text-amber-100">{p.categories.videoEditing.title}</h3>
                   </div>
-                  <ProjectCard
-                    video={{
-                      src: THEAR_VIDEO,
-                      poster: THEAR_POSTER,
-                      ariaLabel: thearVideoAria,
-                    }}
-                    title={p.projects.theirrealm.title}
-                    description={`${p.projects.theirrealm.subtitle}. ${p.projects.theirrealm.description}`}
-                    pillarLabel={p.categories.videoEditing.badge}
-                    pillarIcon={Clapperboard}
-                    pillarClass={videoPillarClass}
-                  >
+                  <p className="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
+                    {p.categories.videoEditing.description}
+                  </p>
+                  <p className="mt-4 text-sm font-medium text-amber-100/90">{p.projects.theirrealm.title}</p>
+                  <p className="mt-1 text-xs text-white/55">{p.projects.theirrealm.subtitle}</p>
+                  <VideoEditingClipGrid
+                    clipAriaLabel={(index) =>
+                      p.categories.videoEditing.clipAriaLabel.replace("{n}", String(index))
+                    }
+                  />
+                  <div className="mt-6">
                     <Link href="/kontakt" className={LIVE_BTN}>
                       {p.categories.videoEditing.cta}
                     </Link>
-                  </ProjectCard>
-                </div>
+                  </div>
+                </article>
 
                 <article className="flex flex-col rounded-2xl border border-violet-400/20 bg-violet-500/[0.06] p-6 md:p-8">
                   <div className="flex items-center gap-2">
