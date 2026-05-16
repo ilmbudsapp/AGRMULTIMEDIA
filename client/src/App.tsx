@@ -9,6 +9,7 @@ import { useAnalytics } from "./hooks/use-analytics";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import { ErrorBoundary } from "./components/ErrorBoundary";
 import MetaSEO from "./components/MetaSEO";
+import Redirect from "./components/Redirect";
 import SkipToContent from "./components/SkipToContent";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import PageLoadingFallback from "@/components/PageLoadingFallback";
@@ -17,9 +18,10 @@ const Home = lazy(() => import("@/pages/home"));
 const ServicesPage = lazy(() => import("@/pages/ServicesPage"));
 const AboutPage = lazy(() => import("@/pages/AboutPage"));
 const ContactPage = lazy(() => import("@/pages/ContactPage"));
+const WebdesignSeoPage = lazy(() => import("@/pages/WebdesignSeoPage"));
+const BewertungenPage = lazy(() => import("@/pages/BewertungenPage"));
 const PortfolioPage = lazy(() => import("@/pages/PortfolioPage"));
 const BlogIndexPage = lazy(() => import("@/pages/BlogIndexPage"));
-const WebDesign = lazy(() => import("@/pages/web-design"));
 const GraphicDesign = lazy(() => import("@/pages/graphic-design"));
 const DigitalMarketing = lazy(() => import("@/pages/digital-marketing"));
 const AIContentCreation = lazy(() => import("@/pages/ai-content-creation"));
@@ -50,18 +52,22 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/webdesign-seo" component={WebdesignSeoPage} />
+      <Route path="/videoproduktion" component={VideoProduction} />
+      <Route path="/bewertungen" component={BewertungenPage} />
+      <Route path="/kontakt" component={ContactPage} />
+      <Route path="/portfolio" component={PortfolioPage} />
+      <Route path="/contact">{() => <Redirect to="/kontakt" />}</Route>
+      <Route path="/web-design">{() => <Redirect to="/webdesign-seo" />}</Route>
+      <Route path="/video-production">{() => <Redirect to="/videoproduktion" />}</Route>
       <Route path="/services" component={ServicesPage} />
       <Route path="/about" component={AboutPage} />
-      <Route path="/contact" component={ContactPage} />
-      <Route path="/portfolio" component={PortfolioPage} />
       <Route path="/blog" component={BlogIndexPage} />
-      <Route path="/web-design" component={WebDesign} />
       <Route path="/graphic-design" component={GraphicDesign} />
       <Route path="/digital-marketing" component={DigitalMarketing} />
       <Route path="/ai-content-creation" component={AIContentCreation} />
       <Route path="/application-design-development" component={ApplicationDesignDevelopment} />
       <Route path="/photography" component={Photography} />
-      <Route path="/video-production" component={VideoProduction} />
       <Route path="/consulting" component={Consulting} />
       <Route path="/impresum" component={Impresum} />
       <Route path="/blog/digital-marketing-trends-2024" component={DigitalMarketingTrends2024} />

@@ -11,7 +11,7 @@ const SERVICE_CARDS = [
     Icon: Palette,
   },
   { title: "AI Content Creation Services", description: "", href: "/ai-content-creation", Icon: Sparkles },
-  { title: "Web Design and SEO Services", description: "", href: "/web-design", Icon: LayoutGrid },
+  { title: "Web Design and SEO Services", description: "", href: "/webdesign-seo", Icon: LayoutGrid },
   { title: "Application Design and Development Services", description: "", href: "/application-design-development", Icon: AppWindow },
 ] as const;
 

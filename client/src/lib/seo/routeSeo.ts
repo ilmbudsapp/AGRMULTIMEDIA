@@ -232,6 +232,135 @@ const CORE_AL: Record<string, RouteSeo> = {
   },
 };
 
+/* ─── Primary multi-page routes (SEO / AEO / GEO) ─── */
+const PRIMARY_MULTIPAGE_EN: Record<string, RouteSeo> = {
+  "/webdesign-seo": {
+    title: "Professional Web Design & SEO in Geislingen | AGRMULTIMEDIA",
+    description:
+      "Business websites from €500 with basic SEO, A GRADE premium packages, and transparent monthly updates — AGR Multimedia, Geislingen an der Steige.",
+    keywords: "web design Geislingen, SEO, AEO, GEO, website pricing, AGR Multimedia",
+  },
+  "/videoproduktion": {
+    title: "Video Production & Kickstarter Videos in Geislingen | AGRMULTIMEDIA",
+    description:
+      "Corporate video, short-form content, and Kickstarter campaign films — professional video production in Geislingen and the region.",
+    keywords: "video production Geislingen, Kickstarter video, corporate video, AGR Multimedia",
+  },
+  "/bewertungen": {
+    title: "Google Reviews | AGR Multimedia Geislingen",
+    description:
+      "Read verified Google Maps reviews from clients — web design, video, and multimedia projects by AGR Multimedia.",
+    keywords: "Google reviews, AGR Multimedia, Geislingen, client testimonials",
+  },
+  "/kontakt": {
+    title: "Contact & Project Quotes | AGR Multimedia Geislingen",
+    description:
+      "Request a quote for web design, video production, or digital marketing — fast replies in DE · EN · IT · SR · AL.",
+    keywords: "contact AGR Multimedia, Geislingen, web design quote, video production",
+  },
+};
+
+const PRIMARY_MULTIPAGE_DE: Record<string, RouteSeo> = {
+  "/webdesign-seo": {
+    title: "Professionelles Webdesign & SEO in Geislingen - AGRMULTIMEDIA",
+    description:
+      "Business-Websites ab 500 € mit Basis-SEO, A-GRADE Premium-Paketen und transparenten monatlichen Updates — AGR Multimedia, Geislingen an der Steige.",
+    keywords: "Webdesign Geislingen, SEO, AEO, GEO, Website Preise, AGR Multimedia",
+  },
+  "/videoproduktion": {
+    title: "Videoproduktion & Kickstarter Videos in Geislingen - AGRMULTIMEDIA",
+    description:
+      "Corporate Video, Short-Form-Content und Kickstarter-Filme — professionelle Videoproduktion in Geislingen und Umgebung.",
+    keywords: "Videoproduktion Geislingen, Kickstarter Video, Corporate Video, AGR Multimedia",
+  },
+  "/bewertungen": {
+    title: "Google-Bewertungen | AGR Multimedia Geislingen",
+    description:
+      "Echte Google-Maps-Bewertungen unserer Kunden — Webdesign, Video und Multimedia von AGR Multimedia.",
+    keywords: "Google Bewertungen, AGR Multimedia, Geislingen, Kundenstimmen",
+  },
+  "/kontakt": {
+    title: "Kontakt & Angebote | AGR Multimedia Geislingen",
+    description:
+      "Anfrage für Webdesign, Videoproduktion oder Marketing — schnelle Antworten auf DE · EN · IT · SR · AL.",
+    keywords: "Kontakt AGR Multimedia, Geislingen, Webdesign Angebot",
+  },
+};
+
+const PRIMARY_MULTIPAGE_IT: Record<string, RouteSeo> = {
+  "/webdesign-seo": {
+    title: "Web design e SEO professionale a Geislingen | AGRMULTIMEDIA",
+    description:
+      "Siti business da 500 € con SEO di base, pacchetti A GRADE e aggiornamenti mensili trasparenti — AGR Multimedia, Geislingen.",
+    keywords: "web design Geislingen, SEO, AEO, GEO, prezzi sito web",
+  },
+  "/videoproduktion": {
+    title: "Videoproduzione e video Kickstarter a Geislingen | AGRMULTIMEDIA",
+    description:
+      "Video corporate, contenuti short-form e film per campagne Kickstarter — produzione video professionale a Geislingen.",
+    keywords: "videoproduzione Geislingen, video Kickstarter, corporate video",
+  },
+  "/bewertungen": {
+    title: "Recensioni Google | AGR Multimedia Geislingen",
+    description: "Recensioni verificate su Google Maps — progetti web, video e multimedia per AGR Multimedia.",
+    keywords: "recensioni Google, AGR Multimedia, Geislingen",
+  },
+  "/kontakt": {
+    title: "Contatti e preventivi | AGR Multimedia Geislingen",
+    description: "Richiedi un preventivo per web design, video o marketing digitale.",
+    keywords: "contatti AGR Multimedia, Geislingen",
+  },
+};
+
+const PRIMARY_MULTIPAGE_SR: Record<string, RouteSeo> = {
+  "/webdesign-seo": {
+    title: "Profesionalni web dizajn i SEO u Geislingen | AGRMULTIMEDIA",
+    description:
+      "Biznis sajtovi od 500 € sa osnovnim SEO-om, A GRADE paketima i transparentnim mesečnim ažuriranjima — AGR Multimedia, Geislingen.",
+    keywords: "web dizajn Geislingen, SEO, AEO, GEO, cene sajta",
+  },
+  "/videoproduktion": {
+    title: "Video produkcija i Kickstarter video u Geislingen | AGRMULTIMEDIA",
+    description:
+      "Korporativni video, short-form sadržaj i Kickstarter filmovi — profesionalna video produkcija u Geislingen regionu.",
+    keywords: "video produkcija Geislingen, Kickstarter video",
+  },
+  "/bewertungen": {
+    title: "Google recenzije | AGR Multimedia Geislingen",
+    description: "Proverene Google Maps recenzije naših klijenata — web, video i multimedija.",
+    keywords: "Google recenzije, AGR Multimedia, Geislingen",
+  },
+  "/kontakt": {
+    title: "Kontakt i ponude | AGR Multimedia Geislingen",
+    description: "Zatražite ponudu za web dizajn, video produkciju ili digitalni marketing.",
+    keywords: "kontakt AGR Multimedia, Geislingen",
+  },
+};
+
+const PRIMARY_MULTIPAGE_AL: Record<string, RouteSeo> = {
+  "/webdesign-seo": {
+    title: "Web design & SEO profesional në Geislingen | AGRMULTIMEDIA",
+    description:
+      "Faqe biznesi nga 500 € me SEO themelor, paketa A GRADE dhe përditësime mujore transparente — AGR Multimedia, Geislingen.",
+    keywords: "web design Geislingen, SEO, AEO, GEO",
+  },
+  "/videoproduktion": {
+    title: "Videoproduktion & video Kickstarter në Geislingen | AGRMULTIMEDIA",
+    description: "Video korporative, short-form dhe filma Kickstarter — prodhim video profesional në Geislingen.",
+    keywords: "videoproduktion Geislingen, video Kickstarter",
+  },
+  "/bewertungen": {
+    title: "Vlerësime Google | AGR Multimedia Geislingen",
+    description: "Vlerësime të verifikuara në Google Maps nga klientët tanë.",
+    keywords: "vlerësime Google, AGR Multimedia",
+  },
+  "/kontakt": {
+    title: "Kontakt & oferta | AGR Multimedia Geislingen",
+    description: "Kërkoni ofertë për web design, video ose marketing digjital.",
+    keywords: "kontakt AGR Multimedia, Geislingen",
+  },
+};
+
 /* ─── Extra pages (legal, blog, portfolio, etc.) ─── */
 const EXTRA_EN: Record<string, RouteSeo> = {
   "/about": {
@@ -861,9 +990,9 @@ const EXTRA_AL: Record<string, RouteSeo> = {
 };
 
 export const ROUTE_SEO_BY_LANG: Record<SeoLang, Record<string, RouteSeo>> = {
-  en: merge(CORE_EN, EXTRA_EN),
-  de: merge(CORE_DE, EXTRA_DE),
-  it: merge(CORE_IT, EXTRA_IT),
-  sr: merge(CORE_SR, EXTRA_SR),
-  al: merge(CORE_AL, EXTRA_AL),
+  en: merge(CORE_EN, PRIMARY_MULTIPAGE_EN, EXTRA_EN),
+  de: merge(CORE_DE, PRIMARY_MULTIPAGE_DE, EXTRA_DE),
+  it: merge(CORE_IT, PRIMARY_MULTIPAGE_IT, EXTRA_IT),
+  sr: merge(CORE_SR, PRIMARY_MULTIPAGE_SR, EXTRA_SR),
+  al: merge(CORE_AL, PRIMARY_MULTIPAGE_AL, EXTRA_AL),
 };

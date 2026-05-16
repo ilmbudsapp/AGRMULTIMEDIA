@@ -12,7 +12,7 @@ export default function Services() {
       description: t.services.items.webDesign.description,
       features: t.services.items.webDesign.features,
       gradient: "from-electric-blue to-cyan-500",
-      link: "/web-design",
+      link: "/webdesign-seo",
     },
     {
       icon: <Palette className="text-white w-6 h-6" />,

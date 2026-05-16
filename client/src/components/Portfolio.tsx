@@ -16,7 +16,24 @@ export default function Portfolio({ featured = false, asPage = false }: Portfoli
   const { t, tSpec } = useLanguage();
   const [activeFilter, setActiveFilter] = useState('all');
 
+  const tonisDescription: Record<string, string> = {
+    en: "Premium car care landing page — live demo built by AGR Multimedia for Toni's Autopflege in Göppingen.",
+    de: "Premium-Landingpage für Autopflege — Live-Demo von AGR Multimedia für Toni's Autopflege in Göppingen.",
+    it: "Landing page premium per car care — demo live realizzata da AGR Multimedia per Toni's Autopflege a Göppingen.",
+    sr: "Premium sajt za auto detailing — demo projekat AGR Multimedia za Toni's Autopflege u Göppingen.",
+    al: "Faqe premium për kujdesin e makinës — demo live nga AGR Multimedia për Toni's Autopflege në Göppingen.",
+  };
+
   const portfolioItems = [
+    {
+      id: 0,
+      title: "Toni's Autopflege — Göppingen",
+      description: tonisDescription[currentLanguage] ?? tonisDescription.en,
+      image: bannerWeb,
+      category: "web",
+      slug: "tonis-autopflege",
+      detailHref: "/demo/tonis-autopflege",
+    },
     { id: 1, title: t.portfolio.items.ecommerce.title, description: t.portfolio.items.ecommerce.description, image: bannerWeb, category: "web", slug: "ecommerce-site" },
     { id: 2, title: t.portfolio.items.brand.title, description: t.portfolio.items.brand.description, image: greenHarvest, category: "brand", slug: "brand-identity" },
     { id: 3, title: t.portfolio.items.corporate.title, description: t.portfolio.items.corporate.description, image: powerFit, category: "video", slug: "corporate-video" },
@@ -114,7 +131,7 @@ export default function Portfolio({ featured = false, asPage = false }: Portfoli
                   <p className="text-white/75 text-sm mb-4 line-clamp-2" data-testid={`portfolio-item-description-${item.id}`}>
                     {item.description}
                   </p>
-                  <Link href={`/portfolio/${item.slug}`}>
+                  <Link href={item.detailHref ?? `/portfolio/${item.slug}`}>
                     <span 
                       className="inline-block text-sm font-medium text-white border-b border-white/40 pb-0.5 hover:border-white"
                       data-testid={`portfolio-item-cta-${item.id}`}

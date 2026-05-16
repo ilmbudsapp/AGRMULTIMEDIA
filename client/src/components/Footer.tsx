@@ -24,6 +24,14 @@ export default function Footer() {
     if (element) element.scrollIntoView({ behavior: "smooth" });
   };
 
+  const mainNavLinks = [
+    { href: "/webdesign-seo", label: tSpec.nav.webdesignSeo },
+    { href: "/videoproduktion", label: tSpec.nav.videoProduction },
+    { href: "/portfolio", label: tSpec.nav.portfolio },
+    { href: "/bewertungen", label: tSpec.nav.reviews },
+    { href: "/kontakt", label: tSpec.nav.contact },
+  ];
+
   const serviceLabelsByLang: Record<ServiceLang, string[]> = {
     en: [
       "Graphic design",
@@ -44,14 +52,14 @@ export default function Footer() {
       "App e sviluppo",
     ],
     sr: [
-      "Grafički dizajn",
-      "AI sadržaj",
+      "GrafiÄki dizajn",
+      "AI sadrÅ¾aj",
       "Veb dizajn i SEO",
       "Aplikacije i razvoj",
     ],
     al: [
       "Dizajn grafik",
-      "Përmbajtje me IA",
+      "PÃ«rmbajtje me IA",
       "Ueb-i dhe SEO",
       "Aplikacione dhe zhvillim",
     ],
@@ -60,7 +68,7 @@ export default function Footer() {
   const services = [
     { label: serviceLabelsByLang[currentLang][0], href: "/graphic-design" },
     { label: serviceLabelsByLang[currentLang][1], href: "/ai-content-creation" },
-    { label: serviceLabelsByLang[currentLang][2], href: "/web-design" },
+    { label: serviceLabelsByLang[currentLang][2], href: "/webdesign-seo" },
     { label: serviceLabelsByLang[currentLang][3], href: "/application-design-development" },
   ];
 
@@ -139,60 +147,47 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div data-testid="footer-company">
-            <h4 className="text-lg font-semibold mb-6 text-white">{t.footer.company}</h4>
-            <ul className="space-y-3">
-              <li>
-                <Link href="/about" className="text-gray-400 hover:text-white transition-colors duration-300 block">
-                  {tSpec.nav.about}
-                </Link>
-              </li>
-              <li>
-                {isHome ? (
-                  <button
-                    type="button"
-                    onClick={() => scrollToSection("bewertungen")}
-                    className="text-gray-400 hover:text-white transition-colors duration-300 text-left"
-                  >
-                    {tSpec.nav.reviews}
-                  </button>
-                ) : (
-                  <Link href="/#bewertungen" className="text-gray-400 hover:text-white transition-colors duration-300 block">
-                    {tSpec.nav.reviews}
-                  </Link>
-                )}
-              </li>
-              <li>
-                {isHome ? (
-                  <button
-                    type="button"
-                    onClick={() => scrollToSection("contact")}
-                    className="text-gray-400 hover:text-white transition-colors duration-300 text-left"
-                  >
-                    {tSpec.nav.contact}
-                  </button>
-                ) : (
-                  <Link href="/contact" className="text-gray-400 hover:text-white">
-                    {tSpec.nav.contact}
-                  </Link>
-                )}
-              </li>
-            </ul>
-          </div>
+            <div data-testid="footer-company">
+              <h4 className="text-lg font-semibold mb-6 text-white">{t.footer.company}</h4>
+              <ul className="space-y-3">
+                {mainNavLinks.map((link) => (
+                  <li key={link.href}>
+                    <Link href={link.href} className="text-gray-400 hover:text-white transition-colors duration-300 block">
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+                <li>
+                  {isHome ? (
+                    <button
+                      type="button"
+                      onClick={() => scrollToSection("about")}
+                      className="text-gray-400 hover:text-white transition-colors duration-300 text-left"
+                    >
+                      {tSpec.nav.about}
+                    </button>
+                  ) : (
+                    <Link href="/#about" className="text-gray-400 hover:text-white transition-colors duration-300 block">
+                      {tSpec.nav.about}
+                    </Link>
+                  )}
+                </li>
+              </ul>
+            </div>
 
           <div data-testid="footer-contact">
             <h4 className="text-lg font-semibold mb-6 text-white">{t.footer.contact}</h4>
             <ul className="space-y-3">
               <li className="text-gray-400 flex items-center gap-2">
-                <span>📞</span>
+                <span>ðŸ“ž</span>
                 <a href={`tel:${PHONE_TEL}`} className="hover:text-white transition-colors">{PHONE_DISPLAY}</a>
               </li>
               <li className="text-gray-400 flex items-center gap-2">
-                <span>📧</span>
+                <span>ðŸ“§</span>
                 <a href="mailto:agron6922@gmail.com" className="hover:text-white transition-colors">agron6922@gmail.com</a>
               </li>
               <li className="text-gray-400 flex items-center gap-2">
-                <span>📍</span>
+                <span>ðŸ“</span>
                 {t.footer.location}
               </li>
             </ul>

@@ -118,7 +118,7 @@ function ServiceFlipCard({
             <h3 className="text-3xl md:text-4xl font-extrabold text-white mb-4 tracking-tight">{data.flipPrice}</h3>
             <p className="text-sm text-gray-200/90 mb-8 max-w-[240px] leading-relaxed">{data.flipIncludes}</p>
             <Link
-              href="/#contact"
+              href="/kontakt"
               className="inline-flex items-center justify-center rounded-xl bg-white text-[#0a0a0f] px-6 py-3 text-sm font-bold hover:bg-violet-100 transition-colors shadow-lg shadow-violet-500/20"
               onClick={(e) => e.stopPropagation()}
             >

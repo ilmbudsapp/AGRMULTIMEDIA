@@ -16,7 +16,7 @@ function RatingStarsDecorative({ count }: { count: number }) {
   );
 }
 
-export default function ReviewsSection() {
+export default function ReviewsSection({ standalonePage = false }: { standalonePage?: boolean }) {
   const { tSpec } = useLanguage();
   const {
     title,
@@ -79,20 +79,26 @@ export default function ReviewsSection() {
       />
       <section
         id="bewertungen"
-        className="premium-section scroll-mt-24 border-t border-[#333333] py-20 md:py-24"
+        className={`premium-section scroll-mt-24 py-20 md:py-24 ${standalonePage ? "" : "border-t border-[#333333]"}`}
         role="region"
         aria-label={ariaRegion}
       >
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <header className="mx-auto max-w-3xl text-center">
-            <h2 id="bewertungen-heading" className="text-3xl font-semibold tracking-tight text-white md:text-4xl">
-              {title}
-            </h2>
-            <p id="bewertungen-subheading" className="mt-3 text-base leading-relaxed text-white/65 md:text-lg">
+          {!standalonePage ? (
+            <header className="mx-auto max-w-3xl text-center">
+              <h2 id="bewertungen-heading" className="text-3xl font-semibold tracking-tight text-white md:text-4xl">
+                {title}
+              </h2>
+              <p id="bewertungen-subheading" className="mt-3 text-base leading-relaxed text-white/65 md:text-lg">
+                {subtitle}
+              </p>
+            </header>
+          ) : (
+            <p id="bewertungen-subheading" className="mx-auto max-w-3xl text-center text-base leading-relaxed text-white/65 md:text-lg">
               {subtitle}
             </p>
-          </header>
-          <div className="mt-10 grid gap-4 md:grid-cols-3">
+          )}
+          <div className={`grid gap-4 md:grid-cols-3 ${standalonePage ? "mt-8" : "mt-10"}`}>
             {AGR_GOOGLE_REVIEWS.map((rev, index) => (
               <article key={`${rev.author}-${index}`}>
                 <blockquote

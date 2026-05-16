@@ -54,6 +54,8 @@ export interface SpecTranslations {
   nav: {
     home: string;
     services: string;
+    webdesignSeo: string;
+    videoProduction: string;
     portfolio: string;
     about: string;
     /** Google Maps reviews anchor on home */
@@ -216,6 +218,8 @@ const en: SpecTranslations = {
   nav: {
     home: 'Home',
     services: 'Services',
+    webdesignSeo: 'Web Design & SEO',
+    videoProduction: 'Video Production',
     portfolio: 'Portfolio',
     about: 'About',
     reviews: 'Reviews',
@@ -429,6 +433,8 @@ const de: SpecTranslations = {
   nav: {
     home: 'Home',
     services: 'Leistungen',
+    webdesignSeo: 'Webdesign & SEO',
+    videoProduction: 'Videoproduktion',
     portfolio: 'Portfolio',
     about: 'Über mich',
     reviews: 'Bewertungen',
@@ -642,6 +648,8 @@ const it: SpecTranslations = {
   nav: {
     home: 'Home',
     services: 'Servizi',
+    webdesignSeo: 'Web design e SEO',
+    videoProduction: 'Videoproduzione',
     portfolio: 'Portfolio',
     about: 'Chi sono',
     reviews: 'Recensioni',
@@ -855,6 +863,8 @@ const sr: SpecTranslations = {
   nav: {
     home: 'Početna',
     services: 'Usluge',
+    webdesignSeo: 'Web dizajn i SEO',
+    videoProduction: 'Video produkcija',
     portfolio: 'Portfolio',
     about: 'O meni',
     reviews: 'Recenzije',
@@ -1068,6 +1078,8 @@ const al: SpecTranslations = {
   nav: {
     home: 'Kryefaqja',
     services: 'Shërbime',
+    webdesignSeo: 'Web design & SEO',
+    videoProduction: 'Videoproduktion',
     portfolio: 'Portfolio',
     about: 'Rreth meje',
     reviews: 'Vlerësime',

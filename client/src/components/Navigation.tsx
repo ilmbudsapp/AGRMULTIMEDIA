@@ -1,9 +1,9 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Link, useLocation } from "wouter";
 import LanguageSwitcherInline from "./LanguageSwitcherInline";
-import { NAV_LANDMARK_LABEL, NAV_MOBILE_TOGGLE, NAV_SCROLL_ON_PAGE_HINT } from "@/lib/a11yLandmarks";
+import { NAV_LANDMARK_LABEL, NAV_MOBILE_TOGGLE } from "@/lib/a11yLandmarks";
 import type { Language } from "@/lib/i18n";
 
 export default function Navigation() {
@@ -12,7 +12,6 @@ export default function Navigation() {
   const [location] = useLocation();
 
   const isHomePage = location === "/";
-  /** Two-line stack (mobile + desktop): line1 + line2, location always second line */
   const logoSeoLinesByLang: Record<string, readonly [string, string]> = {
     en: ["WEBDESIGN & SEO IN", "GEISLINGEN AN DER STEIGE"],
     de: ["WEBDESIGN & SEO IN", "GEISLINGEN AN DER STEIGE"],
@@ -22,135 +21,94 @@ export default function Navigation() {
   };
   const [logoSeoLine1, logoSeoLine2] = logoSeoLinesByLang[currentLanguage] ?? logoSeoLinesByLang.en;
 
-  const scrollToSection = (sectionId: string) => {
-    if (isHomePage) {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-    setIsMenuOpen(false);
-  };
+  const closeMenu = () => setIsMenuOpen(false);
 
   const handleLogoClick = () => {
     if (isHomePage) {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
-    setIsMenuOpen(false);
+    closeMenu();
   };
 
-  const navItems: { id: string; label: string; href: string; section?: string }[] = [
-    { id: "home", label: tSpec.nav.home, href: "/", section: "hero-h1" },
-    { id: "services", label: tSpec.nav.services, href: "/services", section: "services-preview" },
-    { id: "about", label: tSpec.nav.about, href: "/about", section: "about" },
-    { id: "reviews", label: tSpec.nav.reviews, href: "/#bewertungen", section: "bewertungen" },
+  const navItems: { id: string; label: string; href: string }[] = [
+    { id: "home", label: tSpec.nav.home, href: "/" },
+    { id: "webdesign", label: tSpec.nav.webdesignSeo, href: "/webdesign-seo" },
+    { id: "video", label: tSpec.nav.videoProduction, href: "/videoproduktion" },
+    { id: "portfolio", label: tSpec.nav.portfolio, href: "/portfolio" },
+    { id: "reviews", label: tSpec.nav.reviews, href: "/bewertungen" },
+    { id: "about", label: tSpec.nav.about, href: "/#about" },
   ];
 
-  const contactHref = isHomePage ? "/#contact" : "/contact";
-  const contactScroll = () => {
-    if (isHomePage) scrollToSection("contact");
-    setIsMenuOpen(false);
-  };
-
   const lang = currentLanguage as Language;
-  const scrollHint = NAV_SCROLL_ON_PAGE_HINT[lang] ?? NAV_SCROLL_ON_PAGE_HINT.en;
   const mobileToggle = NAV_MOBILE_TOGGLE[lang] ?? NAV_MOBILE_TOGGLE.en;
+
+  const linkClass =
+    "shrink-0 whitespace-nowrap text-[0.875rem] leading-none text-white/75 hover:text-blue-200 transition-colors lg:text-[0.9rem]";
 
   return (
     <nav
       className="fixed top-0 left-0 right-0 z-50 border-b border-[#333333] bg-[#0a0a0a]/85 backdrop-blur-xl"
       aria-label={NAV_LANDMARK_LABEL[currentLanguage]}
     >
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-14 w-full min-w-0 items-center justify-between gap-6 md:h-16 md:gap-8">
-          {/* Brand: logo + two-line SEO tagline (visible on mobile too) */}
-          <div className="flex min-w-0 shrink items-center">
-            <Link
-              href="/"
-              onClick={handleLogoClick}
-              className="flex min-w-0 items-center gap-0.5 md:gap-1 outline-offset-4"
-              data-testid="logo-button"
-              aria-label={tSpec.nav.home}
-            >
-              <picture className="shrink-0">
-                <source srcSet="/agr-logo-white.webp" type="image/webp" />
-                <img
-                  src="/agr-logo-white.png"
-                  alt="AGR Multimedia"
-                  className="h-9 w-auto object-contain mix-blend-screen md:h-11"
-                  fetchPriority="high"
-                  decoding="async"
-                />
-              </picture>
-              <span className="flex min-w-0 flex-col text-[7px] font-medium uppercase leading-[1.15] tracking-[0.04em] text-[#5da3f9] sm:text-[9px] md:leading-tight md:tracking-[0.05em] lg:text-[9px] xl:text-[10px] 2xl:text-xs">
-                <span className="whitespace-nowrap">{logoSeoLine1}</span>
-                <span className="whitespace-nowrap">{logoSeoLine2}</span>
-              </span>
-            </Link>
-          </div>
-
-          <div className="hidden shrink-0 md:flex md:flex-nowrap md:items-center md:gap-4 lg:gap-5">
-            {navItems.map((item) =>
-              isHomePage && item.section ? (
-                <button
-                  key={item.id}
-                  type="button"
-                  onClick={() => scrollToSection(item.section!)}
-                  className="shrink-0 whitespace-nowrap text-[0.875rem] leading-none text-white/75 hover:text-blue-200 transition-colors lg:text-[0.9rem]"
-                  data-testid={`nav-${item.id}`}
-                  aria-label={`${item.label} ${scrollHint}`}
-                >
-                  {item.label}
-                </button>
-              ) : (
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <div className="flex h-14 w-full min-w-0 items-center justify-between gap-6 md:h-16 md:gap-8">
+              <div className="flex min-w-0 shrink items-center">
                 <Link
-                  key={item.id}
-                  href={item.href}
-                  className="shrink-0 whitespace-nowrap text-[0.875rem] leading-none text-white/75 hover:text-blue-200 transition-colors lg:text-[0.9rem]"
-                  data-testid={`nav-${item.id}`}
+                  href="/"
+                  onClick={handleLogoClick}
+                  className="flex min-w-0 items-center gap-0.5 md:gap-1 outline-offset-4"
+                  data-testid="logo-button"
+                  aria-label={tSpec.nav.home}
                 >
-                  {item.label}
+                  <picture className="shrink-0">
+                    <source srcSet="/agr-logo-white.webp" type="image/webp" />
+                    <img
+                      src="/agr-logo-white.png"
+                      alt="AGR Multimedia"
+                      className="h-9 w-auto object-contain mix-blend-screen md:h-11"
+                      fetchPriority="high"
+                      decoding="async"
+                    />
+                  </picture>
+                  <span className="flex min-w-0 flex-col text-[7px] font-medium uppercase leading-[1.15] tracking-[0.04em] text-[#5da3f9] sm:text-[9px] md:leading-tight md:tracking-[0.05em] lg:text-[9px] xl:text-[10px] 2xl:text-xs">
+                    <span className="whitespace-nowrap">{logoSeoLine1}</span>
+                    <span className="whitespace-nowrap">{logoSeoLine2}</span>
+                  </span>
                 </Link>
-              ),
-            )}
-            {isHomePage ? (
-              <button
-                type="button"
-                onClick={() => scrollToSection("contact")}
-                className="premium-cta shrink-0 whitespace-nowrap rounded-full px-4 py-2 text-[0.8125rem] font-semibold hover:brightness-110 transition lg:px-5 lg:text-[0.875rem]"
-                data-testid="nav-contact-cta"
-                aria-label={`${tSpec.nav.ctaQuote} ${scrollHint}`}
-              >
-                {tSpec.nav.ctaQuote}
-              </button>
-            ) : (
-              <Link
-                href={contactHref}
-                className="premium-cta shrink-0 whitespace-nowrap rounded-full px-4 py-2 text-[0.8125rem] font-semibold hover:brightness-110 transition lg:px-5 lg:text-[0.875rem]"
-                data-testid="nav-contact-cta"
-              >
-                {tSpec.nav.ctaQuote}
-              </Link>
-            )}
-            <LanguageSwitcherInline />
-          </div>
+              </div>
 
-          <div className="md:hidden flex items-center gap-3">
-            <LanguageSwitcherInline />
-            <button
-              type="button"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-white/90 p-1"
-              data-testid="mobile-menu-toggle"
-              aria-expanded={isMenuOpen}
-              aria-controls="site-mobile-menu-panel"
-              aria-label={isMenuOpen ? mobileToggle.close : mobileToggle.open}
-            >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+              <div className="hidden shrink-0 md:flex md:flex-nowrap md:items-center md:gap-3 lg:gap-4">
+                {navItems.map((item) => (
+                  <Link key={item.id} href={item.href} className={linkClass} data-testid={`nav-${item.id}`}>
+                    {item.label}
+                  </Link>
+                ))}
+                <Link
+                  href="/kontakt"
+                  className="premium-cta shrink-0 whitespace-nowrap rounded-full px-4 py-2 text-[0.8125rem] font-semibold hover:brightness-110 transition lg:px-5 lg:text-[0.875rem]"
+                  data-testid="nav-contact-cta"
+                >
+                  {tSpec.nav.ctaQuote}
+                </Link>
+                <LanguageSwitcherInline />
+              </div>
+
+              <div className="flex items-center gap-3 md:hidden">
+                <LanguageSwitcherInline />
+                <button
+                  type="button"
+                  onClick={() => setIsMenuOpen(!isMenuOpen)}
+                  className="text-white/90 p-1"
+                  data-testid="mobile-menu-toggle"
+                  aria-expanded={isMenuOpen}
+                  aria-controls="site-mobile-menu-panel"
+                  aria-label={isMenuOpen ? mobileToggle.close : mobileToggle.open}
+                >
+                  {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                </button>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
 
       <div
         id="site-mobile-menu-panel"
@@ -161,52 +119,27 @@ export default function Navigation() {
         hidden={!isMenuOpen}
       >
         <div className="mx-auto max-w-6xl space-y-1 px-4 py-4">
-            {navItems.map((item) =>
-              isHomePage && item.section ? (
-                <button
-                  key={item.id}
-                  type="button"
-                  onClick={() => scrollToSection(item.section!)}
-                  className="block w-full text-left py-3 text-white/85 text-[0.9375rem]"
-                  data-testid={`mobile-nav-${item.id}`}
-                  aria-label={`${item.label} ${scrollHint}`}
-                >
-                  {item.label}
-                </button>
-              ) : (
-                <Link
-                  key={item.id}
-                  href={item.href}
-                  className="block w-full py-3 text-white/85 text-[0.9375rem]"
-                  data-testid={`mobile-nav-${item.id}`}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              ),
-            )}
-            {isHomePage ? (
-              <button
-                type="button"
-                onClick={contactScroll}
-                className="mt-3 w-full rounded-full bg-white py-3 text-center text-[0.875rem] font-semibold text-[#0a0a0f]"
-                data-testid="mobile-nav-contact"
-                aria-label={`${tSpec.nav.ctaQuote} ${scrollHint}`}
-              >
-                {tSpec.nav.ctaQuote}
-              </button>
-            ) : (
-              <Link
-                href="/contact"
-                className="mt-3 block w-full rounded-full bg-white py-3 text-center text-[0.875rem] font-semibold text-[#0a0a0f]"
-                data-testid="mobile-nav-contact"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {tSpec.nav.ctaQuote}
-              </Link>
-            )}
-          </div>
+          {navItems.map((item) => (
+            <Link
+              key={item.id}
+              href={item.href}
+              className="block w-full py-3 text-white/85 text-[0.9375rem]"
+              data-testid={`mobile-nav-${item.id}`}
+              onClick={closeMenu}
+            >
+              {item.label}
+            </Link>
+          ))}
+          <Link
+            href="/kontakt"
+            className="mt-3 block w-full rounded-full bg-white py-3 text-center text-[0.875rem] font-semibold text-[#0a0a0f]"
+            data-testid="mobile-nav-contact"
+            onClick={closeMenu}
+          >
+            {tSpec.nav.ctaQuote}
+          </Link>
         </div>
+      </div>
     </nav>
   );
 }

@@ -29,8 +29,16 @@ export default function MetaSEO() {
     let description = tSpec.seo.description;
 
     const path = normalizePathname(location);
+    const lookupPath =
+      path === "/contact"
+        ? "/kontakt"
+        : path === "/web-design"
+          ? "/webdesign-seo"
+          : path === "/video-production"
+            ? "/videoproduktion"
+            : path;
     const lang = (["de", "en", "it", "sr", "al"].includes(currentLanguage) ? currentLanguage : "en") as SeoLang;
-    const routeSeo = ROUTE_SEO_BY_LANG[lang][path];
+    const routeSeo = ROUTE_SEO_BY_LANG[lang][lookupPath];
     if (routeSeo) {
       title = routeSeo.title;
       description = routeSeo.description;
@@ -57,15 +65,16 @@ export default function MetaSEO() {
     setMetaContent("twitter-title", title);
     setMetaContent("twitter-description", description);
 
+    const canonicalPath = lookupPath;
     const canonicalFull =
-      path === "/" ? "https://www.agrmultimedia.eu/" : `https://www.agrmultimedia.eu${path}`;
+      canonicalPath === "/" ? "https://www.agrmultimedia.eu/" : `https://www.agrmultimedia.eu${canonicalPath}`;
     setLinkHref("canonical-url", canonicalFull);
     setMetaContent("og-url", canonicalFull);
     setMetaContent("twitter-url", canonicalFull);
 
     document.documentElement.lang = lang === "al" ? "sq" : lang;
 
-    syncHreflangAlternates(path);
+    syncHreflangAlternates(canonicalPath);
   }, [currentLanguage, location, tSpec.seo.title, tSpec.seo.description]);
 
   return null;

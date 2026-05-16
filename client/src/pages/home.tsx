@@ -10,8 +10,6 @@ import OptimizationExcellence from "@/components/OptimizationExcellence";
 import HomeSeoSection from "@/components/HomeSeoSection";
 import WhyChooseMe from "@/components/WhyChooseMe";
 import Testimonials from "@/components/Testimonials";
-import ReviewsSection from "@/components/ReviewsSection";
-import PricingModels from "@/components/PricingModels";
 import AboutHome from "@/components/AboutHome";
 import HomeFinalCta from "@/components/HomeFinalCta";
 import Contact from "@/components/Contact";
@@ -42,9 +40,7 @@ export default function Home() {
         <HomeSeoSection />
         <WhyChooseMe />
         <Testimonials />
-        <ReviewsSection />
         <CaseStudyThearRealm />
-        <PricingModels />
         <HomeServices />
         <AboutHome />
         <HomeFinalCta />

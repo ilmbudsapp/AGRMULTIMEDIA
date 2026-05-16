@@ -39,7 +39,7 @@ export default function AboutPage() {
             <p>{tSpec.aboutPage.milestone3}</p>
           </div>
           <p className="text-gray-400 mb-6">{tSpec.aboutPage.ctaTitle}</p>
-          <Link href="/#contact" aria-label={`${tSpec.aboutPage.ctaButton}: contact section on homepage`}>
+          <Link href="/kontakt" aria-label={`${tSpec.aboutPage.ctaButton}: contact page`}>
             <button type="button" className="rounded-2xl bg-white px-8 py-4 font-bold text-[#0a0a0f] transition-all hover:bg-white/90">
               {tSpec.aboutPage.ctaButton}
             </button>
