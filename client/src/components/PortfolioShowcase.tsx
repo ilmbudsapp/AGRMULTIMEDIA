@@ -1,4 +1,4 @@
-import { useMemo, useState, type ReactNode } from "react";
+﻿import { useMemo, useRef, useState, type ReactNode } from "react";
 import { Link } from "wouter";
 import {
   Clapperboard,
@@ -14,13 +14,15 @@ import AiVideoClipGrid from "@/components/AiVideoClipGrid";
 import { brandingGalleryByLang } from "@/data/brandingGallery";
 import { fotoKreiraneSaAiGalleryByLang } from "@/data/fotoKreiraneSaAiGallery";
 import type { PortfolioFilterId } from "@/lib/portfolioPageI18n";
+import { getCaseStudioCopy } from "@/lib/thearRealmCaseI18n";
 import { toServiceLang } from "@/lib/servicePageI18n";
 
 const TONIS_LIVE = "https://www.tonis-autopflege-goeppingen.de";
 const FIXBIKE_LIVE = "https://fixbike.online/";
 const TONIS_IMG = "/demo/tonis-autopflege/hero-poster.webp";
 const FIXBIKE_IMG = "/portfolio/web-design/fixbike-fahrradservice-neuwied-hero.webp";
-const THEAR_IMG = "/Case Studio/06.jpg";
+const THEAR_VIDEO = encodeURI("/Case Studio/THEAR REALM TV-Video clip.mp4");
+const THEAR_POSTER = encodeURI("/Case Studio/06.jpg");
 
 const LIVE_BTN =
   "inline-flex items-center gap-2 rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-[#0a0a0f] transition hover:bg-white/90";
@@ -30,6 +32,7 @@ const SECONDARY_BTN =
 
 function ProjectCard({
   image,
+  video,
   title,
   description,
   pillarLabel,
@@ -38,7 +41,8 @@ function ProjectCard({
   gradeBadge,
   children,
 }: {
-  image: string;
+  image?: string;
+  video?: { src: string; poster: string; ariaLabel: string };
   title: string;
   description: string;
   pillarLabel: string;
@@ -47,19 +51,56 @@ function ProjectCard({
   gradeBadge?: string;
   children: ReactNode;
 }) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const playOnHover = () => {
+    if (!video) return;
+    const el = videoRef.current;
+    if (!el) return;
+    void el.play().catch(() => undefined);
+  };
+
+  const pauseOnLeave = () => {
+    if (!video) return;
+    const el = videoRef.current;
+    if (!el) return;
+    el.pause();
+    el.currentTime = 0;
+  };
+
   return (
     <article className="flex flex-col overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.02] shadow-[0_12px_48px_rgba(0,0,0,0.35)]">
-      <div className="relative aspect-[16/10] overflow-hidden">
-        <img src={image} alt={title} className="h-full w-full object-cover" loading="lazy" decoding="async" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] via-transparent to-transparent" />
+      <div
+        className={`relative overflow-hidden bg-black/40 ${video ? "aspect-video" : "aspect-[16/10]"}`}
+        onMouseEnter={video ? playOnHover : undefined}
+        onMouseLeave={video ? pauseOnLeave : undefined}
+        onFocus={video ? playOnHover : undefined}
+        onBlur={video ? pauseOnLeave : undefined}
+      >
+        {video ? (
+          <video
+            ref={videoRef}
+            className="h-full w-full object-cover"
+            controls
+            playsInline
+            preload="metadata"
+            poster={video.poster}
+            aria-label={video.ariaLabel}
+          >
+            <source src={video.src} type="video/mp4" />
+          </video>
+        ) : (
+          <img src={image} alt={title} className="h-full w-full object-cover" loading="lazy" decoding="async" />
+        )}
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0a0a0f] via-transparent to-transparent" />
         <span
-          className={`absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-semibold ${pillarClass}`}
+          className={`pointer-events-none absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-semibold ${pillarClass}`}
         >
           <PillarIcon className="h-3.5 w-3.5" aria-hidden />
           {pillarLabel}
         </span>
         {gradeBadge ? (
-          <span className="absolute right-4 top-4 rounded-full border border-emerald-400/30 bg-emerald-500/15 px-3 py-1 text-xs font-semibold text-emerald-200">
+          <span className="pointer-events-none absolute right-4 top-4 rounded-full border border-emerald-400/30 bg-emerald-500/15 px-3 py-1 text-xs font-semibold text-emerald-200">
             {gradeBadge}
           </span>
         ) : null}
@@ -131,6 +172,10 @@ export default function PortfolioShowcase() {
 
   const brandSamples = useMemo(() => brandingGalleryByLang[lang].slice(0, 6), [lang]);
   const aiPhotoSamples = useMemo(() => fotoKreiraneSaAiGalleryByLang[lang].slice(0, 6), [lang]);
+  const thearVideoAria = useMemo(
+    () => getCaseStudioCopy(currentLanguage).thearRealm.videoAriaLabel,
+    [currentLanguage],
+  );
 
   const filters: { id: PortfolioFilterId; label: string }[] = [
     { id: "all", label: p.filters.all },
@@ -247,7 +292,11 @@ export default function PortfolioShowcase() {
                     </p>
                   </div>
                   <ProjectCard
-                    image={encodeURI(THEAR_IMG)}
+                    video={{
+                      src: THEAR_VIDEO,
+                      poster: THEAR_POSTER,
+                      ariaLabel: thearVideoAria,
+                    }}
                     title={p.projects.theirrealm.title}
                     description={`${p.projects.theirrealm.subtitle}. ${p.projects.theirrealm.description}`}
                     pillarLabel={p.categories.videoEditing.badge}
