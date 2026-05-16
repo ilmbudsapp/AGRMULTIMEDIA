@@ -2,6 +2,8 @@
  * Translations for the modernized portfolio spec (DE, EN, IT, SR, AL).
  * Used alongside main i18n for new sections and copy.
  */
+import { portfolioPageByLang, type PortfolioPageCopy } from "./portfolioPageI18n";
+
 export type SpecLang = 'de' | 'en' | 'it' | 'sr' | 'al';
 
 /** Home flip-card: front copy + back (price) line */
@@ -110,24 +112,8 @@ export interface SpecTranslations {
     viewDetails: string;
     backToPortfolio: string;
   };
-  /** Dedicated /portfolio page — flagship case studies */
-  portfolioPage: {
-    pageTitle: string;
-    pageLead: string;
-    pillarWeb: string;
-    tonis: {
-      title: string;
-      description: string;
-      liveCta: string;
-      gradeBadge: string;
-    };
-    fixbike: {
-      title: string;
-      description: string;
-      liveCta: string;
-      gradeBadge: string;
-    };
-  };
+  /** Dedicated /portfolio page — classified multimedia portfolio */
+  portfolioPage: PortfolioPageCopy;
   // Why work with me
   whyMe: {
     heading: string;
@@ -302,26 +288,7 @@ const en: SpecTranslations = {
     viewDetails: 'View details',
     backToPortfolio: 'Back to portfolio',
   },
-  portfolioPage: {
-    pageTitle: 'Portfolio',
-    pageLead:
-      'Selected web design projects with measurable SEO, AEO, GEO and conversion results — built in Geislingen for clients in Germany and beyond.',
-    pillarWeb: 'Web design & SEO',
-    tonis: {
-      title: "Toni's Autopflege — Göppingen",
-      description:
-        'Complete website transformation optimized to the highest level (Grade A). Word count raised from 3 to 1,461 with advanced SEO, AEO and GEO structures and PWA support integrated.',
-      liveCta: 'View live website',
-      gradeBadge: 'Grade A · SEO 94',
-    },
-    fixbike: {
-      title: 'FixBike',
-      description:
-        'Professional website for bicycle repair and service. Optimized for fast load times, excellent local SEO (GEO) visibility and maximum customer conversion.',
-      liveCta: 'View live website',
-      gradeBadge: 'Grade A · GEO',
-    },
-  },
+  portfolioPage: portfolioPageByLang.en,
   whyMe: {
     heading: 'Why work with me',
     subtitle:
@@ -537,26 +504,7 @@ const de: SpecTranslations = {
     viewDetails: 'Details ansehen',
     backToPortfolio: 'Zurück zum Portfolio',
   },
-  portfolioPage: {
-    pageTitle: 'Portfolio',
-    pageLead:
-      'Ausgewählte Webdesign-Projekte mit messbarem SEO-, AEO-, GEO- und Conversion-Ergebnis — entwickelt in Geislingen für Kunden in Deutschland und darüber hinaus.',
-    pillarWeb: 'Webdesign & SEO',
-    tonis: {
-      title: "Toni's Autopflege — Göppingen",
-      description:
-        'Komplette Transformation der Website und Optimierung auf höchstem Niveau (Grade A). Wortanzahl von 3 auf 1.461 erhöht, mit integrierten SEO-, AEO- und GEO-Strukturen sowie PWA-Unterstützung.',
-      liveCta: 'Website live ansehen',
-      gradeBadge: 'Grade A · SEO 94',
-    },
-    fixbike: {
-      title: 'FixBike',
-      description:
-        'Professionelle Webseite für Fahrradreparatur und Service. Optimiert für schnelle Ladezeiten, exzellente lokale SEO (GEO) Sichtbarkeit und maximale Kundenkonvertierung.',
-      liveCta: 'Website live ansehen',
-      gradeBadge: 'Grade A · GEO',
-    },
-  },
+  portfolioPage: portfolioPageByLang.de,
   whyMe: {
     heading: 'Warum mit mir arbeiten',
     subtitle:
@@ -772,26 +720,7 @@ const it: SpecTranslations = {
     viewDetails: 'Dettagli',
     backToPortfolio: 'Torna al portfolio',
   },
-  portfolioPage: {
-    pageTitle: 'Portfolio',
-    pageLead:
-      'Progetti web selezionati con risultati misurabili in SEO, AEO, GEO e conversione — studio a Geislingen per clienti in Germania e oltre.',
-    pillarWeb: 'Web design e SEO',
-    tonis: {
-      title: "Toni's Autopflege — Göppingen",
-      description:
-        'Trasformazione completa del sito ottimizzata al massimo livello (Grade A). Contenuto da 3 a 1.461 parole con strutture SEO, AEO e GEO avanzate e supporto PWA.',
-      liveCta: 'Sito live',
-      gradeBadge: 'Grade A · SEO 94',
-    },
-    fixbike: {
-      title: 'FixBike',
-      description:
-        'Sito professionale per riparazione e servizio biciclette. Ottimizzato per tempi di caricamento rapidi, eccellente visibilità SEO locale (GEO) e massima conversione clienti.',
-      liveCta: 'Sito live',
-      gradeBadge: 'Grade A · GEO',
-    },
-  },
+  portfolioPage: portfolioPageByLang.it,
   whyMe: {
     heading: 'Perché lavorare con me',
     subtitle:
@@ -1007,26 +936,7 @@ const sr: SpecTranslations = {
     viewDetails: 'Detalji',
     backToPortfolio: 'Nazad na portfolio',
   },
-  portfolioPage: {
-    pageTitle: 'Portfolio',
-    pageLead:
-      'Izabrani web projekti sa merljivim SEO, AEO, GEO i konverzijom — studio u Geislingen za klijente u Nemačkoj i šire.',
-    pillarWeb: 'Web dizajn i SEO',
-    tonis: {
-      title: "Toni's Autopflege — Göppingen",
-      description:
-        'Kompletna transformacija veb sajta i optimizacija do najvišeg nivoa (Grade A). Broj reči podignut sa 3 na 1.461, sa integrisanim naprednim SEO, AEO i GEO strukturama i PWA podrškom.',
-      liveCta: 'Pogledaj live sajt',
-      gradeBadge: 'Grade A · SEO 94',
-    },
-    fixbike: {
-      title: 'FixBike',
-      description:
-        'Profesionalni veb sajt za popravku i servis bicikala. Optimizovan za brzo učitavanje, odličnu lokalnu SEO (GEO) vidljivost i maksimalnu konverziju klijenata.',
-      liveCta: 'Pogledaj live sajt',
-      gradeBadge: 'Grade A · GEO',
-    },
-  },
+  portfolioPage: portfolioPageByLang.sr,
   whyMe: {
     heading: 'Zašto da radite sa mnom',
     subtitle:
@@ -1242,26 +1152,7 @@ const al: SpecTranslations = {
     viewDetails: 'Detaje',
     backToPortfolio: 'Kthehu te portofoli',
   },
-  portfolioPage: {
-    pageTitle: 'Portfolio',
-    pageLead:
-      'Projekte web të përzgjedhura me rezultate të matshme SEO, AEO, GEO dhe konvertimi — studio në Geislingen për klientë në Gjermani dhe më gjerë.',
-    pillarWeb: 'Web design dhe SEO',
-    tonis: {
-      title: "Toni's Autopflege — Göppingen",
-      description:
-        'Transformim i plotë i faqes dhe optimizim në nivelin më të lartë (Grade A). Nga 3 në 1.461 fjalë me struktura SEO, AEO dhe GEO të avancuara dhe mbështetje PWA.',
-      liveCta: 'Shiko faqen live',
-      gradeBadge: 'Grade A · SEO 94',
-    },
-    fixbike: {
-      title: 'FixBike',
-      description:
-        'Faqe profesionale për riparim dhe servis biçikletash. E optimizuar për ngarkim të shpejtë, dukshmëri të shkëlqyer SEO lokale (GEO) dhe konvertim maksimal të klientëve.',
-      liveCta: 'Shiko faqen live',
-      gradeBadge: 'Grade A · GEO',
-    },
-  },
+  portfolioPage: portfolioPageByLang.al,
   whyMe: {
     heading: 'Pse të punoni me mua',
     subtitle:

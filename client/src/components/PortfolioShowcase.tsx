@@ -1,34 +1,150 @@
-import { ExternalLink, LayoutGrid } from "lucide-react";
+﻿import { useMemo, useState, type ReactNode } from "react";
+import { Link } from "wouter";
+import {
+  Clapperboard,
+  ExternalLink,
+  Layers,
+  LayoutGrid,
+  Palette,
+  Sparkles,
+  type LucideIcon,
+} from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { brandingGalleryByLang } from "@/data/brandingGallery";
+import { fotoKreiraneSaAiGalleryByLang } from "@/data/fotoKreiraneSaAiGallery";
+import type { PortfolioFilterId } from "@/lib/portfolioPageI18n";
+import { toServiceLang } from "@/lib/servicePageI18n";
 
-const TONIS_LIVE_URL = "https://www.tonis-autopflege-goeppingen.de";
-const FIXBIKE_LIVE_URL = "https://fixbike.online/";
-const TONIS_IMAGE = "/demo/tonis-autopflege/hero-poster.webp";
-const FIXBIKE_IMAGE = "/portfolio/web-design/fixbike-fahrradservice-neuwied-hero.webp";
+const TONIS_LIVE = "https://www.tonis-autopflege-goeppingen.de";
+const FIXBIKE_LIVE = "https://fixbike.online/";
+const TONIS_IMG = "/demo/tonis-autopflege/hero-poster.webp";
+const FIXBIKE_IMG = "/portfolio/web-design/fixbike-fahrradservice-neuwied-hero.webp";
+const THEAR_IMG = "/Case Studio/06.jpg";
 
-const liveButtonClass =
+const LIVE_BTN =
   "inline-flex items-center gap-2 rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-[#0a0a0f] transition hover:bg-white/90";
 
-export default function PortfolioShowcase() {
-  const { tSpec } = useLanguage();
-  const p = tSpec.portfolioPage;
+const SECONDARY_BTN =
+  "inline-flex items-center gap-2 rounded-lg border border-white/20 px-5 py-2.5 text-sm font-medium text-white/90 transition hover:border-white/40 hover:text-white";
 
-  const projects = [
-    {
-      key: "tonis",
-      image: TONIS_IMAGE,
-      liveUrl: TONIS_LIVE_URL,
-      data: p.tonis,
-      eager: true,
-    },
-    {
-      key: "fixbike",
-      image: FIXBIKE_IMAGE,
-      liveUrl: FIXBIKE_LIVE_URL,
-      data: p.fixbike,
-      eager: false,
-    },
-  ] as const;
+function ProjectCard({
+  image,
+  title,
+  description,
+  pillarLabel,
+  pillarIcon: PillarIcon,
+  pillarClass,
+  gradeBadge,
+  children,
+}: {
+  image: string;
+  title: string;
+  description: string;
+  pillarLabel: string;
+  pillarIcon: LucideIcon;
+  pillarClass: string;
+  gradeBadge?: string;
+  children: ReactNode;
+}) {
+  return (
+    <article className="flex flex-col overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.02] shadow-[0_12px_48px_rgba(0,0,0,0.35)]">
+      <div className="relative aspect-[16/10] overflow-hidden">
+        <img src={image} alt={title} className="h-full w-full object-cover" loading="lazy" decoding="async" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] via-transparent to-transparent" />
+        <span
+          className={`absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-semibold ${pillarClass}`}
+        >
+          <PillarIcon className="h-3.5 w-3.5" aria-hidden />
+          {pillarLabel}
+        </span>
+        {gradeBadge ? (
+          <span className="absolute right-4 top-4 rounded-full border border-emerald-400/30 bg-emerald-500/15 px-3 py-1 text-xs font-semibold text-emerald-200">
+            {gradeBadge}
+          </span>
+        ) : null}
+      </div>
+      <div className="flex flex-1 flex-col p-6 md:p-8">
+        <h3 className="text-xl font-semibold text-white md:text-2xl">{title}</h3>
+        <p className="mt-4 flex-1 text-sm leading-relaxed text-white/70 md:text-base">{description}</p>
+        <div className="mt-6 flex flex-wrap gap-3">{children}</div>
+      </div>
+    </article>
+  );
+}
+
+function GalleryStrip({ items }: { items: { src: string; alt: string }[] }) {
+  return (
+    <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3">
+      {items.map((item) => (
+        <figure
+          key={item.src}
+          className="overflow-hidden rounded-lg border border-white/[0.06] bg-white/[0.02]"
+        >
+          <img
+            src={item.src}
+            alt={item.alt}
+            className="aspect-[4/3] w-full object-cover"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+      ))}
+    </div>
+  );
+}
+
+function CategoryBlock({
+  id,
+  icon: Icon,
+  title,
+  intro,
+  children,
+}: {
+  id: string;
+  icon: LucideIcon;
+  title: string;
+  intro: string;
+  children: ReactNode;
+}) {
+  return (
+    <section id={id} className="scroll-mt-28 border-t border-white/[0.08] pt-14 first:border-t-0 first:pt-0">
+      <div className="mb-8 flex items-start gap-4">
+        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#5da3f9]/30 bg-[#5da3f9]/10 text-[#93c5fd]">
+          <Icon className="h-5 w-5" aria-hidden />
+        </span>
+        <div>
+          <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">{title}</h2>
+          <p className="mt-2 max-w-3xl text-sm leading-relaxed text-white/65 md:text-base">{intro}</p>
+        </div>
+      </div>
+      {children}
+    </section>
+  );
+}
+
+export default function PortfolioShowcase() {
+  const { tSpec, currentLanguage } = useLanguage();
+  const p = tSpec.portfolioPage;
+  const lang = toServiceLang(currentLanguage);
+  const [filter, setFilter] = useState<PortfolioFilterId>("all");
+
+  const brandSamples = useMemo(() => brandingGalleryByLang[lang].slice(0, 6), [lang]);
+  const aiPhotoSamples = useMemo(() => fotoKreiraneSaAiGalleryByLang[lang].slice(0, 6), [lang]);
+
+  const filters: { id: PortfolioFilterId; label: string }[] = [
+    { id: "all", label: p.filters.all },
+    { id: "web", label: p.filters.web },
+    { id: "video", label: p.filters.video },
+    { id: "graphic", label: p.filters.graphic },
+  ];
+
+  const showWeb = filter === "all" || filter === "web";
+  const showVideo = filter === "all" || filter === "video";
+  const showGraphic = filter === "all" || filter === "graphic";
+  const showUx = filter === "all";
+
+  const webPillarClass = "border-[#5da3f9]/40 bg-[#5da3f9]/15 text-[#93c5fd]";
+  const videoPillarClass = "border-amber-400/30 bg-amber-500/15 text-amber-100";
 
   return (
     <section className="py-16 md:py-24" aria-labelledby="portfolio-showcase-heading">
@@ -44,46 +160,162 @@ export default function PortfolioShowcase() {
           <p className="mt-4 text-base leading-relaxed text-white/70 md:text-lg">{p.pageLead}</p>
         </header>
 
-        <div className="mt-14 grid gap-8 lg:grid-cols-2 lg:gap-10">
-          {projects.map(({ key, image, liveUrl, data, eager }) => (
-            <article
-              key={key}
-              className="group flex flex-col overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.02] shadow-[0_12px_48px_rgba(0,0,0,0.35)]"
+        <div
+          className="mt-10 flex flex-wrap justify-center gap-2 md:gap-3"
+          role="tablist"
+          aria-label={p.pageTitle}
+        >
+          {filters.map((tab) => {
+            const active = filter === tab.id;
+            return (
+              <button
+                key={tab.id}
+                type="button"
+                role="tab"
+                aria-selected={active}
+                onClick={() => setFilter(tab.id)}
+                className={`shrink-0 whitespace-nowrap rounded-full px-4 py-2.5 text-sm font-medium transition ${
+                  active
+                    ? "bg-white text-[#0a0a0f]"
+                    : "border border-white/15 bg-white/5 text-white/75 hover:border-white/25 hover:text-white"
+                }`}
+              >
+                {tab.label}
+              </button>
+            );
+          })}
+        </div>
+
+        <div className="mt-14 space-y-14">
+          {showWeb && (
+            <CategoryBlock
+              id="portfolio-web"
+              icon={LayoutGrid}
+              title={p.categories.web.title}
+              intro={p.categories.web.intro}
             >
-              <div className="relative aspect-[16/10] overflow-hidden">
-                <img
-                  src={image}
-                  alt={data.title}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-                  loading={eager ? "eager" : "lazy"}
-                  decoding="async"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] via-transparent to-transparent" />
-                <span className="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full border border-[#5da3f9]/40 bg-[#5da3f9]/15 px-3 py-1 text-xs font-semibold text-[#93c5fd]">
-                  <LayoutGrid className="h-3.5 w-3.5" aria-hidden />
-                  {p.pillarWeb}
-                </span>
-                <span className="absolute right-4 top-4 rounded-full border border-emerald-400/30 bg-emerald-500/15 px-3 py-1 text-xs font-semibold text-emerald-200">
-                  {data.gradeBadge}
-                </span>
-              </div>
-              <div className="flex flex-1 flex-col p-6 md:p-8">
-                <h2 className="text-xl font-semibold text-white md:text-2xl">{data.title}</h2>
-                <p className="mt-4 flex-1 text-sm leading-relaxed text-white/70 md:text-base">{data.description}</p>
-                <div className="mt-6">
-                  <a
-                    href={liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={liveButtonClass}
-                  >
-                    {data.liveCta}
+              <div className="grid gap-8 lg:grid-cols-2">
+                <ProjectCard
+                  image={TONIS_IMG}
+                  title={p.projects.tonis.title}
+                  description={p.projects.tonis.description}
+                  pillarLabel={p.categories.web.title}
+                  pillarIcon={LayoutGrid}
+                  pillarClass={webPillarClass}
+                  gradeBadge={p.projects.tonis.gradeBadge}
+                >
+                  <a href={TONIS_LIVE} target="_blank" rel="noopener noreferrer" className={LIVE_BTN}>
+                    {p.projects.tonis.liveCta}
                     <ExternalLink className="h-4 w-4" aria-hidden />
                   </a>
+                </ProjectCard>
+                <ProjectCard
+                  image={FIXBIKE_IMG}
+                  title={p.projects.fixbike.title}
+                  description={p.projects.fixbike.description}
+                  pillarLabel={p.categories.web.title}
+                  pillarIcon={LayoutGrid}
+                  pillarClass={webPillarClass}
+                  gradeBadge={p.projects.fixbike.gradeBadge}
+                >
+                  <a href={FIXBIKE_LIVE} target="_blank" rel="noopener noreferrer" className={LIVE_BTN}>
+                    {p.projects.fixbike.liveCta}
+                    <ExternalLink className="h-4 w-4" aria-hidden />
+                  </a>
+                </ProjectCard>
+              </div>
+            </CategoryBlock>
+          )}
+
+          {showVideo && (
+            <CategoryBlock
+              id="portfolio-video"
+              icon={Clapperboard}
+              title={p.categories.video.title}
+              intro={p.categories.video.intro}
+            >
+              <div className="grid gap-8 lg:grid-cols-2">
+                <ProjectCard
+                  image={encodeURI(THEAR_IMG)}
+                  title={p.projects.theirrealm.title}
+                  description={`${p.projects.theirrealm.subtitle}. ${p.projects.theirrealm.description}`}
+                  pillarLabel={p.projects.theirrealm.badge}
+                  pillarIcon={Clapperboard}
+                  pillarClass={videoPillarClass}
+                >
+                  <Link href="/videoproduktion" className={LIVE_BTN}>
+                    {p.projects.theirrealm.cta}
+                  </Link>
+                </ProjectCard>
+
+                <article className="flex flex-col rounded-2xl border border-violet-400/20 bg-violet-500/[0.06] p-6 md:p-8">
+                  <div className="mb-4 flex items-center gap-2">
+                    <Sparkles className="h-5 w-5 text-violet-300" aria-hidden />
+                    <h3 className="text-lg font-semibold text-violet-100">{p.categories.aiVideo.title}</h3>
+                  </div>
+                  <p className="flex-1 text-sm leading-relaxed text-white/70 md:text-base">
+                    {p.categories.aiVideo.description}
+                  </p>
+                  <div className="mt-6">
+                    <Link href="/videoproduktion" className={LIVE_BTN}>
+                      {p.categories.aiVideo.cta}
+                    </Link>
+                  </div>
+                </article>
+              </div>
+            </CategoryBlock>
+          )}
+
+          {showGraphic && (
+            <CategoryBlock
+              id="portfolio-graphic"
+              icon={Palette}
+              title={p.categories.graphic.title}
+              intro={p.categories.graphic.intro}
+            >
+              <div className="space-y-10">
+                <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 md:p-8">
+                  <h3 className="text-lg font-semibold text-white">{p.categories.brandGraphics.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
+                    {p.categories.brandGraphics.description}
+                  </p>
+                  <GalleryStrip items={brandSamples} />
+                </div>
+
+                <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 md:p-8">
+                  <h3 className="text-lg font-semibold text-white">{p.categories.aiPhoto.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
+                    {p.categories.aiPhoto.description}
+                  </p>
+                  <GalleryStrip items={aiPhotoSamples} />
+                </div>
+
+                <div className="text-center">
+                  <Link href="/graphic-design" className={LIVE_BTN}>
+                    {p.categories.graphicCta}
+                  </Link>
                 </div>
               </div>
-            </article>
-          ))}
+            </CategoryBlock>
+          )}
+
+          {showUx && (
+            <CategoryBlock
+              id="portfolio-ux"
+              icon={Layers}
+              title={p.categories.ux.title}
+              intro={p.categories.ux.description}
+            >
+              <div className="flex flex-wrap gap-3">
+                <Link href="/webdesign-seo" className={LIVE_BTN}>
+                  {p.categories.ux.cta}
+                </Link>
+                <Link href="/kontakt" className={SECONDARY_BTN}>
+                  {p.contactCta}
+                </Link>
+              </div>
+            </CategoryBlock>
+          )}
         </div>
       </div>
     </section>
