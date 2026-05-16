@@ -11,15 +11,17 @@ export default function Navigation() {
   const { tSpec, currentLanguage } = useLanguage();
   const [location, setLocation] = useLocation();
 
-  const isHomePage = location === "/" || location.startsWith("/#");
-
   const closeMenu = () => setIsMenuOpen(false);
 
-  const handleLogoClick = () => {
-    if (isHomePage) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
+  /** Scroll to hero and clear #about (wouter ignores Link to "/" when already on home). */
+  const goToHome = () => {
     closeMenu();
+    if (location === "/") {
+      window.history.replaceState(null, "", "/");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+    setLocation("/");
   };
 
   const goToAbout = () => {
@@ -35,8 +37,8 @@ export default function Navigation() {
     }, 350);
   };
 
-  const navItems: { id: string; label: string; href: string; isAbout?: boolean }[] = [
-    { id: "home", label: tSpec.nav.home, href: "/" },
+  const navItems: { id: string; label: string; href: string; isHome?: boolean; isAbout?: boolean }[] = [
+    { id: "home", label: tSpec.nav.home, href: "/", isHome: true },
     { id: "webdesign", label: tSpec.nav.webdesignSeo, href: "/webdesign-seo" },
     { id: "video", label: tSpec.nav.videoProduction, href: "/videoproduktion" },
     { id: "portfolio", label: tSpec.nav.portfolio, href: "/portfolio" },
@@ -60,7 +62,14 @@ export default function Navigation() {
           <div className="flex shrink-0 items-center">
             <Link
               href="/"
-              onClick={handleLogoClick}
+              onClick={(e) => {
+                if (location === "/") {
+                  e.preventDefault();
+                  goToHome();
+                } else {
+                  closeMenu();
+                }
+              }}
               className="flex shrink-0 items-center outline-offset-4"
               data-testid="logo-button"
               aria-label={tSpec.nav.home}
@@ -90,6 +99,23 @@ export default function Navigation() {
                 >
                   {item.label}
                 </button>
+              ) : item.isHome ? (
+                <Link
+                  key={item.id}
+                  href={item.href}
+                  onClick={(e) => {
+                    if (location === "/") {
+                      e.preventDefault();
+                      goToHome();
+                    } else {
+                      closeMenu();
+                    }
+                  }}
+                  className={linkClass}
+                  data-testid={`nav-${item.id}`}
+                >
+                  {item.label}
+                </Link>
               ) : (
                 <Link key={item.id} href={item.href} className={linkClass} data-testid={`nav-${item.id}`}>
                   {item.label}
@@ -143,6 +169,23 @@ export default function Navigation() {
               >
                 {item.label}
               </button>
+            ) : item.isHome ? (
+              <Link
+                key={item.id}
+                href={item.href}
+                className="block w-full whitespace-nowrap py-3 text-[0.9375rem] text-white/85"
+                data-testid={`mobile-nav-${item.id}`}
+                onClick={(e) => {
+                  if (location === "/") {
+                    e.preventDefault();
+                    goToHome();
+                  } else {
+                    closeMenu();
+                  }
+                }}
+              >
+                {item.label}
+              </Link>
             ) : (
               <Link
                 key={item.id}
