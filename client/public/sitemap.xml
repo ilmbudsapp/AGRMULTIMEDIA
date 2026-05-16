@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Primary multi-page routes (language via ?lang= on SPA) -->
+  <!-- Primary routes -->
   <url>
     <loc>https://www.agrmultimedia.eu/</loc>
     <lastmod>2026-05-16</lastmod>
@@ -37,13 +37,46 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-  <!-- Legacy / deep routes -->
+
+  <!-- Portfolio case studies -->
   <url>
-    <loc>https://www.agrmultimedia.eu/about</loc>
+    <loc>https://www.agrmultimedia.eu/portfolio/ecommerce-site</loc>
     <lastmod>2026-05-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.85</priority>
   </url>
+  <url>
+    <loc>https://www.agrmultimedia.eu/portfolio/restaurant-website</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.agrmultimedia.eu/portfolio/brand-identity</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.agrmultimedia.eu/portfolio/corporate-video</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.agrmultimedia.eu/portfolio/product-photography</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.agrmultimedia.eu/portfolio/packaging-design</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Services & content -->
   <url>
     <loc>https://www.agrmultimedia.eu/services</loc>
     <lastmod>2026-05-16</lastmod>
@@ -87,6 +120,12 @@
     <priority>0.75</priority>
   </url>
   <url>
+    <loc>https://www.agrmultimedia.eu/about</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
     <loc>https://www.agrmultimedia.eu/blog</loc>
     <lastmod>2026-05-16</lastmod>
     <changefreq>weekly</changefreq>
@@ -98,6 +137,34 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Blog articles -->
+  <url>
+    <loc>https://www.agrmultimedia.eu/blog/digital-marketing-trends-2024</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://www.agrmultimedia.eu/blog/website-conversion-optimization</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://www.agrmultimedia.eu/blog/video-marketing-power</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://www.agrmultimedia.eu/blog/food-truck-web-500</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+
+  <!-- Legal -->
   <url>
     <loc>https://www.agrmultimedia.eu/privacy-policy</loc>
     <lastmod>2026-05-16</lastmod>
