@@ -21,7 +21,8 @@ export interface PortfolioPageCopy {
   categories: {
     web: { title: string; intro: string };
     video: { title: string; intro: string };
-    aiVideo: { title: string; description: string; cta: string };
+    videoEditing: { title: string; description: string; badge: string; cta: string };
+    aiVideo: { title: string; description: string; cta: string; clipAriaLabel: string };
     graphic: { title: string; intro: string };
     brandGraphics: { title: string; description: string };
     aiPhoto: { title: string; description: string };
@@ -56,13 +57,21 @@ const en: PortfolioPageCopy = {
     video: {
       title: "Video editing & AI video production",
       intro:
-        "Promo edits, campaign clips and AI-assisted motion for social, ads and presentations — fast turnaround without agency overhead.",
+        "Classic Premiere Pro edits on one side, AI-generated clips on the other — clearly separated so you see exactly how each project was made.",
+    },
+    videoEditing: {
+      title: "Video editing",
+      description:
+        "High-end video editing with Adobe Premiere Pro — 100% handcrafted storytelling, pacing and dynamics.",
+      badge: "Adobe Premiere Pro",
+      cta: "Request video editing",
     },
     aiVideo: {
       title: "AI video creation",
       description:
-        "We produce advanced video clips with AI-assisted workflows for ads, social media, Kickstarter-style campaigns and brand stories — combining Premiere Pro, After Effects and generative tools.",
-      cta: "Video production services",
+        "Forward-looking AI video generation for commercials, social media and modern brand presentations.",
+      cta: "Request AI video",
+      clipAriaLabel: "AI-generated video clip {n}",
     },
     graphic: {
       title: "Graphic design & AI photo creation",
@@ -106,9 +115,9 @@ const en: PortfolioPageCopy = {
       title: "theirrealmtv CAT",
       subtitle: "Kickstarter campaign promo video",
       description:
-        "Visually striking, high-converting, cost-effective video for a global crowdfunding campaign — delivered on a very tight timeline.",
-      cta: "Video production",
-      badge: "Kickstarter · Video",
+        "Cut entirely in Adobe Premiere Pro — no AI in the edit. Visually striking, high-converting promo for a global crowdfunding campaign on a tight timeline.",
+      cta: "Request video editing",
+      badge: "Kickstarter · Premiere Pro",
     },
   },
   contactCta: "Request a quote",
@@ -128,13 +137,21 @@ const de: PortfolioPageCopy = {
     video: {
       title: "Video-Schnitt & KI-Videoproduktion",
       intro:
-        "Promo-Clips, Kampagnenvideos und KI-unterstützte Motion für Social Media, Ads und Präsentationen — schnell und ohne Agentur-Overhead.",
+        "Klassischer Premiere-Pro-Schnitt links, KI-generierte Clips rechts — klar getrennt, damit Sie die Herkunft jedes Projekts sofort erkennen.",
+    },
+    videoEditing: {
+      title: "Video-Schnitt",
+      description:
+        "High-End Videoschnitt mit Adobe Premiere Pro (100% Handarbeit, Storytelling & Dynamik).",
+      badge: "Adobe Premiere Pro",
+      cta: "Video-Schnitt anfragen",
     },
     aiVideo: {
       title: "KI-Video-Kreation",
       description:
-        "Wir erstellen fortschrittliche Videoclips mit KI-Workflows für Werbung, Social Media, Crowdfunding und Markenstorys — Premiere Pro, After Effects und generative Tools.",
-      cta: "Videoproduktion",
+        "Zukunftsweisende KI-Video-Generierung für Werbespots, Social Media und moderne Markenpräsentationen.",
+      cta: "KI-Video anfragen",
+      clipAriaLabel: "KI-generierter Videoclip {n}",
     },
     graphic: {
       title: "Grafikdesign & KI-Fotokreation",
@@ -178,9 +195,9 @@ const de: PortfolioPageCopy = {
       title: "theirrealmtv CAT",
       subtitle: "Promo-Video für Kickstarter-Kampagne",
       description:
-        "Visuell eindrucksvolles, hochkonvertierendes und kosteneffizientes Video für eine globale Crowdfunding-Kampagne — in sehr kurzer Zeit.",
-      cta: "Videoproduktion",
-      badge: "Kickstarter · Video",
+        "Komplett in Adobe Premiere Pro geschnitten — ohne KI. Visuell starkes, hochkonvertierendes Promo für eine globale Crowdfunding-Kampagne in kurzer Zeit.",
+      cta: "Video-Schnitt anfragen",
+      badge: "Kickstarter · Premiere Pro",
     },
   },
   contactCta: "Angebot anfragen",
@@ -200,13 +217,21 @@ const sr: PortfolioPageCopy = {
     video: {
       title: "Video montaža i AI video produkcija",
       intro:
-        "Promo klipovi, kampanjski video i AI motion za društvene mreže, reklame i prezentacije — brza isporuka bez agencijskog overhead-a.",
+        "Klasična montaža u Premiere Pro levo, AI generisani klipovi desno — jasno razdvojeno da odmah vidite kako je svaki projekat nastao.",
+    },
+    videoEditing: {
+      title: "Video montaža",
+      description:
+        "High-end video montaža u Adobe Premiere Pro — 100% ručni rad, storytelling i dinamika.",
+      badge: "Adobe Premiere Pro",
+      cta: "Zatraži video montažu",
     },
     aiVideo: {
       title: "AI video kreacija",
       description:
-        "Kreiramo napredne video klipove pomoću AI workflow-a za reklame, društvene mreže, crowdfunding kampanje i brand priče — Premiere Pro, After Effects i generativni alati.",
-      cta: "Video produkcija",
+        "Vrhunska AI generacija videa za reklame, društvene mreže i moderne prezentacije brenda.",
+      cta: "Zatraži AI video",
+      clipAriaLabel: "AI generisani video klip {n}",
     },
     graphic: {
       title: "Grafički dizajn i AI fotografija",
@@ -250,9 +275,9 @@ const sr: PortfolioPageCopy = {
       title: "theirrealmtv CAT",
       subtitle: "Promo video za Kickstarter kampanju",
       description:
-        "Vizuelno upečatljiv, visokokonvertujući i kostenefikasan video za globalnu crowdfunding kampanju u veoma kratkom roku.",
-      cta: "Video produkcija",
-      badge: "Kickstarter · Video",
+        "Montaža isključivo u Adobe Premiere Pro — bez AI. Vizuelno snažan, visokokonvertujući promo za globalnu crowdfunding kampanju u kratkom roku.",
+      cta: "Zatraži video montažu",
+      badge: "Kickstarter · Premiere Pro",
     },
   },
   contactCta: "Zatraži ponudu",
@@ -272,13 +297,21 @@ const it: PortfolioPageCopy = {
     video: {
       title: "Montaggio video e produzione video IA",
       intro:
-        "Clip promo, video campagna e motion assistito da IA per social, ads e presentazioni — consegna rapida senza overhead da agenzia.",
+        "Montaggio classico in Premiere Pro a sinistra, clip generate con IA a destra — separazione chiara per ogni tipo di progetto.",
+    },
+    videoEditing: {
+      title: "Montaggio video",
+      description:
+        "Montaggio video high-end con Adobe Premiere Pro — storytelling, ritmo e dinamica al 100% artigianali.",
+      badge: "Adobe Premiere Pro",
+      cta: "Richiedi montaggio video",
     },
     aiVideo: {
       title: "Creazione video con IA",
       description:
-        "Clip video avanzati con workflow IA per pubblicità, social, crowdfunding e brand story — Premiere Pro, After Effects e strumenti generativi.",
-      cta: "Servizi video",
+        "Generazione video con IA all'avanguardia per spot, social media e presentazioni di marca moderne.",
+      cta: "Richiedi video IA",
+      clipAriaLabel: "Clip video generato con IA {n}",
     },
     graphic: {
       title: "Grafica e creazione foto IA",
@@ -322,9 +355,9 @@ const it: PortfolioPageCopy = {
       title: "theirrealmtv CAT",
       subtitle: "Video promo campagna Kickstarter",
       description:
-        "Video visivamente d'impatto, ad alta conversione ed economico per campagna crowdfunding globale — tempi molto stretti.",
-      cta: "Produzione video",
-      badge: "Kickstarter · Video",
+        "Montato interamente in Adobe Premiere Pro — senza IA. Promo visivamente forte e ad alta conversione per crowdfunding globale in tempi stretti.",
+      cta: "Richiedi montaggio video",
+      badge: "Kickstarter · Premiere Pro",
     },
   },
   contactCta: "Richiedi preventivo",
@@ -344,13 +377,21 @@ const al: PortfolioPageCopy = {
     video: {
       title: "Montazh video dhe prodhim video AI",
       intro:
-        "Klipa promo, video fushatash dhe motion me AI për rrjete sociale, reklama dhe prezantime — dorëzim i shpejtë pa overhead agjencie.",
+        "Montazh klasik në Premiere Pro majtas, klipa të gjeneruara me AI djathtas — ndarje e qartë për çdo lloj projekti.",
+    },
+    videoEditing: {
+      title: "Montazh video",
+      description:
+        "Montazh video high-end me Adobe Premiere Pro — 100% punë manuale, storytelling dhe dinamikë.",
+      badge: "Adobe Premiere Pro",
+      cta: "Kërko montazh video",
     },
     aiVideo: {
       title: "Krijim video me AI",
       description:
-        "Krijojmë klipa video të avancuara me workflow AI për reklama, social media, crowdfunding dhe histori marke — Premiere Pro, After Effects dhe mjete generative.",
-      cta: "Produksion video",
+        "Gjenerim video me AI për reklama, media sociale dhe prezantime moderne të markës.",
+      cta: "Kërko video AI",
+      clipAriaLabel: "Klip video i gjeneruar me AI {n}",
     },
     graphic: {
       title: "Dizajn grafik dhe krijim foto AI",
@@ -394,9 +435,9 @@ const al: PortfolioPageCopy = {
       title: "theirrealmtv CAT",
       subtitle: "Video promo për fushatën Kickstarter",
       description:
-        "Video vizualisht i fuqishëm, me konvertim të lartë dhe kosto-efektiv për fushatë global crowdfunding — afat shumë i shkurtër.",
-      cta: "Produksion video",
-      badge: "Kickstarter · Video",
+        "Montuar plotësisht në Adobe Premiere Pro — pa AI. Promo vizualisht i fortë dhe me konvertim të lartë për crowdfunding global në afat të shkurtër.",
+      cta: "Kërko montazh video",
+      badge: "Kickstarter · Premiere Pro",
     },
   },
   contactCta: "Kërko ofertë",

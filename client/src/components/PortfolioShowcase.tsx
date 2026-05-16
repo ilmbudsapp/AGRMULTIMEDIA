@@ -1,4 +1,4 @@
-﻿import { useMemo, useState, type ReactNode } from "react";
+import { useMemo, useState, type ReactNode } from "react";
 import { Link } from "wouter";
 import {
   Clapperboard,
@@ -10,6 +10,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import AiVideoClipGrid from "@/components/AiVideoClipGrid";
 import { brandingGalleryByLang } from "@/data/brandingGallery";
 import { fotoKreiraneSaAiGalleryByLang } from "@/data/fotoKreiraneSaAiGallery";
 import type { PortfolioFilterId } from "@/lib/portfolioPageI18n";
@@ -235,29 +236,45 @@ export default function PortfolioShowcase() {
               intro={p.categories.video.intro}
             >
               <div className="grid gap-8 lg:grid-cols-2">
-                <ProjectCard
-                  image={encodeURI(THEAR_IMG)}
-                  title={p.projects.theirrealm.title}
-                  description={`${p.projects.theirrealm.subtitle}. ${p.projects.theirrealm.description}`}
-                  pillarLabel={p.projects.theirrealm.badge}
-                  pillarIcon={Clapperboard}
-                  pillarClass={videoPillarClass}
-                >
-                  <Link href="/videoproduktion" className={LIVE_BTN}>
-                    {p.projects.theirrealm.cta}
-                  </Link>
-                </ProjectCard>
+                <div className="flex flex-col">
+                  <div className="mb-6">
+                    <div className="flex items-center gap-2">
+                      <Clapperboard className="h-5 w-5 text-amber-300" aria-hidden />
+                      <h3 className="text-lg font-semibold text-amber-100">{p.categories.videoEditing.title}</h3>
+                    </div>
+                    <p className="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
+                      {p.categories.videoEditing.description}
+                    </p>
+                  </div>
+                  <ProjectCard
+                    image={encodeURI(THEAR_IMG)}
+                    title={p.projects.theirrealm.title}
+                    description={`${p.projects.theirrealm.subtitle}. ${p.projects.theirrealm.description}`}
+                    pillarLabel={p.categories.videoEditing.badge}
+                    pillarIcon={Clapperboard}
+                    pillarClass={videoPillarClass}
+                  >
+                    <Link href="/kontakt" className={LIVE_BTN}>
+                      {p.categories.videoEditing.cta}
+                    </Link>
+                  </ProjectCard>
+                </div>
 
                 <article className="flex flex-col rounded-2xl border border-violet-400/20 bg-violet-500/[0.06] p-6 md:p-8">
-                  <div className="mb-4 flex items-center gap-2">
+                  <div className="flex items-center gap-2">
                     <Sparkles className="h-5 w-5 text-violet-300" aria-hidden />
                     <h3 className="text-lg font-semibold text-violet-100">{p.categories.aiVideo.title}</h3>
                   </div>
-                  <p className="flex-1 text-sm leading-relaxed text-white/70 md:text-base">
+                  <p className="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
                     {p.categories.aiVideo.description}
                   </p>
+                  <AiVideoClipGrid
+                    clipAriaLabel={(index) =>
+                      p.categories.aiVideo.clipAriaLabel.replace("{n}", String(index))
+                    }
+                  />
                   <div className="mt-6">
-                    <Link href="/videoproduktion" className={LIVE_BTN}>
+                    <Link href="/kontakt" className={LIVE_BTN}>
                       {p.categories.aiVideo.cta}
                     </Link>
                   </div>
