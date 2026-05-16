@@ -13,6 +13,7 @@ import Redirect from "./components/Redirect";
 import SkipToContent from "./components/SkipToContent";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import PageLoadingFallback from "@/components/PageLoadingFallback";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const Home = lazy(() => import("@/pages/home"));
 const ServicesPage = lazy(() => import("@/pages/ServicesPage"));
@@ -56,6 +57,12 @@ function Router() {
       <Route path="/videoproduktion" component={VideoProduction} />
       <Route path="/bewertungen" component={BewertungenPage} />
       <Route path="/kontakt" component={ContactPage} />
+      <Route path="/portfolio/ecommerce-site" component={EcommerceSite} />
+      <Route path="/portfolio/restaurant-website" component={RestaurantWebsite} />
+      <Route path="/portfolio/brand-identity" component={BrandIdentity} />
+      <Route path="/portfolio/corporate-video" component={CorporateVideo} />
+      <Route path="/portfolio/product-photography" component={ProductPhotography} />
+      <Route path="/portfolio/packaging-design" component={PackagingDesign} />
       <Route path="/portfolio" component={PortfolioPage} />
       <Route path="/contact">{() => <Redirect to="/kontakt" />}</Route>
       <Route path="/web-design">{() => <Redirect to="/webdesign-seo" />}</Route>
@@ -74,12 +81,6 @@ function Router() {
       <Route path="/blog/website-conversion-optimization" component={WebsiteConversionOptimization} />
       <Route path="/blog/video-marketing-power" component={VideoMarketingPower} />
       <Route path="/blog/food-truck-web-500" component={FoodTruckWeb500} />
-      <Route path="/portfolio/ecommerce-site" component={EcommerceSite} />
-      <Route path="/portfolio/restaurant-website" component={RestaurantWebsite} />
-      <Route path="/portfolio/brand-identity" component={BrandIdentity} />
-      <Route path="/portfolio/corporate-video" component={CorporateVideo} />
-      <Route path="/portfolio/product-photography" component={ProductPhotography} />
-      <Route path="/portfolio/packaging-design" component={PackagingDesign} />
       <Route path="/privacy" component={Privacy} />
       <Route path="/privacy-policy" component={Privacy} />
       <Route path="/terms" component={Terms} />
@@ -116,6 +117,7 @@ function App() {
                 <div className="min-h-screen w-full max-w-[100vw] overflow-x-hidden">
                   <SkipToContent />
                   <MetaSEO />
+                  <ScrollToTop />
                   <Suspense fallback={<PageLoadingFallback />}>
                     <Router />
                   </Suspense>

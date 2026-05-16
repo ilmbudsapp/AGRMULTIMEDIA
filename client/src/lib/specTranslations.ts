@@ -110,6 +110,27 @@ export interface SpecTranslations {
     viewDetails: string;
     backToPortfolio: string;
   };
+  /** Dedicated /portfolio page — flagship case studies */
+  portfolioPage: {
+    pageTitle: string;
+    pageLead: string;
+    pillarWeb: string;
+    pillarVideo: string;
+    tonis: {
+      title: string;
+      subtitle: string;
+      description: string;
+      liveCta: string;
+      demoCta: string;
+      gradeBadge: string;
+    };
+    kickstarter: {
+      title: string;
+      subtitle: string;
+      description: string;
+      servicesCta: string;
+    };
+  };
   // Why work with me
   whyMe: {
     heading: string;
@@ -283,6 +304,29 @@ const en: SpecTranslations = {
     filterAi: 'AI',
     viewDetails: 'View details',
     backToPortfolio: 'Back to portfolio',
+  },
+  portfolioPage: {
+    pageTitle: 'Portfolio',
+    pageLead:
+      'Selected web and video projects with measurable SEO, conversion, and campaign outcomes — built in Geislingen for clients in Germany and beyond.',
+    pillarWeb: 'Web design & SEO',
+    pillarVideo: 'Video production & editing',
+    tonis: {
+      title: "Toni's Autopflege Göppingen",
+      subtitle: 'Full transformation, SEO, AEO and GEO optimization (Grade A)',
+      description:
+        'Website expanded from a basic 3-word presence to 1,461 words of optimized content. Technical SEO score raised to 94 points, with full optimization for AI search (AEO) and local search (GEO). Web App Manifest and PWA readiness integrated.',
+      liveCta: 'View live website',
+      demoCta: 'View studio demo',
+      gradeBadge: 'Grade A · SEO 94',
+    },
+    kickstarter: {
+      title: 'theirrealmtv CAT',
+      subtitle: 'Promo video for a Kickstarter campaign',
+      description:
+        'Visually striking, high-converting, cost-effective video material for a global crowdfunding campaign — delivered on a very tight timeline.',
+      servicesCta: 'Video production services',
+    },
   },
   whyMe: {
     heading: 'Why work with me',
@@ -499,6 +543,29 @@ const de: SpecTranslations = {
     viewDetails: 'Details ansehen',
     backToPortfolio: 'Zurück zum Portfolio',
   },
+  portfolioPage: {
+    pageTitle: 'Portfolio',
+    pageLead:
+      'Ausgewählte Web- und Video-Projekte mit messbarem SEO-, Conversion- und Kampagnen-Ergebnis — entwickelt in Geislingen für Kunden in Deutschland und darüber hinaus.',
+    pillarWeb: 'Webdesign & SEO',
+    pillarVideo: 'Videoproduktion & Montage',
+    tonis: {
+      title: "Toni's Autopflege Göppingen",
+      subtitle: 'Komplette Transformation, SEO, AEO und GEO-Optimierung (Grade A)',
+      description:
+        'Webseite von nur drei Wörtern auf 1.461 Wörter optimierten Inhalts erweitert. Technischer SEO-Score auf 94 Punkte angehoben, mit vollständiger Optimierung für KI-Suche (AEO) und lokale Suche (GEO). Web App Manifest und PWA-Bereitschaft integriert.',
+      liveCta: 'Webseite live ansehen',
+      demoCta: 'Studio-Demo ansehen',
+      gradeBadge: 'Grade A · SEO 94',
+    },
+    kickstarter: {
+      title: 'theirrealmtv CAT',
+      subtitle: 'Promo-Video für Kickstarter-Kampagne',
+      description:
+        'Visuell eindrucksvolles, hochkonvertierendes und kosteneffizientes Videomaterial für eine globale Crowdfunding-Kampagne — in sehr kurzer Zeit umgesetzt.',
+      servicesCta: 'Videoproduktion',
+    },
+  },
   whyMe: {
     heading: 'Warum mit mir arbeiten',
     subtitle:
@@ -713,6 +780,29 @@ const it: SpecTranslations = {
     filterAi: 'AI',
     viewDetails: 'Dettagli',
     backToPortfolio: 'Torna al portfolio',
+  },
+  portfolioPage: {
+    pageTitle: 'Portfolio',
+    pageLead:
+      'Progetti web e video selezionati con risultati misurabili in SEO, conversione e campagne — studio a Geislingen per clienti in Germania e oltre.',
+    pillarWeb: 'Web design e SEO',
+    pillarVideo: 'Produzione video e montaggio',
+    tonis: {
+      title: "Toni's Autopflege Göppingen",
+      subtitle: 'Trasformazione completa, SEO, AEO e GEO (Grade A)',
+      description:
+        'Sito espanso da 3 parole di base a 1.461 parole di contenuto ottimizzato. Punteggio SEO tecnico portato a 94 punti, con ottimizzazione per ricerca AI (AEO) e locale (GEO). Web App Manifest e prontezza PWA integrati.',
+      liveCta: 'Sito live',
+      demoCta: 'Demo studio',
+      gradeBadge: 'Grade A · SEO 94',
+    },
+    kickstarter: {
+      title: 'theirrealmtv CAT',
+      subtitle: 'Video promo per campagna Kickstarter',
+      description:
+        'Materiale video visivamente d’impatto, ad alta conversione ed economico per una campagna crowdfunding globale — consegnato in tempi molto stretti.',
+      servicesCta: 'Servizi video',
+    },
   },
   whyMe: {
     heading: 'Perché lavorare con me',
@@ -929,6 +1019,29 @@ const sr: SpecTranslations = {
     viewDetails: 'Detalji',
     backToPortfolio: 'Nazad na portfolio',
   },
+  portfolioPage: {
+    pageTitle: 'Portfolio',
+    pageLead:
+      'Izabrani web i video projekti sa merljivim SEO, konverzijom i kampanjama — studio u Geislingen za klijente u Nemačkoj i šire.',
+    pillarWeb: 'Web dizajn i SEO',
+    pillarVideo: 'Video produkcija i montaža',
+    tonis: {
+      title: "Toni's Autopflege Göppingen",
+      subtitle: 'Kompletna transformacija, SEO, AEO i GEO optimizacija (Grade A)',
+      description:
+        'Web sajt podignut sa bazičnih 3 reči na moćnih 1.461 reč optimizovanog sadržaja. Tehnički SEO skor podignut na 94 poena, sa punom optimizacijom za AI pretraživače (AEO) i lokalnu pretragu (GEO). Integrisan Web App Manifest i PWA spremnost.',
+      liveCta: 'Pogledaj live sajt',
+      demoCta: 'Studio demo',
+      gradeBadge: 'Grade A · SEO 94',
+    },
+    kickstarter: {
+      title: 'theirrealmtv CAT',
+      subtitle: 'Promo video za Kickstarter kampanju',
+      description:
+        'Kreiranje vizuelno upečatljivog, visokokonvertujućeg i kostenefikasnog video materijala za globalnu crowdfunding kampanju u veoma kratkom roku.',
+      servicesCta: 'Video produkcija',
+    },
+  },
   whyMe: {
     heading: 'Zašto da radite sa mnom',
     subtitle:
@@ -1143,6 +1256,29 @@ const al: SpecTranslations = {
     filterAi: 'AI',
     viewDetails: 'Detaje',
     backToPortfolio: 'Kthehu te portofoli',
+  },
+  portfolioPage: {
+    pageTitle: 'Portfolio',
+    pageLead:
+      'Projekte web dhe video të përzgjedhura me rezultate të matshme SEO, konvertimi dhe fushata — studio në Geislingen për klientë në Gjermani dhe më gjerë.',
+    pillarWeb: 'Web design dhe SEO',
+    pillarVideo: 'Produksion video dhe montazh',
+    tonis: {
+      title: "Toni's Autopflege Göppingen",
+      subtitle: 'Transformim i plotë, SEO, AEO dhe GEO optimizim (Grade A)',
+      description:
+        'Faqja u zgjerua nga 3 fjalë bazike në 1.461 fjalë përmbajtjeje të optimizuar. Rezultati teknik SEO u ngrit në 94 pikë, me optimizim të plotë për kërkim me AI (AEO) dhe lokal (GEO). Web App Manifest dhe gatishmëri PWA të integruara.',
+      liveCta: 'Shiko faqen live',
+      demoCta: 'Demo studio',
+      gradeBadge: 'Grade A · SEO 94',
+    },
+    kickstarter: {
+      title: 'theirrealmtv CAT',
+      subtitle: 'Video promo për fushatën Kickstarter',
+      description:
+        'Material video vizualisht i fuqishëm, me konvertim të lartë dhe kosto-efektiv për një fushatë global crowdfunding — dorëzuar në afat shumë të shkurtër.',
+      servicesCta: 'Produksion video',
+    },
   },
   whyMe: {
     heading: 'Pse të punoni me mua',

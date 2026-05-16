@@ -13,7 +13,7 @@ import printMockup from "@assets/generated_images/Print_Materials_Mockup_f741f1f
 type PortfolioProps = { featured?: boolean; asPage?: boolean };
 
 export default function Portfolio({ featured = false, asPage = false }: PortfolioProps) {
-  const { t, tSpec } = useLanguage();
+  const { t, tSpec, currentLanguage } = useLanguage();
   const [activeFilter, setActiveFilter] = useState('all');
 
   const tonisDescription: Record<string, string> = {
