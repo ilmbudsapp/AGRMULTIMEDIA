@@ -1,4 +1,4 @@
-﻿import { useMemo, useRef, useState, type ReactNode } from "react";
+import { useMemo, useRef, useState, type ReactNode } from "react";
 import { Link } from "wouter";
 import {
   Clapperboard,
@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import AiVideoClipGrid from "@/components/AiVideoClipGrid";
+import PortfolioImageGallery from "@/components/PortfolioImageGallery";
 import VideoEditingClipGrid from "@/components/VideoEditingClipGrid";
 import { brandingGalleryByLang } from "@/data/brandingGallery";
 import { fotoKreiraneSaAiGalleryByLang } from "@/data/fotoKreiraneSaAiGallery";
@@ -108,27 +109,6 @@ function ProjectCard({
         <div className="mt-6 flex flex-wrap gap-3">{children}</div>
       </div>
     </article>
-  );
-}
-
-function GalleryStrip({ items }: { items: { src: string; alt: string }[] }) {
-  return (
-    <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3">
-      {items.map((item) => (
-        <figure
-          key={item.src}
-          className="overflow-hidden rounded-lg border border-white/[0.06] bg-white/[0.02]"
-        >
-          <img
-            src={item.src}
-            alt={item.alt}
-            className="aspect-[4/3] w-full object-cover"
-            loading="lazy"
-            decoding="async"
-          />
-        </figure>
-      ))}
-    </div>
   );
 }
 
@@ -329,7 +309,7 @@ export default function PortfolioShowcase() {
                   <p className="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
                     {p.categories.brandGraphics.description}
                   </p>
-                  <GalleryStrip items={brandSamples} />
+                  <PortfolioImageGallery items={brandSamples} closeLabel={p.categories.galleryClose} />
                 </div>
 
                 <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 md:p-8">
@@ -337,7 +317,7 @@ export default function PortfolioShowcase() {
                   <p className="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
                     {p.categories.aiPhoto.description}
                   </p>
-                  <GalleryStrip items={aiPhotoSamples} />
+                  <PortfolioImageGallery items={aiPhotoSamples} closeLabel={p.categories.galleryClose} />
                 </div>
 
                 <div className="text-center">

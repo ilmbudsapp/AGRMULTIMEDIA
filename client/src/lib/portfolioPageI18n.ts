@@ -27,6 +27,7 @@ export interface PortfolioPageCopy {
     brandGraphics: { title: string; description: string };
     aiPhoto: { title: string; description: string };
     graphicCta: string;
+    galleryClose: string;
     ux: { title: string; description: string; cta: string };
   };
   projects: {
@@ -90,6 +91,7 @@ const en: PortfolioPageCopy = {
         "High-resolution, photorealistic images generated with AI models (e.g. Gemini), plus retouching and upscaling — unique scenes you will not find on stock sites.",
     },
     graphicCta: "Graphic design services",
+    galleryClose: "Close preview",
     ux: {
       title: "UX/UI & full-stack engineering",
       description:
@@ -171,6 +173,7 @@ const de: PortfolioPageCopy = {
         "Hochauflösende, fotorealistische Bilder mit KI-Modellen (z. B. Gemini), Retusche und Upscaling — Szenen, die es auf Stock-Seiten nicht gibt.",
     },
     graphicCta: "Grafikdesign-Leistungen",
+    galleryClose: "Vorschau schließen",
     ux: {
       title: "UX/UI & komplettes Engineering",
       description:
@@ -252,6 +255,7 @@ const sr: PortfolioPageCopy = {
         "Fotorealistične slike visoke rezolucije generisane AI modelima (npr. Gemini), retuš i upscaling — scene koje ne postoje na stock sajtovima.",
     },
     graphicCta: "Grafički dizajn usluge",
+    galleryClose: "Zatvori pregled",
     ux: {
       title: "UX/UI i kompletan inženjering",
       description:
@@ -333,6 +337,7 @@ const it: PortfolioPageCopy = {
         "Immagini fotorealistiche ad alta risoluzione con modelli IA (es. Gemini), ritocco e upscaling — scene non disponibili sugli stock.",
     },
     graphicCta: "Servizi grafica",
+    galleryClose: "Chiudi anteprima",
     ux: {
       title: "UX/UI e ingegneria completa",
       description:
@@ -414,6 +419,7 @@ const al: PortfolioPageCopy = {
         "Imazhe fotorealiste me rezolucion të lartë me modele AI (p.sh. Gemini), retush dhe upscaling — skena që nuk gjenden në stock.",
     },
     graphicCta: "Shërbime dizajni grafik",
+    galleryClose: "Mbyll pamjen",
     ux: {
       title: "UX/UI dhe inxhinieri e plotë",
       description:
