@@ -1,4 +1,4 @@
-﻿import { useState, type MouseEvent } from "react";
+import { useState, type MouseEvent } from "react";
 import { Menu, X } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Link, useLocation } from "wouter";
@@ -17,7 +17,6 @@ export default function Navigation() {
   const navItems: { id: string; label: string; href: string; isHome?: boolean }[] = [
     { id: "home", label: tSpec.nav.home, href: "/", isHome: true },
     { id: "webdesign", label: tSpec.nav.webdesignSeo, href: "/webdesign-seo" },
-    { id: "video", label: tSpec.nav.videoProduction, href: "/videoproduktion" },
     { id: "portfolio", label: tSpec.nav.portfolio, href: "/portfolio" },
     { id: "reviews", label: tSpec.nav.reviews, href: "/bewertungen" },
     { id: "about", label: tSpec.nav.about, href: "/about" },
