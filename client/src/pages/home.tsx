@@ -24,7 +24,7 @@ export default function Home() {
     const id = window.location.hash.replace(/^#/, "");
     if (!id) return;
     const t = window.setTimeout(() => {
-      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      document.getElementById(id)?.scrollIntoView({ block: "start", behavior: "auto" });
     }, 0);
     return () => window.clearTimeout(t);
   }, []);

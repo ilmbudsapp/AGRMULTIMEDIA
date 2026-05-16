@@ -5,6 +5,7 @@ import { Link, useLocation } from "wouter";
 import LanguageSwitcherInline from "./LanguageSwitcherInline";
 import { NAV_LANDMARK_LABEL, NAV_MOBILE_TOGGLE } from "@/lib/a11yLandmarks";
 import type { Language } from "@/lib/i18n";
+import { scrollToElementById, scrollWindowToTop } from "@/lib/instantScroll";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,7 +19,7 @@ export default function Navigation() {
     closeMenu();
     if (location === "/") {
       window.history.replaceState(null, "", "/");
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      scrollWindowToTop();
       return;
     }
     setLocation("/");
@@ -27,14 +28,12 @@ export default function Navigation() {
   const goToAbout = () => {
     closeMenu();
     if (location === "/") {
-      document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+      window.history.replaceState(null, "", "/#about");
+      scrollToElementById("about");
       return;
     }
     setLocation("/");
     window.history.replaceState(null, "", "/#about");
-    window.setTimeout(() => {
-      document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
-    }, 350);
   };
 
   const navItems: { id: string; label: string; href: string; isHome?: boolean; isAbout?: boolean }[] = [

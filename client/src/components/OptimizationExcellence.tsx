@@ -131,7 +131,7 @@ export default function OptimizationExcellence() {
   const t = getPremiumTranslations(currentLanguage).optimizationExcellence;
 
   const scrollToContact = () => {
-    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById("contact")?.scrollIntoView({ block: "start", behavior: "auto" });
   };
 
   const pillars = [

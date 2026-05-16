@@ -50,7 +50,7 @@ export default function Services() {
 
   const scrollToContact = () => {
     const element = document.getElementById("contact");
-    if (element) element.scrollIntoView({ behavior: "smooth" });
+    if (element) element.scrollIntoView({ block: "start", behavior: "auto" });
   };
 
   return (

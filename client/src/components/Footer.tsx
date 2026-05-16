@@ -21,7 +21,7 @@ export default function Footer() {
   const scrollToSection = (sectionId: string) => {
     if (!isHome) return;
     const element = document.getElementById(sectionId);
-    if (element) element.scrollIntoView({ behavior: "smooth" });
+    if (element) element.scrollIntoView({ block: "start", behavior: "auto" });
   };
 
   const mainNavLinks = [
