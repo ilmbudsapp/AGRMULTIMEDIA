@@ -4,6 +4,7 @@ import { ArrowRight, Sparkles } from "lucide-react";
 import { MagicWipe } from "@/components/demo/reinigung/MagicWipe";
 import WhatsAppButton from "@/components/demo/reinigung/WhatsAppButton";
 import { GlassCard } from "@/components/demo/reinigung/GlassCard";
+import { BADGE, BODY_TEXT, GRADIENT_H1, GRADIENT_H2, LINK_ACCENT, SECTION } from "@/components/demo/reinigung/styles";
 import DemoReinigungLayout from "./DemoReinigungLayout";
 import {
   DEMO_BASE,
@@ -24,91 +25,94 @@ export default function DemoReinigungHome() {
 
   return (
     <DemoReinigungLayout seoDescription={SEO}>
-      <section className="relative overflow-hidden px-4 pb-16 pt-10 md:px-8 md:pb-24 md:pt-16">
-        <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-2 lg:gap-14">
-          <MagicWipe className="space-y-6">
+      <section className={`${SECTION} overflow-hidden`}>
+        <motion.div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2 lg:gap-16">
+          <MagicWipe className="space-y-8">
             <motion.span
-              className="inline-flex items-center gap-2 rounded-full border border-[#e5d9c8] bg-[#fffcf7]/80 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-amber-900/90 backdrop-blur-md"
+              className={BADGE}
               initial={reduceMotion ? false : { opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.15 }}
             >
-              <Sparkles className="h-3.5 w-3.5" aria-hidden />
+              <Sparkles className="h-3.5 w-3.5 text-cyan-500" aria-hidden />
               {SPRING_OFFER.badge}
             </motion.span>
 
-            <h1 className="reinigung-display text-4xl font-extrabold leading-[1.08] tracking-tight text-stone-900 md:text-5xl lg:text-[3.25rem]">
+            <h1 className={`${GRADIENT_H1} text-4xl leading-[1.08] tracking-tight md:text-5xl lg:text-[3.35rem]`}>
               {HERO_TITLE}
             </h1>
 
-            <p className="max-w-xl text-lg leading-relaxed text-stone-600 md:text-xl">{HERO_SUBTITLE}</p>
+            <p className={`max-w-xl text-lg md:text-xl ${BODY_TEXT}`}>{HERO_SUBTITLE}</p>
 
-            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-amber-800/90">{LOCATION_LINE}</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-cyan-700">{LOCATION_LINE}</p>
 
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+            <motion.div className="flex flex-col gap-4 sm:flex-row sm:items-center">
               <WhatsAppButton size="lg" />
               <Link
                 href={`${DEMO_BASE}/services`}
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-[#e5d9c8] bg-[#fffcf7]/80 px-6 py-3.5 text-sm font-bold text-amber-950 backdrop-blur-md transition hover:bg-[#fffdf9]"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/70 bg-white/60 px-6 py-3.5 text-sm font-bold text-blue-800 shadow-sm backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/90 hover:shadow-md"
               >
                 Leistungen entdecken
                 <ArrowRight className="h-4 w-4" aria-hidden />
               </Link>
-            </div>
+            </motion.div>
           </MagicWipe>
 
           <MagicWipe delay={0.12} className="relative">
-            <GlassCard className="relative overflow-hidden p-3">
-              <div className="pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full bg-amber-200/40 blur-2xl" aria-hidden />
-              <img
-                src={heroImage}
-                alt={PHOTOS[0]?.alt ?? "Vorher und nachher — professionelle Tiefenreinigung"}
-                className="w-full rounded-xl object-contain"
-                fetchPriority="high"
-                decoding="async"
-              />
+            <GlassCard className="relative overflow-hidden p-4">
+              <div className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-cyan-300/30 blur-3xl" aria-hidden />
+              <div className="overflow-hidden rounded-2xl">
+                <img
+                  src={heroImage}
+                  alt={PHOTOS[0]?.alt ?? "Vorher und nachher — professionelle Tiefenreinigung"}
+                  className="w-full object-contain transition-transform duration-500 hover:scale-105"
+                  fetchPriority="high"
+                  decoding="async"
+                />
+              </div>
             </GlassCard>
           </MagicWipe>
-        </div>
+        </motion.div>
       </section>
 
-      <section className="px-4 py-14 md:px-8">
+      <section className={SECTION}>
         <div className="mx-auto max-w-6xl">
           <MagicWipe>
-            <GlassCard className="relative overflow-hidden border-[#e0d4c4]/90 bg-gradient-to-br from-[#fffcf7]/90 via-[#f5ebe0]/80 to-[#ebe0d0]/70 text-center">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-800/90">{SPRING_OFFER.badge}</p>
-              <h2 className="reinigung-display mt-3 text-2xl font-bold text-stone-900 md:text-3xl">
-                {SPRING_OFFER.headline}
-              </h2>
-              <p className="mx-auto mt-3 max-w-lg text-stone-600">{SPRING_OFFER.text}</p>
-              <motion.div className="mt-6 flex justify-center">
-                <WhatsAppButton />
-              </motion.div>
+            <GlassCard className="relative overflow-hidden text-center">
+              <motion.div
+                className="pointer-events-none absolute inset-0 bg-gradient-to-br from-cyan-100/20 via-transparent to-blue-100/20"
+                aria-hidden
+              />
+              <div className="relative">
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-cyan-700">{SPRING_OFFER.badge}</p>
+                <h2 className={`${GRADIENT_H2} mt-4 text-2xl md:text-3xl`}>{SPRING_OFFER.headline}</h2>
+                <p className={`mx-auto mt-4 max-w-lg ${BODY_TEXT}`}>{SPRING_OFFER.text}</p>
+                <div className="mt-8 flex justify-center">
+                  <WhatsAppButton />
+                </div>
+              </div>
             </GlassCard>
           </MagicWipe>
         </div>
       </section>
 
-      <section className="px-4 pb-20 md:px-8">
+      <section className={`${SECTION} pb-24`}>
         <div className="mx-auto max-w-6xl">
-          <MagicWipe className="mb-10 text-center">
-            <h2 className="reinigung-display text-3xl font-bold text-stone-900">Unsere Schwerpunkte</h2>
-            <p className="mt-2 text-stone-600">Möbel, Kfz und Allergene — alles aus einer Hand.</p>
+          <MagicWipe className="mb-14 text-center">
+            <h2 className={`${GRADIENT_H2} text-3xl md:text-4xl`}>Unsere Schwerpunkte</h2>
+            <p className={`mt-4 text-lg ${BODY_TEXT}`}>Möbel, Kfz und Allergene — alles aus einer Hand.</p>
           </MagicWipe>
 
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-8 md:grid-cols-3">
             {SERVICES.map((service, i) => (
-              <MagicWipe key={service.id} delay={i * 0.08}>
-                <GlassCard className="h-full">
-                  <span className="text-3xl" aria-hidden>
+              <MagicWipe key={service.id} delay={i * 0.1}>
+                <GlassCard className="flex h-full flex-col">
+                  <span className="text-4xl" aria-hidden>
                     {service.icon}
                   </span>
-                  <h3 className="reinigung-display mt-4 text-xl font-bold text-stone-900">{service.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-stone-600">{service.teaser}</p>
-                  <Link
-                    href={`${DEMO_BASE}/services`}
-                    className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-amber-900/90 hover:underline"
-                  >
+                  <h3 className={`${GRADIENT_H2} mt-5 text-xl`}>{service.title}</h3>
+                  <p className={`mt-3 flex-1 text-sm ${BODY_TEXT}`}>{service.teaser}</p>
+                  <Link href={`${DEMO_BASE}/services`} className={`mt-5 inline-flex items-center gap-1 text-sm ${LINK_ACCENT}`}>
                     Mehr erfahren <ArrowRight className="h-3.5 w-3.5" />
                   </Link>
                 </GlassCard>

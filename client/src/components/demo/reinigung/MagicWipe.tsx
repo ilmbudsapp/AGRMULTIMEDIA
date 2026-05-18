@@ -9,24 +9,27 @@ type Props = {
 
 const easeOut = [0.16, 1, 0.3, 1] as const;
 
+/** Magic wipe + fade-in-up on scroll */
 export function MagicWipe({ children, className = "", delay = 0 }: Props) {
   const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-8% 0px -6% 0px" });
+  const inView = useInView(ref, { once: true, margin: "-10% 0px -8% 0px" });
   const reduceMotion = useReducedMotion();
 
   const variants: Variants = reduceMotion
-    ? { hidden: { opacity: 1 }, visible: { opacity: 1 } }
+    ? { hidden: { opacity: 1, y: 0 }, visible: { opacity: 1, y: 0 } }
     : {
         hidden: {
-          opacity: 0.25,
-          filter: "blur(14px)",
-          clipPath: "inset(0 100% 0 0 round 12px)",
+          opacity: 0,
+          y: 48,
+          filter: "blur(12px)",
+          clipPath: "inset(0 100% 0 0 round 24px)",
         },
         visible: {
           opacity: 1,
+          y: 0,
           filter: "blur(0px)",
-          clipPath: "inset(0 0% 0 0 round 12px)",
-          transition: { duration: 1.05, ease: easeOut, delay },
+          clipPath: "inset(0 0% 0 0 round 24px)",
+          transition: { duration: 0.9, ease: easeOut, delay },
         },
       };
 
@@ -43,57 +46,28 @@ export function MagicWipe({ children, className = "", delay = 0 }: Props) {
   );
 }
 
-export function MagicWipeStagger({
+export function FadeInUp({
   children,
   className = "",
+  delay = 0,
 }: {
   children: ReactNode;
   className?: string;
+  delay?: number;
 }) {
   const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-6% 0px" });
+  const inView = useInView(ref, { once: true, margin: "-8% 0px" });
   const reduceMotion = useReducedMotion();
-
-  const container: Variants = reduceMotion
-    ? { hidden: {}, visible: {} }
-    : {
-        hidden: {},
-        visible: { transition: { staggerChildren: 0.12, delayChildren: 0.06 } },
-      };
-
-  const item: Variants = reduceMotion
-    ? { hidden: { opacity: 1 }, visible: { opacity: 1 } }
-    : {
-        hidden: {
-          opacity: 0.2,
-          filter: "blur(12px)",
-          clipPath: "inset(0 90% 0 0 round 10px)",
-          y: 18,
-        },
-        visible: {
-          opacity: 1,
-          filter: "blur(0px)",
-          clipPath: "inset(0 0% 0 0 round 10px)",
-          y: 0,
-          transition: { duration: 0.95, ease: easeOut },
-        },
-      };
 
   return (
     <motion.div
       ref={ref}
       className={className}
-      initial="hidden"
-      animate={inView ? "visible" : "hidden"}
-      variants={container}
+      initial={reduceMotion ? false : { opacity: 0, y: 36 }}
+      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 36 }}
+      transition={{ duration: 0.75, ease: easeOut, delay }}
     >
-      {Array.isArray(children)
-        ? children.map((child, i) => (
-            <motion.div key={i} variants={item}>
-              {child}
-            </motion.div>
-          ))
-        : children}
+      {children}
     </motion.div>
   );
 }

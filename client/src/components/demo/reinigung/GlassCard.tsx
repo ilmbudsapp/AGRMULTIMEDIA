@@ -1,15 +1,15 @@
 import type { ReactNode } from "react";
+import { GLASS_PANEL, GLASS_PANEL_STATIC } from "./styles";
 
 type Props = {
   children: ReactNode;
   className?: string;
+  hover?: boolean;
 };
 
-export function GlassCard({ children, className = "" }: Props) {
+export function GlassCard({ children, className = "", hover = true }: Props) {
   return (
-    <div
-      className={`rounded-2xl border border-[#e5d9c8]/90 bg-[#fffcf7]/75 p-6 shadow-[0_12px_40px_rgba(101,78,52,0.1)] backdrop-blur-lg md:p-8 ${className}`}
-    >
+    <div className={`${hover ? GLASS_PANEL : GLASS_PANEL_STATIC} p-6 md:p-8 ${className}`}>
       {children}
     </div>
   );

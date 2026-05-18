@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { X } from "lucide-react";
+import { GLASS_PANEL } from "./styles";
 
 export type ReinigungGalleryItem = {
   src: string;
@@ -33,42 +34,40 @@ export default function ReinigungImageGallery({ items }: Props) {
   return (
     <>
       <motion.div
-        className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
+        className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-6%" }}
         variants={{
           hidden: {},
-          visible: { transition: { staggerChildren: 0.1 } },
+          visible: { transition: { staggerChildren: 0.12 } },
         }}
       >
         {items.map((item) => (
           <motion.figure
             key={item.src}
             variants={{
-              hidden: { opacity: 0, y: 24, filter: "blur(8px)" },
-              visible: { opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: 0.7 } },
+              hidden: { opacity: 0, y: 32 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease: [0.16, 1, 0.3, 1] } },
             }}
-            className="group flex flex-col overflow-hidden rounded-2xl border border-[#e5d9c8]/90 bg-[#fffcf7]/70 p-3 shadow-[0_12px_40px_rgba(101,78,52,0.1)] backdrop-blur-lg"
+            className={`group flex flex-col overflow-hidden p-3 ${GLASS_PANEL}`}
           >
             <button
               type="button"
-              className="flex min-h-[12rem] flex-1 cursor-zoom-in items-center justify-center rounded-xl bg-gradient-to-br from-[#faf6f0]/90 to-[#efe6d8]/80 p-2 touch-manipulation"
+              className="relative flex min-h-[12rem] flex-1 cursor-zoom-in overflow-hidden rounded-2xl bg-gradient-to-br from-slate-50/90 to-blue-50/50 p-2 touch-manipulation"
               onClick={() => setActive(item)}
               aria-haspopup="dialog"
             >
               <img
                 src={item.src}
                 alt={item.alt}
-                className="mx-auto h-auto max-h-56 w-full object-contain transition duration-300 group-hover:scale-[1.02]"
+                className="mx-auto h-auto max-h-56 w-full object-contain transition-transform duration-500 group-hover:scale-105"
                 loading="lazy"
                 decoding="async"
               />
             </button>
             {item.caption ? (
-              <figcaption className="mt-3 text-center text-sm font-semibold text-stone-700">
-                {item.caption}
-              </figcaption>
+              <figcaption className="mt-4 text-center text-sm font-semibold text-slate-700">{item.caption}</figcaption>
             ) : null}
           </motion.figure>
         ))}
@@ -76,7 +75,7 @@ export default function ReinigungImageGallery({ items }: Props) {
 
       {active ? (
         <motion.div
-          className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-slate-900/90 p-4 backdrop-blur-md"
+          className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-slate-900/92 p-4 backdrop-blur-lg"
           role="dialog"
           aria-modal="true"
           aria-label={active.alt}
@@ -102,7 +101,7 @@ export default function ReinigungImageGallery({ items }: Props) {
             onClick={(e) => e.stopPropagation()}
           />
           {active.caption ? (
-            <p className="mt-4 max-w-xl text-center text-sm font-medium text-amber-100/95">{active.caption}</p>
+            <p className="mt-4 max-w-xl text-center text-sm font-medium text-cyan-100">{active.caption}</p>
           ) : null}
         </motion.div>
       ) : null}
