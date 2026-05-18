@@ -6,7 +6,7 @@ import { WHATSAPP_LINK } from "@/lib/contact";
  */
 export default function WhatsAppFloat() {
   const [loc] = useLocation();
-  if (loc.startsWith("/demo/")) {
+  if (loc.startsWith("/demo/") || loc.startsWith("/demo-reinigung")) {
     return null;
   }
   return (

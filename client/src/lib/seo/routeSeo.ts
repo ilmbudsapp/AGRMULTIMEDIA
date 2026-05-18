@@ -491,6 +491,12 @@ const EXTRA_EN: Record<string, RouteSeo> = {
       "Demo presentation: premium car care — interior cleaning, polish, ceramic coating. Developed by AGR Multimedia.",
     keywords: "Autopflege Göppingen, demo, car detailing, AGR Multimedia",
   },
+  "/demo-reinigung": {
+    title: "Innenreinigung Kfzundmöbel Stuttgart — Demo (AGR Multimedia)",
+    description:
+      "Demo: Frühlingsaktion — professionelle Tiefenreinigung für Möbel, Polster und Kfz in Stuttgart.",
+    keywords: "Innenreinigung Stuttgart, Demo, Polsterreinigung, AGR Multimedia",
+  },
 };
 
 const EXTRA_DE: Record<string, RouteSeo> = {

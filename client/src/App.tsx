@@ -46,6 +46,10 @@ const Privacy = lazy(() => import("@/pages/privacy"));
 const Terms = lazy(() => import("@/pages/terms"));
 const Cookies = lazy(() => import("@/pages/cookies"));
 const TonisAutopflegeDemo = lazy(() => import("@/pages/demo/tonis-autopflege"));
+const DemoReinigungHome = lazy(() => import("@/pages/demo/reinigung/home"));
+const DemoReinigungServices = lazy(() => import("@/pages/demo/reinigung/services"));
+const DemoReinigungGalerie = lazy(() => import("@/pages/demo/reinigung/galerie"));
+const DemoReinigungKontakt = lazy(() => import("@/pages/demo/reinigung/kontakt"));
 const NotFound = lazy(() => import("@/pages/not-found"));
 
 function Router() {
@@ -87,6 +91,10 @@ function Router() {
       <Route path="/terms" component={Terms} />
       <Route path="/cookies" component={Cookies} />
       <Route path="/demo/tonis-autopflege" component={TonisAutopflegeDemo} />
+      <Route path="/demo-reinigung" component={DemoReinigungHome} />
+      <Route path="/demo-reinigung/services" component={DemoReinigungServices} />
+      <Route path="/demo-reinigung/galerie" component={DemoReinigungGalerie} />
+      <Route path="/demo-reinigung/kontakt" component={DemoReinigungKontakt} />
       <Route component={NotFound} />
     </Switch>
   );
