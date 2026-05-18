@@ -11,7 +11,7 @@ import {
   HERO_SUBTITLE,
   HERO_TITLE,
   LOCATION_LINE,
-  PHOTOS,
+  HERO_PHOTO,
   SERVICES,
   SPRING_OFFER,
 } from "./data";
@@ -21,7 +21,7 @@ const SEO =
 
 export default function DemoReinigungHome() {
   const reduceMotion = useReducedMotion();
-  const heroImage = PHOTOS[0]?.src;
+  const heroImage = HERO_PHOTO.src;
 
   return (
     <DemoReinigungLayout seoDescription={SEO}>
@@ -64,7 +64,7 @@ export default function DemoReinigungHome() {
               <div className="overflow-hidden rounded-2xl">
                 <img
                   src={heroImage}
-                  alt={PHOTOS[0]?.alt ?? "Vorher und nachher — professionelle Tiefenreinigung"}
+                  alt={HERO_PHOTO.alt}
                   className="w-full object-contain transition-transform duration-500 hover:scale-105"
                   fetchPriority="high"
                   decoding="async"

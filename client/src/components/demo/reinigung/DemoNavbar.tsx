@@ -28,7 +28,7 @@ export default function DemoNavbar() {
       className={`fixed inset-x-0 top-0 z-50 border-b border-white/60 ${GLASS_PANEL_STATIC} shadow-[0_8px_32px_0_rgba(31,38,135,0.06)] backdrop-saturate-150`}
     >
       <motion.div
-        className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 md:px-8"
+        className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3.5 md:px-8 md:py-4"
         initial={reduceMotion ? false : { y: -24, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
@@ -38,11 +38,11 @@ export default function DemoNavbar() {
           className="group rounded-lg outline-none ring-offset-2 ring-offset-slate-50 transition focus-visible:ring-2 focus-visible:ring-cyan-500/80"
           onClick={() => setOpen(false)}
         >
-          <span className="block text-sm font-bold leading-tight tracking-tight md:text-base">
-            <span className="reinigung-display bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+          <span className="block font-bold leading-tight tracking-tight">
+            <span className="reinigung-display block bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-lg text-transparent md:text-xl lg:text-[1.35rem]">
               Innenreinigung
             </span>
-            <span className="block text-[11px] font-semibold uppercase tracking-[0.14em] text-slate-500 md:text-xs">
+            <span className="mt-0.5 block text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 md:text-sm">
               Kfz &amp; Möbel
             </span>
           </span>

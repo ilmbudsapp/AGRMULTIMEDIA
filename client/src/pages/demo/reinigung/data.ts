@@ -55,6 +55,9 @@ export const PHOTOS = [
   },
 ] as const;
 
+/** Hero — Teppich Vorher/Nachher (stärkerer Wow-Effekt als Kfz-Bodenmatte) */
+export const HERO_PHOTO = PHOTOS[3]!;
+
 export const VIDEOS = [
   {
     src: `${ASSET_BASE}/video-01-teppich-polster.mp4`,

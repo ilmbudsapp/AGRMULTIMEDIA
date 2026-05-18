@@ -90,7 +90,7 @@ export default function DemoReinigungLayout({ children, seoDescription }: Props)
       <DemoNavbar />
       <DemoWhatsAppFloat />
 
-      <main className="relative z-10 pt-[4.75rem]">{children}</main>
+      <main className="relative z-10 pt-[5rem] md:pt-[5.25rem]">{children}</main>
 
       <footer className="relative z-10 border-t border-white/50 bg-white/40 px-4 py-12 backdrop-blur-xl">
         <motion.div
