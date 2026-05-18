@@ -53,10 +53,19 @@ export const PHOTOS = [
     alt: "Reinigung von Sofa und Wohnung",
     caption: "Möbel- & Wohnungsreinigung",
   },
+  {
+    src: `${ASSET_BASE}/07-in-arbeit.jpg`,
+    alt: "Professionelle Tiefenreinigung in Aktion — Polstermöbel",
+    caption: "Tiefenreinigung live — Profi-Equipment im Einsatz",
+  },
 ] as const;
 
-/** Hero — Teppich Vorher/Nachher (stärkerer Wow-Effekt als Kfz-Bodenmatte) */
-export const HERO_PHOTO = PHOTOS[3]!;
+/** Hero — Tiefenreinigung in Aktion (Polster, Dampf) */
+export const HERO_PHOTO = {
+  src: `${ASSET_BASE}/07-in-arbeit.jpg`,
+  alt: "Professionelle Tiefenreinigung in Aktion — Polstermöbel mit Dampfreiniger",
+  caption: "Tiefenreinigung live — Profi-Equipment im Einsatz",
+} as const;
 
 export const VIDEOS = [
   {

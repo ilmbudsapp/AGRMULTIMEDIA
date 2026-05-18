@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { X } from "lucide-react";
-import { GLASS_PANEL } from "./styles";
+import { PHOTO_FRAME } from "./styles";
 
 export type ReinigungGalleryItem = {
   src: string;
@@ -34,7 +34,7 @@ export default function ReinigungImageGallery({ items }: Props) {
   return (
     <>
       <motion.div
-        className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+        className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-6%" }}
@@ -50,24 +50,26 @@ export default function ReinigungImageGallery({ items }: Props) {
               hidden: { opacity: 0, y: 32 },
               visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease: [0.16, 1, 0.3, 1] } },
             }}
-            className={`group flex flex-col overflow-hidden p-3 ${GLASS_PANEL}`}
+            className="group flex flex-col"
           >
             <button
               type="button"
-              className="relative flex min-h-[12rem] flex-1 cursor-zoom-in overflow-hidden rounded-2xl bg-gradient-to-br from-slate-50/90 to-blue-50/50 p-2 touch-manipulation"
+              className="cursor-zoom-in touch-manipulation"
               onClick={() => setActive(item)}
               aria-haspopup="dialog"
             >
               <img
                 src={item.src}
                 alt={item.alt}
-                className="mx-auto h-auto max-h-56 w-full object-contain transition-transform duration-500 group-hover:scale-105"
+                className={PHOTO_FRAME}
                 loading="lazy"
                 decoding="async"
               />
             </button>
             {item.caption ? (
-              <figcaption className="mt-4 text-center text-sm font-semibold text-slate-700">{item.caption}</figcaption>
+              <figcaption className="mt-3 text-center text-sm font-semibold text-slate-600">
+                {item.caption}
+              </figcaption>
             ) : null}
           </motion.figure>
         ))}

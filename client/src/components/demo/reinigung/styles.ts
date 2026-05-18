@@ -20,3 +20,10 @@ export const BADGE =
   "inline-flex items-center gap-2 rounded-full border border-white/70 bg-white/60 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-cyan-800 shadow-sm backdrop-blur-md";
 
 export const LINK_ACCENT = "font-semibold text-cyan-700 transition hover:text-blue-600";
+
+/** Frameless photo — only image + soft shadow */
+export const PHOTO_FRAME =
+  "w-full rounded-2xl object-contain shadow-[0_12px_40px_rgba(15,23,42,0.12)] transition-transform duration-500 hover:scale-[1.02]";
+
+export const PHOTO_FRAME_HERO =
+  "w-full rounded-2xl object-contain shadow-[0_20px_56px_rgba(15,23,42,0.16)] transition-transform duration-500 hover:scale-[1.02]";

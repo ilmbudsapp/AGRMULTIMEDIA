@@ -4,7 +4,15 @@ import { ArrowRight, Sparkles } from "lucide-react";
 import { MagicWipe } from "@/components/demo/reinigung/MagicWipe";
 import WhatsAppButton from "@/components/demo/reinigung/WhatsAppButton";
 import { GlassCard } from "@/components/demo/reinigung/GlassCard";
-import { BADGE, BODY_TEXT, GRADIENT_H1, GRADIENT_H2, LINK_ACCENT, SECTION } from "@/components/demo/reinigung/styles";
+import {
+  BADGE,
+  BODY_TEXT,
+  GRADIENT_H1,
+  GRADIENT_H2,
+  LINK_ACCENT,
+  PHOTO_FRAME_HERO,
+  SECTION,
+} from "@/components/demo/reinigung/styles";
 import DemoReinigungLayout from "./DemoReinigungLayout";
 import {
   DEMO_BASE,
@@ -59,18 +67,13 @@ export default function DemoReinigungHome() {
           </MagicWipe>
 
           <MagicWipe delay={0.12} className="relative">
-            <GlassCard className="relative overflow-hidden p-4">
-              <div className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-cyan-300/30 blur-3xl" aria-hidden />
-              <div className="overflow-hidden rounded-2xl">
-                <img
-                  src={heroImage}
-                  alt={HERO_PHOTO.alt}
-                  className="w-full object-contain transition-transform duration-500 hover:scale-105"
-                  fetchPriority="high"
-                  decoding="async"
-                />
-              </div>
-            </GlassCard>
+            <img
+              src={heroImage}
+              alt={HERO_PHOTO.alt}
+              className={PHOTO_FRAME_HERO}
+              fetchPriority="high"
+              decoding="async"
+            />
           </MagicWipe>
         </motion.div>
       </section>
@@ -87,9 +90,9 @@ export default function DemoReinigungHome() {
                 <p className="text-xs font-bold uppercase tracking-[0.2em] text-cyan-700">{SPRING_OFFER.badge}</p>
                 <h2 className={`${GRADIENT_H2} mt-4 text-2xl md:text-3xl`}>{SPRING_OFFER.headline}</h2>
                 <p className={`mx-auto mt-4 max-w-lg ${BODY_TEXT}`}>{SPRING_OFFER.text}</p>
-                <div className="mt-8 flex justify-center">
+                <motion.div className="mt-8 flex justify-center">
                   <WhatsAppButton />
-                </div>
+                </motion.div>
               </div>
             </GlassCard>
           </MagicWipe>
