@@ -20,7 +20,7 @@ const SEO =
 
 export default function DemoReinigungHome() {
   const reduceMotion = useReducedMotion();
-  const heroImage = PHOTOS[0]?.src ?? `${DEMO_BASE}/01-vorher-nachher.jpg`;
+  const heroImage = PHOTOS[0]?.src;
 
   return (
     <DemoReinigungLayout seoDescription={SEO}>

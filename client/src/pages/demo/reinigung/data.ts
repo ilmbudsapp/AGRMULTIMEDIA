@@ -1,5 +1,5 @@
 export const DEMO_BASE = "/demo-reinigung";
-export const ASSET_BASE = "/demo-reinigung";
+export const ASSET_BASE = "/files/demo-reinigung";
 
 export const COMPANY_NAME = "Innenreinigung Kfzundmöbel";
 export const LOCATION_LINE = "Ihr Experte in Stuttgart & Umgebung";
