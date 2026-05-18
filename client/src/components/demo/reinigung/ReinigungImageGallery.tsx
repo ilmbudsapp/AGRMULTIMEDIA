@@ -49,11 +49,11 @@ export default function ReinigungImageGallery({ items }: Props) {
               hidden: { opacity: 0, y: 24, filter: "blur(8px)" },
               visible: { opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: 0.7 } },
             }}
-            className="group flex flex-col overflow-hidden rounded-2xl border border-white/80 bg-white/50 p-3 shadow-[0_12px_40px_rgba(14,165,233,0.1)] backdrop-blur-lg"
+            className="group flex flex-col overflow-hidden rounded-2xl border border-[#e5d9c8]/90 bg-[#fffcf7]/70 p-3 shadow-[0_12px_40px_rgba(101,78,52,0.1)] backdrop-blur-lg"
           >
             <button
               type="button"
-              className="flex min-h-[12rem] flex-1 cursor-zoom-in items-center justify-center rounded-xl bg-gradient-to-br from-sky-50/80 to-cyan-50/50 p-2 touch-manipulation"
+              className="flex min-h-[12rem] flex-1 cursor-zoom-in items-center justify-center rounded-xl bg-gradient-to-br from-[#faf6f0]/90 to-[#efe6d8]/80 p-2 touch-manipulation"
               onClick={() => setActive(item)}
               aria-haspopup="dialog"
             >
@@ -66,7 +66,7 @@ export default function ReinigungImageGallery({ items }: Props) {
               />
             </button>
             {item.caption ? (
-              <figcaption className="mt-3 text-center text-sm font-semibold text-slate-700">
+              <figcaption className="mt-3 text-center text-sm font-semibold text-stone-700">
                 {item.caption}
               </figcaption>
             ) : null}
@@ -102,7 +102,7 @@ export default function ReinigungImageGallery({ items }: Props) {
             onClick={(e) => e.stopPropagation()}
           />
           {active.caption ? (
-            <p className="mt-4 max-w-xl text-center text-sm font-medium text-cyan-100/95">{active.caption}</p>
+            <p className="mt-4 max-w-xl text-center text-sm font-medium text-amber-100/95">{active.caption}</p>
           ) : null}
         </motion.div>
       ) : null}

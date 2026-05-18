@@ -23,7 +23,7 @@ export default function DemoNavbar() {
   const path = normalizePath(location);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/70 bg-white/55 shadow-[0_8px_32px_rgba(14,165,233,0.08)] backdrop-blur-lg backdrop-saturate-150">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-[#e5d9c8]/90 bg-[#faf7f2]/85 shadow-[0_8px_32px_rgba(101,78,52,0.08)] backdrop-blur-lg backdrop-saturate-150">
       <motion.div
         className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 md:px-8"
         initial={reduceMotion ? false : { y: -24, opacity: 0 }}
@@ -32,14 +32,14 @@ export default function DemoNavbar() {
       >
         <Link
           href={DEMO_BASE}
-          className="group rounded-lg outline-none ring-offset-2 transition focus-visible:ring-2 focus-visible:ring-cyan-500/80"
+          className="group rounded-lg outline-none ring-offset-2 ring-offset-[#f5f0e6] transition focus-visible:ring-2 focus-visible:ring-amber-700/50"
           onClick={() => setOpen(false)}
         >
-          <span className="block text-sm font-bold leading-tight tracking-tight text-slate-900 md:text-base">
-            <span className="bg-gradient-to-r from-cyan-600 to-teal-500 bg-clip-text text-transparent">
+          <span className="block text-sm font-bold leading-tight tracking-tight text-stone-900 md:text-base">
+            <span className="bg-gradient-to-r from-amber-900 to-amber-700 bg-clip-text text-transparent">
               Innenreinigung
             </span>
-            <span className="block text-[11px] font-semibold uppercase tracking-[0.14em] text-slate-500 md:text-xs">
+            <span className="block text-[11px] font-semibold uppercase tracking-[0.14em] text-stone-500 md:text-xs">
               Kfz &amp; Möbel
             </span>
           </span>
@@ -55,8 +55,8 @@ export default function DemoNavbar() {
                 href={item.href}
                 className={`rounded-full px-4 py-2 text-sm font-semibold transition ${
                   active
-                    ? "bg-gradient-to-r from-cyan-500/15 to-teal-400/15 text-cyan-800"
-                    : "text-slate-600 hover:bg-white/80 hover:text-slate-900"
+                    ? "bg-amber-900/10 text-amber-950"
+                    : "text-stone-600 hover:bg-[#fffcf7]/90 hover:text-stone-900"
                 }`}
               >
                 {item.label}
@@ -69,14 +69,14 @@ export default function DemoNavbar() {
           href={WA_HREF}
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 px-4 py-2.5 text-xs font-bold text-white shadow-[0_8px_24px_rgba(16,185,129,0.35)] transition hover:scale-[1.03] md:inline-flex"
+          className="hidden rounded-full bg-[#25D366] px-4 py-2.5 text-xs font-bold text-white shadow-[0_8px_24px_rgba(37,211,102,0.35)] transition hover:scale-[1.03] md:inline-flex"
         >
           WhatsApp
         </a>
 
         <button
           type="button"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-cyan-100 bg-white/80 text-slate-700 md:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-[#e5d9c8] bg-[#fffcf7]/90 text-stone-700 md:hidden"
           aria-expanded={open}
           aria-controls="reinigung-mobile-nav"
           onClick={() => setOpen((v) => !v)}
@@ -89,7 +89,7 @@ export default function DemoNavbar() {
       {open ? (
         <nav
           id="reinigung-mobile-nav"
-          className="border-t border-white/60 bg-white/90 px-4 py-4 backdrop-blur-xl md:hidden"
+          className="border-t border-[#e5d9c8]/80 bg-[#faf7f2]/95 px-4 py-4 backdrop-blur-xl md:hidden"
           aria-label="Mobile Demo Navigation"
         >
           <ul className="space-y-1">
@@ -97,7 +97,7 @@ export default function DemoNavbar() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="block rounded-xl px-3 py-3 text-sm font-semibold text-slate-700 hover:bg-cyan-50"
+                  className="block rounded-xl px-3 py-3 text-sm font-semibold text-stone-700 hover:bg-amber-900/5"
                   onClick={() => setOpen(false)}
                 >
                   {item.label}
@@ -109,7 +109,7 @@ export default function DemoNavbar() {
                 href={WA_HREF}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 px-4 py-3 text-center text-sm font-bold text-white"
+                className="block rounded-full bg-[#25D366] px-4 py-3 text-center text-sm font-bold text-white"
                 onClick={() => setOpen(false)}
               >
                 {WA_CTA}

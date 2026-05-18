@@ -16,7 +16,7 @@ export default function WhatsAppButton({ className = "", size = "md" }: Props) {
       href={WA_HREF}
       target="_blank"
       rel="noopener noreferrer"
-      className={`inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 font-bold text-white shadow-[0_12px_36px_rgba(16,185,129,0.35)] transition hover:shadow-[0_16px_44px_rgba(16,185,129,0.45)] ${
+      className={`inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] font-bold text-white shadow-[0_12px_36px_rgba(37,211,102,0.35)] transition hover:shadow-[0_16px_44px_rgba(37,211,102,0.45)] ${
         large ? "px-8 py-4 text-base md:text-lg" : "px-6 py-3 text-sm"
       } ${className}`}
       whileHover={reduceMotion ? {} : { scale: 1.03 }}

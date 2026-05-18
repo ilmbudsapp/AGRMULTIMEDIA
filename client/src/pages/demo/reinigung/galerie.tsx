@@ -13,19 +13,19 @@ export default function DemoReinigungGalerie() {
       <section className="px-4 py-12 md:px-8 md:py-16">
         <div className="mx-auto max-w-6xl">
           <MagicWipe className="mx-auto max-w-3xl text-center">
-            <h1 className="reinigung-display text-4xl font-extrabold text-slate-900 md:text-5xl">Galerie</h1>
-            <p className="mt-4 text-lg text-slate-600">
+            <h1 className="reinigung-display text-4xl font-extrabold text-stone-900 md:text-5xl">Galerie</h1>
+            <p className="mt-4 text-lg text-stone-600">
               Überzeugen Sie sich selbst: Klicken Sie auf ein Foto für die Vollansicht — Videos starten bei Hover.
             </p>
           </MagicWipe>
 
           <MagicWipe className="mt-12" delay={0.08}>
-            <h2 className="reinigung-display mb-6 text-2xl font-bold text-slate-900">Fotos</h2>
+            <h2 className="reinigung-display mb-6 text-2xl font-bold text-stone-900">Fotos</h2>
             <ReinigungImageGallery items={PHOTOS} />
           </MagicWipe>
 
           <MagicWipe className="mt-16" delay={0.1}>
-            <h2 className="reinigung-display mb-6 text-2xl font-bold text-slate-900">Videos</h2>
+            <h2 className="reinigung-display mb-6 text-2xl font-bold text-stone-900">Videos</h2>
             <VideoGrid videos={VIDEOS} />
           </MagicWipe>
         </div>

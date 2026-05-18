@@ -28,7 +28,7 @@ export default function DemoReinigungHome() {
         <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-2 lg:gap-14">
           <MagicWipe className="space-y-6">
             <motion.span
-              className="inline-flex items-center gap-2 rounded-full border border-cyan-200/80 bg-white/70 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-cyan-700 backdrop-blur-md"
+              className="inline-flex items-center gap-2 rounded-full border border-[#e5d9c8] bg-[#fffcf7]/80 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-amber-900/90 backdrop-blur-md"
               initial={reduceMotion ? false : { opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.15 }}
@@ -37,19 +37,19 @@ export default function DemoReinigungHome() {
               {SPRING_OFFER.badge}
             </motion.span>
 
-            <h1 className="reinigung-display text-4xl font-extrabold leading-[1.08] tracking-tight text-slate-900 md:text-5xl lg:text-[3.25rem]">
+            <h1 className="reinigung-display text-4xl font-extrabold leading-[1.08] tracking-tight text-stone-900 md:text-5xl lg:text-[3.25rem]">
               {HERO_TITLE}
             </h1>
 
-            <p className="max-w-xl text-lg leading-relaxed text-slate-600 md:text-xl">{HERO_SUBTITLE}</p>
+            <p className="max-w-xl text-lg leading-relaxed text-stone-600 md:text-xl">{HERO_SUBTITLE}</p>
 
-            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-teal-600">{LOCATION_LINE}</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-amber-800/90">{LOCATION_LINE}</p>
 
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
               <WhatsAppButton size="lg" />
               <Link
                 href={`${DEMO_BASE}/services`}
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-cyan-200 bg-white/70 px-6 py-3.5 text-sm font-bold text-cyan-800 backdrop-blur-md transition hover:bg-white"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-[#e5d9c8] bg-[#fffcf7]/80 px-6 py-3.5 text-sm font-bold text-amber-950 backdrop-blur-md transition hover:bg-[#fffdf9]"
               >
                 Leistungen entdecken
                 <ArrowRight className="h-4 w-4" aria-hidden />
@@ -59,7 +59,7 @@ export default function DemoReinigungHome() {
 
           <MagicWipe delay={0.12} className="relative">
             <GlassCard className="relative overflow-hidden p-3">
-              <div className="pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full bg-cyan-300/30 blur-2xl" aria-hidden />
+              <div className="pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full bg-amber-200/40 blur-2xl" aria-hidden />
               <img
                 src={heroImage}
                 alt={PHOTOS[0]?.alt ?? "Vorher und nachher — professionelle Tiefenreinigung"}
@@ -75,12 +75,12 @@ export default function DemoReinigungHome() {
       <section className="px-4 py-14 md:px-8">
         <div className="mx-auto max-w-6xl">
           <MagicWipe>
-            <GlassCard className="relative overflow-hidden border-cyan-200/60 bg-gradient-to-br from-white/70 via-cyan-50/40 to-teal-50/30 text-center">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-teal-600">{SPRING_OFFER.badge}</p>
-              <h2 className="reinigung-display mt-3 text-2xl font-bold text-slate-900 md:text-3xl">
+            <GlassCard className="relative overflow-hidden border-[#e0d4c4]/90 bg-gradient-to-br from-[#fffcf7]/90 via-[#f5ebe0]/80 to-[#ebe0d0]/70 text-center">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-800/90">{SPRING_OFFER.badge}</p>
+              <h2 className="reinigung-display mt-3 text-2xl font-bold text-stone-900 md:text-3xl">
                 {SPRING_OFFER.headline}
               </h2>
-              <p className="mx-auto mt-3 max-w-lg text-slate-600">{SPRING_OFFER.text}</p>
+              <p className="mx-auto mt-3 max-w-lg text-stone-600">{SPRING_OFFER.text}</p>
               <motion.div className="mt-6 flex justify-center">
                 <WhatsAppButton />
               </motion.div>
@@ -92,8 +92,8 @@ export default function DemoReinigungHome() {
       <section className="px-4 pb-20 md:px-8">
         <div className="mx-auto max-w-6xl">
           <MagicWipe className="mb-10 text-center">
-            <h2 className="reinigung-display text-3xl font-bold text-slate-900">Unsere Schwerpunkte</h2>
-            <p className="mt-2 text-slate-600">Möbel, Kfz und Allergene — alles aus einer Hand.</p>
+            <h2 className="reinigung-display text-3xl font-bold text-stone-900">Unsere Schwerpunkte</h2>
+            <p className="mt-2 text-stone-600">Möbel, Kfz und Allergene — alles aus einer Hand.</p>
           </MagicWipe>
 
           <div className="grid gap-6 md:grid-cols-3">
@@ -103,11 +103,11 @@ export default function DemoReinigungHome() {
                   <span className="text-3xl" aria-hidden>
                     {service.icon}
                   </span>
-                  <h3 className="reinigung-display mt-4 text-xl font-bold text-slate-900">{service.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-600">{service.teaser}</p>
+                  <h3 className="reinigung-display mt-4 text-xl font-bold text-stone-900">{service.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-stone-600">{service.teaser}</p>
                   <Link
                     href={`${DEMO_BASE}/services`}
-                    className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-cyan-700 hover:underline"
+                    className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-amber-900/90 hover:underline"
                   >
                     Mehr erfahren <ArrowRight className="h-3.5 w-3.5" />
                   </Link>

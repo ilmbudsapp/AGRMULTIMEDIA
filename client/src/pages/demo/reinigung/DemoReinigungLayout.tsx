@@ -28,7 +28,7 @@ export default function DemoReinigungLayout({ children, seoDescription }: Props)
 
   return (
     <motion.div
-      className="reinigung-demo relative min-h-[100dvh] overflow-x-hidden bg-[#f0f9ff] text-slate-800 antialiased selection:bg-cyan-200/60 selection:text-slate-900"
+      className="reinigung-demo relative min-h-[100dvh] overflow-x-hidden text-stone-800 antialiased selection:bg-amber-200/50 selection:text-stone-900"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.4 }}
@@ -36,6 +36,8 @@ export default function DemoReinigungLayout({ children, seoDescription }: Props)
       <style>{`
         .reinigung-demo {
           font-family: "DM Sans", system-ui, sans-serif;
+          background: linear-gradient(165deg, #faf7f2 0%, #f0e9dd 48%, #e6dac8 100%);
+          background-attachment: fixed;
         }
         .reinigung-display {
           font-family: "Outfit", system-ui, sans-serif;
@@ -47,13 +49,13 @@ export default function DemoReinigungLayout({ children, seoDescription }: Props)
       `}</style>
 
       <motion.div
-        className="pointer-events-none fixed -left-32 top-24 h-80 w-80 rounded-full bg-cyan-300/25 blur-[100px]"
+        className="pointer-events-none fixed -left-32 top-24 h-80 w-80 rounded-full bg-amber-200/35 blur-[100px]"
         animate={{ opacity: [0.35, 0.55, 0.35] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         aria-hidden
       />
       <div
-        className="pointer-events-none fixed -right-24 bottom-20 h-72 w-72 rounded-full bg-teal-300/20 blur-[90px]"
+        className="pointer-events-none fixed -right-24 bottom-20 h-72 w-72 rounded-full bg-stone-300/30 blur-[90px]"
         style={{ animation: "reinigung-float 16s ease-in-out infinite" }}
         aria-hidden
       />
@@ -63,29 +65,29 @@ export default function DemoReinigungLayout({ children, seoDescription }: Props)
 
       <main className="relative z-10 pt-[4.75rem]">{children}</main>
 
-      <footer className="relative z-10 border-t border-white/60 bg-white/40 px-4 py-10 backdrop-blur-lg">
+      <footer className="relative z-10 border-t border-[#e5d9c8]/80 bg-[#f7f2ea]/75 px-4 py-10 backdrop-blur-lg">
         <motion.div
-          className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 text-center text-sm text-slate-600 md:flex-row md:text-left"
+          className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 text-center text-sm text-stone-600 md:flex-row md:text-left"
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
           <div>
-            <p className="font-semibold text-slate-800">{COMPANY_NAME}</p>
+            <p className="font-semibold text-stone-800">{COMPANY_NAME}</p>
             <p className="mt-1">{LOCATION_LINE}</p>
           </div>
-          <p className="text-xs text-slate-500">
+          <p className="text-xs text-stone-500">
             Demo-Website von{" "}
             <a
               href="https://www.agrmultimedia.eu"
-              className="font-semibold text-cyan-700 underline-offset-2 hover:underline"
+              className="font-semibold text-amber-900/85 underline-offset-2 hover:underline"
               target="_blank"
               rel="noopener noreferrer"
             >
               AGR Multimedia
             </a>
           </p>
-          <Link href={DEMO_BASE} className="text-xs font-medium text-cyan-700 hover:underline">
+          <Link href={DEMO_BASE} className="text-xs font-medium text-amber-900/85 hover:underline">
             Zur Demo-Startseite
           </Link>
         </motion.div>

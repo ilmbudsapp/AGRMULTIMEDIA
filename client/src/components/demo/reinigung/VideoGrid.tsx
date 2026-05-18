@@ -52,14 +52,14 @@ function VideoCard({ video }: { video: ReinigungVideoItem }) {
         hidden: { opacity: 0, y: 28, filter: "blur(10px)" },
         visible: { opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: 0.75 } },
       }}
-      className="group overflow-hidden rounded-2xl border border-cyan-100/90 bg-white/55 p-3 shadow-[0_16px_48px_rgba(14,165,233,0.12)] backdrop-blur-lg"
+      className="group overflow-hidden rounded-2xl border border-[#e5d9c8]/90 bg-[#fffcf7]/75 p-3 shadow-[0_16px_48px_rgba(101,78,52,0.12)] backdrop-blur-lg"
       onMouseEnter={play}
       onMouseLeave={pause}
       onFocus={play}
       onBlur={pause}
     >
       <motion.div
-        className="relative overflow-hidden rounded-xl ring-2 ring-cyan-200/60 transition duration-300 group-hover:ring-teal-400/80"
+        className="relative overflow-hidden rounded-xl ring-2 ring-[#e0d0bc]/80 transition duration-300 group-hover:ring-amber-700/40"
         whileHover={{ scale: 1.01 }}
       >
         <video
@@ -73,14 +73,14 @@ function VideoCard({ video }: { video: ReinigungVideoItem }) {
           aria-label={video.title}
         />
         <motion.div
-          className="pointer-events-none absolute inset-0 bg-gradient-to-t from-cyan-900/35 via-transparent to-transparent opacity-80"
+          className="pointer-events-none absolute inset-0 bg-gradient-to-t from-stone-900/35 via-transparent to-transparent opacity-80"
           initial={false}
         />
-        <span className="pointer-events-none absolute bottom-3 left-3 rounded-full bg-white/85 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-cyan-800 backdrop-blur-sm">
+        <span className="pointer-events-none absolute bottom-3 left-3 rounded-full bg-[#fffcf7]/90 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-amber-950 backdrop-blur-sm">
           Hover · Vorschau
         </span>
       </motion.div>
-      <figcaption className="mt-3 text-center text-sm font-semibold leading-snug text-slate-700">
+      <figcaption className="mt-3 text-center text-sm font-semibold leading-snug text-stone-700">
         {video.caption}
       </figcaption>
     </motion.figure>
