@@ -3,6 +3,18 @@
   "outputDirectory": "dist/public",
   "installCommand": "npm install",
   "framework": null,
+  "redirects": [
+    {
+      "source": "/demo-reinigung",
+      "destination": "/portfolio#portfolio-reinigung",
+      "permanent": true
+    },
+    {
+      "source": "/demo-reinigung/:path*",
+      "destination": "/portfolio#portfolio-reinigung",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
     { "source": "/robots.txt", "destination": "/robots.txt" },

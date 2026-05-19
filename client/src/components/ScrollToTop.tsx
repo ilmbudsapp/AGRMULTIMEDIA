@@ -9,6 +9,8 @@ export default function ScrollToTop() {
     if (typeof history !== "undefined" && "scrollRestoration" in history) {
       history.scrollRestoration = "manual";
     }
+    const hash = window.location.hash.replace(/^#/, "");
+    if (hash && document.getElementById(hash)) return;
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }, [location]);
 

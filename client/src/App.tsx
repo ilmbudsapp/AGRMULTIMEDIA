@@ -46,6 +46,7 @@ const Privacy = lazy(() => import("@/pages/privacy"));
 const Terms = lazy(() => import("@/pages/terms"));
 const Cookies = lazy(() => import("@/pages/cookies"));
 const TonisAutopflegeDemo = lazy(() => import("@/pages/demo/tonis-autopflege"));
+const DemoReinigungRetired = lazy(() => import("@/components/DemoReinigungRetired"));
 const NotFound = lazy(() => import("@/pages/not-found"));
 
 function Router() {
@@ -87,6 +88,10 @@ function Router() {
       <Route path="/terms" component={Terms} />
       <Route path="/cookies" component={Cookies} />
       <Route path="/demo/tonis-autopflege" component={TonisAutopflegeDemo} />
+      <Route path="/demo-reinigung/services" component={DemoReinigungRetired} />
+      <Route path="/demo-reinigung/galerie" component={DemoReinigungRetired} />
+      <Route path="/demo-reinigung/kontakt" component={DemoReinigungRetired} />
+      <Route path="/demo-reinigung" component={DemoReinigungRetired} />
       <Route component={NotFound} />
     </Switch>
   );
