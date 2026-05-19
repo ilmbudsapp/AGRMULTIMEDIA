@@ -30,10 +30,6 @@ export default function MetaSEO() {
 
     const path = normalizePathname(location);
 
-    if (path.startsWith("/demo-reinigung")) {
-      return;
-    }
-
     const lookupPath =
       path === "/contact"
         ? "/kontakt"

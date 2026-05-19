@@ -12,7 +12,9 @@ import {
 import { useLanguage } from "@/contexts/LanguageContext";
 import AiVideoClipGrid from "@/components/AiVideoClipGrid";
 import PortfolioImageGallery from "@/components/PortfolioImageGallery";
+import PortfolioMediaGallery from "@/components/PortfolioMediaGallery";
 import VideoEditingClipGrid from "@/components/VideoEditingClipGrid";
+import { reinigungHeroAltByLang, reinigungPortfolioMediaByLang, REINIGUNG_HERO_IMG } from "@/data/reinigungPortfolio";
 import { brandingGalleryByLang } from "@/data/brandingGallery";
 import { fotoKreiraneSaAiGalleryByLang } from "@/data/fotoKreiraneSaAiGallery";
 import type { PortfolioFilterId } from "@/lib/portfolioPageI18n";
@@ -37,6 +39,7 @@ function ProjectCard({
   pillarIcon: PillarIcon,
   pillarClass,
   gradeBadge,
+  imageFit = "cover",
   children,
 }: {
   image?: string;
@@ -47,6 +50,7 @@ function ProjectCard({
   pillarIcon: LucideIcon;
   pillarClass: string;
   gradeBadge?: string;
+  imageFit?: "cover" | "contain";
   children: ReactNode;
 }) {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -88,7 +92,13 @@ function ProjectCard({
             <source src={video.src} type="video/mp4" />
           </video>
         ) : (
-          <img src={image} alt={title} className="h-full w-full object-cover" loading="lazy" decoding="async" />
+          <img
+            src={image}
+            alt={title}
+            className={`h-full w-full ${imageFit === "contain" ? "object-contain p-2" : "object-cover"}`}
+            loading="lazy"
+            decoding="async"
+          />
         )}
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0a0a0f] via-transparent to-transparent" />
         <span
@@ -149,6 +159,8 @@ export default function PortfolioShowcase() {
 
   const brandSamples = useMemo(() => brandingGalleryByLang[lang].slice(0, 6), [lang]);
   const aiPhotoSamples = useMemo(() => fotoKreiraneSaAiGalleryByLang[lang].slice(0, 6), [lang]);
+  const reinigungMedia = useMemo(() => reinigungPortfolioMediaByLang(lang), [lang]);
+  const reinigungHeroAlt = reinigungHeroAltByLang[lang];
   const filters: { id: PortfolioFilterId; label: string }[] = [
     { id: "all", label: p.filters.all },
     { id: "web", label: p.filters.web },
@@ -240,6 +252,47 @@ export default function PortfolioShowcase() {
                   </a>
                 </ProjectCard>
               </div>
+
+              <article
+                id="portfolio-reinigung"
+                className="scroll-mt-28 overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.02] shadow-[0_12px_48px_rgba(0,0,0,0.35)]"
+              >
+                <div className="relative aspect-[16/10] overflow-hidden bg-black/50">
+                  <img
+                    src={REINIGUNG_HERO_IMG}
+                    alt={reinigungHeroAlt}
+                    className="h-full w-full object-contain p-3 shadow-[0_12px_40px_rgba(0,0,0,0.4)]"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0a0a0f] via-transparent to-transparent" />
+                  <span
+                    className={`pointer-events-none absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-semibold ${webPillarClass}`}
+                  >
+                    <LayoutGrid className="h-3.5 w-3.5" aria-hidden />
+                    {p.categories.web.title}
+                  </span>
+                  <span className="pointer-events-none absolute right-4 top-4 rounded-full border border-cyan-400/30 bg-cyan-500/15 px-3 py-1 text-xs font-semibold text-cyan-100">
+                    {p.projects.reinigung.gradeBadge}
+                  </span>
+                </div>
+                <div className="p-6 md:p-8">
+                  <h3 className="text-xl font-semibold text-white md:text-2xl">{p.projects.reinigung.title}</h3>
+                  <p className="mt-4 text-sm leading-relaxed text-white/70 md:text-base">
+                    {p.projects.reinigung.description}
+                  </p>
+                  <div id="portfolio-reinigung-media" className="mt-8 scroll-mt-28 border-t border-white/[0.08] pt-8">
+                    <h4 className="text-lg font-semibold text-white">{p.projects.reinigung.mediaTitle}</h4>
+                    <p className="mt-2 text-sm text-white/65 md:text-base">{p.projects.reinigung.mediaIntro}</p>
+                    <PortfolioMediaGallery items={reinigungMedia} closeLabel={p.categories.galleryClose} />
+                  </div>
+                  <div className="mt-8 flex flex-wrap gap-3">
+                    <Link href="/kontakt" className={LIVE_BTN}>
+                      {p.projects.reinigung.liveCta}
+                    </Link>
+                  </div>
+                </div>
+              </article>
             </CategoryBlock>
           )}
 
