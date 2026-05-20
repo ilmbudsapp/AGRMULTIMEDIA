@@ -127,7 +127,7 @@ const en: PremiumTranslations = {
     caseLead:
       "Same domain, two snapshots: baseline vs. less than 24 hours later. GEO and AEO lifts show how generative and answer-engine visibility can move when structure and signals align.",
     caseNarrative:
-      "This example shows a local business moving from digital invisibility (Grade F) to a clear leadership signal (Grade A) in under 24 hours. By prioritizing Generative Engine Optimization (GEO), we increased visibility to AI models by 275%—from a GEO score of 24 to 90.",
+      "This example shows one local business moving from Grade F (49 overall) to Grade A (88) in under 24 hours on the same domain. GEO rose from 24 to 90 and AEO from 31 to 85 in that audit run—documented scores, not a promise for every site.",
     beforeLabel: "Before — May 8, 2026",
     afterLabel: "After — May 9, 2026",
     beforeBadge: "Critical · Grade F",
@@ -148,7 +148,7 @@ const en: PremiumTranslations = {
     benchmarkTrust:
       "Our site is not just a business card—it is proof of our expertise. We demonstrate our standard with an SEO score of 92, keeping our technology aligned with the latest search algorithms.",
     benchmarkSaasNote:
-      "The audit engine classified this site as SaaS-type (50% confidence)—a useful signal of technical depth, productized delivery, and real functionality under the hood.",
+      "The audit tool suggested a SaaS-style site type as one possible classification—we mention it only as a technical-depth hint from the engine, not as a claim about how your business operates.",
     benchmarkReportMeta: "www.agrmultimedia.eu — report generated May 9, 2026",
     benchmarkImgAlt:
       "SEO AEO GEO report for www.agrmultimedia.eu — overall Grade A, SEO 92, AEO 83, GEO 78, site type SaaS",
@@ -241,7 +241,7 @@ const de: PremiumTranslations = {
     caseLead:
       "Gleiche Domain, zwei Snapshots: Ausgangslage vs. weniger als 24 Stunden später. Die Sprünge bei GEO und AEO zeigen, wie Sichtbarkeit in generativen und Answer-Engine-Kontexten steigen kann.",
     caseNarrative:
-      "Dieses Beispiel zeigt, wie ein lokales Unternehmen von digitaler Unsichtbarkeit (Grade F) zu einem klaren Führungssignal (Grade A) in unter 24 Stunden kommt. Mit Fokus auf Generative Engine Optimization (GEO) haben wir die Sichtbarkeit für KI-Modelle um 275 % gesteigert — vom GEO-Score 24 auf 90.",
+      "Dieses Beispiel zeigt eine Domain: von Grade F (49 gesamt) zu Grade A (88) in unter 24 Stunden. GEO stieg von 24 auf 90, AEO von 31 auf 85 in diesem Audit-Lauf — dokumentierte Werte, keine Garantie für jede Seite.",
     beforeLabel: "Vorher — 8. Mai 2026",
     afterLabel: "Nachher — 9. Mai 2026",
     beforeBadge: "Kritisch · Grade F",
@@ -262,7 +262,7 @@ const de: PremiumTranslations = {
     benchmarkTrust:
       "Unsere Website ist keine reine Visitenkarte, sondern ein Nachweis unserer Expertise. Mit einem SEO-Score von 92 zeigen wir unseren Standard und halten unsere Technologie an aktuelle Suchalgorithmen ausgerichtet.",
     benchmarkSaasNote:
-      "Das Audit-System hat die Seite als SaaS-Typ klassifiziert (50 % Konfidenz)—ein zusätzliches Signal für technische Tiefe und echte Funktionalität hinter dem Auftritt.",
+      "Das Audit-Tool schlug einen SaaS-ähnlichen Site-Typ als eine mögliche Klassifikation vor — wir erwähnen das nur als technischen Hinweis des Tools, nicht als Aussage über Ihr Geschäftsmodell.",
     benchmarkReportMeta: "www.agrmultimedia.eu — Bericht vom 9. Mai 2026",
     benchmarkImgAlt:
       "SEO/AEO/GEO Bericht www.agrmultimedia.eu — Gesamt Grade A, SEO 92, AEO 83, GEO 78, Site-Typ SaaS",
@@ -316,7 +316,7 @@ const sr: PremiumTranslations = {
   hero: {
     heading: "Moderne web stranice i dosledan brend za mala preduzeća — AGR Multimedia",
     subheading:
-      "Mi u AGR Multimedia pravimo brze web stranice spremne za SEO, grafičke sisteme i praktične AI tokove za mala preduzeća. Moje iskustvo u Geislingen an der Steige pokazuje da jasna poruka, tehnički SEO i proverljivi izvori podižu konverzije i vidljivost u sistemima odgovora.",
+      "Mi u AGR Multimedia pravimo brze sajtove, grafiku i AI podršku za vas u Geislingenu. Zato spajamo tehnički SEO, AEO i GEO u jedan jasan proces — uz našu proveru pre objave. Na primer, jedan jasan poziv na akciju po stranici često radi bolje od dugog teksta bez fokusa.",
     primaryCta: "Zatražite besplatnu konsultaciju",
     secondaryCta: "Pogledajte projekte",
     ctaMeta: "Besplatna konsultacija • Bez obaveza • Odgovor u roku od 24h",
@@ -355,7 +355,7 @@ const sr: PremiumTranslations = {
     caseLead:
       "Isti domen, dva snimka stanja: polazna tačka naspram manje od 24 sata kasnije. Skokovi na GEO i AEO pokazuju kako raste vidljivost za generativne i „answer engine“ sisteme kada se struktura i signali usklade.",
     caseNarrative:
-      "Ovaj primer pokazuje transformaciju lokalnog biznisa iz digitalne nevidljivosti (Grade F) u apsolutnog lidera (Grade A) za manje od 24 sata. Fokusiranjem na Generative Engine Optimization (GEO), povećali smo vidljivost za AI modele za neverovatnih 275%.",
+      "Ovaj primer pokazuje jedan lokalni biznis na istom domenu: sa Grade F (ukupno 49) na Grade A (88) za manje od 24 sata. GEO je skočio sa 24 na 90, AEO sa 31 na 85 u tom audit prolazu — dokumentovani skorovi, ne garancija za svaki sajt.",
     beforeLabel: "Pre — 8. maj 2026.",
     afterLabel: "Posle — 9. maj 2026.",
     beforeBadge: "Kritično · Grade F",
@@ -376,7 +376,7 @@ const sr: PremiumTranslations = {
     benchmarkTrust:
       "Naš sajt nije samo vizit karta, već dokaz naše ekspertize. Dokazujemo naš standard kroz SEO skor od 92, osiguravajući da naša tehnologija uvek prati najnovije algoritme pretrage.",
     benchmarkSaasNote:
-      "Sistem je klasifikovao sajt kao SaaS tip (50% pouzdanosti klasifikacije), što dodatno naglašava našu tehničku dubinu i funkcionalnost koju gradimo.",
+      "Audit alat je predložio SaaS tip sajta kao jednu moguću klasifikaciju — pominjemo to samo kao tehnički signal iz alata, ne kao tvrdnju o vašem poslovnom modelu.",
     benchmarkReportMeta: "www.agrmultimedia.eu — izveštaj od 9. maj 2026.",
     benchmarkImgAlt:
       "SEO/AEO/GEO izveštaj za www.agrmultimedia.eu — ukupno Grade A, SEO 92, AEO 83, GEO 78, tip sajta SaaS",
@@ -469,7 +469,7 @@ const it: PremiumTranslations = {
     caseLead:
       "Stesso dominio, due screenshot: baseline vs. meno di 24 ore dopo. I salti su GEO e AEO mostrano come migliora la visibilita nei contesti generativi e answer-engine quando struttura e segnali sono allineati.",
     caseNarrative:
-      "Questo esempio mostra il passaggio di un’attivita locale dall’invisibilita digitale (Grade F) a un segnale di leadership (Grade A) in meno di 24 ore. Concentrandoci sulla Generative Engine Optimization (GEO), abbiamo aumentato la visibilita verso i modelli AI del 275% — dal punteggio GEO 24 a 90.",
+      "Questo esempio mostra un dominio: da Grade F (49 complessivo) a Grade A (88) in meno di 24 ore. GEO da 24 a 90 e AEO da 31 a 85 in quell’audit — punteggi documentati, non una garanzia per ogni sito.",
     beforeLabel: "Prima — 8 maggio 2026",
     afterLabel: "Dopo — 9 maggio 2026",
     beforeBadge: "Critico · Grade F",
@@ -490,7 +490,7 @@ const it: PremiumTranslations = {
     benchmarkTrust:
       "Il nostro sito non è solo un biglietto da visita: è la prova della nostra expertise. Lo dimostriamo con uno score SEO di 92, mantenendo lo stack allineato agli algoritmi di ricerca piu recenti.",
     benchmarkSaasNote:
-      "Il motore di audit ha classificato il sito come tipo SaaS (confidenza 50%)—un segnale ulteriore di profondita tecnica e funzionalita reale.",
+      "Lo strumento di audit ha suggerito un tipo sito in stile SaaS come una possibile classificazione — lo citiamo solo come indizio tecnico del motore, non come affermazione sul vostro modello di business.",
     benchmarkReportMeta: "www.agrmultimedia.eu — report del 9 maggio 2026",
     benchmarkImgAlt:
       "Report SEO/AEO/GEO www.agrmultimedia.eu — totale Grade A, SEO 92, AEO 83, GEO 78, tipo sito SaaS",
@@ -583,7 +583,7 @@ const al: PremiumTranslations = {
     caseLead:
       "I njëjti domain, dy pamje: gjendja fillestare kundrejt më pak se 24 orë më vonë. Hapat në GEO dhe AEO tregojnë si rritet dukshmëria për motorët gjenerativë dhe përgjigjet kur struktura dhe sinjalet përputhen.",
     caseNarrative:
-      "Ky shembull tregon si një biznes lokal kalon nga padukshmëria digjitale (Grade F) në një sinjal qartë udhëheqjeje (Grade A) për më pak se 24 orë. Duke u fokusuar në Generative Engine Optimization (GEO), ne rritëm dukshmërinë për modelet AI me 275% — nga rezultati GEO 24 në 90.",
+      "Ky shembull tregon një domen: nga Grade F (49 total) në Grade A (88) për më pak se 24 orë. GEO nga 24 në 90 dhe AEO nga 31 në 85 në atë audit — rezultate të dokumentuara, jo garanci për çdo sajt.",
     beforeLabel: "Para — 8 maj 2026",
     afterLabel: "Pas — 9 maj 2026",
     beforeBadge: "Kritik · Grade F",
@@ -604,7 +604,7 @@ const al: PremiumTranslations = {
     benchmarkTrust:
       "Faqja jonë nuk është thjesht një kartëvizitë, por provë e ekspertizës sonë. E dëshmojmë standardin me një skor SEO 92 dhe mbajmë teknologjinë të përputhur me algoritmet më të fundit të kërkimit.",
     benchmarkSaasNote:
-      "Motori i auditimit e klasifikoi faqen si tip SaaS (50% besueshmëri)—një sinjal shtesë për thellësi teknike dhe funksionalitet të ndërtuar mirë.",
+      "Mjeti i auditimit sugjeroi një tip siti në stil SaaS si një klasifikim i mundshëm — e përmendim vetëm si sinjal teknik nga motori, jo si pretendim për modelin tuaj të biznesit.",
     benchmarkReportMeta: "www.agrmultimedia.eu — raporti i 9 maj 2026",
     benchmarkImgAlt:
       "Raport SEO/AEO/GEO për www.agrmultimedia.eu — total Grade A, SEO 92, AEO 83, GEO 78, lloji SaaS",

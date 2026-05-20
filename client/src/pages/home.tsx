@@ -10,6 +10,9 @@ import HomeSeoSection from "@/components/HomeSeoSection";
 import WhyChooseMe from "@/components/WhyChooseMe";
 import Testimonials from "@/components/Testimonials";
 import AboutHome from "@/components/AboutHome";
+import HomeComparisons from "@/components/HomeComparisons";
+import HomeClientExperience from "@/components/HomeClientExperience";
+import HomeConclusion from "@/components/HomeConclusion";
 import HomeFinalCta from "@/components/HomeFinalCta";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -25,14 +28,17 @@ export default function Home() {
       <main id="main-content" aria-label={MAIN_LANDMARK_LABEL[currentLanguage]}>
         <Hero />
         <HomeGeoInsight />
+        <HomeComparisons />
         <TrustIntro />
         <OptimizationExcellence />
+        <HomeClientExperience />
         <HomeSeoSection />
         <WhyChooseMe />
         <Testimonials />
         <CaseStudyThearRealm />
         <HomeServices />
         <AboutHome />
+        <HomeConclusion />
         <HomeFinalCta />
         <Contact />
         <HomeFaqJsonLd />

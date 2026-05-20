@@ -56,6 +56,16 @@ const en: HomeGeoInsightCopy = {
       sentence:
         "AEO is how we phrase direct answers, lists, and definitions so answer engines can lift the right snippet safely.",
     },
+    {
+      term: "Web design",
+      sentence:
+        "Web design is the plan for page structure, brand visuals, and user actions—not only decoration, but the path to a call, form, or booking.",
+    },
+    {
+      term: "AI automation (in our workflow)",
+      sentence:
+        "AI automation means tools that draft copy and layout variants faster; we always run human QA on facts, tone, and compliance before anything goes live.",
+    },
   ],
   balanceTitle: "Pros and cons (how we decide with you)",
   balanceLead:
@@ -143,6 +153,16 @@ const de: HomeGeoInsightCopy = {
       sentence:
         "AEO ist, wie wir direkte Antworten, Listen und Definitionen formulieren, damit Answer Engines das richtige Snippet heben.",
     },
+    {
+      term: "Webdesign",
+      sentence:
+        "Webdesign ist die Planung von Seitenstruktur, Markenvisuals und Nutzeraktionen—nicht nur Dekoration, sondern der Weg zu Anruf, Formular oder Buchung.",
+    },
+    {
+      term: "KI-Automatisierung (in unserem Workflow)",
+      sentence:
+        "KI-Automatisierung bedeutet Tools für schnellere Entwürfe; wir führen immer menschliche QA zu Fakten, Ton und Compliance vor dem Livegang durch.",
+    },
   ],
   balanceTitle: "Vor- und Nachteile (so entscheiden wir mit Ihnen)",
   balanceLead:
@@ -229,6 +249,16 @@ const sr: HomeGeoInsightCopy = {
       term: "AEO (Answer Engine Optimization)",
       sentence:
         "AEO je način na koji formuljemo direktne odgovore, liste i definicije da sistemi odgovora podignu pravi isječak.",
+    },
+    {
+      term: "Web dizajn",
+      sentence:
+        "Web dizajn je plan strukture stranica, vizuelnog identiteta i akcija korisnika — ne samo ukras, već put do poziva, forme ili rezervacije.",
+    },
+    {
+      term: "AI automatizacija (u našem procesu)",
+      sentence:
+        "AI automatizacija su alati koji ubrzavaju nacrte teksta i layouta; mi uvek radimo ljudsku QA nad činjenicama, tonom i usklađenošću pre objave.",
     },
   ],
   balanceTitle: "Prednosti i mane (kako zajedno odlučujemo)",

@@ -78,6 +78,64 @@
     width: 100%;
   }
 
+  /* Crawler-visible homepage HTML in index (hidden after React mounts; remains in View Source) */
+  html.app-mounted #static-crawler-home,
+  html.app-mounted #static-route-prerender {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  #static-crawler-home,
+  #static-route-prerender {
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: 1.5rem;
+    color: #e5e7eb;
+    font-family: system-ui, sans-serif;
+    line-height: 1.65;
+    background: #07070b;
+  }
+
+  #static-crawler-home h1,
+  #static-route-prerender h1 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 0.75rem;
+  }
+
+  #static-crawler-home h2,
+  #static-crawler-home h3,
+  #static-route-prerender h2 {
+    font-size: 1.15rem;
+    color: #fff;
+    margin: 1.25rem 0 0.5rem;
+  }
+
+  #static-crawler-home a {
+    color: #93c5fd;
+  }
+
+  #static-crawler-home table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    margin: 0.75rem 0;
+  }
+
+  #static-crawler-home th,
+  #static-crawler-home td {
+    border: 1px solid #333;
+    padding: 0.35rem;
+    text-align: left;
+  }
+
   body {
     @apply bg-[#0a0a0a] text-foreground antialiased;
     font-family: var(--font-sans);

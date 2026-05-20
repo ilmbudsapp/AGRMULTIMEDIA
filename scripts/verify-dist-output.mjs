@@ -26,5 +26,16 @@ if (!sitemap.startsWith("<?xml")) {
   process.exit(1);
 }
 
+const indexHtml = fs.readFileSync(path.join(outputDir, "index.html"), "utf8");
+if (!indexHtml.includes("static-crawler-home")) {
+  console.error("FAIL: dist/public/index.html missing static-crawler-home prerender block");
+  process.exit(1);
+}
+if (!indexHtml.includes("CRAWLER_HOME_START")) {
+  console.error("FAIL: dist/public/index.html missing CRAWLER_HOME markers");
+  process.exit(1);
+}
+
 console.log(`OK: production static files are deployed from ${outputDir}`);
 console.log("OK: root sitemap.xml is published at /sitemap.xml");
+console.log("OK: homepage crawler HTML present in index.html");
