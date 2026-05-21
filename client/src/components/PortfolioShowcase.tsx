@@ -22,7 +22,7 @@ import { toServiceLang } from "@/lib/servicePageI18n";
 
 const TONIS_LIVE = "https://www.tonis-autopflege-goeppingen.de";
 const FIXBIKE_LIVE = "https://fixbike.online/";
-const ISLAMIC_DEMO = "/demo/islamic-center";
+const ISLAMIC_DEMO = "/demo/islamic-center/index.html";
 const TONIS_IMG = "/demo/tonis-autopflege/hero-poster.webp";
 const ISLAMIC_IMG = "/demo/islamic-center/img/about-1.jpg";
 const FIXBIKE_IMG = "/portfolio/web-design/fixbike-fahrradservice-neuwied-hero.webp";

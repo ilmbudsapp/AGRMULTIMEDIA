@@ -49,7 +49,8 @@ export default function Portfolio({ featured = false, asPage = false }: Portfoli
       image: "/demo/islamic-center/img/about-1.jpg",
       category: "web",
       slug: "islamic-center",
-      detailHref: "/demo/islamic-center",
+      detailHref: "/demo/islamic-center/index.html",
+      staticDemo: true,
     },
     { id: 1, title: t.portfolio.items.ecommerce.title, description: t.portfolio.items.ecommerce.description, image: bannerWeb, category: "web", slug: "ecommerce-site" },
     { id: 2, title: t.portfolio.items.brand.title, description: t.portfolio.items.brand.description, image: greenHarvest, category: "brand", slug: "brand-identity" },
@@ -148,14 +149,25 @@ export default function Portfolio({ featured = false, asPage = false }: Portfoli
                   <p className="text-white/75 text-sm mb-4 line-clamp-2" data-testid={`portfolio-item-description-${item.id}`}>
                     {item.description}
                   </p>
-                  <Link href={item.detailHref ?? `/portfolio/${item.slug}`}>
-                    <span 
-                      className="inline-block text-sm font-medium text-white border-b border-white/40 pb-0.5 hover:border-white"
-                      data-testid={`portfolio-item-cta-${item.id}`}
-                    >
-                      {tSpec.featuredPortfolio.viewDetails}
-                    </span>
-                  </Link>
+                  {"staticDemo" in item && item.staticDemo ? (
+                    <a href={item.detailHref ?? `/portfolio/${item.slug}`}>
+                      <span
+                        className="inline-block text-sm font-medium text-white border-b border-white/40 pb-0.5 hover:border-white"
+                        data-testid={`portfolio-item-cta-${item.id}`}
+                      >
+                        {tSpec.featuredPortfolio.viewDetails}
+                      </span>
+                    </a>
+                  ) : (
+                    <Link href={item.detailHref ?? `/portfolio/${item.slug}`}>
+                      <span
+                        className="inline-block text-sm font-medium text-white border-b border-white/40 pb-0.5 hover:border-white"
+                        data-testid={`portfolio-item-cta-${item.id}`}
+                      >
+                        {tSpec.featuredPortfolio.viewDetails}
+                      </span>
+                    </Link>
+                  )}
                 </div>
               </div>
             </div>

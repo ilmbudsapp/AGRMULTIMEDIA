@@ -6,6 +6,7 @@ import { fileURLToPath } from "node:url";
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const outputDir = path.join(repoRoot, "dist", "public");
 const requiredRootFiles = ["index.html", "sitemap.xml", "robots.txt"];
+const requiredDemoIndex = path.join(outputDir, "demo", "islamic-center", "index.html");
 
 if (!fs.existsSync(outputDir)) {
   console.error(`FAIL: missing build output directory ${outputDir}`);
@@ -33,6 +34,11 @@ if (!indexHtml.includes("static-crawler-home")) {
 }
 if (!indexHtml.includes("CRAWLER_HOME_START")) {
   console.error("FAIL: dist/public/index.html missing CRAWLER_HOME markers");
+  process.exit(1);
+}
+
+if (!fs.existsSync(requiredDemoIndex)) {
+  console.error(`FAIL: missing ${requiredDemoIndex}`);
   process.exit(1);
 }
 

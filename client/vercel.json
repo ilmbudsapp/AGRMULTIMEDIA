@@ -28,7 +28,7 @@
     { "source": "/manifest.json", "destination": "/manifest.json" },
     { "source": "/agrmm2026indexnowkey01.txt", "destination": "/agrmm2026indexnowkey01.txt" },
     {
-      "source": "/((?!api/).*)",
+      "source": "/((?!api/|demo/islamic-center).*)",
       "destination": "/index.html"
     }
   ],
