@@ -16,21 +16,33 @@
     new WOW().init();
 
 
-    // Fixed Navbar
+    // Fixed Navbar (offset for compact AGR demo strip)
+    function agrBannerTop() {
+        var v = getComputedStyle(document.documentElement).getPropertyValue('--agr-banner-h');
+        var n = parseInt(v, 10);
+        return isNaN(n) ? 0 : n;
+    }
+
     $(window).scroll(function () {
+        var banner = agrBannerTop();
         if ($(window).width() < 992) {
             if ($(this).scrollTop() > 45) {
-                $('.fixed-top').addClass('bg-white shadow');
+                $('.fixed-top').addClass('bg-white shadow').css('top', banner + 'px');
             } else {
-                $('.fixed-top').removeClass('bg-white shadow');
+                $('.fixed-top').removeClass('bg-white shadow').css('top', banner + 'px');
             }
         } else {
             if ($(this).scrollTop() > 45) {
-                $('.fixed-top').addClass('bg-white shadow').css('top', -45);
+                $('.fixed-top').addClass('bg-white shadow').css('top', banner - 45);
             } else {
-                $('.fixed-top').removeClass('bg-white shadow').css('top', 0);
+                $('.fixed-top').removeClass('bg-white shadow').css('top', banner);
             }
         }
+    });
+
+    $(window).on('load resize', function () {
+        var banner = agrBannerTop();
+        $('.fixed-top').css('top', banner);
     });
     
     

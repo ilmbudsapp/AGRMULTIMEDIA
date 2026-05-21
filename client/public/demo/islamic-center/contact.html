@@ -78,8 +78,14 @@
                     <a href="index.html" class="navbar-brand">
                         <h1 class="mb-0">THE<span class="text-primary">Mosque</span> </h1>
                     </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                        <span class="fa fa-bars text-primary"></span>
+                    <div class="lang-switcher lang-switcher--mobile d-flex d-lg-none align-items-center gap-1 ms-auto me-2">
+                                    <button type="button" class="lang-btn btn btn-sm btn-outline-dark active" data-lang="bs">BS</button>
+                                    <button type="button" class="lang-btn btn btn-sm btn-outline-dark" data-lang="sq">AL</button>
+                                    <button type="button" class="lang-btn btn btn-sm btn-outline-dark" data-lang="de">DE</button>
+                                    <button type="button" class="lang-btn btn btn-sm btn-outline-dark" data-lang="it">IT</button>
+                                </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Meni">
+                        <span class="fa fa-bars text-primary fs-4"></span>
                     </button>
                     <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                         <div class="navbar-nav ms-lg-auto mx-xl-auto">
@@ -99,6 +105,7 @@
                             </div>
                             <a href="contact.html" class="nav-item nav-link" data-i18n="navContact">Kontakt</a>
                         </div>
+                                                <a href="" class="btn btn-primary py-2 px-4 btn-donate-mobile d-xl-none" data-i18n="navDonate">Doniraj</a>
                         <a href="" class="btn btn-primary py-2 px-4 d-none d-xl-inline-block" data-i18n="navDonate">Doniraj</a>
                     </div>
                 </nav>
