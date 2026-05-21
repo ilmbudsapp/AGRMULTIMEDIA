@@ -22,7 +22,9 @@ import { toServiceLang } from "@/lib/servicePageI18n";
 
 const TONIS_LIVE = "https://www.tonis-autopflege-goeppingen.de";
 const FIXBIKE_LIVE = "https://fixbike.online/";
+const ISLAMIC_DEMO = "/demo/islamic-center";
 const TONIS_IMG = "/demo/tonis-autopflege/hero-poster.webp";
+const ISLAMIC_IMG = "/demo/islamic-center/img/about-1.jpg";
 const FIXBIKE_IMG = "/portfolio/web-design/fixbike-fahrradservice-neuwied-hero.webp";
 const LIVE_BTN =
   "inline-flex items-center gap-2 rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-[#0a0a0f] transition hover:bg-white/90";
@@ -234,6 +236,20 @@ export default function PortfolioShowcase() {
                 >
                   <a href={TONIS_LIVE} target="_blank" rel="noopener noreferrer" className={LIVE_BTN}>
                     {p.projects.tonis.liveCta}
+                    <ExternalLink className="h-4 w-4" aria-hidden />
+                  </a>
+                </ProjectCard>
+                <ProjectCard
+                  image={ISLAMIC_IMG}
+                  title={p.projects.islamicCenter.title}
+                  description={p.projects.islamicCenter.description}
+                  pillarLabel={p.categories.web.title}
+                  pillarIcon={LayoutGrid}
+                  pillarClass={webPillarClass}
+                  gradeBadge={p.projects.islamicCenter.gradeBadge}
+                >
+                  <a href={ISLAMIC_DEMO} className={LIVE_BTN}>
+                    {p.projects.islamicCenter.liveCta}
                     <ExternalLink className="h-4 w-4" aria-hidden />
                   </a>
                 </ProjectCard>

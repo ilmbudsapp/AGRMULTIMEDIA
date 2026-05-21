@@ -491,6 +491,12 @@ const EXTRA_EN: Record<string, RouteSeo> = {
       "Demo presentation: premium car care — interior cleaning, polish, ceramic coating. Developed by AGR Multimedia.",
     keywords: "Autopflege Göppingen, demo, car detailing, AGR Multimedia",
   },
+  "/demo/islamic-center": {
+    title: "Islamic center & mosque website — demo (AGR Multimedia)",
+    description:
+      "Demo: multilingual mosque / Islamic center site (BS, Albanian, German, Italian). Web design by AGR Multimedia.",
+    keywords: "mosque website, Islamic center, demo, web design, AGR Multimedia",
+  },
 };
 
 const EXTRA_DE: Record<string, RouteSeo> = {
@@ -618,6 +624,12 @@ const EXTRA_DE: Record<string, RouteSeo> = {
       "Demo-Landingpage: Lackaufbereitung, Innenreinigung, Politur, Keramikversiegelung — Entwicklung AGR Multimedia.",
     keywords: "Autopflege Göppingen, Lackpflege, Keramikversiegelung, Demo",
   },
+  "/demo/islamic-center": {
+    title: "Islamisches Zentrum & Moschee — Web-Demo | AGR Multimedia",
+    description:
+      "Demo: mehrsprachige Moschee-Website (BS, Albanisch, Deutsch, Italienisch). Webdesign von AGR Multimedia.",
+    keywords: "Moschee Website, Islamisches Zentrum, Demo, Webdesign",
+  },
 };
 
 const EXTRA_IT: Record<string, RouteSeo> = {
@@ -740,6 +752,12 @@ const EXTRA_IT: Record<string, RouteSeo> = {
     description:
       "Presentazione demo: cura auto premium, lucidatura, coating ceramico — sviluppo AGR Multimedia.",
     keywords: "Autopflege, Göppingen, demo, AGR Multimedia",
+  },
+  "/demo/islamic-center": {
+    title: "Centro islamico e moschea — demo sito | AGR Multimedia",
+    description:
+      "Demo: sito multilingue per moschea / centro islamico (BS, AL, DE, IT). Web design AGR Multimedia.",
+    keywords: "sito moschea, centro islamico, demo, web design",
   },
 };
 
@@ -864,6 +882,12 @@ const EXTRA_SR: Record<string, RouteSeo> = {
       "Demo prezentacija: premium nega automobila — razvoj AGR Multimedia.",
     keywords: "Autopflege, Göppingen, demo",
   },
+  "/demo/islamic-center": {
+    title: "Islamski centar / džamija — demo sajt | AGR Multimedia",
+    description:
+      "Demo: višejezički sajt džamije i islamskog centra (BS, AL, DE, IT). AGR Multimedia.",
+    keywords: "sajt džamije, islamski centar, demo, web dizajn",
+  },
 };
 
 const EXTRA_AL: Record<string, RouteSeo> = {
@@ -986,6 +1010,12 @@ const EXTRA_AL: Record<string, RouteSeo> = {
     description:
       "Paraqitje demo: kujdes premium për automjet — zhvillim AGR Multimedia.",
     keywords: "Autopflege, Göppingen, demo",
+  },
+  "/demo/islamic-center": {
+    title: "Qendër islame / xhami — faqe demo | AGR Multimedia",
+    description:
+      "Demo: faqe shumëgjuhëshe për xhami / qendër islame (BS, AL, DE, IT). AGR Multimedia.",
+    keywords: "faqe xhamie, qendër islame, demo, web design",
   },
 };
 

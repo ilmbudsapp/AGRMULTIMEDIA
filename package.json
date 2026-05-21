@@ -13,6 +13,7 @@
     "webp:assets": "node scripts/generate-webp-assets.mjs",
     "tonis:demo-assets": "node scripts/setup-tonis-demo-assets.mjs",
     "tonis:convert": "node scripts/convert-tonis-folder.mjs",
+    "islamic:demo-sync": "node scripts/setup-islamic-center-demo.mjs",
     "extract-video-posters": "node scripts/extract-video-posters.mjs",
     "extract-video-editing-posters": "node scripts/extract-video-editing-posters.mjs",
     "transcode-video-editing-mobile": "node scripts/transcode-video-editing-mobile-friendly.mjs",

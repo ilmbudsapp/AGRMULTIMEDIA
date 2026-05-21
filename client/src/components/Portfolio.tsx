@@ -24,6 +24,14 @@ export default function Portfolio({ featured = false, asPage = false }: Portfoli
     al: "Faqe premium për kujdesin e makinës — demo live nga AGR Multimedia për Toni's Autopflege në Göppingen.",
   };
 
+  const islamicCenterDescription: Record<string, string> = {
+    en: "Mosque & Islamic center website — multi-language demo (BS, AL, DE, IT) by AGR Multimedia.",
+    de: "Moschee- & Islamisches Zentrum — mehrsprachige Demo (BS, AL, DE, IT) von AGR Multimedia.",
+    it: "Sito per moschea e centro islamico — demo multilingue (BS, AL, DE, IT) di AGR Multimedia.",
+    sr: "Web sajt džamije / islamskog centra — demo na 4 jezika (BS, AL, DE, IT), AGR Multimedia.",
+    al: "Faqe për xhami / qendër islame — demo në 4 gjuhë (BS, AL, DE, IT), AGR Multimedia.",
+  };
+
   const portfolioItems = [
     {
       id: 0,
@@ -33,6 +41,15 @@ export default function Portfolio({ featured = false, asPage = false }: Portfoli
       category: "web",
       slug: "tonis-autopflege",
       detailHref: "/demo/tonis-autopflege",
+    },
+    {
+      id: 9,
+      title: "Islamski centar — demo",
+      description: islamicCenterDescription[currentLanguage] ?? islamicCenterDescription.en,
+      image: "/demo/islamic-center/img/about-1.jpg",
+      category: "web",
+      slug: "islamic-center",
+      detailHref: "/demo/islamic-center",
     },
     { id: 1, title: t.portfolio.items.ecommerce.title, description: t.portfolio.items.ecommerce.description, image: bannerWeb, category: "web", slug: "ecommerce-site" },
     { id: 2, title: t.portfolio.items.brand.title, description: t.portfolio.items.brand.description, image: greenHarvest, category: "brand", slug: "brand-identity" },

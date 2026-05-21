@@ -34,6 +34,7 @@ export interface PortfolioPageCopy {
   };
   projects: {
     tonis: PortfolioProjectCopy;
+    islamicCenter: PortfolioProjectCopy;
     fixbike: PortfolioProjectCopy;
     reinigung: PortfolioProjectCopy;
     theirrealm: {
@@ -109,6 +110,13 @@ const en: PortfolioPageCopy = {
         "Full website transformation (Grade A). Content expanded from 3 words to 1,461 optimised words with SEO, AEO, GEO structures, Web App Manifest and PWA readiness.",
       liveCta: "View live website",
       gradeBadge: "Grade A · SEO 94",
+    },
+    islamicCenter: {
+      title: "Islamic center & mosque — demo",
+      description:
+        "Multilingual demo site (Bosnian, Albanian, German, Italian): events, sermons, donations, contact — template adapted for communities and mosques.",
+      liveCta: "Open demo",
+      gradeBadge: "Demo · 4 languages",
     },
     fixbike: {
       title: "FixBike",
@@ -201,6 +209,13 @@ const de: PortfolioPageCopy = {
       liveCta: "Website live ansehen",
       gradeBadge: "Grade A · SEO 94",
     },
+    islamicCenter: {
+      title: "Islamisches Zentrum & Moschee — Demo",
+      description:
+        "Mehrsprachige Demo (BS, AL, DE, IT): Veranstaltungen, Vorträge, Spenden, Kontakt — Vorlage für Gemeinden und Moscheen.",
+      liveCta: "Demo öffnen",
+      gradeBadge: "Demo · 4 Sprachen",
+    },
     fixbike: {
       title: "FixBike",
       description:
@@ -291,6 +306,13 @@ const sr: PortfolioPageCopy = {
         "Kompletna transformacija sajta (Grade A). Sadržaj sa 3 reči na 1.461 optimizovane reči sa SEO, AEO, GEO, Web App Manifest i PWA podrškom.",
       liveCta: "Pogledaj live sajt",
       gradeBadge: "Grade A · SEO 94",
+    },
+    islamicCenter: {
+      title: "Islamski centar / džamija — demo",
+      description:
+        "Demo sajt na 4 jezika (BS, AL, DE, IT): događaji, hutbe, donacije, kontakt — prilagođen zajednicama i džamijama.",
+      liveCta: "Otvori demo",
+      gradeBadge: "Demo · 4 jezika",
     },
     fixbike: {
       title: "FixBike",
@@ -383,6 +405,13 @@ const it: PortfolioPageCopy = {
       liveCta: "Sito live",
       gradeBadge: "Grade A · SEO 94",
     },
+    islamicCenter: {
+      title: "Centro islamico e moschea — demo",
+      description:
+        "Sito demo multilingue (BS, AL, DE, IT): eventi, sermoni, donazioni, contatti — per comunità e moschee.",
+      liveCta: "Apri demo",
+      gradeBadge: "Demo · 4 lingue",
+    },
     fixbike: {
       title: "FixBike",
       description:
@@ -473,6 +502,13 @@ const al: PortfolioPageCopy = {
         "Transformim i plotë i faqes (Grade A). Nga 3 fjalë në 1.461 fjalë të optimizuara me SEO, AEO, GEO, Web App Manifest dhe PWA.",
       liveCta: "Shiko faqen live",
       gradeBadge: "Grade A · SEO 94",
+    },
+    islamicCenter: {
+      title: "Qendër islame / xhami — demo",
+      description:
+        "Faqe demo në 4 gjuhë (BS, AL, DE, IT): ngjarje, hutbe, donacione, kontakt — për komunitete dhe xhami.",
+      liveCta: "Hap demo",
+      gradeBadge: "Demo · 4 gjuhë",
     },
     fixbike: {
       title: "FixBike",
