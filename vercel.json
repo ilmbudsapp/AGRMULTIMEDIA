@@ -15,8 +15,8 @@
       "permanent": true
     },
     {
-      "source": "/demo/islamic-center",
-      "destination": "/demo/islamic-center/index.html",
+      "source": "/demo/porro-lidia",
+      "destination": "/demo/porro-lidia/index.html",
       "permanent": false
     }
   ],
@@ -28,7 +28,7 @@
     { "source": "/manifest.json", "destination": "/manifest.json" },
     { "source": "/agrmm2026indexnowkey01.txt", "destination": "/agrmm2026indexnowkey01.txt" },
     {
-      "source": "/((?!api/|demo/islamic-center).*)",
+      "source": "/((?!api/|demo/porro-lidia).*)",
       "destination": "/index.html"
     }
   ],

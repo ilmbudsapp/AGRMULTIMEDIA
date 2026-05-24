@@ -33,8 +33,7 @@ export interface PortfolioPageCopy {
     ux: { title: string; description: string; cta: string };
   };
   projects: {
-    tonis: PortfolioProjectCopy;
-    islamicCenter: PortfolioProjectCopy;
+    porroLidia: PortfolioProjectCopy;
     fixbike: PortfolioProjectCopy;
     reinigung: PortfolioProjectCopy;
     theirrealm: {
@@ -104,19 +103,12 @@ const en: PortfolioPageCopy = {
     },
   },
   projects: {
-    tonis: {
-      title: "Toni's Autopflege — Göppingen",
+    porroLidia: {
+      title: "Porro Lidia Fotografin",
       description:
-        "Full website transformation (Grade A). Content expanded from 3 words to 1,461 optimised words with SEO, AEO, GEO structures, Web App Manifest and PWA readiness.",
-      liveCta: "View live website",
-      gradeBadge: "Grade A · SEO 94",
-    },
-    islamicCenter: {
-      title: "Islamic center & mosque — demo",
-      description:
-        "Multilingual demo site (Bosnian, Albanian, German, Italian): events, sermons, donations, contact — template adapted for communities and mosques.",
+        "Bilingual demo site (German, Italian): weddings, birthdays, family celebrations and events — elegant photography portfolio template.",
       liveCta: "Open demo",
-      gradeBadge: "Demo · 4 languages",
+      gradeBadge: "Demo · DE / IT",
     },
     fixbike: {
       title: "FixBike",
@@ -202,19 +194,12 @@ const de: PortfolioPageCopy = {
     },
   },
   projects: {
-    tonis: {
-      title: "Toni's Autopflege — Göppingen",
+    porroLidia: {
+      title: "Porro Lidia Fotografin",
       description:
-        "Komplette Website-Transformation (Grade A). Inhalt von 3 Wörtern auf 1.461 optimierte Wörter mit SEO, AEO, GEO, Web App Manifest und PWA.",
-      liveCta: "Website live ansehen",
-      gradeBadge: "Grade A · SEO 94",
-    },
-    islamicCenter: {
-      title: "Islamisches Zentrum & Moschee — Demo",
-      description:
-        "Mehrsprachige Demo (BS, AL, DE, IT): Veranstaltungen, Vorträge, Spenden, Kontakt — Vorlage für Gemeinden und Moscheen.",
+        "Zweisprachige Demo (Deutsch, Italienisch): Hochzeiten, Geburtstage, Familienfeste und Events — elegantes Fotografie-Portfolio.",
       liveCta: "Demo öffnen",
-      gradeBadge: "Demo · 4 Sprachen",
+      gradeBadge: "Demo · DE / IT",
     },
     fixbike: {
       title: "FixBike",
@@ -300,19 +285,12 @@ const sr: PortfolioPageCopy = {
     },
   },
   projects: {
-    tonis: {
-      title: "Toni's Autopflege — Göppingen",
+    porroLidia: {
+      title: "Porro Lidia Fotografin",
       description:
-        "Kompletna transformacija sajta (Grade A). Sadržaj sa 3 reči na 1.461 optimizovane reči sa SEO, AEO, GEO, Web App Manifest i PWA podrškom.",
-      liveCta: "Pogledaj live sajt",
-      gradeBadge: "Grade A · SEO 94",
-    },
-    islamicCenter: {
-      title: "Islamski centar / džamija — demo",
-      description:
-        "Demo sajt na 4 jezika (BS, AL, DE, IT): događaji, hutbe, donacije, kontakt — prilagođen zajednicama i džamijama.",
+        "Demo sajt na 2 jezika (DE, IT): venčanja, rođendani, porodične proslave i eventi — elegantan portfolio za fotografe.",
       liveCta: "Otvori demo",
-      gradeBadge: "Demo · 4 jezika",
+      gradeBadge: "Demo · DE / IT",
     },
     fixbike: {
       title: "FixBike",
@@ -398,19 +376,12 @@ const it: PortfolioPageCopy = {
     },
   },
   projects: {
-    tonis: {
-      title: "Toni's Autopflege — Göppingen",
+    porroLidia: {
+      title: "Porro Lidia Fotografin",
       description:
-        "Trasformazione completa del sito (Grade A). Da 3 parole a 1.461 parole ottimizzate con SEO, AEO, GEO, Web App Manifest e PWA.",
-      liveCta: "Sito live",
-      gradeBadge: "Grade A · SEO 94",
-    },
-    islamicCenter: {
-      title: "Centro islamico e moschea — demo",
-      description:
-        "Sito demo multilingue (BS, AL, DE, IT): eventi, sermoni, donazioni, contatti — per comunità e moschee.",
+        "Sito demo bilingue (DE, IT): matrimoni, compleanni, feste di famiglia ed eventi — portfolio elegante per fotografi.",
       liveCta: "Apri demo",
-      gradeBadge: "Demo · 4 lingue",
+      gradeBadge: "Demo · DE / IT",
     },
     fixbike: {
       title: "FixBike",
@@ -496,19 +467,12 @@ const al: PortfolioPageCopy = {
     },
   },
   projects: {
-    tonis: {
-      title: "Toni's Autopflege — Göppingen",
+    porroLidia: {
+      title: "Porro Lidia Fotografin",
       description:
-        "Transformim i plotë i faqes (Grade A). Nga 3 fjalë në 1.461 fjalë të optimizuara me SEO, AEO, GEO, Web App Manifest dhe PWA.",
-      liveCta: "Shiko faqen live",
-      gradeBadge: "Grade A · SEO 94",
-    },
-    islamicCenter: {
-      title: "Qendër islame / xhami — demo",
-      description:
-        "Faqe demo në 4 gjuhë (BS, AL, DE, IT): ngjarje, hutbe, donacione, kontakt — për komunitete dhe xhami.",
+        "Faqe demo dygjuhëshe (DE, IT): dasma, ditëlindje, festa familjare dhe evente — portfolio elegant për fotografë.",
       liveCta: "Hap demo",
-      gradeBadge: "Demo · 4 gjuhë",
+      gradeBadge: "Demo · DE / IT",
     },
     fixbike: {
       title: "FixBike",

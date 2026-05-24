@@ -45,8 +45,7 @@ const PackagingDesign = lazy(() => import("@/pages/portfolio/packaging-design"))
 const Privacy = lazy(() => import("@/pages/privacy"));
 const Terms = lazy(() => import("@/pages/terms"));
 const Cookies = lazy(() => import("@/pages/cookies"));
-const TonisAutopflegeDemo = lazy(() => import("@/pages/demo/tonis-autopflege"));
-const IslamicCenterDemoRedirect = lazy(() => import("@/pages/demo/islamic-center"));
+const PorroLidiaDemoRedirect = lazy(() => import("@/pages/demo/porro-lidia"));
 const DemoReinigungRetired = lazy(() => import("@/components/DemoReinigungRetired"));
 const NotFound = lazy(() => import("@/pages/not-found"));
 
@@ -88,8 +87,7 @@ function Router() {
       <Route path="/privacy-policy" component={Privacy} />
       <Route path="/terms" component={Terms} />
       <Route path="/cookies" component={Cookies} />
-      <Route path="/demo/tonis-autopflege" component={TonisAutopflegeDemo} />
-      <Route path="/demo/islamic-center" component={IslamicCenterDemoRedirect} />
+      <Route path="/demo/porro-lidia" component={PorroLidiaDemoRedirect} />
       <Route path="/demo-reinigung/services" component={DemoReinigungRetired} />
       <Route path="/demo-reinigung/galerie" component={DemoReinigungRetired} />
       <Route path="/demo-reinigung/kontakt" component={DemoReinigungRetired} />

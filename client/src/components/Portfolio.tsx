@@ -16,40 +16,26 @@ export default function Portfolio({ featured = false, asPage = false }: Portfoli
   const { t, tSpec, currentLanguage } = useLanguage();
   const [activeFilter, setActiveFilter] = useState('all');
 
-  const tonisDescription: Record<string, string> = {
-    en: "Premium car care landing page — live demo built by AGR Multimedia for Toni's Autopflege in Göppingen.",
-    de: "Premium-Landingpage für Autopflege — Live-Demo von AGR Multimedia für Toni's Autopflege in Göppingen.",
-    it: "Landing page premium per car care — demo live realizzata da AGR Multimedia per Toni's Autopflege a Göppingen.",
-    sr: "Premium sajt za auto detailing — demo projekat AGR Multimedia za Toni's Autopflege u Göppingen.",
-    al: "Faqe premium për kujdesin e makinës — demo live nga AGR Multimedia për Toni's Autopflege në Göppingen.",
+  const porroLidiaDescription: Record<string, string> = {
+    en: "Premium photographer website — bilingual demo (DE / IT) for weddings, family events and celebrations by AGR Multimedia.",
+    de: "Premium-Fotografin-Website — zweisprachige Demo (DE / IT) für Hochzeiten, Familienfeste und Events von AGR Multimedia.",
+    it: "Sito fotografa premium — demo bilingue (DE / IT) per matrimoni, feste di famiglia ed eventi, AGR Multimedia.",
+    sr: "Premium sajt fotografa — demo na 2 jezika (DE / IT): venčanja, porodične proslave i eventi, AGR Multimedia.",
+    al: "Faqe fotografie premium — demo dygjuhëshe (DE / IT) për dasma, festa familjare dhe evente, AGR Multimedia.",
   };
 
-  const islamicCenterDescription: Record<string, string> = {
-    en: "Mosque & Islamic center website — multi-language demo (BS, AL, DE, IT) by AGR Multimedia.",
-    de: "Moschee- & Islamisches Zentrum — mehrsprachige Demo (BS, AL, DE, IT) von AGR Multimedia.",
-    it: "Sito per moschea e centro islamico — demo multilingue (BS, AL, DE, IT) di AGR Multimedia.",
-    sr: "Web sajt džamije / islamskog centra — demo na 4 jezika (BS, AL, DE, IT), AGR Multimedia.",
-    al: "Faqe për xhami / qendër islame — demo në 4 gjuhë (BS, AL, DE, IT), AGR Multimedia.",
-  };
+  const PORRO_LIDIA_IMG =
+    "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80";
 
   const portfolioItems = [
     {
       id: 0,
-      title: "Toni's Autopflege — Göppingen",
-      description: tonisDescription[currentLanguage] ?? tonisDescription.en,
-      image: bannerWeb,
+      title: "Porro Lidia Fotografin",
+      description: porroLidiaDescription[currentLanguage] ?? porroLidiaDescription.en,
+      image: PORRO_LIDIA_IMG,
       category: "web",
-      slug: "tonis-autopflege",
-      detailHref: "/demo/tonis-autopflege",
-    },
-    {
-      id: 9,
-      title: "Islamski centar — demo",
-      description: islamicCenterDescription[currentLanguage] ?? islamicCenterDescription.en,
-      image: "/demo/islamic-center/img/about-1.jpg",
-      category: "web",
-      slug: "islamic-center",
-      detailHref: "/demo/islamic-center/index.html",
+      slug: "porro-lidia",
+      detailHref: "/demo/porro-lidia/index.html",
       staticDemo: true,
     },
     { id: 1, title: t.portfolio.items.ecommerce.title, description: t.portfolio.items.ecommerce.description, image: bannerWeb, category: "web", slug: "ecommerce-site" },
