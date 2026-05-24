@@ -34,6 +34,7 @@ export interface PortfolioPageCopy {
   };
   projects: {
     porroLidia: PortfolioProjectCopy;
+    aisaOsmani: PortfolioProjectCopy;
     fixbike: PortfolioProjectCopy;
     reinigung: PortfolioProjectCopy;
     theirrealm: {
@@ -109,6 +110,13 @@ const en: PortfolioPageCopy = {
         "Bilingual demo site (German, Italian): weddings, birthdays, family celebrations and events — elegant photography portfolio template.",
       liveCta: "Open demo",
       gradeBadge: "Demo · DE / IT",
+    },
+    aisaOsmani: {
+      title: "Aisa Osmani — Portfolio",
+      description:
+        "Premium student portfolio: Growli mobile app, FROOZ cross-media, web design, corporate publishing, illustration and audiovisual projects.",
+      liveCta: "Open demo",
+      gradeBadge: "Demo · Multimedia",
     },
     fixbike: {
       title: "FixBike",
@@ -201,6 +209,13 @@ const de: PortfolioPageCopy = {
       liveCta: "Demo öffnen",
       gradeBadge: "Demo · DE / IT",
     },
+    aisaOsmani: {
+      title: "Aisa Osmani — Portfolio",
+      description:
+        "Premium-Studentenportfolio: Growli App, FROOZ Cross-Media, Webdesign, Corporate Publishing, Illustration und audiovisuelle Projekte.",
+      liveCta: "Demo öffnen",
+      gradeBadge: "Demo · Multimedia",
+    },
     fixbike: {
       title: "FixBike",
       description:
@@ -291,6 +306,13 @@ const sr: PortfolioPageCopy = {
         "Demo sajt na 2 jezika (DE, IT): venčanja, rođendani, porodične proslave i eventi — elegantan portfolio za fotografe.",
       liveCta: "Otvori demo",
       gradeBadge: "Demo · DE / IT",
+    },
+    aisaOsmani: {
+      title: "Aisa Osmani — Portfolio",
+      description:
+        "Premium studentski portfolio: Growli mobilna app, FROOZ cross-media, web dizajn, corporate publishing, ilustracija i audiovizuelni radovi.",
+      liveCta: "Otvori demo",
+      gradeBadge: "Demo · Multimedia",
     },
     fixbike: {
       title: "FixBike",
@@ -383,6 +405,13 @@ const it: PortfolioPageCopy = {
       liveCta: "Apri demo",
       gradeBadge: "Demo · DE / IT",
     },
+    aisaOsmani: {
+      title: "Aisa Osmani — Portfolio",
+      description:
+        "Portfolio studentesco premium: app Growli, cross-media FROOZ, web design, editorial, illustrazione e progetti audiovisivi.",
+      liveCta: "Apri demo",
+      gradeBadge: "Demo · Multimedia",
+    },
     fixbike: {
       title: "FixBike",
       description:
@@ -473,6 +502,13 @@ const al: PortfolioPageCopy = {
         "Faqe demo dygjuhëshe (DE, IT): dasma, ditëlindje, festa familjare dhe evente — portfolio elegant për fotografë.",
       liveCta: "Hap demo",
       gradeBadge: "Demo · DE / IT",
+    },
+    aisaOsmani: {
+      title: "Aisa Osmani — Portfolio",
+      description:
+        "Portfolio studentor premium: aplikacioni Growli, FROOZ cross-media, web design, botim korporativ, ilustrim dhe projekte audiovizive.",
+      liveCta: "Hap demo",
+      gradeBadge: "Demo · Multimedia",
     },
     fixbike: {
       title: "FixBike",

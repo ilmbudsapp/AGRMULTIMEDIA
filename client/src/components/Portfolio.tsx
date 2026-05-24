@@ -16,6 +16,14 @@ export default function Portfolio({ featured = false, asPage = false }: Portfoli
   const { t, tSpec, currentLanguage } = useLanguage();
   const [activeFilter, setActiveFilter] = useState('all');
 
+  const aisaOsmaniDescription: Record<string, string> = {
+    en: "Aisa Osmani — premium portfolio demo: Mobile Design (Growli), Cross Media (FROOZ), Web, Corporate Publishing, illustration and audiovisual work.",
+    de: "Aisa Osmani — Premium-Portfolio-Demo: Mobile Design (Growli), Cross Media (FROOZ), Web, Corporate Publishing, Illustration und audiovisuelle Arbeiten.",
+    it: "Aisa Osmani — portfolio premium demo: Mobile Design, Cross Media, Web, editorial e lavori multimediali.",
+    sr: "Aisa Osmani — premium portfolio demo: Mobile Design, Cross Media, web, korporativno izdavaštvo i multimedijalni radovi.",
+    al: "Aisa Osmani — portfolio premium demo: Mobile Design, Cross Media, web, botim korporativ dhe punë multimediale.",
+  };
+
   const porroLidiaDescription: Record<string, string> = {
     en: "Premium photographer website — bilingual demo (DE / IT) for weddings, family events and celebrations by AGR Multimedia.",
     de: "Premium-Fotografin-Website — zweisprachige Demo (DE / IT) für Hochzeiten, Familienfeste und Events von AGR Multimedia.",
@@ -28,6 +36,16 @@ export default function Portfolio({ featured = false, asPage = false }: Portfoli
     "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80";
 
   const portfolioItems = [
+    {
+      id: 10,
+      title: "Aisa Osmani",
+      description: aisaOsmaniDescription[currentLanguage] ?? aisaOsmaniDescription.en,
+      image: "/demo/aisa-osmani/assets/hero-illustration.jpg",
+      category: "web",
+      slug: "aisa-osmani",
+      detailHref: "/demo/aisa-osmani/index.html",
+      staticDemo: true,
+    },
     {
       id: 0,
       title: "Porro Lidia Fotografin",

@@ -6,7 +6,10 @@ import { fileURLToPath } from "node:url";
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const outputDir = path.join(repoRoot, "dist", "public");
 const requiredRootFiles = ["index.html", "sitemap.xml", "robots.txt"];
-const requiredDemoIndex = path.join(outputDir, "demo", "porro-lidia", "index.html");
+const requiredDemoIndexes = [
+  path.join(outputDir, "demo", "aisa-osmani", "index.html"),
+  path.join(outputDir, "demo", "porro-lidia", "index.html"),
+];
 
 if (!fs.existsSync(outputDir)) {
   console.error(`FAIL: missing build output directory ${outputDir}`);
@@ -37,9 +40,11 @@ if (!indexHtml.includes("CRAWLER_HOME_START")) {
   process.exit(1);
 }
 
-if (!fs.existsSync(requiredDemoIndex)) {
-  console.error(`FAIL: missing ${requiredDemoIndex}`);
-  process.exit(1);
+for (const demoIndex of requiredDemoIndexes) {
+  if (!fs.existsSync(demoIndex)) {
+    console.error(`FAIL: missing ${demoIndex}`);
+    process.exit(1);
+  }
 }
 
 console.log(`OK: production static files are deployed from ${outputDir}`);

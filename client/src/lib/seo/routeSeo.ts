@@ -491,6 +491,12 @@ const EXTRA_EN: Record<string, RouteSeo> = {
       "Demo: bilingual photographer website (German, Italian) for weddings, family events and celebrations. Web design by AGR Multimedia.",
     keywords: "photographer website, wedding photography, demo, web design, AGR Multimedia",
   },
+  "/demo/aisa-osmani": {
+    title: "Aisa Osmani — student portfolio demo (AGR Multimedia)",
+    description:
+      "Premium demo portfolio: mobile app UI, cross-media, web design, corporate publishing, illustration and audiovisual work.",
+    keywords: "student portfolio, multimedia design, demo, web design, AGR Multimedia",
+  },
 };
 
 const EXTRA_DE: Record<string, RouteSeo> = {
@@ -618,6 +624,12 @@ const EXTRA_DE: Record<string, RouteSeo> = {
       "Demo: zweisprachige Fotografin-Website (Deutsch, Italienisch) für Hochzeiten, Familienfeste und Events. Webdesign von AGR Multimedia.",
     keywords: "Fotografin Website, Hochzeitsfotografie, Demo, Webdesign",
   },
+  "/demo/aisa-osmani": {
+    title: "Aisa Osmani — Portfolio-Demo | AGR Multimedia",
+    description:
+      "Premium-Studentenportfolio: Mobile App, Cross-Media, Webdesign, Corporate Publishing, Illustration und audiovisuelle Projekte.",
+    keywords: "Studentenportfolio, Multimedia Design, Demo, Webdesign",
+  },
 };
 
 const EXTRA_IT: Record<string, RouteSeo> = {
@@ -740,6 +752,12 @@ const EXTRA_IT: Record<string, RouteSeo> = {
     description:
       "Demo: sito fotografa bilingue (DE, IT) per matrimoni, feste di famiglia ed eventi. Web design AGR Multimedia.",
     keywords: "sito fotografo, matrimoni, demo, web design",
+  },
+  "/demo/aisa-osmani": {
+    title: "Aisa Osmani — portfolio demo | AGR Multimedia",
+    description:
+      "Portfolio studentesco premium: app mobile, cross-media, web design, editorial, illustrazione e progetti audiovisivi.",
+    keywords: "portfolio studente, multimedia, demo, web design",
   },
 };
 
@@ -864,6 +882,12 @@ const EXTRA_SR: Record<string, RouteSeo> = {
       "Demo: dvojezični sajt fotografa (DE, IT) za venčanja, porodične proslave i evente. AGR Multimedia.",
     keywords: "sajt fotografa, venčanja, demo, web dizajn",
   },
+  "/demo/aisa-osmani": {
+    title: "Aisa Osmani — portfolio demo | AGR Multimedia",
+    description:
+      "Premium studentski portfolio: mobilna app, cross-media, web dizajn, corporate publishing, ilustracija i audiovizuelni radovi.",
+    keywords: "studentski portfolio, multimedia, demo, web dizajn",
+  },
 };
 
 const EXTRA_AL: Record<string, RouteSeo> = {
@@ -986,6 +1010,12 @@ const EXTRA_AL: Record<string, RouteSeo> = {
     description:
       "Demo: faqe fotografie dygjuhëshe (DE, IT) për dasma, festa familjare dhe evente. AGR Multimedia.",
     keywords: "faqe fotografie, dasma, demo, web design",
+  },
+  "/demo/aisa-osmani": {
+    title: "Aisa Osmani — portfolio demo | AGR Multimedia",
+    description:
+      "Portfolio studentor premium: aplikacion mobil, cross-media, web design, botim korporativ, ilustrim dhe projekte audiovizive.",
+    keywords: "portfolio student, multimedia, demo, web design",
   },
 };
 

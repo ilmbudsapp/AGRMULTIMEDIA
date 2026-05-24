@@ -23,6 +23,8 @@ import { toServiceLang } from "@/lib/servicePageI18n";
 const PORRO_LIDIA_DEMO = "/demo/porro-lidia/index.html";
 const PORRO_LIDIA_IMG =
   "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80";
+const AISA_DEMO = "/demo/aisa-osmani/index.html";
+const AISA_IMG = "/demo/aisa-osmani/assets/hero-illustration.jpg";
 const FIXBIKE_LIVE = "https://fixbike.online/";
 const FIXBIKE_IMG = "/portfolio/web-design/fixbike-fahrradservice-neuwied-hero.webp";
 const LIVE_BTN =
@@ -224,6 +226,20 @@ export default function PortfolioShowcase() {
               intro={p.categories.web.intro}
             >
               <div className="grid gap-8 lg:grid-cols-2">
+                <ProjectCard
+                  image={AISA_IMG}
+                  title={p.projects.aisaOsmani.title}
+                  description={p.projects.aisaOsmani.description}
+                  pillarLabel={p.categories.web.title}
+                  pillarIcon={LayoutGrid}
+                  pillarClass={webPillarClass}
+                  gradeBadge={p.projects.aisaOsmani.gradeBadge}
+                >
+                  <a href={AISA_DEMO} className={LIVE_BTN}>
+                    {p.projects.aisaOsmani.liveCta}
+                    <ExternalLink className="h-4 w-4" aria-hidden />
+                  </a>
+                </ProjectCard>
                 <ProjectCard
                   image={PORRO_LIDIA_IMG}
                   title={p.projects.porroLidia.title}

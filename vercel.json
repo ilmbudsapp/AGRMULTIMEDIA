@@ -43,6 +43,16 @@
       "source": "/demo/porro-lidia/",
       "destination": "/demo/porro-lidia/index.html",
       "permanent": false
+    },
+    {
+      "source": "/demo/aisa-osmani",
+      "destination": "/demo/aisa-osmani/index.html",
+      "permanent": false
+    },
+    {
+      "source": "/demo/aisa-osmani/",
+      "destination": "/demo/aisa-osmani/index.html",
+      "permanent": false
     }
   ],
   "rewrites": [

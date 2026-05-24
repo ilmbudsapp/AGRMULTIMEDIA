@@ -1,92 +1,203 @@
-{
-  "buildCommand": "npm run build:client",
-  "outputDirectory": "dist/public",
-  "installCommand": "npm install",
-  "framework": null,
-  "redirects": [
-    {
-      "source": "/demo-reinigung",
-      "destination": "/portfolio#portfolio-reinigung",
-      "permanent": true
-    },
-    {
-      "source": "/demo-reinigung/:path*",
-      "destination": "/portfolio#portfolio-reinigung",
-      "permanent": true
-    },
-    {
-      "source": "/demo/tonis-autopflege",
-      "destination": "/demo/porro-lidia",
-      "permanent": false
-    },
-    {
-      "source": "/demo/tonis-autopflege/:path*",
-      "destination": "/demo/porro-lidia",
-      "permanent": false
-    },
-    {
-      "source": "/demo/islamic-center",
-      "destination": "/demo/porro-lidia",
-      "permanent": false
-    },
-    {
-      "source": "/demo/islamic-center/:path*",
-      "destination": "/demo/porro-lidia",
-      "permanent": false
-    },
-    {
-      "source": "/demo/porro-lidia",
-      "destination": "/demo/porro-lidia/index.html",
-      "permanent": false
-    },
-    {
-      "source": "/demo/porro-lidia/",
-      "destination": "/demo/porro-lidia/index.html",
-      "permanent": false
-    }
-  ],
-  "rewrites": [
-    { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
-    { "source": "/robots.txt", "destination": "/robots.txt" },
-    { "source": "/feed.atom.xml", "destination": "/feed.atom.xml" },
-    { "source": "/llms.txt", "destination": "/llms.txt" },
-    { "source": "/manifest.json", "destination": "/manifest.json" },
-    { "source": "/agrmm2026indexnowkey01.txt", "destination": "/agrmm2026indexnowkey01.txt" },
-    {
-      "source": "/((?!api/|demo/).*)",
-      "destination": "/index.html"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/sitemap.xml",
-      "headers": [
-        { "key": "Content-Type", "value": "application/xml; charset=UTF-8" },
-        { "key": "Cache-Control", "value": "public, max-age=3600" }
-      ]
-    },
-    {
-      "source": "/robots.txt",
-      "headers": [
-        { "key": "Content-Type", "value": "text/plain; charset=UTF-8" }
-      ]
-    },
-    {
-      "source": "/(.*)",
-      "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        {
-          "key": "Permissions-Policy",
-          "value": "camera=(), microphone=(), geolocation=(), payment=()"
-        },
-        {
-          "key": "Content-Security-Policy",
-          "value": "default-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; img-src 'self' data: https: blob:; media-src 'self' blob:; font-src 'self' https://fonts.gstatic.com https://use.fontawesome.com data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net https://use.fontawesome.com; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://ajax.googleapis.com https://cdn.jsdelivr.net; connect-src 'self' https://api.emailjs.com https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://analytics.google.com; upgrade-insecure-requests"
-        }
-      ]
-    }
-  ]
-}
-
+{
+
+  "buildCommand": "npm run build:client",
+
+  "outputDirectory": "dist/public",
+
+  "installCommand": "npm install",
+
+  "framework": null,
+
+  "redirects": [
+
+    {
+
+      "source": "/demo-reinigung",
+
+      "destination": "/portfolio#portfolio-reinigung",
+
+      "permanent": true
+
+    },
+
+    {
+
+      "source": "/demo-reinigung/:path*",
+
+      "destination": "/portfolio#portfolio-reinigung",
+
+      "permanent": true
+
+    },
+
+    {
+
+      "source": "/demo/tonis-autopflege",
+
+      "destination": "/demo/porro-lidia",
+
+      "permanent": false
+
+    },
+
+    {
+
+      "source": "/demo/tonis-autopflege/:path*",
+
+      "destination": "/demo/porro-lidia",
+
+      "permanent": false
+
+    },
+
+    {
+
+      "source": "/demo/islamic-center",
+
+      "destination": "/demo/porro-lidia",
+
+      "permanent": false
+
+    },
+
+    {
+
+      "source": "/demo/islamic-center/:path*",
+
+      "destination": "/demo/porro-lidia",
+
+      "permanent": false
+
+    },
+
+    {
+
+      "source": "/demo/porro-lidia",
+
+      "destination": "/demo/porro-lidia/index.html",
+
+      "permanent": false
+
+    },
+
+    {
+
+      "source": "/demo/porro-lidia/",
+
+      "destination": "/demo/porro-lidia/index.html",
+
+      "permanent": false
+
+    },
+
+    {
+
+      "source": "/demo/aisa-osmani",
+
+      "destination": "/demo/aisa-osmani/index.html",
+
+      "permanent": false
+
+    },
+
+    {
+
+      "source": "/demo/aisa-osmani/",
+
+      "destination": "/demo/aisa-osmani/index.html",
+
+      "permanent": false
+
+    }
+
+  ],
+
+  "rewrites": [
+
+    { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
+
+    { "source": "/robots.txt", "destination": "/robots.txt" },
+
+    { "source": "/feed.atom.xml", "destination": "/feed.atom.xml" },
+
+    { "source": "/llms.txt", "destination": "/llms.txt" },
+
+    { "source": "/manifest.json", "destination": "/manifest.json" },
+
+    { "source": "/agrmm2026indexnowkey01.txt", "destination": "/agrmm2026indexnowkey01.txt" },
+
+    {
+
+      "source": "/((?!api/|demo/).*)",
+
+      "destination": "/index.html"
+
+    }
+
+  ],
+
+  "headers": [
+
+    {
+
+      "source": "/sitemap.xml",
+
+      "headers": [
+
+        { "key": "Content-Type", "value": "application/xml; charset=UTF-8" },
+
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+
+      ]
+
+    },
+
+    {
+
+      "source": "/robots.txt",
+
+      "headers": [
+
+        { "key": "Content-Type", "value": "text/plain; charset=UTF-8" }
+
+      ]
+
+    },
+
+    {
+
+      "source": "/(.*)",
+
+      "headers": [
+
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+
+        {
+
+          "key": "Permissions-Policy",
+
+          "value": "camera=(), microphone=(), geolocation=(), payment=()"
+
+        },
+
+        {
+
+          "key": "Content-Security-Policy",
+
+          "value": "default-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; img-src 'self' data: https: blob:; media-src 'self' blob:; font-src 'self' https://fonts.gstatic.com https://use.fontawesome.com data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net https://use.fontawesome.com; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://ajax.googleapis.com https://cdn.jsdelivr.net; connect-src 'self' https://api.emailjs.com https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://analytics.google.com; upgrade-insecure-requests"
+
+        }
+
+      ]
+
+    }
+
+  ]
+
+}
+
+
