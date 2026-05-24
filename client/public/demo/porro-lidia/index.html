@@ -84,7 +84,7 @@
       position: fixed;
       top: 0;
       width: 100%;
-      z-index: 100;
+      z-index: 1001;
       padding: 24px 7%;
       display: flex;
       justify-content: space-between;
@@ -130,6 +130,53 @@
       cursor: pointer;
       color: var(--cream);
       background: transparent;
+      font-family: inherit;
+      font-size: 14px;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-shrink: 0;
+      flex-direction: column;
+      justify-content: center;
+      gap: 6px;
+      width: 44px;
+      height: 44px;
+      padding: 10px;
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 12px;
+      background: rgba(255,255,255,.06);
+      cursor: pointer;
+      z-index: 120;
+    }
+
+    .menu-toggle span {
+      display: block;
+      height: 2px;
+      width: 100%;
+      background: var(--cream);
+      border-radius: 2px;
+      transition: transform .3s ease, opacity .3s ease;
+    }
+
+    body.menu-open .menu-toggle span:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+
+    body.menu-open .menu-toggle span:nth-child(2) {
+      opacity: 0;
+    }
+
+    body.menu-open .menu-toggle span:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .mobile-nav {
+      display: none;
+    }
+
+    body.menu-open {
+      overflow: hidden;
     }
 
     .hero {
@@ -431,8 +478,69 @@
     }
 
     @media (max-width: 950px) {
-      nav {
+      header {
+        padding: 16px 5%;
+      }
+
+      .logo {
+        font-size: 20px;
+        max-width: calc(100% - 56px);
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      nav.desktop-nav {
         display: none;
+      }
+
+      .mobile-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: calc(var(--agr-banner-h) + 72px);
+        bottom: 0;
+        padding: 24px 5% 40px;
+        background: rgba(8, 8, 8, .97);
+        backdrop-filter: blur(20px);
+        border-top: 1px solid rgba(255,255,255,.08);
+        transform: translateY(-8px);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity .3s ease, visibility .3s ease, transform .3s ease;
+        z-index: 1000;
+        overflow-y: auto;
+      }
+
+      body.menu-open .mobile-nav {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+
+      .mobile-nav a {
+        color: var(--cream);
+        text-decoration: none;
+        font-size: 18px;
+        padding: 16px 0;
+        border-bottom: 1px solid rgba(255,255,255,.08);
+        opacity: 1;
+      }
+
+      .mobile-nav a:hover {
+        color: var(--gold);
+      }
+
+      .mobile-nav .lang {
+        margin-top: 24px;
+        align-self: flex-start;
       }
 
       .hero,
@@ -477,7 +585,13 @@
   <header>
     <div class="logo">Porro Lidia <span>Fotografin</span></div>
 
-    <nav>
+    <button class="menu-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-nav" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="desktop-nav" aria-label="Hauptnavigation">
       <a href="#home" data-de>Startseite</a>
       <a href="#about" data-de>Über mich</a>
       <a href="#services" data-de>Leistungen</a>
@@ -490,9 +604,25 @@
       <a href="#gallery" data-it>Galleria</a>
       <a href="#contact" data-it>Contatto</a>
 
-      <button class="lang" onclick="toggleLang()">DE / IT</button>
+      <button class="lang" type="button" onclick="toggleLang()">DE / IT</button>
     </nav>
   </header>
+
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile Navigation">
+    <a href="#home" data-de onclick="closeMenu()">Startseite</a>
+    <a href="#about" data-de onclick="closeMenu()">Über mich</a>
+    <a href="#services" data-de onclick="closeMenu()">Leistungen</a>
+    <a href="#gallery" data-de onclick="closeMenu()">Galerie</a>
+    <a href="#contact" data-de onclick="closeMenu()">Kontakt</a>
+
+    <a href="#home" data-it onclick="closeMenu()">Home</a>
+    <a href="#about" data-it onclick="closeMenu()">Chi sono</a>
+    <a href="#services" data-it onclick="closeMenu()">Servizi</a>
+    <a href="#gallery" data-it onclick="closeMenu()">Galleria</a>
+    <a href="#contact" data-it onclick="closeMenu()">Contatto</a>
+
+    <button class="lang" type="button" onclick="toggleLang()">DE / IT</button>
+  </nav>
 
   <main>
     <section class="hero" id="home">
@@ -677,11 +807,33 @@
       }
     })();
 
+    function toggleMenu() {
+      var open = document.body.classList.toggle('menu-open');
+      var btn = document.querySelector('.menu-toggle');
+      if (btn) {
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        btn.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+      }
+    }
+
+    function closeMenu() {
+      document.body.classList.remove('menu-open');
+      var btn = document.querySelector('.menu-toggle');
+      if (btn) {
+        btn.setAttribute('aria-expanded', 'false');
+        btn.setAttribute('aria-label', 'Menü öffnen');
+      }
+    }
+
     function toggleLang() {
       document.body.classList.toggle('it');
       document.body.classList.toggle('de');
       document.documentElement.lang = document.body.classList.contains('it') ? 'it' : 'de';
     }
+
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 950) closeMenu();
+    });
 
     const reveals = document.querySelectorAll('.reveal');
 

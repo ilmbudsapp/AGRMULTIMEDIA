@@ -15,7 +15,32 @@
       "permanent": true
     },
     {
+      "source": "/demo/tonis-autopflege",
+      "destination": "/demo/porro-lidia",
+      "permanent": false
+    },
+    {
+      "source": "/demo/tonis-autopflege/:path*",
+      "destination": "/demo/porro-lidia",
+      "permanent": false
+    },
+    {
+      "source": "/demo/islamic-center",
+      "destination": "/demo/porro-lidia",
+      "permanent": false
+    },
+    {
+      "source": "/demo/islamic-center/:path*",
+      "destination": "/demo/porro-lidia",
+      "permanent": false
+    },
+    {
       "source": "/demo/porro-lidia",
+      "destination": "/demo/porro-lidia/index.html",
+      "permanent": false
+    },
+    {
+      "source": "/demo/porro-lidia/",
       "destination": "/demo/porro-lidia/index.html",
       "permanent": false
     }
@@ -28,7 +53,7 @@
     { "source": "/manifest.json", "destination": "/manifest.json" },
     { "source": "/agrmm2026indexnowkey01.txt", "destination": "/agrmm2026indexnowkey01.txt" },
     {
-      "source": "/((?!api/|demo/porro-lidia).*)",
+      "source": "/((?!api/|demo/).*)",
       "destination": "/index.html"
     }
   ],
