@@ -93,6 +93,21 @@
     }
     nav.desktop-nav a:hover { background: rgba(255,255,255,0.08); color: #fff; }
 
+    body.en [data-de] { display: none !important; }
+    body.de [data-en] { display: none !important; }
+
+    .header-actions {
+      display: flex; align-items: center; gap: 10px; flex-shrink: 0;
+    }
+    .lang {
+      border: 1px solid rgba(255,255,255,0.18);
+      padding: 10px 14px; border-radius: 999px; cursor: pointer;
+      color: #fff; background: rgba(255,255,255,0.05);
+      font-family: inherit; font-size: 13px; font-weight: 700;
+      letter-spacing: 0.04em; transition: 0.25s ease; white-space: nowrap;
+    }
+    .lang:hover { background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.28); }
+
     .btn {
       display: inline-flex; align-items: center; justify-content: center; gap: 10px;
       border: 0; border-radius: 999px; padding: 14px 22px;
@@ -134,6 +149,7 @@
       padding: 16px 0; color: rgba(255,255,255,0.82);
       border-bottom: 1px solid var(--line); font-size: 16px;
     }
+    .mobile-nav .lang { margin-top: 16px; width: 100%; text-align: center; }
 
     .hero {
       min-height: calc(100vh - 86px);
@@ -342,7 +358,7 @@
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
     @media (max-width: 980px) {
-      nav.desktop-nav, .desktop-contact { display: none; }
+      nav.desktop-nav, .desktop-contact, .desktop-lang { display: none; }
       .menu-toggle { display: flex; }
       .hero, .section-grid, .skills-layout, .contact-card, .work-header {
         grid-template-columns: 1fr;
@@ -362,7 +378,7 @@
     }
   </style>
 </head>
-<body class="has-agr-demo-banner">
+<body class="has-agr-demo-banner de">
   <div id="agr-demo-banner" role="note">
     <span>Demo</span>
     <a href="https://www.agrmultimedia.eu/" rel="noopener">AGR MULTIMEDIA</a>
@@ -375,28 +391,44 @@
       <a href="#top" class="logo">
         <div class="logo-icon">✦</div>
         <div>
-          <small>OFFICIAL WEBSITE</small>
+          <small data-de>OFFIZIELLE WEBSITE</small>
+          <small data-en>OFFICIAL WEBSITE</small>
           <strong>Aisa Osmani</strong>
         </div>
       </a>
       <nav class="desktop-nav" aria-label="Navigation">
-        <a href="#ueber-aisa">Über mich</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#faehigkeiten">Skills</a>
-        <a href="#jobsuche">Jobs</a>
-        <a href="#kontakt">Kontakt</a>
+        <a href="#ueber-aisa" data-de>Über mich</a>
+        <a href="#ueber-aisa" data-en>About</a>
+        <a href="#portfolio" data-de>Portfolio</a>
+        <a href="#portfolio" data-en>Portfolio</a>
+        <a href="#faehigkeiten" data-de>Skills</a>
+        <a href="#faehigkeiten" data-en>Skills</a>
+        <a href="#jobsuche" data-de>Jobs</a>
+        <a href="#jobsuche" data-en>Jobs</a>
+        <a href="#kontakt" data-de>Kontakt</a>
+        <a href="#kontakt" data-en>Contact</a>
       </nav>
-      <a class="btn btn-primary desktop-contact" href="#kontakt">Kontakt →</a>
+      <div class="header-actions">
+        <button class="lang desktop-lang" type="button" onclick="toggleLang()">DE / EN</button>
+        <a class="btn btn-primary desktop-contact" href="#kontakt" data-de>Kontakt →</a>
+        <a class="btn btn-primary desktop-contact" href="#kontakt" data-en>Contact →</a>
+      </div>
       <button class="menu-toggle" type="button" aria-label="Menü" aria-expanded="false" onclick="toggleMenu()">
         <span></span><span></span><span></span>
       </button>
     </div>
     <nav class="container mobile-nav" id="mobileNav" aria-label="Mobile">
-      <a href="#ueber-aisa" onclick="closeMenu()">Über mich</a>
-      <a href="#portfolio" onclick="closeMenu()">Portfolio</a>
-      <a href="#faehigkeiten" onclick="closeMenu()">Skills</a>
-      <a href="#jobsuche" onclick="closeMenu()">Jobs</a>
-      <a href="#kontakt" onclick="closeMenu()">Kontakt</a>
+      <a href="#ueber-aisa" data-de onclick="closeMenu()">Über mich</a>
+      <a href="#ueber-aisa" data-en onclick="closeMenu()">About</a>
+      <a href="#portfolio" data-de onclick="closeMenu()">Portfolio</a>
+      <a href="#portfolio" data-en onclick="closeMenu()">Portfolio</a>
+      <a href="#faehigkeiten" data-de onclick="closeMenu()">Skills</a>
+      <a href="#faehigkeiten" data-en onclick="closeMenu()">Skills</a>
+      <a href="#jobsuche" data-de onclick="closeMenu()">Jobs</a>
+      <a href="#jobsuche" data-en onclick="closeMenu()">Jobs</a>
+      <a href="#kontakt" data-de onclick="closeMenu()">Kontakt</a>
+      <a href="#kontakt" data-en onclick="closeMenu()">Contact</a>
+      <button class="lang" type="button" onclick="toggleLang(); closeMenu();">DE / EN</button>
     </nav>
   </header>
 
@@ -404,28 +436,39 @@
     <section class="container hero">
       <div class="reveal">
         <div class="badge"><span class="dot"></span> Open to Work · Multimedia · Social Media · AI</div>
-        <h1>
+        <h1 data-de>
           Aisa Osmani
           <span class="gradient-text">Premium digitale Kreativität.</span>
         </h1>
-        <p>
+        <h1 data-en>
+          Aisa Osmani
+          <span class="gradient-text">Premium digital creativity.</span>
+        </h1>
+        <p data-de>
           Studentin mit Fokus auf Multimedia, Social Media Management und AI. Dieses Portfolio zeigt ausgewählte Projekte aus Studium und Praxis — von Illustration über Cross-Media-Kampagnen bis zur Mobile App.
         </p>
+        <p data-en>
+          Student focused on multimedia, social media management and AI. This portfolio showcases selected academic and practical work — from illustration and cross-media campaigns to mobile app design.
+        </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#portfolio">Portfolio ansehen →</a>
-          <a class="btn btn-secondary" href="#kontakt">Kontakt</a>
+          <a class="btn btn-primary" href="#portfolio" data-de>Portfolio ansehen →</a>
+          <a class="btn btn-primary" href="#portfolio" data-en>View portfolio →</a>
+          <a class="btn btn-secondary" href="#kontakt" data-de>Kontakt</a>
+          <a class="btn btn-secondary" href="#kontakt" data-en>Contact</a>
         </div>
         <div class="stats">
-          <div class="stat"><strong>7+</strong><span>Projektbereiche</span></div>
-          <div class="stat"><strong>AI</strong><span>Creative Mindset</span></div>
+          <div class="stat"><strong>7+</strong><span data-de>Projektbereiche</span><span data-en>Project areas</span></div>
+          <div class="stat"><strong>AI</strong><span data-de>Kreatives Mindset</span><span data-en>Creative mindset</span></div>
           <div class="stat"><strong>2026</strong><span>Open to Work</span></div>
         </div>
       </div>
       <div class="hero-visual reveal">
         <img src="assets/hero-illustration.jpg" alt="Illustration — Aisa Osmani, Bild- und Videobearbeitung" width="900" height="1100" loading="eager" decoding="async" />
         <div class="hero-visual-caption">
-          <small>PORTFOLIO HIGHLIGHT</small>
-          <h2>Bild &amp; Videobearbeitung</h2>
+          <small data-de>PORTFOLIO-HIGHLIGHT</small>
+          <small data-en>PORTFOLIO HIGHLIGHT</small>
+          <h2 data-de>Bild &amp; Videobearbeitung</h2>
+          <h2 data-en>Image &amp; video editing</h2>
         </div>
       </div>
     </section>
@@ -433,29 +476,37 @@
     <section id="ueber-aisa" class="container">
       <div class="section-grid">
         <div class="reveal">
-          <div class="eyebrow">Über Aisa</div>
-          <h2 class="section-title">Jung, ambitioniert — bereit für die digitale Branche.</h2>
+          <div class="eyebrow" data-de>Über Aisa</div>
+          <div class="eyebrow" data-en>About Aisa</div>
+          <h2 class="section-title" data-de>Jung, ambitioniert — bereit für die digitale Branche.</h2>
+          <h2 class="section-title" data-en>Young, ambitious — ready for the digital industry.</h2>
         </div>
         <div class="text-block reveal">
-          <p>Aisa Osmani verbindet visuelle Ästhetik, strategisches Denken und moderne AI-Tools. Ihre Arbeit umfasst Webdesign, Mobile UX, Corporate Publishing, Cross-Media-Branding und audiovisuelle Produktion.</p>
-          <p>Diese Seite präsentiert Originalarbeiten aus dem Studium — als professionelle digitale Visitenkarte für Praktika, Junior-Positionen und kreative Teams.</p>
+          <p data-de>Aisa Osmani verbindet visuelle Ästhetik, strategisches Denken und moderne AI-Tools. Ihre Arbeit umfasst Webdesign, Mobile UX, Corporate Publishing, Cross-Media-Branding und audiovisuelle Produktion.</p>
+          <p data-en>Aisa Osmani combines visual aesthetics, strategic thinking and modern AI tools. Her work spans web design, mobile UX, corporate publishing, cross-media branding and audiovisual production.</p>
+          <p data-de>Diese Seite präsentiert Originalarbeiten aus dem Studium — als professionelle digitale Visitenkarte für Praktika, Junior-Positionen und kreative Teams.</p>
+          <p data-en>This site presents original academic work — a professional digital calling card for internships, junior roles and creative teams.</p>
         </div>
       </div>
       <div class="cards">
         <div class="card reveal">
           <div class="card-icon">▣</div>
           <h3>Multimedia</h3>
-          <p>Design, Video, Illustration und digitale Storytelling-Formate.</p>
+          <p data-de>Design, Video, Illustration und digitale Storytelling-Formate.</p>
+          <p data-en>Design, video, illustration and digital storytelling formats.</p>
         </div>
         <div class="card reveal">
           <div class="card-icon">◈</div>
           <h3>Social Media</h3>
-          <p>Content-Strategie, Feeds, Kampagnen und Markenkommunikation.</p>
+          <p data-de>Content-Strategie, Feeds, Kampagnen und Markenkommunikation.</p>
+          <p data-en>Content strategy, feeds, campaigns and brand communication.</p>
         </div>
         <div class="card reveal">
           <div class="card-icon">✦</div>
-          <h3>AI Expertise</h3>
-          <p>Effiziente Workflows mit intelligenten Tools und kreativer Recherche.</p>
+          <h3 data-de>AI-Expertise</h3>
+          <h3 data-en>AI expertise</h3>
+          <p data-de>Effiziente Workflows mit intelligenten Tools und kreativer Recherche.</p>
+          <p data-en>Efficient workflows with intelligent tools and creative research.</p>
         </div>
       </div>
     </section>
@@ -463,22 +514,32 @@
     <section id="portfolio" class="container">
       <div class="reveal">
         <div class="eyebrow">Portfolio</div>
-        <h2 class="section-title">Ausgewählte Arbeiten — Studium &amp; Projekte.</h2>
-        <p class="section-lead">Sieben Schwerpunkte: von der Growli-App über FROOZ Cross-Media bis zu Editorial Design und audiovisuellen Moodboards.</p>
+        <h2 class="section-title" data-de>Ausgewählte Arbeiten — Studium &amp; Projekte.</h2>
+        <h2 class="section-title" data-en>Selected work — studies &amp; projects.</h2>
+        <p class="section-lead" data-de>Sechs Schwerpunkte: von der Growli-App über FROOZ Cross-Media bis zu Editorial Design und audiovisuellen Moodboards.</p>
+        <p class="section-lead" data-en>Six focus areas: from the Growli app and FROOZ cross-media to editorial design and audiovisual moodboards.</p>
         <div class="portfolio-nav">
-          <a href="#work-mobile">Mobile Design</a>
-          <a href="#work-cross">Cross Media</a>
-          <a href="#work-web">Webdesign</a>
-          <a href="#work-corp">Corporate Publishing</a>
-          <a href="#work-bild">Bild &amp; Video</a>
-          <a href="#work-audio">Audio visuell</a>
+          <a href="#work-mobile" data-de>Mobile Design</a>
+          <a href="#work-mobile" data-en>Mobile design</a>
+          <a href="#work-cross" data-de>Cross Media</a>
+          <a href="#work-cross" data-en>Cross media</a>
+          <a href="#work-web" data-de>Webdesign</a>
+          <a href="#work-web" data-en>Web design</a>
+          <a href="#work-corp" data-de>Corporate Publishing</a>
+          <a href="#work-corp" data-en>Corporate publishing</a>
+          <a href="#work-bild" data-de>Bild &amp; Video</a>
+          <a href="#work-bild" data-en>Image &amp; video</a>
+          <a href="#work-audio" data-de>Audiovisuell</a>
+          <a href="#work-audio" data-en>Audiovisual</a>
         </div>
       </div>
 
       <article id="work-mobile" class="work-block reveal">
         <div class="work-header">
-          <h3>Mobile Design — Growli</h3>
-          <p>Schrittzähler-App mit gamifiziertem Park-Wachstum und Umweltbezug. UI für Home, Community, Profil und Park-Levels — Konzeption bis Screen Design.</p>
+          <h3 data-de>Mobile Design — Growli</h3>
+          <h3 data-en>Mobile design — Growli</h3>
+          <p data-de>Schrittzähler-App mit gamifiziertem Park-Wachstum und Umweltbezug. UI für Home, Community, Profil und Park-Levels — Konzeption bis Screen Design.</p>
+          <p data-en>Step-counter app with gamified park growth and an environmental theme. UI for home, community, profile and park levels — from concept to screen design.</p>
         </div>
         <div class="work-feature">
           <img src="assets/mobile-home.jpg" alt="Growli App — Home Screen" loading="lazy" decoding="async" />
@@ -494,8 +555,10 @@
 
       <article id="work-cross" class="work-block reveal">
         <div class="work-header">
-          <h3>Cross Media Webdesign — FROOZ</h3>
-          <p>Markenauftritt für Frozen-Dessert: Landingpage, Social-Feed, Print-Packaging (Mango Lassi, Minze Ingwer, Rose Pistazie) und konsistente Visual Identity.</p>
+          <h3 data-de>Cross Media Webdesign — FROOZ</h3>
+          <h3 data-en>Cross-media web design — FROOZ</h3>
+          <p data-de>Markenauftritt für Frozen-Dessert: Landingpage, Social-Feed, Print-Packaging (Mango Lassi, Minze Ingwer, Rose Pistazie) und konsistente Visual Identity.</p>
+          <p data-en>Brand presence for a frozen dessert: landing page, social feed, print packaging (mango lassi, mint ginger, rose pistachio) and a consistent visual identity.</p>
         </div>
         <div class="work-feature">
           <img src="assets/cross-frooz.jpg" alt="FROOZ Cross-Media Landingpage" loading="lazy" />
@@ -513,8 +576,10 @@
 
       <article id="work-web" class="work-block reveal">
         <div class="work-header">
-          <h3>Webdesign</h3>
-          <p>Konzeption, Style Guide und Screen Design — strukturierte Farbwelten, Typografie und UI-Komponenten für moderne Webauftritte.</p>
+          <h3 data-de>Webdesign</h3>
+          <h3 data-en>Web design</h3>
+          <p data-de>Konzeption, Style Guide und Screen Design — strukturierte Farbwelten, Typografie und UI-Komponenten für moderne Webauftritte.</p>
+          <p data-en>Concept, style guide and screen design — structured colour systems, typography and UI components for modern websites.</p>
         </div>
         <div class="gallery">
           <div class="gallery-item g-span-6"><img src="assets/web-styleguide.png" alt="Webdesign Style Guide" loading="lazy" /></div>
@@ -525,7 +590,8 @@
       <article id="work-corp" class="work-block reveal">
         <div class="work-header">
           <h3>Corporate Publishing</h3>
-          <p>Editorial Layout, Magazine Mockups und Release-Visuals — professionelle Print- und Digital-Publikationen mit klarer Typografie.</p>
+          <p data-de>Editorial Layout, Magazine Mockups und Release-Visuals — professionelle Print- und Digital-Publikationen mit klarer Typografie.</p>
+          <p data-en>Editorial layout, magazine mockups and release visuals — professional print and digital publications with clear typography.</p>
         </div>
         <div class="work-feature">
           <img src="assets/corp-magazine-1.png" alt="Magazine Spread — Caffè Orologio" loading="lazy" />
@@ -540,11 +606,13 @@
 
       <article id="work-bild" class="work-block reveal">
         <div class="work-header">
-          <h3>Bild &amp; Videobearbeitung</h3>
-          <p>Illustration in Procreate und Adobe Illustrator, Moodboards und audiovisuelle Bearbeitung — von Konzept bis fertigem Clip.</p>
+          <h3 data-de>Bild &amp; Videobearbeitung</h3>
+          <h3 data-en>Image &amp; video editing</h3>
+          <p data-de>Illustration in Procreate und Adobe Illustrator, Moodboards und audiovisuelle Bearbeitung — von Konzept bis fertigem Clip.</p>
+          <p data-en>Illustration in Procreate and Adobe Illustrator, moodboards and audiovisual editing — from concept to finished clip.</p>
         </div>
         <div class="work-feature">
-          <video src="assets/bild-video-reel.mp4" controls playsinline preload="metadata" poster="assets/hero-illustration.jpg" aria-label="Video Bearbeitung"></video>
+          <video src="assets/bild-video-reel.mp4" controls playsinline preload="metadata" poster="assets/hero-illustration.jpg" data-de-aria="Video Bearbeitung" data-en-aria="Video editing reel" aria-label="Video Bearbeitung"></video>
         </div>
         <div class="gallery">
           <div class="gallery-item g-span-6"><img src="assets/bild-procreate-frau.png" alt="Procreate Illustration" loading="lazy" /></div>
@@ -556,11 +624,13 @@
 
       <article id="work-audio" class="work-block reveal">
         <div class="work-header">
-          <h3>Audiovisuelle Medien</h3>
-          <p>Storyboards, Shots und Moodboards für audiovisuelle Projekte — visuelle Dramaturgie und konsistente Bildsprache.</p>
+          <h3 data-de>Audiovisuelle Medien</h3>
+          <h3 data-en>Audiovisual media</h3>
+          <p data-de>Storyboards, Shots und Moodboards für audiovisuelle Projekte — visuelle Dramaturgie und konsistente Bildsprache.</p>
+          <p data-en>Storyboards, shots and moodboards for audiovisual projects — visual dramaturgy and a consistent visual language.</p>
         </div>
         <div class="work-feature">
-          <video src="assets/audio-reel.mp4" controls playsinline preload="metadata" poster="assets/audio-shot-1.jpg" aria-label="Audiovisuelles Projekt"></video>
+          <video src="assets/audio-reel.mp4" controls playsinline preload="metadata" poster="assets/audio-shot-1.jpg" data-de-aria="Audiovisuelles Projekt" data-en-aria="Audiovisual project reel" aria-label="Audiovisuelles Projekt"></video>
         </div>
         <div class="gallery">
           <div class="gallery-item g-span-7"><img src="assets/audio-shot-1.jpg" alt="Shot 1" loading="lazy" /></div>
@@ -574,8 +644,10 @@
       <div class="skills-box reveal">
         <div class="skills-layout">
           <div>
-            <div class="eyebrow">Fähigkeiten</div>
-            <h2 class="section-title">Tools &amp; Kompetenzen.</h2>
+            <div class="eyebrow" data-de>Fähigkeiten</div>
+            <div class="eyebrow" data-en>Skills</div>
+            <h2 class="section-title" data-de>Tools &amp; Kompetenzen.</h2>
+            <h2 class="section-title" data-en>Tools &amp; competencies.</h2>
           </div>
           <div class="skill-tags">
             <span>Adobe Illustrator</span><span>Procreate</span><span>Figma / UI</span>
@@ -591,16 +663,19 @@
       <div class="section-grid">
         <div class="reveal">
           <div class="eyebrow">Open to Work</div>
-          <h2 class="section-title">Bereit für den nächsten Schritt.</h2>
-          <p class="section-lead" style="margin-top:16px">Praktika und Junior-Rollen in Agentur, Marketing, Studio oder Startup.</p>
-          <a class="btn btn-primary" href="#kontakt" style="margin-top:24px;display:inline-flex">Anfrage senden →</a>
+          <h2 class="section-title" data-de>Bereit für den nächsten Schritt.</h2>
+          <h2 class="section-title" data-en>Ready for the next step.</h2>
+          <p class="section-lead" style="margin-top:16px" data-de>Praktika und Junior-Rollen in Agentur, Marketing, Studio oder Startup.</p>
+          <p class="section-lead" style="margin-top:16px" data-en>Internships and junior roles in agencies, marketing, studios or startups.</p>
+          <a class="btn btn-primary" href="#kontakt" style="margin-top:24px;display:inline-flex" data-de>Anfrage senden →</a>
+          <a class="btn btn-primary" href="#kontakt" style="margin-top:24px;display:inline-flex" data-en>Send inquiry →</a>
         </div>
         <div class="job-list reveal">
           <div class="job-item"><div class="check">✓</div><span>Social Media Assistant</span></div>
           <div class="job-item"><div class="check">✓</div><span>Junior Content Creator</span></div>
           <div class="job-item"><div class="check">✓</div><span>Multimedia Designer</span></div>
           <div class="job-item"><div class="check">✓</div><span>AI Content Assistant</span></div>
-          <div class="job-item"><div class="check">✓</div><span>Digital Marketing Praktikum</span></div>
+          <div class="job-item"><div class="check">✓</div><span data-de>Digital Marketing Praktikum</span><span data-en>Digital marketing internship</span></div>
         </div>
       </div>
     </section>
@@ -608,14 +683,17 @@
     <section id="kontakt" class="container">
       <div class="contact-card reveal">
         <div class="contact-left">
-          <div class="eyebrow">Kontakt</div>
-          <h2 class="section-title">Lassen Sie uns sprechen.</h2>
-          <p class="section-lead" style="margin-top:16px;font-size:16px">Für Jobangebote, Praktika oder Kooperationen.</p>
+          <div class="eyebrow" data-de>Kontakt</div>
+          <div class="eyebrow" data-en>Contact</div>
+          <h2 class="section-title" data-de>Lassen Sie uns sprechen.</h2>
+          <h2 class="section-title" data-en>Let's talk.</h2>
+          <p class="section-lead" style="margin-top:16px;font-size:16px" data-de>Für Jobangebote, Praktika oder Kooperationen.</p>
+          <p class="section-lead" style="margin-top:16px;font-size:16px" data-en>For job offers, internships or collaborations.</p>
           <div class="contact-links">
             <a class="contact-link" href="mailto:aisa.osmani@email.com"><b>✉ E-Mail</b><span>aisa.osmani@email.com</span></a>
-            <a class="contact-link" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><b>LinkedIn</b><span>Profil verlinken</span></a>
-            <a class="contact-link" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><b>Instagram</b><span>Profil verlinken</span></a>
-            <div class="contact-link"><b>Status</b><span>Open to Work · 2026</span></div>
+            <a class="contact-link" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><b>LinkedIn</b><span data-de>Profil verlinken</span><span data-en>Link profile</span></a>
+            <a class="contact-link" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><b>Instagram</b><span data-de>Profil verlinken</span><span data-en>Link profile</span></a>
+            <div class="contact-link"><b data-de>Status</b><b data-en>Status</b><span>Open to Work · 2026</span></div>
           </div>
         </div>
         <div class="contact-right">
@@ -623,7 +701,8 @@
             <div style="font-size:42px">✦</div>
             <div>
               <small style="letter-spacing:4px;color:rgba(255,255,255,0.45)">AIS A OSMANI</small>
-              <h3>„Digitale Inhalte mit echtem Wert — Multimedia, Social Media &amp; AI.“</h3>
+              <h3 data-de>„Digitale Inhalte mit echtem Wert — Multimedia, Social Media &amp; AI.“</h3>
+              <h3 data-en>“Digital content with real value — multimedia, social media &amp; AI.”</h3>
             </div>
           </div>
         </div>
@@ -633,7 +712,8 @@
 
   <footer>
     <div class="container footer-inner">
-      <p>© 2026 Aisa Osmani · Demo präsentiert von AGR MULTIMEDIA</p>
+      <p data-de>© 2026 Aisa Osmani · Demo präsentiert von AGR MULTIMEDIA</p>
+      <p data-en>© 2026 Aisa Osmani · Demo presented by AGR MULTIMEDIA</p>
       <p>Multimedia · Social Media · AI</p>
     </div>
   </footer>
@@ -654,12 +734,66 @@
       var open = document.body.classList.toggle("menu-open");
       var btn = document.querySelector(".menu-toggle");
       if (btn) btn.setAttribute("aria-expanded", open ? "true" : "false");
+      syncMenuAria();
     }
     function closeMenu() {
       document.body.classList.remove("menu-open");
       var btn = document.querySelector(".menu-toggle");
       if (btn) btn.setAttribute("aria-expanded", "false");
+      syncMenuAria();
     }
+
+    var PAGE_TITLE = {
+      de: "Aisa Osmani — Multimedia · Social Media · AI | Demo AGR MULTIMEDIA",
+      en: "Aisa Osmani — Multimedia · Social Media · AI | AGR MULTIMEDIA Demo"
+    };
+    var PAGE_DESC = {
+      de: "Aisa Osmani — Studentin Multimedia, Social Media Management und AI. Portfolio: Webdesign, Mobile Apps, Cross Media, Corporate Publishing und mehr.",
+      en: "Aisa Osmani — multimedia, social media management and AI student. Portfolio: web design, mobile apps, cross media, corporate publishing and more."
+    };
+
+    function syncLangMeta() {
+      var isEn = document.body.classList.contains("en");
+      document.documentElement.lang = isEn ? "en" : "de";
+      document.title = isEn ? PAGE_TITLE.en : PAGE_TITLE.de;
+      var meta = document.querySelector('meta[name="description"]');
+      if (meta) meta.setAttribute("content", isEn ? PAGE_DESC.en : PAGE_DESC.de);
+      document.querySelectorAll("video[data-de-aria]").forEach(function (v) {
+        v.setAttribute("aria-label", isEn ? v.getAttribute("data-en-aria") : v.getAttribute("data-de-aria"));
+      });
+      syncMenuAria();
+    }
+
+    function syncMenuAria() {
+      var btn = document.querySelector(".menu-toggle");
+      if (!btn) return;
+      var open = document.body.classList.contains("menu-open");
+      var isEn = document.body.classList.contains("en");
+      if (open) {
+        btn.setAttribute("aria-label", isEn ? "Close menu" : "Menü schließen");
+      } else {
+        btn.setAttribute("aria-label", isEn ? "Open menu" : "Menü öffnen");
+      }
+    }
+
+    function toggleLang() {
+      document.body.classList.toggle("en");
+      document.body.classList.toggle("de");
+      syncLangMeta();
+      try { localStorage.setItem("aisa-demo-lang", document.body.classList.contains("en") ? "en" : "de"); } catch (e) {}
+    }
+
+    (function initLang() {
+      try {
+        var saved = localStorage.getItem("aisa-demo-lang");
+        if (saved === "en" && document.body.classList.contains("de")) {
+          document.body.classList.remove("de");
+          document.body.classList.add("en");
+        }
+      } catch (e) {}
+      syncLangMeta();
+    })();
+
     window.addEventListener("resize", function () {
       if (window.innerWidth > 980) closeMenu();
     });
