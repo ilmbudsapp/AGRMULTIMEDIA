@@ -7,7 +7,10 @@ declare global {
 }
 
 // Initialize Google Analytics
+let gaInitialized = false;
+
 export const initGA = () => {
+  if (gaInitialized) return;
   const measurementId = import.meta.env.VITE_GA_MEASUREMENT_ID;
 
   if (!measurementId) {
@@ -30,17 +33,17 @@ export const initGA = () => {
     gtag('config', '${measurementId}');
   `;
   document.head.appendChild(script2);
+  gaInitialized = true;
 };
 
 // Track page views - useful for single-page applications
 export const trackPageView = (url: string) => {
-  if (typeof window === 'undefined' || !window.gtag) return;
-  
+  if (typeof window === "undefined" || !window.gtag) return;
   const measurementId = import.meta.env.VITE_GA_MEASUREMENT_ID;
   if (!measurementId) return;
-  
-  window.gtag('config', measurementId, {
-    page_path: url
+
+  window.gtag("config", measurementId, {
+    page_path: url,
   });
 };
 

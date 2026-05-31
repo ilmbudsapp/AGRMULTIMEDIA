@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development tsx server/index.ts",
     "build": "vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
-    "build:client": "node scripts/inject-crawler-html.mjs && node scripts/sync-sitemap.mjs && vite build && node scripts/inject-crawler-html.mjs --dist && node scripts/prerender-public-routes.mjs && node scripts/verify-dist-output.mjs",
+    "build:client": "node scripts/copy-local-fonts.mjs && node scripts/inject-crawler-html.mjs && node scripts/sync-sitemap.mjs && vite build && node scripts/inject-crawler-html.mjs --dist && node scripts/prerender-public-routes.mjs && node scripts/verify-dist-output.mjs",
     "inject:crawler": "node scripts/inject-crawler-html.mjs",
     "start": "NODE_ENV=production node dist/index.js",
     "check": "tsc",
@@ -19,6 +19,9 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "@fontsource/inter": "^5.2.8",
+    "@fontsource/playfair-display": "^5.2.8",
+    "@fontsource/plus-jakarta-sans": "^5.2.8",
     "@google-cloud/storage": "^7.17.0",
     "@hookform/resolvers": "^3.10.0",
     "@jridgewell/trace-mapping": "^0.3.25",

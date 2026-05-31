@@ -2173,15 +2173,15 @@ export const translations: Record<Exclude<Language, "al">, Translations> = {
         },
         types: {
           title: "Types of Cookies",
-          content: "We use essential cookies (necessary for website operation), analytical cookies (Google Analytics), functional cookies (settings memory), and performance cookies (website optimization)."
+          content: "Essential storage (language, cookie consent) is required for operation. Analytics cookies (Google Analytics) are set only after you accept in the cookie banner."
         },
         control: {
           title: "Cookie Control",
-          content: "You can control cookies through your browser settings. You can block or delete them, but this may affect website functionality. Most browsers automatically accept cookies."
+          content: "Choose in the cookie banner (“Essential only” or “Accept all”). You can delete stored data anytime via browser settings."
         },
         thirdParty: {
           title: "Third Party Cookies",
-          content: "We use Google Analytics for traffic analysis. Google may set its own cookies. Please check Google's privacy policy for more information about their cookies."
+          content: "Google Analytics loads only after consent. EmailJS processes contact form data as a processor. Fonts are self-hosted — no Google Fonts requests."
         }
       }
     },
@@ -3067,15 +3067,15 @@ export const translations: Record<Exclude<Language, "al">, Translations> = {
         },
         types: {
           title: "Arten von Cookies",
-          content: "Wir verwenden essenzielle Cookies (notwendig für den Website-Betrieb), analytische Cookies (Google Analytics), funktionale Cookies (Einstellungen speichern) und Leistungs-Cookies (Website-Optimierung)."
+          content: "Essenzielle Speicher (Sprache, Cookie-Einwilligung) sind für den Betrieb erforderlich. Analyse-Cookies (Google Analytics) werden erst nach Ihrer Einwilligung im Banner gesetzt."
         },
         control: {
           title: "Cookie-Kontrolle",
-          content: "Sie können Cookies über Ihre Browser-Einstellungen kontrollieren. Sie können sie blockieren oder löschen, aber dies kann die Website-Funktionalität beeinträchtigen. Die meisten Browser akzeptieren Cookies automatisch."
+          content: "Sie können Ihre Wahl im Cookie-Banner treffen („Nur notwendige“ oder „Alle akzeptieren“). Sie können gespeicherte Daten jederzeit über die Browser-Einstellungen löschen."
         },
         thirdParty: {
           title: "Cookies von Dritten",
-          content: "Wir verwenden Google Analytics zur Traffic-Analyse. Google kann eigene Cookies setzen. Bitte überprüfen Sie Googles Datenschutzrichtlinie für weitere Informationen über deren Cookies."
+          content: "Google Analytics (Google Ireland Limited) wird nur nach Einwilligung geladen. EmailJS verarbeitet Kontaktformular-Daten als Auftragsverarbeiter. Schriftarten werden lokal gehostet — es erfolgt kein Abruf von Google Fonts."
         }
       }
     },

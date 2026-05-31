@@ -2,8 +2,6 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-
 :root {
   --background: hsl(220, 26%, 98%);
   --foreground: hsl(224, 32%, 12%);
@@ -35,7 +33,7 @@
   --gradient-mesh: radial-gradient(at 40% 20%, hsl(262, 60%, 35%) 0%, transparent 50%),
     radial-gradient(at 80% 0%, hsl(217, 70%, 40%) 0%, transparent 45%),
     radial-gradient(at 0% 50%, hsl(262, 40%, 25%) 0%, transparent 45%);
-  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
   --radius: 1rem;
   --radius-lg: 1.25rem;
   --shadow-soft: 0 4px 24px -4px rgba(0, 0, 0, 0.08), 0 8px 48px -8px rgba(0, 0, 0, 0.06);

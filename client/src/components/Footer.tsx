@@ -1,6 +1,6 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Link, useLocation } from "wouter";
-import { Facebook, Instagram, Linkedin, MessageCircle, Mail as MailIcon } from "lucide-react";
+import { Facebook, Instagram, Linkedin, MessageCircle, Mail as MailIcon, Phone, MapPin } from "lucide-react";
 import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_LINK } from "@/lib/contact";
 import { toServiceLang, type ServiceLang } from "@/lib/servicePageI18n";
 import FooterLegalBlock from "@/components/FooterLegalBlock";
@@ -52,14 +52,14 @@ export default function Footer() {
       "App e sviluppo",
     ],
     sr: [
-      "GrafiÄki dizajn",
-      "AI sadrÅ¾aj",
+      "Grafički dizajn",
+      "AI sadržaj",
       "Veb dizajn i SEO",
       "Aplikacije i razvoj",
     ],
     al: [
       "Dizajn grafik",
-      "PÃ«rmbajtje me IA",
+      "Përmbajtje me IA",
       "Ueb-i dhe SEO",
       "Aplikacione dhe zhvillim",
     ],
@@ -169,15 +169,15 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-6 text-white">{t.footer.contact}</h4>
             <ul className="space-y-3">
               <li className="text-gray-400 flex items-center gap-2">
-                <span>ðŸ“ž</span>
+                <Phone className="w-4 h-4 shrink-0 text-gray-500" aria-hidden />
                 <a href={`tel:${PHONE_TEL}`} className="hover:text-white transition-colors">{PHONE_DISPLAY}</a>
               </li>
               <li className="text-gray-400 flex items-center gap-2">
-                <span>ðŸ“§</span>
+                <MailIcon className="w-4 h-4 shrink-0 text-gray-500" aria-hidden />
                 <a href="mailto:agron6922@gmail.com" className="hover:text-white transition-colors">agron6922@gmail.com</a>
               </li>
               <li className="text-gray-400 flex items-center gap-2">
-                <span>ðŸ“</span>
+                <MapPin className="w-4 h-4 shrink-0 text-gray-500" aria-hidden />
                 {t.footer.location}
               </li>
             </ul>

@@ -5,6 +5,8 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { initGA } from "./lib/analytics";
+import { hasAnalyticsConsent } from "./lib/consent";
+import CookieConsent from "@/components/CookieConsent";
 import { useAnalytics } from "./hooks/use-analytics";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import { ErrorBoundary } from "./components/ErrorBoundary";
@@ -101,18 +103,15 @@ function Router() {
 
 function App() {
   useEffect(() => {
-    const loadGa = () => {
-      if (!import.meta.env.VITE_GA_MEASUREMENT_ID) {
-        console.warn("Missing required Google Analytics key: VITE_GA_MEASUREMENT_ID");
-        return;
-      }
+    // Google Analytics loads only after explicit consent (DSGVO) — see CookieConsent.tsx
+    const loadGaIfConsented = () => {
+      if (!import.meta.env.VITE_GA_MEASUREMENT_ID) return;
+      if (!hasAnalyticsConsent()) return;
       initGA();
     };
-    if (typeof window !== "undefined" && "requestIdleCallback" in window) {
-      window.requestIdleCallback(loadGa, { timeout: 4500 });
-    } else {
-      window.setTimeout(loadGa, 2000);
-    }
+    loadGaIfConsented();
+    window.addEventListener("agr-consent-change", loadGaIfConsented);
+    return () => window.removeEventListener("agr-consent-change", loadGaIfConsented);
   }, []);
 
   return (
@@ -131,6 +130,7 @@ function App() {
                     <Router />
                   </Suspense>
                   <WhatsAppFloat />
+                  <CookieConsent />
                 </div>
                 <Toaster />
               </TooltipProvider>
