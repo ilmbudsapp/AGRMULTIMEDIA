@@ -19,7 +19,7 @@ import type { PortfolioFilterId } from "@/lib/portfolioPageI18n";
 import { toServiceLang } from "@/lib/servicePageI18n";
 
 const TAIROVIC_DEMO = "/demo/tairovic-bez-verzija/index.html";
-const TAIROVIC_IMG = "/demo/tairovic-bez-verzija/assets/preview.svg";
+const TAIROVIC_IMG = "/demo/tairovic-bez-verzija/assets/logo.webp";
 const AISA_DEMO = "/demo/aisa-osmani/index.html";
 const AISA_IMG = "/demo/aisa-osmani/assets/hero-illustration.jpg";
 const FIXBIKE_LIVE = "https://fixbike.online/";

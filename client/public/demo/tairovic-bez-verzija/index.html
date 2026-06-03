@@ -64,25 +64,22 @@ body.has-agr-demo-banner .header{top:var(--agr-banner-h)}
 .logo{
   display:flex;
   align-items:center;
-  gap:14px;
-  font-weight:900;
-  font-size:22px;
+  flex-shrink:0;
 }
-.logo-icon{
-  width:52px;
-  height:52px;
-  border-radius:18px;
-  background:linear-gradient(135deg,var(--gold),var(--gold2));
-  display:grid;
-  place-items:center;
-  color:white;
-  box-shadow:0 18px 35px rgba(184,146,70,.35);
-}
-.logo small{
+.logo-img{
   display:block;
-  font-size:11px;
-  letter-spacing:2px;
-  color:var(--gold);
+  height:52px;
+  width:auto;
+  max-width:min(300px,46vw);
+  object-fit:contain;
+}
+.footer-logo{
+  height:40px;
+  width:auto;
+  max-width:260px;
+  margin:0 auto 14px;
+  display:block;
+  object-fit:contain;
 }
 .links{
   display:flex;
@@ -400,10 +397,12 @@ textarea{height:145px}
 
 <header class="header">
   <nav class="nav">
-    <div class="logo">
-      <div class="logo-icon">T</div>
-      <div>Tairovic <small>Gebäudeservice</small></div>
-    </div>
+    <a href="#" class="logo navlink" data-page="home" aria-label="Tairovic Gebäudereinigung — Startseite">
+      <picture>
+        <source srcset="assets/logo.webp" type="image/webp">
+        <img src="assets/logo.png" alt="Tairovic Gebäudereinigung" class="logo-img" width="867" height="267" decoding="async">
+      </picture>
+    </a>
 
     <div class="links" id="links">
       <a href="#" class="navlink active" data-page="home">Startseite</a>
@@ -624,6 +623,10 @@ textarea{height:145px}
 </main>
 
 <footer class="footer">
+  <picture>
+    <source srcset="assets/logo.webp" type="image/webp">
+    <img src="assets/logo.png" alt="Tairovic Gebäudereinigung" class="footer-logo" width="867" height="267" loading="lazy" decoding="async">
+  </picture>
   <strong>Tairovic Gebäudeservice</strong><br>
   Gebäudereinigung · Hausmeisterservice · Gartenpflege · Objektpflege<br><br>
   © 2026 Tairovic Gebäudeservice. Alle Rechte vorbehalten.

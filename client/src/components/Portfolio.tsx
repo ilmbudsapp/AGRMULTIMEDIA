@@ -37,7 +37,7 @@ export default function Portfolio({ featured = false, asPage = false }: Portfoli
       id: 11,
       title: "Tairovic Gebäudeservice",
       description: tairovicBezVerzijaDescription[currentLanguage] ?? tairovicBezVerzijaDescription.en,
-      image: "/demo/tairovic-bez-verzija/assets/preview.svg",
+      image: "/demo/tairovic-bez-verzija/assets/logo.webp",
       category: "web",
       slug: "tairovic-bez-verzija",
       detailHref: "/demo/tairovic-bez-verzija/index.html",
