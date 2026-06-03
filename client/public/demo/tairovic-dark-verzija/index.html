@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base href="/demo/tairovic-dark-verzija/">
+<title>Tairovic Gebäudeservice — Demo (Dark) | AGR MULTIMEDIA</title>
+<meta name="description" content="Demo-Webseite Tairovic Gebäudeservice — Dark Elegant Variante. Gebäudereinigung, Hausmeister, Garten- und Objektpflege. AGR MULTIMEDIA.">
+<meta name="robots" content="noindex, follow">
+<link rel="stylesheet" href="/assets/fonts/local-fonts.css">
+
+<style>
+:root{
+  --agr-banner-h:22px;
+  --black:#05070c;
+  --dark:#0b1220;
+  --navy:#0f1f35;
+  --blue:#1e3a5f;
+  --gold:#c9a24a;
+  --gold2:#f0d27a;
+  --white:#ffffff;
+  --soft:#d8dee9;
+  --muted:#8e99aa;
+  --glass:rgba(255,255,255,.08);
+  --border:rgba(255,255,255,.14);
+  --shadow:0 35px 100px rgba(0,0,0,.55);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:"Inter",sans-serif;
+  background:
+    radial-gradient(circle at top right,rgba(30,58,95,.55),transparent 36%),
+    radial-gradient(circle at 15% 20%,rgba(201,162,74,.16),transparent 28%),
+    linear-gradient(135deg,var(--black),var(--dark) 45%,#070b13);
+  color:var(--white);
+  overflow-x:hidden;
+}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+
+#agr-demo-banner{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  padding:4px 12px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+  background:linear-gradient(90deg,#2d6db8,#01429e,#05070c);color:#fff;
+}
+#agr-demo-banner a{color:#fff;font-weight:800}
+body.has-agr-demo-banner .header{top:var(--agr-banner-h)}
+
+.header{
+  position:sticky;
+  top:0;
+  z-index:999;
+  background:rgba(5,7,12,.72);
+  backdrop-filter:blur(26px);
+  border-bottom:1px solid var(--border);
+}
+.nav{
+  max-width:1320px;
+  margin:auto;
+  padding:18px 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.logo{
+  display:flex;
+  align-items:center;
+  flex-shrink:0;
+}
+.logo-img{
+  display:block;
+  height:52px;
+  width:auto;
+  max-width:min(300px,46vw);
+  object-fit:contain;
+}
+.footer-logo{
+  height:40px;
+  width:auto;
+  max-width:260px;
+  margin:0 auto 14px;
+  display:block;
+  object-fit:contain;
+}
+.links{
+  display:flex;
+  gap:24px;
+  font-size:14px;
+  font-weight:800;
+  color:var(--soft);
+}
+.links a:hover,.links a.active{color:var(--gold2)}
+.cta{
+  padding:13px 22px;
+  border-radius:999px;
+  background:linear-gradient(135deg,var(--gold),var(--gold2));
+  color:#0b0f17;
+  font-weight:900;
+  box-shadow:0 20px 45px rgba(201,162,74,.28);
+}
+.menu{display:none;font-size:32px;cursor:pointer}
+
+.page{display:none}
+.page.active{display:block;animation:fade .45s ease}
+@keyframes fade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+.container{
+  max-width:1320px;
+  margin:auto;
+  padding:0 24px;
+}
+
+.hero{
+  min-height:88vh;
+  display:flex;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";
+  position:absolute;
+  width:720px;
+  height:720px;
+  right:-180px;
+  top:60px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(30,58,95,.65),transparent 65%);
+  filter:blur(2px);
+}
+.hero::after{
+  content:"";
+  position:absolute;
+  width:420px;
+  height:420px;
+  left:-120px;
+  bottom:-100px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(201,162,74,.22),transparent 66%);
+}
+.hero-grid{
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:64px;
+  align-items:center;
+}
+.kicker{
+  display:inline-flex;
+  padding:10px 16px;
+  border-radius:999px;
+  background:rgba(255,255,255,.07);
+  border:1px solid var(--border);
+  color:var(--gold2);
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:12px;
+  font-weight:900;
+  margin-bottom:24px;
+}
+h1,h2{
+  font-family:"Playfair Display",serif;
+}
+.hero h1{
+  font-size:clamp(58px,8vw,112px);
+  line-height:.86;
+  letter-spacing:-2px;
+  max-width:820px;
+  margin-bottom:28px;
+}
+.hero p{
+  max-width:680px;
+  font-size:20px;
+  line-height:1.85;
+  color:#c9d2df;
+  margin-bottom:36px;
+}
+.btns{display:flex;gap:16px;flex-wrap:wrap}
+.btn{
+  border:0;
+  padding:16px 26px;
+  border-radius:999px;
+  font-weight:900;
+  cursor:pointer;
+}
+.btn-primary{
+  background:linear-gradient(135deg,var(--gold),var(--gold2));
+  color:#0b0f17;
+}
+.btn-secondary{
+  background:rgba(255,255,255,.08);
+  color:white;
+  border:1px solid var(--border);
+  backdrop-filter:blur(18px);
+}
+
+.scene{
+  height:620px;
+  position:relative;
+  perspective:1400px;
+}
+.main-glass{
+  position:absolute;
+  inset:40px 65px;
+  border-radius:42px;
+  background:
+    linear-gradient(to top,rgba(5,7,12,.66),rgba(5,7,12,.06)),
+    url("https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=80") center/cover;
+  border:1px solid rgba(255,255,255,.18);
+  box-shadow:var(--shadow);
+  transform:rotateY(-13deg) rotateX(8deg);
+  transform-style:preserve-3d;
+  transition:.6s;
+}
+.main-glass:hover{
+  transform:rotateY(0) rotateX(0) translateY(-14px);
+}
+.panel{
+  position:absolute;
+  background:rgba(255,255,255,.09);
+  backdrop-filter:blur(24px);
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:30px;
+  padding:25px;
+  box-shadow:0 28px 80px rgba(0,0,0,.38);
+  transform-style:preserve-3d;
+  transition:.5s;
+}
+.panel:hover{
+  transform:rotateY(13deg) rotateX(8deg) translateY(-12px);
+}
+.panel1{left:0;top:95px;width:245px}
+.panel2{right:0;bottom:110px;width:285px}
+.panel3{left:105px;bottom:25px;width:250px}
+.big{
+  font-size:42px;
+  font-weight:900;
+  color:var(--gold2);
+}
+.panel p{
+  color:#d4dbe6;
+  margin-top:9px;
+  line-height:1.55;
+}
+
+.section{
+  padding:105px 0;
+  position:relative;
+}
+.title{
+  max-width:820px;
+  margin-bottom:54px;
+}
+.title h2{
+  font-size:clamp(46px,6vw,82px);
+  line-height:.92;
+  margin-bottom:20px;
+}
+.title p{
+  color:#b9c3d0;
+  font-size:19px;
+  line-height:1.85;
+}
+
+.grid{display:grid;gap:28px}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+.grid-2{grid-template-columns:repeat(2,1fr)}
+
+.card{
+  min-height:290px;
+  background:linear-gradient(145deg,rgba(255,255,255,.11),rgba(255,255,255,.045));
+  backdrop-filter:blur(24px);
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:34px;
+  padding:36px;
+  box-shadow:0 30px 90px rgba(0,0,0,.28);
+  position:relative;
+  overflow:hidden;
+  transform-style:preserve-3d;
+  transition:.5s;
+}
+.card::before{
+  content:"";
+  position:absolute;
+  inset:-1px;
+  background:linear-gradient(135deg,rgba(201,162,74,.28),transparent 35%,rgba(30,58,95,.18));
+  opacity:0;
+  transition:.5s;
+}
+.card:hover::before{opacity:1}
+.card:hover{
+  transform:perspective(1000px) rotateX(7deg) rotateY(-7deg) translateY(-14px);
+  box-shadow:0 45px 120px rgba(0,0,0,.5);
+}
+.card > *{position:relative;z-index:2}
+.icon{
+  width:68px;
+  height:68px;
+  border-radius:24px;
+  background:linear-gradient(135deg,var(--gold),var(--gold2));
+  color:#10131a;
+  display:grid;
+  place-items:center;
+  font-weight:900;
+  font-size:26px;
+  margin-bottom:25px;
+  box-shadow:0 20px 45px rgba(201,162,74,.25);
+}
+.card h3{
+  font-size:25px;
+  margin-bottom:12px;
+}
+.card p,.card li{
+  color:#b9c3d0;
+  line-height:1.8;
+}
+.card ul{padding-left:20px;margin-top:12px}
+
+.gold-section{
+  background:
+    radial-gradient(circle at right,rgba(201,162,74,.2),transparent 35%),
+    rgba(255,255,255,.025);
+  border-top:1px solid rgba(255,255,255,.08);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.work{
+  min-height:410px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+}
+.work.photo{
+  background:
+    linear-gradient(to top,rgba(5,7,12,.88),rgba(5,7,12,.12)),
+    url("https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1200&q=80") center/cover;
+}
+.work.video{
+  background:
+    linear-gradient(to top,rgba(5,7,12,.88),rgba(5,7,12,.12)),
+    url("https://images.unsplash.com/photo-1603712725038-e9334ae8f39f?auto=format&fit=crop&w=1200&q=80") center/cover;
+}
+.work h3{
+  font-family:"Playfair Display",serif;
+  font-size:58px;
+}
+.play{
+  width:78px;
+  height:78px;
+  border-radius:50%;
+  background:rgba(255,255,255,.85);
+  color:#111;
+  display:grid;
+  place-items:center;
+  font-size:26px;
+  margin-bottom:22px;
+}
+
+.page-hero{
+  padding:115px 0 95px;
+  background:
+    radial-gradient(circle at right,rgba(30,58,95,.48),transparent 38%),
+    radial-gradient(circle at left,rgba(201,162,74,.13),transparent 32%);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.page-hero h1{
+  font-size:clamp(56px,8vw,104px);
+  line-height:.88;
+}
+.page-hero p{
+  max-width:780px;
+  margin-top:22px;
+  font-size:20px;
+  line-height:1.85;
+  color:#c9d2df;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:30px;
+}
+input,textarea{
+  width:100%;
+  padding:17px 18px;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.16);
+  background:rgba(255,255,255,.08);
+  color:white;
+  margin-bottom:15px;
+  font:inherit;
+}
+input::placeholder,textarea::placeholder{color:#9faabd}
+textarea{height:145px}
+.footer{
+  text-align:center;
+  padding:55px 24px;
+  color:#9faabd;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+.footer strong{color:white}
+
+@media(max-width:980px){
+  .links,.cta{display:none}
+  .menu{display:block}
+  .links.open{
+    display:flex;
+    position:absolute;
+    top:82px;
+    left:18px;
+    right:18px;
+    flex-direction:column;
+    padding:24px;
+    border-radius:26px;
+    background:#0b1220;
+    box-shadow:var(--shadow);
+  }
+  .hero-grid,.grid-3,.grid-2,.contact-grid{
+    grid-template-columns:1fr;
+  }
+  .hero{padding:80px 0}
+  .scene{height:520px}
+  .main-glass{inset:40px 25px}
+}
+</style>
+</head>
+
+<body class="has-agr-demo-banner">
+
+<div id="agr-demo-banner" role="note">
+  <span>Demo · Konzept 3 · Dark</span>
+  <a href="https://www.agrmultimedia.eu/" rel="noopener">AGR MULTIMEDIA</a>
+</div>
+
+<header class="header">
+<nav class="nav">
+  <a href="#" class="logo navlink" data-page="home" aria-label="Tairovic Gebäudereinigung — Startseite">
+    <picture>
+      <source srcset="assets/logo.webp" type="image/webp">
+      <img src="assets/logo.png" alt="Tairovic Gebäudereinigung" class="logo-img" width="867" height="267" decoding="async">
+    </picture>
+  </a>
+
+  <div class="links" id="links">
+    <a href="#" class="navlink active" data-page="home">Startseite</a>
+    <a href="#" class="navlink" data-page="reinigung">Gebäudereinigung</a>
+    <a href="#" class="navlink" data-page="hausmeister">Hausmeisterservice</a>
+    <a href="#" class="navlink" data-page="garten">Gartenpflege</a>
+    <a href="#" class="navlink" data-page="arbeiten">Unsere Arbeiten</a>
+    <a href="#" class="navlink" data-page="kontakt">Kontakt</a>
+  </div>
+
+  <a href="#" class="cta navlink" data-page="kontakt">Angebot anfragen</a>
+  <div class="menu" id="menu">☰</div>
+</nav>
+</header>
+
+<main>
+
+<section id="home" class="page active">
+  <div class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="kicker">Dark Elegant Gebäudeservice</div>
+        <h1>Exklusive Pflege für hochwertige Immobilien.</h1>
+        <p>
+          Tairovic Gebäudeservice steht für professionelle Reinigung,
+          zuverlässige Objektbetreuung und einen gepflegten Auftritt,
+          der bei Eigentümern, Mietern und Kunden Eindruck hinterlässt.
+        </p>
+        <div class="btns">
+          <a href="#" class="btn btn-primary navlink" data-page="kontakt">Kostenlose Anfrage</a>
+          <a href="#" class="btn btn-secondary navlink" data-page="arbeiten">Unsere Arbeiten</a>
+        </div>
+      </div>
+
+      <div class="scene">
+        <div class="main-glass"></div>
+
+        <div class="panel panel1">
+          <div class="big">Premium</div>
+          <p>Eleganter Service für gepflegte Objekte.</p>
+        </div>
+
+        <div class="panel panel2">
+          <div class="big">360°</div>
+          <p>Reinigung, Kontrolle, Pflege und Winterdienst.</p>
+        </div>
+
+        <div class="panel panel3">
+          <div class="big">Clean</div>
+          <p>Diskret, zuverlässig und professionell.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="title">
+        <div class="kicker">Leistungen</div>
+        <h2>Ein Ansprechpartner für Ihre Immobilie.</h2>
+        <p>
+          Von der regelmäßigen Gebäudereinigung bis zum Hausmeisterservice:
+          Wir sorgen dafür, dass Ihr Objekt dauerhaft sauber, sicher und gepflegt bleibt.
+        </p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="icon">01</div>
+          <h3>Gebäudereinigung</h3>
+          <p>Treppenhäuser, Flure, Keller, Garagen, Müllplätze, Gehwege und Gemeinschaftsflächen.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">02</div>
+          <h3>Hausmeisterservice</h3>
+          <p>Objektkontrollen, Beleuchtung, Schließdienst, Schadensmeldungen und Kleinreparaturen.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">03</div>
+          <h3>Außenanlagen</h3>
+          <p>Gartenpflege, Rasenmähen, Heckenschnitt, Laubentfernung, Winterdienst und Streudienst.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section gold-section">
+    <div class="container">
+      <div class="title">
+        <div class="kicker">Anspruch</div>
+        <h2>Sauberkeit ist der erste Eindruck.</h2>
+        <p>
+          Ein gepflegtes Objekt wirkt hochwertig, sicher und einladend.
+          Genau dafür arbeiten wir mit Präzision, System und Verantwortung.
+        </p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card"><div class="icon">✓</div><h3>Zuverlässig</h3><p>Klare Termine, feste Abläufe und saubere Ergebnisse.</p></div>
+        <div class="card"><div class="icon">✦</div><h3>Elegant</h3><p>Ein professioneller Auftritt für anspruchsvolle Immobilien.</p></div>
+        <div class="card"><div class="icon">↗</div><h3>Flexibel</h3><p>Individuelle Lösungen für Privatkunden, Gewerbe und Hausverwaltungen.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reinigung" class="page">
+  <div class="page-hero">
+    <div class="container">
+      <div class="kicker">Leistung</div>
+      <h1>Gebäudereinigung</h1>
+      <p>Professionelle Reinigung für Wohnanlagen, Gewerbeobjekte und gemeinschaftlich genutzte Bereiche.</p>
+    </div>
+  </div>
+  <div class="section">
+    <div class="container grid grid-3">
+      <div class="card"><h3>Innenbereiche</h3><ul><li>Treppenhausreinigung</li><li>Flure</li><li>Gemeinschaftsräume</li><li>Kellerbereiche</li></ul></div>
+      <div class="card"><h3>Außenbereiche</h3><ul><li>Gehwege</li><li>Hofflächen</li><li>Parkplätze</li><li>Müllplätze</li></ul></div>
+      <div class="card"><h3>Spezialreinigung</h3><ul><li>Garagenreinigung</li><li>Hochdruckreinigung</li><li>Grundreinigung</li><li>Regelmäßige Pflege</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="hausmeister" class="page">
+  <div class="page-hero">
+    <div class="container">
+      <div class="kicker">Leistung</div>
+      <h1>Hausmeisterservice</h1>
+      <p>Zuverlässige Betreuung Ihrer Immobilie mit Kontrolle, Verantwortung und schneller Rückmeldung.</p>
+    </div>
+  </div>
+  <div class="section">
+    <div class="container grid grid-3">
+      <div class="card"><h3>Objektkontrollen</h3><ul><li>Sichtprüfungen</li><li>Schadensmeldungen</li><li>Kontrolle von Allgemeinbereichen</li></ul></div>
+      <div class="card"><h3>Technik</h3><ul><li>Beleuchtungskontrolle</li><li>Austausch von Leuchtmitteln</li><li>Kleinreparaturen</li></ul></div>
+      <div class="card"><h3>Betreuung</h3><ul><li>Schließdienst</li><li>Hausbetreuung</li><li>Montagearbeiten</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="garten" class="page">
+  <div class="page-hero">
+    <div class="container">
+      <div class="kicker">Leistung</div>
+      <h1>Gartenpflege</h1>
+      <p>Gepflegte Außenbereiche für einen hochwertigen ersten Eindruck.</p>
+    </div>
+  </div>
+  <div class="section">
+    <div class="container grid grid-3">
+      <div class="card"><h3>Grünflächen</h3><ul><li>Rasenmähen</li><li>Bewässerung</li><li>Beetpflege</li></ul></div>
+      <div class="card"><h3>Pflegearbeiten</h3><ul><li>Heckenschnitt</li><li>Unkrautentfernung</li><li>Laubentfernung</li></ul></div>
+      <div class="card"><h3>Saisonservice</h3><ul><li>Frühjahrspflege</li><li>Sommerpflege</li><li>Herbstreinigung</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="arbeiten" class="page">
+  <div class="page-hero">
+    <div class="container">
+      <div class="kicker">Referenzen</div>
+      <h1>Unsere Arbeiten</h1>
+      <p>Fotos, Videos, Vorher-Nachher-Aufnahmen und Projektbeispiele.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container grid grid-2">
+      <div class="card work photo">
+        <h3>Foto</h3>
+        <p>Galerie für Treppenhäuser, Außenanlagen, Garagen, Höfe und gepflegte Objekte.</p>
+      </div>
+
+      <div class="card work video">
+        <div class="play">▶</div>
+        <h3>Video</h3>
+        <p>Kurze Arbeitsvideos, Reinigungsprozesse und hochwertige Ergebnisaufnahmen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt" class="page">
+  <div class="page-hero">
+    <div class="container">
+      <div class="kicker">Kontakt</div>
+      <h1>Angebot anfragen</h1>
+      <p>Fordern Sie ein individuelles Angebot für Ihre Immobilie an.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container contact-grid">
+      <div class="card">
+        <h3>Tairovic Gebäudeservice</h3>
+        <p><br><strong>Inhaberin:</strong> Mevlida Tairovic</p>
+        <p><strong>Telefon:</strong> +49 XXX XXXXXXX</p>
+        <p><strong>E-Mail:</strong> info@tairovic-gebaeudeservice.de</p>
+        <p><strong>Web:</strong> tairovic-gebaeudeservice.de</p>
+      </div>
+
+      <div class="card">
+        <input type="text" placeholder="Ihr Name">
+        <input type="email" placeholder="Ihre E-Mail">
+        <input type="text" placeholder="Telefonnummer">
+        <textarea placeholder="Ihre Nachricht"></textarea>
+        <button class="btn btn-primary">Anfrage senden</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <picture>
+    <source srcset="assets/logo.webp" type="image/webp">
+    <img src="assets/logo.png" alt="Tairovic Gebäudereinigung" class="footer-logo" width="867" height="267" loading="lazy" decoding="async">
+  </picture>
+  <strong>Tairovic Gebäudeservice</strong><br>
+  Gebäudereinigung · Hausmeisterservice · Gartenpflege · Objektpflege<br><br>
+  © 2026 Tairovic Gebäudeservice. Alle Rechte vorbehalten.
+</footer>
+
+<script>
+(function(){
+  var bar=document.getElementById("agr-demo-banner");
+  if(!bar)return;
+  function sync(){
+    document.documentElement.style.setProperty("--agr-banner-h",(bar.offsetHeight||22)+"px");
+  }
+  sync();
+  window.addEventListener("resize",sync);
+})();
+
+const navlinks=document.querySelectorAll(".navlink");
+const pages=document.querySelectorAll(".page");
+const menu=document.getElementById("menu");
+const links=document.getElementById("links");
+
+navlinks.forEach(link=>{
+  link.addEventListener("click",e=>{
+    e.preventDefault();
+    const target=link.dataset.page;
+    if(!target)return;
+
+    pages.forEach(p=>p.classList.remove("active"));
+    document.getElementById(target).classList.add("active");
+
+    navlinks.forEach(a=>a.classList.remove("active"));
+    document.querySelectorAll(`[data-page="${target}"]`).forEach(a=>a.classList.add("active"));
+
+    links.classList.remove("open");
+    window.scrollTo(0,0);
+  });
+});
+
+menu.addEventListener("click",()=>links.classList.toggle("open"));
+
+document.querySelectorAll(".card,.panel,.main-glass").forEach(el=>{
+  el.addEventListener("mousemove",e=>{
+    const r=el.getBoundingClientRect();
+    const x=e.clientX-r.left;
+    const y=e.clientY-r.top;
+    const rx=((y/r.height)-.5)*-12;
+    const ry=((x/r.width)-.5)*12;
+    el.style.transform=`perspective(1000px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-12px)`;
+  });
+  el.addEventListener("mouseleave",()=>{
+    el.style.transform="";
+  });
+});
+</script>
+
+</body>
+</html>

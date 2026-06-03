@@ -503,6 +503,12 @@ const EXTRA_EN: Record<string, RouteSeo> = {
       "Sky-premium building services demo: cleaning, caretaker, garden and property care. Azzura colour variant for client review.",
     keywords: "Gebäudereinigung, Azzura, web design demo, AGR Multimedia",
   },
+  "/demo/tairovic-dark-verzija": {
+    title: "Tairovic Gebäudeservice — Dark demo concept 3 (AGR Multimedia)",
+    description:
+      "Dark elegant building services demo: cleaning, caretaker, garden and property care. Premium night-style variant for client review.",
+    keywords: "Gebäudereinigung, dark web design, demo, AGR Multimedia",
+  },
 };
 
 const EXTRA_DE: Record<string, RouteSeo> = {
@@ -642,6 +648,12 @@ const EXTRA_DE: Record<string, RouteSeo> = {
       "Sky-Premium Demo: Gebäudereinigung, Hausmeister, Garten- und Objektpflege. Azzura-Farbvariante zur Kundenauswahl.",
     keywords: "Gebäudereinigung, Azzura, Webdesign Demo, AGR Multimedia",
   },
+  "/demo/tairovic-dark-verzija": {
+    title: "Tairovic Gebäudeservice — Dark Demo Konzept 3 | AGR Multimedia",
+    description:
+      "Dark-Elegant Demo: Gebäudereinigung, Hausmeister, Garten- und Objektpflege. Premium-Dunkelvariante zur Kundenauswahl.",
+    keywords: "Gebäudereinigung, Dark Webdesign, Demo, AGR Multimedia",
+  },
 };
 
 const EXTRA_IT: Record<string, RouteSeo> = {
@@ -776,6 +788,12 @@ const EXTRA_IT: Record<string, RouteSeo> = {
     description:
       "Demo sky-premium: pulizie, custode, giardino e cura immobili. Variante colore Azzura per il cliente.",
     keywords: "pulizie edifici, Azzura, demo web design, AGR Multimedia",
+  },
+  "/demo/tairovic-dark-verzija": {
+    title: "Tairovic Gebäudeservice — demo Dark concetto 3 | AGR Multimedia",
+    description:
+      "Demo dark elegant: pulizie, custode, giardino e cura immobili. Variante premium scura per il cliente.",
+    keywords: "pulizie edifici, dark web design, demo, AGR Multimedia",
   },
 };
 
@@ -912,6 +930,12 @@ const EXTRA_SR: Record<string, RouteSeo> = {
       "Sky-premium demo: čišćenje, domar, bašta i održavanje objekata. Azzura varijanta boja za klijenta.",
     keywords: "čišćenje zgrada, Azzura, web demo, AGR Multimedia",
   },
+  "/demo/tairovic-dark-verzija": {
+    title: "Tairovic Gebäudeservice — Dark demo koncept 3 | AGR Multimedia",
+    description:
+      "Dark elegant demo: čišćenje, domar, bašta i održavanje objekata. Premium tamna varijanta za klijenta.",
+    keywords: "čišćenje zgrada, dark web, demo, AGR Multimedia",
+  },
 };
 
 const EXTRA_AL: Record<string, RouteSeo> = {
@@ -1046,6 +1070,12 @@ const EXTRA_AL: Record<string, RouteSeo> = {
     description:
       "Demo sky-premium: pastrim, mirëmbajtje, kopsht dhe kujdes objektesh. Variant Azzura për klientin.",
     keywords: "pastrim ndërtimesh, Azzura, demo web, AGR Multimedia",
+  },
+  "/demo/tairovic-dark-verzija": {
+    title: "Tairovic Gebäudeservice — demo Dark koncepti 3 | AGR Multimedia",
+    description:
+      "Demo dark elegant: pastrim, mirëmbajtje, kopsht dhe kujdes objektesh. Variant premium i errët për klientin.",
+    keywords: "pastrim ndërtimesh, dark web, demo, AGR Multimedia",
   },
 };
 

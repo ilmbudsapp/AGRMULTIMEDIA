@@ -16,6 +16,14 @@ export default function Portfolio({ featured = false, asPage = false }: Portfoli
   const { t, tSpec, currentLanguage } = useLanguage();
   const [activeFilter, setActiveFilter] = useState('all');
 
+  const tairovicDarkVerzijaDescription: Record<string, string> = {
+    en: "Tairovic Gebäudeservice — client demo concept 3 (Dark): elegant dark layout with gold accents for building services.",
+    de: "Tairovic Gebäudeservice — Kunden-Demo Konzept 3 (Dark): elegantes Dunkel-Layout mit Goldakzenten.",
+    it: "Tairovic Gebäudeservice — demo cliente concetto 3 (Dark): layout scuro elegante con accenti oro.",
+    sr: "Tairovic Gebäudeservice — klijentski demo koncept 3 (Dark): elegantan tamni layout sa zlatnim akcentima.",
+    al: "Tairovic Gebäudeservice — demo klienti koncepti 3 (Dark): layout i errët elegant me thekse të arta.",
+  };
+
   const tairovicAzzuraVerzijaDescription: Record<string, string> = {
     en: "Tairovic Gebäudeservice — client demo concept 2 (Azzura): sky-premium layout with light blue styling for building services.",
     de: "Tairovic Gebäudeservice — Kunden-Demo Konzept 2 (Azzura): Sky-Premium Layout in hellem Blau für Gebäudedienstleistungen.",
@@ -42,6 +50,16 @@ export default function Portfolio({ featured = false, asPage = false }: Portfoli
 
   const portfolioItems = [
     {
+      id: 11,
+      title: "Tairovic — Konzept 1",
+      description: tairovicBezVerzijaDescription[currentLanguage] ?? tairovicBezVerzijaDescription.en,
+      image: "/demo/tairovic-bez-verzija/assets/logo.webp",
+      category: "web",
+      slug: "tairovic-bez-verzija",
+      detailHref: "/demo/tairovic-bez-verzija/index.html",
+      staticDemo: true,
+    },
+    {
       id: 12,
       title: "Tairovic — Azzura",
       description: tairovicAzzuraVerzijaDescription[currentLanguage] ?? tairovicAzzuraVerzijaDescription.en,
@@ -52,13 +70,13 @@ export default function Portfolio({ featured = false, asPage = false }: Portfoli
       staticDemo: true,
     },
     {
-      id: 11,
-      title: "Tairovic — Konzept 1",
-      description: tairovicBezVerzijaDescription[currentLanguage] ?? tairovicBezVerzijaDescription.en,
-      image: "/demo/tairovic-bez-verzija/assets/logo.webp",
+      id: 13,
+      title: "Tairovic — Dark",
+      description: tairovicDarkVerzijaDescription[currentLanguage] ?? tairovicDarkVerzijaDescription.en,
+      image: "/demo/tairovic-dark-verzija/assets/logo.webp",
       category: "web",
-      slug: "tairovic-bez-verzija",
-      detailHref: "/demo/tairovic-bez-verzija/index.html",
+      slug: "tairovic-dark-verzija",
+      detailHref: "/demo/tairovic-dark-verzija/index.html",
       staticDemo: true,
     },
     {

@@ -18,6 +18,8 @@ import { fotoKreiraneSaAiGalleryByLang } from "@/data/fotoKreiraneSaAiGallery";
 import type { PortfolioFilterId } from "@/lib/portfolioPageI18n";
 import { toServiceLang } from "@/lib/servicePageI18n";
 
+const TAIROVIC_DARK_DEMO = "/demo/tairovic-dark-verzija/index.html";
+const TAIROVIC_DARK_IMG = "/demo/tairovic-dark-verzija/assets/logo.webp";
 const TAIROVIC_AZZURA_DEMO = "/demo/tairovic-azzura-verzija/index.html";
 const TAIROVIC_AZZURA_IMG = "/demo/tairovic-azzura-verzija/assets/logo.webp";
 const TAIROVIC_DEMO = "/demo/tairovic-bez-verzija/index.html";
@@ -222,7 +224,22 @@ export default function PortfolioShowcase() {
               title={p.categories.web.title}
               intro={p.categories.web.intro}
             >
-              <div className="grid gap-8 md:grid-cols-2 2xl:grid-cols-4">
+              <div className="grid gap-8 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+                <ProjectCard
+                  image={TAIROVIC_IMG}
+                  imageFit="contain"
+                  title={p.projects.tairovicBezVerzija.title}
+                  description={p.projects.tairovicBezVerzija.description}
+                  pillarLabel={p.categories.web.title}
+                  pillarIcon={LayoutGrid}
+                  pillarClass={webPillarClass}
+                  gradeBadge={p.projects.tairovicBezVerzija.gradeBadge}
+                >
+                  <a href={TAIROVIC_DEMO} className={LIVE_BTN}>
+                    {p.projects.tairovicBezVerzija.liveCta}
+                    <ExternalLink className="h-4 w-4" aria-hidden />
+                  </a>
+                </ProjectCard>
                 <ProjectCard
                   image={TAIROVIC_AZZURA_IMG}
                   imageFit="contain"
@@ -239,17 +256,17 @@ export default function PortfolioShowcase() {
                   </a>
                 </ProjectCard>
                 <ProjectCard
-                  image={TAIROVIC_IMG}
+                  image={TAIROVIC_DARK_IMG}
                   imageFit="contain"
-                  title={p.projects.tairovicBezVerzija.title}
-                  description={p.projects.tairovicBezVerzija.description}
+                  title={p.projects.tairovicDarkVerzija.title}
+                  description={p.projects.tairovicDarkVerzija.description}
                   pillarLabel={p.categories.web.title}
                   pillarIcon={LayoutGrid}
                   pillarClass={webPillarClass}
-                  gradeBadge={p.projects.tairovicBezVerzija.gradeBadge}
+                  gradeBadge={p.projects.tairovicDarkVerzija.gradeBadge}
                 >
-                  <a href={TAIROVIC_DEMO} className={LIVE_BTN}>
-                    {p.projects.tairovicBezVerzija.liveCta}
+                  <a href={TAIROVIC_DARK_DEMO} className={LIVE_BTN}>
+                    {p.projects.tairovicDarkVerzija.liveCta}
                     <ExternalLink className="h-4 w-4" aria-hidden />
                   </a>
                 </ProjectCard>
