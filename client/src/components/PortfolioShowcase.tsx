@@ -223,6 +223,7 @@ export default function PortfolioShowcase() {
               <div className="grid gap-8 lg:grid-cols-2 xl:grid-cols-3">
                 <ProjectCard
                   image={TAIROVIC_IMG}
+                  imageFit="contain"
                   title={p.projects.tairovicBezVerzija.title}
                   description={p.projects.tairovicBezVerzija.description}
                   pillarLabel={p.categories.web.title}
