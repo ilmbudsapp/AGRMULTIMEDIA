@@ -73,6 +73,14 @@
     { "source": "/manifest.json", "destination": "/manifest.json" },
     { "source": "/agrmm2026indexnowkey01.txt", "destination": "/agrmm2026indexnowkey01.txt" },
     {
+      "source": "/demo/:slug",
+      "destination": "/demo/:slug/index.html"
+    },
+    {
+      "source": "/demo/:slug/",
+      "destination": "/demo/:slug/index.html"
+    },
+    {
       "source": "/((?!api/|demo/).*)",
       "destination": "/index.html"
     }
