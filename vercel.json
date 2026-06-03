@@ -6,43 +6,43 @@
   "redirects": [
     {
       "source": "/demo-reinigung",
-      "destination": "/portfolio#portfolio-reinigung",
+      "destination": "/portfolio",
       "permanent": true
     },
     {
       "source": "/demo-reinigung/:path*",
-      "destination": "/portfolio#portfolio-reinigung",
+      "destination": "/portfolio",
       "permanent": true
     },
     {
       "source": "/demo/tonis-autopflege",
-      "destination": "/demo/porro-lidia",
-      "permanent": false
+      "destination": "/portfolio",
+      "permanent": true
     },
     {
       "source": "/demo/tonis-autopflege/:path*",
-      "destination": "/demo/porro-lidia",
-      "permanent": false
+      "destination": "/portfolio",
+      "permanent": true
     },
     {
       "source": "/demo/islamic-center",
-      "destination": "/demo/porro-lidia",
-      "permanent": false
+      "destination": "/portfolio",
+      "permanent": true
     },
     {
       "source": "/demo/islamic-center/:path*",
-      "destination": "/demo/porro-lidia",
-      "permanent": false
+      "destination": "/portfolio",
+      "permanent": true
     },
     {
       "source": "/demo/porro-lidia",
-      "destination": "/demo/porro-lidia/index.html",
-      "permanent": false
+      "destination": "/portfolio",
+      "permanent": true
     },
     {
-      "source": "/demo/porro-lidia/",
-      "destination": "/demo/porro-lidia/index.html",
-      "permanent": false
+      "source": "/demo/porro-lidia/:path*",
+      "destination": "/portfolio",
+      "permanent": true
     },
     {
       "source": "/demo/aisa-osmani",

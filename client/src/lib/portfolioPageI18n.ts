@@ -33,10 +33,8 @@ export interface PortfolioPageCopy {
     ux: { title: string; description: string; cta: string };
   };
   projects: {
-    porroLidia: PortfolioProjectCopy;
     aisaOsmani: PortfolioProjectCopy;
     fixbike: PortfolioProjectCopy;
-    reinigung: PortfolioProjectCopy;
     theirrealm: {
       title: string;
       subtitle: string;
@@ -104,13 +102,6 @@ const en: PortfolioPageCopy = {
     },
   },
   projects: {
-    porroLidia: {
-      title: "Porro Lidia Fotografin",
-      description:
-        "Bilingual demo site (German, Italian): weddings, birthdays, family celebrations and events — elegant photography portfolio template.",
-      liveCta: "Open demo",
-      gradeBadge: "Demo · DE / IT",
-    },
     aisaOsmani: {
       title: "Aisa Osmani — Portfolio",
       description:
@@ -124,15 +115,6 @@ const en: PortfolioPageCopy = {
         "Professional bicycle repair and service website — fast load times, strong local GEO SEO and conversion-focused booking structure.",
       liveCta: "View live website",
       gradeBadge: "Grade A · GEO",
-    },
-    reinigung: {
-      title: "Premium textile & interior cleaning",
-      description:
-        "A modern, conversion-focused web design for professional deep cleaning of furniture, upholstery and vehicles in Stuttgart — fresh visuals, clear services and WhatsApp booking.",
-      liveCta: "Request a similar project",
-      gradeBadge: "Web design · Demo",
-      mediaTitle: "Project gallery",
-      mediaIntro: "Photos and videos from the concept — click any item for full-screen preview.",
     },
     theirrealm: {
       title: "theirrealmtv CAT",
@@ -202,13 +184,6 @@ const de: PortfolioPageCopy = {
     },
   },
   projects: {
-    porroLidia: {
-      title: "Porro Lidia Fotografin",
-      description:
-        "Zweisprachige Demo (Deutsch, Italienisch): Hochzeiten, Geburtstage, Familienfeste und Events — elegantes Fotografie-Portfolio.",
-      liveCta: "Demo öffnen",
-      gradeBadge: "Demo · DE / IT",
-    },
     aisaOsmani: {
       title: "Aisa Osmani — Portfolio",
       description:
@@ -222,15 +197,6 @@ const de: PortfolioPageCopy = {
         "Professionelle Webseite für Fahrradreparatur und Service — schnelle Ladezeiten, lokales GEO-SEO und conversion-starke Buchungsstruktur.",
       liveCta: "Website live ansehen",
       gradeBadge: "Grade A · GEO",
-    },
-    reinigung: {
-      title: "Premium Textil- & Innenreinigung",
-      description:
-        "Ein modernes, optimiertes Webdesign für professionelle Tiefenreinigung in Stuttgart — Möbel, Polster und Kfz mit klaren Leistungen und WhatsApp-Termin.",
-      liveCta: "Ähnliches Projekt anfragen",
-      gradeBadge: "Webdesign · Demo",
-      mediaTitle: "Projekt-Galerie",
-      mediaIntro: "Fotos und Videos aus dem Konzept — Klick für Vollbild-Vorschau.",
     },
     theirrealm: {
       title: "theirrealmtv CAT",
@@ -300,13 +266,6 @@ const sr: PortfolioPageCopy = {
     },
   },
   projects: {
-    porroLidia: {
-      title: "Porro Lidia Fotografin",
-      description:
-        "Demo sajt na 2 jezika (DE, IT): venčanja, rođendani, porodične proslave i eventi — elegantan portfolio za fotografe.",
-      liveCta: "Otvori demo",
-      gradeBadge: "Demo · DE / IT",
-    },
     aisaOsmani: {
       title: "Aisa Osmani — Portfolio",
       description:
@@ -320,15 +279,6 @@ const sr: PortfolioPageCopy = {
         "Profesionalni sajt za popravku i servis bicikala — brzo učitavanje, lokalni GEO SEO i struktura za maksimalnu konverziju.",
       liveCta: "Pogledaj live sajt",
       gradeBadge: "Grade A · GEO",
-    },
-    reinigung: {
-      title: "Premium tekstilna i unutrašnja čišćenja",
-      description:
-        "Moderan, optimizovan web dizajn za profesionalnu dubinsku čišćenje u Štutgartu — nameštaj, tapacirani komadi i vozila sa jasnim uslugama i WhatsApp terminom.",
-      liveCta: "Zatraži sličan projekat",
-      gradeBadge: "Web dizajn · Demo",
-      mediaTitle: "Galerija projekta",
-      mediaIntro: "Fotografije i video snimci iz koncepta — klik za prikaz preko celog ekrana.",
     },
     theirrealm: {
       title: "theirrealmtv CAT",
@@ -398,13 +348,6 @@ const it: PortfolioPageCopy = {
     },
   },
   projects: {
-    porroLidia: {
-      title: "Porro Lidia Fotografin",
-      description:
-        "Sito demo bilingue (DE, IT): matrimoni, compleanni, feste di famiglia ed eventi — portfolio elegante per fotografi.",
-      liveCta: "Apri demo",
-      gradeBadge: "Demo · DE / IT",
-    },
     aisaOsmani: {
       title: "Aisa Osmani — Portfolio",
       description:
@@ -418,15 +361,6 @@ const it: PortfolioPageCopy = {
         "Sito professionale per riparazione e servizio biciclette — caricamento rapido, GEO SEO locale e struttura per conversione.",
       liveCta: "Sito live",
       gradeBadge: "Grade A · GEO",
-    },
-    reinigung: {
-      title: "Premium pulizia tessuti e interni",
-      description:
-        "Un web design moderno e ottimizzato per la pulizia professionale a Stuttgart — mobili, tessuti e auto con servizi chiari e prenotazione WhatsApp.",
-      liveCta: "Richiedi un progetto simile",
-      gradeBadge: "Web design · Demo",
-      mediaTitle: "Galleria progetto",
-      mediaIntro: "Foto e video dal concept — clic per anteprima a schermo intero.",
     },
     theirrealm: {
       title: "theirrealmtv CAT",
@@ -496,13 +430,6 @@ const al: PortfolioPageCopy = {
     },
   },
   projects: {
-    porroLidia: {
-      title: "Porro Lidia Fotografin",
-      description:
-        "Faqe demo dygjuhëshe (DE, IT): dasma, ditëlindje, festa familjare dhe evente — portfolio elegant për fotografë.",
-      liveCta: "Hap demo",
-      gradeBadge: "Demo · DE / IT",
-    },
     aisaOsmani: {
       title: "Aisa Osmani — Portfolio",
       description:
@@ -516,15 +443,6 @@ const al: PortfolioPageCopy = {
         "Faqe profesionale për riparim dhe servis biçikletash — ngarkim i shpejtë, GEO SEO lokal dhe strukturë konvertimi.",
       liveCta: "Shiko faqen live",
       gradeBadge: "Grade A · GEO",
-    },
-    reinigung: {
-      title: "Pastrim premium tekstili & interior",
-      description:
-        "Web design modern dhe i optimizuar për pastrim profesional në Stuttgart — mobilje, tapiceri dhe automjete me shërbime të qarta dhe termin WhatsApp.",
-      liveCta: "Kërko projekt të ngjashëm",
-      gradeBadge: "Web design · Demo",
-      mediaTitle: "Galeria e projektit",
-      mediaIntro: "Foto dhe video nga koncepti — kliko për pamje në ekran të plotë.",
     },
     theirrealm: {
       title: "theirrealmtv CAT",

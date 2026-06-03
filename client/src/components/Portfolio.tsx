@@ -24,17 +24,6 @@ export default function Portfolio({ featured = false, asPage = false }: Portfoli
     al: "Aisa Osmani — portfolio premium demo: Mobile Design, Cross Media, web, botim korporativ dhe punë multimediale.",
   };
 
-  const porroLidiaDescription: Record<string, string> = {
-    en: "Premium photographer website — bilingual demo (DE / IT) for weddings, family events and celebrations by AGR Multimedia.",
-    de: "Premium-Fotografin-Website — zweisprachige Demo (DE / IT) für Hochzeiten, Familienfeste und Events von AGR Multimedia.",
-    it: "Sito fotografa premium — demo bilingue (DE / IT) per matrimoni, feste di famiglia ed eventi, AGR Multimedia.",
-    sr: "Premium sajt fotografa — demo na 2 jezika (DE / IT): venčanja, porodične proslave i eventi, AGR Multimedia.",
-    al: "Faqe fotografie premium — demo dygjuhëshe (DE / IT) për dasma, festa familjare dhe evente, AGR Multimedia.",
-  };
-
-  const PORRO_LIDIA_IMG =
-    "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80";
-
   const portfolioItems = [
     {
       id: 10,
@@ -44,16 +33,6 @@ export default function Portfolio({ featured = false, asPage = false }: Portfoli
       category: "web",
       slug: "aisa-osmani",
       detailHref: "/demo/aisa-osmani/index.html",
-      staticDemo: true,
-    },
-    {
-      id: 0,
-      title: "Porro Lidia Fotografin",
-      description: porroLidiaDescription[currentLanguage] ?? porroLidiaDescription.en,
-      image: PORRO_LIDIA_IMG,
-      category: "web",
-      slug: "porro-lidia",
-      detailHref: "/demo/porro-lidia/index.html",
       staticDemo: true,
     },
     { id: 1, title: t.portfolio.items.ecommerce.title, description: t.portfolio.items.ecommerce.description, image: bannerWeb, category: "web", slug: "ecommerce-site" },

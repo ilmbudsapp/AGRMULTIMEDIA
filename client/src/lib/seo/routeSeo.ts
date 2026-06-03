@@ -485,12 +485,6 @@ const EXTRA_EN: Record<string, RouteSeo> = {
     description: "Structural and graphic packaging design for retail and online brands.",
     keywords: "packaging design, graphic design, brand packaging, Geislingen",
   },
-  "/demo/porro-lidia": {
-    title: "Porro Lidia Fotografin — demo (AGR Multimedia)",
-    description:
-      "Demo: bilingual photographer website (German, Italian) for weddings, family events and celebrations. Web design by AGR Multimedia.",
-    keywords: "photographer website, wedding photography, demo, web design, AGR Multimedia",
-  },
   "/demo/aisa-osmani": {
     title: "Aisa Osmani — student portfolio demo (AGR Multimedia)",
     description:
@@ -618,12 +612,6 @@ const EXTRA_DE: Record<string, RouteSeo> = {
     description: "Grafik- und Verpackungsdesign für Retail und Marken.",
     keywords: "Verpackungsdesign, Grafikdesign, Geislingen",
   },
-  "/demo/porro-lidia": {
-    title: "Porro Lidia Fotografin — Web-Demo | AGR Multimedia",
-    description:
-      "Demo: zweisprachige Fotografin-Website (Deutsch, Italienisch) für Hochzeiten, Familienfeste und Events. Webdesign von AGR Multimedia.",
-    keywords: "Fotografin Website, Hochzeitsfotografie, Demo, Webdesign",
-  },
   "/demo/aisa-osmani": {
     title: "Aisa Osmani — Portfolio-Demo | AGR Multimedia",
     description:
@@ -746,12 +734,6 @@ const EXTRA_IT: Record<string, RouteSeo> = {
     title: "Case study packaging design | AGR Multimedia",
     description: "Design di packaging per retail e brand.",
     keywords: "packaging design, graphic design, Geislingen",
-  },
-  "/demo/porro-lidia": {
-    title: "Porro Lidia Fotografin — demo sito | AGR Multimedia",
-    description:
-      "Demo: sito fotografa bilingue (DE, IT) per matrimoni, feste di famiglia ed eventi. Web design AGR Multimedia.",
-    keywords: "sito fotografo, matrimoni, demo, web design",
   },
   "/demo/aisa-osmani": {
     title: "Aisa Osmani — portfolio demo | AGR Multimedia",
@@ -876,12 +858,6 @@ const EXTRA_SR: Record<string, RouteSeo> = {
     description: "Grafički dizajn pakovanja za maloprodaju i brendove.",
     keywords: "pakovanje dizajn, grafički dizajn, Geislingen",
   },
-  "/demo/porro-lidia": {
-    title: "Porro Lidia Fotografin — demo sajt | AGR Multimedia",
-    description:
-      "Demo: dvojezični sajt fotografa (DE, IT) za venčanja, porodične proslave i evente. AGR Multimedia.",
-    keywords: "sajt fotografa, venčanja, demo, web dizajn",
-  },
   "/demo/aisa-osmani": {
     title: "Aisa Osmani — portfolio demo | AGR Multimedia",
     description:
@@ -1004,12 +980,6 @@ const EXTRA_AL: Record<string, RouteSeo> = {
     title: "Case study dizajn paketimi | AGR Multimedia",
     description: "Dizajn paketimi për shitje me pakicë dhe marka.",
     keywords: "packaging design, graphic design, Geislingen",
-  },
-  "/demo/porro-lidia": {
-    title: "Porro Lidia Fotografin — faqe demo | AGR Multimedia",
-    description:
-      "Demo: faqe fotografie dygjuhëshe (DE, IT) për dasma, festa familjare dhe evente. AGR Multimedia.",
-    keywords: "faqe fotografie, dasma, demo, web design",
   },
   "/demo/aisa-osmani": {
     title: "Aisa Osmani — portfolio demo | AGR Multimedia",
