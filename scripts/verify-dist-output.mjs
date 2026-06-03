@@ -11,6 +11,7 @@ const requiredDemoIndexes = [
   path.join(outputDir, "demo", "tairovic-bez-verzija", "index.html"),
   path.join(outputDir, "demo", "tairovic-azzura-verzija", "index.html"),
   path.join(outputDir, "demo", "tairovic-dark-verzija", "index.html"),
+  path.join(outputDir, "demo", "index.html"),
 ];
 
 if (!fs.existsSync(outputDir)) {

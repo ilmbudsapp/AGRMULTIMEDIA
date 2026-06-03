@@ -83,15 +83,28 @@
       "source": "/demo/tairovic-dark-verzija/",
       "destination": "/demo/tairovic-dark-verzija/index.html",
       "permanent": false
+    },
+    {
+      "source": "/demo",
+      "destination": "/demo/index.html",
+      "permanent": false
+    },
+    {
+      "source": "/demo/",
+      "destination": "/demo/index.html",
+      "permanent": false
     }
   ],
   "rewrites": [
+    { "handle": "filesystem" },
     { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
     { "source": "/robots.txt", "destination": "/robots.txt" },
     { "source": "/feed.atom.xml", "destination": "/feed.atom.xml" },
     { "source": "/llms.txt", "destination": "/llms.txt" },
     { "source": "/manifest.json", "destination": "/manifest.json" },
     { "source": "/agrmm2026indexnowkey01.txt", "destination": "/agrmm2026indexnowkey01.txt" },
+    { "source": "/demo", "destination": "/demo/index.html" },
+    { "source": "/demo/", "destination": "/demo/index.html" },
     {
       "source": "/demo/:slug",
       "destination": "/demo/:slug/index.html"
