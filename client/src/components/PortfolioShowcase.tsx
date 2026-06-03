@@ -18,6 +18,8 @@ import { fotoKreiraneSaAiGalleryByLang } from "@/data/fotoKreiraneSaAiGallery";
 import type { PortfolioFilterId } from "@/lib/portfolioPageI18n";
 import { toServiceLang } from "@/lib/servicePageI18n";
 
+const TAIROVIC_AZZURA_DEMO = "/demo/tairovic-azzura-verzija/index.html";
+const TAIROVIC_AZZURA_IMG = "/demo/tairovic-azzura-verzija/assets/logo.webp";
 const TAIROVIC_DEMO = "/demo/tairovic-bez-verzija/index.html";
 const TAIROVIC_IMG = "/demo/tairovic-bez-verzija/assets/logo.webp";
 const AISA_DEMO = "/demo/aisa-osmani/index.html";
@@ -220,7 +222,22 @@ export default function PortfolioShowcase() {
               title={p.categories.web.title}
               intro={p.categories.web.intro}
             >
-              <div className="grid gap-8 lg:grid-cols-2 xl:grid-cols-3">
+              <div className="grid gap-8 md:grid-cols-2 2xl:grid-cols-4">
+                <ProjectCard
+                  image={TAIROVIC_AZZURA_IMG}
+                  imageFit="contain"
+                  title={p.projects.tairovicAzzuraVerzija.title}
+                  description={p.projects.tairovicAzzuraVerzija.description}
+                  pillarLabel={p.categories.web.title}
+                  pillarIcon={LayoutGrid}
+                  pillarClass={webPillarClass}
+                  gradeBadge={p.projects.tairovicAzzuraVerzija.gradeBadge}
+                >
+                  <a href={TAIROVIC_AZZURA_DEMO} className={LIVE_BTN}>
+                    {p.projects.tairovicAzzuraVerzija.liveCta}
+                    <ExternalLink className="h-4 w-4" aria-hidden />
+                  </a>
+                </ProjectCard>
                 <ProjectCard
                   image={TAIROVIC_IMG}
                   imageFit="contain"

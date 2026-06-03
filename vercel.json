@@ -63,6 +63,16 @@
       "source": "/demo/tairovic-bez-verzija/",
       "destination": "/demo/tairovic-bez-verzija/index.html",
       "permanent": false
+    },
+    {
+      "source": "/demo/tairovic-azzura-verzija",
+      "destination": "/demo/tairovic-azzura-verzija/index.html",
+      "permanent": false
+    },
+    {
+      "source": "/demo/tairovic-azzura-verzija/",
+      "destination": "/demo/tairovic-azzura-verzija/index.html",
+      "permanent": false
     }
   ],
   "rewrites": [

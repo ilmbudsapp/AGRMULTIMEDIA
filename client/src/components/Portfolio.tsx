@@ -16,6 +16,14 @@ export default function Portfolio({ featured = false, asPage = false }: Portfoli
   const { t, tSpec, currentLanguage } = useLanguage();
   const [activeFilter, setActiveFilter] = useState('all');
 
+  const tairovicAzzuraVerzijaDescription: Record<string, string> = {
+    en: "Tairovic Gebäudeservice — client demo concept 2 (Azzura): sky-premium layout with light blue styling for building services.",
+    de: "Tairovic Gebäudeservice — Kunden-Demo Konzept 2 (Azzura): Sky-Premium Layout in hellem Blau für Gebäudedienstleistungen.",
+    it: "Tairovic Gebäudeservice — demo cliente concetto 2 (Azzura): layout sky-premium in blu chiaro.",
+    sr: "Tairovic Gebäudeservice — klijentski demo koncept 2 (Azzura): sky-premium layout u svetloplavoj Azzura varijanti.",
+    al: "Tairovic Gebäudeservice — demo klienti koncepti 2 (Azzura): layout sky-premium në stilin Azzura.",
+  };
+
   const tairovicBezVerzijaDescription: Record<string, string> = {
     en: "Tairovic Gebäudeservice — client demo concept 1: building cleaning, caretaker, garden and property care. Base layout without a color variant.",
     de: "Tairovic Gebäudeservice — Kunden-Demo Konzept 1: Gebäudereinigung, Hausmeister, Garten- und Objektpflege. Basisentwurf ohne Farbvariante.",
@@ -34,8 +42,18 @@ export default function Portfolio({ featured = false, asPage = false }: Portfoli
 
   const portfolioItems = [
     {
+      id: 12,
+      title: "Tairovic — Azzura",
+      description: tairovicAzzuraVerzijaDescription[currentLanguage] ?? tairovicAzzuraVerzijaDescription.en,
+      image: "/demo/tairovic-azzura-verzija/assets/logo.webp",
+      category: "web",
+      slug: "tairovic-azzura-verzija",
+      detailHref: "/demo/tairovic-azzura-verzija/index.html",
+      staticDemo: true,
+    },
+    {
       id: 11,
-      title: "Tairovic Gebäudeservice",
+      title: "Tairovic — Konzept 1",
       description: tairovicBezVerzijaDescription[currentLanguage] ?? tairovicBezVerzijaDescription.en,
       image: "/demo/tairovic-bez-verzija/assets/logo.webp",
       category: "web",

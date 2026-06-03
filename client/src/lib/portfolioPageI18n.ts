@@ -34,6 +34,7 @@ export interface PortfolioPageCopy {
   };
   projects: {
     tairovicBezVerzija: PortfolioProjectCopy;
+    tairovicAzzuraVerzija: PortfolioProjectCopy;
     aisaOsmani: PortfolioProjectCopy;
     fixbike: PortfolioProjectCopy;
     theirrealm: {
@@ -109,6 +110,13 @@ const en: PortfolioPageCopy = {
         "Building services website demo: cleaning, caretaker, garden and property care. Base layout without a color variant — first option for client review.",
       liveCta: "Open demo",
       gradeBadge: "Client demo · Concept 1",
+    },
+    tairovicAzzuraVerzija: {
+      title: "Tairovic Gebäudeservice — Azzura",
+      description:
+        "Sky-premium building services demo with light blue Azzura styling — cleaning, caretaker, garden and property care. Second option for client review.",
+      liveCta: "Open demo",
+      gradeBadge: "Client demo · Concept 2",
     },
     aisaOsmani: {
       title: "Aisa Osmani — Portfolio",
@@ -199,6 +207,13 @@ const de: PortfolioPageCopy = {
       liveCta: "Demo öffnen",
       gradeBadge: "Kunden-Demo · Konzept 1",
     },
+    tairovicAzzuraVerzija: {
+      title: "Tairovic Gebäudeservice — Azzura",
+      description:
+        "Sky-Premium Demo in Azzura-Blau: Gebäudereinigung, Hausmeister, Garten- und Objektpflege — zweite Option zur Kundenauswahl.",
+      liveCta: "Demo öffnen",
+      gradeBadge: "Kunden-Demo · Konzept 2",
+    },
     aisaOsmani: {
       title: "Aisa Osmani — Portfolio",
       description:
@@ -287,6 +302,13 @@ const sr: PortfolioPageCopy = {
         "Demo sajt za usluge zgrada: čišćenje, domar, bašta i održavanje objekata. Osnovni layout bez varijante boja — prva opcija za klijenta.",
       liveCta: "Otvori demo",
       gradeBadge: "Klijentski demo · Koncept 1",
+    },
+    tairovicAzzuraVerzija: {
+      title: "Tairovic Gebäudeservice — Azzura",
+      description:
+        "Sky-premium demo u Azzura plavoj: čišćenje, domar, bašta i održavanje objekata — druga opcija za klijenta.",
+      liveCta: "Otvori demo",
+      gradeBadge: "Klijentski demo · Koncept 2",
     },
     aisaOsmani: {
       title: "Aisa Osmani — Portfolio",
@@ -377,6 +399,13 @@ const it: PortfolioPageCopy = {
       liveCta: "Apri demo",
       gradeBadge: "Demo cliente · Concetto 1",
     },
+    tairovicAzzuraVerzija: {
+      title: "Tairovic Gebäudeservice — Azzura",
+      description:
+        "Demo sky-premium in stile Azzura: pulizie, custode, giardino e cura immobili — seconda opzione per il cliente.",
+      liveCta: "Apri demo",
+      gradeBadge: "Demo cliente · Concetto 2",
+    },
     aisaOsmani: {
       title: "Aisa Osmani — Portfolio",
       description:
@@ -465,6 +494,13 @@ const al: PortfolioPageCopy = {
         "Demo faqe shërbimesh ndërtimi: pastrim, mirëmbajtje, kopsht dhe kujdes objektesh. Layout bazë pa variant ngjyrash — opsioni i parë për klientin.",
       liveCta: "Hap demo",
       gradeBadge: "Demo klienti · Koncepti 1",
+    },
+    tairovicAzzuraVerzija: {
+      title: "Tairovic Gebäudeservice — Azzura",
+      description:
+        "Demo sky-premium në stilin Azzura: pastrim, mirëmbajtje, kopsht dhe kujdes objektesh — opsioni i dytë për klientin.",
+      liveCta: "Hap demo",
+      gradeBadge: "Demo klienti · Koncepti 2",
     },
     aisaOsmani: {
       title: "Aisa Osmani — Portfolio",
