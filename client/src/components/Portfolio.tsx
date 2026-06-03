@@ -16,6 +16,14 @@ export default function Portfolio({ featured = false, asPage = false }: Portfoli
   const { t, tSpec, currentLanguage } = useLanguage();
   const [activeFilter, setActiveFilter] = useState('all');
 
+  const tairovicBezVerzijaDescription: Record<string, string> = {
+    en: "Tairovic Gebäudeservice — client demo concept 1: building cleaning, caretaker, garden and property care. Base layout without a color variant.",
+    de: "Tairovic Gebäudeservice — Kunden-Demo Konzept 1: Gebäudereinigung, Hausmeister, Garten- und Objektpflege. Basisentwurf ohne Farbvariante.",
+    it: "Tairovic Gebäudeservice — demo cliente concetto 1: pulizie, custode, giardino e cura immobili. Layout base senza variante colore.",
+    sr: "Tairovic Gebäudeservice — klijentski demo koncept 1: čišćenje zgrada, domar, bašta i održavanje objekata. Osnovni layout bez varijante boja.",
+    al: "Tairovic Gebäudeservice — demo klienti koncepti 1: pastrim, mirëmbajtje, kopsht dhe kujdes objektesh. Layout bazë pa variant ngjyrash.",
+  };
+
   const aisaOsmaniDescription: Record<string, string> = {
     en: "Aisa Osmani — premium portfolio demo: Mobile Design (Growli), Cross Media (FROOZ), Web, Corporate Publishing, illustration and audiovisual work.",
     de: "Aisa Osmani — Premium-Portfolio-Demo: Mobile Design (Growli), Cross Media (FROOZ), Web, Corporate Publishing, Illustration und audiovisuelle Arbeiten.",
@@ -25,6 +33,16 @@ export default function Portfolio({ featured = false, asPage = false }: Portfoli
   };
 
   const portfolioItems = [
+    {
+      id: 11,
+      title: "Tairovic Gebäudeservice",
+      description: tairovicBezVerzijaDescription[currentLanguage] ?? tairovicBezVerzijaDescription.en,
+      image: "/demo/tairovic-bez-verzija/assets/preview.svg",
+      category: "web",
+      slug: "tairovic-bez-verzija",
+      detailHref: "/demo/tairovic-bez-verzija/index.html",
+      staticDemo: true,
+    },
     {
       id: 10,
       title: "Aisa Osmani",

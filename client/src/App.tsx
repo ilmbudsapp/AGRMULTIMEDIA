@@ -48,6 +48,7 @@ const Privacy = lazy(() => import("@/pages/privacy"));
 const Terms = lazy(() => import("@/pages/terms"));
 const Cookies = lazy(() => import("@/pages/cookies"));
 const AisaOsmaniDemoRedirect = lazy(() => import("@/pages/demo/aisa-osmani"));
+const TairovicBezVerzijaDemoRedirect = lazy(() => import("@/pages/demo/tairovic-bez-verzija"));
 const NotFound = lazy(() => import("@/pages/not-found"));
 
 function Router() {
@@ -89,6 +90,7 @@ function Router() {
       <Route path="/terms" component={Terms} />
       <Route path="/cookies" component={Cookies} />
       <Route path="/demo/aisa-osmani" component={AisaOsmaniDemoRedirect} />
+      <Route path="/demo/tairovic-bez-verzija" component={TairovicBezVerzijaDemoRedirect} />
       <Route component={NotFound} />
     </Switch>
   );

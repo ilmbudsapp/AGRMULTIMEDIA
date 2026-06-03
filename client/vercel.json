@@ -53,6 +53,16 @@
       "source": "/demo/aisa-osmani/",
       "destination": "/demo/aisa-osmani/index.html",
       "permanent": false
+    },
+    {
+      "source": "/demo/tairovic-bez-verzija",
+      "destination": "/demo/tairovic-bez-verzija/index.html",
+      "permanent": false
+    },
+    {
+      "source": "/demo/tairovic-bez-verzija/",
+      "destination": "/demo/tairovic-bez-verzija/index.html",
+      "permanent": false
     }
   ],
   "rewrites": [

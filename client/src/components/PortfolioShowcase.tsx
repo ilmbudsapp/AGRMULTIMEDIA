@@ -18,6 +18,8 @@ import { fotoKreiraneSaAiGalleryByLang } from "@/data/fotoKreiraneSaAiGallery";
 import type { PortfolioFilterId } from "@/lib/portfolioPageI18n";
 import { toServiceLang } from "@/lib/servicePageI18n";
 
+const TAIROVIC_DEMO = "/demo/tairovic-bez-verzija/index.html";
+const TAIROVIC_IMG = "/demo/tairovic-bez-verzija/assets/preview.svg";
 const AISA_DEMO = "/demo/aisa-osmani/index.html";
 const AISA_IMG = "/demo/aisa-osmani/assets/hero-illustration.jpg";
 const FIXBIKE_LIVE = "https://fixbike.online/";
@@ -218,7 +220,21 @@ export default function PortfolioShowcase() {
               title={p.categories.web.title}
               intro={p.categories.web.intro}
             >
-              <div className="grid gap-8 lg:grid-cols-2">
+              <div className="grid gap-8 lg:grid-cols-2 xl:grid-cols-3">
+                <ProjectCard
+                  image={TAIROVIC_IMG}
+                  title={p.projects.tairovicBezVerzija.title}
+                  description={p.projects.tairovicBezVerzija.description}
+                  pillarLabel={p.categories.web.title}
+                  pillarIcon={LayoutGrid}
+                  pillarClass={webPillarClass}
+                  gradeBadge={p.projects.tairovicBezVerzija.gradeBadge}
+                >
+                  <a href={TAIROVIC_DEMO} className={LIVE_BTN}>
+                    {p.projects.tairovicBezVerzija.liveCta}
+                    <ExternalLink className="h-4 w-4" aria-hidden />
+                  </a>
+                </ProjectCard>
                 <ProjectCard
                   image={AISA_IMG}
                   title={p.projects.aisaOsmani.title}

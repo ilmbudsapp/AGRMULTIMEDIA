@@ -6,7 +6,10 @@ import { fileURLToPath } from "node:url";
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const outputDir = path.join(repoRoot, "dist", "public");
 const requiredRootFiles = ["index.html", "sitemap.xml", "robots.txt"];
-const requiredDemoIndexes = [path.join(outputDir, "demo", "aisa-osmani", "index.html")];
+const requiredDemoIndexes = [
+  path.join(outputDir, "demo", "aisa-osmani", "index.html"),
+  path.join(outputDir, "demo", "tairovic-bez-verzija", "index.html"),
+];
 
 if (!fs.existsSync(outputDir)) {
   console.error(`FAIL: missing build output directory ${outputDir}`);

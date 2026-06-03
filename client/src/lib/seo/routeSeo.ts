@@ -491,6 +491,12 @@ const EXTRA_EN: Record<string, RouteSeo> = {
       "Premium demo portfolio: mobile app UI, cross-media, web design, corporate publishing, illustration and audiovisual work.",
     keywords: "student portfolio, multimedia design, demo, web design, AGR Multimedia",
   },
+  "/demo/tairovic-bez-verzija": {
+    title: "Tairovic Gebäudeservice — client demo concept 1 (AGR Multimedia)",
+    description:
+      "Building services website demo: cleaning, caretaker, garden and property care. Neutral layout without color variant — for client review.",
+    keywords: "Gebäudereinigung, Hausmeisterservice, web design demo, AGR Multimedia",
+  },
 };
 
 const EXTRA_DE: Record<string, RouteSeo> = {
@@ -618,6 +624,12 @@ const EXTRA_DE: Record<string, RouteSeo> = {
       "Premium-Studentenportfolio: Mobile App, Cross-Media, Webdesign, Corporate Publishing, Illustration und audiovisuelle Projekte.",
     keywords: "Studentenportfolio, Multimedia Design, Demo, Webdesign",
   },
+  "/demo/tairovic-bez-verzija": {
+    title: "Tairovic Gebäudeservice — Kunden-Demo Konzept 1 | AGR Multimedia",
+    description:
+      "Demo-Webseite Gebäudereinigung, Hausmeister, Garten- und Objektpflege. Basisentwurf ohne Farbvariante zur Kundenauswahl.",
+    keywords: "Gebäudereinigung, Hausmeisterservice, Webdesign Demo, AGR Multimedia",
+  },
 };
 
 const EXTRA_IT: Record<string, RouteSeo> = {
@@ -740,6 +752,12 @@ const EXTRA_IT: Record<string, RouteSeo> = {
     description:
       "Portfolio studentesco premium: app mobile, cross-media, web design, editorial, illustrazione e progetti audiovisivi.",
     keywords: "portfolio studente, multimedia, demo, web design",
+  },
+  "/demo/tairovic-bez-verzija": {
+    title: "Tairovic Gebäudeservice — demo cliente concetto 1 | AGR Multimedia",
+    description:
+      "Demo sito servizi edilizi: pulizie, custode, giardino e cura immobili. Layout base senza variante colore.",
+    keywords: "pulizie edifici, custode, demo web design, AGR Multimedia",
   },
 };
 
@@ -864,6 +882,12 @@ const EXTRA_SR: Record<string, RouteSeo> = {
       "Premium studentski portfolio: mobilna app, cross-media, web dizajn, corporate publishing, ilustracija i audiovizuelni radovi.",
     keywords: "studentski portfolio, multimedia, demo, web dizajn",
   },
+  "/demo/tairovic-bez-verzija": {
+    title: "Tairovic Gebäudeservice — klijentski demo koncept 1 | AGR Multimedia",
+    description:
+      "Demo sajt za usluge zgrada: čišćenje, domar, bašta i održavanje objekata. Osnovni layout bez varijante boja.",
+    keywords: "čišćenje zgrada, domar, web demo, AGR Multimedia",
+  },
 };
 
 const EXTRA_AL: Record<string, RouteSeo> = {
@@ -986,6 +1010,12 @@ const EXTRA_AL: Record<string, RouteSeo> = {
     description:
       "Portfolio studentor premium: aplikacion mobil, cross-media, web design, botim korporativ, ilustrim dhe projekte audiovizive.",
     keywords: "portfolio student, multimedia, demo, web design",
+  },
+  "/demo/tairovic-bez-verzija": {
+    title: "Tairovic Gebäudeservice — demo klienti koncepti 1 | AGR Multimedia",
+    description:
+      "Demo faqe shërbimesh ndërtimi: pastrim, mirëmbajtje, kopsht dhe kujdes objektesh. Layout bazë pa variant ngjyrash.",
+    keywords: "pastrim ndërtimesh, mirëmbajtje, demo web, AGR Multimedia",
   },
 };
 
