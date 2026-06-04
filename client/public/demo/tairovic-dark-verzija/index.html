@@ -240,49 +240,26 @@ h1,h2,.title h2,.page-hero h1,.work h3,.card h3{
   max-width:500px;
   margin:-52px 0 0 auto;
   align-self:start;
-  display:flex;
-  flex-direction:column;
   border-radius:32px;
   overflow:hidden;
   border:1px solid rgba(255,255,255,.16);
   box-shadow:var(--shadow);
-  background:rgba(11,18,32,.65);
+  background:rgba(11,18,32,.4);
   transition:transform .45s,box-shadow .45s;
+  line-height:0;
 }
 .hero-visual:hover{
   transform:translateY(-10px);
   box-shadow:0 40px 100px rgba(0,0,0,.5);
 }
-.hero-visual-frame{
-  overflow:hidden;
-  line-height:0;
-}
 .hero-visual img{
   width:100%;
   display:block;
   aspect-ratio:5/4;
-  max-height:420px;
+  max-height:440px;
   min-height:300px;
   object-fit:cover;
   object-position:center bottom;
-}
-.hero-visual-caption{
-  padding:14px 18px 16px;
-  background:rgba(5,7,12,.92);
-  border-top:1px solid rgba(255,255,255,.1);
-}
-.hero-visual-title{
-  font-family:"Plus Jakarta Sans",system-ui,sans-serif;
-  font-size:18px;
-  font-weight:700;
-  color:var(--gold2);
-  margin-bottom:4px;
-}
-.hero-visual-caption p:last-child{
-  color:#b9c3d0;
-  font-size:13px;
-  line-height:1.5;
-  margin:0;
 }
 
 .section{
@@ -567,13 +544,7 @@ textarea{height:145px}
       </div>
 
       <figure class="hero-visual">
-        <div class="hero-visual-frame">
-          <img src="assets/hero-staff-window-v2.jpg?v=2" alt="Gebäudereinigung im Treppenhaus — Fensterreinigung mit Reinigungswagen und Logo" width="1200" height="960" loading="eager" decoding="async">
-        </div>
-        <figcaption class="hero-visual-caption">
-          <p class="hero-visual-title">Fenster · Flure · Objektpflege</p>
-          <p>Reinigungswagen mit Profi-Equipment — Logo deutlich sichtbar.</p>
-        </figcaption>
+        <img src="assets/hero-staff-window-v2.jpg?v=3" alt="Gebäudereinigung im Treppenhaus — Fensterreinigung mit Reinigungswagen und Logo" width="1200" height="960" loading="eager" decoding="async">
       </figure>
     </div>
   </div>
