@@ -710,18 +710,21 @@ h1,h2,.title h2,.page-hero h1,.work h3,.card h3{
   line-height:1.65;
 }
 .garten-grid,
-.hausmeister-grid{
+.hausmeister-grid,
+.winter-grid{
   grid-template-columns:repeat(3,1fr);
 }
 .garten-grid .galerie-thumb,
-.hausmeister-grid .galerie-thumb{
+.hausmeister-grid .galerie-thumb,
+.winter-grid .galerie-thumb{
   display:flex;
   align-items:center;
   justify-content:center;
   min-height:148px;
 }
 .garten-grid .galerie-thumb img,
-.hausmeister-grid .galerie-thumb img{
+.hausmeister-grid .galerie-thumb img,
+.winter-grid .galerie-thumb img{
   width:100%;
   height:auto;
   max-height:200px;
@@ -782,8 +785,12 @@ h1,h2,.title h2,.page-hero h1,.work h3,.card h3{
   font-size:17px;
 }
 .page-hero--winter .page-hero-bg{
-  background-image:url("/demo/tairovic-dark-verzija/assets/hero-bands/hero-03.webp");
-  background-position:50% 35%;
+  background-image:url("/demo/tairovic-dark-verzija/assets/winterdienst/winter-hero.webp");
+  background-position:50% 40%;
+}
+.winter-grid .galerie-thumb img,
+.winter-grid .galerie-thumb{
+  min-height:160px;
 }
 .faq-list{
   display:flex;
@@ -977,17 +984,19 @@ textarea{height:145px}
 @media(max-width:560px){
   .grid-services{grid-template-columns:1fr}
   .galerie-grid{grid-template-columns:repeat(2,1fr);gap:10px}
-  .garten-grid,.hausmeister-grid{grid-template-columns:repeat(2,1fr)}
+  .garten-grid,.hausmeister-grid,.winter-grid{grid-template-columns:repeat(2,1fr)}
   .galerie-thumb img{height:96px}
   .garten-grid .galerie-thumb img,
-  .hausmeister-grid .galerie-thumb img{
+  .hausmeister-grid .galerie-thumb img,
+  .winter-grid .galerie-thumb img{
     height:auto;
     max-height:150px;
     min-height:100px;
     object-fit:contain;
   }
   .garten-grid .galerie-thumb,
-  .hausmeister-grid .galerie-thumb{min-height:108px}
+  .hausmeister-grid .galerie-thumb,
+  .winter-grid .galerie-thumb{min-height:108px}
   .video-grid{grid-template-columns:1fr;gap:12px}
   .video-item video{max-height:min(65vh,480px)}
 }
@@ -1094,8 +1103,8 @@ textarea{height:145px}
         </div>
 
         <div class="card card-with-photo">
-          <div class="card-photo" style="background:linear-gradient(135deg,rgba(30,58,95,.5),rgba(5,7,12,.9));display:grid;place-items:center;min-height:180px">
-            <span style="font-size:48px;line-height:1" aria-hidden="true">❄</span>
+          <div class="card-photo">
+            <img src="/demo/tairovic-dark-verzija/assets/winterdienst/winter-01-schaufel-vorne.webp" alt="Winterdienst — Schneeräumung mit Firmenlogo" width="900" height="600" loading="lazy" decoding="async">
           </div>
           <div class="card-body">
             <div class="icon">04</div>
@@ -1583,6 +1592,37 @@ textarea{height:145px}
           <li>Wetterabhängige Planung</li>
           <li>Regelmäßige Kontrollen</li>
         </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="card galerie-card">
+        <div class="kicker">Im Einsatz</div>
+        <h2>Winterdienst vor Ort</h2>
+        <p>Unser Team arbeitet mit sichtbarem Firmenlogo auf der Arbeitskleidung und modernem Gerät — von der Schneeräumung per Hand bis zum Einsatz mit Kleintraktor für größere Flächen.</p>
+        <p class="garten-grid-hint">Tipp: Klicken Sie auf ein Bild — es öffnet sich in voller Größe.</p>
+        <div class="galerie-grid winter-grid">
+          <figure class="galerie-item">
+            <button type="button" class="galerie-thumb" data-full="/demo/tairovic-dark-verzija/assets/winterdienst/winter-01-schaufel-vorne.webp" aria-label="Schneeräumung — Bild vergrößern">
+              <img src="/demo/tairovic-dark-verzija/assets/winterdienst/winter-01-schaufel-vorne.webp" alt="Mitarbeiter beim Schneeschippen — Tairovic Logo auf der Jacke" width="320" height="160" loading="lazy" decoding="async">
+            </button>
+            <figcaption class="galerie-cap"><span>Schneeräumung</span></figcaption>
+          </figure>
+          <figure class="galerie-item">
+            <button type="button" class="galerie-thumb" data-full="/demo/tairovic-dark-verzija/assets/winterdienst/winter-02-schaufel-hinten.webp" aria-label="Wege räumen — Bild vergrößern">
+              <img src="/demo/tairovic-dark-verzija/assets/winterdienst/winter-02-schaufel-hinten.webp" alt="Winterdienst am Gehweg — Logo auf der Rückseite der Arbeitskleidung" width="320" height="160" loading="lazy" decoding="async">
+            </button>
+            <figcaption class="galerie-cap"><span>Wege &amp; Gehsteige</span></figcaption>
+          </figure>
+          <figure class="galerie-item">
+            <button type="button" class="galerie-thumb" data-full="/demo/tairovic-dark-verzija/assets/winterdienst/winter-03-traktor-schnee.webp" aria-label="Kleintraktor — Bild vergrößern">
+              <img src="/demo/tairovic-dark-verzija/assets/winterdienst/winter-03-traktor-schnee.webp" alt="Kleintraktor bei der Schneeräumung — Tairovic Logo am Fahrzeug" width="320" height="160" loading="lazy" decoding="async">
+            </button>
+            <figcaption class="galerie-cap"><span>Kleintraktor</span></figcaption>
+          </figure>
+        </div>
       </div>
     </div>
   </div>
