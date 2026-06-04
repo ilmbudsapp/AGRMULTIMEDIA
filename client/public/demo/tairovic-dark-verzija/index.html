@@ -358,6 +358,19 @@ h1,h2,.title h2,.page-hero h1,.work h3,.card h3{
   border-top:1px solid rgba(255,255,255,.08);
   border-bottom:1px solid rgba(255,255,255,.08);
 }
+.gold-section.home-hero-band--3{
+  background:transparent;
+}
+.gold-section.home-hero-band--3 .home-hero-band-overlay{
+  background:
+    linear-gradient(
+      180deg,
+      rgba(5,7,12,.88) 0%,
+      rgba(5,7,12,.72) 50%,
+      rgba(5,7,12,.88) 100%
+    ),
+    radial-gradient(circle at right,rgba(201,162,74,.18),transparent 38%);
+}
 
 .work{
   min-height:410px;
@@ -393,10 +406,80 @@ h1,h2,.title h2,.page-hero h1,.work h3,.card h3{
 
 .page-hero{
   padding:115px 0 95px;
+  position:relative;
+  overflow:hidden;
   background:
     radial-gradient(circle at right,rgba(30,58,95,.48),transparent 38%),
     radial-gradient(circle at left,rgba(201,162,74,.13),transparent 32%);
   border-bottom:1px solid rgba(255,255,255,.08);
+}
+.page-hero-bg{
+  position:absolute;
+  inset:0;
+  z-index:0;
+  background:center/cover no-repeat;
+  opacity:.25;
+  pointer-events:none;
+}
+.page-hero-overlay{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  pointer-events:none;
+  background:linear-gradient(
+    100deg,
+    rgba(5,7,12,.92) 0%,
+    rgba(5,7,12,.82) 42%,
+    rgba(5,7,12,.55) 100%
+  );
+}
+.page-hero .container{
+  position:relative;
+  z-index:2;
+}
+.page-hero--hausmeister .page-hero-bg{
+  background-image:url("/demo/tairovic-dark-verzija/assets/hero-bands/hero-02.webp");
+  background-position:60% center;
+}
+.page-hero--garten .page-hero-bg{
+  background-image:url("/demo/tairovic-dark-verzija/assets/hero-bands/hero-03.webp");
+  background-position:55% center;
+}
+.home-hero-band{
+  position:relative;
+  overflow:hidden;
+}
+.home-hero-band-bg{
+  position:absolute;
+  inset:0;
+  z-index:0;
+  background:center/cover no-repeat;
+  opacity:.25;
+  pointer-events:none;
+}
+.home-hero-band-overlay{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  pointer-events:none;
+  background:linear-gradient(
+    180deg,
+    rgba(5,7,12,.88) 0%,
+    rgba(5,7,12,.72) 50%,
+    rgba(5,7,12,.88) 100%
+  );
+}
+.home-hero-band .container{
+  position:relative;
+  z-index:2;
+}
+.home-hero-band--2 .home-hero-band-bg{
+  background-image:url("/demo/tairovic-dark-verzija/assets/hero-bands/hero-02.webp");
+  background-position:60% center;
+}
+.home-hero-band--3 .home-hero-band-bg{
+  background-image:url("/demo/tairovic-dark-verzija/assets/hero-bands/hero-03.webp");
+  background-position:55% center;
 }
 .page-hero h1{
   font-size:clamp(36px,5vw,56px);
@@ -893,7 +976,9 @@ textarea{height:145px}
     </div>
   </div>
 
-  <div class="section">
+  <div class="section home-hero-band home-hero-band--2">
+    <div class="home-hero-band-bg" aria-hidden="true"></div>
+    <div class="home-hero-band-overlay" aria-hidden="true"></div>
     <div class="container">
       <div class="title">
         <div class="kicker">Leistungen</div>
@@ -941,7 +1026,9 @@ textarea{height:145px}
     </div>
   </div>
 
-  <div class="section gold-section">
+  <div class="section gold-section home-hero-band home-hero-band--3">
+    <div class="home-hero-band-bg" aria-hidden="true"></div>
+    <div class="home-hero-band-overlay" aria-hidden="true"></div>
     <div class="container">
       <div class="title">
         <div class="kicker">Anspruch</div>
@@ -1204,7 +1291,9 @@ textarea{height:145px}
 </section>
 
 <section id="hausmeister" class="page">
-  <div class="page-hero">
+  <div class="page-hero page-hero--hausmeister">
+    <div class="page-hero-bg" aria-hidden="true"></div>
+    <div class="page-hero-overlay" aria-hidden="true"></div>
     <div class="container">
       <div class="kicker">Leistung</div>
       <h1>Hausmeisterservice</h1>
@@ -1275,7 +1364,9 @@ textarea{height:145px}
 </section>
 
 <section id="garten" class="page">
-  <div class="page-hero">
+  <div class="page-hero page-hero--garten">
+    <div class="page-hero-bg" aria-hidden="true"></div>
+    <div class="page-hero-overlay" aria-hidden="true"></div>
     <div class="container">
       <div class="kicker">Leistung</div>
       <h1>Gartenpflege</h1>
