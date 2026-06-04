@@ -96,7 +96,6 @@
     }
   ],
   "rewrites": [
-    { "handle": "filesystem" },
     { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
     { "source": "/robots.txt", "destination": "/robots.txt" },
     { "source": "/feed.atom.xml", "destination": "/feed.atom.xml" },
