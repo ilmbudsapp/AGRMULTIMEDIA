@@ -111,11 +111,6 @@
     return page && PATH_BY_PAGE[page] ? page : "home";
   }
 
-  function faqDomSectionId(page) {
-    if (page === "arbeiten") return "reinigung";
-    return page;
-  }
-
   function localBusinessNode() {
     return {
       "@type": "LocalBusiness",
@@ -225,8 +220,7 @@
   }
 
   function faqFromPage(page) {
-    const sectionId = faqDomSectionId(page);
-    const root = document.getElementById(sectionId);
+    const root = document.getElementById(page);
     if (!root) return null;
     const faq = root.querySelector('.faq-list[itemtype="https://schema.org/FAQPage"]');
     if (!faq) return null;
@@ -249,7 +243,7 @@
     };
   }
 
-  const FAQ_PAGES = new Set(["reinigung", "hausmeister", "garten", "winter", "arbeiten"]);
+  const FAQ_PAGES = new Set(["reinigung", "hausmeister", "garten", "winter"]);
 
   function buildGraph(page) {
     const graph = [
