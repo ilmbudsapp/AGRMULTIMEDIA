@@ -238,44 +238,50 @@ h1,h2,.title h2,.page-hero h1,.work h3,.card h3{
 .hero-visual{
   position:relative;
   max-width:500px;
-  margin:-36px auto 0 0;
+  margin:-52px 0 0 auto;
   align-self:start;
+  display:flex;
+  flex-direction:column;
   border-radius:32px;
   overflow:hidden;
   border:1px solid rgba(255,255,255,.16);
   box-shadow:var(--shadow);
-  background:rgba(255,255,255,.04);
+  background:rgba(11,18,32,.65);
   transition:transform .45s,box-shadow .45s;
 }
 .hero-visual:hover{
   transform:translateY(-10px);
   box-shadow:0 40px 100px rgba(0,0,0,.5);
 }
+.hero-visual-frame{
+  overflow:hidden;
+  line-height:0;
+}
 .hero-visual img{
   width:100%;
   display:block;
-  aspect-ratio:16/11;
-  max-height:400px;
+  aspect-ratio:5/4;
+  max-height:420px;
+  min-height:300px;
   object-fit:cover;
-  object-position:center 72%;
+  object-position:center bottom;
 }
 .hero-visual-caption{
-  position:absolute;
-  left:0;right:0;bottom:0;
-  padding:16px 18px 14px;
-  background:linear-gradient(to top,rgba(5,7,12,.88) 55%,rgba(5,7,12,0));
+  padding:14px 18px 16px;
+  background:rgba(5,7,12,.92);
+  border-top:1px solid rgba(255,255,255,.1);
 }
 .hero-visual-title{
   font-family:"Plus Jakarta Sans",system-ui,sans-serif;
-  font-size:clamp(22px,2.5vw,30px);
+  font-size:18px;
   font-weight:700;
   color:var(--gold2);
-  margin-bottom:8px;
+  margin-bottom:4px;
 }
 .hero-visual-caption p:last-child{
-  color:#d4dbe6;
-  font-size:15px;
-  line-height:1.55;
+  color:#b9c3d0;
+  font-size:13px;
+  line-height:1.5;
   margin:0;
 }
 
