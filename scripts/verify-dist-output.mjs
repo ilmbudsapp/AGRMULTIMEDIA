@@ -9,6 +9,8 @@ const requiredRootFiles = ["index.html", "sitemap.xml", "robots.txt"];
 const requiredDemoIndexes = [
   path.join(outputDir, "demo", "aisa-osmani", "index.html"),
   path.join(outputDir, "demo", "tairovic-dark-verzija", "index.html"),
+  path.join(outputDir, "demo", "tairovic-dark-verzija", "impressum.html"),
+  path.join(outputDir, "demo", "tairovic-dark-verzija", "datenschutz.html"),
   path.join(outputDir, "demo", "index.html"),
 ];
 

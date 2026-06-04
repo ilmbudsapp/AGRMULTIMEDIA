@@ -8,6 +8,25 @@
 <meta name="description" content="Tairovic Gebäudeservice: Gebäudereinigung, Hausmeisterservice, Gartenpflege und Objektpflege. Sauberkeit, Zuverlässigkeit und Werterhalt Ihrer Immobilie.">
 <meta name="robots" content="index, follow">
 <link rel="stylesheet" href="/assets/fonts/local-fonts.css">
+<link rel="stylesheet" href="assets/legal.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Tairovic Gebäudeservice",
+  "image": "https://www.tairovic-gebaeudeservice.de/demo/tairovic-dark-verzija/assets/logo.webp",
+  "url": "https://www.tairovic-gebaeudeservice.de",
+  "telephone": "+49-1520-8531992",
+  "email": "ramizajet2018@gamil.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Kirchstr. 32",
+    "postalCode": "56564",
+    "addressLocality": "Neuwied",
+    "addressCountry": "DE"
+  }
+}
+</script>
 
 <style>
 :root{
@@ -198,8 +217,8 @@ h1,h2{
   inset:40px 65px;
   border-radius:42px;
   background:
-    linear-gradient(to top,rgba(5,7,12,.66),rgba(5,7,12,.06)),
-    url("https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=80") center/cover;
+    linear-gradient(135deg,rgba(30,58,95,.55),rgba(5,7,12,.2)),
+    radial-gradient(circle at 30% 40%,rgba(201,162,74,.15),transparent 50%);
   border:1px solid rgba(255,255,255,.18);
   box-shadow:var(--shadow);
   transform:rotateY(-13deg) rotateX(8deg);
@@ -326,13 +345,13 @@ h1,h2{
 }
 .work.photo{
   background:
-    linear-gradient(to top,rgba(5,7,12,.88),rgba(5,7,12,.12)),
-    url("https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1200&q=80") center/cover;
+    linear-gradient(to top,rgba(5,7,12,.92),rgba(5,7,12,.25)),
+    radial-gradient(circle at 70% 30%,rgba(30,58,95,.45),transparent 55%);
 }
 .work.video{
   background:
-    linear-gradient(to top,rgba(5,7,12,.88),rgba(5,7,12,.12)),
-    url("https://images.unsplash.com/photo-1603712725038-e9334ae8f39f?auto=format&fit=crop&w=1200&q=80") center/cover;
+    linear-gradient(to top,rgba(5,7,12,.92),rgba(5,7,12,.25)),
+    radial-gradient(circle at 20% 60%,rgba(201,162,74,.2),transparent 50%);
 }
 .work h3{
   font-family:"Inter",system-ui,sans-serif;
@@ -667,18 +686,17 @@ textarea{height:145px}
     <div class="container contact-grid">
       <div class="card">
         <h3>Tairovic Gebäudeservice</h3>
-        <p><br><strong>Inhaberin:</strong> Mevlida Tairovic</p>
+        <p><strong>Inhaberin:</strong> Mevlida Tairovic</p>
+        <p><strong>Adresse:</strong><br>Kirchstr. 32<br>56564 Neuwied</p>
         <p><strong>Telefon:</strong> <a href="tel:+4915208531992">+49 1520 8531992</a></p>
-        <p><strong>E-Mail:</strong> info@tairovic-gebaeudeservice.de</p>
-        <p><strong>Web:</strong> tairovic-gebaeudeservice.de</p>
+        <p><strong>E-Mail:</strong> <a href="mailto:ramizajet2018@gamil.com">ramizajet2018@gamil.com</a></p>
+        <p><strong>Web:</strong> <a href="https://www.tairovic-gebaeudeservice.de">www.tairovic-gebaeudeservice.de</a></p>
       </div>
 
       <div class="card">
-        <input type="text" placeholder="Ihr Name">
-        <input type="email" placeholder="Ihre E-Mail">
-        <input type="text" placeholder="Telefonnummer">
-        <textarea placeholder="Ihre Nachricht"></textarea>
-        <button class="btn btn-primary">Anfrage senden</button>
+        <p style="color:#b9c3d0;line-height:1.75;margin-bottom:20px">Senden Sie uns Ihre Anfrage per E-Mail — wir melden uns zeitnah.</p>
+        <a href="mailto:ramizajet2018@gamil.com?subject=Anfrage%20%E2%80%94%20Tairovic%20Geb%C3%A4udeservice&amp;body=Name%3A%0ATelefon%3A%0ANachricht%3A%0A" class="btn btn-primary" style="display:inline-block;text-align:center">Anfrage per E-Mail senden</a>
+        <p style="margin-top:16px;color:#8e99aa;font-size:14px">Oder schreiben Sie uns direkt über WhatsApp (Button unten rechts).</p>
       </div>
     </div>
   </div>
@@ -694,8 +712,20 @@ textarea{height:145px}
   <strong>Tairovic Gebäudeservice</strong><br>
   Gebäudereinigung · Hausmeisterservice · Gartenpflege · Objektpflege<br><br>
   © 2026 Tairovic Gebäudeservice. Alle Rechte vorbehalten.<br>
+  <nav class="footer-legal" aria-label="Rechtliches">
+    <a href="impressum.html">Impressum</a>
+    <a href="datenschutz.html">Datenschutzerklärung</a>
+  </nav>
   <p class="footer-credit">Webseite von <a href="https://www.agrmultimedia.eu/" rel="noopener noreferrer" target="_blank">AGRMULTIMEDIA</a></p>
 </footer>
+
+<div id="cookie-banner" hidden>
+  <p>Wir speichern Ihre Cookie-Einwilligung lokal. Mehr in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+  <div class="cookie-btns">
+    <button type="button" class="btn-cookie btn-essential" id="cookie-essential">Nur notwendige</button>
+    <button type="button" class="btn-cookie btn-all" id="cookie-all">Alle akzeptieren</button>
+  </div>
+</div>
 
 <a
   class="whatsapp-float"
@@ -709,6 +739,7 @@ textarea{height:145px}
   </svg>
 </a>
 
+<script src="assets/consent.js" defer></script>
 <script>
 const navlinks=document.querySelectorAll(".navlink");
 const pages=document.querySelectorAll(".page");

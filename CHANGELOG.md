@@ -1,5 +1,14 @@
 # Changelog — GDPR / legal compliance (agrmultimedia.eu)
 
+## 2026-06-03 — Tairovic Gebäudeservice (tairovic-gebaeudeservice.de)
+
+- Real contact data: Mevlida Tairovic, Kirchstr. 32, 56564 Neuwied, phone, email.
+- Added `impressum.html` and `datenschutz.html` (§ 5 DDG, 15 privacy sections).
+- Cookie banner + `tairovic-cookie-consent` localStorage (`assets/consent.js`).
+- Footer legal links; JSON-LD LocalBusiness; contact via `mailto:` (no server-side form).
+- Removed Unsplash CDN backgrounds (DSGVO-friendly, no third-party images on load).
+- Middleware routes `/impressum` and `/datenschutz` on client domain.
+
 ## 2026-05-31 — Production-ready DSGVO & legal fixes
 
 ### Google Fonts / privacy
