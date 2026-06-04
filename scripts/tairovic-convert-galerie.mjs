@@ -7,9 +7,9 @@ const OUT = path.resolve("client/public/demo/tairovic-dark-verzija/assets/galeri
 
 /** [webp filename, source jpg, tag: vorher|reinigung|nachher, label, alt] */
 const GALLERY = [
-  ["galerie-01-vorher-treppen.webp", "download (16).jpg"],
-  ["galerie-02-vorher-treppen-buerste.webp", "download (17).jpg"],
-  ["galerie-03-nachher-treppen.webp", "download (96).jpg"],
+  ["galerie-01-vorher-treppen-buerste.webp", "download (17).jpg"],
+  ["galerie-02-nachher-treppen.webp", "download (16).jpg"],
+  ["galerie-03-nachher-treppen-politur.webp", "download (96).jpg"],
   ["galerie-04-vorher-wand.webp", "download (43).jpg"],
   ["galerie-05-reinigung-wand.webp", "download (42).jpg"],
   ["galerie-06-nachher-wand.webp", "download (45).jpg"],
@@ -30,9 +30,9 @@ const GALLERY = [
 ];
 
 const META = {
-  "galerie-01-vorher-treppen.webp": { tag: "vorher", label: "Treppenhaus", alt: "Verschmutztes Treppenhaus vor der Reinigung" },
-  "galerie-02-vorher-treppen-buerste.webp": { tag: "vorher", label: "Treppenhaus", alt: "Tiefenreinigung der Treppen mit Maschine — Arbeit im verschmutzten Zustand" },
-  "galerie-03-nachher-treppen.webp": { tag: "nachher", label: "Treppenhaus", alt: "Gereinigtes und poliertes Treppenhaus" },
+  "galerie-01-vorher-treppen-buerste.webp": { tag: "vorher", label: "Treppenhaus", alt: "Treppenhaus-Reinigung mit Maschine und Bürste — Vorher" },
+  "galerie-02-nachher-treppen.webp": { tag: "nachher", label: "Treppenhaus", alt: "Gereinigtes Treppenhaus — Nachher" },
+  "galerie-03-nachher-treppen-politur.webp": { tag: "nachher", label: "Treppenhaus", alt: "Poliertes Treppenhaus — Nachher" },
   "galerie-04-vorher-wand.webp": { tag: "vorher", label: "Wandfläche", alt: "Wand mit Flecken vor der Reinigung" },
   "galerie-05-reinigung-wand.webp": { tag: "arbeit", label: "Wandfläche", alt: "Manuelle Wandreinigung" },
   "galerie-06-nachher-wand.webp": { tag: "nachher", label: "Technikbereich", alt: "Saubere Wand nach der Reinigung" },
