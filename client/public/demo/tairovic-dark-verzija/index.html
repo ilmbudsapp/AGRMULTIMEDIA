@@ -3,8 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<base href="/demo/tairovic-dark-verzija/">
+<script src="assets/site-routes.js"></script>
+<script>document.write('<base href="'+window.TAIROVIC_SITE.ASSET_BASE+'">');</script>
 <title>Tairovic Gebäudeservice — Gebäudereinigung & Hausmeisterservice</title>
+<link rel="canonical" href="https://www.tairovic-gebaeudeservice.de/">
 <meta name="description" content="Tairovic Gebäudeservice: Gebäudereinigung, Hausmeisterservice, Gartenpflege und Objektpflege. Sauberkeit, Zuverlässigkeit und Werterhalt Ihrer Immobilie.">
 <meta name="robots" content="index, follow">
 <link rel="stylesheet" href="/assets/fonts/local-fonts.css">
@@ -488,8 +490,15 @@ h1,h2,.title h2,.page-hero h1,.work h3,.card h3{
   transition:border-color .2s,box-shadow .2s;
 }
 .galerie-item:hover{
-  border-color:rgba(212,175,55,.35);
-  box-shadow:0 8px 24px rgba(0,0,0,.3);
+  transform:none;
+  border-color:rgba(212,175,55,.5);
+  box-shadow:
+    0 0 0 1px rgba(212,175,55,.4),
+    0 0 16px rgba(212,175,55,.35),
+    0 0 32px rgba(240,210,122,.15);
+}
+.galerie-card{
+  transform:none!important;
 }
 .galerie-thumb{
   display:block;
@@ -675,7 +684,7 @@ textarea{height:145px}
 
 <header class="header">
 <nav class="nav">
-  <a href="#" class="logo navlink" data-page="home" aria-label="Tairovic Gebäudereinigung — Startseite">
+  <a href="/" class="logo navlink" data-page="home" aria-label="Tairovic Gebäudereinigung — Startseite">
     <picture>
       <source srcset="assets/logo.webp" type="image/webp">
       <img src="assets/logo.png" alt="Tairovic Gebäudereinigung" class="logo-img" width="867" height="267" decoding="async">
@@ -683,15 +692,15 @@ textarea{height:145px}
   </a>
 
   <div class="links" id="links">
-    <a href="#" class="navlink active" data-page="home">Startseite</a>
-    <a href="#" class="navlink" data-page="reinigung">Gebäudereinigung</a>
-    <a href="#" class="navlink" data-page="hausmeister">Hausmeisterservice</a>
-    <a href="#" class="navlink" data-page="garten">Gartenpflege</a>
-    <a href="#" class="navlink" data-page="arbeiten">Unsere Arbeiten</a>
-    <a href="#" class="navlink" data-page="kontakt">Kontakt</a>
+    <a href="/" class="navlink active" data-page="home">Startseite</a>
+    <a href="/gebaeudereinigung" class="navlink" data-page="reinigung">Gebäudereinigung</a>
+    <a href="/hausmeisterservice" class="navlink" data-page="hausmeister">Hausmeisterservice</a>
+    <a href="/gartenpflege" class="navlink" data-page="garten">Gartenpflege</a>
+    <a href="/arbeiten" class="navlink" data-page="arbeiten">Unsere Arbeiten</a>
+    <a href="/kontakt" class="navlink" data-page="kontakt">Kontakt</a>
   </div>
 
-  <a href="#" class="cta navlink" data-page="kontakt">Angebot anfragen</a>
+  <a href="/kontakt" class="cta navlink" data-page="kontakt">Angebot anfragen</a>
   <div class="menu" id="menu">☰</div>
 </nav>
 </header>
@@ -711,8 +720,8 @@ textarea{height:145px}
           der bei Eigentümern, Mietern und Kunden Eindruck hinterlässt.
         </p>
         <div class="btns">
-          <a href="#" class="btn btn-primary navlink" data-page="kontakt">Kostenlose Anfrage</a>
-          <a href="#" class="btn btn-secondary navlink" data-page="arbeiten">Unsere Arbeiten</a>
+          <a href="/kontakt" class="btn btn-primary navlink" data-page="kontakt">Kostenlose Anfrage</a>
+          <a href="/arbeiten" class="btn btn-secondary navlink" data-page="arbeiten">Unsere Arbeiten</a>
         </div>
       </div>
 
@@ -1017,14 +1026,14 @@ textarea{height:145px}
   Gebäudereinigung · Hausmeisterservice · Gartenpflege · Objektpflege<br><br>
   © 2026 Tairovic Gebäudeservice. Alle Rechte vorbehalten.<br>
   <nav class="footer-legal" aria-label="Rechtliches">
-    <a href="impressum.html">Impressum</a>
-    <a href="datenschutz.html">Datenschutzerklärung</a>
+    <a href="/impressum" data-legal="impressum">Impressum</a>
+    <a href="/datenschutz" data-legal="datenschutz">Datenschutzerklärung</a>
   </nav>
   <p class="footer-credit">Webseite von <a href="https://www.agrmultimedia.eu/" rel="noopener noreferrer" target="_blank">AGRMULTIMEDIA</a></p>
 </footer>
 
 <div id="cookie-banner" hidden>
-  <p>Wir speichern Ihre Cookie-Einwilligung lokal. Mehr in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+  <p>Wir speichern Ihre Cookie-Einwilligung lokal. Mehr in der <a href="/datenschutz" data-legal="datenschutz">Datenschutzerklärung</a>.</p>
   <div class="cookie-btns">
     <button type="button" class="btn-cookie btn-essential" id="cookie-essential">Nur notwendige</button>
     <button type="button" class="btn-cookie btn-all" id="cookie-all">Alle akzeptieren</button>
@@ -1045,29 +1054,63 @@ textarea{height:145px}
 
 <script src="assets/consent.js" defer></script>
 <script>
+const SITE=window.TAIROVIC_SITE;
 const navlinks=document.querySelectorAll(".navlink");
 const pages=document.querySelectorAll(".page");
 const menu=document.getElementById("menu");
 const links=document.getElementById("links");
+const canonical=document.querySelector('link[rel="canonical"]');
+const TITLES={
+  home:"Tairovic Gebäudeservice — Gebäudereinigung & Hausmeisterservice",
+  reinigung:"Gebäudereinigung — Tairovic Gebäudeservice",
+  hausmeister:"Hausmeisterservice — Tairovic Gebäudeservice",
+  garten:"Gartenpflege — Tairovic Gebäudeservice",
+  arbeiten:"Unsere Arbeiten — Tairovic Gebäudeservice",
+  kontakt:"Kontakt & Angebot — Tairovic Gebäudeservice"
+};
+
+navlinks.forEach(link=>{
+  if(link.dataset.page)link.href=SITE.urlFor(link.dataset.page);
+});
+document.querySelectorAll("[data-legal]").forEach(a=>{
+  a.href=SITE.legalUrl(a.dataset.legal);
+});
+
+function activatePage(page,{push=true,replace=false}={}){
+  if(!page||!document.getElementById(page))page="home";
+  pages.forEach(p=>p.classList.remove("active"));
+  document.getElementById(page).classList.add("active");
+  navlinks.forEach(a=>a.classList.toggle("active",a.dataset.page===page));
+  links.classList.remove("open");
+  window.scrollTo(0,0);
+  if(TITLES[page])document.title=TITLES[page];
+  if(canonical&&SITE.PROD){
+    const path=SITE.urlFor(page);
+    canonical.href=path==="/"?"https://www.tairovic-gebaeudeservice.de/":"https://www.tairovic-gebaeudeservice.de"+path;
+  }
+  const url=SITE.urlFor(page);
+  if(push||replace){
+    const fn=replace?"replaceState":"pushState";
+    history[fn]({page},"",url);
+  }
+}
 
 navlinks.forEach(link=>{
   link.addEventListener("click",e=>{
-    e.preventDefault();
     const target=link.dataset.page;
     if(!target)return;
-
-    pages.forEach(p=>p.classList.remove("active"));
-    document.getElementById(target).classList.add("active");
-
-    navlinks.forEach(a=>a.classList.remove("active"));
-    document.querySelectorAll(`[data-page="${target}"]`).forEach(a=>a.classList.add("active"));
-
-    links.classList.remove("open");
-    window.scrollTo(0,0);
+    e.preventDefault();
+    activatePage(target,{push:true});
   });
 });
 
+window.addEventListener("popstate",()=>{
+  activatePage(SITE.pageFromLocation(),{push:false});
+});
+
 menu.addEventListener("click",()=>links.classList.toggle("open"));
+
+activatePage(SITE.pageFromLocation(),{push:false,replace:true});
 
 (function(){
   const lb=document.getElementById("galerie-lightbox");

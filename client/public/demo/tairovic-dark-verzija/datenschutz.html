@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<base href="/demo/tairovic-dark-verzija/">
+<script src="assets/site-routes.js"></script>
+<script>document.write('<base href="'+window.TAIROVIC_SITE.ASSET_BASE+'">');</script>
 <title>Datenschutzerklärung — Tairovic Gebäudeservice</title>
 <meta name="robots" content="noindex, follow">
 <link rel="stylesheet" href="/assets/fonts/local-fonts.css">
@@ -18,7 +19,7 @@ body{font-family:"Inter",sans-serif;background:linear-gradient(135deg,var(--blac
 </head>
 <body class="legal-page">
 <header class="header">
-  <a href="index.html" class="logo"><img src="assets/logo.webp" alt="Tairovic Gebäudeservice" width="867" height="267"></a>
+  <a href="/" class="logo" id="site-home-link"><img src="assets/logo.webp" alt="Tairovic Gebäudeservice" width="867" height="267"></a>
 </header>
 <main>
   <h1>Datenschutzerklärung</h1>
@@ -122,5 +123,6 @@ body{font-family:"Inter",sans-serif;background:linear-gradient(135deg,var(--blac
   </div>
 </div>
 <script src="assets/consent.js" defer></script>
+<script>document.getElementById("site-home-link").href=window.TAIROVIC_SITE.urlFor("home");</script>
 </body>
 </html>
