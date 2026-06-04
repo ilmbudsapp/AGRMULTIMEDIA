@@ -42,6 +42,14 @@ function demoToCleanPath(pathname: string): string | null {
   return null;
 }
 
+/** Fix broken relative asset URLs when base was missing (e.g. /gebaeudereinigung/assets/...). */
+function sectionAssetRewrite(pathname: string): string | null {
+  const match = pathname.match(
+    /^\/(?:gebaeudereinigung|hausmeisterservice|gartenpflege|arbeiten|kontakt)\/(assets\/.*)$/,
+  );
+  return match ? `${DEMO_PREFIX}/${match[1]}` : null;
+}
+
 /** Serve Tairovic static site on client domain (same Vercel project as AGR). */
 export default function middleware(request: Request): Response | undefined {
   if (!isTairovicHost(request.headers.get("host"))) {
@@ -55,6 +63,15 @@ export default function middleware(request: Request): Response | undefined {
     const target = new URL(request.url);
     target.pathname = cleanRedirect;
     return Response.redirect(target.toString(), 301);
+  }
+
+  const assetFix = sectionAssetRewrite(url.pathname);
+  if (assetFix) {
+    const rewriteUrl = new URL(request.url);
+    rewriteUrl.pathname = assetFix;
+    return new Response(null, {
+      headers: { "x-middleware-rewrite": rewriteUrl.toString() },
+    });
   }
 
   if (shouldPassThrough(url.pathname)) {
