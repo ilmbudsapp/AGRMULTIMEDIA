@@ -601,6 +601,31 @@ h1,h2,.title h2,.page-hero h1,.work h3,.card h3{
   background:rgba(34,197,94,.15);
   color:#86efac;
 }
+.garten-notes{
+  margin-top:28px;
+  padding-top:24px;
+  border-top:1px solid rgba(255,255,255,.08);
+  display:grid;
+  gap:16px;
+}
+.garten-note{
+  padding:14px 16px;
+  border-radius:12px;
+  background:rgba(0,0,0,.2);
+  border:1px solid rgba(255,255,255,.06);
+}
+.garten-note h4{
+  margin:0 0 6px;
+  font-size:14px;
+  color:var(--gold2);
+  font-weight:600;
+}
+.garten-note p{
+  margin:0;
+  font-size:13px;
+  color:#b9c3d0;
+  line-height:1.65;
+}
 
 .video-card{
   padding:40px 36px 44px;
@@ -1187,14 +1212,89 @@ textarea{height:145px}
     <div class="container">
       <div class="kicker">Leistung</div>
       <h1>Gartenpflege</h1>
-      <p>Gepflegte Außenbereiche für einen hochwertigen ersten Eindruck.</p>
+      <p>Professionelle Pflege von Grünflächen, Beeten und Außenanlagen — für Wohnanlagen, Gewerbeobjekte und private Immobilien.</p>
     </div>
   </div>
   <div class="section">
     <div class="container grid grid-3">
-      <div class="card"><h3>Grünflächen</h3><ul><li>Rasenmähen</li><li>Bewässerung</li><li>Beetpflege</li></ul></div>
-      <div class="card"><h3>Pflegearbeiten</h3><ul><li>Heckenschnitt</li><li>Unkrautentfernung</li><li>Laubentfernung</li></ul></div>
-      <div class="card"><h3>Saisonservice</h3><ul><li>Frühjahrspflege</li><li>Sommerpflege</li><li>Herbstreinigung</li></ul></div>
+      <div class="card"><h3>Grünflächen</h3><ul><li>Rasenmähen und Rasenkanten</li><li>Bewässerung und Bodenpflege</li><li>Beetpflege und Unkrautentfernung</li><li>Entfernung von Wildwuchs</li></ul></div>
+      <div class="card"><h3>Pflegearbeiten</h3><ul><li>Heckenschnitt und Formschnitt</li><li>Bäume und Sträucher — Grundpflege</li><li>Laubentfernung auf Wegen und Höfen</li><li>Reinigung von Pflanzflächen</li></ul></div>
+      <div class="card"><h3>Saisonservice</h3><ul><li>Frühjahrspflege und Neuanlage</li><li>Sommerpflege und Bewässerung</li><li>Herbstreinigung und Laubabfuhr</li><li>Vorbereitung für die Winterzeit</li></ul></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="card galerie-card">
+        <div class="kicker">Leistungen</div>
+        <h2>Gartenpflege im Überblick</h2>
+        <p>Wir sorgen dafür, dass Außenbereiche Ihrer Immobilie jederzeit ordentlich und einladend wirken. Dazu gehören die regelmäßige Rasenpflege, der Schnitt von Hecken und Sträuchern, die Betreuung von Beeten, Bewässerung bei Bedarf sowie saisonale Arbeiten wie Laubentfernung im Herbst. Auf Wunsch kombinieren wir Gartenpflege mit Hausmeisterservice und Gebäudereinigung — alles aus einer Hand.</p>
+        <div class="galerie-grid garten-grid">
+          <figure class="galerie-item">
+            <button type="button" class="galerie-thumb" data-full="/demo/tairovic-dark-verzija/assets/gartenpflege/garten-01-rasenmaehen.webp" aria-label="Rasenmähen — Bild vergrößern">
+              <img src="/demo/tairovic-dark-verzija/assets/gartenpflege/garten-01-rasenmaehen.webp" alt="Regelmäßiges Rasenmähen auf gepflegter Grünfläche" width="320" height="108" loading="lazy" decoding="async">
+            </button>
+            <figcaption class="galerie-cap"><span>Rasenmähen</span></figcaption>
+          </figure>
+          <figure class="galerie-item">
+            <button type="button" class="galerie-thumb" data-full="/demo/tairovic-dark-verzija/assets/gartenpflege/garten-02-heckenschnitt.webp" aria-label="Heckenschnitt — Bild vergrößern">
+              <img src="/demo/tairovic-dark-verzija/assets/gartenpflege/garten-02-heckenschnitt.webp" alt="Formschnitt und Pflege von Hecken" width="320" height="108" loading="lazy" decoding="async">
+            </button>
+            <figcaption class="galerie-cap"><span>Heckenschnitt</span></figcaption>
+          </figure>
+          <figure class="galerie-item">
+            <button type="button" class="galerie-thumb" data-full="/demo/tairovic-dark-verzija/assets/gartenpflege/garten-03-beetpflege.webp" aria-label="Beetpflege — Bild vergrößern">
+              <img src="/demo/tairovic-dark-verzija/assets/gartenpflege/garten-03-beetpflege.webp" alt="Pflege von Beeten und Zierpflanzen" width="320" height="108" loading="lazy" decoding="async">
+            </button>
+            <figcaption class="galerie-cap"><span>Beetpflege</span></figcaption>
+          </figure>
+          <figure class="galerie-item">
+            <button type="button" class="galerie-thumb" data-full="/demo/tairovic-dark-verzija/assets/gartenpflege/garten-04-bewaesserung.webp" aria-label="Bewässerung — Bild vergrößern">
+              <img src="/demo/tairovic-dark-verzija/assets/gartenpflege/garten-04-bewaesserung.webp" alt="Bewässerung und Pflege von Pflanzen" width="320" height="108" loading="lazy" decoding="async">
+            </button>
+            <figcaption class="galerie-cap"><span>Bewässerung</span></figcaption>
+          </figure>
+          <figure class="galerie-item">
+            <button type="button" class="galerie-thumb" data-full="/demo/tairovic-dark-verzija/assets/gartenpflege/garten-05-laubpflege.webp" aria-label="Laubpflege — Bild vergrößern">
+              <img src="/demo/tairovic-dark-verzija/assets/gartenpflege/garten-05-laubpflege.webp" alt="Laubentfernung und Herbstpflege im Außenbereich" width="320" height="108" loading="lazy" decoding="async">
+            </button>
+            <figcaption class="galerie-cap"><span>Laubpflege</span></figcaption>
+          </figure>
+          <figure class="galerie-item">
+            <button type="button" class="galerie-thumb" data-full="/demo/tairovic-dark-verzija/assets/gartenpflege/garten-06-aussenanlage.webp" aria-label="Außenanlagen — Bild vergrößern">
+              <img src="/demo/tairovic-dark-verzija/assets/gartenpflege/garten-06-aussenanlage.webp" alt="Gepflegte Außenanlage mit ordentlichem Erscheinungsbild" width="320" height="108" loading="lazy" decoding="async">
+            </button>
+            <figcaption class="galerie-cap"><span>Außenanlagen</span></figcaption>
+          </figure>
+        </div>
+        <div class="garten-notes">
+          <div class="garten-note">
+            <h4>Rasenmähen &amp; Grünflächen</h4>
+            <p>Wir mähen Rasenflächen in Wohnanlagen, an Gewerbeobjekten und auf privaten Grundstücken in festen Intervallen oder nach Absprache. Dazu gehören saubere Rasenkanten und die Entfernung von Schnittgut — für ein gepflegtes, sicheres Erscheinungsbild.</p>
+          </div>
+          <div class="garten-note">
+            <h4>Heckenschnitt &amp; Sträucher</h4>
+            <p>Hecken und Sträucher werden geschnitten, geformt und von abgestorbenem Material befreit. So bleiben Zugänge frei, Sichtachsen erhalten und die Außenanlage wirkt ordentlich — besonders wichtig bei Mehrfamilienhäusern und öffentlich sichtbaren Bereichen.</p>
+          </div>
+          <div class="garten-note">
+            <h4>Beetpflege &amp; Unkraut</h4>
+            <p>Beete und Pflanzflächen pflegen wir durch Jäten, Lockern des Bodens und Entfernen von Unkraut. Zier- und Nutzpflanzen erhalten so die nötige Aufmerksamkeit, ohne dass Wildwuchs die Anlage überwuchert.</p>
+          </div>
+          <div class="garten-note">
+            <h4>Bewässerung</h4>
+            <p>Bei Trockenperioden und nach Neuanpflanzungen unterstützen wir mit gezielter Bewässerung. Pflanzen und Rasen bleiben vital — ein Plus für Werterhalt und den ersten Eindruck Ihrer Immobilie.</p>
+          </div>
+          <div class="garten-note">
+            <h4>Laub- &amp; Herbstpflege</h4>
+            <p>Im Herbst entfernen wir Laub von Wegen, Höfen, Treppen und Eingangsbereichen. So bleiben Flächen rutschfest und sauber — für Mieter, Besucher und Eigentümer gleichermaßen.</p>
+          </div>
+          <div class="garten-note">
+            <h4>Ganzjährige Außenbetreuung</h4>
+            <p>Ob Frühjahrsstart, Sommerpflege oder Vorbereitung auf den Winter: wir planen saisonale Arbeiten und stimmen sie auf Ihr Objekt ab. Auf Wunsch kombinieren wir Gartenpflege mit Winterdienst, Hausmeisterservice und Gebäudereinigung.</p>
+          </div>
+        </div>
+        <p style="margin-top:18px;font-size:12px;color:#6e7a8c">Hinweis: Die Abbildungen oben sind symbolische Beispielbilder zur Veranschaulichung unserer Leistungen. Eigene Referenzfotos können jederzeit ergänzt werden.</p>
+      </div>
     </div>
   </div>
 </section>
