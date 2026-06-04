@@ -107,7 +107,7 @@ const en: PortfolioPageCopy = {
       title: "Tairovic Gebäudeservice",
       description:
         "Dark elegant website for building cleaning, caretaker, garden and property care — client-approved design, ready for production domain.",
-      liveCta: "Open demo",
+      liveCta: "View website",
       gradeBadge: "Client project · Dark",
     },
     aisaOsmani: {
@@ -196,7 +196,7 @@ const de: PortfolioPageCopy = {
       title: "Tairovic Gebäudeservice",
       description:
         "Dark-Elegant Webauftritt: Gebäudereinigung, Hausmeister, Garten- und Objektpflege — vom Kunden gewählt, Vorbereitung für Live-Domain.",
-      liveCta: "Demo öffnen",
+      liveCta: "Webseite öffnen",
       gradeBadge: "Kundenprojekt · Dark",
     },
     aisaOsmani: {
@@ -285,7 +285,7 @@ const sr: PortfolioPageCopy = {
       title: "Tairovic Gebäudeservice",
       description:
         "Tamni elegantan sajt: čišćenje zgrada, domar, bašta i održavanje — klijent je odabrao ovaj dizajn, spremno za produkcioni domen.",
-      liveCta: "Otvori demo",
+      liveCta: "Otvori sajt",
       gradeBadge: "Klijentski projekat · Dark",
     },
     aisaOsmani: {
@@ -374,7 +374,7 @@ const it: PortfolioPageCopy = {
       title: "Tairovic Gebäudeservice",
       description:
         "Sito dark elegant: pulizie, custode, giardino e cura immobili — design scelto dal cliente, in preparazione per il dominio live.",
-      liveCta: "Apri demo",
+      liveCta: "Apri sito",
       gradeBadge: "Progetto cliente · Dark",
     },
     aisaOsmani: {
@@ -463,7 +463,7 @@ const al: PortfolioPageCopy = {
       title: "Tairovic Gebäudeservice",
       description:
         "Faqe dark elegant: pastrim, mirëmbajtje, kopsht dhe kujdes objektesh — dizajni i zgjedhur nga klienti, përgatitje për domenin live.",
-      liveCta: "Hap demo",
+      liveCta: "Hap faqen",
       gradeBadge: "Projekt klienti · Dark",
     },
     aisaOsmani: {

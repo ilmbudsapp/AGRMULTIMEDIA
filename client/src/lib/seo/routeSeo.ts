@@ -492,9 +492,9 @@ const EXTRA_EN: Record<string, RouteSeo> = {
     keywords: "student portfolio, multimedia design, demo, web design, AGR Multimedia",
   },
   "/demo/tairovic-dark-verzija": {
-    title: "Tairovic Gebäudeservice — Dark website demo (AGR Multimedia)",
+    title: "Tairovic Gebäudeservice — Building cleaning & caretaker services",
     description:
-      "Client-approved dark elegant website: building cleaning, caretaker, garden and property care. Production-ready design.",
+      "Tairovic Gebäudeservice: building cleaning, caretaker, garden and property care. Dark elegant website.",
     keywords: "Gebäudereinigung, Hausmeisterservice, dark web design, AGR Multimedia",
   },
 };
