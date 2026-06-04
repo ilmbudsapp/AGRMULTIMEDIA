@@ -113,6 +113,26 @@
       "destination": "/demo/:slug/index.html"
     },
     {
+      "source": "/",
+      "has": [{ "type": "host", "value": "www.tairovic-gebaeudeservice.de" }],
+      "destination": "/demo/tairovic-dark-verzija/index.html"
+    },
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "tairovic-gebaeudeservice.de" }],
+      "destination": "/demo/tairovic-dark-verzija/index.html"
+    },
+    {
+      "source": "/:path((?!demo/|assets/|api/).*)",
+      "has": [{ "type": "host", "value": "www.tairovic-gebaeudeservice.de" }],
+      "destination": "/demo/tairovic-dark-verzija/index.html"
+    },
+    {
+      "source": "/:path((?!demo/|assets/|api/).*)",
+      "has": [{ "type": "host", "value": "tairovic-gebaeudeservice.de" }],
+      "destination": "/demo/tairovic-dark-verzija/index.html"
+    },
+    {
       "source": "/((?!api/|demo/).*)",
       "destination": "/index.html"
     }
