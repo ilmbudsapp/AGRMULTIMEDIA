@@ -626,6 +626,31 @@ h1,h2,.title h2,.page-hero h1,.work h3,.card h3{
   color:#b9c3d0;
   line-height:1.65;
 }
+.garten-grid,
+.hausmeister-grid{
+  grid-template-columns:repeat(3,1fr);
+}
+.garten-grid .galerie-thumb,
+.hausmeister-grid .galerie-thumb{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:148px;
+}
+.garten-grid .galerie-thumb img,
+.hausmeister-grid .galerie-thumb img{
+  width:100%;
+  height:auto;
+  max-height:200px;
+  min-height:140px;
+  object-fit:contain;
+  object-position:center;
+}
+.garten-grid-hint{
+  margin-top:10px;
+  font-size:12px;
+  color:#6e7a8c;
+}
 
 .video-card{
   padding:40px 36px 44px;
@@ -768,7 +793,17 @@ textarea{height:145px}
 }
 @media(max-width:560px){
   .galerie-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+  .garten-grid,.hausmeister-grid{grid-template-columns:repeat(2,1fr)}
   .galerie-thumb img{height:96px}
+  .garten-grid .galerie-thumb img,
+  .hausmeister-grid .galerie-thumb img{
+    height:auto;
+    max-height:150px;
+    min-height:100px;
+    object-fit:contain;
+  }
+  .garten-grid .galerie-thumb,
+  .hausmeister-grid .galerie-thumb{min-height:108px}
   .video-grid{grid-template-columns:1fr;gap:12px}
   .video-item video{max-height:min(65vh,480px)}
 }
@@ -1229,6 +1264,7 @@ textarea{height:145px}
         <div class="kicker">Leistungen</div>
         <h2>Gartenpflege im Überblick</h2>
         <p>Wir sorgen dafür, dass Außenbereiche Ihrer Immobilie jederzeit ordentlich und einladend wirken. Dazu gehören die regelmäßige Rasenpflege, der Schnitt von Hecken und Sträuchern, die Betreuung von Beeten, Bewässerung bei Bedarf sowie saisonale Arbeiten wie Laubentfernung im Herbst. Auf Wunsch kombinieren wir Gartenpflege mit Hausmeisterservice und Gebäudereinigung — alles aus einer Hand.</p>
+        <p class="garten-grid-hint">Tipp: Klicken Sie auf ein Bild — es öffnet sich in voller Größe.</p>
         <div class="galerie-grid garten-grid">
           <figure class="galerie-item">
             <button type="button" class="galerie-thumb" data-full="/demo/tairovic-dark-verzija/assets/gartenpflege/garten-01-rasenmaehen.webp" aria-label="Rasenmähen — Bild vergrößern">
