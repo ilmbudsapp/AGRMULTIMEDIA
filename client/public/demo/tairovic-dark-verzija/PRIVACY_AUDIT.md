@@ -31,6 +31,6 @@
 
 ## Offen (Inhaberin)
 
-- [ ] E-Mail-Domain prüfen (`@gamil.com` → ggf. `@gmail.com`)
+- [x] E-Mail: ramizajet2018@gmail.com (korrigiert)
 - [ ] Steuernummer in Impressum ergänzen
 - [ ] Vercel DPA im Dashboard bestätigen
