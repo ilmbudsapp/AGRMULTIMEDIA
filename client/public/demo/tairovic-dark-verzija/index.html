@@ -463,6 +463,72 @@ h1,h2,.title h2,.page-hero h1,.work h3,.card h3{
   color:#8e99aa;
   margin-bottom:2px;
 }
+
+.galerie-card{
+  padding:40px 36px 44px;
+}
+.galerie-card > p{
+  max-width:720px;
+  margin-top:14px;
+  color:#b9c3d0;
+  line-height:1.75;
+}
+.galerie-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+  gap:18px;
+  margin-top:32px;
+}
+.galerie-item{
+  margin:0;
+  border-radius:20px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.1);
+  background:rgba(0,0,0,.25);
+  transition:transform .25s,border-color .25s,box-shadow .25s;
+}
+.galerie-item:hover{
+  transform:translateY(-3px);
+  border-color:rgba(212,175,55,.35);
+  box-shadow:0 16px 40px rgba(0,0,0,.35);
+}
+.galerie-item img{
+  display:block;
+  width:100%;
+  aspect-ratio:4/3;
+  object-fit:cover;
+}
+.galerie-cap{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  padding:12px 14px;
+  font-size:13px;
+  color:#9faabd;
+  line-height:1.4;
+}
+.galerie-tag{
+  flex-shrink:0;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  padding:5px 10px;
+  border-radius:999px;
+}
+.galerie-tag--vorher{
+  background:rgba(239,68,68,.15);
+  color:#fca5a5;
+}
+.galerie-tag--arbeit{
+  background:rgba(212,175,55,.18);
+  color:var(--gold2);
+}
+.galerie-tag--nachher{
+  background:rgba(34,197,94,.15);
+  color:#86efac;
+}
 input,textarea{
   width:100%;
   padding:17px 18px;
@@ -680,6 +746,66 @@ textarea{height:145px}
       <div class="card"><h3>Innenbereiche</h3><ul><li>Treppenhausreinigung</li><li>Flure</li><li>Gemeinschaftsräume</li><li>Kellerbereiche</li></ul></div>
       <div class="card"><h3>Außenbereiche</h3><ul><li>Gehwege</li><li>Hofflächen</li><li>Parkplätze</li><li>Müllplätze</li></ul></div>
       <div class="card"><h3>Spezialreinigung</h3><ul><li>Garagenreinigung</li><li>Hochdruckreinigung</li><li>Grundreinigung</li><li>Regelmäßige Pflege</li></ul></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="card galerie-card">
+        <div class="kicker">Referenzen</div>
+        <h2>Galerie</h2>
+        <p>Ausgewählte Vorher-Nachher-Aufnahmen und Arbeitsergebnisse aus unserer Gebäudereinigung — Treppenhaus, Flure, Außenbereiche und Gemeinschaftsräume.</p>
+        <div class="galerie-grid">
+          <figure class="galerie-item">
+            <img src="assets/galerie/galerie-01-vorher-treppen.webp" alt="Treppenhaus vor der Reinigung — sichtbare Verschmutzung auf den Stufen" width="1400" height="1050" loading="lazy" decoding="async">
+            <figcaption class="galerie-cap"><span>Treppenhaus</span><span class="galerie-tag galerie-tag--vorher">Vorher</span></figcaption>
+          </figure>
+          <figure class="galerie-item">
+            <img src="assets/galerie/galerie-02-reinigung-treppen.webp" alt="Professionelle Tiefenreinigung der Treppen mit Spezialbürste" width="1400" height="1050" loading="lazy" decoding="async">
+            <figcaption class="galerie-cap"><span>Treppenhaus</span><span class="galerie-tag galerie-tag--arbeit">Reinigung</span></figcaption>
+          </figure>
+          <figure class="galerie-item">
+            <img src="assets/galerie/galerie-03-nachher-flur.webp" alt="Gereinigter Flur mit sauberen Fliesen nach der Gebäudereinigung" width="1400" height="1050" loading="lazy" decoding="async">
+            <figcaption class="galerie-cap"><span>Flur &amp; Boden</span><span class="galerie-tag galerie-tag--nachher">Nachher</span></figcaption>
+          </figure>
+          <figure class="galerie-item">
+            <img src="assets/galerie/galerie-04-vorher-wand.webp" alt="Wand mit Wasserflecken und Verschmutzung vor der Reinigung" width="1400" height="1050" loading="lazy" decoding="async">
+            <figcaption class="galerie-cap"><span>Wandfläche</span><span class="galerie-tag galerie-tag--vorher">Vorher</span></figcaption>
+          </figure>
+          <figure class="galerie-item">
+            <img src="assets/galerie/galerie-05-reinigung-wand.webp" alt="Manuelle Reinigung einer strukturierten Wandfläche" width="1400" height="1050" loading="lazy" decoding="async">
+            <figcaption class="galerie-cap"><span>Wandfläche</span><span class="galerie-tag galerie-tag--arbeit">Reinigung</span></figcaption>
+          </figure>
+          <figure class="galerie-item">
+            <img src="assets/galerie/galerie-06-nachher-wand.webp" alt="Saubere Wand und Technikbereich nach der Reinigung" width="1400" height="1050" loading="lazy" decoding="async">
+            <figcaption class="galerie-cap"><span>Technikbereich</span><span class="galerie-tag galerie-tag--nachher">Nachher</span></figcaption>
+          </figure>
+          <figure class="galerie-item">
+            <img src="assets/galerie/galerie-07-nachher-aufzug.webp" alt="Gereinigter Eingangsbereich mit Aufzug und sauberem Boden" width="1400" height="1050" loading="lazy" decoding="async">
+            <figcaption class="galerie-cap"><span>Eingang &amp; Aufzug</span><span class="galerie-tag galerie-tag--nachher">Nachher</span></figcaption>
+          </figure>
+          <figure class="galerie-item">
+            <img src="assets/galerie/galerie-08-nachher-korridor.webp" alt="Hochglanz-gereinigter Korridorboden in einem Objekt" width="1400" height="1050" loading="lazy" decoding="async">
+            <figcaption class="galerie-cap"><span>Korridor</span><span class="galerie-tag galerie-tag--nachher">Nachher</span></figcaption>
+          </figure>
+          <figure class="galerie-item">
+            <img src="assets/galerie/galerie-09-vorher-balkon.webp" alt="Balkonboden vor der Reinigung mit sichtbarem Schmutz" width="1400" height="1050" loading="lazy" decoding="async">
+            <figcaption class="galerie-cap"><span>Balkon</span><span class="galerie-tag galerie-tag--vorher">Vorher</span></figcaption>
+          </figure>
+          <figure class="galerie-item">
+            <img src="assets/galerie/galerie-10-nachher-balkon.webp" alt="Gereinigter Balkon mit sauberer WPC-Dielenfläche" width="1400" height="1050" loading="lazy" decoding="async">
+            <figcaption class="galerie-cap"><span>Balkon</span><span class="galerie-tag galerie-tag--nachher">Nachher</span></figcaption>
+          </figure>
+          <figure class="galerie-item">
+            <img src="assets/galerie/galerie-11-vorher-tuer.webp" alt="Tür und Rahmen vor der Reinigung mit Schmutzspuren" width="1400" height="1050" loading="lazy" decoding="async">
+            <figcaption class="galerie-cap"><span>Tür &amp; Rahmen</span><span class="galerie-tag galerie-tag--vorher">Vorher</span></figcaption>
+          </figure>
+          <figure class="galerie-item">
+            <img src="assets/galerie/galerie-12-nachher-gemeinschaft.webp" alt="Gereinigter Gemeinschaftsraum mit ordentlich gedecktem Tisch" width="1400" height="1050" loading="lazy" decoding="async">
+            <figcaption class="galerie-cap"><span>Gemeinschaftsraum</span><span class="galerie-tag galerie-tag--nachher">Nachher</span></figcaption>
+          </figure>
+        </div>
+      </div>
     </div>
   </div>
 </section>
