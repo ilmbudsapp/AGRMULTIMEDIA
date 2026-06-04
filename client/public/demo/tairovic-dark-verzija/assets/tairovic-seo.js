@@ -219,15 +219,18 @@
     };
   }
 
+  const FAQ_PAGES = new Set(["reinigung", "hausmeister", "garten", "winter"]);
+
   function faqFromPage(page) {
+    if (!FAQ_PAGES.has(page)) return null;
     const root = document.getElementById(page);
     if (!root) return null;
-    const faq = root.querySelector('.faq-list[itemtype="https://schema.org/FAQPage"]');
+    const faq = root.querySelector(".faq-list");
     if (!faq) return null;
     const entities = [];
     faq.querySelectorAll(".faq-item").forEach((el) => {
-      const q = el.querySelector('[itemprop="name"]');
-      const a = el.querySelector('[itemprop="text"]');
+      const q = el.querySelector("summary");
+      const a = el.querySelector(".faq-answer p") || el.querySelector(".faq-answer");
       if (!q || !a) return;
       entities.push({
         "@type": "Question",
@@ -242,8 +245,6 @@
       mainEntity: entities,
     };
   }
-
-  const FAQ_PAGES = new Set(["reinigung", "hausmeister", "garten", "winter"]);
 
   function buildGraph(page) {
     const graph = [
@@ -281,6 +282,9 @@
   }
 
   function ensureJsonLd() {
+    document.querySelectorAll('script[type="application/ld+json"]').forEach((el) => {
+      if (el.id !== "ld-graph") el.remove();
+    });
     let script = document.getElementById("ld-graph");
     if (!script) {
       script = document.createElement("script");
@@ -313,8 +317,7 @@
 
     ensureCanonical().href = url;
 
-    const graph = buildGraph(key);
-    ensureJsonLd().textContent = JSON.stringify(graph);
+    ensureJsonLd().textContent = JSON.stringify(buildGraph(key));
   }
 
   function applyLegal(page) {
