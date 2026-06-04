@@ -497,8 +497,19 @@ h1,h2,.title h2,.page-hero h1,.work h3,.card h3{
     0 0 16px rgba(212,175,55,.35),
     0 0 32px rgba(240,210,122,.15);
 }
-.galerie-card{
+.galerie-card,
+.video-card{
+  min-height:auto;
   transform:none!important;
+}
+.galerie-card:hover,
+.video-card:hover{
+  transform:none!important;
+  box-shadow:0 30px 90px rgba(0,0,0,.28);
+}
+.galerie-card:hover::before,
+.video-card:hover::before{
+  opacity:0;
 }
 .galerie-thumb{
   display:block;
@@ -602,39 +613,38 @@ h1,h2,.title h2,.page-hero h1,.work h3,.card h3{
 }
 .video-grid{
   display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:20px;
-  margin-top:28px;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+  margin-top:24px;
 }
 .video-item{
   margin:0;
-  border-radius:16px;
+  border-radius:14px;
   overflow:hidden;
   border:1px solid rgba(255,255,255,.1);
   background:rgba(0,0,0,.35);
   transition:border-color .2s,box-shadow .2s;
 }
 .video-item:hover{
-  border-color:rgba(212,175,55,.45);
+  transform:none;
+  border-color:rgba(212,175,55,.5);
   box-shadow:
-    0 0 0 1px rgba(212,175,55,.35),
-    0 0 18px rgba(212,175,55,.22);
+    0 0 0 1px rgba(212,175,55,.4),
+    0 0 16px rgba(212,175,55,.35),
+    0 0 32px rgba(240,210,122,.15);
 }
 .video-item video{
   display:block;
   width:100%;
-  aspect-ratio:16/9;
+  height:112px;
   object-fit:cover;
   background:#0a0d14;
 }
 .video-cap{
-  padding:10px 12px;
-  font-size:12px;
+  padding:8px 10px;
+  font-size:11px;
   color:#9faabd;
   text-align:center;
-}
-@media(max-width:720px){
-  .video-grid{grid-template-columns:1fr}
 }
 input,textarea{
   width:100%;
@@ -718,10 +728,13 @@ textarea{height:145px}
   .hero-visual{max-width:100%;margin:-8px auto 0}
   .hero-visual img{aspect-ratio:16/10;max-height:320px;object-position:center bottom}
   .galerie-grid{grid-template-columns:repeat(3,1fr)}
+  .video-grid{grid-template-columns:repeat(3,1fr)}
 }
 @media(max-width:560px){
   .galerie-grid{grid-template-columns:repeat(2,1fr);gap:10px}
   .galerie-thumb img{height:96px}
+  .video-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+  .video-item video{height:96px}
 }
 </style>
 </head>
