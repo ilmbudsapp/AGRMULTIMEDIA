@@ -12,7 +12,8 @@
     hausmeister: { path: "/hausmeisterservice", name: "Hausmeisterservice" },
     garten: { path: "/gartenpflege", name: "Gartenpflege" },
     winter: { path: "/winterdienst", name: "Winterdienst" },
-    about: { path: "/uber-uns", name: "Über uns" },
+    about: { path: "/ueber-uns", name: "Über uns" },
+    arbeiten: { path: "/unsere-arbeiten", name: "Unsere Arbeiten" },
     kontakt: { path: "/kontakt", name: "Kontakt" },
   };
 

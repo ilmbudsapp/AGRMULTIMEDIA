@@ -8,10 +8,10 @@
     hausmeister: "hausmeisterservice",
     garten: "gartenpflege",
     winter: "winterdienst",
-    about: "uber-uns",
+    about: "ueber-uns",
     kontakt: "kontakt",
   };
-  const SLUG_PAGE = { "": "home" };
+  const SLUG_PAGE = { "": "home", "unsere-arbeiten": "reinigung" };
   Object.keys(PAGE_SLUG).forEach((page) => {
     const slug = PAGE_SLUG[page];
     if (slug) SLUG_PAGE[slug] = page;

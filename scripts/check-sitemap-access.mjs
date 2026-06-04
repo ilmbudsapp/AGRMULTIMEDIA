@@ -25,6 +25,13 @@ const TARGETS = [
     robots: "https://fixbike.online/robots.txt",
     requireWww: false,
   },
+  {
+    name: "Tairovic Gebäudeservice",
+    url: "https://www.tairovic-gebaeudeservice.de/sitemap.xml",
+    robots: "https://www.tairovic-gebaeudeservice.de/robots.txt",
+    requireDomain: "https://www.tairovic-gebaeudeservice.de",
+    requireWww: false,
+  },
 ];
 
 function fail(message) {
@@ -106,8 +113,16 @@ async function checkTarget(target) {
     if (!loc.startsWith("https://")) {
       fail(`${target.url} loc is not absolute: ${loc}`);
     }
+    if (target.requireDomain && !loc.startsWith(target.requireDomain)) {
+      fail(`${target.url} loc wrong domain: ${loc}`);
+    }
     if (target.requireWww && !loc.startsWith("https://www.agrmultimedia.eu")) {
       fail(`${target.url} loc missing www: ${loc}`);
+    }
+    if (target.requireDomain === "https://www.tairovic-gebaeudeservice.de") {
+      if (loc.includes("agrmultimedia.eu") || loc.includes("/demo/") || loc.includes("/portfolio")) {
+        fail(`${target.url} loc must not contain AGR/demo/portfolio URLs: ${loc}`);
+      }
     }
     if (loc.endsWith("//")) {
       fail(`${target.url} loc has trailing slash issue: ${loc}`);

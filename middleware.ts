@@ -17,7 +17,8 @@ const TAIROVIC_SECTION_PATHS = new Set([
   "/hausmeisterservice",
   "/gartenpflege",
   "/winterdienst",
-  "/uber-uns",
+  "/ueber-uns",
+  "/unsere-arbeiten",
   "/kontakt",
 ]);
 
@@ -46,7 +47,7 @@ function demoToCleanPath(pathname: string): string | null {
 /** Fix broken relative asset URLs when base was missing (e.g. /gebaeudereinigung/assets/...). */
 function sectionAssetRewrite(pathname: string): string | null {
   const match = pathname.match(
-    /^\/(?:gebaeudereinigung|hausmeisterservice|gartenpflege|winterdienst|uber-uns|kontakt)\/(assets\/.*)$/,
+    /^\/(?:gebaeudereinigung|hausmeisterservice|gartenpflege|winterdienst|ueber-uns|unsere-arbeiten|kontakt)\/(assets\/.*)$/,
   );
   return match ? `${DEMO_PREFIX}/${match[1]}` : null;
 }
@@ -61,7 +62,13 @@ export default function middleware(request: Request): Response | undefined {
 
   if (url.pathname === "/arbeiten" || url.pathname === "/arbeiten/") {
     const target = new URL(request.url);
-    target.pathname = "/uber-uns";
+    target.pathname = "/unsere-arbeiten";
+    return Response.redirect(target.toString(), 301);
+  }
+
+  if (url.pathname === "/uber-uns" || url.pathname === "/uber-uns/") {
+    const target = new URL(request.url);
+    target.pathname = "/ueber-uns";
     return Response.redirect(target.toString(), 301);
   }
 
@@ -112,6 +119,6 @@ export default function middleware(request: Request): Response | undefined {
 
 export const config = {
   matcher: [
-    "/((?!_next/static|_next/image|.*\\.(?:png|jpg|jpeg|gif|webp|svg|ico|css|js|woff2?|mp4|webm|txt|xml|json)$).*)",
+    "/((?!_next/static|_next/image|.*\\.(?:png|jpg|jpeg|gif|webp|svg|ico|css|js|woff2?|mp4|webm|txt|json)$).*)",
   ],
 };
