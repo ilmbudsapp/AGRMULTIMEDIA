@@ -11,7 +11,6 @@
 
 <style>
 :root{
-  --agr-banner-h:22px;
   --black:#05070c;
   --dark:#0b1220;
   --navy:#0f1f35;
@@ -37,15 +36,6 @@ body{
 }
 a{text-decoration:none;color:inherit}
 img{max-width:100%;display:block}
-
-#agr-demo-banner{
-  position:fixed;top:0;left:0;right:0;z-index:1000;
-  display:flex;align-items:center;justify-content:center;gap:8px;
-  padding:4px 12px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;
-  background:linear-gradient(90deg,#2d6db8,#01429e,#05070c);color:#fff;
-}
-#agr-demo-banner a{color:#fff;font-weight:800}
-body.has-agr-demo-banner .header{top:var(--agr-banner-h)}
 
 .header{
   position:sticky;
@@ -427,12 +417,7 @@ textarea{height:145px}
 </style>
 </head>
 
-<body class="has-agr-demo-banner">
-
-<div id="agr-demo-banner" role="note">
-  <span>Demo · Tairovic · Dark</span>
-  <a href="https://www.agrmultimedia.eu/" rel="noopener">AGR MULTIMEDIA</a>
-</div>
+<body>
 
 <header class="header">
 <nav class="nav">
@@ -669,16 +654,6 @@ textarea{height:145px}
 </footer>
 
 <script>
-(function(){
-  var bar=document.getElementById("agr-demo-banner");
-  if(!bar)return;
-  function sync(){
-    document.documentElement.style.setProperty("--agr-banner-h",(bar.offsetHeight||22)+"px");
-  }
-  sync();
-  window.addEventListener("resize",sync);
-})();
-
 const navlinks=document.querySelectorAll(".navlink");
 const pages=document.querySelectorAll(".page");
 const menu=document.getElementById("menu");
