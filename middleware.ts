@@ -1,6 +1,3 @@
-import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server";
-
 const TAIROVIC_HOSTS = new Set([
   "www.tairovic-gebaeudeservice.de",
   "tairovic-gebaeudeservice.de",
@@ -20,19 +17,23 @@ function shouldPassThrough(pathname: string): boolean {
 }
 
 /** Serve Tairovic static site on client domain (same Vercel project as AGR). */
-export function middleware(request: NextRequest) {
+export default function middleware(request: Request): Response | undefined {
   if (!isTairovicHost(request.headers.get("host"))) {
-    return NextResponse.next();
+    return undefined;
   }
 
-  const { pathname } = request.nextUrl;
-  if (shouldPassThrough(pathname)) {
-    return NextResponse.next();
+  const url = new URL(request.url);
+  if (shouldPassThrough(url.pathname)) {
+    return undefined;
   }
 
-  const url = request.nextUrl.clone();
-  url.pathname = "/demo/tairovic-dark-verzija/index.html";
-  return NextResponse.rewrite(url);
+  const rewriteUrl = new URL(request.url);
+  rewriteUrl.pathname = "/demo/tairovic-dark-verzija/index.html";
+  return new Response(null, {
+    headers: {
+      "x-middleware-rewrite": rewriteUrl.toString(),
+    },
+  });
 }
 
 export const config = {
