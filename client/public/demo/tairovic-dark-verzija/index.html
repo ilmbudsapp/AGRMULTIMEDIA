@@ -413,6 +413,56 @@ h1,h2,.title h2,.page-hero h1,.work h3,.card h3{
   grid-template-columns:.9fr 1.1fr;
   gap:30px;
 }
+.contact-list{
+  list-style:none;
+  margin:20px 0 0;
+  padding:0;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+.contact-item{
+  display:flex;
+  align-items:flex-start;
+  gap:14px;
+  color:#b9c3d0;
+  line-height:1.6;
+}
+.contact-item a{
+  color:var(--gold2);
+  font-weight:600;
+}
+.contact-item a:hover{color:var(--gold)}
+.contact-item-link{
+  text-decoration:none;
+  color:#b9c3d0;
+  border-radius:14px;
+  padding:4px 6px;
+  margin:-4px -6px;
+  transition:background .2s,color .2s;
+}
+.contact-item-link:hover{
+  background:rgba(255,255,255,.06);
+  color:var(--white);
+}
+.contact-item-link:hover .contact-icon-fb{color:#1877f2}
+.contact-icon{
+  flex-shrink:0;
+  width:22px;
+  height:22px;
+  margin-top:2px;
+  color:var(--gold2);
+}
+.contact-icon-fb{color:#6b9fff}
+.contact-label{
+  display:block;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:#8e99aa;
+  margin-bottom:2px;
+}
 input,textarea{
   width:100%;
   padding:17px 18px;
@@ -708,9 +758,32 @@ textarea{height:145px}
         <h3>Tairovic Gebäudeservice</h3>
         <p><strong>Inhaberin:</strong> Mevlida Tairovic</p>
         <p><strong>Adresse:</strong><br>Kirchstr. 32<br>56564 Neuwied</p>
-        <p><strong>Telefon:</strong> <a href="tel:+4915208531992">+49 1520 8531992</a></p>
-        <p><strong>E-Mail:</strong> <a href="mailto:ramizajet2018@gmail.com">ramizajet2018@gmail.com</a></p>
-        <p><strong>Web:</strong> <a href="https://www.tairovic-gebaeudeservice.de">www.tairovic-gebaeudeservice.de</a></p>
+        <ul class="contact-list">
+          <li class="contact-item">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>
+              <span class="contact-label">Telefon</span>
+              <a href="tel:+4915208531992">+49 1520 8531992</a>
+            </span>
+          </li>
+          <li class="contact-item">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span>
+              <span class="contact-label">E-Mail</span>
+              <a href="mailto:ramizajet2018@gmail.com">ramizajet2018@gmail.com</a>
+            </span>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/ajet.tairovic.1" class="contact-item contact-item-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook-Profil — Tairovic Gebäudeservice">
+              <svg class="contact-icon contact-icon-fb" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              <span>
+                <span class="contact-label">Facebook</span>
+                facebook.com/ajet.tairovic.1
+              </span>
+            </a>
+          </li>
+        </ul>
+        <p style="margin-top:20px"><strong>Web:</strong> <a href="https://www.tairovic-gebaeudeservice.de">www.tairovic-gebaeudeservice.de</a></p>
       </div>
 
       <div class="card">
