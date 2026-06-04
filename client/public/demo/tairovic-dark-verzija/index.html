@@ -613,9 +613,10 @@ h1,h2,.title h2,.page-hero h1,.work h3,.card h3{
 }
 .video-grid{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:14px;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:16px;
   margin-top:24px;
+  max-width:920px;
 }
 .video-item{
   margin:0;
@@ -633,18 +634,28 @@ h1,h2,.title h2,.page-hero h1,.work h3,.card h3{
     0 0 16px rgba(212,175,55,.35),
     0 0 32px rgba(240,210,122,.15);
 }
+.video-media{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:8px;
+  background:#0a0d14;
+}
 .video-item video{
   display:block;
   width:100%;
-  height:200px;
-  object-fit:cover;
+  height:auto;
+  max-height:min(70vh,520px);
+  object-fit:contain;
   background:#0a0d14;
 }
 .video-cap{
-  padding:8px 10px;
-  font-size:11px;
-  color:#9faabd;
+  padding:10px 12px;
+  font-size:12px;
+  font-weight:600;
+  color:#d8dee9;
   text-align:center;
+  line-height:1.35;
 }
 input,textarea{
   width:100%;
@@ -728,14 +739,13 @@ textarea{height:145px}
   .hero-visual{max-width:100%;margin:-8px auto 0}
   .hero-visual img{aspect-ratio:16/10;max-height:320px;object-position:center bottom}
   .galerie-grid{grid-template-columns:repeat(3,1fr)}
-  .video-grid{grid-template-columns:repeat(2,1fr)}
-  .video-item video{height:168px}
+  .video-grid{max-width:100%}
 }
 @media(max-width:560px){
   .galerie-grid{grid-template-columns:repeat(2,1fr);gap:10px}
   .galerie-thumb img{height:96px}
-  .video-grid{grid-template-columns:repeat(2,1fr);gap:10px}
-  .video-item video{height:140px}
+  .video-grid{grid-template-columns:1fr;gap:12px}
+  .video-item video{max-height:min(65vh,480px)}
 }
 </style>
 </head>
@@ -1016,64 +1026,84 @@ textarea{height:145px}
         <p>Kurze Einblicke in unsere Gebäudereinigung — Treppenhäuser, Böden, Fenster und weitere Arbeiten vor Ort.</p>
         <div class="video-grid">
           <figure class="video-item">
-            <video controls playsinline preload="metadata" width="1280" height="720" title="Gebäudereinigung — Video 1">
-              <source src="/demo/tairovic-dark-verzija/assets/videos/video-01.mp4" type="video/mp4">
-            </video>
-            <figcaption class="video-cap">Video 1</figcaption>
+            <div class="video-media">
+              <video controls playsinline preload="metadata" title="Einscheibenmaschine im Eingangsbereich">
+                <source src="/demo/tairovic-dark-verzija/assets/videos/video-01.mp4" type="video/mp4">
+              </video>
+            </div>
+            <figcaption class="video-cap">Einscheibenmaschine im Eingangsbereich</figcaption>
           </figure>
           <figure class="video-item">
-            <video controls playsinline preload="metadata" width="1280" height="720" title="Gebäudereinigung — Video 2">
-              <source src="/demo/tairovic-dark-verzija/assets/videos/video-02.mp4" type="video/mp4">
-            </video>
-            <figcaption class="video-cap">Video 2</figcaption>
+            <div class="video-media">
+              <video controls playsinline preload="metadata" title="Bodenpflege im Flur">
+                <source src="/demo/tairovic-dark-verzija/assets/videos/video-02.mp4" type="video/mp4">
+              </video>
+            </div>
+            <figcaption class="video-cap">Bodenpflege im Flur</figcaption>
           </figure>
           <figure class="video-item">
-            <video controls playsinline preload="metadata" width="1280" height="720" title="Gebäudereinigung — Video 3">
-              <source src="/demo/tairovic-dark-verzija/assets/videos/video-03.mp4" type="video/mp4">
-            </video>
-            <figcaption class="video-cap">Video 3</figcaption>
+            <div class="video-media">
+              <video controls playsinline preload="metadata" title="Hochglanzreinigung im Flur">
+                <source src="/demo/tairovic-dark-verzija/assets/videos/video-03.mp4" type="video/mp4">
+              </video>
+            </div>
+            <figcaption class="video-cap">Hochglanzreinigung im Flur</figcaption>
           </figure>
           <figure class="video-item">
-            <video controls playsinline preload="metadata" width="1280" height="720" title="Gebäudereinigung — Video 4">
-              <source src="/demo/tairovic-dark-verzija/assets/videos/video-04.mp4" type="video/mp4">
-            </video>
-            <figcaption class="video-cap">Video 4</figcaption>
+            <div class="video-media">
+              <video controls playsinline preload="metadata" title="Turnhallenreinigung">
+                <source src="/demo/tairovic-dark-verzija/assets/videos/video-04.mp4" type="video/mp4">
+              </video>
+            </div>
+            <figcaption class="video-cap">Turnhallenreinigung</figcaption>
           </figure>
           <figure class="video-item">
-            <video controls playsinline preload="metadata" width="1280" height="720" title="Gebäudereinigung — Video 5">
-              <source src="/demo/tairovic-dark-verzija/assets/videos/video-05.mp4" type="video/mp4">
-            </video>
-            <figcaption class="video-cap">Video 5</figcaption>
+            <div class="video-media">
+              <video controls playsinline preload="metadata" title="Glas- und Spiegelreinigung">
+                <source src="/demo/tairovic-dark-verzija/assets/videos/video-05.mp4" type="video/mp4">
+              </video>
+            </div>
+            <figcaption class="video-cap">Glas- und Spiegelreinigung</figcaption>
           </figure>
           <figure class="video-item">
-            <video controls playsinline preload="metadata" width="1280" height="720" title="Gebäudereinigung — Video 6">
-              <source src="/demo/tairovic-dark-verzija/assets/videos/video-06.mp4" type="video/mp4">
-            </video>
-            <figcaption class="video-cap">Video 6</figcaption>
+            <div class="video-media">
+              <video controls playsinline preload="metadata" title="Klassenzimmer — Bodenpflege">
+                <source src="/demo/tairovic-dark-verzija/assets/videos/video-06.mp4" type="video/mp4">
+              </video>
+            </div>
+            <figcaption class="video-cap">Klassenzimmer — Bodenpflege</figcaption>
           </figure>
           <figure class="video-item">
-            <video controls playsinline preload="metadata" width="1280" height="720" title="Gebäudereinigung — Video 7">
-              <source src="/demo/tairovic-dark-verzija/assets/videos/video-07.mp4" type="video/mp4">
-            </video>
-            <figcaption class="video-cap">Video 7</figcaption>
+            <div class="video-media">
+              <video controls playsinline preload="metadata" title="Sporthalle — Bodenreinigung">
+                <source src="/demo/tairovic-dark-verzija/assets/videos/video-07.mp4" type="video/mp4">
+              </video>
+            </div>
+            <figcaption class="video-cap">Sporthalle — Bodenreinigung</figcaption>
           </figure>
           <figure class="video-item">
-            <video controls playsinline preload="metadata" width="1280" height="720" title="Gebäudereinigung — Video 8">
-              <source src="/demo/tairovic-dark-verzija/assets/videos/video-08.mp4" type="video/mp4">
-            </video>
-            <figcaption class="video-cap">Video 8</figcaption>
+            <div class="video-media">
+              <video controls playsinline preload="metadata" title="Klassenzimmer — Grundreinigung">
+                <source src="/demo/tairovic-dark-verzija/assets/videos/video-08.mp4" type="video/mp4">
+              </video>
+            </div>
+            <figcaption class="video-cap">Klassenzimmer — Grundreinigung</figcaption>
           </figure>
           <figure class="video-item">
-            <video controls playsinline preload="metadata" width="1280" height="720" title="Gebäudereinigung — Video 9">
-              <source src="/demo/tairovic-dark-verzija/assets/videos/video-09.mp4" type="video/mp4">
-            </video>
-            <figcaption class="video-cap">Video 9</figcaption>
+            <div class="video-media">
+              <video controls playsinline preload="metadata" title="Reinigung von Schließfächern">
+                <source src="/demo/tairovic-dark-verzija/assets/videos/video-09.mp4" type="video/mp4">
+              </video>
+            </div>
+            <figcaption class="video-cap">Reinigung von Schließfächern</figcaption>
           </figure>
           <figure class="video-item">
-            <video controls playsinline preload="metadata" width="1280" height="720" title="Gebäudereinigung — Video 10">
-              <source src="/demo/tairovic-dark-verzija/assets/videos/video-10.mp4" type="video/mp4">
-            </video>
-            <figcaption class="video-cap">Video 10</figcaption>
+            <div class="video-media">
+              <video controls playsinline preload="metadata" title="Balkonreinigung">
+                <source src="/demo/tairovic-dark-verzija/assets/videos/video-10.mp4" type="video/mp4">
+              </video>
+            </div>
+            <figcaption class="video-cap">Balkonreinigung</figcaption>
           </figure>
         </div>
       </div>
