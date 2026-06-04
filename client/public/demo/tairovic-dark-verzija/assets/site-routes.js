@@ -7,6 +7,7 @@
     reinigung: "gebaeudereinigung",
     hausmeister: "hausmeisterservice",
     garten: "gartenpflege",
+    winter: "winterdienst",
     about: "uber-uns",
     kontakt: "kontakt",
   };
