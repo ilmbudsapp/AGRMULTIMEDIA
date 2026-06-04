@@ -209,7 +209,9 @@ h1,h2,.title h2,.page-hero h1,.work h3,.card h3{
 
 .hero-visual{
   position:relative;
-  border-radius:40px;
+  max-width:500px;
+  margin-left:auto;
+  border-radius:32px;
   overflow:hidden;
   border:1px solid rgba(255,255,255,.16);
   box-shadow:var(--shadow);
@@ -217,21 +219,22 @@ h1,h2,.title h2,.page-hero h1,.work h3,.card h3{
   transition:transform .45s,box-shadow .45s;
 }
 .hero-visual:hover{
-  transform:translateY(-8px);
-  box-shadow:0 45px 120px rgba(0,0,0,.55);
+  transform:translateY(-6px);
+  box-shadow:0 40px 100px rgba(0,0,0,.5);
 }
 .hero-visual img{
   width:100%;
   display:block;
-  aspect-ratio:4/5;
+  aspect-ratio:16/10;
+  max-height:380px;
   object-fit:cover;
-  object-position:center top;
+  object-position:center 35%;
 }
 .hero-visual-caption{
   position:absolute;
   left:0;right:0;bottom:0;
-  padding:32px 28px 28px;
-  background:linear-gradient(to top,rgba(5,7,12,.94) 38%,rgba(5,7,12,0));
+  padding:22px 20px 18px;
+  background:linear-gradient(to top,rgba(5,7,12,.92) 45%,rgba(5,7,12,0));
 }
 .hero-visual-title{
   font-family:"Plus Jakarta Sans",system-ui,sans-serif;
@@ -475,7 +478,8 @@ textarea{height:145px}
     grid-template-columns:1fr;
   }
   .hero{padding:80px 0}
-  .hero-visual img{aspect-ratio:16/11;min-height:320px}
+  .hero-visual{max-width:100%;margin:0 auto}
+  .hero-visual img{aspect-ratio:16/10;max-height:340px}
 }
 </style>
 </head>
@@ -524,10 +528,10 @@ textarea{height:145px}
       </div>
 
       <figure class="hero-visual">
-        <img src="assets/hero-staff.jpg" alt="Professionelle Gebäudereinigung — Tairovic Team mit Reinigungsmitteln" width="1024" height="1280" loading="eager" decoding="async">
+        <img src="assets/hero-staff-window.jpg" alt="Gebäudereinigung im Treppenhaus — Mitarbeiterin reinigt Fenster, Reinigungswagen mit Utensilien" width="1200" height="750" loading="eager" decoding="async">
         <figcaption class="hero-visual-caption">
-          <p class="hero-visual-title">Ihr Team für saubere Objekte</p>
-          <p>Zuverlässige Gebäudereinigung mit professionellem Auftritt.</p>
+          <p class="hero-visual-title">Fenster · Flure · Objektpflege</p>
+          <p>Professionell im Einsatz — mit Team und Equipment vor Ort.</p>
         </figcaption>
       </figure>
     </div>
