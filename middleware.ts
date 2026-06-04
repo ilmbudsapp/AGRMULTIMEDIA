@@ -119,6 +119,6 @@ export default function middleware(request: Request): Response | undefined {
 
 export const config = {
   matcher: [
-    "/((?!_next/static|_next/image|.*\\.(?:png|jpg|jpeg|gif|webp|svg|ico|css|js|woff2?|mp4|webm|txt|json)$).*)",
+    "/((?!_next/static|_next/image|.*\\.(?:png|jpg|jpeg|gif|webp|svg|ico|css|js|woff2?|mp4|webm|json)$).*)",
   ],
 };
