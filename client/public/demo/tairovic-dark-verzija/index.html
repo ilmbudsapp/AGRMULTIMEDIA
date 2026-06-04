@@ -651,6 +651,38 @@ h1,h2,.title h2,.page-hero h1,.work h3,.card h3{
   font-size:12px;
   color:#6e7a8c;
 }
+.about-wrap{
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+}
+.about-card h2{
+  margin:0 0 16px;
+  font-size:clamp(22px,2.5vw,28px);
+}
+.about-card p{
+  margin:0 0 14px;
+  color:#b9c3d0;
+  line-height:1.8;
+  max-width:780px;
+}
+.about-card p:last-child{margin-bottom:0}
+.about-values .card h3{
+  margin-bottom:10px;
+}
+.about-values .card p{
+  margin:0;
+  color:#b9c3d0;
+  line-height:1.7;
+  font-size:14px;
+}
+.about-values .card ul{
+  margin:0;
+  padding-left:18px;
+  color:#b9c3d0;
+  line-height:1.65;
+  font-size:14px;
+}
 
 .video-card{
   padding:40px 36px 44px;
@@ -826,7 +858,7 @@ textarea{height:145px}
     <a href="/gebaeudereinigung" class="navlink" data-page="reinigung">Gebäudereinigung</a>
     <a href="/hausmeisterservice" class="navlink" data-page="hausmeister">Hausmeisterservice</a>
     <a href="/gartenpflege" class="navlink" data-page="garten">Gartenpflege</a>
-    <a href="/arbeiten" class="navlink" data-page="arbeiten">Unsere Arbeiten</a>
+    <a href="/uber-uns" class="navlink" data-page="about">Über uns</a>
     <a href="/kontakt" class="navlink" data-page="kontakt">Kontakt</a>
   </div>
 
@@ -851,7 +883,7 @@ textarea{height:145px}
         </p>
         <div class="btns">
           <a href="/kontakt" class="btn btn-primary navlink" data-page="kontakt">Kostenlose Anfrage</a>
-          <a href="/arbeiten" class="btn btn-secondary navlink" data-page="arbeiten">Unsere Arbeiten</a>
+          <a href="/uber-uns" class="btn btn-secondary navlink" data-page="about">Über uns</a>
         </div>
       </div>
 
@@ -1335,26 +1367,48 @@ textarea{height:145px}
   </div>
 </section>
 
-<section id="arbeiten" class="page">
+<section id="about" class="page">
   <div class="page-hero">
     <div class="container">
-      <div class="kicker">Referenzen</div>
-      <h1>Unsere Arbeiten</h1>
-      <p>Fotos, Videos, Vorher-Nachher-Aufnahmen und Projektbeispiele.</p>
+      <div class="kicker">Unternehmen</div>
+      <h1>Über uns</h1>
+      <p>O nama — die Familie Tairovic und unser Weg mit Tairovic Gebäudeservice.</p>
     </div>
   </div>
 
   <div class="section">
-    <div class="container grid grid-2">
-      <div class="card work photo">
-        <h3>Foto</h3>
-        <p>Galerie für Treppenhäuser, Außenanlagen, Garagen, Höfe und gepflegte Objekte.</p>
+    <div class="container about-wrap">
+      <div class="card about-card">
+        <h2>Unsere Geschichte</h2>
+        <p>Wir sind die <strong style="color:#fff">Familie Tairovic</strong> — mit Wurzeln im Kosovo und einem neuen Zuhause in Deutschland. Schon früh war unser Wunsch klar: eine eigene Firma aufzubauen, in der wir gemeinsam arbeiten, Verantwortung übernehmen und alles aus einer Hand anbieten können.</p>
+        <p>So entstand <strong style="color:#fff">Tairovic Gebäudeservice</strong>. Heute betreuen wir Immobilien in Neuwied und der Region mit Gebäudereinigung, Hausmeisterservice, Gartenpflege und Objektpflege — zuverlässig, sauber und mit dem Anspruch, dass jedes Objekt so gepflegt ist, wie wir es für unsere eigene Umgebung erwarten würden.</p>
+        <p>Hinter jedem Auftrag stehen wir als Familie: persönlich erreichbar, fair im Umgang und stolz darauf, dass Kunden uns ihren Zugang, ihre Treppenhäuser und ihre Außenanlagen anvertrauen.</p>
       </div>
 
-      <div class="card work video">
-        <div class="play">▶</div>
-        <h3>Video</h3>
-        <p>Kurze Arbeitsvideos, Reinigungsprozesse und hochwertige Ergebnisaufnahmen.</p>
+      <div class="grid grid-3 about-values">
+        <div class="card">
+          <h3>Was wir anbieten</h3>
+          <ul>
+            <li>Gebäudereinigung — innen und außen</li>
+            <li>Hausmeisterservice &amp; Kleinreparaturen</li>
+            <li>Gartenpflege &amp; Grünflächen</li>
+            <li>Objektpflege &amp; Werterhalt</li>
+            <li>Winterdienst auf Anfrage</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Was uns antreibt</h3>
+          <p>Ordnung, Sauberkeit und ein gepflegtes Erscheinungsbild sind für uns mehr als Arbeit — sie sind Respekt gegenüber Menschen, die in und an den Objekten leben. Wir möchten, dass sich Bewohner, Mieter und Besucher wohlfühlen.</p>
+        </div>
+        <div class="card">
+          <h3>Unser Beitrag zur Umgebung</h3>
+          <p>Wir möchten zur Lebensqualität in unserer Region beitragen: saubere Wege und Eingänge, gepflegte Grünflächen und sichere Außenbereiche. So bleiben Wohnanlagen einladend, Nachbarschaften lebenswerter — und Immobilien langfristig wertvoll.</p>
+        </div>
+      </div>
+
+      <div class="card about-card">
+        <h2>Ihr Ansprechpartner</h2>
+        <p><strong style="color:#fff">Mevlida Tairovic</strong> führt Tairovic Gebäudeservice in Neuwied. Für Anfragen, Angebote oder eine Besichtigung vor Ort erreichen Sie uns über die <a href="/kontakt" class="navlink" data-page="kontakt" style="color:var(--gold2);font-weight:600">Kontaktseite</a> — wir melden uns zeitnah.</p>
       </div>
     </div>
   </div>
@@ -1471,7 +1525,7 @@ const TITLES={
   reinigung:"Gebäudereinigung — Tairovic Gebäudeservice",
   hausmeister:"Hausmeisterservice — Tairovic Gebäudeservice",
   garten:"Gartenpflege — Tairovic Gebäudeservice",
-  arbeiten:"Unsere Arbeiten — Tairovic Gebäudeservice",
+  about:"Über uns — Tairovic Gebäudeservice",
   kontakt:"Kontakt & Angebot — Tairovic Gebäudeservice"
 };
 

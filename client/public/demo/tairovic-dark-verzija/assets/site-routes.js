@@ -7,7 +7,7 @@
     reinigung: "gebaeudereinigung",
     hausmeister: "hausmeisterservice",
     garten: "gartenpflege",
-    arbeiten: "arbeiten",
+    about: "uber-uns",
     kontakt: "kontakt",
   };
   const SLUG_PAGE = { "": "home" };
@@ -29,6 +29,7 @@
       return SLUG_PAGE[slug] || "home";
     }
     const hash = (location.hash || "").replace(/^#/, "");
+    if (hash === "arbeiten") return "about";
     if (hash && document.getElementById(hash)) return hash;
     return "home";
   }

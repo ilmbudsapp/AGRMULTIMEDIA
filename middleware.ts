@@ -16,7 +16,7 @@ const TAIROVIC_SECTION_PATHS = new Set([
   "/gebaeudereinigung",
   "/hausmeisterservice",
   "/gartenpflege",
-  "/arbeiten",
+  "/uber-uns",
   "/kontakt",
 ]);
 
@@ -45,7 +45,7 @@ function demoToCleanPath(pathname: string): string | null {
 /** Fix broken relative asset URLs when base was missing (e.g. /gebaeudereinigung/assets/...). */
 function sectionAssetRewrite(pathname: string): string | null {
   const match = pathname.match(
-    /^\/(?:gebaeudereinigung|hausmeisterservice|gartenpflege|arbeiten|kontakt)\/(assets\/.*)$/,
+    /^\/(?:gebaeudereinigung|hausmeisterservice|gartenpflege|uber-uns|kontakt)\/(assets\/.*)$/,
   );
   return match ? `${DEMO_PREFIX}/${match[1]}` : null;
 }
@@ -57,6 +57,12 @@ export default function middleware(request: Request): Response | undefined {
   }
 
   const url = new URL(request.url);
+
+  if (url.pathname === "/arbeiten" || url.pathname === "/arbeiten/") {
+    const target = new URL(request.url);
+    target.pathname = "/uber-uns";
+    return Response.redirect(target.toString(), 301);
+  }
 
   const cleanRedirect = demoToCleanPath(url.pathname);
   if (cleanRedirect) {
