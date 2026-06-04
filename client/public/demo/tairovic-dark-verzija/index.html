@@ -590,6 +590,52 @@ h1,h2,.title h2,.page-hero h1,.work h3,.card h3{
   background:rgba(34,197,94,.15);
   color:#86efac;
 }
+
+.video-card{
+  padding:40px 36px 44px;
+}
+.video-card > p{
+  max-width:720px;
+  margin-top:14px;
+  color:#b9c3d0;
+  line-height:1.75;
+}
+.video-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+  margin-top:28px;
+}
+.video-item{
+  margin:0;
+  border-radius:16px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.1);
+  background:rgba(0,0,0,.35);
+  transition:border-color .2s,box-shadow .2s;
+}
+.video-item:hover{
+  border-color:rgba(212,175,55,.45);
+  box-shadow:
+    0 0 0 1px rgba(212,175,55,.35),
+    0 0 18px rgba(212,175,55,.22);
+}
+.video-item video{
+  display:block;
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  background:#0a0d14;
+}
+.video-cap{
+  padding:10px 12px;
+  font-size:12px;
+  color:#9faabd;
+  text-align:center;
+}
+@media(max-width:720px){
+  .video-grid{grid-template-columns:1fr}
+}
 input,textarea{
   width:100%;
   padding:17px 18px;
@@ -947,6 +993,78 @@ textarea{height:145px}
       </div>
     </div>
   </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="card video-card">
+        <div class="kicker">Einblicke</div>
+        <h2>Video</h2>
+        <p>Kurze Einblicke in unsere Gebäudereinigung — Treppenhäuser, Böden, Fenster und weitere Arbeiten vor Ort.</p>
+        <div class="video-grid">
+          <figure class="video-item">
+            <video controls playsinline preload="metadata" width="1280" height="720" title="Gebäudereinigung — Video 1">
+              <source src="/demo/tairovic-dark-verzija/assets/videos/video-01.mp4" type="video/mp4">
+            </video>
+            <figcaption class="video-cap">Video 1</figcaption>
+          </figure>
+          <figure class="video-item">
+            <video controls playsinline preload="metadata" width="1280" height="720" title="Gebäudereinigung — Video 2">
+              <source src="/demo/tairovic-dark-verzija/assets/videos/video-02.mp4" type="video/mp4">
+            </video>
+            <figcaption class="video-cap">Video 2</figcaption>
+          </figure>
+          <figure class="video-item">
+            <video controls playsinline preload="metadata" width="1280" height="720" title="Gebäudereinigung — Video 3">
+              <source src="/demo/tairovic-dark-verzija/assets/videos/video-03.mp4" type="video/mp4">
+            </video>
+            <figcaption class="video-cap">Video 3</figcaption>
+          </figure>
+          <figure class="video-item">
+            <video controls playsinline preload="metadata" width="1280" height="720" title="Gebäudereinigung — Video 4">
+              <source src="/demo/tairovic-dark-verzija/assets/videos/video-04.mp4" type="video/mp4">
+            </video>
+            <figcaption class="video-cap">Video 4</figcaption>
+          </figure>
+          <figure class="video-item">
+            <video controls playsinline preload="metadata" width="1280" height="720" title="Gebäudereinigung — Video 5">
+              <source src="/demo/tairovic-dark-verzija/assets/videos/video-05.mp4" type="video/mp4">
+            </video>
+            <figcaption class="video-cap">Video 5</figcaption>
+          </figure>
+          <figure class="video-item">
+            <video controls playsinline preload="metadata" width="1280" height="720" title="Gebäudereinigung — Video 6">
+              <source src="/demo/tairovic-dark-verzija/assets/videos/video-06.mp4" type="video/mp4">
+            </video>
+            <figcaption class="video-cap">Video 6</figcaption>
+          </figure>
+          <figure class="video-item">
+            <video controls playsinline preload="metadata" width="1280" height="720" title="Gebäudereinigung — Video 7">
+              <source src="/demo/tairovic-dark-verzija/assets/videos/video-07.mp4" type="video/mp4">
+            </video>
+            <figcaption class="video-cap">Video 7</figcaption>
+          </figure>
+          <figure class="video-item">
+            <video controls playsinline preload="metadata" width="1280" height="720" title="Gebäudereinigung — Video 8">
+              <source src="/demo/tairovic-dark-verzija/assets/videos/video-08.mp4" type="video/mp4">
+            </video>
+            <figcaption class="video-cap">Video 8</figcaption>
+          </figure>
+          <figure class="video-item">
+            <video controls playsinline preload="metadata" width="1280" height="720" title="Gebäudereinigung — Video 9">
+              <source src="/demo/tairovic-dark-verzija/assets/videos/video-09.mp4" type="video/mp4">
+            </video>
+            <figcaption class="video-cap">Video 9</figcaption>
+          </figure>
+          <figure class="video-item">
+            <video controls playsinline preload="metadata" width="1280" height="720" title="Gebäudereinigung — Video 10">
+              <source src="/demo/tairovic-dark-verzija/assets/videos/video-10.mp4" type="video/mp4">
+            </video>
+            <figcaption class="video-cap">Video 10</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section id="hausmeister" class="page">
@@ -1196,7 +1314,7 @@ activatePage(SITE.pageFromLocation(),{push:false,replace:true});
   });
 })();
 
-document.querySelectorAll(".card:not(.galerie-card),.hero-visual").forEach(el=>{
+document.querySelectorAll(".card:not(.galerie-card):not(.video-card),.hero-visual").forEach(el=>{
   el.addEventListener("mousemove",e=>{
     const r=el.getBoundingClientRect();
     const x=e.clientX-r.left;
