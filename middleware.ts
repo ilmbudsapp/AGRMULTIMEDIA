@@ -81,6 +81,14 @@ export default function middleware(request: Request): Response | undefined {
     });
   }
 
+  if (url.pathname === "/sitemap.xml" || url.pathname === "/robots.txt") {
+    const rewriteUrl = new URL(request.url);
+    rewriteUrl.pathname = `${DEMO_PREFIX}${url.pathname}`;
+    return new Response(null, {
+      headers: { "x-middleware-rewrite": rewriteUrl.toString() },
+    });
+  }
+
   if (shouldPassThrough(url.pathname)) {
     return undefined;
   }
