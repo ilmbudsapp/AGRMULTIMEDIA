@@ -1,4 +1,4 @@
-/** Tairovic: clean URLs on client domain, demo paths on agrmultimedia.eu */
+/** Tairovic: clean URLs on tairovic-gebaeudeservice.de, demo hash paths in preview. */
 (function (global) {
   const PROD = /(^|\.)tairovic-gebaeudeservice\.de$/i.test(location.hostname);
   const ASSET_BASE = "/demo/tairovic-dark-verzija/";
@@ -9,9 +9,10 @@
     garten: "gartenpflege",
     winter: "winterdienst",
     about: "ueber-uns",
+    arbeiten: "unsere-arbeiten",
     kontakt: "kontakt",
   };
-  const SLUG_PAGE = { "": "home", "unsere-arbeiten": "reinigung" };
+  const SLUG_PAGE = { "": "home" };
   Object.keys(PAGE_SLUG).forEach((page) => {
     const slug = PAGE_SLUG[page];
     if (slug) SLUG_PAGE[slug] = page;

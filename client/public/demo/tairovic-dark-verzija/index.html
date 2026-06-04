@@ -2014,7 +2014,6 @@ const navlinks=document.querySelectorAll(".navlink");
 const pages=document.querySelectorAll(".page");
 const menu=document.getElementById("menu");
 const links=document.getElementById("links");
-const canonical=document.querySelector('link[rel="canonical"]');
 const SEO=window.TAIROVIC_SEO;
 
 navlinks.forEach(link=>{
@@ -2025,18 +2024,19 @@ document.querySelectorAll("[data-legal]").forEach(a=>{
 });
 
 function activatePage(page,{push=true,replace=false}={}){
-  if(!page||!document.getElementById(page))page="home";
+  let seoPage=page||"home";
+  let displayPage=seoPage==="arbeiten"?"reinigung":seoPage;
+  if(!displayPage||!document.getElementById(displayPage)){
+    displayPage="home";
+    seoPage="home";
+  }
   pages.forEach(p=>p.classList.remove("active"));
-  document.getElementById(page).classList.add("active");
-  navlinks.forEach(a=>a.classList.toggle("active",a.dataset.page===page));
+  document.getElementById(displayPage).classList.add("active");
+  navlinks.forEach(a=>a.classList.toggle("active",a.dataset.page===seoPage||a.dataset.page===displayPage));
   links.classList.remove("open");
   window.scrollTo(0,0);
-  if(SEO)SEO.apply(page);
-  else if(canonical&&SITE.PROD){
-    const path=SITE.urlFor(page);
-    canonical.href=path==="/"?"https://www.tairovic-gebaeudeservice.de/":"https://www.tairovic-gebaeudeservice.de"+path;
-  }
-  const url=SITE.urlFor(page);
+  if(SEO)SEO.apply(seoPage);
+  const url=seoPage==="arbeiten"?"/unsere-arbeiten":SITE.urlFor(seoPage);
   if(push||replace){
     const fn=replace?"replaceState":"pushState";
     history[fn]({page},"",url);
