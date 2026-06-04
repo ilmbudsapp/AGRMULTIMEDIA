@@ -30,6 +30,15 @@ const copies = [
       "playfair-display-latin-700-normal.woff2",
     ],
   },
+  {
+    pkg: "@fontsource/plus-jakarta-sans",
+    files: [
+      "plus-jakarta-sans-latin-500-normal.woff2",
+      "plus-jakarta-sans-latin-600-normal.woff2",
+      "plus-jakarta-sans-latin-700-normal.woff2",
+      "plus-jakarta-sans-latin-800-normal.woff2",
+    ],
+  },
 ];
 
 fs.mkdirSync(outDir, { recursive: true });
@@ -117,6 +126,34 @@ const css = `/* Self-hosted fonts for static demo pages — DSGVO-compliant, no 
   font-display: swap;
   font-weight: 700;
   src: url("./playfair-display-latin-700-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url("./plus-jakarta-sans-latin-500-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src: url("./plus-jakarta-sans-latin-600-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url("./plus-jakarta-sans-latin-700-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 800;
+  src: url("./plus-jakarta-sans-latin-800-normal.woff2") format("woff2");
 }
 `;
 
