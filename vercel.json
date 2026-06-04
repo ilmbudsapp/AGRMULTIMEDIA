@@ -56,23 +56,23 @@
     },
     {
       "source": "/demo/tairovic-bez-verzija",
-      "destination": "/demo/tairovic-bez-verzija/index.html",
-      "permanent": false
+      "destination": "/demo/tairovic-dark-verzija/index.html",
+      "permanent": true
     },
     {
-      "source": "/demo/tairovic-bez-verzija/",
-      "destination": "/demo/tairovic-bez-verzija/index.html",
-      "permanent": false
+      "source": "/demo/tairovic-bez-verzija/:path*",
+      "destination": "/demo/tairovic-dark-verzija/index.html",
+      "permanent": true
     },
     {
       "source": "/demo/tairovic-azzura-verzija",
-      "destination": "/demo/tairovic-azzura-verzija/index.html",
-      "permanent": false
+      "destination": "/demo/tairovic-dark-verzija/index.html",
+      "permanent": true
     },
     {
-      "source": "/demo/tairovic-azzura-verzija/",
-      "destination": "/demo/tairovic-azzura-verzija/index.html",
-      "permanent": false
+      "source": "/demo/tairovic-azzura-verzija/:path*",
+      "destination": "/demo/tairovic-dark-verzija/index.html",
+      "permanent": true
     },
     {
       "source": "/demo/tairovic-dark-verzija",

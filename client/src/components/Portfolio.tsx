@@ -17,27 +17,11 @@ export default function Portfolio({ featured = false, asPage = false }: Portfoli
   const [activeFilter, setActiveFilter] = useState('all');
 
   const tairovicDarkVerzijaDescription: Record<string, string> = {
-    en: "Tairovic Gebäudeservice — client demo concept 3 (Dark): elegant dark layout with gold accents for building services.",
-    de: "Tairovic Gebäudeservice — Kunden-Demo Konzept 3 (Dark): elegantes Dunkel-Layout mit Goldakzenten.",
-    it: "Tairovic Gebäudeservice — demo cliente concetto 3 (Dark): layout scuro elegante con accenti oro.",
-    sr: "Tairovic Gebäudeservice — klijentski demo koncept 3 (Dark): elegantan tamni layout sa zlatnim akcentima.",
-    al: "Tairovic Gebäudeservice — demo klienti koncepti 3 (Dark): layout i errët elegant me thekse të arta.",
-  };
-
-  const tairovicAzzuraVerzijaDescription: Record<string, string> = {
-    en: "Tairovic Gebäudeservice — client demo concept 2 (Azzura): sky-premium layout with light blue styling for building services.",
-    de: "Tairovic Gebäudeservice — Kunden-Demo Konzept 2 (Azzura): Sky-Premium Layout in hellem Blau für Gebäudedienstleistungen.",
-    it: "Tairovic Gebäudeservice — demo cliente concetto 2 (Azzura): layout sky-premium in blu chiaro.",
-    sr: "Tairovic Gebäudeservice — klijentski demo koncept 2 (Azzura): sky-premium layout u svetloplavoj Azzura varijanti.",
-    al: "Tairovic Gebäudeservice — demo klienti koncepti 2 (Azzura): layout sky-premium në stilin Azzura.",
-  };
-
-  const tairovicBezVerzijaDescription: Record<string, string> = {
-    en: "Tairovic Gebäudeservice — client demo concept 1: building cleaning, caretaker, garden and property care. Base layout without a color variant.",
-    de: "Tairovic Gebäudeservice — Kunden-Demo Konzept 1: Gebäudereinigung, Hausmeister, Garten- und Objektpflege. Basisentwurf ohne Farbvariante.",
-    it: "Tairovic Gebäudeservice — demo cliente concetto 1: pulizie, custode, giardino e cura immobili. Layout base senza variante colore.",
-    sr: "Tairovic Gebäudeservice — klijentski demo koncept 1: čišćenje zgrada, domar, bašta i održavanje objekata. Osnovni layout bez varijante boja.",
-    al: "Tairovic Gebäudeservice — demo klienti koncepti 1: pastrim, mirëmbajtje, kopsht dhe kujdes objektesh. Layout bazë pa variant ngjyrash.",
+    en: "Tairovic Gebäudeservice — dark elegant website: building cleaning, caretaker, garden and property care. Client-approved design.",
+    de: "Tairovic Gebäudeservice — Dark-Elegant Webauftritt: Gebäudereinigung, Hausmeister, Garten- und Objektpflege. Vom Kunden gewähltes Design.",
+    it: "Tairovic Gebäudeservice — sito dark elegant: pulizie, custode, giardino e cura immobili. Design scelto dal cliente.",
+    sr: "Tairovic Gebäudeservice — tamni elegantan sajt: čišćenje zgrada, domar, bašta i održavanje objekata. Klijent je odabrao ovaj dizajn.",
+    al: "Tairovic Gebäudeservice — faqe dark elegant: pastrim, mirëmbajtje, kopsht dhe kujdes objektesh. Dizajni i zgjedhur nga klienti.",
   };
 
   const aisaOsmaniDescription: Record<string, string> = {
@@ -50,28 +34,8 @@ export default function Portfolio({ featured = false, asPage = false }: Portfoli
 
   const portfolioItems = [
     {
-      id: 11,
-      title: "Tairovic — Konzept 1",
-      description: tairovicBezVerzijaDescription[currentLanguage] ?? tairovicBezVerzijaDescription.en,
-      image: "/demo/tairovic-bez-verzija/assets/logo.webp",
-      category: "web",
-      slug: "tairovic-bez-verzija",
-      detailHref: "/demo/tairovic-bez-verzija/index.html",
-      staticDemo: true,
-    },
-    {
-      id: 12,
-      title: "Tairovic — Azzura",
-      description: tairovicAzzuraVerzijaDescription[currentLanguage] ?? tairovicAzzuraVerzijaDescription.en,
-      image: "/demo/tairovic-azzura-verzija/assets/logo.webp",
-      category: "web",
-      slug: "tairovic-azzura-verzija",
-      detailHref: "/demo/tairovic-azzura-verzija/index.html",
-      staticDemo: true,
-    },
-    {
       id: 13,
-      title: "Tairovic — Dark",
+      title: "Tairovic Gebäudeservice",
       description: tairovicDarkVerzijaDescription[currentLanguage] ?? tairovicDarkVerzijaDescription.en,
       image: "/demo/tairovic-dark-verzija/assets/logo.webp",
       category: "web",

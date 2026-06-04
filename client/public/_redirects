@@ -1,8 +1,8 @@
-# Vercel — serve demo folders (200 = rewrite, URL stays clean)
-/demo/tairovic-bez-verzija       /demo/tairovic-bez-verzija/index.html       200
-/demo/tairovic-bez-verzija/      /demo/tairovic-bez-verzija/index.html       200
-/demo/tairovic-azzura-verzija    /demo/tairovic-azzura-verzija/index.html    200
-/demo/tairovic-azzura-verzija/   /demo/tairovic-azzura-verzija/index.html    200
+# Vercel — Tairovic (samo Dark verzija)
+/demo/tairovic-bez-verzija       /demo/tairovic-dark-verzija/index.html    301
+/demo/tairovic-bez-verzija/      /demo/tairovic-dark-verzija/index.html    301
+/demo/tairovic-azzura-verzija    /demo/tairovic-dark-verzija/index.html    301
+/demo/tairovic-azzura-verzija/   /demo/tairovic-dark-verzija/index.html    301
 /demo/tairovic-dark-verzija      /demo/tairovic-dark-verzija/index.html      200
 /demo/tairovic-dark-verzija/     /demo/tairovic-dark-verzija/index.html      200
 /demo/aisa-osmani                /demo/aisa-osmani/index.html                200

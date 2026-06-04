@@ -48,8 +48,6 @@ const Privacy = lazy(() => import("@/pages/privacy"));
 const Terms = lazy(() => import("@/pages/terms"));
 const Cookies = lazy(() => import("@/pages/cookies"));
 const AisaOsmaniDemoRedirect = lazy(() => import("@/pages/demo/aisa-osmani"));
-const TairovicBezVerzijaDemoRedirect = lazy(() => import("@/pages/demo/tairovic-bez-verzija"));
-const TairovicAzzuraVerzijaDemoRedirect = lazy(() => import("@/pages/demo/tairovic-azzura-verzija"));
 const TairovicDarkVerzijaDemoRedirect = lazy(() => import("@/pages/demo/tairovic-dark-verzija"));
 const NotFound = lazy(() => import("@/pages/not-found"));
 
@@ -92,8 +90,8 @@ function Router() {
       <Route path="/terms" component={Terms} />
       <Route path="/cookies" component={Cookies} />
       <Route path="/demo/aisa-osmani" component={AisaOsmaniDemoRedirect} />
-      <Route path="/demo/tairovic-bez-verzija" component={TairovicBezVerzijaDemoRedirect} />
-      <Route path="/demo/tairovic-azzura-verzija" component={TairovicAzzuraVerzijaDemoRedirect} />
+      <Route path="/demo/tairovic-bez-verzija">{() => <Redirect to="/demo/tairovic-dark-verzija" />}</Route>
+      <Route path="/demo/tairovic-azzura-verzija">{() => <Redirect to="/demo/tairovic-dark-verzija" />}</Route>
       <Route path="/demo/tairovic-dark-verzija" component={TairovicDarkVerzijaDemoRedirect} />
       <Route component={NotFound} />
     </Switch>

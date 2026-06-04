@@ -491,23 +491,11 @@ const EXTRA_EN: Record<string, RouteSeo> = {
       "Premium demo portfolio: mobile app UI, cross-media, web design, corporate publishing, illustration and audiovisual work.",
     keywords: "student portfolio, multimedia design, demo, web design, AGR Multimedia",
   },
-  "/demo/tairovic-bez-verzija": {
-    title: "Tairovic Gebäudeservice — client demo concept 1 (AGR Multimedia)",
-    description:
-      "Building services website demo: cleaning, caretaker, garden and property care. Neutral layout without color variant — for client review.",
-    keywords: "Gebäudereinigung, Hausmeisterservice, web design demo, AGR Multimedia",
-  },
-  "/demo/tairovic-azzura-verzija": {
-    title: "Tairovic Gebäudeservice — Azzura demo concept 2 (AGR Multimedia)",
-    description:
-      "Sky-premium building services demo: cleaning, caretaker, garden and property care. Azzura colour variant for client review.",
-    keywords: "Gebäudereinigung, Azzura, web design demo, AGR Multimedia",
-  },
   "/demo/tairovic-dark-verzija": {
-    title: "Tairovic Gebäudeservice — Dark demo concept 3 (AGR Multimedia)",
+    title: "Tairovic Gebäudeservice — Dark website demo (AGR Multimedia)",
     description:
-      "Dark elegant building services demo: cleaning, caretaker, garden and property care. Premium night-style variant for client review.",
-    keywords: "Gebäudereinigung, dark web design, demo, AGR Multimedia",
+      "Client-approved dark elegant website: building cleaning, caretaker, garden and property care. Production-ready design.",
+    keywords: "Gebäudereinigung, Hausmeisterservice, dark web design, AGR Multimedia",
   },
 };
 
@@ -636,23 +624,11 @@ const EXTRA_DE: Record<string, RouteSeo> = {
       "Premium-Studentenportfolio: Mobile App, Cross-Media, Webdesign, Corporate Publishing, Illustration und audiovisuelle Projekte.",
     keywords: "Studentenportfolio, Multimedia Design, Demo, Webdesign",
   },
-  "/demo/tairovic-bez-verzija": {
-    title: "Tairovic Gebäudeservice — Kunden-Demo Konzept 1 | AGR Multimedia",
-    description:
-      "Demo-Webseite Gebäudereinigung, Hausmeister, Garten- und Objektpflege. Basisentwurf ohne Farbvariante zur Kundenauswahl.",
-    keywords: "Gebäudereinigung, Hausmeisterservice, Webdesign Demo, AGR Multimedia",
-  },
-  "/demo/tairovic-azzura-verzija": {
-    title: "Tairovic Gebäudeservice — Azzura Demo Konzept 2 | AGR Multimedia",
-    description:
-      "Sky-Premium Demo: Gebäudereinigung, Hausmeister, Garten- und Objektpflege. Azzura-Farbvariante zur Kundenauswahl.",
-    keywords: "Gebäudereinigung, Azzura, Webdesign Demo, AGR Multimedia",
-  },
   "/demo/tairovic-dark-verzija": {
-    title: "Tairovic Gebäudeservice — Dark Demo Konzept 3 | AGR Multimedia",
+    title: "Tairovic Gebäudeservice — Dark Webauftritt | AGR Multimedia",
     description:
-      "Dark-Elegant Demo: Gebäudereinigung, Hausmeister, Garten- und Objektpflege. Premium-Dunkelvariante zur Kundenauswahl.",
-    keywords: "Gebäudereinigung, Dark Webdesign, Demo, AGR Multimedia",
+      "Vom Kunden gewähltes Dark-Elegant Design: Gebäudereinigung, Hausmeister, Garten- und Objektpflege.",
+    keywords: "Gebäudereinigung, Dark Webdesign, AGR Multimedia",
   },
 };
 
@@ -777,23 +753,11 @@ const EXTRA_IT: Record<string, RouteSeo> = {
       "Portfolio studentesco premium: app mobile, cross-media, web design, editorial, illustrazione e progetti audiovisivi.",
     keywords: "portfolio studente, multimedia, demo, web design",
   },
-  "/demo/tairovic-bez-verzija": {
-    title: "Tairovic Gebäudeservice — demo cliente concetto 1 | AGR Multimedia",
-    description:
-      "Demo sito servizi edilizi: pulizie, custode, giardino e cura immobili. Layout base senza variante colore.",
-    keywords: "pulizie edifici, custode, demo web design, AGR Multimedia",
-  },
-  "/demo/tairovic-azzura-verzija": {
-    title: "Tairovic Gebäudeservice — demo Azzura concetto 2 | AGR Multimedia",
-    description:
-      "Demo sky-premium: pulizie, custode, giardino e cura immobili. Variante colore Azzura per il cliente.",
-    keywords: "pulizie edifici, Azzura, demo web design, AGR Multimedia",
-  },
   "/demo/tairovic-dark-verzija": {
-    title: "Tairovic Gebäudeservice — demo Dark concetto 3 | AGR Multimedia",
+    title: "Tairovic Gebäudeservice — sito Dark | AGR Multimedia",
     description:
-      "Demo dark elegant: pulizie, custode, giardino e cura immobili. Variante premium scura per il cliente.",
-    keywords: "pulizie edifici, dark web design, demo, AGR Multimedia",
+      "Design dark elegant scelto dal cliente: pulizie, custode, giardino e cura immobili.",
+    keywords: "pulizie edifici, dark web design, AGR Multimedia",
   },
 };
 
@@ -918,23 +882,11 @@ const EXTRA_SR: Record<string, RouteSeo> = {
       "Premium studentski portfolio: mobilna app, cross-media, web dizajn, corporate publishing, ilustracija i audiovizuelni radovi.",
     keywords: "studentski portfolio, multimedia, demo, web dizajn",
   },
-  "/demo/tairovic-bez-verzija": {
-    title: "Tairovic Gebäudeservice — klijentski demo koncept 1 | AGR Multimedia",
-    description:
-      "Demo sajt za usluge zgrada: čišćenje, domar, bašta i održavanje objekata. Osnovni layout bez varijante boja.",
-    keywords: "čišćenje zgrada, domar, web demo, AGR Multimedia",
-  },
-  "/demo/tairovic-azzura-verzija": {
-    title: "Tairovic Gebäudeservice — Azzura demo koncept 2 | AGR Multimedia",
-    description:
-      "Sky-premium demo: čišćenje, domar, bašta i održavanje objekata. Azzura varijanta boja za klijenta.",
-    keywords: "čišćenje zgrada, Azzura, web demo, AGR Multimedia",
-  },
   "/demo/tairovic-dark-verzija": {
-    title: "Tairovic Gebäudeservice — Dark demo koncept 3 | AGR Multimedia",
+    title: "Tairovic Gebäudeservice — Dark sajt | AGR Multimedia",
     description:
-      "Dark elegant demo: čišćenje, domar, bašta i održavanje objekata. Premium tamna varijanta za klijenta.",
-    keywords: "čišćenje zgrada, dark web, demo, AGR Multimedia",
+      "Klijent je odabrao tamni elegantan dizajn: čišćenje zgrada, domar, bašta i održavanje.",
+    keywords: "čišćenje zgrada, dark web, AGR Multimedia",
   },
 };
 
@@ -1059,23 +1011,11 @@ const EXTRA_AL: Record<string, RouteSeo> = {
       "Portfolio studentor premium: aplikacion mobil, cross-media, web design, botim korporativ, ilustrim dhe projekte audiovizive.",
     keywords: "portfolio student, multimedia, demo, web design",
   },
-  "/demo/tairovic-bez-verzija": {
-    title: "Tairovic Gebäudeservice — demo klienti koncepti 1 | AGR Multimedia",
-    description:
-      "Demo faqe shërbimesh ndërtimi: pastrim, mirëmbajtje, kopsht dhe kujdes objektesh. Layout bazë pa variant ngjyrash.",
-    keywords: "pastrim ndërtimesh, mirëmbajtje, demo web, AGR Multimedia",
-  },
-  "/demo/tairovic-azzura-verzija": {
-    title: "Tairovic Gebäudeservice — demo Azzura koncepti 2 | AGR Multimedia",
-    description:
-      "Demo sky-premium: pastrim, mirëmbajtje, kopsht dhe kujdes objektesh. Variant Azzura për klientin.",
-    keywords: "pastrim ndërtimesh, Azzura, demo web, AGR Multimedia",
-  },
   "/demo/tairovic-dark-verzija": {
-    title: "Tairovic Gebäudeservice — demo Dark koncepti 3 | AGR Multimedia",
+    title: "Tairovic Gebäudeservice — faqe Dark | AGR Multimedia",
     description:
-      "Demo dark elegant: pastrim, mirëmbajtje, kopsht dhe kujdes objektesh. Variant premium i errët për klientin.",
-    keywords: "pastrim ndërtimesh, dark web, demo, AGR Multimedia",
+      "Dizajni dark elegant i zgjedhur nga klienti: pastrim, mirëmbajtje, kopsht dhe kujdes objektesh.",
+    keywords: "pastrim ndërtimesh, dark web, AGR Multimedia",
   },
 };
 
