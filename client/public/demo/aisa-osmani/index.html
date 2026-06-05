@@ -243,11 +243,19 @@
       background: rgba(0,0,0,0.3);
     }
     .work-feature img { width: 100%; max-height: 520px; object-fit: cover; }
-    #work-mobile .work-feature,
-    #work-mobile .gallery-item { background: transparent; border: none; box-shadow: none; }
+    #work-mobile .gallery {
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      justify-items: center;
+    }
+    #work-mobile .gallery-item {
+      background: transparent; border: none; box-shadow: none;
+      width: 100%; max-width: 220px;
+    }
     #work-mobile .gallery-item:hover { box-shadow: none; transform: translateY(-4px); }
-    #work-mobile .work-feature img,
-    #work-mobile .gallery-item img { object-fit: contain; background: transparent; }
+    #work-mobile .gallery-item img {
+      width: 100%; height: auto; max-height: 420px;
+      object-fit: contain; background: transparent; display: block;
+    }
     .work-feature video { width: 100%; display: block; background: #000; }
 
     .gallery {
@@ -523,16 +531,17 @@
           <p data-de>Konzeption und UI/UX-Design einer gamifizierten Schrittzähler-App mit Umweltbezug. Im Modul Mobile App Design verbindet das Konzept Gesundheit mit Nachhaltigkeit: Gelaufene Schritte lassen einen virtuellen Park wachsen und führen schließlich zur Pflanzung eines echten Baumes. Für Motivation sorgt ein Social-Media-Bereich mit Feeds, Profilen, Bild-Postings und Chats.</p>
           <p data-en>Concept and UI/UX design for a gamified step-counter app with an environmental theme. Developed in the Mobile App Design module, the concept links health and sustainability: steps grow a virtual park and ultimately lead to planting a real tree. A social area with feeds, profiles, image posts and chats keeps users motivated.</p>
         </div>
-        <div class="gallery">
-          <div class="gallery-item g-span-4"><img src="assets/growli-01-welcome.png" alt="Growli — Willkommen" loading="lazy" /></div>
-          <div class="gallery-item g-span-4"><img src="assets/growli-05-login.png" alt="Growli — Registrierung" loading="lazy" /></div>
-          <div class="gallery-item g-span-4"><img src="assets/growli-04-onboarding.png" alt="Growli — Onboarding" loading="lazy" /></div>
-          <div class="gallery-item g-span-4"><img src="assets/growli-07-share.png" alt="Growli — Teilen" loading="lazy" /></div>
-          <div class="gallery-item g-span-4"><img src="assets/growli-08-nepal.png" alt="Growli — Baum pflanzen" loading="lazy" /></div>
-          <div class="gallery-item g-span-4"><img src="assets/growli-09-nepal-danke.png" alt="Growli — Nepal" loading="lazy" /></div>
-          <div class="gallery-item g-span-4"><img src="assets/growli-10-feed.png" alt="Growli — Feed" loading="lazy" /></div>
-          <div class="gallery-item g-span-6"><img src="assets/growli-11-profile.png" alt="Growli — Profil" loading="lazy" /></div>
-          <div class="gallery-item g-span-6"><img src="assets/growli-12-settings.png" alt="Growli — Einstellungen" loading="lazy" /></div>
+        <div class="gallery growli-gallery">
+          <div class="gallery-item"><img src="assets/growli-01-welcome.webp" alt="Growli — Willkommen" width="300" height="618" loading="lazy" decoding="async" /></div>
+          <div class="gallery-item"><img src="assets/growli-05-login.webp" alt="Growli — Registrierung" width="300" height="618" loading="lazy" decoding="async" /></div>
+          <div class="gallery-item"><img src="assets/growli-04-onboarding.webp" alt="Growli — Onboarding" width="300" height="618" loading="lazy" decoding="async" /></div>
+          <div class="gallery-item"><img src="assets/growli-06-home.webp" alt="Growli — Home Screen" width="300" height="618" loading="lazy" decoding="async" /></div>
+          <div class="gallery-item"><img src="assets/growli-07-share.webp" alt="Growli — Teilen" width="300" height="618" loading="lazy" decoding="async" /></div>
+          <div class="gallery-item"><img src="assets/growli-08-nepal.webp" alt="Growli — Baum pflanzen" width="300" height="618" loading="lazy" decoding="async" /></div>
+          <div class="gallery-item"><img src="assets/growli-09-nepal-danke.webp" alt="Growli — Nepal" width="300" height="618" loading="lazy" decoding="async" /></div>
+          <div class="gallery-item"><img src="assets/growli-10-feed.webp" alt="Growli — Feed" width="300" height="618" loading="lazy" decoding="async" /></div>
+          <div class="gallery-item"><img src="assets/growli-11-profile.webp" alt="Growli — Profil" width="300" height="618" loading="lazy" decoding="async" /></div>
+          <div class="gallery-item"><img src="assets/growli-12-settings.webp" alt="Growli — Einstellungen" width="300" height="618" loading="lazy" decoding="async" /></div>
         </div>
       </article>
 
