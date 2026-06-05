@@ -243,8 +243,11 @@
       background: rgba(0,0,0,0.3);
     }
     .work-feature img { width: 100%; max-height: 520px; object-fit: cover; }
+    #work-mobile .work-feature,
+    #work-mobile .gallery-item { background: transparent; border: none; box-shadow: none; }
+    #work-mobile .gallery-item:hover { box-shadow: none; transform: translateY(-4px); }
     #work-mobile .work-feature img,
-    #work-mobile .gallery-item img { object-fit: contain; background: #fff; }
+    #work-mobile .gallery-item img { object-fit: contain; background: transparent; }
     .work-feature video { width: 100%; display: block; background: #000; }
 
     .gallery {
@@ -519,9 +522,6 @@
           <h3 data-en>Growli — mobile app design</h3>
           <p data-de>Konzeption und UI/UX-Design einer gamifizierten Schrittzähler-App mit Umweltbezug. Im Modul Mobile App Design verbindet das Konzept Gesundheit mit Nachhaltigkeit: Gelaufene Schritte lassen einen virtuellen Park wachsen und führen schließlich zur Pflanzung eines echten Baumes. Für Motivation sorgt ein Social-Media-Bereich mit Feeds, Profilen, Bild-Postings und Chats.</p>
           <p data-en>Concept and UI/UX design for a gamified step-counter app with an environmental theme. Developed in the Mobile App Design module, the concept links health and sustainability: steps grow a virtual park and ultimately lead to planting a real tree. A social area with feeds, profiles, image posts and chats keeps users motivated.</p>
-        </div>
-        <div class="work-feature">
-          <img src="assets/growli-06-home.png" alt="Growli App — Home Screen" loading="lazy" decoding="async" />
         </div>
         <div class="gallery">
           <div class="gallery-item g-span-4"><img src="assets/growli-01-welcome.png" alt="Growli — Willkommen" loading="lazy" /></div>
