@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <base href="/demo/aisa-osmani/">
-  <title>Aisa Osmani — Multimedia · Social Media · AI | Demo AGR MULTIMEDIA</title>
+  <title>Aisa Osmani — Multimedia · Social Media · AI</title>
   <meta name="description" content="Aisa Osmani — Studentin Multimedia, Social Media Management und AI. Portfolio: Webdesign, Mobile Apps, Cross Media, Corporate Publishing und mehr." />
   <link rel="stylesheet" href="/assets/fonts/local-fonts.css">
   <style>
@@ -16,7 +16,6 @@
       --muted: rgba(255,255,255,0.58);
       --line: rgba(255,255,255,0.10);
       --glass: rgba(255,255,255,0.055);
-      --agr-banner-h: 22px;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -28,15 +27,6 @@
     }
     a { color: inherit; text-decoration: none; }
     img, video { max-width: 100%; display: block; }
-
-    #agr-demo-banner {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-      display: flex; align-items: center; justify-content: center; gap: 8px;
-      padding: 4px 12px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
-      background: linear-gradient(90deg, #ffe6a7, #ffc8f3, #cfd6ff); color: #111;
-    }
-    #agr-demo-banner a { color: #111; font-weight: 800; }
-    body.has-agr-demo-banner header { top: var(--agr-banner-h); }
 
     .background {
       position: fixed; inset: 0; z-index: -2;
@@ -376,11 +366,7 @@
     }
   </style>
 </head>
-<body class="has-agr-demo-banner de">
-  <div id="agr-demo-banner" role="note">
-    <span>Demo</span>
-    <a href="https://www.agrmultimedia.eu/" rel="noopener">AGR MULTIMEDIA</a>
-  </div>
+<body class="de">
   <div class="background"></div>
   <div class="noise"></div>
 
@@ -716,24 +702,13 @@
 
   <footer>
     <div class="container footer-inner">
-      <p data-de>© 2026 Aisa Osmani · Demo präsentiert von AGR MULTIMEDIA</p>
-      <p data-en>© 2026 Aisa Osmani · Demo presented by AGR MULTIMEDIA</p>
+      <p data-de>© 2026 Aisa Osmani</p>
+      <p data-en>© 2026 Aisa Osmani</p>
       <p>Multimedia · Social Media · AI</p>
     </div>
   </footer>
 
   <script>
-    (function () {
-      var bar = document.getElementById("agr-demo-banner");
-      if (bar) {
-        function sync() {
-          document.documentElement.style.setProperty("--agr-banner-h", (bar.offsetHeight || 22) + "px");
-        }
-        sync();
-        window.addEventListener("resize", sync);
-      }
-    })();
-
     function toggleMenu() {
       var open = document.body.classList.toggle("menu-open");
       var btn = document.querySelector(".menu-toggle");
@@ -748,8 +723,8 @@
     }
 
     var PAGE_TITLE = {
-      de: "Aisa Osmani — Multimedia · Social Media · AI | Demo AGR MULTIMEDIA",
-      en: "Aisa Osmani — Multimedia · Social Media · AI | AGR MULTIMEDIA Demo"
+      de: "Aisa Osmani — Multimedia · Social Media · AI",
+      en: "Aisa Osmani — Multimedia · Social Media · AI"
     };
     var PAGE_DESC = {
       de: "Aisa Osmani — Studentin Multimedia, Social Media Management und AI. Portfolio: Webdesign, Mobile Apps, Cross Media, Corporate Publishing und mehr.",
@@ -784,12 +759,12 @@
       document.body.classList.toggle("en");
       document.body.classList.toggle("de");
       syncLangMeta();
-      try { localStorage.setItem("aisa-demo-lang", document.body.classList.contains("en") ? "en" : "de"); } catch (e) {}
+      try { localStorage.setItem("aisa-lang", document.body.classList.contains("en") ? "en" : "de"); } catch (e) {}
     }
 
     (function initLang() {
       try {
-        var saved = localStorage.getItem("aisa-demo-lang");
+        var saved = localStorage.getItem("aisa-lang") || localStorage.getItem("aisa-demo-lang");
         if (saved === "en" && document.body.classList.contains("de")) {
           document.body.classList.remove("de");
           document.body.classList.add("en");
