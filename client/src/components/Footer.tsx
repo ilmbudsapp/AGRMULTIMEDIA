@@ -4,8 +4,19 @@ import { Facebook, Instagram, Linkedin, MessageCircle, Mail as MailIcon, Phone, 
 import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_LINK } from "@/lib/contact";
 import { toServiceLang, type ServiceLang } from "@/lib/servicePageI18n";
 import FooterLegalBlock from "@/components/FooterLegalBlock";
-import logoImage from "@assets/MULTIMEDIA AGRONDESIGN LOGO IN BIANCO_1755555880911.png";
 import { getPremiumTranslations } from "@/lib/premiumI18n";
+
+const LOGO_WEBP = "/agr-logo-white.webp";
+const LOGO_PNG = "/agr-logo-white.png";
+
+function FooterLogo({ className }: { className: string }) {
+  return (
+    <picture>
+      <source srcSet={LOGO_WEBP} type="image/webp" />
+      <img src={LOGO_PNG} alt="AGR Multimedia" className={className} loading="lazy" decoding="async" />
+    </picture>
+  );
+}
 
 const FACEBOOK_URL = "https://www.facebook.com/halidosmani74";
 const INSTAGRAM_URL = "https://www.instagram.com/agrondesign/";
@@ -85,13 +96,7 @@ export default function Footer() {
                   className="block w-fit rounded-sm outline-offset-4 transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white/40"
                   aria-label={tSpec.nav.home}
                 >
-                  <img
-                    src={logoImage}
-                    alt="AGR Multimedia"
-                    className="h-10 w-auto md:h-11"
-                    loading="lazy"
-                    decoding="async"
-                  />
+                  <FooterLogo className="h-10 w-auto md:h-11" />
                 </button>
               ) : (
                 <Link
@@ -99,13 +104,7 @@ export default function Footer() {
                   className="inline-block w-fit rounded-sm outline-offset-4 transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white/40"
                   aria-label={tSpec.nav.home}
                 >
-                  <img
-                    src={logoImage}
-                    alt="AGR Multimedia"
-                    className="h-10 w-auto md:h-11"
-                    loading="lazy"
-                    decoding="async"
-                  />
+                  <FooterLogo className="h-10 w-auto md:h-11" />
                 </Link>
               )}
             </div>

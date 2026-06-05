@@ -509,10 +509,10 @@ export default function HomeSeoSection() {
                 <img
                   src="/agr-logo-white.png"
                   alt="Agron Osmani - AGR Multimedia Web Dizajn i SEO"
-                  width={140}
-                  height={46}
+                  width={160}
+                  height={88}
                   decoding="async"
-                  className="h-11 w-auto opacity-90"
+                  className="h-11 w-auto opacity-95"
                 />
               </picture>
               <figcaption className="mt-1 max-w-[11rem] text-[0.65rem] leading-snug text-white/45">

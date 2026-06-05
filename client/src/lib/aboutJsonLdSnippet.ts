@@ -4,5 +4,5 @@ export const ABOUT_JSON_LD_SNIPPET = `{
   "@type": "Organization",
   "name": "AGR Multimedia",
   "url": "https://www.agrmultimedia.eu",
-  "logo": "https://www.agrmultimedia.eu/agr-logo-white.png"
+  "logo": "https://www.agrmultimedia.eu/agr-logo-white.webp"
 }`;

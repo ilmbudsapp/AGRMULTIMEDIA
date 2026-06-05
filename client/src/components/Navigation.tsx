@@ -59,7 +59,7 @@ export default function Navigation() {
                 <img
                   src="/agr-logo-white.png"
                   alt="AGR Multimedia"
-                  className="h-9 w-auto object-contain mix-blend-screen md:h-11"
+                  className="h-9 w-auto object-contain md:h-11"
                   fetchPriority="high"
                   decoding="async"
                 />
