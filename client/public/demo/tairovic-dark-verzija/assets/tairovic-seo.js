@@ -119,7 +119,7 @@
       url: ORIGIN + "/",
       image: OG_IMAGE,
       telephone: "+49-1520-8531992",
-      email: "ramizajet2018@gmail.com",
+      email: "mevlidatairovic@gmail.com",
       founder: {
         "@type": "Person",
         name: "Mevlida Tairovic",

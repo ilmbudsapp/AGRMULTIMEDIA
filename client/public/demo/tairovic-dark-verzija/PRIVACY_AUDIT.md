@@ -31,6 +31,6 @@
 
 ## Offen (Inhaberin)
 
-- [x] E-Mail: ramizajet2018@gmail.com (korrigiert)
+- [x] E-Mail: mevlidatairovic@gmail.com (korrigiert)
 - [ ] Steuernummer in Impressum ergänzen
 - [ ] Vercel DPA im Dashboard bestätigen
