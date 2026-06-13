@@ -34,7 +34,7 @@ export function syncHreflangAlternates(pathname: string): void {
   const x = document.createElement("link");
   x.rel = "alternate";
   x.hreflang = "x-default";
-  x.href = langPageUrl(pathname, "sr");
+  x.href = langPageUrl(pathname, "de");
   x.setAttribute("data-seo-hreflang", "1");
   document.head.appendChild(x);
 }

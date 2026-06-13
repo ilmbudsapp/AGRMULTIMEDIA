@@ -582,5 +582,5 @@ const al: HomeKmuCopy = {
 const COPY: Partial<Record<Language, HomeKmuCopy>> = { de, sr, en, it, al };
 
 export function getHomeKmuCopy(lang: Language): HomeKmuCopy {
-  return COPY[lang] ?? COPY.en!;
+  return COPY[lang] ?? COPY.de!;
 }

@@ -12,7 +12,7 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | null>(null);
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [currentLanguage, setCurrentLanguage] = useState<Language>('sr');
+  const [currentLanguage, setCurrentLanguage] = useState<Language>('de');
 
   useEffect(() => {
     try {
@@ -34,11 +34,11 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
         else if (browserLang.includes('de')) setCurrentLanguage('de');
         else if (browserLang.includes('it')) setCurrentLanguage('it');
         else if (browserLang.includes('sq')) setCurrentLanguage('al');
-        else setCurrentLanguage('sr'); // Default fallback
+        else setCurrentLanguage('de'); // Default fallback
       }
     } catch (error) {
       console.warn('Error loading language preference:', error);
-      setCurrentLanguage('sr');
+      setCurrentLanguage('de');
     }
   }, []);
 
