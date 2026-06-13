@@ -16,6 +16,7 @@ type PremiumTranslations = {
   hero: {
     heading: string;
     subheading: string;
+    bullets: string[];
     primaryCta: string;
     secondaryCta: string;
     ctaMeta: string;
@@ -86,12 +87,19 @@ type PremiumTranslations = {
 
 const en: PremiumTranslations = {
   hero: {
-    heading: "Modern websites & brand systems for SMEs — AGR Multimedia, Geislingen",
+    heading: "Modern websites for small businesses in Germany",
     subheading:
-      "We at AGR Multimedia build fast, SEO-ready websites, graphic systems, and practical AI workflows for SMEs. My experience in Geislingen an der Steige shows that clear messaging, technical SEO, and citable facts lift conversions and answer-engine visibility.",
-    primaryCta: "Get a Free Consultation",
-    secondaryCta: "View Projects",
-    ctaMeta: "Free consultation • No obligation • Response within 24h",
+      "I help small businesses look professional online, get more enquiries and be easier to find on Google.",
+    bullets: [
+      "Website ready for smartphones",
+      "Contact form, WhatsApp and Google Maps",
+      "Basic SEO for local searches",
+      "Domain setup and online launch",
+      "Clear price and delivery timeline",
+    ],
+    primaryCta: "Request a free assessment",
+    secondaryCta: "View my work",
+    ctaMeta: "Free assessment • No obligation • Response within 24h",
   },
   optimizationExcellence: {
     eyebrow: "AI & search optimization",
@@ -200,12 +208,19 @@ const en: PremiumTranslations = {
 
 const de: PremiumTranslations = {
   hero: {
-    heading: "Moderne Websites und Branding für KMU — AGR Multimedia, Geislingen",
+    heading: "Moderne Websites für kleine Unternehmen in Deutschland",
     subheading:
-      "Wir bei AGR Multimedia liefern schnelle, SEO-taugliche Websites, Markengrafik und praxisnahe KI-Workflows für KMU. Meine Erfahrung in Geislingen an der Steige zeigt: klare Botschaften, technisches SEO und belegbare Fakten steigern Conversions und Sichtbarkeit in Answer Engines.",
-    primaryCta: "Kostenlose Beratung anfordern",
-    secondaryCta: "Projekte ansehen",
-    ctaMeta: "Kostenlose Beratung • Unverbindlich • Antwort innerhalb von 24h",
+      "Ich helfe kleinen Firmen, professionell online aufzutreten, mehr Anfragen zu erhalten und bei Google leichter gefunden zu werden.",
+    bullets: [
+      "Website optimiert für Smartphones",
+      "Kontaktformular, WhatsApp und Google Maps",
+      "Basis-SEO für lokale Suchen",
+      "Domain-Anbindung und Online-Veröffentlichung",
+      "Klare Preise und feste Lieferzeit",
+    ],
+    primaryCta: "Kostenlose Einschätzung anfordern",
+    secondaryCta: "Referenzen ansehen",
+    ctaMeta: "Kostenlose Einschätzung • Unverbindlich • Antwort innerhalb von 24h",
   },
   optimizationExcellence: {
     eyebrow: "KI- & Suchoptimierung",
@@ -314,12 +329,19 @@ const de: PremiumTranslations = {
 
 const sr: PremiumTranslations = {
   hero: {
-    heading: "Moderne web stranice i dosledan brend za mala preduzeća — AGR Multimedia",
+    heading: "Moderne web stranice za male firme u Njemačkoj",
     subheading:
-      "Mi u AGR Multimedia pravimo brze sajtove, grafiku i AI podršku za vas u Geislingenu. Zato spajamo tehnički SEO, AEO i GEO u jedan jasan proces — uz našu proveru pre objave. Na primer, jedan jasan poziv na akciju po stranici često radi bolje od dugog teksta bez fokusa.",
-    primaryCta: "Zatražite besplatnu konsultaciju",
-    secondaryCta: "Pogledajte projekte",
-    ctaMeta: "Besplatna konsultacija • Bez obaveza • Odgovor u roku od 24h",
+      "Pomažem malim firmama da izgledaju profesionalno online, dobiju više upita i budu lakše pronađene na Google-u.",
+    bullets: [
+      "Web stranica spremna za mobilne telefone",
+      "Kontakt forma, WhatsApp i Google Maps",
+      "Osnovni SEO za lokalne pretrage",
+      "Povezivanje domene i objava online",
+      "Jasna cijena i rok izrade",
+    ],
+    primaryCta: "Zatražite besplatnu procjenu",
+    secondaryCta: "Pogledajte radove",
+    ctaMeta: "Besplatna procjena • Bez obaveza • Odgovor u roku od 24h",
   },
   optimizationExcellence: {
     eyebrow: "AI i optimizacija pretrage",
@@ -428,12 +450,19 @@ const sr: PremiumTranslations = {
 
 const it: PremiumTranslations = {
   hero: {
-    heading: "Siti web e identità visiva per PMI — AGR Multimedia, Geislingen",
+    heading: "Siti web moderni per piccole imprese in Germania",
     subheading:
-      "Noi in AGR Multimedia realizziamo siti veloci e pronti per il SEO, sistemi grafici e workflow AI pratici per le PMI. La mia esperienza a Geislingen an der Steige mostra che messaggi chiari, SEO tecnico e fatti citabili aumentano conversioni e visibilità nei motori di risposta.",
-    primaryCta: "Richiedi una consulenza gratuita",
-    secondaryCta: "Vedi progetti",
-    ctaMeta: "Consulenza gratuita • Senza impegno • Risposta entro 24h",
+      "Aiuto le piccole imprese a presentarsi in modo professionale online, ricevere più richieste ed essere trovate più facilmente su Google.",
+    bullets: [
+      "Sito ottimizzato per smartphone",
+      "Modulo contatti, WhatsApp e Google Maps",
+      "SEO di base per ricerche locali",
+      "Collegamento dominio e pubblicazione online",
+      "Prezzo chiaro e tempi di consegna definiti",
+    ],
+    primaryCta: "Richiedi una valutazione gratuita",
+    secondaryCta: "Vedi i lavori",
+    ctaMeta: "Valutazione gratuita • Senza impegno • Risposta entro 24h",
   },
   optimizationExcellence: {
     eyebrow: "Ottimizzazione AI e ricerca",
@@ -542,12 +571,19 @@ const it: PremiumTranslations = {
 
 const al: PremiumTranslations = {
   hero: {
-    heading: "Faqe moderne dhe sistem vizual për SME — AGR Multimedia, Geislingen",
+    heading: "Faqe moderne web për biznese të vogla në Gjermani",
     subheading:
-      "Ne në AGR Multimedia ndërtojmë faqe të shpejta të gatshme për SEO, sisteme grafike dhe rrjedha AI praktike për SME. Përvoja ime në Geislingen an der Steige tregon se mesazhet e qarta, SEO teknik dhe faktet e citueshme rrisin konvertimet dhe dukshmërinë në motorët e përgjigjes.",
-    primaryCta: "Kërko konsultë falas",
-    secondaryCta: "Shiko projektet",
-    ctaMeta: "Konsultë falas • Pa detyrim • Përgjigje brenda 24 orëve",
+      "Ndihmoj firmat e vogla të duken profesionale online, të marrin më shumë kërkesa dhe të gjenden më lehtë në Google.",
+    bullets: [
+      "Faqe e optimizuar për telefon",
+      "Formular kontakti, WhatsApp dhe Google Maps",
+      "SEO bazë për kërkime lokale",
+      "Lidhje domeni dhe publikim online",
+      "Çmim i qartë dhe afat realizimi",
+    ],
+    primaryCta: "Kërko vlerësim falas",
+    secondaryCta: "Shiko punët",
+    ctaMeta: "Vlerësim falas • Pa detyrim • Përgjigje brenda 24 orëve",
   },
   optimizationExcellence: {
     eyebrow: "Optimizim AI & kërkimi",

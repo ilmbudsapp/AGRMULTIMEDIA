@@ -192,9 +192,9 @@ const en: SpecTranslations = {
     availableIn: 'DE · EN · IT · SR · AL',
   },
   seo: {
-    title: "AGR Multimedia — Web Design & Graphics · Geislingen",
+    title: "AGR Multimedia — Websites for small businesses · Geislingen",
     description:
-      "Web design, AI multimedia, graphic design & SEO for small businesses — studio in Geislingen an der Steige, Germany. We structure pages for AEO (answer-ready excerpts) and GEO (citable claims). Free consultation: agron6922@gmail.com",
+      "Professional websites for small businesses in Germany, Austria and Switzerland — mobile-ready, contact forms, Google Maps and basic local SEO. Free assessment: agron6922@gmail.com",
   },
   heroProjects: {
     heading: 'Featured projects',
@@ -408,9 +408,9 @@ const de: SpecTranslations = {
     availableIn: 'DE · EN · IT · SR · AL',
   },
   seo: {
-    title: "AGR Multimedia — Webdesign & Grafik · Geislingen",
+    title: "AGR Multimedia — Websites für kleine Unternehmen · Geislingen",
     description:
-      "Webdesign, KI-Multimedia, Grafikdesign & SEO für Kleinunternehmen — Studio in Geislingen an der Steige. Wir strukturieren Inhalte für AEO (Antwort-Snippets) und GEO (belegbare Aussagen). Kostenlose Beratung: agron6922@gmail.com",
+      "Professionelle Websites für kleine Firmen in Deutschland, Österreich und der Schweiz — mobil optimiert, Kontaktformular, Google Maps und Basis-SEO für lokale Suchen. Kostenlose Einschätzung: agron6922@gmail.com",
   },
   heroProjects: {
     heading: 'Ausgewählte Projekte',
@@ -840,9 +840,9 @@ const sr: SpecTranslations = {
     availableIn: 'DE · EN · IT · SR · AL',
   },
   seo: {
-    title: "AGR Multimedia — Web dizajn, grafika i AI — Geislingen an der Steige",
+    title: "AGR Multimedia — Web stranice za male firme · Geislingen",
     description:
-      "Web dizajn, AI multimedija, grafički dizajn i SEO za mala preduzeća — studio u Geislingen an der Steige, Nemačka. Strukturiramo stranice za AEO (izvodljive odgovore) i GEO (tvrdnje sa izvorima). Besplatne konsultacije: agron6922@gmail.com",
+      "Profesionalne web stranice za male firme u Njemačkoj, Austriji i Švicarskoj — mobilna verzija, kontakt forma, Google Maps i osnovni lokalni SEO. Besplatna procjena: agron6922@gmail.com",
   },
   heroProjects: {
     heading: 'Izdvojeni projekti',

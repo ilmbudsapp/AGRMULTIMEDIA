@@ -1,19 +1,14 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
-import HomeGeoInsight from "@/components/HomeGeoInsight";
 import HomeFaqJsonLd from "@/components/HomeFaqJsonLd";
-import HomeServices from "@/components/HomeServices";
-import CaseStudyThearRealm from "@/components/CaseStudyThearRealm";
-import TrustIntro from "@/components/TrustIntro";
-import OptimizationExcellence from "@/components/OptimizationExcellence";
-import HomeSeoSection from "@/components/HomeSeoSection";
-import WhyChooseMe from "@/components/WhyChooseMe";
-import Testimonials from "@/components/Testimonials";
-import AboutHome from "@/components/AboutHome";
-import HomeComparisons from "@/components/HomeComparisons";
-import HomeClientExperience from "@/components/HomeClientExperience";
-import HomeConclusion from "@/components/HomeConclusion";
-import HomeFinalCta from "@/components/HomeFinalCta";
+import {
+  HomeKmuAudience,
+  HomeKmuDeliverables,
+  HomeKmuPricing,
+  HomeKmuPortfolio,
+  HomeKmuProcess,
+  HomeKmuFinalCta,
+} from "@/components/HomeKmuSections";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import { MAIN_LANDMARK_LABEL } from "@/lib/a11yLandmarks";
@@ -27,19 +22,12 @@ export default function Home() {
       <Navigation />
       <main id="main-content" aria-label={MAIN_LANDMARK_LABEL[currentLanguage]}>
         <Hero />
-        <HomeGeoInsight />
-        <HomeComparisons />
-        <TrustIntro />
-        <OptimizationExcellence />
-        <HomeClientExperience />
-        <HomeSeoSection />
-        <WhyChooseMe />
-        <Testimonials />
-        <CaseStudyThearRealm />
-        <HomeServices />
-        <AboutHome />
-        <HomeConclusion />
-        <HomeFinalCta />
+        <HomeKmuAudience />
+        <HomeKmuDeliverables />
+        <HomeKmuPricing />
+        <HomeKmuPortfolio />
+        <HomeKmuProcess />
+        <HomeKmuFinalCta />
         <Contact />
         <HomeFaqJsonLd />
       </main>

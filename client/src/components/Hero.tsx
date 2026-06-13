@@ -1,3 +1,4 @@
+import { CheckCircle2 } from "lucide-react";
 import { useEffect, useRef } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getPremiumTranslations } from "@/lib/premiumI18n";
@@ -78,6 +79,15 @@ export default function Hero() {
             {premium.hero.subheading}
           </p>
 
+          <ul className="mx-auto mt-6 max-w-xl space-y-2.5 text-left lg:mx-0">
+            {premium.hero.bullets.map((item) => (
+              <li key={item} className="flex items-start gap-2.5 text-sm text-white/80 md:text-base">
+                <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400/90" aria-hidden />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+
           <div className="mt-9 flex flex-col items-stretch justify-center gap-3 sm:flex-row lg:justify-start">
             <button
               type="button"
@@ -89,7 +99,7 @@ export default function Hero() {
             </button>
             <button
               type="button"
-              onClick={() => scrollTo("case-studies")}
+              onClick={() => scrollTo("portfolio")}
               className="min-h-[48px] rounded-full border border-white/20 bg-white/5 px-8 py-3 text-[0.9375rem] font-medium text-white backdrop-blur-sm transition duration-200 hover:scale-[1.02] hover:border-blue-300/50"
               data-testid="hero-cta-secondary"
             >

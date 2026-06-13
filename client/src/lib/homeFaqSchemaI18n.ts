@@ -13,152 +13,112 @@ export type FaqPair = { q: string; a: string };
 const FAQ_BY_LANG: Record<LangKey, FaqPair[]> = {
   sr: [
     {
-      q: "Zašto izabrati AGR Multimedia za web dizajn i grafiku?",
-      a: "Kombinujemo tehničku SEO-prijateljsku strukturu, pristupačnost i performanse sa dizajnom koji podržava konverzije. Umesto generičkih šablona gradimo hijerarhiju sadržaja i vizuelni jezik prilagođen vašoj publici, uz primere u portfolio delu sajta.",
+      q: "Za koga izrađujete web stranice?",
+      a: "Prvenstveno za male firme u Njemačkoj, Austriji i Švicarskoj — Gebäudereinigung, Autopflege, Handwerker, Gartenbau, transport, Fahrradservice, restorane i porodične biznise koji žele profesionalan online nastup.",
     },
     {
-      q: "Kako izgleda proces izrade sajta od prvog poziva do objave?",
-      a: "Kreće od briefinga i predloga strukture stranica, zatim dizajn i razvoj u iteracijama sa jasnim rokovima. Pre objave testiramo forme, brzinu i mobilni prikaz; po potrebi usklađujemo sadržaj sa digitalnim marketingom i SEO koracima koje možete pratiti.",
+      q: "Šta uključuje izrada web stranice?",
+      a: "Moderna početna stranica, stranica usluga, kontakt forma, Google Maps, WhatsApp dugme, mobilna optimizacija, osnovni SEO naslovi i opisi, povezivanje domene i objava online.",
     },
     {
-      q: "Šta sve obuhvata ponuda za mala preduzeća u EU?",
-      a: "Web i landing stranice, grafički identitet i štampa, video produkcija, kao i AI-pomoć pri kreiranju sadržaja uz ljudsku reviziju kvaliteta — sve sa ciljem merljivih rezultata za mala preduzeća u Nemačkoj, Austriji, Švajcarskoj i širom EU.",
+      q: "Koliko košta web stranica?",
+      a: "Start paket od 500 € za jednostavnu stranicu, Business paket od 900 € za više stranica i sadržaja, te održavanje od 30 € mjesečno za manje izmjene i tehničku podršku. Tačan obim dogovaramo nakon kratkog razgovora.",
     },
     {
-      q: "Koliko brzo možete očekivati odgovor i pokretanje projekta?",
-      a: "Na upite obično odgovaramo u roku od 24 sata i dogovaramo sledeće korake (ciljevi, obim, rokovi). Najbrži način je kontakt forma ili direktan poziv — dobijate predlog bez obaveze.",
+      q: "Kako izgleda saradnja?",
+      a: "Kratak razgovor o firmi, prijedlog strukture, izrada dizajna, korekcije i na kraju povezivanje domene sa objavom online. Odgovor na upit obično u roku od 24 sata.",
     },
     {
-      q: "Šta je AEO i šta je GEO u kontekstu web sadržaja?",
-      a: "AEO (Answer Engine Optimization) je praksa pisanja i strukture stranice tako da sistemi odgovora mogu da izvuku jedan jasan citat. GEO (Generative Engine Optimization) je sadržaj sa definicijama, povezanim izvorima i uravnoteženim perspektivama da generativna pretraga može bezbedno da sumarizuje ponudu. AGR Multimedia ih uključuje zajedno sa tehničkim SEO i performansama.",
-    },
-    {
-      q: "Zašto su spoljašnji linkovi važni kada AI pretraživači citiraju stranicu?",
-      a: "Javni izvori (npr. Google Search Central, HTTP Archive) omogućavaju proveru tvrdnji o performansama i smernicama. To podiže pouzdanost za GEO i E-E-A-T signale; operativna obećanja (rok odgovora, obim) ostaju u pisanoj ponudi.",
-    },
-    {
-      q: "Kako izgleda „odgovor prvo” na početku ključne stranice?",
-      a: "Prva rečenica direktno odgovara na glavno korisničko pitanje, zatim sledi lista ili podnaslovi sa detaljima. Taj raspored olakšava skeniranje i pomaže AEO izvodima bez gubitka konteksta.",
+      q: "Da li radite osnovni SEO za lokalne pretrage?",
+      a: "Da — u paketima su jasni naslovi, opisi i struktura stranica prilagođena lokalnim pretragama na Google-u, bez komplikovanog tehničkog žargona u glavnoj ponudi.",
     },
   ],
   en: [
     {
-      q: "Why choose AGR Multimedia for web design and graphics?",
-      a: "We combine SEO-friendly structure, accessibility, and performance with design that supports conversions. Instead of generic templates we build content hierarchy and a visual language tailored to your audience, with examples in the portfolio section.",
+      q: "Who do you build websites for?",
+      a: "Mainly small businesses in Germany, Austria and Switzerland — cleaning, car care, trades, landscaping, transport, bicycle service, restaurants and family-run companies that want a professional online presence.",
     },
     {
-      q: "What does the website process look like from the first call to launch?",
-      a: "It starts with a briefing and proposed page structure, then design and development in iterations with clear deadlines. Before launch we test forms, speed, and mobile layout; we align content with digital marketing and SEO steps you can follow.",
+      q: "What does a website project include?",
+      a: "Modern homepage, services page, contact form, Google Maps, WhatsApp button, mobile optimisation, basic SEO titles and descriptions, domain setup and online launch.",
     },
     {
-      q: "What does the offer include for small businesses in the EU?",
-      a: "Web and landing pages, brand identity and print, video production, and AI-assisted content creation with human quality review — all aimed at measurable results for SMEs in Germany, Austria, Switzerland, and across the EU.",
+      q: "How much does a website cost?",
+      a: "Start package from €500 for a simple site, Business package from €900 for more pages and content, and maintenance from €30/month for small updates and support. Exact scope is agreed after a short call.",
     },
     {
-      q: "How quickly can I expect a response and project kickoff?",
-      a: "We usually reply within 24 hours and agree next steps (goals, scope, timelines). Fastest path is the contact form or a direct call — you get a proposal without obligation.",
+      q: "What does working together look like?",
+      a: "Short call about your business, structure proposal, design and build, revisions, then domain setup and launch. We usually reply within 24 hours.",
     },
     {
-      q: "What are AEO and GEO in the context of web content?",
-      a: "AEO (Answer Engine Optimization) is the practice of writing and structuring pages so answer engines can extract one clear quote. GEO (Generative Engine Optimization) is content with definitions, linked sources, and balanced perspectives so generative search can summarize your offer safely. AGR Multimedia includes both alongside technical SEO and performance.",
-    },
-    {
-      q: "Why are external links important when AI search cites a page?",
-      a: "Public sources (for example Google Search Central, HTTP Archive) let readers verify claims about performance and guidelines. That strengthens GEO and E-E-A-T signals; operational promises (reply time, scope) stay in your written proposal.",
-    },
-    {
-      q: 'What does an "answer-first" lead look like at the top of a key page?',
-      a: "The first sentence answers the main user question directly, then lists or subheads carry the details. That layout speeds scanning and helps AEO extracts without losing context.",
+      q: "Do you include basic SEO for local searches?",
+      a: "Yes — packages include clear titles, descriptions and page structure aimed at local Google searches, explained in plain language without technical jargon in the main offer.",
     },
   ],
   de: [
     {
-      q: "Warum AGR Multimedia für Webdesign und Grafik wählen?",
-      a: "Wir verbinden SEO-freundliche Struktur, Barrierefreiheit und Performance mit Design, das Konversionen unterstützt. Statt generischer Vorlagen bauen wir eine klare Inhaltshierarchie und eine passende Bildsprache — mit Beispielen im Portfolio.",
+      q: "Für wen erstellen Sie Websites?",
+      a: "Vor allem für kleine Unternehmen in Deutschland, Österreich und der Schweiz — Gebäudereinigung, Autopflege, Handwerk, Gartenbau, Transport, Fahrradservice, Restaurants und Familienbetriebe mit professionellem Online-Auftritt.",
     },
     {
-      q: "Wie läuft die Website-Erststellung vom ersten Gespräch bis zum Launch?",
-      a: "Start mit Briefing und Seitenstruktur, dann Design und Umsetzung in Iterationen mit klaren Terminen. Vor dem Livegang testen wir Formulare, Geschwindigkeit und Mobile-Ansicht; bei Bedarf stimmen wir Inhalte mit Marketing und SEO-Schritten ab.",
+      q: "Was ist in einer Website enthalten?",
+      a: "Moderne Startseite, Leistungsseite, Kontaktformular, Google Maps, WhatsApp-Button, mobile Optimierung, Basis-SEO mit Titeln und Beschreibungen, Domain-Anbindung und Online-Veröffentlichung.",
     },
     {
-      q: "Was umfasst das Angebot für kleine Unternehmen in der EU?",
-      a: "Web- und Landingpages, Markenidentität und Print, Videoproduktion sowie KI-unterstützte Inhalte mit menschlicher Qualitätsprüfung — alles mit messbaren Zielen für KMU in Deutschland, Österreich, der Schweiz und in der EU.",
+      q: "Was kostet eine Website?",
+      a: "Start-Paket ab 500 € für eine einfache Seite, Business-Paket ab 900 € für mehr Seiten und Inhalte, Wartung ab 30 €/Monat für kleine Änderungen und Support. Den genauen Umfang klären wir nach einem kurzen Gespräch.",
     },
     {
-      q: "Wie schnell können wir mit Antwort und Projektstart rechnen?",
-      a: "In der Regel antworten wir innerhalb von 24 Stunden und vereinbaren die nächsten Schritte (Ziele, Umfang, Zeitplan). Am schnellsten über Kontaktformular oder Telefon — unverbindliches Angebot.",
+      q: "Wie läuft die Zusammenarbeit?",
+      a: "Kurzes Gespräch, Strukturvorschlag, Design und Umsetzung, Korrekturen, dann Domain-Anbindung und Veröffentlichung. Antwort auf Anfragen meist innerhalb von 24 Stunden.",
     },
     {
-      q: "Was sind AEO und GEO im Kontext von Webinhalten?",
-      a: "AEO (Answer Engine Optimization) ist Schreibweise und Struktur, damit Answer Engines ein klares Zitat ziehen können. GEO (Generative Engine Optimization) sind Definitionen, verlinkte Quellen und ausgewogene Perspektiven, damit generative Suche Ihr Angebot sicher zusammenfassen kann. AGR Multimedia verbindet beides mit technischem SEO und Performance.",
-    },
-    {
-      q: "Warum sind externe Links wichtig, wenn KI-Suche Seiten zitiert?",
-      a: "Öffentliche Quellen (z. B. Google Search Central, HTTP Archive) erlauben die Prüfung von Aussagen zu Performance und Richtlinien. Das stärkt GEO- und E-E-A-T-Signale; operative Zusagen (Antwortzeit, Umfang) stehen im schriftlichen Angebot.",
-    },
-    {
-      q: "Wie sieht ein Antwort-zuerst-Einstieg auf einer Kernseite aus?",
-      a: "Der erste Satz beantwortet die Kernfrage direkt, danach folgen Listen oder Zwischenüberschriften mit Details. Das unterstützt AEO-Zitate und schnelles Scannen ohne Kontextverlust.",
+      q: "Ist Basis-SEO für lokale Suchen enthalten?",
+      a: "Ja — die Pakete umfassen klare Titel, Beschreibungen und Seitenstruktur für lokale Google-Suchen, verständlich erklärt ohne komplizierte Fachbegriffe im Hauptangebot.",
     },
   ],
   it: [
     {
-      q: "Perché scegliere AGR Multimedia per web design e grafica?",
-      a: "Uniamo struttura SEO-friendly, accessibilità e performance con un design che supporta le conversioni. Al posto di template generici costruiamo gerarchia dei contenuti e linguaggio visivo su misura, con esempi nel portfolio.",
+      q: "Per chi realizzate siti web?",
+      a: "Soprattutto piccole imprese in Germania, Austria e Svizzera — pulizie, autolavaggio, artigiani, giardinaggio, trasporti, servizio biciclette, ristoranti e attività familiari che vogliono una presenza online professionale.",
     },
     {
-      q: "Come funziona il processo dal primo contatto al lancio?",
-      a: "Partiamo da briefing e struttura delle pagine, poi design e sviluppo in iterazioni con scadenze chiare. Prima del go-live testiamo moduli, velocità e mobile; allineiamo i contenuti a marketing digitale e passi SEO seguibili.",
+      q: "Cosa include un progetto sito web?",
+      a: "Homepage moderna, pagina servizi, modulo contatti, Google Maps, pulsante WhatsApp, ottimizzazione mobile, SEO di base con titoli e descrizioni, collegamento dominio e pubblicazione online.",
     },
     {
-      q: "Cosa include l’offerta per le PMI nell’UE?",
-      a: "Siti e landing page, identità di marca e stampa, produzione video e contenuti assistiti da IA con revisione umana — orientati a risultati misurabili in Germania, Austria, Svizzera e in tutta l’UE.",
+      q: "Quanto costa un sito web?",
+      a: "Pacchetto Start da 500 € per un sito semplice, Business da 900 € per più pagine e contenuti, manutenzione da 30 €/mese per piccole modifiche e supporto. L'ambito esatto si definisce dopo una breve chiamata.",
     },
     {
-      q: "Quanto velocemente rispondete e avviate il progetto?",
-      a: "Di solito entro 24 ore con i passi successivi (obiettivi, scope, tempi). Modulo contatti o telefono per la via più rapida — proposta senza impegno.",
+      q: "Come funziona la collaborazione?",
+      a: "Breve conversazione, proposta di struttura, design e realizzazione, correzioni, poi dominio e pubblicazione. Di solito rispondiamo entro 24 ore.",
     },
     {
-      q: "Cosa sono AEO e GEO nel contesto dei contenuti web?",
-      a: "L’AEO (Answer Engine Optimization) è scrittura e struttura così che i motori di risposta estraggano una citazione chiara. Il GEO (Generative Engine Optimization) è contenuto con definizioni, fonti collegate e prospettive equilibrate per riassunti generativi sicuri. AGR Multimedia li integra con SEO tecnico e performance.",
-    },
-    {
-      q: "Perché i link esterni contano quando la ricerca IA cita la pagina?",
-      a: "Fonti pubbliche (es. Google Search Central, HTTP Archive) permettono di verificare affermazioni su performance e linee guida. Rafforza segnali GEO ed E-E-A-T; promesse operative restano in proposta scritta.",
-    },
-    {
-      q: "Che aspetto ha un ingresso “risposta per prima” in una pagina chiave?",
-      a: "La prima frase risponde subito alla domanda principale, poi elenchi o sottotitoli con i dettagli. Aiuta gli estratti AEO e la scansione rapida senza perdere contesto.",
+      q: "Include SEO di base per ricerche locali?",
+      a: "Sì — i pacchetti includono titoli, descrizioni e struttura delle pagine per le ricerche locali su Google, spiegati in modo chiaro senza gergo tecnico nell'offerta principale.",
     },
   ],
   al: [
     {
-      q: "Pse të zgjidhni AGR Multimedia për web dizajn dhe grafikë?",
-      a: "Ne lidhim strukturë miqësore me SEO, aksesueshmëri dhe performancë me dizajn që mbështet konvertimet. Në vend të shablloneve gjenerike ndërtojmë hierarki përmbajtjeje dhe gjuhë vizuale të përshtatur, me shembuj në portfolio.",
+      q: "Për kë ndërtoni faqe web?",
+      a: "Kryesisht për biznese të vogla në Gjermani, Austri dhe Zvicër — pastrim ndërtesash, kujdes automjeti, zanate, kopshtari, transport, servis biçikletash, restorante dhe firmat familjare që duan prani profesionale online.",
     },
     {
-      q: "Si duket procesi nga thirrja e parë deri te publikimi?",
-      a: "Fillon me briefing dhe strukturë faqesh, pastaj dizajn dhe zhvillim në iteracione me afate të qarta. Para publikimit testojmë formularët, shpejtësinë dhe pamjen mobile; përputhim përmbajtjen me marketing digjital dhe hapa SEO.",
+      q: "Çfarë përfshin një projekt faqeje web?",
+      a: "Faqe kryesore moderne, faqe shërbimesh, formular kontakti, Google Maps, buton WhatsApp, optimizim mobil, SEO bazë me tituj dhe përshkrime, lidhje domeni dhe publikim online.",
     },
     {
-      q: "Çfarë përfshin oferta për SME në BE?",
-      a: "Faqe web dhe landing, identitet marke dhe print, prodhim video dhe përmbajtje me ndihmën e AI me kontroll cilësie njerëzor — për rezultate të matshme në Gjermani, Austri, Zvicër dhe në BE.",
+      q: "Sa kushton një faqe web?",
+      a: "Paketa Start nga 500 € për një faqe të thjeshtë, Business nga 900 € për më shumë faqe dhe përmbajtje, mirëmbajtje nga 30 €/muaj për ndryshime të vogla dhe mbështetje. Shtrirja e saktë përcaktohet pas një bisede të shkurtër.",
     },
     {
-      q: "Sa shpejt marr përgjigje dhe nisje projekti?",
-      a: "Zakonisht brenda 24 orëve me hapat e radhës (objektiva, fushëveprim, afate). Formulari i kontaktit ose telefoni për rrugën më të shpejtë — ofertë pa detyrim.",
+      q: "Si duket bashkëpunimi?",
+      a: "Bisedë e shkurtër, propozim strukture, dizajn dhe realizim, korrigjime, pastaj domeni dhe publikim. Zakonisht përgjigjemi brenda 24 orëve.",
     },
     {
-      q: "Çfarë janë AEO dhe GEO në kontekstin e përmbajtjes web?",
-      a: "AEO (Answer Engine Optimization) është mënyra e shkrimit dhe strukturës që motorët e përgjigjes të nxjerrin një citim të qartë. GEO (Generative Engine Optimization) është përmbajtje me përkufizime, burime të lidhura dhe kënde të balancuara që kërkimi gjenerativ të përmbledhë ofertën me siguri. AGR Multimedia i bashkon me SEO teknik dhe performancë.",
-    },
-    {
-      q: "Pse janë të rëndësishëm lidhjet e jashtme kur kërkimi me AI citon faqen?",
-      a: "Burimet publike (p.sh. Google Search Central, HTTP Archive) lejojnë verifikimin e pretendimeve për performancë dhe udhëzime. Forcon sinjalet GEO dhe E-E-A-T; premtimet operative mbeten në ofertë me shkrim.",
-    },
-    {
-      q: "Si duket hyrja “përgjigje së pari” në krye të një faqeje kyçe?",
-      a: "Fjalimi i parë përgjigjet drejtpërdrejt pyetjes kryesore, pastaj lista ose nënnënështra me detaje. Ndihmon nxjerrjet AEO dhe leximin e shpejtë pa humbje konteksti.",
+      q: "A përfshihet SEO bazë për kërkime lokale?",
+      a: "Po — paketat përfshijnë tituj, përshkrime dhe strukturë faqesh për kërkime lokale në Google, të shpjeguara qartë pa zhargon teknik në ofertën kryesore.",
     },
   ],
 };
