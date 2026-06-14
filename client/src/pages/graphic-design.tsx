@@ -233,6 +233,13 @@ export default function GraphicDesign() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    const raw = window.location.hash.replace(/^#/, "");
+    if (!raw) return;
+    const scrollToHash = () => {
+      document.getElementById(raw)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    };
+    const id = window.setTimeout(scrollToHash, 350);
+    return () => window.clearTimeout(id);
   }, []);
 
   return (

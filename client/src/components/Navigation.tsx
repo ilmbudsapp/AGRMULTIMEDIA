@@ -17,6 +17,7 @@ export default function Navigation() {
   const navItems: { id: string; label: string; href: string; isHome?: boolean }[] = [
     { id: "home", label: tSpec.nav.home, href: "/", isHome: true },
     { id: "webdesign", label: tSpec.nav.webdesignSeo, href: "/webdesign-seo" },
+    { id: "graphic-design", label: tSpec.nav.graphicDesign, href: "/graphic-design#corporate-design" },
     { id: "portfolio", label: tSpec.nav.portfolio, href: "/portfolio" },
     { id: "blog", label: tSpec.nav.blog, href: "/blog" },
     { id: "reviews", label: tSpec.nav.reviews, href: "/bewertungen" },

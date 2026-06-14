@@ -52,6 +52,17 @@ const routes = [
     canonical: "https://www.agrmultimedia.eu/bewertungen",
   },
   {
+    dir: "graphic-design",
+    lang: "de",
+    title: "Grafikdesign für kleine Unternehmen — AGR Multimedia",
+    description:
+      "Logo, Corporate Design, Branding und Visitenkarten — u. a. Fallstudie Atemberge: Outdoor-Marke mit Moodboard, Farbwelt und finalem Logo.",
+    h1: "Grafikdesign für kleine Unternehmen",
+    lead: "Corporate Design, Branding, Visitenkarten und visuelle Systeme — inkl. Atemberge Outdoor-Wandermarke (Moodboard, Logo, Visitenkarte).",
+    canonical: "https://www.agrmultimedia.eu/graphic-design",
+    bodyHtml: `<p><a href="/graphic-design#corporate-design">Atemberge Corporate Design ansehen</a> · <a href="/kontakt">Angebot anfragen</a></p>`,
+  },
+  {
     dir: "webdesign-geislingen-an-der-steige",
     lang: "de",
     title: "Webdesign Geislingen an der Steige | Websites & SEO — AGR Multimedia",

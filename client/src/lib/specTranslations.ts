@@ -57,6 +57,7 @@ export interface SpecTranslations {
     home: string;
     services: string;
     webdesignSeo: string;
+    graphicDesign: string;
     videoProduction: string;
     portfolio: string;
     about: string;
@@ -223,6 +224,7 @@ const en: SpecTranslations = {
     home: 'Home',
     services: 'Services',
     webdesignSeo: 'Web Design & SEO',
+    graphicDesign: 'Graphic Design',
     videoProduction: 'Video Production',
     portfolio: 'Portfolio',
     about: 'About',
@@ -439,6 +441,7 @@ const de: SpecTranslations = {
     home: 'Home',
     services: 'Leistungen',
     webdesignSeo: 'Webdesign & SEO',
+    graphicDesign: 'Grafikdesign',
     videoProduction: 'Videoproduktion',
     portfolio: 'Portfolio',
     about: 'Über mich',
@@ -655,6 +658,7 @@ const it: SpecTranslations = {
     home: 'Home',
     services: 'Servizi',
     webdesignSeo: 'Web design e SEO',
+    graphicDesign: 'Graphic design',
     videoProduction: 'Videoproduzione',
     portfolio: 'Portfolio',
     about: 'Chi sono',
@@ -871,6 +875,7 @@ const sr: SpecTranslations = {
     home: 'Početna',
     services: 'Usluge',
     webdesignSeo: 'Web dizajn i SEO',
+    graphicDesign: 'Grafički dizajn',
     videoProduction: 'Video produkcija',
     portfolio: 'Portfolio',
     about: 'O meni',
@@ -1087,6 +1092,7 @@ const al: SpecTranslations = {
     home: 'Kryefaqja',
     services: 'Shërbime',
     webdesignSeo: 'Web design & SEO',
+    graphicDesign: 'Dizajn grafik',
     videoProduction: 'Videoproduktion',
     portfolio: 'Portfolio',
     about: 'Rreth meje',
