@@ -38,6 +38,7 @@ const Impresum = lazy(() => import("@/pages/impresum"));
 const DigitalMarketingTrends2024 = lazy(() => import("@/pages/blog/digital-marketing-trends-2024"));
 const WebsiteConversionOptimization = lazy(() => import("@/pages/blog/website-conversion-optimization"));
 const VideoMarketingPower = lazy(() => import("@/pages/blog/video-marketing-power"));
+const FoodTruckWeb500 = lazy(() => import("@/pages/blog/food-truck-web-500"));
 const GermanBlogArticlePage = lazy(() => import("@/pages/blog/GermanBlogArticlePage"));
 const EcommerceSite = lazy(() => import("@/pages/portfolio/ecommerce-site"));
 const RestaurantWebsite = lazy(() => import("@/pages/portfolio/restaurant-website"));
