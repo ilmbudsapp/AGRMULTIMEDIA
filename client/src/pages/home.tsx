@@ -1,7 +1,9 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import HomeFaqJsonLd from "@/components/HomeFaqJsonLd";
+import HomeLocalBusinessJsonLd from "@/components/HomeLocalBusinessJsonLd";
 import {
+  HomeKmuIntro,
   HomeKmuAudience,
   HomeKmuDeliverables,
   HomeKmuPricing,
@@ -22,6 +24,7 @@ export default function Home() {
       <Navigation />
       <main id="main-content" aria-label={MAIN_LANDMARK_LABEL[currentLanguage]}>
         <Hero />
+        <HomeKmuIntro />
         <HomeKmuAudience />
         <HomeKmuDeliverables />
         <HomeKmuPricing />
@@ -30,6 +33,7 @@ export default function Home() {
         <HomeKmuFinalCta />
         <Contact />
         <HomeFaqJsonLd />
+        <HomeLocalBusinessJsonLd />
       </main>
       <Footer />
     </div>

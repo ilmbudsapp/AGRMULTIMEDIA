@@ -18,6 +18,7 @@ export default function Navigation() {
     { id: "home", label: tSpec.nav.home, href: "/", isHome: true },
     { id: "webdesign", label: tSpec.nav.webdesignSeo, href: "/webdesign-seo" },
     { id: "portfolio", label: tSpec.nav.portfolio, href: "/portfolio" },
+    { id: "blog", label: tSpec.nav.blog, href: "/blog" },
     { id: "reviews", label: tSpec.nav.reviews, href: "/bewertungen" },
     { id: "about", label: tSpec.nav.about, href: "/about" },
   ];

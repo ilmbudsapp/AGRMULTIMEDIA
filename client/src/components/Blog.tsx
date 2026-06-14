@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Link } from "wouter";
 import AuthorByline from "@/components/AuthorByline";
+import { BLOG_POSTS_DE } from "@/data/blogPostsDe";
 
 type BlogProps = { asPage?: boolean };
 
@@ -18,9 +19,9 @@ type BlogPostCard = {
 };
 
 export default function Blog({ asPage = false }: BlogProps) {
-  const { t } = useLanguage();
+  const { t, currentLanguage } = useLanguage();
   
-  const blogPosts: BlogPostCard[] = [
+  const legacyPosts: BlogPostCard[] = [
     {
       id: 1,
       slug: "digital-marketing-trends-2024",
@@ -66,6 +67,23 @@ export default function Blog({ asPage = false }: BlogProps) {
       categoryColor: "bg-green-500"
     }
   ];
+
+  const germanPosts: BlogPostCard[] = BLOG_POSTS_DE.map((post, i) => ({
+    id: 100 + i,
+    slug: post.slug,
+    title: post.title,
+    description: post.description,
+    image: post.image,
+    imageAlt: post.imageAlt,
+    category: post.category,
+    date: post.date,
+    categoryColor: "bg-electric-blue",
+  }));
+
+  const blogPosts =
+    currentLanguage === "de"
+      ? [...germanPosts, ...legacyPosts]
+      : legacyPosts;
 
   return (
     <section id="blog" className="py-24 bg-[#f0eff7]">

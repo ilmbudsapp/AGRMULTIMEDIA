@@ -11,6 +11,7 @@ import {
   ExternalLink,
   ArrowRight,
 } from "lucide-react";
+import { Link } from "wouter";
 import { useLanguage } from "@/contexts/LanguageContext";
 import type { Language } from "@/lib/i18n";
 import { getHomeKmuCopy } from "@/lib/homeKmuI18n";
@@ -18,11 +19,44 @@ import { NAV_SCROLL_ON_PAGE_HINT } from "@/lib/a11yLandmarks";
 
 const AUDIENCE_ICONS = [Building2, Car, Hammer, TreePine, Truck, Bike, UtensilsCrossed, Users] as const;
 
+import { ROUTES } from "@/lib/siteRoutes";
+
 function SectionHeading({ id, children }: { id: string; children: string }) {
   return (
     <h2 id={id} className="text-2xl font-semibold tracking-tight text-white md:text-3xl lg:text-4xl">
       {children}
     </h2>
+  );
+}
+
+export function HomeKmuIntro() {
+  const { currentLanguage } = useLanguage();
+  const copy = getHomeKmuCopy(currentLanguage);
+
+  return (
+    <section
+      id="about-agr"
+      className="premium-section scroll-mt-24 border-t border-[#333333] py-14 md:py-18"
+      aria-labelledby="kmu-intro-heading"
+    >
+      <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
+        <h2 id="kmu-intro-heading" className="sr-only">
+          Über AGR Multimedia
+        </h2>
+        <p className="text-base leading-relaxed text-white/80 md:text-lg">{copy.intro.who}</p>
+        <p className="mt-4 text-base leading-relaxed text-white/70 md:text-lg">{copy.intro.services}</p>
+        <p className="mt-4 text-base leading-relaxed text-white/70 md:text-lg">{copy.intro.audience}</p>
+        <p className="mt-4 text-base leading-relaxed text-white/75 md:text-lg">{copy.intro.why}</p>
+        <p className="mt-6">
+          <Link
+            href={ROUTES.webdesignGeislingen}
+            className="text-sm font-medium text-blue-200 underline-offset-2 hover:underline md:text-base"
+          >
+            {copy.intro.landingLinkLabel}
+          </Link>
+        </p>
+      </div>
+    </section>
   );
 }
 

@@ -4,7 +4,7 @@
  */
 import { portfolioPageByLang, type PortfolioPageCopy } from "./portfolioPageI18n";
 
-export type SpecLang = 'de' | 'en' | 'it' | 'sr' | 'al';
+export type SpecLang = 'de' | 'en';
 
 /** Home flip-card: front copy + back (price) line */
 export interface ServiceFlipCardCopy {
@@ -189,12 +189,12 @@ const en: SpecTranslations = {
       'Websites, branding, AI-assisted content, and SEO—delivered with a clear process from Geislingen an der Steige.',
     ctaPrimary: 'Get a quote',
     ctaSecondary: 'Selected work',
-    availableIn: 'DE · EN · IT · SR · AL',
+    availableIn: 'DE · EN',
   },
   seo: {
-    title: "AGR Multimedia — Websites for small businesses · Geislingen",
+    title: "Web design Geislingen an der Steige | Local business websites — AGR Multimedia",
     description:
-      "Professional websites for small businesses in Germany, Austria and Switzerland — mobile-ready, contact forms, Google Maps and basic local SEO. Free assessment: agron6922@gmail.com",
+      "Web design in Geislingen an der Steige: professional websites for trades and SMEs — responsive, SEO-ready, from €500. Free assessment: agron6922@gmail.com",
   },
   heroProjects: {
     heading: 'Featured projects',
@@ -405,12 +405,12 @@ const de: SpecTranslations = {
       'Websites, Branding, KI-Inhalte und SEO—klarer Prozess aus Geislingen an der Steige.',
     ctaPrimary: 'Angebot anfragen',
     ctaSecondary: 'Ausgewählte Arbeiten',
-    availableIn: 'DE · EN · IT · SR · AL',
+    availableIn: 'DE · EN',
   },
   seo: {
-    title: "AGR Multimedia — Websites für kleine Unternehmen · Geislingen",
+    title: "Webdesign Geislingen an der Steige | Websites für lokale Firmen — AGR Multimedia",
     description:
-      "Professionelle Websites für kleine Firmen in Deutschland, Österreich und der Schweiz — mobil optimiert, Kontaktformular, Google Maps und Basis-SEO für lokale Suchen. Kostenlose Einschätzung: agron6922@gmail.com",
+      "Webdesign Geislingen an der Steige: professionelle Websites für Handwerk, Dienstleister & KMU — responsive, SEO-optimiert, ab 500 €. Kostenlose Einschätzung: agron6922@gmail.com",
   },
   heroProjects: {
     heading: 'Ausgewählte Projekte',
@@ -1262,21 +1262,17 @@ const specByLang: Record<SpecLang, SpecTranslations> = { en, de, it, sr, al };
 
 /** Map main i18n language code to spec language (e.g. 'sq' -> 'al' for Albanian). */
 export function toSpecLang(lang: string): SpecLang {
-  if (lang === 'sq' || lang === 'al') return 'al';
-  if (lang === 'de' || lang === 'en' || lang === 'it' || lang === 'sr') return lang;
-  return 'en';
+  if (lang === 'en') return 'en';
+  return 'de';
 }
 
 export function getSpecTranslations(lang: string): SpecTranslations {
   return specByLang[toSpecLang(lang)] ?? en;
 }
 
-/** Display codes for language switcher: DE | EN | IT | SR | AL */
-export const specLangCodes: SpecLang[] = ['de', 'en', 'it', 'sr', 'al'];
+/** Display codes for language switcher: DE | EN */
+export const specLangCodes: SpecLang[] = ['de', 'en'];
 export const specLangDisplay: Record<SpecLang, string> = {
   de: 'DE',
   en: 'EN',
-  it: 'IT',
-  sr: 'SR',
-  al: 'AL',
 };

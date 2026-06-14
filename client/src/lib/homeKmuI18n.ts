@@ -1,6 +1,13 @@
 import type { Language } from "@/lib/i18n";
 
 export type HomeKmuCopy = {
+  intro: {
+    who: string;
+    services: string;
+    audience: string;
+    why: string;
+    landingLinkLabel: string;
+  };
   audience: {
     title: string;
     cards: { label: string }[];
@@ -45,8 +52,17 @@ export type HomeKmuCopy = {
 };
 
 const de: HomeKmuCopy = {
+  intro: {
+    who: "AGR Multimedia ist mein kreatives Studio in Geislingen an der Steige. Ich, Agron Osmani, entwickle Websites und digitale Auftritte für kleine Unternehmen — persönlich, verständlich und ohne Agentur-Overhead.",
+    services:
+      "Mein Schwerpunkt liegt auf Webdesign, lokalem SEO und der Umsetzung moderner Business-Websites: von der Startseite über Leistungen bis Kontakt, WhatsApp und Google Maps.",
+    audience:
+      "Besonders häufig arbeite ich mit Handwerkern, Gebäudereinigern, Autopflege-Betrieben, Gartenbauern und lokalen Dienstleistern in Geislingen, Göppingen, Ulm und der Umgebung.",
+    why: "Sie erhalten einen direkten Ansprechpartner, transparente Pakete ab 500 € und eine Website, die auf dem Smartphone funktioniert und bei lokalen Google-Suchen gefunden wird.",
+    landingLinkLabel: "Mehr zum Webdesign in Geislingen an der Steige",
+  },
   audience: {
-    title: "Für wen erstelle ich Websites?",
+    title: "Für wen erstelle ich Websites in der Region?",
     cards: [
       { label: "Gebäudereinigung" },
       { label: "Autopflege & KFZ" },
@@ -287,8 +303,17 @@ const sr: HomeKmuCopy = {
 };
 
 const en: HomeKmuCopy = {
+  intro: {
+    who: "AGR Multimedia is my creative studio in Geislingen an der Steige. I'm Agron Osmani — I build websites and digital presence for small businesses, with personal support and no agency overhead.",
+    services:
+      "My focus is web design, local SEO and modern business websites: homepage, services, contact, WhatsApp and Google Maps integration.",
+    audience:
+      "I often work with trades, cleaning companies, car care businesses, landscapers and local service providers in Geislingen, Göppingen, Ulm and the surrounding area.",
+    why: "You get one direct contact, transparent packages from €500, and a site that works on mobile and shows up in local Google searches.",
+    landingLinkLabel: "More about web design in Geislingen an der Steige",
+  },
   audience: {
-    title: "Who do I build websites for?",
+    title: "Who do I build websites for in the region?",
     cards: [
       { label: "Building cleaning" },
       { label: "Car care & automotive" },
@@ -579,7 +604,7 @@ const al: HomeKmuCopy = {
   },
 };
 
-const COPY: Partial<Record<Language, HomeKmuCopy>> = { de, sr, en, it, al };
+const COPY: Partial<Record<Language, HomeKmuCopy>> = { de, en };
 
 export function getHomeKmuCopy(lang: Language): HomeKmuCopy {
   return COPY[lang] ?? COPY.de!;

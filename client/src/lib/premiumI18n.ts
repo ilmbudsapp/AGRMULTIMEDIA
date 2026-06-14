@@ -87,15 +87,15 @@ type PremiumTranslations = {
 
 const en: PremiumTranslations = {
   hero: {
-    heading: "Modern websites for small businesses in Germany",
+    heading: "Web design Geislingen an der Steige — websites for local businesses",
     subheading:
-      "I help small businesses look professional online, get more enquiries and be easier to find on Google.",
+      "AGR Multimedia: I build professional websites for trades, service providers and small businesses in Geislingen, Göppingen and the region — with SEO, mobile optimisation and personal support.",
     bullets: [
-      "Website ready for smartphones",
+      "Web design for trades, car care, cleaning & local services",
+      "Responsive design and fast load times",
+      "Local SEO for Google searches in the region",
       "Contact form, WhatsApp and Google Maps",
-      "Basic SEO for local searches",
-      "Domain setup and online launch",
-      "Clear price and delivery timeline",
+      "Clear pricing from €500 — one direct contact person",
     ],
     primaryCta: "Request a free assessment",
     secondaryCta: "View my work",
@@ -208,15 +208,15 @@ const en: PremiumTranslations = {
 
 const de: PremiumTranslations = {
   hero: {
-    heading: "Moderne Websites für kleine Unternehmen in Deutschland",
+    heading: "Webdesign Geislingen an der Steige — Websites für lokale Firmen",
     subheading:
-      "Ich helfe kleinen Firmen, professionell online aufzutreten, mehr Anfragen zu erhalten und bei Google leichter gefunden zu werden.",
+      "AGR Multimedia: Ich erstelle professionelle Websites für Handwerker, Dienstleister und kleine Unternehmen in Geislingen, Göppingen und der Region — mit SEO, mobil optimiert und persönlicher Betreuung.",
     bullets: [
-      "Website optimiert für Smartphones",
+      "Webdesign für Zanate, Autopflege, Reinigung & lokale Dienstleister",
+      "Responsive Design und schnelle Ladezeiten",
+      "Lokales SEO für Google-Suchen in der Region",
       "Kontaktformular, WhatsApp und Google Maps",
-      "Basis-SEO für lokale Suchen",
-      "Domain-Anbindung und Online-Veröffentlichung",
-      "Klare Preise und feste Lieferzeit",
+      "Klare Preise ab 500 € — persönlicher Ansprechpartner",
     ],
     primaryCta: "Kostenlose Einschätzung anfordern",
     secondaryCta: "Referenzen ansehen",
@@ -690,8 +690,8 @@ const al: PremiumTranslations = {
   },
 };
 
-const byLang: Record<string, PremiumTranslations> = { en, de, sr, it, al, sq: al };
+const byLang: Record<Language, PremiumTranslations> = { en, de };
 
 export function getPremiumTranslations(language: Language): PremiumTranslations {
-  return byLang[language] ?? en;
+  return byLang[language] ?? de;
 }

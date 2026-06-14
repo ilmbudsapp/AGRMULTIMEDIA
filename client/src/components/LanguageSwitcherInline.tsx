@@ -4,7 +4,7 @@ import type { Language } from "@/lib/i18n";
 
 export default function LanguageSwitcherInline() {
   const { currentLanguage, setLanguage } = useLanguage();
-  const displayLang = currentLanguage === "al" ? "al" : currentLanguage === "sq" ? "al" : currentLanguage;
+  const displayLang = currentLanguage;
 
   const setLangInUrl = (lang: string) => {
     const url = new URL(window.location.href);

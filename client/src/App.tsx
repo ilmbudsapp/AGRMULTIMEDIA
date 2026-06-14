@@ -18,6 +18,7 @@ import PageLoadingFallback from "@/components/PageLoadingFallback";
 import ScrollToTop from "@/components/ScrollToTop";
 import LegacyHashRedirect from "@/components/LegacyHashRedirect";
 
+const WebdesignGeislingenPage = lazy(() => import("@/pages/WebdesignGeislingenPage"));
 const Home = lazy(() => import("@/pages/home"));
 const ServicesPage = lazy(() => import("@/pages/ServicesPage"));
 const AboutPage = lazy(() => import("@/pages/AboutPage"));
@@ -37,7 +38,7 @@ const Impresum = lazy(() => import("@/pages/impresum"));
 const DigitalMarketingTrends2024 = lazy(() => import("@/pages/blog/digital-marketing-trends-2024"));
 const WebsiteConversionOptimization = lazy(() => import("@/pages/blog/website-conversion-optimization"));
 const VideoMarketingPower = lazy(() => import("@/pages/blog/video-marketing-power"));
-const FoodTruckWeb500 = lazy(() => import("@/pages/blog/food-truck-web-500"));
+const GermanBlogArticlePage = lazy(() => import("@/pages/blog/GermanBlogArticlePage"));
 const EcommerceSite = lazy(() => import("@/pages/portfolio/ecommerce-site"));
 const RestaurantWebsite = lazy(() => import("@/pages/portfolio/restaurant-website"));
 const BrandIdentity = lazy(() => import("@/pages/portfolio/brand-identity"));
@@ -57,6 +58,7 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/webdesign-geislingen-an-der-steige" component={WebdesignGeislingenPage} />
       <Route path="/webdesign-seo" component={WebdesignSeoPage} />
       <Route path="/videoproduktion" component={VideoProduction} />
       <Route path="/bewertungen" component={BewertungenPage} />
@@ -85,6 +87,7 @@ function Router() {
       <Route path="/blog/website-conversion-optimization" component={WebsiteConversionOptimization} />
       <Route path="/blog/video-marketing-power" component={VideoMarketingPower} />
       <Route path="/blog/food-truck-web-500" component={FoodTruckWeb500} />
+      <Route path="/blog/:slug" component={GermanBlogArticlePage} />
       <Route path="/privacy" component={Privacy} />
       <Route path="/privacy-policy" component={Privacy} />
       <Route path="/terms" component={Terms} />

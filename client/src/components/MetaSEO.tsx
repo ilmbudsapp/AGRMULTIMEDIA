@@ -38,7 +38,7 @@ export default function MetaSEO() {
           : path === "/video-production"
             ? "/videoproduktion"
             : path;
-    const lang = (["de", "en", "it", "sr", "al"].includes(currentLanguage) ? currentLanguage : "en") as SeoLang;
+    const lang = (currentLanguage === "en" ? "en" : "de") as SeoLang;
     const routeSeo = ROUTE_SEO_BY_LANG[lang][lookupPath];
     if (routeSeo) {
       title = routeSeo.title;
@@ -51,17 +51,7 @@ export default function MetaSEO() {
     setMetaContent("og-title", title);
     setMetaContent("og-description", description);
 
-    const ogLocale =
-      lang === "sr"
-        ? "sr_RS"
-        : lang === "de"
-          ? "de_DE"
-          : lang === "it"
-            ? "it_IT"
-            : lang === "al"
-              ? "sq_AL"
-              : "en_US";
-    setMetaContent("og-locale", ogLocale);
+    setMetaContent("og-locale", lang === "de" ? "de_DE" : "en_US");
 
     setMetaContent("twitter-title", title);
     setMetaContent("twitter-description", description);
@@ -73,7 +63,7 @@ export default function MetaSEO() {
     setMetaContent("og-url", canonicalFull);
     setMetaContent("twitter-url", canonicalFull);
 
-    document.documentElement.lang = lang === "al" ? "sq" : lang;
+    document.documentElement.lang = lang;
 
     syncHreflangAlternates(canonicalPath);
   }, [currentLanguage, location, tSpec.seo.title, tSpec.seo.description]);

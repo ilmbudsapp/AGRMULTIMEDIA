@@ -1,7 +1,9 @@
+import { Link } from "wouter";
 import { CheckCircle2 } from "lucide-react";
 import { useEffect, useRef } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getPremiumTranslations } from "@/lib/premiumI18n";
+import { ROUTES } from "@/lib/siteRoutes";
 
 /** Public folder; spaces encoded for reliable load */
 const PROMO_VIDEO = encodeURI("/Werbung Finito FULL HD COMPRESSO.mp4");
@@ -37,7 +39,7 @@ export default function Hero() {
     >
       <img
         src={VIDEO_POSTER}
-        alt=""
+        alt="AGR Multimedia Webdesign Studio Geislingen an der Steige — Showreel Vorschau"
         aria-hidden
         loading="eager"
         fetchPriority="high"
@@ -107,6 +109,13 @@ export default function Hero() {
             </button>
           </div>
           <p className="mt-3 text-center text-xs text-white/70 sm:text-sm lg:text-left">{premium.hero.ctaMeta}</p>
+          <p className="mt-4 text-center text-sm lg:text-left">
+            <Link href={ROUTES.webdesignGeislingen} className="text-blue-200/90 underline-offset-2 hover:underline">
+              {currentLanguage === "de"
+                ? "Webdesign Geislingen an der Steige im Detail"
+                : "Web design in Geislingen an der Steige — details"}
+            </Link>
+          </p>
         </div>
 
         <figure className="order-2 w-full max-w-lg justify-self-center p-2 sm:p-3 lg:order-none lg:max-w-none lg:justify-self-end animate-fade-in-up animate-fade-in-up-delay-2">

@@ -1,64 +1,16 @@
 import type { Language } from "@/lib/i18n";
 
-type LangKey = "en" | "de" | "sr" | "it" | "al";
+type FaqPair = { q: string; a: string };
 
-function langKey(lang: Language): LangKey {
-  if (lang === "sq" || lang === "al") return "al";
-  if (lang === "sr" || lang === "en" || lang === "de" || lang === "it") return lang;
-  return "en";
-}
-
-export type FaqPair = { q: string; a: string };
-
-const FAQ_BY_LANG: Record<LangKey, FaqPair[]> = {
-  sr: [
-    {
-      q: "Za koga izrađujete web stranice?",
-      a: "Prvenstveno za male firme u Njemačkoj, Austriji i Švicarskoj — Gebäudereinigung, Autopflege, Handwerker, Gartenbau, transport, Fahrradservice, restorane i porodične biznise koji žele profesionalan online nastup.",
-    },
-    {
-      q: "Šta uključuje izrada web stranice?",
-      a: "Moderna početna stranica, stranica usluga, kontakt forma, Google Maps, WhatsApp dugme, mobilna optimizacija, osnovni SEO naslovi i opisi, povezivanje domene i objava online.",
-    },
-    {
-      q: "Koliko košta web stranica?",
-      a: "Start paket od 500 € za jednostavnu stranicu, Business paket od 900 € za više stranica i sadržaja, te održavanje od 30 € mjesečno za manje izmjene i tehničku podršku. Tačan obim dogovaramo nakon kratkog razgovora.",
-    },
-    {
-      q: "Kako izgleda saradnja?",
-      a: "Kratak razgovor o firmi, prijedlog strukture, izrada dizajna, korekcije i na kraju povezivanje domene sa objavom online. Odgovor na upit obično u roku od 24 sata.",
-    },
-    {
-      q: "Da li radite osnovni SEO za lokalne pretrage?",
-      a: "Da — u paketima su jasni naslovi, opisi i struktura stranica prilagođena lokalnim pretragama na Google-u, bez komplikovanog tehničkog žargona u glavnoj ponudi.",
-    },
-  ],
-  en: [
-    {
-      q: "Who do you build websites for?",
-      a: "Mainly small businesses in Germany, Austria and Switzerland — cleaning, car care, trades, landscaping, transport, bicycle service, restaurants and family-run companies that want a professional online presence.",
-    },
-    {
-      q: "What does a website project include?",
-      a: "Modern homepage, services page, contact form, Google Maps, WhatsApp button, mobile optimisation, basic SEO titles and descriptions, domain setup and online launch.",
-    },
-    {
-      q: "How much does a website cost?",
-      a: "Start package from €500 for a simple site, Business package from €900 for more pages and content, and maintenance from €30/month for small updates and support. Exact scope is agreed after a short call.",
-    },
-    {
-      q: "What does working together look like?",
-      a: "Short call about your business, structure proposal, design and build, revisions, then domain setup and launch. We usually reply within 24 hours.",
-    },
-    {
-      q: "Do you include basic SEO for local searches?",
-      a: "Yes — packages include clear titles, descriptions and page structure aimed at local Google searches, explained in plain language without technical jargon in the main offer.",
-    },
-  ],
+const FAQ_BY_LANG: Record<Language, FaqPair[]> = {
   de: [
     {
+      q: "Bieten Sie Webdesign in Geislingen an der Steige an?",
+      a: "Ja — AGR Multimedia ist in Geislingen an der Steige ansässig und erstellt Websites für lokale Firmen in der Region, darunter Handwerk, Dienstleister und kleine Unternehmen.",
+    },
+    {
       q: "Für wen erstellen Sie Websites?",
-      a: "Vor allem für kleine Unternehmen in Deutschland, Österreich und der Schweiz — Gebäudereinigung, Autopflege, Handwerk, Gartenbau, Transport, Fahrradservice, Restaurants und Familienbetriebe mit professionellem Online-Auftritt.",
+      a: "Vor allem für kleine Unternehmen — Gebäudereinigung, Autopflege, Handwerk, Gartenbau, Transport, Fahrradservice, Restaurants und Familienbetriebe mit professionellem Online-Auftritt.",
     },
     {
       q: "Was ist in einer Website enthalten?",
@@ -73,84 +25,47 @@ const FAQ_BY_LANG: Record<LangKey, FaqPair[]> = {
       a: "Kurzes Gespräch, Strukturvorschlag, Design und Umsetzung, Korrekturen, dann Domain-Anbindung und Veröffentlichung. Antwort auf Anfragen meist innerhalb von 24 Stunden.",
     },
     {
-      q: "Ist Basis-SEO für lokale Suchen enthalten?",
-      a: "Ja — die Pakete umfassen klare Titel, Beschreibungen und Seitenstruktur für lokale Google-Suchen, verständlich erklärt ohne komplizierte Fachbegriffe im Hauptangebot.",
+      q: "Ist lokales SEO für Google-Suchen enthalten?",
+      a: "Ja — die Pakete umfassen klare Titel, Beschreibungen und Seitenstruktur für lokale Google-Suchen in Geislingen, Göppingen und der Umgebung.",
     },
   ],
-  it: [
+  en: [
     {
-      q: "Per chi realizzate siti web?",
-      a: "Soprattutto piccole imprese in Germania, Austria e Svizzera — pulizie, autolavaggio, artigiani, giardinaggio, trasporti, servizio biciclette, ristoranti e attività familiari che vogliono una presenza online professionale.",
+      q: "Do you offer web design in Geislingen an der Steige?",
+      a: "Yes — AGR Multimedia is based in Geislingen an der Steige and builds websites for local businesses including trades, service providers and small companies.",
     },
     {
-      q: "Cosa include un progetto sito web?",
-      a: "Homepage moderna, pagina servizi, modulo contatti, Google Maps, pulsante WhatsApp, ottimizzazione mobile, SEO di base con titoli e descrizioni, collegamento dominio e pubblicazione online.",
+      q: "Who do you build websites for?",
+      a: "Mainly small businesses — cleaning, car care, trades, landscaping, transport, bicycle service, restaurants and family-run companies that want a professional online presence.",
     },
     {
-      q: "Quanto costa un sito web?",
-      a: "Pacchetto Start da 500 € per un sito semplice, Business da 900 € per più pagine e contenuti, manutenzione da 30 €/mese per piccole modifiche e supporto. L'ambito esatto si definisce dopo una breve chiamata.",
+      q: "What does a website project include?",
+      a: "Modern homepage, services page, contact form, Google Maps, WhatsApp button, mobile optimisation, basic SEO titles and descriptions, domain setup and online launch.",
     },
     {
-      q: "Come funziona la collaborazione?",
-      a: "Breve conversazione, proposta di struttura, design e realizzazione, correzioni, poi dominio e pubblicazione. Di solito rispondiamo entro 24 ore.",
+      q: "How much does a website cost?",
+      a: "Start package from €500 for a simple site, Business package from €900 for more pages and content, and maintenance from €30/month for small updates and support.",
     },
     {
-      q: "Include SEO di base per ricerche locali?",
-      a: "Sì — i pacchetti includono titoli, descrizioni e struttura delle pagine per le ricerche locali su Google, spiegati in modo chiaro senza gergo tecnico nell'offerta principale.",
-    },
-  ],
-  al: [
-    {
-      q: "Për kë ndërtoni faqe web?",
-      a: "Kryesisht për biznese të vogla në Gjermani, Austri dhe Zvicër — pastrim ndërtesash, kujdes automjeti, zanate, kopshtari, transport, servis biçikletash, restorante dhe firmat familjare që duan prani profesionale online.",
+      q: "What does working together look like?",
+      a: "Short call about your business, structure proposal, design and build, revisions, then domain setup and launch. We usually reply within 24 hours.",
     },
     {
-      q: "Çfarë përfshin një projekt faqeje web?",
-      a: "Faqe kryesore moderne, faqe shërbimesh, formular kontakti, Google Maps, buton WhatsApp, optimizim mobil, SEO bazë me tituj dhe përshkrime, lidhje domeni dhe publikim online.",
-    },
-    {
-      q: "Sa kushton një faqe web?",
-      a: "Paketa Start nga 500 € për një faqe të thjeshtë, Business nga 900 € për më shumë faqe dhe përmbajtje, mirëmbajtje nga 30 €/muaj për ndryshime të vogla dhe mbështetje. Shtrirja e saktë përcaktohet pas një bisede të shkurtër.",
-    },
-    {
-      q: "Si duket bashkëpunimi?",
-      a: "Bisedë e shkurtër, propozim strukture, dizajn dhe realizim, korrigjime, pastaj domeni dhe publikim. Zakonisht përgjigjemi brenda 24 orëve.",
-    },
-    {
-      q: "A përfshihet SEO bazë për kërkime lokale?",
-      a: "Po — paketat përfshijnë tituj, përshkrime dhe strukturë faqesh për kërkime lokale në Google, të shpjeguara qartë pa zhargon teknik në ofertën kryesore.",
+      q: "Is local SEO for Google searches included?",
+      a: "Yes — packages include clear titles, descriptions and page structure aimed at local Google searches in Geislingen, Göppingen and the surrounding area.",
     },
   ],
 };
-
-const IN_LANG: Record<LangKey, string> = {
-  sr: "sr-Latn",
-  en: "en",
-  de: "de",
-  it: "it",
-  al: "sq",
-};
-
-export function getHomeFaqPairs(lang: Language): FaqPair[] {
-  return FAQ_BY_LANG[langKey(lang)] ?? FAQ_BY_LANG.en;
-}
 
 export function getHomeFaqJsonLd(lang: Language) {
-  const key = langKey(lang);
-  const pairs = FAQ_BY_LANG[key] ?? FAQ_BY_LANG.en;
+  const pairs = FAQ_BY_LANG[lang] ?? FAQ_BY_LANG.de;
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "@id": "https://www.agrmultimedia.eu/#faq",
-    "url": "https://www.agrmultimedia.eu/",
-    "inLanguage": IN_LANG[key],
-    "mainEntity": pairs.map((item) => ({
+    mainEntity: pairs.map((item) => ({
       "@type": "Question",
       name: item.q,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: item.a,
-      },
+      acceptedAnswer: { "@type": "Answer", text: item.a },
     })),
   };
 }

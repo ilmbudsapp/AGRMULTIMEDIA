@@ -1,6 +1,6 @@
 /** Per-route title / meta description / keywords for SPA routes (multilingual). */
 export type RouteSeo = { title: string; description: string; keywords: string };
-export type SeoLang = "de" | "en" | "it" | "sr" | "al";
+export type SeoLang = "de" | "en";
 
 function merge(...objs: Record<string, RouteSeo>[]): Record<string, RouteSeo> {
   return Object.assign({}, ...objs);
@@ -42,6 +42,13 @@ const CORE_EN: Record<string, RouteSeo> = {
       "Mobile-friendly web design with on-page SEO, IA, and performance tuning — websites that rank and convert.",
     keywords:
       "web design Geislingen, SEO, on-page SEO, responsive web design, digital marketing, Core Web Vitals",
+  },
+  "/webdesign-geislingen-an-der-steige": {
+    title: "Web Design Geislingen an der Steige | Business Websites & SEO — AGR Multimedia",
+    description:
+      "Professional web design in Geislingen an der Steige: modern business websites, local SEO and responsive design for trades and SMEs. From €500.",
+    keywords:
+      "web design Geislingen an der Steige, web designer Geislingen, local SEO, small business websites, web agency Geislingen",
   },
   "/application-design-development": {
     title: "Application Design & Prototypes | AGR Multimedia",
@@ -87,6 +94,13 @@ const CORE_DE: Record<string, RouteSeo> = {
       "Mobile-freundliches Webdesign mit On-Page-SEO, Struktur und Performance — Websites die konvertieren.",
     keywords:
       "Webdesign Geislingen, SEO, On-Page SEO, responsives Webdesign, digitales Marketing",
+  },
+  "/webdesign-geislingen-an-der-steige": {
+    title: "Webdesign Geislingen an der Steige | Websites & SEO — AGR Multimedia",
+    description:
+      "Professionelles Webdesign in Geislingen an der Steige: moderne Business-Websites, lokales SEO, responsive Design für Handwerk und kleine Firmen. Website erstellen lassen ab 500 €.",
+    keywords:
+      "Webdesign Geislingen an der Steige, Webdesigner Geislingen, Website erstellen lassen Geislingen, Webagentur Geislingen, SEO Agentur Geislingen, Webdesign Göppingen",
   },
   "/application-design-development": {
     title: "App-Design & Prototypen | AGR Multimedia",
@@ -1022,7 +1036,4 @@ const EXTRA_AL: Record<string, RouteSeo> = {
 export const ROUTE_SEO_BY_LANG: Record<SeoLang, Record<string, RouteSeo>> = {
   en: merge(CORE_EN, PRIMARY_MULTIPAGE_EN, EXTRA_EN),
   de: merge(CORE_DE, PRIMARY_MULTIPAGE_DE, EXTRA_DE),
-  it: merge(CORE_IT, PRIMARY_MULTIPAGE_IT, EXTRA_IT),
-  sr: merge(CORE_SR, PRIMARY_MULTIPAGE_SR, EXTRA_SR),
-  al: merge(CORE_AL, PRIMARY_MULTIPAGE_AL, EXTRA_AL),
 };

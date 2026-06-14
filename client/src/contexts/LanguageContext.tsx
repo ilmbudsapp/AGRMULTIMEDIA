@@ -2,6 +2,13 @@ import { createContext, useContext, useState, useEffect, ReactNode, useMemo, use
 import { Language, getTranslations, Translations } from '@/lib/i18n';
 import { getSpecTranslations, SpecTranslations } from '@/lib/specTranslations';
 
+const SUPPORTED_LANGS: Language[] = ['de', 'en'];
+
+function normalizeLang(raw: string | null): Language {
+  if (raw === 'en') return 'en';
+  return 'de';
+}
+
 interface LanguageContextType {
   currentLanguage: Language;
   setLanguage: (lang: Language) => void;
@@ -17,24 +24,24 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     try {
       const params = new URLSearchParams(window.location.search);
-      const paramLang = params.get("lang");
-      if (paramLang && ["sr", "en", "de", "it", "al", "sq"].includes(paramLang)) {
-        setCurrentLanguage(paramLang === "sq" ? "al" : (paramLang as Language));
+      const paramLang = params.get('lang');
+      if (paramLang) {
+        const lang = normalizeLang(paramLang);
+        if (paramLang !== lang) {
+          params.set('lang', lang);
+          const next = `${window.location.pathname}${params.toString() ? `?${params}` : ''}${window.location.hash}`;
+          window.history.replaceState({}, '', next);
+        }
+        setCurrentLanguage(lang);
         return;
       }
 
-      // Load language from localStorage or browser preference
-      const saved = localStorage.getItem('preferred-language') as Language;
-      if (saved && ['sr', 'en', 'de', 'sq', 'it', 'al'].includes(saved)) {
-        setCurrentLanguage(saved);
+      const saved = localStorage.getItem('preferred-language');
+      if (saved && SUPPORTED_LANGS.includes(saved as Language)) {
+        setCurrentLanguage(saved as Language);
       } else {
-        // Try to detect from browser language
         const browserLang = navigator.language.toLowerCase();
-        if (browserLang.includes('en')) setCurrentLanguage('en');
-        else if (browserLang.includes('de')) setCurrentLanguage('de');
-        else if (browserLang.includes('it')) setCurrentLanguage('it');
-        else if (browserLang.includes('sq')) setCurrentLanguage('al');
-        else setCurrentLanguage('de'); // Default fallback
+        setCurrentLanguage(browserLang.startsWith('en') ? 'en' : 'de');
       }
     } catch (error) {
       console.warn('Error loading language preference:', error);
@@ -43,15 +50,13 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   }, []);
 
   useEffect(() => {
-    document.documentElement.lang = currentLanguage === 'al' ? 'sq' : currentLanguage;
+    document.documentElement.lang = currentLanguage;
   }, [currentLanguage]);
 
   const setLanguage = useCallback((lang: Language) => {
     try {
       setCurrentLanguage(lang);
       localStorage.setItem('preferred-language', lang);
-      
-      // Update HTML lang attribute for accessibility and SEO
       document.documentElement.lang = lang;
     } catch (error) {
       console.warn('Error setting language:', error);
@@ -75,7 +80,6 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   );
 };
 
-// Standard function export for better HMR compatibility
 export function useLanguage() {
   const context = useContext(LanguageContext);
   if (!context) {
@@ -84,5 +88,4 @@ export function useLanguage() {
   return context;
 }
 
-// Also export the context for advanced use cases
 export { LanguageContext };

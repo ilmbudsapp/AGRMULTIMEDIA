@@ -1,4 +1,4 @@
-export type Language = 'sr' | 'en' | 'de' | 'sq' | 'it' | 'al';
+export type Language = 'de' | 'en';
 
 export interface Translations {
   // Navigation
@@ -4474,14 +4474,10 @@ export const translations: Record<Exclude<Language, "al">, Translations> = {
 };
 
 export const getTranslations = (lang: Language): Translations => {
-  const key = lang === 'al' ? 'sq' : lang;
-  return translations[key] || translations.sr;
+  return translations[lang] ?? translations.de;
 };
 
 export const languages: Array<{ code: Language; name: string; flag: string }> = [
   { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
   { code: 'en', name: 'English', flag: '🇬🇧' },
-  { code: 'it', name: 'Italiano', flag: '🇮🇹' },
-  { code: 'sr', name: 'Srpski', flag: '🇷🇸' },
-  { code: 'al', name: 'Shqip', flag: '🇦🇱' }
 ];
