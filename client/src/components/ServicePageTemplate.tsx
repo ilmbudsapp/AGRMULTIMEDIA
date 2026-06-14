@@ -141,10 +141,22 @@ export default function ServicePageTemplate({
                             </div>
                           ) : hasImageGallery ? (
                             <>
-                              <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                              <div
+                                className={`mt-4 grid gap-4 ${sub.galleryFullWidth ? "grid-cols-1" : "gap-3 sm:grid-cols-2 lg:grid-cols-3"}`}
+                              >
                                 {sub.workGallery!.map((img) => (
                                   <figure key={img.src} className="overflow-hidden rounded-lg border border-neutral-200 bg-neutral-100 shadow-sm">
-                                    <img src={img.src} alt={img.alt} loading="lazy" decoding="async" className="h-auto w-full max-h-[min(70vh,520px)] object-contain" />
+                                    <img
+                                      src={img.src}
+                                      alt={img.alt}
+                                      loading="lazy"
+                                      decoding="async"
+                                      className={
+                                        sub.galleryFullWidth
+                                          ? "h-auto w-full object-contain"
+                                          : "h-auto w-full max-h-[min(70vh,520px)] object-contain"
+                                      }
+                                    />
                                   </figure>
                                 ))}
                               </div>
@@ -299,7 +311,9 @@ export default function ServicePageTemplate({
                       </div>
                     ) : hasImageGallery ? (
                       <>
-                        <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                        <div
+                          className={`mt-4 grid gap-4 ${sub.galleryFullWidth ? "grid-cols-1" : "gap-3 sm:grid-cols-2 lg:grid-cols-3"}`}
+                        >
                           {sub.workGallery!.map((img) => (
                             <figure
                               key={img.src}
@@ -310,7 +324,11 @@ export default function ServicePageTemplate({
                                 alt={img.alt}
                                 loading="lazy"
                                 decoding="async"
-                                className="h-auto w-full max-h-[min(70vh,520px)] object-contain"
+                                className={
+                                  sub.galleryFullWidth
+                                    ? "h-auto w-full object-contain"
+                                    : "h-auto w-full max-h-[min(70vh,520px)] object-contain"
+                                }
                               />
                             </figure>
                           ))}

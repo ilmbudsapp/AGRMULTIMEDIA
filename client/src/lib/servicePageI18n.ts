@@ -20,6 +20,8 @@ export type LocalizedSubsection = {
   compactMediaOnly?: boolean;
   /** Single full-width image below the gallery (e.g. business card mockup). */
   featuredWorkImage?: { src: string; alt: string; title?: string };
+  /** Full-width gallery rows without height crop (portfolio PDFs / moodboards). */
+  galleryFullWidth?: boolean;
 };
 
 export type ServiceTemplateLabels = {

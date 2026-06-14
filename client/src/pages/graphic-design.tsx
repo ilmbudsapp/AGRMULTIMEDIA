@@ -221,6 +221,7 @@ export default function GraphicDesign() {
         includes: caseStudy.includes,
         toolsPlaceholder: caseStudy.toolsPlaceholder,
         workGallery: caseStudy.gallery,
+        galleryFullWidth: true,
         featuredWorkImage: {
           ...caseStudy.businessCard,
           title: lang === "de" ? "Finale Visitenkarte" : "Final business card",

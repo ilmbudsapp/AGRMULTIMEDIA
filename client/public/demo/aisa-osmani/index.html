@@ -263,6 +263,26 @@
       background: var(--card-bg);
     }
     .work-feature img { width: 100%; max-height: 520px; object-fit: cover; }
+    #work-graphic .work-feature,
+    #work-graphic .gallery-item {
+      min-height: 0;
+      height: auto;
+      overflow: hidden;
+    }
+    #work-graphic .work-feature img,
+    #work-graphic .gallery-item img {
+      width: 100%;
+      height: auto;
+      max-height: none;
+      object-fit: contain;
+      min-height: 0;
+      display: block;
+      background: #0d0d12;
+    }
+    #work-graphic .gallery {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
     #work-mobile .gallery {
       grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
       justify-items: center;
