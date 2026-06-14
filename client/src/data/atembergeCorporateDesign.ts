@@ -20,16 +20,8 @@ const galleryDe: AtembergeCaseCopy["gallery"] = [
     alt: "Farbwelt Atemberge — Himbeerrosa, Lavendel, Mitternachtsblau und Smaragdgrün mit HEX- und CMYK-Werten.",
   },
   {
-    src: `${BASE}/03-logo-herleitung.jpg`,
-    alt: "Herleitung des finalen Atemberge-Logos — Verschmelzung der Buchstaben A und B für Atem und Berge.",
-  },
-  {
     src: `${BASE}/04-logo-kernidee.jpg`,
     alt: "Logo-Kernidee Atemberge — minimalistische Verbindung von Modernität, Natur und Generationen.",
-  },
-  {
-    src: `${BASE}/05-logo-groessen.jpg`,
-    alt: "Atemberge-Logo in drei Größen — 100 %, 70 % und 50 % für skalierbare Markenanwendung.",
   },
   {
     src: `${BASE}/06-logo-positiv-negativ.jpg`,
@@ -51,16 +43,8 @@ const galleryEn: AtembergeCaseCopy["gallery"] = [
     alt: "Atemberge colour palette — raspberry pink, lavender, midnight blue and emerald green with HEX values.",
   },
   {
-    src: `${BASE}/03-logo-herleitung.jpg`,
-    alt: "Final Atemberge logo rationale — merging letters A and B for breath (Atem) and mountains (Berge).",
-  },
-  {
     src: `${BASE}/04-logo-kernidee.jpg`,
     alt: "Atemberge logo core idea — minimal fusion of modernity, nature and cross-generational appeal.",
-  },
-  {
-    src: `${BASE}/05-logo-groessen.jpg`,
-    alt: "Atemberge logo at three sizes — 100 %, 70 % and 50 % for scalable brand use.",
   },
   {
     src: `${BASE}/06-logo-positiv-negativ.jpg`,
