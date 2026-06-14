@@ -17,8 +17,8 @@ import WhatsAppFloat from "@/components/WhatsAppFloat";
 import PageLoadingFallback from "@/components/PageLoadingFallback";
 import ScrollToTop from "@/components/ScrollToTop";
 import LegacyHashRedirect from "@/components/LegacyHashRedirect";
+import WebdesignGeislingenPage from "@/pages/WebdesignGeislingenPage";
 
-const WebdesignGeislingenPage = lazy(() => import("@/pages/WebdesignGeislingenPage"));
 const Home = lazy(() => import("@/pages/home"));
 const ServicesPage = lazy(() => import("@/pages/ServicesPage"));
 const AboutPage = lazy(() => import("@/pages/AboutPage"));

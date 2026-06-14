@@ -21,31 +21,57 @@ const head = headMatch ? headMatch[0] : "<head><meta charset=\"UTF-8\" /></head>
 const routes = [
   {
     dir: "portfolio",
+    lang: "de",
     title: "Portfolio — AGR Multimedia",
     h1: "Portfolio AGR Multimedia",
-    lead: "Web dizajn (Toni's Autopflege, FixBike), video, grafika i UX/SEO inženjering — projekti za mala preduzeća u EU.",
+    lead: "Webdesign (Toni's Autopflege, FixBike), Video, Grafik und SEO — Projekte für kleine Unternehmen in der Region.",
     canonical: "https://www.agrmultimedia.eu/portfolio",
   },
   {
     dir: "kontakt",
+    lang: "de",
     title: "Kontakt — AGR Multimedia",
-    h1: "Kontaktirajte AGR Multimedia",
-    lead: "Besplatna konsultacija za web, grafiku i video. Odgovor obično u roku od 24 sata. Geislingen an der Steige.",
+    h1: "Kontakt — AGR Multimedia",
+    lead: "Kostenlose Einschätzung für Webdesign, Grafik und Video. Antwort meist innerhalb von 24 Stunden. Geislingen an der Steige.",
     canonical: "https://www.agrmultimedia.eu/kontakt",
   },
   {
     dir: "webdesign-seo",
+    lang: "de",
     title: "Webdesign & SEO — AGR Multimedia",
-    h1: "Webdesign i SEO za mala preduzeća",
-    lead: "Brzi sajtovi sa tehničkim SEO, AEO i GEO — od osnovnog paketa do A-GRADE optimizacije po dogovoru.",
+    h1: "Webdesign und SEO für kleine Unternehmen",
+    lead: "Schnelle Websites mit technischem SEO — vom Start-Paket ab 500 € bis zur individuellen Optimierung.",
     canonical: "https://www.agrmultimedia.eu/webdesign-seo",
   },
   {
     dir: "bewertungen",
-    title: "Google recenzije — AGR Multimedia",
-    h1: "Bewertungen i Google Maps recenzije",
-    lead: "Verifikovane recenzije klijenata AGR Multimedia — poverenje za lokalne biznise u Nemačkoj.",
+    lang: "de",
+    title: "Bewertungen — AGR Multimedia",
+    h1: "Bewertungen und Google Maps",
+    lead: "Verifizierte Kundenstimmen zu AGR Multimedia — Vertrauen für lokale Betriebe in Deutschland.",
     canonical: "https://www.agrmultimedia.eu/bewertungen",
+  },
+  {
+    dir: "webdesign-geislingen-an-der-steige",
+    lang: "de",
+    title: "Webdesign Geislingen an der Steige | Websites & SEO — AGR Multimedia",
+    description:
+      "Professionelles Webdesign in Geislingen an der Steige: moderne Business-Websites, lokales SEO und responsive Design für Handwerk und kleine Firmen. Website erstellen lassen ab 500 €.",
+    h1: "Webdesign Geislingen an der Steige — professionelle Websites für lokale Unternehmen",
+    lead: "Moderne Business-Websites mit lokalem SEO für Handwerk, Dienstleister und kleine Firmen — persönlich umgesetzt von AGR Multimedia in Geislingen an der Steige.",
+    canonical: "https://www.agrmultimedia.eu/webdesign-geislingen-an-der-steige",
+    bodyHtml: `
+    <section>
+      <h2>Professionelles Webdesign in Geislingen an der Steige</h2>
+      <p>Eine Website ist oft der erste Kontaktpunkt zwischen Ihrem Unternehmen und potenziellen Kunden. Professionelles Webdesign vermittelt Vertrauen, erklärt Ihre Leistungen verständlich und führt Besucher zum Kontakt.</p>
+      <p>Pakete: <strong>Start ab 500 €</strong>, <strong>Business ab 900 €</strong>, Wartung ab 30 €/Monat.</p>
+    </section>
+    <section>
+      <h2>Häufige Fragen</h2>
+      <p><strong>Für welche Branchen?</strong> Handwerk, Reinigung, Autopflege, Gartenbau, Transport, Fahrradservice und kleine Familienbetriebe.</p>
+      <p><strong>Was kostet eine Website?</strong> Start ab 500 €, Business ab 900 € — je nach Umfang nach Absprache.</p>
+    </section>
+    <p><a href="/kontakt">Angebot anfragen</a> · <a href="/webdesign-seo">Webdesign &amp; SEO</a> · <a href="/">Startseite</a></p>`,
   },
 ];
 
@@ -55,17 +81,25 @@ for (const r of routes) {
   const scripts =
     indexHtml.match(/<script[^>]+src="\/assets\/[^"]+"[^>]*><\/script>/g)?.join("\n    ") ?? "";
   const moduleScript = indexHtml.match(/<script type="module"[^>]*><\/script>/)?.[0] ?? "";
-  const headBlock = head
+  let headBlock = head
     .replace(/<title>[\s\S]*?<\/title>/i, `<title>${r.title}</title>`)
     .replace(/<link rel="canonical"[^>]*>/i, `<link rel="canonical" href="${r.canonical}" />`);
+  if (r.description) {
+    headBlock = headBlock.replace(
+      /<meta name="description" id="meta-description" content="[^"]*"/i,
+      `<meta name="description" id="meta-description" content="${r.description.replace(/"/g, "&quot;")}"`,
+    );
+  }
+  const lang = r.lang ?? "de";
+  const bodyExtra = r.bodyHtml ?? "";
   const page = `<!DOCTYPE html>
-<html lang="sr">
+<html lang="${lang}">
 ${headBlock}
 <body>
-<main id="static-route-prerender" lang="sr">
+<main id="static-route-prerender" lang="${lang}">
   <h1>${r.h1}</h1>
   <p>${r.lead}</p>
-  <p><a href="/">Početna</a> · <a href="${r.canonical.replace("https://www.agrmultimedia.eu", "")}">Puna stranica</a></p>
+  ${bodyExtra}
 </main>
 <div id="root"></div>
     ${scripts}

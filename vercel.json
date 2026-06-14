@@ -153,7 +153,7 @@
       "destination": "/demo/tairovic-dark-verzija/index.html"
     },
     {
-      "source": "/((?!api/|demo/).*)",
+      "source": "/((?!api/|demo/|assets/).*)",
       "destination": "/index.html"
     }
   ],

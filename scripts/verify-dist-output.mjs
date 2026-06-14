@@ -6,6 +6,11 @@ import { fileURLToPath } from "node:url";
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const outputDir = path.join(repoRoot, "dist", "public");
 const requiredRootFiles = ["index.html", "sitemap.xml", "robots.txt"];
+const requiredPrerenderRoutes = [
+  path.join(outputDir, "webdesign-geislingen-an-der-steige", "index.html"),
+  path.join(outputDir, "kontakt", "index.html"),
+];
+
 const requiredDemoIndexes = [
   path.join(outputDir, "demo", "aisa-osmani", "index.html"),
   path.join(outputDir, "demo", "tairovic-dark-verzija", "index.html"),
@@ -41,6 +46,13 @@ if (!indexHtml.includes("static-crawler-home")) {
 if (!indexHtml.includes("CRAWLER_HOME_START")) {
   console.error("FAIL: dist/public/index.html missing CRAWLER_HOME markers");
   process.exit(1);
+}
+
+for (const prerenderRoute of requiredPrerenderRoutes) {
+  if (!fs.existsSync(prerenderRoute)) {
+    console.error(`FAIL: missing ${prerenderRoute}`);
+    process.exit(1);
+  }
 }
 
 for (const demoIndex of requiredDemoIndexes) {
