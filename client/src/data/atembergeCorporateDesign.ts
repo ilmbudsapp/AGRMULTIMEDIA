@@ -16,14 +16,6 @@ const galleryDe: AtembergeCaseCopy["gallery"] = [
     alt: "Moodboard Atemberge — Outdoor-Wandermarke mit Natur, modernem Lifestyle und Markenästhetik.",
   },
   {
-    src: `${BASE}/02-farbwelt.jpg`,
-    alt: "Farbwelt Atemberge — Himbeerrosa, Lavendel, Mitternachtsblau und Smaragdgrün mit HEX- und CMYK-Werten.",
-  },
-  {
-    src: `${BASE}/04-logo-kernidee.jpg`,
-    alt: "Logo-Kernidee Atemberge — minimalistische Verbindung von Modernität, Natur und Generationen.",
-  },
-  {
     src: `${BASE}/06-logo-positiv-negativ.jpg`,
     alt: "Atemberge-Logo in Positiv- und Negativversion auf hellen und dunklen Hintergründen.",
   },
@@ -37,14 +29,6 @@ const galleryEn: AtembergeCaseCopy["gallery"] = [
   {
     src: `${BASE}/01-moodboard.jpg`,
     alt: "Atemberge moodboard — outdoor hiking brand combining nature, modern lifestyle and brand aesthetics.",
-  },
-  {
-    src: `${BASE}/02-farbwelt.jpg`,
-    alt: "Atemberge colour palette — raspberry pink, lavender, midnight blue and emerald green with HEX values.",
-  },
-  {
-    src: `${BASE}/04-logo-kernidee.jpg`,
-    alt: "Atemberge logo core idea — minimal fusion of modernity, nature and cross-generational appeal.",
   },
   {
     src: `${BASE}/06-logo-positiv-negativ.jpg`,
