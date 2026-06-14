@@ -84,7 +84,7 @@
     }
     .logo:hover { opacity: 0.9; }
     .logo-img {
-      display: block; height: 44px; width: auto; max-width: min(280px, 48vw);
+      display: block; height: 54px; width: auto; max-width: min(320px, 52vw);
       object-fit: contain;
     }
 
@@ -412,7 +412,7 @@
     @media (max-width: 640px) {
       .container { width: min(100% - 28px, 1180px); }
       .navbar { height: 76px; }
-      .logo-img { height: 38px; max-width: min(220px, 62vw); }
+      .logo-img { height: 46px; max-width: min(260px, 68vw); }
       .stats, .contact-links { grid-template-columns: 1fr; }
       .contact-left { padding: 24px; }
       section { padding: 64px 0; }
@@ -428,13 +428,14 @@
     <div class="container navbar">
       <a href="#top" class="logo" aria-label="Aisa Osmani — Startseite">
         <picture>
-          <source srcset="assets/logo-aisa-osmani.webp" type="image/webp">
+          <source srcset="assets/logo-aisa-osmani.webp 1x, assets/logo-aisa-osmani@2x.webp 2x" type="image/webp">
           <img
             src="assets/logo-aisa-osmani.png"
+            srcset="assets/logo-aisa-osmani.png 1x, assets/logo-aisa-osmani@2x.png 2x"
             alt="Aisa Osmani — Media Designer"
             class="logo-img"
-            width="181"
-            height="44"
+            width="193"
+            height="54"
             decoding="async"
             fetchpriority="high"
           >
