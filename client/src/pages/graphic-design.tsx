@@ -7,6 +7,7 @@ import { moviePosterGalleryByLang } from "@/data/moviePosterGallery";
 import { retushRadoviGalleryByLang } from "@/data/retushRadoviGallery";
 import { vizitKarticeGalleryByLang } from "@/data/vizitKarticeGallery";
 import { buildSubsections, getServiceTemplateLabels, toServiceLang, type ServiceLang } from "@/lib/servicePageI18n";
+import { atembergeCaseByLang } from "@/data/atembergeCorporateDesign";
 
 type GraphicContent = {
   eyebrow: string;
@@ -40,14 +41,15 @@ const graphicByLang: Record<ServiceLang, GraphicContent> = {
     ],
     serviceCategoriesTitle: "Service Categories",
     subsectionTitles: [
+      { id: "corporate-design", h3: "Corporate Design" },
       { id: "fotomanipulacije", h3: "Photo manipulation" },
       { id: "branding", h3: "Branding" },
       { id: "vizit-kartice", h3: "Business cards" },
       { id: "movie-poster", h3: "Movie poster" },
       { id: "retush-radovi", h3: "Retouching work" },
     ],
-    selectedWorkTitle: "Selected Work Placeholder",
-    selectedWorkIntro: "Reserved for curated project examples in the next phase.",
+    selectedWorkTitle: "Featured case study",
+    selectedWorkIntro: "Atemberge — corporate design for a modern outdoor hiking brand, from moodboard to final logo and business card.",
     toolsTitle: "Tools / Software I Use",
     tools: ["Adobe Illustrator", "Adobe Photoshop", "Adobe InDesign", "Figma", "Canva Pro"],
     whyChooseTitle: "Why Choose This Service",
@@ -74,14 +76,15 @@ const graphicByLang: Record<ServiceLang, GraphicContent> = {
     ],
     serviceCategoriesTitle: "Service-Kategorien",
     subsectionTitles: [
+      { id: "corporate-design", h3: "Corporate Design" },
       { id: "fotomanipulacije", h3: "Fotomanipulation" },
       { id: "branding", h3: "Branding" },
       { id: "vizit-kartice", h3: "Visitenkarten" },
       { id: "movie-poster", h3: "Filmplakat" },
       { id: "retush-radovi", h3: "Retusche-Arbeiten" },
     ],
-    selectedWorkTitle: "Platzhalter für ausgewählte Arbeiten",
-    selectedWorkIntro: "Dieser Bereich ist für kuratierte Projektbeispiele in der nächsten Phase reserviert.",
+    selectedWorkTitle: "Ausgewähltes Projekt",
+    selectedWorkIntro: "Atemberge — Corporate Design für eine moderne Outdoor-Wandermarke: Moodboard, Farbwelt, Logo und finale Visitenkarte.",
     toolsTitle: "Eingesetzte Tools und Software",
     tools: ["Adobe Illustrator", "Adobe Photoshop", "Adobe InDesign", "Figma", "Canva Pro"],
     whyChooseTitle: "Warum diese Leistung wählen",
@@ -108,6 +111,7 @@ const graphicByLang: Record<ServiceLang, GraphicContent> = {
     ],
     serviceCategoriesTitle: "Categorie di servizio",
     subsectionTitles: [
+      { id: "corporate-design", h3: "Corporate design" },
       { id: "fotomanipulacije", h3: "Fotomanipolazione" },
       { id: "branding", h3: "Branding" },
       { id: "vizit-kartice", h3: "Biglietti da visita" },
@@ -142,6 +146,7 @@ const graphicByLang: Record<ServiceLang, GraphicContent> = {
     ],
     serviceCategoriesTitle: "Kategorije usluga",
     subsectionTitles: [
+      { id: "corporate-design", h3: "Corporate design" },
       { id: "fotomanipulacije", h3: "Fotomanipulacije" },
       { id: "branding", h3: "Branding" },
       { id: "vizit-kartice", h3: "Vizit kartice" },
@@ -176,6 +181,7 @@ const graphicByLang: Record<ServiceLang, GraphicContent> = {
     ],
     serviceCategoriesTitle: "Kategoritë e shërbimit",
     subsectionTitles: [
+      { id: "corporate-design", h3: "Corporate design" },
       { id: "fotomanipulacije", h3: "Fotomanipulimi" },
       { id: "branding", h3: "Branding" },
       { id: "vizit-kartice", h3: "Kartvizita" },
@@ -206,6 +212,17 @@ export default function GraphicDesign() {
   const copy = graphicByLang[lang];
 
   const subsections = buildSubsections(lang, copy.subsectionTitles).map((sub) => {
+    if (sub.id === "corporate-design") {
+      const caseStudy = atembergeCaseByLang[lang];
+      return {
+        ...sub,
+        h3: caseStudy.h3,
+        intro: caseStudy.intro,
+        includes: caseStudy.includes,
+        toolsPlaceholder: caseStudy.toolsPlaceholder,
+        workGallery: caseStudy.gallery,
+      };
+    }
     if (sub.id === "fotomanipulacije") return { ...sub, workGallery: fotomanipulacijeGalleryByLang[lang] };
     if (sub.id === "branding") return { ...sub, workGallery: brandingGalleryByLang[lang] };
     if (sub.id === "vizit-kartice") return { ...sub, workGallery: vizitKarticeGalleryByLang[lang] };
@@ -237,6 +254,8 @@ export default function GraphicDesign() {
       ctaText={copy.ctaText}
       ctaButton={copy.ctaButton}
       localNote={copy.localNote}
+      showcaseFirst
+      hideSelectedWorkSection
     />
   );
 }
