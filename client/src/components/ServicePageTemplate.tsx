@@ -169,6 +169,25 @@ export default function ServicePageTemplate({
                         ) : null}
                       </div>
 
+                      {sub.featuredWorkImage ? (
+                        <div className="mt-8">
+                          {sub.featuredWorkImage.title ? (
+                            <h4 className="text-sm font-semibold uppercase tracking-wide text-neutral-700">
+                              {sub.featuredWorkImage.title}
+                            </h4>
+                          ) : null}
+                          <figure className="mt-4 overflow-hidden rounded-xl border border-neutral-200 bg-neutral-100 shadow-sm">
+                            <img
+                              src={sub.featuredWorkImage.src}
+                              alt={sub.featuredWorkImage.alt}
+                              loading="lazy"
+                              decoding="async"
+                              className="h-auto w-full object-contain"
+                            />
+                          </figure>
+                        </div>
+                      ) : null}
+
                       {!sub.compactMediaOnly ? (
                         <Link href="/contact" className="mt-5 inline-flex items-center gap-2 rounded-full border border-neutral-300 bg-white px-4 py-2 text-sm font-semibold text-neutral-800 transition hover:bg-neutral-100">
                           {sub.cta}
@@ -319,6 +338,25 @@ export default function ServicePageTemplate({
                     <p className="mt-2 text-sm text-neutral-600">{sub.toolsPlaceholder}</p>
                   </div>
                 </div>
+
+                {sub.featuredWorkImage ? (
+                  <div className="mt-8">
+                    {sub.featuredWorkImage.title ? (
+                      <h4 className="text-sm font-semibold uppercase tracking-wide text-neutral-700">
+                        {sub.featuredWorkImage.title}
+                      </h4>
+                    ) : null}
+                    <figure className="mt-4 overflow-hidden rounded-xl border border-neutral-200 bg-neutral-100 shadow-sm">
+                      <img
+                        src={sub.featuredWorkImage.src}
+                        alt={sub.featuredWorkImage.alt}
+                        loading="lazy"
+                        decoding="async"
+                        className="h-auto w-full object-contain"
+                      />
+                    </figure>
+                  </div>
+                ) : null}
 
                 <Link
                   href="/contact"

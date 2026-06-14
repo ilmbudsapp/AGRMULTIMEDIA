@@ -18,6 +18,8 @@ export type LocalizedSubsection = {
   workVideoGallery?: { src: string; title: string; poster: string }[];
   /** Minimal card mode used for media-first showcase sections. */
   compactMediaOnly?: boolean;
+  /** Single full-width image below the gallery (e.g. business card mockup). */
+  featuredWorkImage?: { src: string; alt: string; title?: string };
 };
 
 export type ServiceTemplateLabels = {

@@ -8,6 +8,17 @@ export type AtembergeCaseCopy = {
   includes: string[];
   toolsPlaceholder: string;
   gallery: { src: string; alt: string }[];
+  businessCard: { src: string; alt: string };
+};
+
+const businessCardDe = {
+  src: `${BASE}/07-visitenkarte-mockup.png`,
+  alt: "Finale Visitenkarte Atemberge — Mockup mit Vorder- und Rückseite, Markenlogo und Kontaktdaten.",
+};
+
+const businessCardEn = {
+  src: `${BASE}/07-visitenkarte-mockup.png`,
+  alt: "Final Atemberge business card mockup — front and back with brand logo and contact details.",
 };
 
 const galleryDe: AtembergeCaseCopy["gallery"] = [
@@ -19,10 +30,6 @@ const galleryDe: AtembergeCaseCopy["gallery"] = [
     src: `${BASE}/06-logo-positiv-negativ.jpg`,
     alt: "Atemberge-Logo in Positiv- und Negativversion auf hellen und dunklen Hintergründen.",
   },
-  {
-    src: `${BASE}/07-visitenkarte-final.jpg`,
-    alt: "Finale Visitenkarte Atemberge — Corporate Design mit Logo, Typografie Poppins und Markenfarben.",
-  },
 ];
 
 const galleryEn: AtembergeCaseCopy["gallery"] = [
@@ -33,10 +40,6 @@ const galleryEn: AtembergeCaseCopy["gallery"] = [
   {
     src: `${BASE}/06-logo-positiv-negativ.jpg`,
     alt: "Atemberge logo in positive and negative versions on light and dark backgrounds.",
-  },
-  {
-    src: `${BASE}/07-visitenkarte-final.jpg`,
-    alt: "Final Atemberge business card — corporate design with logo, Poppins typography and brand colours.",
   },
 ];
 
@@ -55,6 +58,7 @@ export const atembergeCaseByLang: Record<ServiceLang, AtembergeCaseCopy> = {
     ],
     toolsPlaceholder: "Adobe Illustrator, Adobe InDesign, strukturierte Corporate-Design-Dokumentation (Grafikdesign Creative Lab).",
     gallery: galleryDe,
+    businessCard: businessCardDe,
   },
   en: {
     h3: "Corporate design — outdoor brand „Atemberge“",
@@ -70,6 +74,7 @@ export const atembergeCaseByLang: Record<ServiceLang, AtembergeCaseCopy> = {
     ],
     toolsPlaceholder: "Adobe Illustrator, Adobe InDesign, structured corporate design documentation (Graphic Design Creative Lab).",
     gallery: galleryEn,
+    businessCard: businessCardEn,
   },
   it: {
     h3: "Corporate design — marchio outdoor „Atemberge“",
@@ -84,6 +89,7 @@ export const atembergeCaseByLang: Record<ServiceLang, AtembergeCaseCopy> = {
     ],
     toolsPlaceholder: "Adobe Illustrator, Adobe InDesign.",
     gallery: galleryEn,
+    businessCard: businessCardEn,
   },
   sr: {
     h3: "Corporate design — outdoor brend „Atemberge“",
@@ -98,6 +104,7 @@ export const atembergeCaseByLang: Record<ServiceLang, AtembergeCaseCopy> = {
     ],
     toolsPlaceholder: "Adobe Illustrator, Adobe InDesign.",
     gallery: galleryEn,
+    businessCard: businessCardEn,
   },
   al: {
     h3: "Corporate design — markë outdoor „Atemberge“",
@@ -112,5 +119,6 @@ export const atembergeCaseByLang: Record<ServiceLang, AtembergeCaseCopy> = {
     ],
     toolsPlaceholder: "Adobe Illustrator, Adobe InDesign.",
     gallery: galleryEn,
+    businessCard: businessCardEn,
   },
 };

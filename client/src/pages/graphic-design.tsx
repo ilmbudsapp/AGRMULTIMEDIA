@@ -221,6 +221,10 @@ export default function GraphicDesign() {
         includes: caseStudy.includes,
         toolsPlaceholder: caseStudy.toolsPlaceholder,
         workGallery: caseStudy.gallery,
+        featuredWorkImage: {
+          ...caseStudy.businessCard,
+          title: lang === "de" ? "Finale Visitenkarte" : "Final business card",
+        },
       };
     }
     if (sub.id === "fotomanipulacije") return { ...sub, workGallery: fotomanipulacijeGalleryByLang[lang] };
