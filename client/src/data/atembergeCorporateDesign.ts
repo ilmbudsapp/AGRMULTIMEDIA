@@ -45,9 +45,9 @@ const galleryEn: AtembergeCaseCopy["gallery"] = [
 
 export const atembergeCaseByLang: Record<ServiceLang, AtembergeCaseCopy> = {
   de: {
-    h3: "Corporate Design — Outdoor-Marke „Atemberge“",
+    h3: "Grafikdesign — Atemberge",
     intro:
-      "Konzeption und Finalisierung einer Wanderausrüstungs-Marke: von Brainstorming und Moodboard über Farbwelt und Typografie bis zum finalen Logo und der Visitenkarte. Atemberge verbindet Natur, modernen Lifestyle und funktionale Outdoor-Bekleidung für alle Generationen.",
+      "Entwicklung einer Outdoor Wandermarke im Modul Grafikdesign Creative Lab von Brainstorming und Moodboard über Farbwelt und Typografie bis zum finalen Logo und der Visitenkarte. Atemberge verbindet Natur, modernen Lifestyle und funktionale Wanderbekleidung für alle Generationen.",
     includes: [
       "Markenpersona & Konzepttext (Outdoor / Wandern / Lifestyle)",
       "Moodboard und visuelle Bildideen (Natur, Modernität, Nachhaltigkeit)",

@@ -84,7 +84,7 @@ const graphicByLang: Record<ServiceLang, GraphicContent> = {
       { id: "retush-radovi", h3: "Retusche-Arbeiten" },
     ],
     selectedWorkTitle: "Ausgewähltes Projekt",
-    selectedWorkIntro: "Atemberge — Corporate Design für eine moderne Outdoor-Wandermarke: Moodboard, Farbwelt, Logo und finale Visitenkarte.",
+    selectedWorkIntro: "Atemberge — Grafikdesign für eine Outdoor-Wandermarke: Moodboard, Logo und finale Visitenkarte.",
     toolsTitle: "Eingesetzte Tools und Software",
     tools: ["Adobe Illustrator", "Adobe Photoshop", "Adobe InDesign", "Figma", "Canva Pro"],
     whyChooseTitle: "Warum diese Leistung wählen",
