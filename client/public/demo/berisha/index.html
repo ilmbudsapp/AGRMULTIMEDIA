@@ -542,9 +542,26 @@
       position: relative; height: clamp(320px, 42vw, 460px); min-height: 320px;
       background: #161616;
     }
-    .map-wrap__frame iframe {
-      width: 100%; height: 100%; border: 0; display: block;
+    .map-wrap__frame a {
+      display: block; width: 100%; height: 100%; position: relative;
+      cursor: pointer;
+    }
+    .map-wrap__frame img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
       filter: grayscale(0.1) contrast(1.06) saturate(1.05);
+    }
+    .map-wrap__pin {
+      position: absolute; left: 50%; top: 50%;
+      transform: translate(-50%, -100%);
+      width: 44px; height: 44px; pointer-events: none;
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.55));
+    }
+    .map-wrap__pin svg { width: 100%; height: 100%; fill: var(--accent); }
+    .map-wrap__attr {
+      position: absolute; right: 8px; bottom: 6px;
+      font-size: 0.65rem; color: rgba(255,255,255,0.55);
+      background: rgba(0,0,0,0.45); padding: 2px 6px; border-radius: 4px;
+      pointer-events: none;
     }
     .map-open-btn {
       display: flex; align-items: center; justify-content: center; gap: 12px;
@@ -1023,13 +1040,19 @@
         </div>
         <div class="map-wrap glass reveal">
           <div class="map-wrap__frame">
-            <iframe
-              title="Fleischerei Berisha auf Google Maps"
-              src="https://www.google.com/maps?q=M%C3%A4rkische%20Str.%2021%2C%2059174%20Kamen%2C%20Deutschland&hl=de&z=16&output=embed"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              allowfullscreen>
-            </iframe>
+            <a href="#" data-maps-link target="_blank" rel="noopener noreferrer" title="Route in Google Maps öffnen">
+              <img
+                src="assets/map-kamen.webp"
+                alt="Karte: Märkische Str. 21, 59174 Kamen — Fleischerei Berisha"
+                width="960"
+                height="540"
+                loading="lazy"
+                decoding="async">
+              <span class="map-wrap__pin" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>
+              </span>
+              <span class="map-wrap__attr">© OpenStreetMap</span>
+            </a>
           </div>
           <a class="map-open-btn" href="#" data-maps-link target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>
