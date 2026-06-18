@@ -6,11 +6,11 @@ import { portfolioPageByLang, type PortfolioPageCopy } from "./portfolioPageI18n
 
 export type SpecLang = 'de' | 'en';
 
-/** Home flip-card: front copy + back (price) line */
+/** Home flip-card: front copy + back headline (no public pricing) */
 export interface ServiceFlipCardCopy {
   title: string;
   description: string;
-  flipPrice: string;
+  flipHeadline: string;
   flipIncludes: string;
 }
 
@@ -87,6 +87,7 @@ export interface SpecTranslations {
     subtitle: string;
     flipOrderCta: string;
     flipDetailsLink: string;
+    flipBackLabel: string;
     webUi: ServiceFlipCardCopy;
     graphicBranding: ServiceFlipCardCopy;
     videoMotion: ServiceFlipCardCopy;
@@ -247,28 +248,29 @@ const en: SpecTranslations = {
     subtitle: 'Four focused areas—structured for small businesses and creators who need a premium presence without complexity.',
     flipOrderCta: 'Request now',
     flipDetailsLink: 'Service details',
+    flipBackLabel: 'Your project',
     webUi: {
       title: 'Web Design & Development',
       description: 'Business websites, landing pages and UI/UX that feel clear and modern.',
-      flipPrice: 'from €1,200',
+      flipHeadline: 'Individual quote',
       flipIncludes: 'Portfolio · SEO · Contact · Mobile-first',
     },
     graphicBranding: {
       title: 'Graphic & Branding',
       description: 'Logo, print assets and brand guidelines that look sharp and trustworthy.',
-      flipPrice: 'from €650',
+      flipHeadline: 'Individual quote',
       flipIncludes: 'Logo · Brand kit · Print-ready files',
     },
     videoMotion: {
       title: 'AI Content & Video',
       description: 'Short-form videos, AI-generated content and social visuals for your brand.',
-      flipPrice: 'from €890',
+      flipHeadline: 'Individual quote',
       flipIncludes: 'Social cuts · AI visuals · Motion basics',
     },
     aiContent: {
       title: 'Projects built with AI — photo / video',
       description: 'AI-assisted photo and video production for campaigns, social media, and brand storytelling.',
-      flipPrice: 'from €450',
+      flipHeadline: 'Individual quote',
       flipIncludes: 'AI visuals · Photo · Video',
     },
   },
@@ -385,8 +387,8 @@ const en: SpecTranslations = {
       ai: 'AI Services',
       other: 'Other',
     },
-    budgetRange: 'Budget range',
-    budgetOptions: ['Under €500', '€500 – €1,500', '€1,500 – €3,000', '€3,000 – €5,000', '€5,000+', 'To be discussed'],
+    budgetRange: 'Project scope',
+    budgetOptions: ['Small project', 'Medium project', 'Larger project', 'Not sure yet', 'To be discussed in consultation'],
     message: 'Message',
     submit: 'Send message',
     successMessage: "Thank you! I'll reply within 24 hours.",
@@ -464,28 +466,29 @@ const de: SpecTranslations = {
     subtitle: 'Vier Bereiche—für kleine Unternehmen, die Qualität ohne Überladung suchen.',
     flipOrderCta: 'Jetzt anfragen',
     flipDetailsLink: 'Leistung ansehen',
+    flipBackLabel: 'Ihr Projekt',
     webUi: {
       title: 'Webdesign & Entwicklung',
       description: 'Business-Websites, Landingpages und UI/UX-Design mit klarem Aufbau.',
-      flipPrice: 'ab 1.200 €',
+      flipHeadline: 'Individuelles Angebot',
       flipIncludes: 'Portfolio · SEO · Kontakt · Mobile-first',
     },
     graphicBranding: {
       title: 'Grafik & Branding',
       description: 'Logo, Print und Markenrichtlinien, die professionell und vertrauenswürdig wirken.',
-      flipPrice: 'ab 650 €',
+      flipHeadline: 'Individuelles Angebot',
       flipIncludes: 'Logo · Brand-Kit · Druckfertige Dateien',
     },
     videoMotion: {
       title: 'AI Content & Video',
       description: 'Kurzvideos, AI-generierte Inhalte und Visuals für Ihre Social-Media-Kanäle.',
-      flipPrice: 'ab 890 €',
+      flipHeadline: 'Individuelles Angebot',
       flipIncludes: 'Social-Formate · AI-Visuals · Motion-Basics',
     },
     aiContent: {
       title: 'Mit KI umgesetzte Projekte — Foto / Video',
       description: 'KI-gestützte Foto- und Videoproduktion für Kampagnen, Social Media und Markenauftritt.',
-      flipPrice: 'ab 450 €',
+      flipHeadline: 'Individuelles Angebot',
       flipIncludes: 'KI-Visuals · Foto · Video',
     },
   },
@@ -602,8 +605,8 @@ const de: SpecTranslations = {
       ai: 'KI-Services',
       other: 'Sonstiges',
     },
-    budgetRange: 'Budgetrahmen',
-    budgetOptions: ['Unter 500 €', '500 € – 1.500 €', '1.500 € – 3.000 €', '3.000 € – 5.000 €', 'Über 5.000 €', 'Noch offen'],
+    budgetRange: 'Projektumfang',
+    budgetOptions: ['Kleines Projekt', 'Mittleres Projekt', 'Größeres Projekt', 'Noch unklar', 'Im Gespräch klären'],
     message: 'Nachricht',
     submit: 'Nachricht senden',
     successMessage: 'Vielen Dank! Ich antworte innerhalb von 24 Stunden.',
@@ -681,28 +684,29 @@ const it: SpecTranslations = {
     subtitle: 'Quattro aree focali—per piccole imprese che cercano qualità senza rumore.',
     flipOrderCta: 'Richiedi ora',
     flipDetailsLink: 'Dettagli servizio',
+    flipBackLabel: 'Il vostro progetto',
     webUi: {
       title: 'Siti web e sviluppo',
       description: 'Siti web business, landing page e UI/UX dal design chiaro e moderno.',
-      flipPrice: 'da 1.200 €',
+      flipHeadline: 'Offerta individuale',
       flipIncludes: 'Portfolio · SEO · Contatti · Mobile-first',
     },
     graphicBranding: {
       title: 'Grafica & Branding',
       description: 'Logo, materiali stampa e linee guida brand professionali e coerenti.',
-      flipPrice: 'da 650 €',
+      flipHeadline: 'Offerta individuale',
       flipIncludes: 'Logo · Brand kit · File stampa',
     },
     videoMotion: {
       title: 'Contenuti IA e video',
       description: 'Video brevi, contenuti generati con AI e visual per i social.',
-      flipPrice: 'da 890 €',
+      flipHeadline: 'Offerta individuale',
       flipIncludes: 'Formati social · Visual AI · Motion base',
     },
     aiContent: {
       title: 'Progetti realizzati con IA — foto / video',
       description: 'Produzione foto e video assistita da IA per campagne, social e narrazione del brand.',
-      flipPrice: 'da 450 €',
+      flipHeadline: 'Offerta individuale',
       flipIncludes: 'Visual IA · Foto · Video',
     },
   },
@@ -819,8 +823,8 @@ const it: SpecTranslations = {
       ai: 'Servizi AI',
       other: 'Altro',
     },
-    budgetRange: 'Fascia di budget',
-    budgetOptions: ['Sotto €500', '€500 – €1.500', '€1.500 – €3.000', '€3.000 – €5.000', 'Oltre €5.000', 'Da definire'],
+    budgetRange: 'Ambito del progetto',
+    budgetOptions: ['Progetto piccolo', 'Progetto medio', 'Progetto ampio', 'Non ancora definito', 'Da definire in consulenza'],
     message: 'Messaggio',
     submit: 'Invia messaggio',
     successMessage: 'Grazie! Risponderò entro 24 ore.',
@@ -898,28 +902,29 @@ const sr: SpecTranslations = {
     subtitle: 'Četiri fokusa—za mala preduzeća koja žele kvalitet bez pretrpanosti.',
     flipOrderCta: 'Poruči sada',
     flipDetailsLink: 'Detalji usluge',
+    flipBackLabel: 'Vaš projekat',
     webUi: {
       title: 'Web dizajn i razvoj',
       description: 'Biznis sajtovi, landing stranice i UI/UX sa jasnom strukturom.',
-      flipPrice: 'od 1.200 €',
+      flipHeadline: 'Individualna ponuda',
       flipIncludes: 'Portfolio · SEO · Kontakt · Mobile-first',
     },
     graphicBranding: {
       title: 'Grafika i brending',
       description: 'Logo, štampa i smernice brenda koje deluju profesionalno i pouzdano.',
-      flipPrice: 'od 650 €',
+      flipHeadline: 'Individualna ponuda',
       flipIncludes: 'Logo · Brend kit · Fajlovi za štampu',
     },
     videoMotion: {
       title: 'AI sadržaj i video',
       description: 'Kratki video formati, AI sadržaj i vizuali za društvene mreže.',
-      flipPrice: 'od 890 €',
+      flipHeadline: 'Individualna ponuda',
       flipIncludes: 'Social formati · AI vizuali · Osnovna animacija',
     },
     aiContent: {
       title: 'Projekti realizovani sa AI — foto / video',
       description: 'AI podrška za foto i video produkciju — kampanje, društvene mreže i brend.',
-      flipPrice: 'od 450 €',
+      flipHeadline: 'Individualna ponuda',
       flipIncludes: 'AI vizuali · Foto · Video',
     },
   },
@@ -1036,8 +1041,8 @@ const sr: SpecTranslations = {
       ai: 'AI usluge',
       other: 'Ostalo',
     },
-    budgetRange: 'Raspon budžeta',
-    budgetOptions: ['Do 500 €', '500 – 1.500 €', '1.500 – 3.000 €', '3.000 – 5.000 €', 'Preko 5.000 €', 'Da se dogovorimo'],
+    budgetRange: 'Obim projekta',
+    budgetOptions: ['Mali projekat', 'Srednji projekat', 'Veći projekat', 'Još nisam siguran', 'Dogovorimo u razgovoru'],
     message: 'Poruka',
     submit: 'Pošalji poruku',
     successMessage: 'Hvala! Odgovoriću u roku od 24 sata.',
@@ -1115,28 +1120,29 @@ const al: SpecTranslations = {
     subtitle: 'Katër fusha—për biznese të vogla që duan cilësi pa mbingarkesë.',
     flipOrderCta: 'Porosit tani',
     flipDetailsLink: 'Detajet e shërbimit',
+    flipBackLabel: 'Projekti juaj',
     webUi: {
       title: 'Dizajn ueb-i dhe zhvillim',
       description: 'Faqe biznesi, landing faqe dhe UI/UX me strukturë të qartë.',
-      flipPrice: 'nga 1.200 €',
+      flipHeadline: 'Ofertë individuale',
       flipIncludes: 'Portfolio · SEO · Kontakt · Mobile-first',
     },
     graphicBranding: {
       title: 'Grafikë & branding',
       description: 'Logo, print dhe udhëzime marke që duken profesionale dhe të besueshme.',
-      flipPrice: 'nga 650 €',
+      flipHeadline: 'Ofertë individuale',
       flipIncludes: 'Logo · Brand kit · Skedarë gati për shtyp',
     },
     videoMotion: {
       title: 'Përmbajtje IA dhe video',
       description: 'Video të shkurtra, përmbajtje të gjeneruar me inteligencë artificiale dhe vizuale për rrjetet sociale.',
-      flipPrice: 'nga 890 €',
+      flipHeadline: 'Ofertë individuale',
       flipIncludes: 'Formate sociale · Vizuale me IA · Motion bazë',
     },
     aiContent: {
       title: 'Projekte të realizuara me IA — foto / video',
       description: 'Produksion foto dhe video me ndihmën e IA-së për fushata, rrjete sociale dhe historinë e markës.',
-      flipPrice: 'nga 450 €',
+      flipHeadline: 'Ofertë individuale',
       flipIncludes: 'Vizuale IA · Foto · Video',
     },
   },
@@ -1253,8 +1259,8 @@ const al: SpecTranslations = {
       ai: 'Shërbime AI',
       other: 'Tjetër',
     },
-    budgetRange: 'Gama e buxhetit',
-    budgetOptions: ['Nën 500 €', '500 – 1.500 €', '1.500 – 3.000 €', '3.000 – 5.000 €', 'Mbi 5.000 €', 'Për t\'u diskutuar'],
+    budgetRange: 'Shtrirja e projektit',
+    budgetOptions: ['Projekt i vogël', 'Projekt mesatar', 'Projekt i madh', 'Ende e pasigurt', 'Të diskutohet në konsultim'],
     message: 'Mesazhi',
     submit: 'Dërgo mesazh',
     successMessage: 'Faleminderit! Do të përgjigjem brenda 24 orëve.',

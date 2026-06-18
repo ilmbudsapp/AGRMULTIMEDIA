@@ -30,7 +30,7 @@ const COPY: Record<string, QuoteCopy> = {
     ],
     primaryCta: "Request a free consultation",
     secondaryCta: "Get an individual quote",
-    note: "No fixed prices online — scope, services and investment are agreed personally after your initial consultation.",
+    note: "Scope, services and timeline are agreed personally after your initial consultation.",
   },
   de: {
     heading: "Individuelles Projektangebot",
@@ -43,7 +43,7 @@ const COPY: Record<string, QuoteCopy> = {
     ],
     primaryCta: "Kostenlose Beratung anfragen",
     secondaryCta: "Individuelles Angebot erhalten",
-    note: "Keine Festpreise online — Umfang, Leistungen und Investition klären wir persönlich nach dem Erstgespräch.",
+    note: "Umfang, Leistungen und Timing klären wir persönlich nach dem Erstgespräch.",
   },
   it: {
     heading: "Offerta di progetto individuale",
@@ -56,7 +56,7 @@ const COPY: Record<string, QuoteCopy> = {
     ],
     primaryCta: "Richiedi consulenza gratuita",
     secondaryCta: "Ricevi un'offerta individuale",
-    note: "Nessun prezzo fisso online — ambito, servizi e investimento si definiscono dopo il colloquio iniziale.",
+    note: "Ambito, servizi e tempi si definiscono dopo il colloquio iniziale.",
   },
   sr: {
     heading: "Individualna ponuda za projekat",
@@ -69,7 +69,7 @@ const COPY: Record<string, QuoteCopy> = {
     ],
     primaryCta: "Zatražite besplatnu konsultaciju",
     secondaryCta: "Dobijte individualnu ponudu",
-    note: "Bez fiksnih cena online — obim, usluge i investiciju dogovaramo lično nakon uvodnog razgovora.",
+    note: "Obim, usluge i rokove dogovaramo lično nakon uvodnog razgovora.",
   },
   al: {
     heading: "Ofertë individuale projekti",
@@ -82,7 +82,7 @@ const COPY: Record<string, QuoteCopy> = {
     ],
     primaryCta: "Kërkoni konsultim falas",
     secondaryCta: "Merrni ofertë individuale",
-    note: "Pa çmime fikse online — shtrirjen, shërbimet dhe investimin e përcaktojmë pas bisedës fillestare.",
+    note: "Shtrirjen, shërbimet dhe afatin e përcaktojmë pas bisedës fillestare.",
   },
 };
 

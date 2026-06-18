@@ -32,7 +32,6 @@ export function localBusinessNode(pageUrl = `${BUSINESS.url}/`) {
       { "@type": "City", name: "Ulm" },
       { "@type": "AdministrativeArea", name: "Landkreis Göppingen" },
     ],
-    priceRange: "€€",
     founder: {
       "@type": "Person",
       name: BUSINESS.owner,

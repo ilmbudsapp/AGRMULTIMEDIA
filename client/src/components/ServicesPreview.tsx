@@ -30,12 +30,14 @@ function ServiceFlipCard({
   detailHref,
   flipOrderCta,
   flipDetailsLink,
+  flipBackLabel,
   icon: Icon,
 }: {
   data: ServiceFlipCardCopy;
   detailHref: string;
   flipOrderCta: string;
   flipDetailsLink: string;
+  flipBackLabel: string;
   icon: LucideIcon;
 }) {
   const innerRef = useRef<HTMLDivElement>(null);
@@ -114,8 +116,8 @@ function ServiceFlipCard({
           </div>
 
           <div className="flip-card-face flip-card-back glass-flip-back flex flex-col items-center justify-center text-center p-6 md:p-8">
-            <p className="text-xs uppercase tracking-[0.2em] text-violet-200/80 mb-2">Investment</p>
-            <h3 className="text-3xl md:text-4xl font-extrabold text-white mb-4 tracking-tight">{data.flipPrice}</h3>
+            <p className="text-xs uppercase tracking-[0.2em] text-violet-200/80 mb-2">{flipBackLabel}</p>
+            <h3 className="text-2xl md:text-3xl font-extrabold text-white mb-4 tracking-tight leading-snug">{data.flipHeadline}</h3>
             <p className="text-sm text-gray-200/90 mb-8 max-w-[240px] leading-relaxed">{data.flipIncludes}</p>
             <Link
               href="/kontakt"
@@ -184,6 +186,7 @@ export default function ServicesPreview() {
                 detailHref={href}
                 flipOrderCta={sp.flipOrderCta}
                 flipDetailsLink={sp.flipDetailsLink}
+                flipBackLabel={sp.flipBackLabel}
                 icon={icon}
               />
             </div>

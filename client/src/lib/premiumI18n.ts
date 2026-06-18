@@ -325,7 +325,7 @@ const sr: PremiumTranslations = {
       "Kontakt forma, WhatsApp i Google Maps",
       "Osnovni SEO za lokalne pretrage",
       "Povezivanje domene i objava online",
-      "Jasna cijena i rok izrade",
+      "Persönlicher Ansprechpartner von der Planung bis zum Launch",
     ],
     primaryCta: "Zatražite besplatnu procjenu",
     secondaryCta: "Pogledajte radove",
