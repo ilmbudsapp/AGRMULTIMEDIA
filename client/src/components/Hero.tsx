@@ -1,5 +1,4 @@
 import { Link } from "wouter";
-import { CheckCircle2 } from "lucide-react";
 import { useEffect, useRef } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getPremiumTranslations } from "@/lib/premiumI18n";
@@ -35,7 +34,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="premium-section relative scroll-mt-20 border-b border-[#333333] pt-[5.25rem] pb-20 md:pt-28 md:pb-28"
+      className="premium-section relative scroll-mt-20 border-b border-[#333333] pt-[5.25rem] pb-24 md:pt-32 md:pb-32"
     >
       <img
         src={VIDEO_POSTER}
@@ -69,28 +68,19 @@ export default function Hero() {
         <div className="order-1 text-center lg:order-none lg:text-left animate-fade-in-up">
           <h1
             id="hero-h1"
-            className="scroll-mt-24 text-[1.9rem] font-semibold leading-[1.12] tracking-tight text-white sm:text-4xl md:text-[2.5rem] lg:text-[2.85rem]"
+            className="scroll-mt-24 text-[2rem] font-semibold leading-[1.1] tracking-tight text-white sm:text-[2.35rem] md:text-5xl lg:text-[3.25rem]"
             data-testid="hero-title"
           >
             {premium.hero.heading}
           </h1>
           <p
-            className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-white/75 lg:mx-0 lg:max-w-[34rem]"
+            className="mx-auto mt-7 max-w-xl text-base leading-relaxed text-white/80 md:text-lg lg:mx-0 lg:max-w-[36rem]"
             data-testid="hero-subtitle"
           >
             {premium.hero.subheading}
           </p>
 
-          <ul className="mx-auto mt-6 max-w-xl space-y-2.5 text-left lg:mx-0">
-            {premium.hero.bullets.map((item) => (
-              <li key={item} className="flex items-start gap-2.5 text-sm text-white/80 md:text-base">
-                <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400/90" aria-hidden />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-
-          <div className="mt-9 flex flex-col items-stretch justify-center gap-3 sm:flex-row lg:justify-start">
+          <div className="mt-10 flex flex-col items-stretch justify-center gap-4 sm:flex-row lg:justify-start">
             <button
               type="button"
               onClick={() => scrollTo("contact")}

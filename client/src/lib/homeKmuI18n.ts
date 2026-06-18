@@ -1,39 +1,28 @@
 import type { Language } from "@/lib/i18n";
 
 export type HomeKmuCopy = {
-  intro: {
-    who: string;
-    services: string;
-    audience: string;
-    why: string;
-    landingLinkLabel: string;
-  };
-  audience: {
+  whyUs: {
     title: string;
-    cards: { label: string }[];
+    cards: { title: string; description: string }[];
   };
-  deliverables: {
+  moreThanDesign: {
     title: string;
-    items: string[];
-  };
-  pricing: {
-    title: string;
-    packages: {
-      name: string;
-      price: string;
-      description: string;
-      includes: string[];
-    }[];
+    body: string;
+    items: { title: string; description: string }[];
   };
   portfolio: {
     title: string;
     branchLabel: string;
-    workLabel: string;
+    goalLabel: string;
+    implementationLabel: string;
+    resultLabel: string;
     visitLabel: string;
     projects: {
       name: string;
       branch: string;
-      work: string;
+      goal: string;
+      implementation: string;
+      result: string;
       href: string;
       image?: string;
       imageAlt?: string;
@@ -41,7 +30,11 @@ export type HomeKmuCopy = {
   };
   process: {
     title: string;
-    steps: string[];
+    steps: { title: string; description: string }[];
+  };
+  trustPartner: {
+    title: string;
+    body: string;
   };
   finalCta: {
     title: string;
@@ -52,95 +45,76 @@ export type HomeKmuCopy = {
 };
 
 const de: HomeKmuCopy = {
-  intro: {
-    who: "AGR Multimedia ist mein kreatives Studio in Geislingen an der Steige. Ich, Agron Osmani, entwickle Websites und digitale Auftritte für kleine Unternehmen — persönlich, verständlich und ohne Agentur-Overhead.",
-    services:
-      "Mein Schwerpunkt liegt auf Webdesign, lokalem SEO und der Umsetzung moderner Business-Websites: von der Startseite über Leistungen bis Kontakt, WhatsApp und Google Maps.",
-    audience:
-      "Besonders häufig arbeite ich mit Handwerkern, Gebäudereinigern, Autopflege-Betrieben, Gartenbauern und lokalen Dienstleistern in Geislingen, Göppingen, Ulm und der Umgebung.",
-    why: "Sie erhalten einen direkten Ansprechpartner, transparente Pakete ab 500 € und eine Website, die auf dem Smartphone funktioniert und bei lokalen Google-Suchen gefunden wird.",
-    landingLinkLabel: "Mehr zum Webdesign in Geislingen an der Steige",
-  },
-  audience: {
-    title: "Für wen erstelle ich Websites in der Region?",
+  whyUs: {
+    title: "Warum Unternehmen mit AGR Multimedia arbeiten",
     cards: [
-      { label: "Gebäudereinigung" },
-      { label: "Autopflege & KFZ" },
-      { label: "Handwerker & Bau" },
-      { label: "Gartenbau" },
-      { label: "Transport & Kurierdienst" },
-      { label: "Fahrradservice" },
-      { label: "Restaurants & lokale Dienstleister" },
-      { label: "Kleine Familienbetriebe" },
+      {
+        title: "SEO Optimiert",
+        description: "Bessere Sichtbarkeit bei Google — damit lokale Kunden Sie finden, wenn sie nach Ihrer Leistung suchen.",
+      },
+      {
+        title: "GEO & AEO Optimiert",
+        description:
+          "Sichtbarkeit in KI-Suchen wie ChatGPT, Google AI Overview und zukünftigen Suchsystemen — Ihre Firma wird dort empfohlen, wo Kunden heute recherchieren.",
+      },
+      {
+        title: "Schnelle Umsetzung",
+        description: "Professionelle Ergebnisse ohne lange Wartezeiten — strukturiert, effizient und mit klarem Zeitplan.",
+      },
+      {
+        title: "Persönlicher Ansprechpartner",
+        description: "Direkter Kontakt ohne Agentur-Hierarchie — ein Ansprechpartner von der Planung bis zum Launch.",
+      },
     ],
   },
-  deliverables: {
-    title: "Was bekommen Sie?",
+  moreThanDesign: {
+    title: "Mehr als nur eine schöne Website",
+    body: "Eine moderne Webseite ist kein reines Design-Projekt — sie ist Ihr wichtigstes Werkzeug, um Vertrauen aufzubauen, Anfragen zu generieren und Ihr Unternehmen professionell online zu präsentieren. Als Webdesigner in Geislingen an der Steige richte ich jede Seite auf messbare Ergebnisse aus: mehr Sichtbarkeit, mehr Vertrauen und mehr Kundenkontakte.",
     items: [
-      "Moderne Startseite",
-      "Leistungsseite",
-      "Kontaktformular",
-      "Google Maps Integration",
-      "WhatsApp-Button",
-      "Mobile Optimierung",
-      "Basis-SEO: Titel und Beschreibungen",
-      "Domain-Anbindung",
-      "Online-Veröffentlichung",
-    ],
-  },
-  pricing: {
-    title: "Pakete für kleine Unternehmen",
-    packages: [
       {
-        name: "Start-Paket",
-        price: "ab 500 €",
-        description: "Einfache Website für kleine Firmen, die professionell online auftreten möchten.",
-        includes: [
-          "bis zu 3 Bereiche",
-          "mobile Version",
-          "Kontaktformular",
-          "Google Maps",
-          "Veröffentlichung auf Ihrer Domain",
-        ],
+        title: "Mehr Sichtbarkeit",
+        description: "Lokales SEO und strukturierte Inhalte — damit Sie bei Google und in KI-Suchen gefunden werden.",
       },
       {
-        name: "Business-Paket",
-        price: "ab 900 €",
-        description: "Für Firmen, die einen seriöseren Auftritt und mehr Inhalte wünschen.",
-        includes: [
-          "bis zu 5 Seiten",
-          "Leistungen",
-          "Galerie",
-          "Kontakt",
-          "Basis-SEO",
-          "WhatsApp-Button",
-          "Online-Veröffentlichung",
-        ],
+        title: "Mehr Vertrauen",
+        description: "Professioneller Auftritt, der handwerkliche Qualität und Seriosität Ihrer Firma widerspiegelt.",
       },
       {
-        name: "Wartung",
-        price: "ab 30 €/Monat",
-        description: "Für kleinere Änderungen, Sicherheitsprüfungen und technischen Support.",
-        includes: [],
+        title: "Mehr Anfragen",
+        description: "Klare Struktur und überzeugende CTAs — Besucher wissen sofort, wie sie Sie erreichen.",
+      },
+      {
+        title: "Mobile Optimierung",
+        description: "Perfekte Darstellung auf Smartphone und Tablet — dort, wo die meisten Kunden heute suchen.",
       },
     ],
   },
   portfolio: {
-    title: "Beispiele meiner Arbeiten",
+    title: "Referenzen — Projekte, die Ergebnisse liefern",
     branchLabel: "Branche",
-    workLabel: "Umgesetzt",
+    goalLabel: "Ziel",
+    implementationLabel: "Umsetzung",
+    resultLabel: "Ergebnis",
     visitLabel: "Website ansehen",
     projects: [
       {
         name: "Toni's Autopflege Göppingen",
         branch: "Autopflege & KFZ",
-        work: "Moderne Website mit Leistungen, Kontaktformular, WhatsApp und Google Maps für lokale Kunden.",
+        goal: "Mehr lokale Kundenanfragen und ein professioneller Online-Auftritt, der Qualität und Vertrauen vermittelt.",
+        implementation:
+          "Moderne Website mit übersichtlicher Leistungspräsentation, Kontaktformular, WhatsApp-Button und Google Maps — optimiert für mobile Nutzer in der Region Göppingen.",
+        result:
+          "Klare Darstellung aller Services, einfache Kontaktaufnahme und stärkere lokale Präsenz bei Google-Suchen nach Autopflege.",
         href: "https://www.tonis-autopflege-goeppingen.de/",
       },
       {
         name: "Tairovic Gebäudeservice",
         branch: "Gebäudereinigung & Hausmeisterservice",
-        work: "Mehrseitige Website mit Leistungen, Galerie, Kontakt sowie Impressum und Datenschutz.",
+        goal: "Seriöser Mehrseiten-Auftritt für Gewerbe- und Privatkunden — Vertrauen schaffen und Leistungen verständlich präsentieren.",
+        implementation:
+          "Strukturierte Leistungsseiten, Referenzgalerie, Kontaktbereich sowie rechtssichere Impressum- und Datenschutzseiten — SEO-optimiert für lokale Suchanfragen.",
+        result:
+          "Vertrauenswürdiger Webauftritt, der die Vielfalt des Angebots professionell vermittelt und qualifizierte Anfragen generiert.",
         href: "https://www.tairovic-gebaeudeservice.de/",
         image: "/demo/tairovic-dark-verzija/assets/logo.webp",
         imageAlt: "Tairovic Gebäudeservice — Website-Vorschau",
@@ -148,15 +122,23 @@ const de: HomeKmuCopy = {
       {
         name: "FixBike",
         branch: "Fahrradservice",
-        work: "Übersichtliche Website mit Serviceangebot, schnellem Kontakt und mobiler Optimierung.",
+        goal: "Schnelle Service-Anfragen und maximale Nutzerfreundlichkeit für mobile Besucher in der Region.",
+        implementation:
+          "Übersichtliche Servicepräsentation, direkter Kontaktweg, mobile Optimierung und SEO-Struktur für lokale Fahrradservice-Suchen.",
+        result:
+          "Besucher finden sofort die passende Leistung und können unkompliziert Kontakt aufnehmen — weniger Absprünge, mehr Anfragen.",
         href: "https://fixbike.online/",
         image: "/Case Studio FixBike/02.png",
         imageAlt: "FixBike — Fahrradservice Website",
       },
       {
         name: "IlmBuds",
-        branch: "Bildungs-App & Online-Auftritt",
-        work: "Webauftritt und Store-Präsenz für eine mehrsprachige Bildungs-App für Familien.",
+        branch: "Bildungs-App & Online-Präsenz",
+        goal: "Professionelle App- und Web-Präsenz für eine internationale Zielgruppe — Glaubwürdigkeit und Vertrauen aufbauen.",
+        implementation:
+          "Webauftritt und Store-Präsenz für eine mehrsprachige Bildungs-App — klare Botschaft, professionelles Design und optimierte Nutzerführung.",
+        result:
+          "Glaubwürdige Online-Präsenz, die Vertrauen bei Familien und Nutzern schafft und die App-Installation unterstützt.",
         href: "https://www.ilmbuds.com/",
         image: "/portfolio/ilmbuds/02-ilmbuds-google-play-listing.png",
         imageAlt: "IlmBuds — Website und App-Präsenz",
@@ -164,444 +146,176 @@ const de: HomeKmuCopy = {
     ],
   },
   process: {
-    title: "Wie läuft die Zusammenarbeit?",
+    title: "So läuft die Zusammenarbeit ab",
     steps: [
-      "Kurzes Gespräch über Ihr Unternehmen",
-      "Vorschlag für Struktur und Inhalte",
-      "Design und Umsetzung",
-      "Korrekturen",
-      "Domain-Anbindung und Online-Veröffentlichung",
+      {
+        title: "Kostenloses Erstgespräch",
+        description:
+          "Wir besprechen Ihr Unternehmen, Ihre Ziele und was Sie von Ihrer Website erwarten — unverbindlich und persönlich.",
+      },
+      {
+        title: "Planung & Strategie",
+        description:
+          "Gemeinsam definieren wir Struktur, Inhalte und SEO-Strategie — abgestimmt auf Ihre Branche und lokale Zielgruppe in Geislingen und Umgebung.",
+      },
+      {
+        title: "Design & Entwicklung",
+        description:
+          "Professionelle Umsetzung mit modernem Design, mobile Optimierung und technischer SEO-, GEO- und AEO-Grundlage.",
+      },
+      {
+        title: "Launch & Optimierung",
+        description:
+          "Veröffentlichung auf Ihrer Domain, Feinschliff und laufende Optimierung — damit Ihre Seite von Anfang an Ergebnisse liefert.",
+      },
     ],
+  },
+  trustPartner: {
+    title: "Ihr Partner für professionelles Webdesign",
+    body: "AGR Multimedia unterstützt lokale Unternehmen in Geislingen an der Steige und der Region mit Webdesign, SEO, GEO- und AEO-Optimierung. Mein Ziel ist nicht nur eine schöne Webseite — sondern eine professionelle Online-Präsenz, die Vertrauen schafft, Sie bei Google und in KI-Suchen sichtbar macht und neue Geschäftsanfragen bringt. Ob Handwerker, Dienstleister oder Familienbetrieb: Ich helfe Ihnen, online so professionell aufzutreten, wie Sie es offline sind. Lassen Sie uns Ihre Website erstellen lassen — individuell, ergebnisorientiert und mit persönlicher Betreuung.",
   },
   finalCta: {
-    title: "Möchten Sie eine professionelle Website für Ihr Unternehmen?",
-    body: "Schreiben Sie mir — Sie erhalten eine kostenlose Einschätzung, was für Ihr Unternehmen am besten passt.",
-    button: "Kontaktieren Sie mich",
-    meta: "Kostenlose Einschätzung • Unverbindlich • Antwort innerhalb von 24h",
-  },
-};
-
-const sr: HomeKmuCopy = {
-  audience: {
-    title: "Za koga izrađujem web stranice?",
-    cards: [
-      { label: "Gebäudereinigung" },
-      { label: "Autopflege & KFZ" },
-      { label: "Handwerker & Bau" },
-      { label: "Gartenbau" },
-      { label: "Transport & Kurierdienst" },
-      { label: "Fahrradservice" },
-      { label: "Restorani i lokalne usluge" },
-      { label: "Male porodične firme" },
-    ],
-  },
-  deliverables: {
-    title: "Šta dobijate?",
-    items: [
-      "Moderna početna stranica",
-      "Stranica usluga",
-      "Kontakt forma",
-      "Google Maps integracija",
-      "WhatsApp dugme",
-      "Mobilna optimizacija",
-      "Osnovni SEO naslovi i opisi",
-      "Povezivanje sa domenom",
-      "Objavljivanje online",
-    ],
-  },
-  pricing: {
-    title: "Paketi za male firme",
-    packages: [
-      {
-        name: "Start paket",
-        price: "od 500 €",
-        description: "Jednostavna web stranica za male firme koje žele profesionalan online nastup.",
-        includes: [
-          "do 3 sekcije",
-          "mobilna verzija",
-          "kontakt forma",
-          "Google Maps",
-          "objava na domeni",
-        ],
-      },
-      {
-        name: "Business paket",
-        price: "od 900 €",
-        description: "Za firme koje žele ozbiljniji nastup i više sadržaja.",
-        includes: [
-          "do 5 stranica",
-          "usluge",
-          "galerija",
-          "kontakt",
-          "osnovni SEO",
-          "WhatsApp dugme",
-          "objava online",
-        ],
-      },
-      {
-        name: "Održavanje",
-        price: "od 30 €/mjesečno",
-        description: "Za manje izmjene, sigurnosne provjere i tehničku podršku.",
-        includes: [],
-      },
-    ],
-  },
-  portfolio: {
-    title: "Primjeri mojih radova",
-    branchLabel: "Branša",
-    workLabel: "Šta je urađeno",
-    visitLabel: "Pogledajte sajt",
-    projects: [
-      {
-        name: "Toni's Autopflege Göppingen",
-        branch: "Autopflege & KFZ",
-        work: "Moderna stranica sa uslugama, kontakt formom, WhatsApp-om i Google Maps za lokalne klijente.",
-        href: "https://www.tonis-autopflege-goeppingen.de/",
-      },
-      {
-        name: "Tairovic Gebäudeservice",
-        branch: "Gebäudereinigung",
-        work: "Višejezični sajt sa uslugama, galerijom, kontaktom te impressum i datenschutz stranicama.",
-        href: "https://www.tairovic-gebaeudeservice.de/",
-        image: "/demo/tairovic-dark-verzija/assets/logo.webp",
-        imageAlt: "Tairovic Gebäudeservice — pregled sajta",
-      },
-      {
-        name: "FixBike",
-        branch: "Fahrradservice",
-        work: "Pregledan sajt sa ponudom usluga, brzim kontaktom i mobilnom optimizacijom.",
-        href: "https://fixbike.online/",
-        image: "/Case Studio FixBike/02.png",
-        imageAlt: "FixBike — sajt za servis bicikala",
-      },
-      {
-        name: "IlmBuds",
-        branch: "Obrazovna aplikacija i web prisutnost",
-        work: "Web prisutnost i store materijali za višejezičnu obrazovnu aplikaciju za porodice.",
-        href: "https://www.ilmbuds.com/",
-        image: "/portfolio/ilmbuds/02-ilmbuds-google-play-listing.png",
-        imageAlt: "IlmBuds — web i aplikacija",
-      },
-    ],
-  },
-  process: {
-    title: "Kako izgleda saradnja?",
-    steps: [
-      "Kratak razgovor o vašoj firmi",
-      "Prijedlog strukture i sadržaja",
-      "Izrada dizajna",
-      "Korekcije",
-      "Povezivanje domene i objava online",
-    ],
-  },
-  finalCta: {
-    title: "Želite profesionalnu web stranicu za vašu firmu?",
-    body: "Pošaljite mi poruku i dobićete besplatnu procjenu šta bi bilo najbolje za vašu firmu.",
-    button: "Kontaktirajte me",
-    meta: "Besplatna procjena • Bez obaveza • Odgovor u roku od 24h",
+    title: "Bereit für eine professionelle Website?",
+    body: "Lassen Sie uns über Ihr Projekt sprechen und gemeinsam Ihre Online-Präsenz auf das nächste Niveau bringen.",
+    button: "Kostenlose Beratung anfragen",
+    meta: "Unverbindlich • Individuelles Angebot • Antwort innerhalb von 24h",
   },
 };
 
 const en: HomeKmuCopy = {
-  intro: {
-    who: "AGR Multimedia is my creative studio in Geislingen an der Steige. I'm Agron Osmani — I build websites and digital presence for small businesses, with personal support and no agency overhead.",
-    services:
-      "My focus is web design, local SEO and modern business websites: homepage, services, contact, WhatsApp and Google Maps integration.",
-    audience:
-      "I often work with trades, cleaning companies, car care businesses, landscapers and local service providers in Geislingen, Göppingen, Ulm and the surrounding area.",
-    why: "You get one direct contact, transparent packages from €500, and a site that works on mobile and shows up in local Google searches.",
-    landingLinkLabel: "More about web design in Geislingen an der Steige",
-  },
-  audience: {
-    title: "Who do I build websites for in the region?",
+  whyUs: {
+    title: "Why businesses work with AGR Multimedia",
     cards: [
-      { label: "Building cleaning" },
-      { label: "Car care & automotive" },
-      { label: "Trades & construction" },
-      { label: "Landscaping" },
-      { label: "Transport & courier" },
-      { label: "Bicycle service" },
-      { label: "Restaurants & local services" },
-      { label: "Small family businesses" },
+      {
+        title: "SEO Optimised",
+        description: "Better visibility on Google — so local customers find you when they search for your services.",
+      },
+      {
+        title: "GEO & AEO Optimised",
+        description:
+          "Visibility in AI search like ChatGPT, Google AI Overview and future search systems — your business gets recommended where customers research today.",
+      },
+      {
+        title: "Fast Delivery",
+        description: "Professional results without long waits — structured, efficient and with a clear timeline.",
+      },
+      {
+        title: "Personal Contact",
+        description: "Direct contact without agency hierarchy — one person from planning through launch.",
+      },
     ],
   },
-  deliverables: {
-    title: "What do you get?",
+  moreThanDesign: {
+    title: "More than just a beautiful website",
+    body: "A modern website is not just a design project — it is your most important tool to build trust, generate enquiries and present your business professionally online. Every site I build in Geislingen an der Steige is focused on measurable results: more visibility, more trust and more customer contacts.",
     items: [
-      "Modern homepage",
-      "Services page",
-      "Contact form",
-      "Google Maps integration",
-      "WhatsApp button",
-      "Mobile optimisation",
-      "Basic SEO titles and descriptions",
-      "Domain setup",
-      "Online launch",
-    ],
-  },
-  pricing: {
-    title: "Packages for small businesses",
-    packages: [
       {
-        name: "Start package",
-        price: "from €500",
-        description: "A simple website for small businesses that want a professional online presence.",
-        includes: [
-          "up to 3 sections",
-          "mobile version",
-          "contact form",
-          "Google Maps",
-          "launch on your domain",
-        ],
+        title: "More Visibility",
+        description: "Local SEO and structured content — so you are found on Google and in AI search.",
       },
       {
-        name: "Business package",
-        price: "from €900",
-        description: "For businesses that want a stronger presence and more content.",
-        includes: [
-          "up to 5 pages",
-          "services",
-          "gallery",
-          "contact",
-          "basic SEO",
-          "WhatsApp button",
-          "online launch",
-        ],
+        title: "More Trust",
+        description: "A professional presence that reflects the quality and reliability of your business.",
       },
       {
-        name: "Maintenance",
-        price: "from €30/month",
-        description: "Small updates, security checks and technical support.",
-        includes: [],
+        title: "More Enquiries",
+        description: "Clear structure and compelling CTAs — visitors know immediately how to reach you.",
+      },
+      {
+        title: "Mobile Optimisation",
+        description: "Perfect display on smartphone and tablet — where most customers search today.",
       },
     ],
   },
   portfolio: {
-    title: "Examples of my work",
+    title: "References — projects that deliver results",
     branchLabel: "Industry",
-    workLabel: "Delivered",
+    goalLabel: "Goal",
+    implementationLabel: "Implementation",
+    resultLabel: "Result",
     visitLabel: "View website",
-    projects: [
-      {
-        name: "Toni's Autopflege Göppingen",
-        branch: "Car care & automotive",
-        work: "Modern site with services, contact form, WhatsApp and Google Maps for local customers.",
-        href: "https://www.tonis-autopflege-goeppingen.de/",
-      },
-      {
-        name: "Tairovic Gebäudeservice",
-        branch: "Building cleaning & caretaker services",
-        work: "Multi-page site with services, gallery, contact plus legal pages (imprint & privacy).",
-        href: "https://www.tairovic-gebaeudeservice.de/",
-        image: "/demo/tairovic-dark-verzija/assets/logo.webp",
-        imageAlt: "Tairovic Gebäudeservice — website preview",
-      },
-      {
-        name: "FixBike",
-        branch: "Bicycle service",
-        work: "Clear site with service overview, fast contact and mobile optimisation.",
-        href: "https://fixbike.online/",
-        image: "/Case Studio FixBike/02.png",
-        imageAlt: "FixBike — bicycle service website",
-      },
-      {
-        name: "IlmBuds",
-        branch: "Education app & web presence",
-        work: "Web presence and store materials for a multilingual family education app.",
-        href: "https://www.ilmbuds.com/",
-        image: "/portfolio/ilmbuds/02-ilmbuds-google-play-listing.png",
-        imageAlt: "IlmBuds — website and app presence",
-      },
-    ],
+    projects: [],
   },
   process: {
-    title: "How does working together look?",
+    title: "How working together works",
     steps: [
-      "Short call about your business",
-      "Proposal for structure and content",
-      "Design and build",
-      "Revisions",
-      "Domain setup and online launch",
+      {
+        title: "Free initial consultation",
+        description: "We discuss your business, goals and what you expect from your website — no obligation.",
+      },
+      {
+        title: "Planning & strategy",
+        description: "Together we define structure, content and SEO strategy — tailored to your industry and local audience.",
+      },
+      {
+        title: "Design & development",
+        description: "Professional build with modern design, mobile optimisation and technical SEO, GEO and AEO foundation.",
+      },
+      {
+        title: "Launch & optimisation",
+        description: "Publication on your domain, fine-tuning and ongoing optimisation — so your site delivers results from day one.",
+      },
     ],
   },
+  trustPartner: {
+    title: "Your partner for professional web design",
+    body: "AGR Multimedia supports local businesses in Geislingen an der Steige and the region with web design, SEO, GEO and AEO optimisation. My goal is not just a beautiful website — but a professional online presence that builds trust, makes you visible on Google and in AI search, and brings new business enquiries.",
+  },
   finalCta: {
-    title: "Want a professional website for your business?",
-    body: "Send me a message and get a free assessment of what would work best for your company.",
-    button: "Contact me",
-    meta: "Free assessment • No obligation • Reply within 24h",
+    title: "Ready for a professional website?",
+    body: "Let's talk about your project and take your online presence to the next level together.",
+    button: "Request a free consultation",
+    meta: "No obligation • Individual quote • Reply within 24h",
   },
 };
 
-const it: HomeKmuCopy = {
-  ...en,
-  audience: {
-    title: "Per chi realizzo siti web?",
-    cards: [
-      { label: "Pulizia edifici" },
-      { label: "Autolavaggio & auto" },
-      { label: "Artigiani & edilizia" },
-      { label: "Giardinaggio" },
-      { label: "Trasporti & corriere" },
-      { label: "Servizio biciclette" },
-      { label: "Ristoranti e servizi locali" },
-      { label: "Piccole imprese familiari" },
-    ],
-  },
-  deliverables: {
-    title: "Cosa ricevete?",
-    items: en.deliverables.items.map((item) => item),
-  },
-  pricing: {
-    title: "Pacchetti per piccole imprese",
-    packages: [
-      {
-        name: "Pacchetto Start",
-        price: "da 500 €",
-        description: "Sito semplice per piccole imprese che vogliono una presenza online professionale.",
-        includes: [
-          "fino a 3 sezioni",
-          "versione mobile",
-          "modulo contatti",
-          "Google Maps",
-          "pubblicazione sul dominio",
-        ],
-      },
-      {
-        name: "Pacchetto Business",
-        price: "da 900 €",
-        description: "Per imprese che vogliono una presenza più solida e più contenuti.",
-        includes: [
-          "fino a 5 pagine",
-          "servizi",
-          "galleria",
-          "contatti",
-          "SEO di base",
-          "pulsante WhatsApp",
-          "pubblicazione online",
-        ],
-      },
-      {
-        name: "Manutenzione",
-        price: "da 30 €/mese",
-        description: "Piccole modifiche, controlli di sicurezza e supporto tecnico.",
-        includes: [],
-      },
-    ],
-  },
-  portfolio: {
-    ...en.portfolio,
-    title: "Esempi dei miei lavori",
-    branchLabel: "Settore",
-    workLabel: "Realizzato",
-    visitLabel: "Vedi il sito",
-  },
-  process: {
-    title: "Come funziona la collaborazione?",
-    steps: [
-      "Breve conversazione sulla vostra attività",
-      "Proposta di struttura e contenuti",
-      "Design e realizzazione",
-      "Correzioni",
-      "Collegamento dominio e pubblicazione online",
-    ],
-  },
-  finalCta: {
-    title: "Volete un sito professionale per la vostra attività?",
-    body: "Scrivetemi — riceverete una valutazione gratuita su cosa conviene alla vostra impresa.",
-    button: "Contattatemi",
-    meta: "Valutazione gratuita • Senza impegno • Risposta entro 24h",
-  },
-};
-
-const al: HomeKmuCopy = {
-  ...en,
-  audience: {
-    title: "Për kë krijoj faqe web?",
-    cards: [
-      { label: "Pastrim ndërtesash" },
-      { label: "Kujdes automjeti & KFZ" },
-      { label: "Zanate & ndërtim" },
-      { label: "Kopshtari" },
-      { label: "Transport & korrier" },
-      { label: "Servis biçikletash" },
-      { label: "Restorante dhe shërbime lokale" },
-      { label: "Biznese të vogla familjare" },
-    ],
-  },
-  deliverables: {
-    title: "Çfarë merrni?",
-    items: [
-      "Faqe kryesore moderne",
-      "Faqe shërbimesh",
-      "Formular kontakti",
-      "Integrim Google Maps",
-      "Buton WhatsApp",
-      "Optimizim mobil",
-      "SEO bazë: tituj dhe përshkrime",
-      "Lidhje me domenin",
-      "Publikim online",
-    ],
-  },
-  pricing: {
-    title: "Paketa për biznese të vogla",
-    packages: [
-      {
-        name: "Paketa Start",
-        price: "nga 500 €",
-        description: "Faqe e thjeshtë për biznese të vogla që duan prani profesionale online.",
-        includes: [
-          "deri në 3 seksione",
-          "version mobil",
-          "formular kontakti",
-          "Google Maps",
-          "publikim në domen",
-        ],
-      },
-      {
-        name: "Paketa Business",
-        price: "nga 900 €",
-        description: "Për firmat që duan prani më serioze dhe më shumë përmbajtje.",
-        includes: [
-          "deri në 5 faqe",
-          "shërbime",
-          "galeri",
-          "kontakt",
-          "SEO bazë",
-          "buton WhatsApp",
-          "publikim online",
-        ],
-      },
-      {
-        name: "Mirëmbajtje",
-        price: "nga 30 €/muaj",
-        description: "Ndryshime të vogla, kontrolle sigurie dhe mbështetje teknike.",
-        includes: [],
-      },
-    ],
-  },
-  portfolio: {
-    ...en.portfolio,
-    title: "Shembuj të punëve të mia",
-    branchLabel: "Sektori",
-    workLabel: "Çfarë u bë",
-    visitLabel: "Shiko faqen",
-  },
-  process: {
-    title: "Si duket bashkëpunimi?",
-    steps: [
-      "Bisedë e shkurtër për biznesin tuaj",
-      "Propozim strukture dhe përmbajtjeje",
-      "Dizajn dhe realizim",
-      "Korrigjime",
-      "Lidhje domeni dhe publikim online",
-    ],
-  },
-  finalCta: {
-    title: "Dëshironi një faqe profesionale për biznesin tuaj?",
-    body: "Më shkruani — do të merrni një vlerësim falas për çfarë i përshtatet firmës suaj.",
-    button: "Më kontaktoni",
-    meta: "Vlerësim falas • Pa detyrim • Përgjigje brenda 24 orëve",
-  },
+// English portfolio with translated project descriptions
+en.portfolio = {
+  ...en.portfolio,
+  projects: [
+    {
+      name: "Toni's Autopflege Göppingen",
+      branch: "Car care & automotive",
+      goal: "More local customer enquiries and a professional online presence that conveys quality and trust.",
+      implementation:
+        "Modern website with clear service overview, contact form, WhatsApp button and Google Maps — optimised for mobile users in the Göppingen area.",
+      result: "Clear presentation of all services, easy contact and stronger local presence in Google searches for car care.",
+      href: "https://www.tonis-autopflege-goeppingen.de/",
+    },
+    {
+      name: "Tairovic Gebäudeservice",
+      branch: "Building cleaning & caretaker services",
+      goal: "A serious multi-page presence for commercial and private clients — building trust and presenting services clearly.",
+      implementation:
+        "Structured service pages, reference gallery, contact area plus compliant legal pages — SEO-optimised for local search queries.",
+      result: "Trustworthy web presence that professionally communicates the range of services and generates qualified enquiries.",
+      href: "https://www.tairovic-gebaeudeservice.de/",
+      image: "/demo/tairovic-dark-verzija/assets/logo.webp",
+      imageAlt: "Tairovic Gebäudeservice — website preview",
+    },
+    {
+      name: "FixBike",
+      branch: "Bicycle service",
+      goal: "Fast service enquiries and maximum usability for mobile visitors in the region.",
+      implementation:
+        "Clear service presentation, direct contact path, mobile optimisation and SEO structure for local bicycle service searches.",
+      result: "Visitors find the right service immediately and can contact you easily — fewer bounces, more enquiries.",
+      href: "https://fixbike.online/",
+      image: "/Case Studio FixBike/02.png",
+      imageAlt: "FixBike — bicycle service website",
+    },
+    {
+      name: "IlmBuds",
+      branch: "Education app & online presence",
+      goal: "Professional app and web presence for an international audience — building credibility and trust.",
+      implementation:
+        "Web presence and store materials for a multilingual education app — clear message, professional design and optimised user flow.",
+      result: "Credible online presence that builds trust with families and users and supports app installs.",
+      href: "https://www.ilmbuds.com/",
+      image: "/portfolio/ilmbuds/02-ilmbuds-google-play-listing.png",
+      imageAlt: "IlmBuds — website and app presence",
+    },
+  ],
 };
 
 const COPY: Partial<Record<Language, HomeKmuCopy>> = { de, en };

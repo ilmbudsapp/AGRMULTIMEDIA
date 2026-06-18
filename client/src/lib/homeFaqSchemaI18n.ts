@@ -18,15 +18,15 @@ const FAQ_BY_LANG: Record<Language, FaqPair[]> = {
     },
     {
       q: "Was kostet eine Website?",
-      a: "Start-Paket ab 500 € für eine einfache Seite, Business-Paket ab 900 € für mehr Seiten und Inhalte, Wartung ab 30 €/Monat für kleine Änderungen und Support. Den genauen Umfang klären wir nach einem kurzen Gespräch.",
+      a: "Jedes Projekt ist individuell. Nach einem kostenlosen Erstgespräch erhalten Sie ein persönliches Angebot — ohne Festpreise auf der Website. So stimmen Umfang, Leistungen und Investition genau auf Ihr Unternehmen ab.",
     },
     {
       q: "Wie läuft die Zusammenarbeit?",
-      a: "Kurzes Gespräch, Strukturvorschlag, Design und Umsetzung, Korrekturen, dann Domain-Anbindung und Veröffentlichung. Antwort auf Anfragen meist innerhalb von 24 Stunden.",
+      a: "Kostenloses Erstgespräch, Planung und Strategie, Design und Entwicklung, dann Launch und Optimierung. Antwort auf Anfragen meist innerhalb von 24 Stunden.",
     },
     {
-      q: "Ist lokales SEO für Google-Suchen enthalten?",
-      a: "Ja — die Pakete umfassen klare Titel, Beschreibungen und Seitenstruktur für lokale Google-Suchen in Geislingen, Göppingen und der Umgebung.",
+      q: "Was ist SEO, GEO und AEO?",
+      a: "SEO optimiert Ihre Website für Google-Suchen in Geislingen und der Region. GEO und AEO sorgen zusätzlich dafür, dass Ihr Unternehmen in KI-Suchen wie ChatGPT und Google AI Overview gefunden und empfohlen wird.",
     },
   ],
   en: [
@@ -44,15 +44,15 @@ const FAQ_BY_LANG: Record<Language, FaqPair[]> = {
     },
     {
       q: "How much does a website cost?",
-      a: "Start package from €500 for a simple site, Business package from €900 for more pages and content, and maintenance from €30/month for small updates and support.",
+      a: "Every project is individual. After a free initial consultation you receive a personal quote — no fixed prices on the website.",
     },
     {
       q: "What does working together look like?",
-      a: "Short call about your business, structure proposal, design and build, revisions, then domain setup and launch. We usually reply within 24 hours.",
+      a: "Free initial consultation, planning and strategy, design and development, then launch and optimisation. We usually reply within 24 hours.",
     },
     {
-      q: "Is local SEO for Google searches included?",
-      a: "Yes — packages include clear titles, descriptions and page structure aimed at local Google searches in Geislingen, Göppingen and the surrounding area.",
+      q: "What is SEO, GEO and AEO?",
+      a: "SEO optimises your site for Google searches. GEO and AEO ensure your business is also found and recommended in AI search like ChatGPT and Google AI Overview.",
     },
   ],
 };

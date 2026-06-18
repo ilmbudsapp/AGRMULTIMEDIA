@@ -410,9 +410,9 @@ const de: SpecTranslations = {
     availableIn: 'DE · EN',
   },
   seo: {
-    title: "Webdesign Geislingen an der Steige | Websites für lokale Firmen — AGR Multimedia",
+    title: "Webdesign Geislingen – Websites, die neue Kunden bringen | AGR Multimedia",
     description:
-      "Webdesign Geislingen an der Steige: professionelle Websites für Handwerk, Dienstleister & KMU — responsive, SEO-optimiert, ab 500 €. Kostenlose Einschätzung: agron6922@gmail.com",
+      "Webdesign Geislingen an der Steige: professionelle Websites für Handwerker, lokale Unternehmen und Dienstleister — SEO, GEO und AEO optimiert. Kostenlose Beratung: agron6922@gmail.com",
   },
   heroProjects: {
     heading: 'Ausgewählte Projekte',

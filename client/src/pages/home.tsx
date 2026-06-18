@@ -3,12 +3,11 @@ import Hero from "@/components/Hero";
 import HomeFaqJsonLd from "@/components/HomeFaqJsonLd";
 import HomeLocalBusinessJsonLd from "@/components/HomeLocalBusinessJsonLd";
 import {
-  HomeKmuIntro,
-  HomeKmuAudience,
-  HomeKmuDeliverables,
-  HomeKmuPricing,
+  HomeKmuWhyUs,
+  HomeKmuMoreThanDesign,
   HomeKmuPortfolio,
   HomeKmuProcess,
+  HomeKmuTrustPartner,
   HomeKmuFinalCta,
 } from "@/components/HomeKmuSections";
 import Contact from "@/components/Contact";
@@ -24,12 +23,11 @@ export default function Home() {
       <Navigation />
       <main id="main-content" aria-label={MAIN_LANDMARK_LABEL[currentLanguage]}>
         <Hero />
-        <HomeKmuIntro />
-        <HomeKmuAudience />
-        <HomeKmuDeliverables />
-        <HomeKmuPricing />
+        <HomeKmuWhyUs />
+        <HomeKmuMoreThanDesign />
         <HomeKmuPortfolio />
         <HomeKmuProcess />
+        <HomeKmuTrustPartner />
         <HomeKmuFinalCta />
         <Contact />
         <HomeFaqJsonLd />

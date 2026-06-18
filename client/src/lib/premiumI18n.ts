@@ -87,19 +87,13 @@ type PremiumTranslations = {
 
 const en: PremiumTranslations = {
   hero: {
-    heading: "Web design Geislingen an der Steige — websites for local businesses",
+    heading: "Web design Geislingen — websites that bring new customers",
     subheading:
-      "AGR Multimedia: I build professional websites for trades, service providers and small businesses in Geislingen, Göppingen and the region — with SEO, mobile optimisation and personal support.",
-    bullets: [
-      "Web design for trades, car care, cleaning & local services",
-      "Responsive design and fast load times",
-      "Local SEO for Google searches in the region",
-      "Contact form, WhatsApp and Google Maps",
-      "Clear pricing from €500 — one direct contact person",
-    ],
-    primaryCta: "Request a free assessment",
-    secondaryCta: "View my work",
-    ctaMeta: "Free assessment • No obligation • Response within 24h",
+      "Modern websites for trades, local businesses and service providers. SEO, GEO and AEO optimised for Google and AI search.",
+    bullets: [],
+    primaryCta: "Free consultation",
+    secondaryCta: "View references",
+    ctaMeta: "No obligation • Individual quote • Response within 24h",
   },
   optimizationExcellence: {
     eyebrow: "AI & search optimization",
@@ -208,19 +202,13 @@ const en: PremiumTranslations = {
 
 const de: PremiumTranslations = {
   hero: {
-    heading: "Webdesign Geislingen an der Steige — Websites für lokale Firmen",
+    heading: "Webdesign Geislingen – Websites, die neue Kunden bringen",
     subheading:
-      "AGR Multimedia: Ich erstelle professionelle Websites für Handwerker, Dienstleister und kleine Unternehmen in Geislingen, Göppingen und der Region — mit SEO, mobil optimiert und persönlicher Betreuung.",
-    bullets: [
-      "Webdesign für Zanate, Autopflege, Reinigung & lokale Dienstleister",
-      "Responsive Design und schnelle Ladezeiten",
-      "Lokales SEO für Google-Suchen in der Region",
-      "Kontaktformular, WhatsApp und Google Maps",
-      "Klare Preise ab 500 € — persönlicher Ansprechpartner",
-    ],
-    primaryCta: "Kostenlose Einschätzung anfordern",
+      "Moderne Webseiten für Handwerker, lokale Unternehmen und Dienstleister. SEO-, GEO- und AEO-optimiert für Google und KI-Suchen.",
+    bullets: [],
+    primaryCta: "Kostenlose Beratung",
     secondaryCta: "Referenzen ansehen",
-    ctaMeta: "Kostenlose Einschätzung • Unverbindlich • Antwort innerhalb von 24h",
+    ctaMeta: "Unverbindlich • Individuelles Angebot • Antwort innerhalb von 24h",
   },
   optimizationExcellence: {
     eyebrow: "KI- & Suchoptimierung",
