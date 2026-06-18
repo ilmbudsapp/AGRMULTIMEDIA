@@ -86,8 +86,10 @@
       --glass: blur(20px) saturate(160%);
       --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
       --font-display: "Playfair Display", Georgia, serif;
-      --header-h: 76px;
+      --demo-bar-h: 38px;
+      --header-h: 72px;
       --ease: cubic-bezier(0.22, 1, 0.36, 1);
+      --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
       --max: 1200px;
     }
 
@@ -117,6 +119,30 @@
     }
     .skip-link:focus { left: 16px; }
 
+    .demo-bar {
+      position: fixed; inset: 0 0 auto 0; z-index: 110; height: var(--demo-bar-h);
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      padding: 0 16px; text-align: center;
+      background: linear-gradient(90deg, rgba(225,29,46,0.22), rgba(255,255,255,0.06), rgba(225,29,46,0.22));
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      font-size: 0.74rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+      color: #f3f3f3;
+    }
+    .demo-bar a {
+      color: #fff; font-weight: 800; text-decoration: underline; text-underline-offset: 3px;
+      transition: color 0.25s, text-shadow 0.25s;
+    }
+    .demo-bar a:hover { color: #ffd0d5; text-shadow: 0 0 18px rgba(255,255,255,0.35); }
+    .demo-bar__pulse {
+      width: 7px; height: 7px; border-radius: 50%; background: var(--accent);
+      box-shadow: 0 0 14px var(--accent); animation: demoPulse 2s ease-in-out infinite;
+    }
+    @keyframes demoPulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.35); opacity: 0.65; }
+    }
+
     .ambient {
       position: fixed; inset: 0; z-index: -2; pointer-events: none;
       background:
@@ -143,7 +169,7 @@
 
     /* Header */
     .header {
-      position: fixed; inset: 0 0 auto 0; z-index: 100; height: var(--header-h);
+      position: fixed; top: var(--demo-bar-h); left: 0; right: 0; z-index: 100; height: var(--header-h);
       border-bottom: 1px solid transparent;
       transition: background 0.4s var(--ease), border-color 0.4s var(--ease), backdrop-filter 0.4s;
     }
@@ -205,7 +231,7 @@
     .menu-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
     .mobile-nav {
-      display: none; position: fixed; inset: var(--header-h) 0 0 0; z-index: 99;
+      display: none; position: fixed; inset: calc(var(--demo-bar-h) + var(--header-h)) 0 0 0; z-index: 99;
       padding: 24px; background: rgba(7,7,7,0.96); backdrop-filter: var(--glass);
       flex-direction: column; gap: 8px; border-top: 1px solid var(--border);
     }
@@ -219,7 +245,7 @@
     /* Hero */
     .hero {
       position: relative; min-height: 100svh; display: flex; align-items: center;
-      padding: calc(var(--header-h) + 48px) 0 80px; overflow: hidden;
+      padding: calc(var(--demo-bar-h) + var(--header-h) + 48px) 0 80px; overflow: hidden;
     }
     .hero__video-wrap {
       position: absolute; inset: 0; z-index: -1;
@@ -270,24 +296,44 @@
     .stat strong { display: block; font-size: 1.1rem; margin-bottom: 4px; }
     .stat span { font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
 
-    .hero__visual { position: relative; }
-    .hero__card {
-      padding: 28px; border-radius: var(--radius-xl); position: relative;
+    .hero__visual { position: relative; perspective: 1200px; }
+    .hero__food-frame {
+      position: relative; border-radius: var(--radius-xl); overflow: hidden;
       transform-style: preserve-3d; will-change: transform;
+      box-shadow: 0 40px 100px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.08);
     }
-    .hero__card-glow {
-      position: absolute; inset: -1px; border-radius: inherit; z-index: -1;
-      background: linear-gradient(135deg, rgba(225,29,46,0.5), transparent 40%, rgba(255,255,255,0.12));
-      opacity: 0.8;
+    .hero__food-frame::before {
+      content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+      background: linear-gradient(180deg, transparent 55%, rgba(7,7,7,0.55) 100%);
     }
-    .hero__logo {
-      width: min(100%, 360px); margin: 0 auto;
-      filter: drop-shadow(0 30px 60px rgba(225,29,46,0.25));
+    .hero__food-frame::after {
+      content: ""; position: absolute; inset: -1px; border-radius: inherit; z-index: -1;
+      background: linear-gradient(135deg, rgba(225,29,46,0.55), transparent 45%, rgba(255,255,255,0.1));
+      filter: blur(1px);
     }
-    .hero__badge-float {
-      position: absolute; right: -8px; bottom: 24px;
-      padding: 12px 18px; border-radius: 16px; font-weight: 700; font-size: 0.9rem;
-      background: rgba(225,29,46,0.92); box-shadow: 0 16px 40px rgba(0,0,0,0.4);
+    .hero__food-img {
+      width: 100%; aspect-ratio: 4/5; object-fit: cover;
+      transform: scale(1.02); transition: transform 8s var(--ease-out-expo);
+    }
+    .hero__food-frame:hover .hero__food-img { transform: scale(1.08); }
+    .hero__halal-stamp {
+      position: absolute; right: 18px; bottom: 18px; z-index: 2;
+      width: clamp(88px, 22vw, 128px); height: auto;
+      filter: drop-shadow(0 12px 28px rgba(0,0,0,0.55));
+      animation: stampFloat 4.5s ease-in-out infinite;
+    }
+    @keyframes stampFloat {
+      0%, 100% { transform: translateY(0) rotate(-4deg); }
+      50% { transform: translateY(-8px) rotate(2deg); }
+    }
+    .hero__shine {
+      position: absolute; inset: 0; z-index: 1; pointer-events: none;
+      background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.14) 50%, transparent 60%);
+      transform: translateX(-120%); animation: heroShine 5s ease-in-out infinite;
+    }
+    @keyframes heroShine {
+      0%, 70% { transform: translateX(-120%); }
+      100% { transform: translateX(120%); }
     }
 
     /* Sections */
@@ -468,12 +514,44 @@
     .whatsapp:hover { transform: scale(1.06); }
     .whatsapp svg { width: 30px; height: 30px; fill: currentColor; }
 
-    /* Reveal */
+    /* Reveal + cinematic sections */
     .reveal {
-      opacity: 0; transform: translateY(32px);
-      transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+      opacity: 0; transform: translateY(40px) scale(0.98);
+      transition: opacity 1s var(--ease-out-expo), transform 1s var(--ease-out-expo), filter 1s var(--ease-out-expo);
+      filter: blur(8px);
     }
-    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+    .reveal.is-visible { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+    .reveal.is-fading-out { opacity: 0.2; transform: translateY(-28px) scale(0.985); filter: blur(5px); }
+
+    .section-cinema {
+      position: relative;
+      opacity: 0; transform: translateY(90px) scale(0.94);
+      filter: blur(14px);
+      transition: opacity 1.35s var(--ease-out-expo), transform 1.35s var(--ease-out-expo), filter 1.35s var(--ease-out-expo);
+      will-change: opacity, transform, filter;
+    }
+    .section-cinema.is-entered {
+      opacity: 1; transform: translateY(0) scale(1); filter: blur(0);
+    }
+    .section-cinema.is-leaving {
+      opacity: 0.18; transform: translateY(-50px) scale(0.97); filter: blur(10px);
+    }
+    .section-cinema::before {
+      content: ""; position: absolute; left: 8%; right: 8%; top: 0; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.22), transparent);
+      opacity: 0; transform: scaleX(0.2);
+      transition: opacity 1s, transform 1.2s var(--ease-out-expo);
+    }
+    .section-cinema.is-entered::before { opacity: 1; transform: scaleX(1); }
+
+    .products .product-card.reveal:nth-child(1) { transition-delay: 0.05s; }
+    .products .product-card.reveal:nth-child(2) { transition-delay: 0.12s; }
+    .products .product-card.reveal:nth-child(3) { transition-delay: 0.19s; }
+    .products .product-card.reveal:nth-child(4) { transition-delay: 0.26s; }
+    .products .product-card.reveal:nth-child(5) { transition-delay: 0.33s; }
+    .products .product-card.reveal:nth-child(6) { transition-delay: 0.4s; }
+
+    .product-card__media img { width: 100%; height: 100%; object-fit: cover; }
 
     /* Parallax layers */
     [data-parallax] { will-change: transform; }
@@ -502,6 +580,11 @@
   <a class="skip-link" href="#main">Zum Inhalt springen</a>
   <div class="ambient" aria-hidden="true"></div>
   <div class="grain" aria-hidden="true"></div>
+
+  <div class="demo-bar" role="note" aria-label="Demo Hinweis">
+    <span class="demo-bar__pulse" aria-hidden="true"></span>
+    <span>Demo-Version · Webseite erstellt von <a href="https://www.agrmultimedia.eu" target="_blank" rel="noopener noreferrer">AGRMULTIMEDIA</a></span>
+  </div>
 
   <header class="header" id="header">
     <div class="container header__inner">
@@ -579,16 +662,16 @@
         </div>
 
         <div class="hero__visual reveal" data-parallax="0.08">
-          <div class="hero__card glass" id="hero-card">
-            <div class="hero__card-glow" aria-hidden="true"></div>
-            <img class="hero__logo" src="assets/logo.png" alt="Fleischerei Berisha Logo" width="360" height="360">
-            <div class="hero__badge-float">Premium Qualität</div>
+          <div class="hero__food-frame glass" id="hero-card">
+            <div class="hero__shine" aria-hidden="true"></div>
+            <img class="hero__food-img" src="assets/hero-cevap.webp" alt="Frische Cevapcici – Hausgemachte Halal-Spezialität" width="640" height="800" fetchpriority="high">
+            <img class="hero__halal-stamp" src="assets/halal-seal.webp" alt="Halal Food Certified" width="128" height="128">
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="produkte" aria-labelledby="products-title">
+    <section class="section section-cinema" id="produkte" aria-labelledby="products-title" data-section-anim>
       <div class="container">
         <div class="section__head reveal">
           <span class="section__label">Sortiment</span>
@@ -599,7 +682,7 @@
         <div class="products">
           <article class="product-card glass reveal">
             <div class="product-card__media">
-              <img class="product-card__sprite" src="assets/flyer-products.jpg" alt="Pleskavica / Qifte – hausgemachte Fleischspezialität" style="object-position: 18% 72%; transform: scale(2.8);" width="800" height="600" loading="lazy">
+              <img src="assets/product-pleskavica.webp" alt="Pleskavica / Qifte – hausgemachte Fleischspezialität" width="800" height="600" loading="lazy">
               <span class="product-card__price">ab 12€</span>
             </div>
             <div class="product-card__body">
@@ -611,7 +694,7 @@
 
           <article class="product-card glass reveal">
             <div class="product-card__media">
-              <img class="product-card__sprite" src="assets/flyer-products.jpg" alt="Cevapcici / Qebap – würzige Halal-Spezialität" style="object-position: 50% 72%; transform: scale(2.8);" width="800" height="600" loading="lazy">
+              <img src="assets/product-cevapcici.webp" alt="Cevapcici / Qebap – würzige Halal-Spezialität" width="800" height="600" loading="lazy">
               <span class="product-card__price">ab 12€</span>
             </div>
             <div class="product-card__body">
@@ -623,7 +706,7 @@
 
           <article class="product-card glass reveal">
             <div class="product-card__media">
-              <img class="product-card__sprite" src="assets/flyer-products.jpg" alt="Virshle That – feine Halal-Würstchen" style="object-position: 82% 72%; transform: scale(2.8);" width="800" height="600" loading="lazy">
+              <img src="assets/product-virshle.webp" alt="Virshle That – feine Halal-Würstchen" width="800" height="600" loading="lazy">
               <span class="product-card__price">14€</span>
             </div>
             <div class="product-card__body">
@@ -634,7 +717,7 @@
 
           <article class="product-card glass reveal">
             <div class="product-card__media">
-              <img class="product-card__sprite" src="assets/flyer-feiern.jpg" alt="Adana Kebab – gewürztes Hackfleisch" style="object-position: 25% 58%; transform: scale(2.4);" width="800" height="600" loading="lazy">
+              <img src="assets/product-adana.webp" alt="Adana Kebab – gewürztes Hackfleisch" width="800" height="600" loading="lazy">
               <span class="product-card__price">ab 12€</span>
             </div>
             <div class="product-card__body">
@@ -646,7 +729,7 @@
 
           <article class="product-card glass reveal">
             <div class="product-card__media">
-              <img class="product-card__sprite" src="assets/flyer-feiern.jpg" alt="Mish Terun – ausgewählte Fleischstücke" style="object-position: 75% 58%; transform: scale(2.4);" width="800" height="600" loading="lazy">
+              <img src="assets/product-mish-terun.webp" alt="Mish Terun – ausgewählte Fleischstücke" width="800" height="600" loading="lazy">
               <span class="product-card__price">25€</span>
             </div>
             <div class="product-card__body">
@@ -657,7 +740,7 @@
 
           <article class="product-card glass reveal">
             <div class="product-card__media">
-              <img class="product-card__sprite" src="assets/flyer-feiern.jpg" alt="Suchuk Shpis – traditionelle Wurstspezialität" style="object-position: 50% 82%; transform: scale(2.4);" width="800" height="600" loading="lazy">
+              <img src="assets/product-sucuk.webp" alt="Suchuk Shpis – traditionelle Sudžuk-Wurstspezialität" width="800" height="600" loading="lazy">
               <span class="product-card__price">15€</span>
             </div>
             <div class="product-card__body">
@@ -669,7 +752,7 @@
       </div>
     </section>
 
-    <section class="section" id="ueber-uns" aria-labelledby="about-title">
+    <section class="section section-cinema" id="ueber-uns" aria-labelledby="about-title" data-section-anim>
       <div class="container about">
         <div class="about__media reveal" data-parallax="0.06">
           <img src="assets/meat-hero.jpg" alt="Frisches Halal-Fleisch bei Fleischerei Berisha" width="800" height="600" loading="lazy">
@@ -698,7 +781,7 @@
       </div>
     </section>
 
-    <section class="section section--tight" id="galerie" aria-labelledby="gallery-title">
+    <section class="section section--tight section-cinema" id="galerie" aria-labelledby="gallery-title" data-section-anim>
       <div class="container">
         <div class="section__head reveal">
           <span class="section__label">Einblicke</span>
@@ -707,26 +790,26 @@
         </div>
         <div class="gallery">
           <figure class="gallery__item gallery__item--1 glass reveal">
-            <img src="assets/flyer-products.jpg" alt="Produktübersicht Fleischerei Berisha Kamen" width="900" height="600" loading="lazy">
-            <figcaption class="gallery__caption">Sortiment Kamen</figcaption>
+            <img src="assets/product-pleskavica.webp" alt="Pleskavica – hausgemacht" width="900" height="600" loading="lazy">
+            <figcaption class="gallery__caption">Pleskavica</figcaption>
           </figure>
           <figure class="gallery__item gallery__item--2 glass reveal">
-            <img src="assets/meat-hero.jpg" alt="Premium Halal-Fleisch auf Edelstahlblech" width="700" height="600" loading="lazy">
-            <figcaption class="gallery__caption">Premium Frische</figcaption>
+            <img src="assets/product-cevapcici.webp" alt="Cevapcici – frisch zubereitet" width="700" height="600" loading="lazy">
+            <figcaption class="gallery__caption">Cevapcici</figcaption>
           </figure>
           <figure class="gallery__item gallery__item--3 glass reveal">
-            <img src="assets/flyer-feiern.jpg" alt="Feiertagsangebot Fleischerei Berisha" width="700" height="500" loading="lazy">
-            <figcaption class="gallery__caption">Feiertage</figcaption>
+            <img src="assets/product-sucuk.webp" alt="Suchuk Shpis – Sudžuk" width="700" height="500" loading="lazy">
+            <figcaption class="gallery__caption">Suchuk / Sudžuk</figcaption>
           </figure>
           <figure class="gallery__item gallery__item--4 glass reveal">
-            <img src="assets/flyer-bremen.jpg" alt="Mobile Theke Bremen – Fleischerei Berisha" width="900" height="500" loading="lazy">
-            <figcaption class="gallery__caption">Bremen · Mobile Theke</figcaption>
+            <img src="assets/flyer-lehrte.jpg" alt="Mobile Theke Lehrte – Fleischerei Berisha" width="900" height="500" loading="lazy">
+            <figcaption class="gallery__caption">Lehrte · Mobile Theke</figcaption>
           </figure>
         </div>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="reviews-title">
+    <section class="section section-cinema" aria-labelledby="reviews-title" data-section-anim>
       <div class="container">
         <div class="section__head reveal">
           <span class="section__label">Stimmen</span>
@@ -752,7 +835,7 @@
       </div>
     </section>
 
-    <section class="section section--tight" id="faq" aria-labelledby="faq-title">
+    <section class="section section--tight section-cinema" id="faq" aria-labelledby="faq-title" data-section-anim>
       <div class="container">
         <div class="section__head reveal">
           <span class="section__label">FAQ</span>
@@ -799,7 +882,7 @@
       </div>
     </section>
 
-    <section class="section section--tight" id="vorbestellung" aria-labelledby="cta-title">
+    <section class="section section--tight section-cinema" id="vorbestellung" aria-labelledby="cta-title" data-section-anim>
       <div class="container reveal">
         <div class="cta-band glass">
           <h2 id="cta-title">Vorbestellen &amp; Abholen</h2>
@@ -815,7 +898,7 @@
       </div>
     </section>
 
-    <section class="section" id="kontakt" aria-labelledby="contact-title">
+    <section class="section section-cinema" id="kontakt" aria-labelledby="contact-title" data-section-anim>
       <div class="container contact">
         <div class="contact__card glass reveal">
           <h2 id="contact-title">Kontakt</h2>
@@ -890,17 +973,40 @@
 
       if (!prefersReduced && "IntersectionObserver" in window) {
         var reveals = document.querySelectorAll(".reveal");
-        var io = new IntersectionObserver(function (entries) {
+        var revealIO = new IntersectionObserver(function (entries) {
           entries.forEach(function (entry) {
             if (entry.isIntersecting) {
               entry.target.classList.add("is-visible");
-              io.unobserve(entry.target);
+              entry.target.classList.remove("is-fading-out");
+            } else if (entry.boundingClientRect.top < 0) {
+              entry.target.classList.add("is-fading-out");
             }
           });
-        }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
-        reveals.forEach(function (el) { io.observe(el); });
+        }, { threshold: [0, 0.18], rootMargin: "0px 0px -8% 0px" });
+        reveals.forEach(function (el) { revealIO.observe(el); });
+
+        var cinemaSections = document.querySelectorAll("[data-section-anim]");
+        var sectionIO = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            var el = entry.target;
+            if (entry.isIntersecting) {
+              el.classList.add("is-entered");
+              el.classList.remove("is-leaving");
+            } else {
+              el.classList.remove("is-entered");
+              if (entry.boundingClientRect.top < 0) {
+                el.classList.add("is-leaving");
+              } else {
+                el.classList.remove("is-leaving");
+              }
+            }
+          });
+        }, { threshold: [0, 0.2, 0.45], rootMargin: "-12% 0px -12% 0px" });
+        cinemaSections.forEach(function (el) { sectionIO.observe(el); });
       } else {
-        document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("is-visible"); });
+        document.querySelectorAll(".reveal, [data-section-anim]").forEach(function (el) {
+          el.classList.add("is-visible", "is-entered");
+        });
       }
 
       document.querySelectorAll(".faq__question").forEach(function (btn) {
