@@ -195,7 +195,7 @@ const en: SpecTranslations = {
   seo: {
     title: "Web design Geislingen an der Steige | Local business websites — AGR Multimedia",
     description:
-      "Web design in Geislingen an der Steige: professional websites for trades and SMEs — responsive, SEO-ready, from €500. Free assessment: agron6922@gmail.com",
+      "Web design in Geislingen an der Steige: professional websites for trades and SMEs — responsive, SEO-ready. Individual quote after a free consultation: agron6922@gmail.com",
   },
   heroProjects: {
     heading: 'Featured projects',
@@ -326,7 +326,7 @@ const en: SpecTranslations = {
     button: 'Send a message',
   },
   servicesPage: {
-    intro: 'All services are grouped into three clear packages so you can quickly see how I can support your business with AI, video and web.',
+    intro: 'All services are clearly structured — after an initial consultation you receive an individual quote tailored to your project.',
     webUi: {
       title: 'Web Design & Development',
       description: 'Modern, responsive websites and landing pages that present your business clearly.',
@@ -543,7 +543,7 @@ const de: SpecTranslations = {
     button: 'Nachricht senden',
   },
   servicesPage: {
-    intro: 'Alle Leistungen sind in drei klare Pakete gebündelt, damit Sie schnell sehen, wie ich Ihr Business mit AI, Video und Web unterstützen kann.',
+    intro: 'Alle Leistungen sind klar strukturiert — nach einem Erstgespräch erhalten Sie ein individuelles Angebot passend zu Ihrem Projekt.',
     webUi: {
       title: 'Webdesign & Entwicklung',
       description: 'Moderne, responsive Websites und Landingpages, die Ihr Unternehmen klar präsentieren.',
@@ -760,7 +760,7 @@ const it: SpecTranslations = {
     button: 'Invia messaggio',
   },
   servicesPage: {
-    intro: 'Tutti i servizi sono organizzati in tre pacchetti chiari, così puoi capire subito come posso aiutare il tuo business con AI, video e web.',
+    intro: 'Tutti i servizi sono chiaramente strutturati — dopo un colloquio iniziale ricevete un\'offerta individuale adatta al vostro progetto.',
     webUi: {
       title: 'Siti web e sviluppo',
       description: 'Siti moderni e responsive che raccontano chiaramente il tuo business.',
@@ -977,7 +977,7 @@ const sr: SpecTranslations = {
     button: 'Pošalji poruku',
   },
   servicesPage: {
-    intro: 'Sve usluge su grupisane u tri jasne kategorije kako biste brzo videli kako mogu da podržim vaš biznis kroz AI, video i web.',
+    intro: 'Sve usluge su jasno strukturisane — nakon uvodnog razgovora dobijate individualnu ponudu prilagođenu vašem projektu.',
     webUi: {
       title: 'Web dizajn i razvoj',
       description: 'Moderni, responsive sajtovi i landing stranice koji jasno predstavljaju vaš biznis.',
@@ -1002,7 +1002,7 @@ const sr: SpecTranslations = {
       deliverables: ['AI aplikacije', 'Alati za automatizaciju', 'Custom digitalna rešenja'],
       startingFrom: '',
     },
-    cta: 'Niste sigurni koji paket je najbolji za vaš projekat? Pošaljite kratku poruku i pomoći ću vam da izaberete pravo rešenje.',
+    cta: 'Niste sigurni šta vam je potrebno za projekat? Pošaljite kratku poruku i pomoći ću vam da pronađete pravo rešenje.',
   },
   aboutPage: {
     pageH1: "O AGR Multimedia — Web dizajn, AI multimedija i marketing u Geislingenu",
@@ -1194,7 +1194,7 @@ const al: SpecTranslations = {
     button: 'Dërgo mesazh',
   },
   servicesPage: {
-    intro: 'Të gjitha shërbimet janë të organizuara në tre kategori të qarta që të shihni shpejt si mund të ndihmoj biznesin tuaj me AI, video dhe web.',
+    intro: 'Të gjitha shërbimet janë të strukturuara qartë — pas bisedës fillestare merrni një ofertë individuale të përshtatur për projektin tuaj.',
     webUi: {
       title: 'Dizajn ueb-i dhe zhvillim',
       description: 'Faqe moderne dhe responsive që prezantojnë qartë biznesin tuaj.',
@@ -1219,7 +1219,7 @@ const al: SpecTranslations = {
       deliverables: ['Aplikacione IA', 'Mjete automatizimi', 'Zgjidhje digjitale të personalizuara'],
       startingFrom: '',
     },
-    cta: 'Nuk jeni i sigurt cili paket është i duhuri për projektin tuaj? Më dërgoni një mesazh të shkurtër dhe do t’ju ndihmoj të zgjidhni zgjidhjen e duhur.',
+    cta: 'Nuk jeni i sigurt çfarë ju nevojitet për projektin? Më dërgoni një mesazh të shkurtër dhe do t\'ju ndihmoj të gjeni zgjidhjen e duhur.',
   },
   aboutPage: {
     pageH1: "Rreth AGR Multimedia — Web design, AI multimedia dhe marketing në Geislingen",

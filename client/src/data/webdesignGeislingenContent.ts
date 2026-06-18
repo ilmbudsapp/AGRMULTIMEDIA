@@ -20,7 +20,7 @@ export const WEBDESIGN_LANDING_SECTIONS: WebdesignLandingSection[] = [
     paragraphs: [
       "Eine Website ist heute oft der erste Kontaktpunkt zwischen Ihrem Unternehmen und potenziellen Kunden. In Geislingen an der Steige entscheiden viele Menschen noch am Smartphone, ob sie anrufen, eine Anfrage senden oder zum nächsten Anbieter wechseln. Genau deshalb lohnt sich professionelles Webdesign: Es vermittelt Vertrauen, erklärt Ihre Leistungen verständlich und führt Besucher ohne Umwege zum Kontakt.",
       "Als lokaler Anbieter kenne ich die Erwartungen in der Region — von Handwerksbetrieben über Dienstleister bis zu kleinen Familienunternehmen. Statt einer anonymen Agentur-Lösung erhalten Sie eine Website, die zu Ihrem Betrieb passt: klar strukturiert, schnell ladend und so aufgebaut, dass Google Ihre Seiten sinnvoll einordnen kann. Das ist kein Luxus, sondern die Grundlage für mehr Anfragen im Alltag.",
-      "Bei AGR Multimedia entwickle ich Websites persönlich und direkt mit Ihnen. Sie wissen immer, wer Ihr Projekt betreut, welche Schritte als Nächstes kommen und was im Paket enthalten ist. So entsteht ein digitaler Auftritt, der Ihre Arbeit widerspiegelt — professionell, modern und für echte Kunden gedacht, nicht für leere Marketingversprechen.",
+      "Bei AGR Multimedia entwickle ich Websites persönlich und direkt mit Ihnen. Sie wissen immer, wer Ihr Projekt betreut, welche Schritte als Nächstes kommen und was im vereinbarten Projektumfang enthalten ist. So entsteht ein digitaler Auftritt, der Ihre Arbeit widerspiegelt — professionell, modern und für echte Kunden gedacht, nicht für leere Marketingversprechen.",
       "Ob Sie gerade erst online starten oder Ihren bisherigen Auftritt verbessern möchten: Der Prozess beginnt mit einem kurzen Gespräch über Ihr Angebot, Ihre Zielgruppe und den gewünschten Umfang. Daraus entsteht ein konkreter Plan — ohne Fachchinesisch und ohne Druck. So wissen Sie von Anfang an, wofür Sie eine Website bekommen und welchen Nutzen sie für Ihren Betrieb haben kann.",
       "Professionelles Webdesign bedeutet für mich: Inhalte zuerst, Design als Werkzeug. Farben, Schriften und Layout unterstützen Ihre Botschaft — sie ersetzen sie nicht. So entsteht eine Seite, die nicht nur gut aussieht, sondern auch langfristig zu Ihrem Unternehmen passt.",
     ],
@@ -154,7 +154,7 @@ export const WEBDESIGN_LANDING_SECTIONS: WebdesignLandingSection[] = [
     title: "AGR Multimedia — Ihr Partner für Webdesign in Geislingen",
     paragraphs: [
       "AGR Multimedia ist mein Studio in Geislingen an der Steige. Ich bin Agron Osmani und entwickle Websites für kleine Unternehmen persönlich — von der ersten Idee bis zur veröffentlichten Seite. Kein Callcenter, keine wechselnden Projektmanager: Sie sprechen direkt mit der Person, die Ihr Projekt umsetzt.",
-      "Mein Angebot richtet sich an Betriebe, die einen professionellen digitalen Auftritt brauchen, ohne Agentur-Budget und ohne undurchsichtige Prozesse. Transparente Pakete, klare Leistungsbeschreibungen und eine Kommunikation auf Augenhöhe sind für mich selbstverständlich. Ob erste Website, Relaunch oder SEO-Verbesserung — wir finden den passenden Umfang für Ihr Ziel.",
+      "Mein Angebot richtet sich an Betriebe, die einen professionellen digitalen Auftritt brauchen, ohne Agentur-Budget und ohne undurchsichtige Prozesse. Klare Leistungsbeschreibungen und eine Kommunikation auf Augenhöhe sind für mich selbstverständlich. Ob erste Website, Relaunch oder SEO-Verbesserung — wir finden den passenden Umfang für Ihr Ziel.",
       "Wenn Sie in Geislingen, im Landkreis Göppingen, Richtung Ulm oder in der weiteren Region tätig sind und eine Website wollen, die zu Ihrem Betrieb passt, freue ich mich auf Ihre Anfrage. Schreiben Sie mir über das Kontaktformular, per E-Mail oder WhatsApp — in der Regel antworte ich innerhalb von 24 Stunden mit einer ehrlichen Einschätzung und den nächsten Schritten.",
       "In meinem Portfolio finden Sie Beispiele aus verschiedenen Branchen — von Autopflege über Reinigung bis zu lokalen Dienstleistungen. Jedes Projekt ist anders, aber der Anspruch bleibt gleich: eine Website, die verständlich ist, gut aussieht und im Alltag funktioniert. Lassen Sie uns in einem unverbindlichen Gespräch klären, was für Ihren Betrieb am sinnvollsten ist.",
       "Als Einzelunternehmer in Geislingen bin ich nah dran an den Bedürfnissen regionaler Betriebe. Sie bekommen keine Standard-Lösung von der Stange, sondern eine Website, die zu Ihrer Branche, Ihrem Budget und Ihrem Tempo passt — fair, direkt und ohne unnötige Umwege.",
@@ -162,7 +162,7 @@ export const WEBDESIGN_LANDING_SECTIONS: WebdesignLandingSection[] = [
     list: [
       "Persönliche Betreuung durch Agron Osmani (AGR Multimedia)",
       "Standort Geislingen an der Steige — auch Projekte in der Region",
-      "Pakete ab 500 € mit klar definiertem Leistungsumfang",
+      "Individuelles Angebot nach persönlichem Erstgespräch",
       "Kombination aus Webdesign, responsivem Layout und SEO-Grundlagen",
     ],
   },
@@ -172,7 +172,7 @@ export const WEBDESIGN_LANDING_FAQ: WebdesignLandingFaqItem[] = [
   {
     question: "Was kostet eine professionelle Website in Geislingen?",
     answer:
-      "Bei AGR Multimedia starten Pakete ab 500 €, abhängig von Umfang, Seitenanzahl und gewünschten Funktionen wie Kontaktformular, WhatsApp-Integration oder zusätzlichen Leistungsseiten. Vor Beginn erhalten Sie eine klare Einschätzung, damit keine versteckten Kosten überraschen.",
+      "Jedes Projekt ist individuell. Nach einem kurzen Erstgespräch erhalten Sie ein transparentes Angebot passend zu Umfang, Ziel und Anforderungen.",
   },
   {
     question: "Wie lange dauert die Erstellung einer Business-Website?",
@@ -190,7 +190,7 @@ export const WEBDESIGN_LANDING_FAQ: WebdesignLandingFaqItem[] = [
       "SEO-optimiert heißt: sinnvolle Seitentitel und Überschriften, verständliche Texte, schnelle Ladezeiten, Mobilfreundlichkeit und eine klare Struktur, damit Google Ihre Leistungen zuordnen kann. Ich arbeite mit nachvollziehbarer On-Page-SEO — ohne Black-Hat-Tricks oder leere Versprechen.",
   },
   {
-    question: "Ist responsive Design in Ihren Paketen enthalten?",
+    question: "Ist responsive Design enthalten?",
     answer:
       "Ja. Jede Website, die ich erstelle, ist für Smartphone, Tablet und Desktop optimiert. Navigation, Schriftgrößen und Layout passen sich automatisch an — das ist Standard, weil die meisten Besucher mobil unterwegs sind.",
   },

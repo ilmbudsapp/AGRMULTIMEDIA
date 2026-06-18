@@ -9,11 +9,11 @@ import { ROUTES } from "@/lib/siteRoutes";
 const INTRO: Record<string, { title: string; lead: string }> = {
   en: {
     title: "Web Design & SEO",
-    lead: "Business websites with clear structure, on-page SEO, and transparent pricing — built in Geislingen for SMEs across Germany and the EU.",
+    lead: "Business websites with clear structure and on-page SEO — built in Geislingen for SMEs across Germany and the EU. Every project receives an individual quote after a free consultation.",
   },
   de: {
     title: "Webdesign & SEO",
-    lead: "Business-Websites mit klarer Struktur, On-Page-SEO und transparenten Preisen — entwickelt in Geislingen an der Steige für KMU in der Region.",
+    lead: "Business-Websites mit klarer Struktur und On-Page-SEO — entwickelt in Geislingen an der Steige für KMU in der Region. Jedes Projekt erhält ein individuelles Angebot nach einem kostenlosen Erstgespräch.",
   },
 };
 

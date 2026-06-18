@@ -46,7 +46,7 @@ const CORE_EN: Record<string, RouteSeo> = {
   "/webdesign-geislingen-an-der-steige": {
     title: "Web Design Geislingen an der Steige | Business Websites & SEO — AGR Multimedia",
     description:
-      "Professional web design in Geislingen an der Steige: modern business websites, local SEO and responsive design for trades and SMEs. From €500.",
+      "Professional web design in Geislingen an der Steige: modern business websites, local SEO and responsive design for trades and SMEs. Individual quote after a free consultation.",
     keywords:
       "web design Geislingen an der Steige, web designer Geislingen, local SEO, small business websites, web agency Geislingen",
   },
@@ -98,7 +98,7 @@ const CORE_DE: Record<string, RouteSeo> = {
   "/webdesign-geislingen-an-der-steige": {
     title: "Webdesign Geislingen an der Steige | Websites & SEO — AGR Multimedia",
     description:
-      "Professionelles Webdesign in Geislingen an der Steige: moderne Business-Websites, lokales SEO, responsive Design für Handwerk und kleine Firmen. Website erstellen lassen ab 500 €.",
+      "Professionelles Webdesign in Geislingen an der Steige: moderne Business-Websites, lokales SEO, responsive Design für Handwerk und kleine Firmen. Individuelles Angebot nach Erstgespräch.",
     keywords:
       "Webdesign Geislingen an der Steige, Webdesigner Geislingen, Website erstellen lassen Geislingen, Webagentur Geislingen, SEO Agentur Geislingen, Webdesign Göppingen",
   },
@@ -251,8 +251,8 @@ const PRIMARY_MULTIPAGE_EN: Record<string, RouteSeo> = {
   "/webdesign-seo": {
     title: "Professional Web Design & SEO in Geislingen | AGRMULTIMEDIA",
     description:
-      "Business websites from €500 with basic SEO, A GRADE premium packages, and transparent monthly updates — AGR Multimedia, Geislingen an der Steige.",
-    keywords: "web design Geislingen, SEO, AEO, GEO, website pricing, AGR Multimedia",
+      "Business websites with on-page SEO, AEO and GEO optimisation — individual quote after a free consultation. AGR Multimedia, Geislingen an der Steige.",
+    keywords: "web design Geislingen, SEO, AEO, GEO, web design quote, AGR Multimedia",
   },
   "/videoproduktion": {
     title: "Video Production & Kickstarter Videos in Geislingen | AGRMULTIMEDIA",
@@ -278,8 +278,8 @@ const PRIMARY_MULTIPAGE_DE: Record<string, RouteSeo> = {
   "/webdesign-seo": {
     title: "Professionelles Webdesign & SEO in Geislingen - AGRMULTIMEDIA",
     description:
-      "Business-Websites ab 500 € mit Basis-SEO, A-GRADE Premium-Paketen und transparenten monatlichen Updates — AGR Multimedia, Geislingen an der Steige.",
-    keywords: "Webdesign Geislingen, SEO, AEO, GEO, Website Preise, AGR Multimedia",
+      "Business-Websites mit On-Page-SEO, AEO- und GEO-Optimierung — individuelles Angebot nach kostenlosem Erstgespräch. AGR Multimedia, Geislingen an der Steige.",
+    keywords: "Webdesign Geislingen, SEO, AEO, GEO, Webdesign Angebot, AGR Multimedia",
   },
   "/videoproduktion": {
     title: "Videoproduktion & Kickstarter Videos in Geislingen - AGRMULTIMEDIA",
@@ -305,8 +305,8 @@ const PRIMARY_MULTIPAGE_IT: Record<string, RouteSeo> = {
   "/webdesign-seo": {
     title: "Web design e SEO professionale a Geislingen | AGRMULTIMEDIA",
     description:
-      "Siti business da 500 € con SEO di base, pacchetti A GRADE e aggiornamenti mensili trasparenti — AGR Multimedia, Geislingen.",
-    keywords: "web design Geislingen, SEO, AEO, GEO, prezzi sito web",
+      "Siti business con SEO on-page, AEO e GEO — offerta individuale dopo consulenza gratuita. AGR Multimedia, Geislingen.",
+    keywords: "web design Geislingen, SEO, AEO, GEO, preventivo sito web",
   },
   "/videoproduktion": {
     title: "Videoproduzione e video Kickstarter a Geislingen | AGRMULTIMEDIA",
@@ -330,7 +330,7 @@ const PRIMARY_MULTIPAGE_SR: Record<string, RouteSeo> = {
   "/webdesign-seo": {
     title: "Profesionalni web dizajn i SEO u Geislingen | AGRMULTIMEDIA",
     description:
-      "Biznis sajtovi od 500 € sa osnovnim SEO-om, A GRADE paketima i transparentnim mesečnim ažuriranjima — AGR Multimedia, Geislingen.",
+      "Biznis sajtovi sa on-page SEO, AEO i GEO optimizacijom — individualna ponuda nakon besplatne konsultacije. AGR Multimedia, Geislingen.",
     keywords: "web dizajn Geislingen, SEO, AEO, GEO, cene sajta",
   },
   "/videoproduktion": {
@@ -355,7 +355,7 @@ const PRIMARY_MULTIPAGE_AL: Record<string, RouteSeo> = {
   "/webdesign-seo": {
     title: "Web design & SEO profesional në Geislingen | AGRMULTIMEDIA",
     description:
-      "Faqe biznesi nga 500 € me SEO themelor, paketa A GRADE dhe përditësime mujore transparente — AGR Multimedia, Geislingen.",
+      "Faqe biznesi me SEO on-page, AEO dhe GEO — ofertë individuale pas konsultimit falas. AGR Multimedia, Geislingen.",
     keywords: "web design Geislingen, SEO, AEO, GEO",
   },
   "/videoproduktion": {

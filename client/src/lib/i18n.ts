@@ -887,8 +887,8 @@ export const translations: Record<Exclude<Language, "al">, Translations> = {
           category: "Video"
         },
         foodTruck: {
-          title: "Kako sam napravio web za food truck za 500€",
-          description: "Korak-po-korak objašnjavam kako sam dizajnirao i razvio jednostavan web za food truck budžeta od 500€—od strukture, dizajna i copy-ja do osnovnog SEO-a i CTA dugmadi.",
+          title: "Kako sam napravio web za food truck",
+          description: "Korak-po-korak objašnjavam kako sam dizajnirao i razvio jednostavan web za food truck — od strukture, dizajna i copy-ja do osnovnog SEO-a i CTA dugmadi.",
           category: "Web dizajn"
         }
       },
@@ -1859,8 +1859,8 @@ export const translations: Record<Exclude<Language, "al">, Translations> = {
           category: "Video"
         },
         foodTruck: {
-          title: "How I Built a Food Truck Website for €500",
-          description: "A step-by-step breakdown of how I designed and built a simple food truck website for a €500 budget—structure, copy, and basic SEO to turn visitors into inquiries.",
+          title: "How I Built a Food Truck Website",
+          description: "A step-by-step breakdown of how I designed and built a simple food truck website — structure, copy, and basic SEO to turn visitors into inquiries.",
           category: "Web Design"
         }
       },
@@ -2833,8 +2833,8 @@ export const translations: Record<Exclude<Language, "al">, Translations> = {
           category: "Video"
         },
         foodTruck: {
-          title: "Wie ich eine Food-Truck-Website für 500 € gebaut habe",
-          description: "Ein Schritt-für-Schritt-Guide, wie ich eine einfache Food-Truck-Website mit einem Budget von 500 € gestaltet und gebaut habe—inklusive Struktur, Text und grundlegender SEO und CTAs.",
+          title: "Wie ich eine Food-Truck-Website gebaut habe",
+          description: "Ein Schritt-für-Schritt-Guide, wie ich eine einfache Food-Truck-Website gestaltet und gebaut habe — inklusive Struktur, Text und grundlegender SEO und CTAs.",
           category: "Webdesign"
         }
       },
@@ -3727,8 +3727,8 @@ export const translations: Record<Exclude<Language, "al">, Translations> = {
           category: "Video"
         },
         foodTruck: {
-          title: "Si e ndërtova një faqe web për food truck për 500€",
-          description: "Një udhëzues praktik hap-pas-hapi se si dizajnova dhe ndërtova një web të thjeshtë për food truck me buxhet 500€—strukturë, copy dhe SEO bazë për të marrë më shumë kërkesa.",
+          title: "Si e ndërtova një faqe web për food truck",
+          description: "Një udhëzues praktik hap-pas-hapi se si dizajnova dhe ndërtova një web të thjeshtë për food truck — strukturë, copy dhe SEO bazë për të marrë më shumë kërkesa.",
           category: "Dizajn Web"
         }
       },

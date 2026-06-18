@@ -40,7 +40,7 @@ const routes = [
     lang: "de",
     title: "Webdesign & SEO — AGR Multimedia",
     h1: "Webdesign und SEO für kleine Unternehmen",
-    lead: "Schnelle Websites mit technischem SEO — vom Start-Paket ab 500 € bis zur individuellen Optimierung.",
+    lead: "Schnelle Websites mit technischem SEO — individuelles Angebot nach kostenlosem Erstgespräch.",
     canonical: "https://www.agrmultimedia.eu/webdesign-seo",
   },
   {
@@ -67,7 +67,7 @@ const routes = [
     lang: "de",
     title: "Webdesign Geislingen an der Steige | Websites & SEO — AGR Multimedia",
     description:
-      "Professionelles Webdesign in Geislingen an der Steige: moderne Business-Websites, lokales SEO und responsive Design für Handwerk und kleine Firmen. Website erstellen lassen ab 500 €.",
+      "Professionelles Webdesign in Geislingen an der Steige: moderne Business-Websites, lokales SEO und responsive Design für Handwerk und kleine Firmen. Individuelles Angebot nach Erstgespräch.",
     h1: "Webdesign Geislingen an der Steige — professionelle Websites für lokale Unternehmen",
     lead: "Moderne Business-Websites mit lokalem SEO für Handwerk, Dienstleister und kleine Firmen — persönlich umgesetzt von AGR Multimedia in Geislingen an der Steige.",
     canonical: "https://www.agrmultimedia.eu/webdesign-geislingen-an-der-steige",
@@ -75,14 +75,14 @@ const routes = [
     <section>
       <h2>Professionelles Webdesign in Geislingen an der Steige</h2>
       <p>Eine Website ist oft der erste Kontaktpunkt zwischen Ihrem Unternehmen und potenziellen Kunden. Professionelles Webdesign vermittelt Vertrauen, erklärt Ihre Leistungen verständlich und führt Besucher zum Kontakt.</p>
-      <p>Pakete: <strong>Start ab 500 €</strong>, <strong>Business ab 900 €</strong>, Wartung ab 30 €/Monat.</p>
+      <p>Jedes Projekt ist individuell. Nach einem kurzen Erstgespräch erhalten Sie ein transparentes Angebot passend zu Umfang, Ziel und Anforderungen.</p>
     </section>
     <section>
       <h2>Häufige Fragen</h2>
       <p><strong>Für welche Branchen?</strong> Handwerk, Reinigung, Autopflege, Gartenbau, Transport, Fahrradservice und kleine Familienbetriebe.</p>
-      <p><strong>Was kostet eine Website?</strong> Start ab 500 €, Business ab 900 € — je nach Umfang nach Absprache.</p>
+      <p><strong>Was kostet eine Website?</strong> Jedes Projekt ist individuell. Nach einem kurzen Erstgespräch erhalten Sie ein transparentes Angebot passend zu Umfang, Ziel und Anforderungen.</p>
     </section>
-    <p><a href="/kontakt">Angebot anfragen</a> · <a href="/webdesign-seo">Webdesign &amp; SEO</a> · <a href="/">Startseite</a></p>`,
+    <p><a href="/kontakt">Kostenlose Beratung anfragen</a> · <a href="/kontakt">Individuelles Angebot erhalten</a> · <a href="/webdesign-seo">Webdesign &amp; SEO</a> · <a href="/">Startseite</a></p>`,
   },
 ];
 
