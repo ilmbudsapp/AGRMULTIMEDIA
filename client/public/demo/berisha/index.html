@@ -17,12 +17,12 @@
   <meta property="og:title" content="Fleischerei Berisha | Premium Halal Metzgerei in Kamen">
   <meta property="og:description" content="Traditionelle Halal-Metzgerei mit erstklassiger Fleischqualität und modernem Bestellservice. Frische Spezialitäten in Kamen – Vorbestellung per WhatsApp.">
   <meta property="og:url" content="https://www.agrmultimedia.eu/demo/berisha/">
-  <meta property="og:image" content="https://www.agrmultimedia.eu/demo/berisha/assets/meat-hero.jpg">
+  <meta property="og:image" content="https://www.agrmultimedia.eu/demo/berisha/assets/hero-bg.webp">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Fleischerei Berisha | Premium Halal Metzgerei">
   <meta name="twitter:description" content="Erstklassiges Halal-Fleisch, hausgemachte Spezialitäten und WhatsApp-Bestellung in Kamen.">
-  <meta name="twitter:image" content="https://www.agrmultimedia.eu/demo/berisha/assets/meat-hero.jpg">
+  <meta name="twitter:image" content="https://www.agrmultimedia.eu/demo/berisha/assets/hero-bg.webp">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -91,6 +91,7 @@
       --ease: cubic-bezier(0.22, 1, 0.36, 1);
       --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
       --max: 1200px;
+      --media-ratio: 4 / 3;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -247,18 +248,19 @@
       position: relative; min-height: 100svh; display: flex; align-items: center;
       padding: calc(var(--demo-bar-h) + var(--header-h) + 48px) 0 80px; overflow: hidden;
     }
-    .hero__video-wrap {
-      position: absolute; inset: 0; z-index: -1;
+    .hero__bg {
+      position: absolute; inset: 0; z-index: -1; overflow: hidden;
     }
-    .hero__video-wrap::after {
-      content: ""; position: absolute; inset: 0;
-      background: linear-gradient(180deg, rgba(7,7,7,0.55) 0%, rgba(7,7,7,0.88) 55%, var(--bg) 100%);
-    }
-    .hero__video {
+    .hero__bg-img {
       width: 100%; height: 100%; object-fit: cover;
+      filter: blur(5px) brightness(0.5) saturate(1.15);
+      transform: scale(1.08);
     }
-    .hero__poster {
-      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+    .hero__bg::after {
+      content: ""; position: absolute; inset: 0;
+      background:
+        linear-gradient(115deg, rgba(7,7,7,0.92) 0%, rgba(7,7,7,0.72) 42%, rgba(7,7,7,0.88) 100%),
+        radial-gradient(ellipse 70% 60% at 75% 40%, rgba(225,29,46,0.22), transparent 60%);
     }
     .hero__grid {
       display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center;
@@ -296,44 +298,33 @@
     .stat strong { display: block; font-size: 1.1rem; margin-bottom: 4px; }
     .stat span { font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
 
-    .hero__visual { position: relative; perspective: 1200px; }
-    .hero__food-frame {
-      position: relative; border-radius: var(--radius-xl); overflow: hidden;
-      transform-style: preserve-3d; will-change: transform;
-      box-shadow: 0 40px 100px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.08);
+    .hero__visual {
+      display: flex; align-items: center; justify-content: center;
     }
-    .hero__food-frame::before {
-      content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
-      background: linear-gradient(180deg, transparent 55%, rgba(7,7,7,0.55) 100%);
+    .hero__cert {
+      display: flex; flex-direction: column; align-items: center; gap: 18px;
+      padding: 36px 32px; border-radius: var(--radius-xl); text-align: center;
+      max-width: 340px; width: 100%;
     }
-    .hero__food-frame::after {
-      content: ""; position: absolute; inset: -1px; border-radius: inherit; z-index: -1;
-      background: linear-gradient(135deg, rgba(225,29,46,0.55), transparent 45%, rgba(255,255,255,0.1));
-      filter: blur(1px);
+    .hero__cert img {
+      width: clamp(160px, 28vw, 220px); height: auto;
+      filter: drop-shadow(0 20px 50px rgba(0,0,0,0.5));
     }
-    .hero__food-img {
-      width: 100%; aspect-ratio: 4/5; object-fit: cover;
-      transform: scale(1.02); transition: transform 8s var(--ease-out-expo);
+    .hero__cert-label {
+      font-size: 0.82rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: #ffc9cf;
     }
-    .hero__food-frame:hover .hero__food-img { transform: scale(1.08); }
-    .hero__halal-stamp {
-      position: absolute; right: 18px; bottom: 18px; z-index: 2;
-      width: clamp(88px, 22vw, 128px); height: auto;
-      filter: drop-shadow(0 12px 28px rgba(0,0,0,0.55));
-      animation: stampFloat 4.5s ease-in-out infinite;
+    .hero__cert-sub {
+      font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;
     }
-    @keyframes stampFloat {
-      0%, 100% { transform: translateY(0) rotate(-4deg); }
-      50% { transform: translateY(-8px) rotate(2deg); }
+
+    /* Uniform media frames */
+    .media-frame {
+      position: relative; aspect-ratio: var(--media-ratio); overflow: hidden;
+      background: #141414;
     }
-    .hero__shine {
-      position: absolute; inset: 0; z-index: 1; pointer-events: none;
-      background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.14) 50%, transparent 60%);
-      transform: translateX(-120%); animation: heroShine 5s ease-in-out infinite;
-    }
-    @keyframes heroShine {
-      0%, 70% { transform: translateX(-120%); }
-      100% { transform: translateX(120%); }
+    .media-frame img {
+      width: 100%; height: 100%; object-fit: cover; object-position: center;
     }
 
     /* Sections */
@@ -358,10 +349,10 @@
     }
     .product-card:hover { transform: translateY(-8px); border-color: rgba(225,29,46,0.35); box-shadow: 0 28px 70px rgba(225,29,46,0.12); }
     .product-card__media {
-      position: relative; aspect-ratio: 4/3; overflow: hidden; background: #1a1a1a;
+      position: relative; aspect-ratio: var(--media-ratio); overflow: hidden; background: #141414;
     }
     .product-card__media img {
-      width: 100%; height: 100%; object-fit: cover;
+      width: 100%; height: 100%; object-fit: cover; object-position: center top;
       transition: transform 0.6s var(--ease);
     }
     .product-card:hover .product-card__media img { transform: scale(1.06); }
@@ -385,9 +376,10 @@
     /* About */
     .about { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
     .about__media {
-      position: relative; border-radius: var(--radius-xl); overflow: hidden; min-height: 480px;
+      position: relative; border-radius: var(--radius-xl); overflow: hidden;
+      aspect-ratio: var(--media-ratio);
     }
-    .about__media img { width: 100%; height: 100%; object-fit: cover; min-height: 480px; }
+    .about__media img { width: 100%; height: 100%; object-fit: cover; object-position: center; min-height: 0; }
     .about__media::after {
       content: ""; position: absolute; inset: 0;
       background: linear-gradient(180deg, transparent 50%, rgba(7,7,7,0.75) 100%);
@@ -412,17 +404,14 @@
     .hours dd { font-weight: 600; text-align: right; }
 
     /* Gallery */
-    .gallery { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
+    .gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
     .gallery__item {
       border-radius: var(--radius-lg); overflow: hidden; position: relative;
+      aspect-ratio: var(--media-ratio);
       transition: transform 0.45s var(--ease);
     }
-    .gallery__item:hover { transform: scale(1.02); }
-    .gallery__item img { width: 100%; height: 100%; object-fit: cover; }
-    .gallery__item--1 { grid-column: span 7; min-height: 320px; }
-    .gallery__item--2 { grid-column: span 5; min-height: 320px; }
-    .gallery__item--3 { grid-column: span 5; min-height: 280px; }
-    .gallery__item--4 { grid-column: span 7; min-height: 280px; }
+    .gallery__item:hover { transform: translateY(-4px); }
+    .gallery__item img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
     .gallery__caption {
       position: absolute; left: 16px; bottom: 16px; padding: 8px 14px; border-radius: 999px;
       font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
@@ -551,8 +540,6 @@
     .products .product-card.reveal:nth-child(5) { transition-delay: 0.33s; }
     .products .product-card.reveal:nth-child(6) { transition-delay: 0.4s; }
 
-    .product-card__media img { width: 100%; height: 100%; object-fit: cover; }
-
     /* Parallax layers */
     [data-parallax] { will-change: transform; }
 
@@ -561,7 +548,8 @@
       .hero__grid, .about, .contact { grid-template-columns: 1fr; }
       .products { grid-template-columns: repeat(2, 1fr); }
       .testimonials { grid-template-columns: 1fr; }
-      .hero__visual { order: -1; max-width: 420px; margin: 0 auto; }
+      .gallery { grid-template-columns: repeat(2, 1fr); }
+      .hero__visual { order: -1; max-width: 320px; margin: 0 auto; }
       .hero__stats { grid-template-columns: 1fr; }
     }
     @media (max-width: 768px) {
@@ -570,7 +558,6 @@
       .header__actions .btn { padding: 10px 16px; font-size: 0.8rem; }
       .products { grid-template-columns: 1fr; }
       .gallery { grid-template-columns: 1fr; }
-      .gallery__item--1, .gallery__item--2, .gallery__item--3, .gallery__item--4 { grid-column: span 1; min-height: 240px; }
       .section { padding: 72px 0; }
       .cta-band { padding: 36px 24px; }
     }
@@ -625,12 +612,8 @@
 
   <main id="main">
     <section class="hero" id="top">
-      <div class="hero__video-wrap" data-parallax="0.15" aria-hidden="true">
-        <video class="hero__video" autoplay muted loop playsinline poster="assets/meat-hero.jpg" aria-hidden="true">
-          <!-- Hero video placeholder: replace src with your production clip -->
-          <source src="" type="video/mp4">
-        </video>
-        <img class="hero__poster" src="assets/meat-hero.jpg" alt="" width="1920" height="1080" fetchpriority="high">
+      <div class="hero__bg" aria-hidden="true">
+        <img class="hero__bg-img" src="assets/hero-bg.webp" alt="" width="1920" height="1080" fetchpriority="high">
       </div>
 
       <div class="container hero__grid">
@@ -661,11 +644,11 @@
           </div>
         </div>
 
-        <div class="hero__visual reveal" data-parallax="0.08">
-          <div class="hero__food-frame glass" id="hero-card">
-            <div class="hero__shine" aria-hidden="true"></div>
-            <img class="hero__food-img" src="assets/hero-cevap.webp" alt="Frische Cevapcici – Hausgemachte Halal-Spezialität" width="640" height="800" fetchpriority="high">
-            <img class="hero__halal-stamp" src="assets/halal-seal.webp" alt="Halal Food Certified" width="128" height="128">
+        <div class="hero__visual reveal">
+          <div class="hero__cert glass">
+            <img src="assets/halal-seal.webp" alt="Halal Food Certified" width="220" height="220">
+            <p class="hero__cert-label">Halal Food Certified</p>
+            <p class="hero__cert-sub">Zertifizierte Herkunft · Fachgerechte Verarbeitung · 100% Halal</p>
           </div>
         </div>
       </div>
@@ -754,8 +737,8 @@
 
     <section class="section section-cinema" id="ueber-uns" aria-labelledby="about-title" data-section-anim>
       <div class="container about">
-        <div class="about__media reveal" data-parallax="0.06">
-          <img src="assets/meat-hero.jpg" alt="Frisches Halal-Fleisch bei Fleischerei Berisha" width="800" height="600" loading="lazy">
+        <div class="about__media reveal media-frame glass">
+          <img src="assets/product-pleskavica.webp" alt="Frische Halal-Spezialitäten bei Fleischerei Berisha" width="800" height="600" loading="lazy">
           <span class="about__halal">100% Halal</span>
         </div>
         <div class="about__copy reveal">
@@ -789,21 +772,21 @@
           <p class="section__sub">Unsere Originalproduktfotos – authentisch, hochwertig und direkt aus der Metzgerei.</p>
         </div>
         <div class="gallery">
-          <figure class="gallery__item gallery__item--1 glass reveal">
-            <img src="assets/product-pleskavica.webp" alt="Pleskavica – hausgemacht" width="900" height="600" loading="lazy">
+          <figure class="gallery__item glass reveal">
+            <img src="assets/product-pleskavica.webp" alt="Pleskavica – hausgemacht" width="600" height="450" loading="lazy">
             <figcaption class="gallery__caption">Pleskavica</figcaption>
           </figure>
-          <figure class="gallery__item gallery__item--2 glass reveal">
-            <img src="assets/product-cevapcici.webp" alt="Cevapcici – frisch zubereitet" width="700" height="600" loading="lazy">
+          <figure class="gallery__item glass reveal">
+            <img src="assets/product-cevapcici.webp" alt="Cevapcici – frisch zubereitet" width="600" height="450" loading="lazy">
             <figcaption class="gallery__caption">Cevapcici</figcaption>
           </figure>
-          <figure class="gallery__item gallery__item--3 glass reveal">
-            <img src="assets/product-sucuk.webp" alt="Suchuk Shpis – Sudžuk" width="700" height="500" loading="lazy">
-            <figcaption class="gallery__caption">Suchuk / Sudžuk</figcaption>
+          <figure class="gallery__item glass reveal">
+            <img src="assets/product-sucuk.webp" alt="Suchuk Shpis – Sudžuk" width="600" height="450" loading="lazy">
+            <figcaption class="gallery__caption">Sudžuk</figcaption>
           </figure>
-          <figure class="gallery__item gallery__item--4 glass reveal">
-            <img src="assets/flyer-lehrte.jpg" alt="Mobile Theke Lehrte – Fleischerei Berisha" width="900" height="500" loading="lazy">
-            <figcaption class="gallery__caption">Lehrte · Mobile Theke</figcaption>
+          <figure class="gallery__item glass reveal">
+            <img src="assets/product-adana.webp" alt="Adana Kebab – gewürzt" width="600" height="450" loading="lazy">
+            <figcaption class="gallery__caption">Adana Kebab</figcaption>
           </figure>
         </div>
       </div>
@@ -1026,7 +1009,6 @@
 
       if (!prefersReduced) {
         var parallaxEls = document.querySelectorAll("[data-parallax]");
-        var heroCard = document.getElementById("hero-card");
         var ticking = false;
 
         window.addEventListener("scroll", function () {
@@ -1042,14 +1024,6 @@
             ticking = true;
           }
         }, { passive: true });
-
-        if (heroCard) {
-          document.addEventListener("mousemove", function (e) {
-            var x = (window.innerWidth / 2 - e.clientX) / 40;
-            var y = (window.innerHeight / 2 - e.clientY) / 40;
-            heroCard.style.transform = "rotateY(" + x + "deg) rotateX(" + y + "deg)";
-          });
-        }
       }
     })();
   </script>
