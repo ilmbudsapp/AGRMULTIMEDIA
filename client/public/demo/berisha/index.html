@@ -579,6 +579,16 @@
       padding: 36px 0 100px; border-top: 1px solid var(--border);
       text-align: center; color: var(--text-muted); font-size: 0.88rem;
     }
+    .footer-legal {
+      display: flex; align-items: center; justify-content: center; gap: 12px;
+      flex-wrap: wrap; margin-bottom: 14px;
+    }
+    .footer-legal a {
+      color: var(--text-muted); font-weight: 600; letter-spacing: 0.02em;
+      transition: color 0.25s;
+    }
+    .footer-legal a:hover { color: var(--text); }
+    .footer-legal__sep { opacity: 0.35; user-select: none; }
 
     /* WhatsApp */
     .whatsapp {
@@ -1065,6 +1075,11 @@
 
   <footer class="footer">
     <div class="container">
+      <nav class="footer-legal" aria-label="Rechtliches">
+        <a href="impressum.html">Impressum</a>
+        <span class="footer-legal__sep" aria-hidden="true">·</span>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
       <p>© 2026 Fleischerei Berisha · Premium Halal Metzgerei in Kamen</p>
     </div>
   </footer>
