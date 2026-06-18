@@ -532,10 +532,30 @@
     }
     .contact-channel__value { font-size: 0.95rem; font-weight: 600; color: var(--text); line-height: 1.45; }
     .contact-channel__hint { font-size: 0.82rem; color: var(--text-muted); font-weight: 400; }
-    .map {
-      border-radius: var(--radius-lg); overflow: hidden; min-height: 380px; border: 1px solid var(--border);
+    .map-wrap {
+      border-radius: var(--radius-lg); overflow: hidden;
+      border: 1px solid var(--border);
+      display: flex; flex-direction: column;
+      box-shadow: var(--shadow);
     }
-    .map iframe { width: 100%; height: 100%; min-height: 380px; border: 0; filter: grayscale(0.2) contrast(1.05); }
+    .map-wrap__frame {
+      position: relative; height: clamp(320px, 42vw, 460px); min-height: 320px;
+      background: #161616;
+    }
+    .map-wrap__frame iframe {
+      width: 100%; height: 100%; border: 0; display: block;
+      filter: grayscale(0.1) contrast(1.06) saturate(1.05);
+    }
+    .map-open-btn {
+      display: flex; align-items: center; justify-content: center; gap: 12px;
+      padding: 18px 22px; text-align: center;
+      background: linear-gradient(135deg, rgba(225,29,46,0.22), rgba(255,255,255,0.05));
+      border-top: 1px solid var(--border);
+      font-weight: 700; font-size: 0.92rem; letter-spacing: 0.02em;
+      transition: background 0.3s, color 0.3s;
+    }
+    .map-open-btn:hover { background: linear-gradient(135deg, rgba(225,29,46,0.38), rgba(255,255,255,0.08)); color: #fff; }
+    .map-open-btn svg { width: 20px; height: 20px; fill: currentColor; flex-shrink: 0; }
 
     /* Footer */
     .footer {
@@ -934,14 +954,17 @@
           <h2 id="contact-title">Kontakt</h2>
           <p class="contact__sub">Erreichen Sie uns direkt — wir freuen uns auf Ihre Nachricht.</p>
           <ul class="contact-channels">
-            <li class="contact-channel contact-channel--static">
-              <span class="contact-channel__icon contact-channel__icon--pin" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>
-              </span>
-              <div class="contact-channel__body">
-                <span class="contact-channel__label">Adresse</span>
-                <span class="contact-channel__value">Märkische Str. 21 · 59174 Kamen</span>
-              </div>
+            <li class="contact-channel">
+              <a href="#" data-maps-link target="_blank" rel="noopener noreferrer">
+                <span class="contact-channel__icon contact-channel__icon--pin" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>
+                </span>
+                <span class="contact-channel__body">
+                  <span class="contact-channel__label">Adresse</span>
+                  <span class="contact-channel__value">Märkische Str. 21 · 59174 Kamen</span>
+                  <span class="contact-channel__hint">Tippen für Google Maps Navigation</span>
+                </span>
+              </a>
             </li>
             <li class="contact-channel contact-channel--static">
               <span class="contact-channel__icon contact-channel__icon--mail" aria-hidden="true">
@@ -998,14 +1021,20 @@
             </li>
           </ul>
         </div>
-        <div class="map glass reveal" aria-label="Standort auf Google Maps">
-          <iframe
-            title="Fleischerei Berisha auf Google Maps"
-            src="https://www.google.com/maps?q=M%C3%A4rkische%20Str.%2021%2059174%20Kamen&output=embed"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            allowfullscreen>
-          </iframe>
+        <div class="map-wrap glass reveal">
+          <div class="map-wrap__frame">
+            <iframe
+              title="Fleischerei Berisha auf Google Maps"
+              src="https://www.google.com/maps?q=M%C3%A4rkische%20Str.%2021%2C%2059174%20Kamen%2C%20Deutschland&hl=de&z=16&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <a class="map-open-btn" href="#" data-maps-link target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>
+            Route in Google Maps öffnen · Navigation zur Metzgerei
+          </a>
         </div>
       </div>
     </section>
@@ -1031,6 +1060,12 @@
       var waUrl = "https://wa.me/491721706413?text=" + waMessage;
       document.querySelectorAll("[data-wa-link]").forEach(function (el) {
         el.setAttribute("href", waUrl);
+      });
+
+      var mapsDestination = encodeURIComponent("Märkische Str. 21, 59174 Kamen, Deutschland");
+      var mapsUrl = "https://www.google.com/maps/dir/?api=1&destination=" + mapsDestination;
+      document.querySelectorAll("[data-maps-link]").forEach(function (el) {
+        el.setAttribute("href", mapsUrl);
       });
 
       var header = document.getElementById("header");
