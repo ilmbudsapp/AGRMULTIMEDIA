@@ -20,12 +20,17 @@
       "permanent": true
     },
     {
+      "source": "/demo/berisha/",
+      "destination": "/portfolio",
+      "permanent": true
+    },
+    {
       "source": "/demo/berisha/:path*",
       "destination": "/portfolio",
       "permanent": true
     },
     {
-      "source": "/demo/tonis-autopflege/:path*",
+      "source": "/demo/tonis-autopflege",
       "destination": "/portfolio",
       "permanent": true
     },
