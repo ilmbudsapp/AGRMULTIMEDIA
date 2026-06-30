@@ -15,7 +15,12 @@
       "permanent": true
     },
     {
-      "source": "/demo/tonis-autopflege",
+      "source": "/demo/berisha",
+      "destination": "/portfolio",
+      "permanent": true
+    },
+    {
+      "source": "/demo/berisha/:path*",
       "destination": "/portfolio",
       "permanent": true
     },

@@ -13,3 +13,4 @@ vite.config.ts.*
 
 # Generated from root sitemap.xml during build
 client/public/sitemap.xml
+.vercel
