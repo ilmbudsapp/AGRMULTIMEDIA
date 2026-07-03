@@ -25,6 +25,24 @@ export const NAV = [
   { href: "/kontakt/", label: "Kontakt" },
 ] as const;
 
+export const LEGAL_NAV = [
+  { href: "/impressum/", label: "Impressum" },
+  { href: "/datenschutz/", label: "Datenschutz" },
+] as const;
+
+/** Final legal review required by the organization or legal advisor. */
+export const LEGAL = {
+  organization: SITE.name,
+  legalForm: "e.V. (eingetragener Verein)",
+  address: SITE.address,
+  representedBy: "[Vorstand — Name(n) bitte vom Verein eintragen]",
+  registerCourt: "[Registergericht — bitte eintragen, z. B. Amtsgericht …]",
+  registerNumber: "[Vereinsregisternummer — bitte eintragen]",
+  contentResponsible: "[Name und Anschrift — verantwortlich gemäß § 18 Abs. 2 MStV]",
+  hostingProvider: "Vercel Inc. (Demo-Hosting über AGRMULTIMEDIA)",
+  supervisoryAuthority: "Die zuständige Landesdatenschutzbehörde am Sitz des Verantwortlichen",
+} as const;
+
 export const STATS = [
   { value: 367, suffix: "+", label: "Kinder an der Schule", href: "/projekte/" },
   { value: 2015, suffix: "", label: "Verein gegründet", href: "/ueber-uns/" },

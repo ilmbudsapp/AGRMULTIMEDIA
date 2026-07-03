@@ -2,7 +2,7 @@ import Link from "next/link";
 import FooterQrCode from "@/components/FooterQrCode";
 import { HeaderLogo } from "@/components/HeaderLogo";
 import PayPalDonateButton from "@/components/PayPalDonateButton";
-import { CONTACTS, DONATION, NAV, SITE, SOCIAL } from "@/lib/site";
+import { CONTACTS, DONATION, LEGAL_NAV, NAV, SITE, SOCIAL } from "@/lib/site";
 
 function SocialIcon({ icon }: { icon: string }) {
   if (icon === "facebook") {
@@ -110,11 +110,19 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/10 py-5">
-        <div className="uhu-container flex flex-col items-center justify-between gap-2 text-center text-xs text-white/60 sm:flex-row sm:text-left">
-          <p>
-            © {new Date().getFullYear()} {SITE.name}
-          </p>
-          <p>Demo by AGRMULTIMEDIA</p>
+        <div className="uhu-container flex flex-col items-center justify-between gap-3 text-center text-xs text-white/60 sm:flex-row sm:text-left">
+          <p>© {new Date().getFullYear()} {SITE.name}</p>
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1">
+            {LEGAL_NAV.map((item) => (
+              <Link key={item.href} href={item.href} className="hover:text-[#d8f3dc] hover:underline">
+                {item.label}
+              </Link>
+            ))}
+            <span className="hidden sm:inline" aria-hidden>
+              ·
+            </span>
+            <span>Demo by AGRMULTIMEDIA</span>
+          </div>
         </div>
       </div>
     </footer>
