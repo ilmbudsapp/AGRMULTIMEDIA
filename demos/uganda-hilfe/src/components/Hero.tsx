@@ -14,10 +14,8 @@ export default function Hero() {
       <div className="absolute inset-0 uhu-gradient-hero" aria-hidden />
       <div className="relative z-10 flex min-h-[min(88vh,920px)] items-center">
         <div className="uhu-container py-16 text-white">
-          <p className="uhu-animate-in mb-4 text-xs font-bold uppercase tracking-[0.35em] text-[#d8f3dc] md:text-sm">
-            <Link href="/ueber-uns/" className="hover:text-white hover:underline">
-              St. Monica Junior School · Kasanje, Uganda
-            </Link>
+          <p className="uhu-animate-in mb-5 max-w-2xl border-l-2 border-[#52b788]/80 pl-4 text-sm font-medium leading-relaxed tracking-[0.12em] text-[#e8f5ec] md:text-base md:tracking-[0.16em] lg:text-lg lg:tracking-[0.18em]">
+            Seit über 10 Jahren helfen wir Kindern in Uganda.
           </p>
           <h1 id="hero-heading" className="uhu-animate-in uhu-animate-in-delay-1 max-w-4xl text-4xl font-extrabold leading-[1.08] tracking-tight md:text-6xl lg:text-7xl">
             {SITE.tagline}

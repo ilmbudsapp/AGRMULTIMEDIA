@@ -1,4 +1,4 @@
-:HL["/demo/uganda-hilfe/_next/static/chunks/267xncb0t_k-m.css","style"]
+:HL["/demo/uganda-hilfe/_next/static/chunks/3cbf9h1cy63e-.css","style"]
 :HL["/demo/uganda-hilfe/_next/static/media/47df9ba1c7236d3b-s.p.137759vg1sbmi.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/demo/uganda-hilfe/images/logo.png","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"spenden","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"PF_hUsSHzSwV3ELyHxaI2"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"spenden","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"lnk2SxqJZTmivYPDI89SC"}
