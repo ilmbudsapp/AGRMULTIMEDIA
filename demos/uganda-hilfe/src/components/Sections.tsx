@@ -4,7 +4,7 @@ export function ProjectCards() {
   return (
     <div className="grid gap-6 md:grid-cols-2">
       {PROJECTS.map((project) => (
-        <article key={project.title} className="uhu-card overflow-hidden transition hover:-translate-y-1">
+        <article key={project.title} className="uhu-card uhu-photo-shadow overflow-hidden transition hover:-translate-y-1">
           <div className="relative aspect-[16/10] overflow-hidden">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={project.image} alt="" className="h-full w-full object-cover transition duration-500 hover:scale-105" loading="lazy" />
@@ -27,7 +27,7 @@ export function NewsCards({ limit }: { limit?: number }) {
   return (
     <div className="grid gap-6 md:grid-cols-2">
       {items.map((item) => (
-        <article key={item.title} className="uhu-card overflow-hidden">
+        <article key={item.title} className="uhu-card uhu-photo-shadow overflow-hidden">
           <div className="grid gap-0 sm:grid-cols-[140px_1fr]">
             <div className="relative min-h-[140px] sm:min-h-full">
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -66,7 +66,7 @@ export function GalleryGrid() {
       {GALLERY.map((item, index) => (
         <figure
           key={item.src}
-          className={`group relative overflow-hidden rounded-2xl ${index === 0 ? "sm:col-span-2 sm:row-span-2" : ""}`}
+          className={`uhu-photo-shadow group relative overflow-hidden rounded-2xl ${index === 0 ? "sm:col-span-2 sm:row-span-2" : ""}`}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img

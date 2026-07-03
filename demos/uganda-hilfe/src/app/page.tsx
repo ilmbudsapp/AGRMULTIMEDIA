@@ -31,7 +31,7 @@ export default function HomePage() {
               Mehr über uns
             </Link>
           </div>
-          <div className="overflow-hidden rounded-3xl shadow-[0_24px_70px_rgba(15,61,34,0.15)]">
+          <div className="uhu-photo-shadow overflow-hidden rounded-3xl">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={`${BASE}/images/school-1.jpg`} alt="Schulgebäude in Kasanje" className="h-full w-full object-cover" />
           </div>

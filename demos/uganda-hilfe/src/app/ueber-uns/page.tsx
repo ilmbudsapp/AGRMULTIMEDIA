@@ -41,7 +41,7 @@ export default function UeberUnsPage() {
             </p>
           </div>
           <div className="space-y-6">
-            <div className="overflow-hidden rounded-3xl">
+            <div className="uhu-photo-shadow overflow-hidden rounded-3xl">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={`${BASE}/images/team-goeppingen.jpg`} alt="Uganda-Team Göppingen" className="w-full object-cover" />
             </div>

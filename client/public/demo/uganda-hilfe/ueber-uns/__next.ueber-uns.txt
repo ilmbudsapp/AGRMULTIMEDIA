@@ -2,4 +2,4 @@
 2:I[2837,["/demo/uganda-hilfe/_next/static/chunks/1ce7yzlzstz5t.js","/demo/uganda-hilfe/_next/static/chunks/2pz2goqgnwf-0.js"],"default"]
 3:I[6769,["/demo/uganda-hilfe/_next/static/chunks/1ce7yzlzstz5t.js","/demo/uganda-hilfe/_next/static/chunks/2pz2goqgnwf-0.js"],"default"]
 4:[]
-0:{"rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"isPartial":false,"staleTime":300,"varyParams":"$W4","buildId":"WpFe76PBNCDFvZpO5Ll_I"}
+0:{"rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"isPartial":false,"staleTime":300,"varyParams":"$W4","buildId":"gsH6VgyLl5hPWJbQ2jjuF"}

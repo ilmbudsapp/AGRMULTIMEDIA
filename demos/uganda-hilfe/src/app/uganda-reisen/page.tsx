@@ -17,7 +17,7 @@ export default function UgandaReisenPage() {
       />
       <section className="uhu-section">
         <div className="uhu-container grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="overflow-hidden rounded-3xl lg:sticky lg:top-28 lg:self-start">
+          <div className="uhu-photo-shadow overflow-hidden rounded-3xl lg:sticky lg:top-28 lg:self-start">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={`${BASE}/images/trip-2026.jpg`} alt="Uganda-Reise 2026" className="w-full object-cover" />
           </div>
