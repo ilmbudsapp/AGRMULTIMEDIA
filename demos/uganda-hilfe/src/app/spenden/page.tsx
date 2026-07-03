@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import DonateCta from "@/components/DonateCta";
+import PayPalDonateButton from "@/components/PayPalDonateButton";
 import { PageHero } from "@/components/Sections";
-import { DONATION } from "@/lib/site";
+import { BASE, DONATION } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Spenden",
@@ -39,6 +40,9 @@ export default function SpendenPage() {
               </div>
             </dl>
             <p className="mt-6 text-sm text-[#52796f]">Spendenbescheinigung auf Wunsch. SEPA-Lastschrift optional möglich.</p>
+            <a href={`${BASE}/downloads/sepa-lastschrift-formular.pdf`} download className="uhu-btn-outline mt-4 inline-flex text-sm">
+              SEPA-Formular herunterladen
+            </a>
           </div>
           <div className="uhu-card p-8">
             <h2 className="text-2xl font-extrabold text-[#14532d]">Stipendium schenken</h2>
@@ -54,6 +58,15 @@ export default function SpendenPage() {
             <Link href="/projekte/" className="mt-6 inline-flex text-sm font-bold text-[#40916c] hover:underline">
               Unsere Projekte ansehen →
             </Link>
+          </div>
+          <div className="uhu-card flex flex-col items-center justify-center p-8 text-center lg:col-span-2">
+            <h2 className="text-2xl font-extrabold text-[#14532d]">PayPal Spende</h2>
+            <p className="mt-4 max-w-xl text-sm leading-relaxed text-[#52796f]">
+              Unterstützen Sie uns schnell und sicher online — ideal für Einzelspenden.
+            </p>
+            <div className="mt-6">
+              <PayPalDonateButton size="large" />
+            </div>
           </div>
         </div>
       </section>

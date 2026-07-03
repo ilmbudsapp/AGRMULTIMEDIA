@@ -43,7 +43,7 @@ body {
 }
 
 .uhu-gradient-hero {
-  background: linear-gradient(135deg, rgba(15, 61, 34, 0.92) 0%, rgba(20, 83, 45, 0.78) 45%, rgba(64, 145, 108, 0.55) 100%);
+  background: linear-gradient(135deg, rgba(15, 61, 34, 0.77) 0%, rgba(20, 83, 45, 0.63) 45%, rgba(64, 145, 108, 0.4) 100%);
 }
 
 .uhu-card {
@@ -77,6 +77,33 @@ body {
 .uhu-btn-primary:hover {
   background: var(--color-uhu-green-light);
   transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(64, 145, 108, 0.42);
+}
+
+.uhu-btn-paypal {
+  background: #ffc439;
+  color: #003087;
+  box-shadow: 0 10px 28px rgba(0, 48, 135, 0.18);
+}
+
+.uhu-btn-paypal:hover:not(:disabled) {
+  background: #f4bb2e;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(0, 48, 135, 0.24);
+}
+
+.uhu-btn-paypal:disabled {
+  cursor: not-allowed;
+  opacity: 0.88;
+}
+
+.uhu-hover-lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.uhu-hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 48px rgba(15, 61, 34, 0.12);
 }
 
 .uhu-btn-secondary {
@@ -111,12 +138,13 @@ body {
   border: 2px solid var(--color-uhu-dark);
   color: var(--color-uhu-dark);
   background: transparent;
-  transition: background 0.2s, color 0.2s;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
 }
 
 .uhu-btn-outline:hover {
   background: var(--color-uhu-dark);
   color: white;
+  transform: translateY(-1px);
 }
 
 @keyframes uhu-fade-up {
@@ -144,4 +172,15 @@ body {
 
 .uhu-animate-in-delay-3 {
   animation-delay: 0.36s;
+}
+
+.uhu-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.uhu-reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
 }

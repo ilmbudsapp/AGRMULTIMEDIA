@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import ScrollReveal from "@/components/ScrollReveal";
 import { STATS } from "@/lib/site";
 
 function useCountUp(target: number, active: boolean) {
@@ -50,7 +51,7 @@ function StatItem({ value, suffix, label, href }: { value: number; suffix: strin
   return (
     <Link
       href={href}
-      className="uhu-card block px-6 py-8 text-center transition hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#40916c]"
+      className="uhu-card uhu-hover-lift block px-6 py-8 text-center transition hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#40916c]"
     >
       <div ref={ref}>
         <p className="text-4xl font-extrabold tracking-tight text-[#14532d] md:text-5xl">
@@ -67,12 +68,16 @@ export default function StatsSection() {
   return (
     <section className="uhu-section bg-[#f0faf3]" aria-labelledby="stats-heading">
       <div className="uhu-container">
-        <h2 id="stats-heading" className="mb-10 text-center text-3xl font-extrabold text-[#14532d] md:text-4xl">
-          Wirkung, die man spürt
-        </h2>
+        <ScrollReveal>
+          <h2 id="stats-heading" className="mb-10 text-center text-3xl font-extrabold text-[#14532d] md:text-4xl">
+            Wirkung, die man spürt
+          </h2>
+        </ScrollReveal>
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {STATS.map((stat) => (
-            <StatItem key={stat.label} {...stat} />
+          {STATS.map((stat, index) => (
+            <ScrollReveal key={stat.label} delay={index * 80}>
+              <StatItem {...stat} />
+            </ScrollReveal>
           ))}
         </div>
       </div>

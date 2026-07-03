@@ -8,6 +8,7 @@ export const SITE = {
     "Die Uganda-Hilfe Unterland e.V. unterstützt Bildung und Perspektiven für Kinder in Kasanje, Uganda — an der St. Monica Junior School.",
   url: "https://www.agrmultimedia.eu/demo/uganda-hilfe/",
   email: "info@uganda-hilfe-unterland.org",
+  phone: "07138 2375129",
   address: "Stuttgarter Straße 50, 73033 Göppingen",
   schoolUrl: "https://stmonicakasanje.com",
 };
@@ -19,6 +20,7 @@ export const NAV = [
   { href: "/uganda-reisen/", label: "Uganda Reisen" },
   { href: "/galerie/", label: "Galerie" },
   { href: "/aktuelles/", label: "Aktuelles" },
+  { href: "/downloads/", label: "Downloads" },
   { href: "/spenden/", label: "Spenden" },
   { href: "/kontakt/", label: "Kontakt" },
 ] as const;
@@ -137,7 +139,58 @@ export const DONATION = {
   bic: "GENODES1VLS",
   holder: "Uganda-Hilfe Unterland e.V.",
   stipendAmount: 140,
+  sepaCreditorId: "DE46ZZZ000019198093004",
+  sepaPurpose: "Uganda-Hilfe Unterland e.V.",
 };
+
+/** PayPal-Spendenlink — URL hier eintragen (z. B. https://www.paypal.com/donate/?hosted_button_id=XXXX) */
+export const PAYPAL_DONATION_URL = "";
+
+export const SOCIAL = [
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/",
+    icon: "facebook",
+  },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/",
+    icon: "instagram",
+  },
+] as const;
+
+export const DOWNLOADS = [
+  {
+    title: "SEPA Lastschrift Formular",
+    description: "Formular für regelmäßige Spenden per SEPA-Lastschrift — einfach ausfüllen und an uns senden.",
+    file: `${BASE}/downloads/sepa-lastschrift-formular.pdf`,
+  },
+  {
+    title: "Mitgliedsantrag",
+    description: "Beitrittserklärung für neue Vereinsmitglieder der Uganda-Hilfe Unterland e.V.",
+    file: `${BASE}/downloads/mitgliedsantrag.pdf`,
+  },
+  {
+    title: "Projektbroschüre: Schulhausbau",
+    description: "Informationen zum Ubuntu Complex und zum Schulcampus in Kasanje, Uganda.",
+    file: `${BASE}/downloads/projektbroschuere-schulhausbau.pdf`,
+  },
+  {
+    title: "Projektinfo: Schulverpflegung",
+    description: "Wie Ihre Spende tägliche Mahlzeiten für Kinder an der St. Monica School ermöglicht.",
+    file: `${BASE}/downloads/projektinfo-schulverpflegung.pdf`,
+  },
+  {
+    title: "Spendeninfo: Stipendien",
+    description: "Patenschaften und Stipendien — 140 € jährlich schenken einem Kind Bildung und Zukunft.",
+    file: `${BASE}/downloads/spendeninfo-stipendium.pdf`,
+  },
+  {
+    title: "Projektinfo: Waisenkinder",
+    description: "Unterstützung für Waisenkinder in Kasanje — Schulgeld, Verpflegung und liebevolle Betreuung.",
+    file: `${BASE}/downloads/projektinfo-waisenkinder.pdf`,
+  },
+] as const;
 
 export const CONTACTS = [
   { name: "Allgemeine Anfragen", email: "info@uganda-hilfe-unterland.org", phone: null, address: "Stuttgarter Straße 50, 73033 Göppingen" },

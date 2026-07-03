@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { GALLERY, NEWS, PROJECTS, TRIPS } from "@/lib/site";
+import { DOWNLOADS, GALLERY, NEWS, PROJECTS, TRIPS } from "@/lib/site";
 
 export function ProjectCards() {
   return (
@@ -8,7 +8,7 @@ export function ProjectCards() {
         <Link
           key={project.title}
           href={project.href}
-          className="uhu-card uhu-photo-shadow block overflow-hidden transition hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#40916c]"
+          className="uhu-card uhu-photo-shadow uhu-hover-lift block overflow-hidden transition hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#40916c]"
         >
           <div className="relative aspect-[16/10] overflow-hidden">
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -36,7 +36,7 @@ export function NewsCards({ limit }: { limit?: number }) {
         <Link
           key={item.title}
           href={item.href}
-          className="uhu-card uhu-photo-shadow block overflow-hidden transition hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#40916c]"
+          className="uhu-card uhu-photo-shadow uhu-hover-lift block overflow-hidden transition hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#40916c]"
         >
           <div className="grid gap-0 sm:grid-cols-[140px_1fr]">
             <div className="relative min-h-[140px] sm:min-h-full">
@@ -85,7 +85,7 @@ export function GalleryGrid() {
         <Link
           key={item.src}
           href={item.href}
-          className={`uhu-photo-shadow group relative block overflow-hidden rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#40916c] ${index === 0 ? "sm:col-span-2 sm:row-span-2" : ""}`}
+          className={`uhu-photo-shadow uhu-hover-lift group relative block overflow-hidden rounded-2xl transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#40916c] ${index === 0 ? "sm:col-span-2 sm:row-span-2" : ""}`}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -111,5 +111,44 @@ export function PageHero({ title, subtitle }: { title: string; subtitle?: string
         {subtitle && <p className="mt-4 max-w-3xl text-lg text-white/85">{subtitle}</p>}
       </div>
     </section>
+  );
+}
+
+function PdfIcon() {
+  return (
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden className="text-[#40916c]">
+      <path
+        d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"
+        stroke="currentColor"
+        strokeWidth="1.75"
+        strokeLinejoin="round"
+      />
+      <path d="M14 2v6h6M8 13h1M8 17h5M8 9h2" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+export function DownloadCards() {
+  return (
+    <div className="grid gap-6 md:grid-cols-2">
+      {DOWNLOADS.map((doc) => (
+        <article key={doc.file} className="uhu-card uhu-hover-lift flex gap-5 p-6">
+          <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#f0faf3]">
+            <PdfIcon />
+          </div>
+          <div className="flex min-w-0 flex-1 flex-col">
+            <h2 className="text-lg font-extrabold text-[#14532d]">{doc.title}</h2>
+            <p className="mt-2 flex-1 text-sm leading-relaxed text-[#52796f]">{doc.description}</p>
+            <a
+              href={doc.file}
+              download
+              className="uhu-btn-outline mt-4 inline-flex w-fit text-sm"
+            >
+              PDF herunterladen
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
   );
 }
