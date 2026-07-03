@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import DonateCta from "@/components/DonateCta";
 import { PageHero } from "@/components/Sections";
 import { BASE, TEAM } from "@/lib/site";
@@ -26,24 +27,40 @@ export default function UeberUnsPage() {
             <p>
               Denis Mpanga engagiert sich seit 2005 im Bildungsbereich in einem ländlichen Raum, etwa 40 km südwestlich
               von Kampala. Gemeinsam reisten sie noch im selben Jahr nach Uganda, wo die St. Monica Junior School in
-              Kasanje gerade ihr erstes Schulgebäude eröffnete.
+              Kasanje gerade ihr erstes Schulgebäude eröffnete — mehr dazu unter{" "}
+              <Link href="/uganda-reisen/" className="font-semibold text-[#40916c] hover:underline">
+                Uganda Reisen
+              </Link>
+              .
             </p>
             <p>
               Am <strong className="text-[#14532d]">22. Januar 2015</strong> wurde der Verein gegründet. Neben Bau- und
-              Ausstattungskosten finanzieren Spenden Lernmittel, Lehrkräfte, Schulbusse, tägliche Verpflegung und
-              Schuluniformen.
+              Ausstattungskosten finanzieren{" "}
+              <Link href="/spenden/" className="font-semibold text-[#40916c] hover:underline">
+                Spenden
+              </Link>{" "}
+              Lernmittel, Lehrkräfte, Schulbusse, tägliche Verpflegung und Schuluniformen.
             </p>
             <p>
               Im Juli 2015 folgte die Erweiterung um vier Klassenzimmer — damals mit nur 28 Vereinsmitgliedern und
-              Kosten von ca. 25.000 €. Heute ist der <strong className="text-[#14532d]">Ubuntu Complex</strong> mit
-              über 200.000 € Investition das Herzstück — gewidmet im März 2024, benannt nach dem Prinzip
-              „Gemeinschaftssinn“.
+              Kosten von ca. 25.000 €. Heute ist der{" "}
+              <Link href="/projekte/" className="font-semibold text-[#40916c] hover:underline">
+                Ubuntu Complex
+              </Link>{" "}
+              mit über 200.000 € Investition das Herzstück — gewidmet im März 2024, benannt nach dem Prinzip
+              „Gemeinschaftssinn“. Eindrücke finden Sie in unserer{" "}
+              <Link href="/galerie/" className="font-semibold text-[#40916c] hover:underline">
+                Galerie
+              </Link>
+              .
             </p>
           </div>
           <div className="space-y-6">
             <div className="uhu-photo-shadow overflow-hidden rounded-3xl">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={`${BASE}/images/team-goeppingen.jpg`} alt="Uganda-Team Göppingen" className="w-full object-cover" />
+              <Link href="/uganda-reisen/" className="block">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={`${BASE}/images/team-goeppingen.jpg`} alt="Uganda-Team Göppingen" className="w-full object-cover transition duration-500 hover:scale-[1.02]" />
+              </Link>
             </div>
             <div className="uhu-card p-6">
               <h2 className="text-xl font-extrabold text-[#14532d]">Unser Vorstand</h2>
@@ -55,6 +72,9 @@ export default function UeberUnsPage() {
                   </li>
                 ))}
               </ul>
+              <Link href="/kontakt/" className="mt-5 inline-flex text-sm font-bold text-[#40916c] hover:underline">
+                Kontakt zum Vorstand →
+              </Link>
             </div>
           </div>
         </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import { STATS } from "@/lib/site";
 
 function useCountUp(target: number, active: boolean) {
@@ -25,7 +26,7 @@ function useCountUp(target: number, active: boolean) {
   return value;
 }
 
-function StatItem({ value, suffix, label }: { value: number; suffix: string; label: string }) {
+function StatItem({ value, suffix, label, href }: { value: number; suffix: string; label: string; href: string }) {
   const ref = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(false);
   const count = useCountUp(value, active);
@@ -47,13 +48,18 @@ function StatItem({ value, suffix, label }: { value: number; suffix: string; lab
   }, []);
 
   return (
-    <div ref={ref} className="uhu-card px-6 py-8 text-center">
-      <p className="text-4xl font-extrabold tracking-tight text-[#14532d] md:text-5xl">
-        {count.toLocaleString("de-DE")}
-        {suffix}
-      </p>
-      <p className="mt-2 text-sm font-semibold uppercase tracking-wide text-[#52796f]">{label}</p>
-    </div>
+    <Link
+      href={href}
+      className="uhu-card block px-6 py-8 text-center transition hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#40916c]"
+    >
+      <div ref={ref}>
+        <p className="text-4xl font-extrabold tracking-tight text-[#14532d] md:text-5xl">
+          {count.toLocaleString("de-DE")}
+          {suffix}
+        </p>
+        <p className="mt-2 text-sm font-semibold uppercase tracking-wide text-[#52796f]">{label}</p>
+      </div>
+    </Link>
   );
 }
 

@@ -24,10 +24,10 @@ export const NAV = [
 ] as const;
 
 export const STATS = [
-  { value: 367, suffix: "+", label: "Kinder an der Schule" },
-  { value: 2015, suffix: "", label: "Verein gegründet" },
-  { value: 220, suffix: "+", label: "Stipendien möglich" },
-  { value: 11, suffix: "", label: "Lehrkräfte vor Ort" },
+  { value: 367, suffix: "+", label: "Kinder an der Schule", href: "/projekte/" },
+  { value: 2015, suffix: "", label: "Verein gegründet", href: "/ueber-uns/" },
+  { value: 220, suffix: "+", label: "Stipendien möglich", href: "/spenden/" },
+  { value: 11, suffix: "", label: "Lehrkräfte vor Ort", href: "/ueber-uns/" },
 ] as const;
 
 export const PROJECTS = [
@@ -37,6 +37,7 @@ export const PROJECTS = [
       "Neuer Schulcampus in Kasanje — über 200.000 € Investition in fünf Bauabschnitten. Im März 2024 gewidmet, Name nach dem Ubuntu-Prinzip: Gemeinschaftssinn.",
     image: `${BASE}/images/school-2.jpg`,
     tag: "Schulbau",
+    href: "/galerie/",
   },
   {
     title: "Schulküche & Verpflegung",
@@ -44,6 +45,7 @@ export const PROJECTS = [
       "Neue Küche am Ubuntu Complex — täglich zwei warme Mahlzeiten für die Kinder. Pflasterarbeiten, Inbetriebnahme und nachhaltiger Betrieb vor Ort.",
     image: `${BASE}/images/kitchen.jpg`,
     tag: "Verpflegung",
+    href: "/aktuelles/",
   },
   {
     title: "Stipendien & Patenschaften",
@@ -51,6 +53,7 @@ export const PROJECTS = [
       "140 € jährlich finanzieren Schulgeld, Uniform, Lernmaterial und Mahlzeiten — besonders wichtig für Waisenkinder in Kasanje und Umgebung.",
     image: `${BASE}/images/meals.jpg`,
     tag: "Bildung",
+    href: "/spenden/",
   },
   {
     title: "Sport & Campus",
@@ -58,6 +61,7 @@ export const PROJECTS = [
       "Fußball, Volleyball und Sitzgelegenheiten am Campus — Raum für Bewegung, Gemeinschaft und ein liebevolles Lernumfeld.",
     image: `${BASE}/images/playground.jpg`,
     tag: "Infrastruktur",
+    href: "/galerie/",
   },
 ] as const;
 
@@ -68,6 +72,7 @@ export const NEWS = [
     excerpt:
       "Eine Reisegruppe rund um Fabio Tino Vercelli besuchte die St. Monica School — persönliche Begegnungen, Fortschritte vor Ort und neue Impulse für unsere Projekte.",
     image: `${BASE}/images/trip-2026.jpg`,
+    href: "/uganda-reisen/",
   },
   {
     date: "05.06.2026",
@@ -75,6 +80,7 @@ export const NEWS = [
     excerpt:
       "Die Schulküche am Ubuntu Complex ist fertig — tägliche Verpflegung für Hunderte Kinder ist damit gesichert.",
     image: `${BASE}/images/kitchen.jpg`,
+    href: "/projekte/",
   },
   {
     date: "05.06.2026",
@@ -82,6 +88,7 @@ export const NEWS = [
     excerpt:
       "Nach zehn Jahren übergibt Wolfgang Friederich den Vorsitz an Christian Gaus — Dank für ein Jahrzehnt Engagement.",
     image: `${BASE}/images/board-1.jpg`,
+    href: "/ueber-uns/",
   },
   {
     date: "06.06.2026",
@@ -89,30 +96,31 @@ export const NEWS = [
     excerpt:
       "Fortschritte am Ubuntu Complex: Pflasterarbeiten schaffen sichere Wege rund um die neue Küche.",
     image: `${BASE}/images/paving.jpg`,
+    href: "/galerie/",
   },
 ] as const;
 
 export const TRIPS = [
-  { year: "2012", title: "Erste Begegnung", text: "Wolfgang Friederich und Denis Mpanga reisen nach Kasanje — die St. Monica Junior School eröffnet ihr erstes Gebäude mit drei Klassen." },
-  { year: "2015", title: "Vereinsgründung & Erweiterung", text: "Uganda-Hilfe Unterland e.V. gegründet am 22. Januar. Im Juli Erweiterung um vier Klassenzimmer — ca. 25.000 €." },
-  { year: "2018", title: "Uganda-Team Göppingen", text: "Zwölf Personen reisen nach Uganda — über 9.000 € Spenden und enge Freundschaften vor Ort." },
-  { year: "2020", title: "16-köpfige Reisegruppe", text: "24.02.–07.03.2020: Erster Bauabschnitt des neuen Schulgebäudes abgeschlossen. Flug und Unterkunft privat finanziert." },
-  { year: "2024", title: "Ubuntu Complex", text: "Feierliche Einweihung des neuen Schulcampus — Meilenstein für über 200.000 € Investition." },
-  { year: "2026", title: "Reise & Kücheneinweihung", text: "Acht-köpfige Gruppe aus Göppingen — Küche in Betrieb, ca. 3.000 € Spenden für zwei Monate Verpflegung." },
+  { year: "2012", title: "Erste Begegnung", text: "Wolfgang Friederich und Denis Mpanga reisen nach Kasanje — die St. Monica Junior School eröffnet ihr erstes Gebäude mit drei Klassen.", href: "/ueber-uns/" },
+  { year: "2015", title: "Vereinsgründung & Erweiterung", text: "Uganda-Hilfe Unterland e.V. gegründet am 22. Januar. Im Juli Erweiterung um vier Klassenzimmer — ca. 25.000 €.", href: "/ueber-uns/" },
+  { year: "2018", title: "Uganda-Team Göppingen", text: "Zwölf Personen reisen nach Uganda — über 9.000 € Spenden und enge Freundschaften vor Ort.", href: "/uganda-reisen/" },
+  { year: "2020", title: "16-köpfige Reisegruppe", text: "24.02.–07.03.2020: Erster Bauabschnitt des neuen Schulgebäudes abgeschlossen. Flug und Unterkunft privat finanziert.", href: "/uganda-reisen/" },
+  { year: "2024", title: "Ubuntu Complex", text: "Feierliche Einweihung des neuen Schulcampus — Meilenstein für über 200.000 € Investition.", href: "/projekte/" },
+  { year: "2026", title: "Reise & Kücheneinweihung", text: "Acht-köpfige Gruppe aus Göppingen — Küche in Betrieb, ca. 3.000 € Spenden für zwei Monate Verpflegung.", href: "/aktuelles/" },
 ] as const;
 
 export const GALLERY = [
-  { src: `${BASE}/images/hero.jpg`, alt: "Kinder in Kasanje, Uganda" },
-  { src: `${BASE}/images/school-1.jpg`, alt: "Schulgebäude St. Monica" },
-  { src: `${BASE}/images/school-2.jpg`, alt: "Neues Schulgebäude" },
-  { src: `${BASE}/images/playground.jpg`, alt: "Spielplatz der Schule" },
-  { src: `${BASE}/images/meals.jpg`, alt: "Essensausgabe für Schüler" },
-  { src: `${BASE}/images/team-goeppingen.jpg`, alt: "Uganda-Team Göppingen" },
-  { src: `${BASE}/images/trip-2026.jpg`, alt: "Uganda-Reise 2026" },
-  { src: `${BASE}/images/kitchen.jpg`, alt: "Neue Schulküche" },
-  { src: `${BASE}/images/paving.jpg`, alt: "Pflasterarbeiten am Campus" },
-  { src: `${BASE}/images/board-1.jpg`, alt: "Vorstandsteam" },
-  { src: `${BASE}/images/news-1.jpg`, alt: "Projektarbeit in Uganda" },
+  { src: `${BASE}/images/hero.jpg`, alt: "Kinder in Kasanje, Uganda", href: "/ueber-uns/" },
+  { src: `${BASE}/images/school-1.jpg`, alt: "Schulgebäude St. Monica", href: "/projekte/" },
+  { src: `${BASE}/images/school-2.jpg`, alt: "Neues Schulgebäude", href: "/projekte/" },
+  { src: `${BASE}/images/playground.jpg`, alt: "Spielplatz der Schule", href: "/projekte/" },
+  { src: `${BASE}/images/meals.jpg`, alt: "Essensausgabe für Schüler", href: "/spenden/" },
+  { src: `${BASE}/images/team-goeppingen.jpg`, alt: "Uganda-Team Göppingen", href: "/uganda-reisen/" },
+  { src: `${BASE}/images/trip-2026.jpg`, alt: "Uganda-Reise 2026", href: "/uganda-reisen/" },
+  { src: `${BASE}/images/kitchen.jpg`, alt: "Neue Schulküche", href: "/aktuelles/" },
+  { src: `${BASE}/images/paving.jpg`, alt: "Pflasterarbeiten am Campus", href: "/projekte/" },
+  { src: `${BASE}/images/board-1.jpg`, alt: "Vorstandsteam", href: "/ueber-uns/" },
+  { src: `${BASE}/images/news-1.jpg`, alt: "Projektarbeit in Uganda", href: "/aktuelles/" },
 ] as const;
 
 export const TEAM = [

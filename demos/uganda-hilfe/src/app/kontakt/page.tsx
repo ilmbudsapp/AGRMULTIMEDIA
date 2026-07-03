@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import DonateCta from "@/components/DonateCta";
 import { PageHero } from "@/components/Sections";
 import { CONTACTS, SITE } from "@/lib/site";
@@ -31,6 +32,17 @@ export default function KontaktPage() {
           <form className="uhu-card p-8" aria-label="Kontaktformular">
             <h2 className="text-xl font-extrabold text-[#14532d]">Nachricht senden</h2>
             <p className="mt-2 text-sm text-[#52796f]">Demo-Formular — in der Live-Version an info@{SITE.email.split("@")[1]} angebunden.</p>
+            <p className="mt-2 text-sm text-[#52796f]">
+              Fragen zu{" "}
+              <Link href="/spenden/" className="font-semibold text-[#40916c] hover:underline">
+                Spenden
+              </Link>{" "}
+              oder{" "}
+              <Link href="/projekte/" className="font-semibold text-[#40916c] hover:underline">
+                Projekten
+              </Link>
+              ? Wir helfen gerne weiter.
+            </p>
             <div className="mt-6 space-y-4">
               <label className="block">
                 <span className="text-sm font-semibold text-[#14532d]">Name</span>

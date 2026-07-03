@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import DonateCta from "@/components/DonateCta";
 import { PageHero } from "@/components/Sections";
 import { DONATION } from "@/lib/site";
@@ -50,6 +51,9 @@ export default function SpendenPage() {
               <li>✓ Direkte Wirkung in Kasanje</li>
               <li>✓ Bildung schafft Zukunft</li>
             </ul>
+            <Link href="/projekte/" className="mt-6 inline-flex text-sm font-bold text-[#40916c] hover:underline">
+              Unsere Projekte ansehen →
+            </Link>
           </div>
         </div>
       </section>

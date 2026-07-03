@@ -25,6 +25,9 @@ export default function DonateCta({
           <Link href="/projekte/" className="uhu-btn-secondary">
             Unsere Projekte
           </Link>
+          <Link href="/kontakt/" className="uhu-btn-secondary">
+            Kontakt
+          </Link>
         </div>
       </div>
     </section>

@@ -6,8 +6,10 @@ export default function Footer() {
     <footer className="bg-[#0f3d22] text-white">
       <div className="uhu-container uhu-section grid gap-10 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={`${BASE}/images/logo.png`} alt="" width={140} height={58} className="mb-4 h-12 w-auto brightness-0 invert" />
+          <Link href="/" className="inline-block">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={`${BASE}/images/logo.png`} alt="" width={140} height={58} className="mb-4 h-12 w-auto brightness-0 invert" />
+          </Link>
           <p className="max-w-xs text-sm leading-relaxed text-white/80">{SITE.description}</p>
         </div>
         <div>
@@ -23,7 +25,11 @@ export default function Footer() {
           </ul>
         </div>
         <div>
-          <h2 className="mb-4 text-sm font-bold uppercase tracking-wider text-[#52b788]">Kontakt</h2>
+          <h2 className="mb-4 text-sm font-bold uppercase tracking-wider text-[#52b788]">
+            <Link href="/kontakt/" className="hover:text-[#d8f3dc]">
+              Kontakt
+            </Link>
+          </h2>
           <ul className="space-y-3 text-sm text-white/85">
             {CONTACTS.slice(0, 2).map((c) => (
               <li key={c.email}>
@@ -33,6 +39,11 @@ export default function Footer() {
                 </a>
               </li>
             ))}
+            <li>
+              <Link href="/kontakt/" className="font-semibold text-[#52b788] hover:text-[#d8f3dc]">
+                Alle Kontakte →
+              </Link>
+            </li>
           </ul>
         </div>
         <div>

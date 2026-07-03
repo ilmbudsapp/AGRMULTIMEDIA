@@ -15,7 +15,9 @@ export default function Hero() {
       <div className="relative z-10 flex min-h-[min(88vh,920px)] items-center">
         <div className="uhu-container py-16 text-white">
           <p className="uhu-animate-in mb-4 text-xs font-bold uppercase tracking-[0.35em] text-[#d8f3dc] md:text-sm">
-            St. Monica Junior School · Kasanje, Uganda
+            <Link href="/ueber-uns/" className="hover:text-white hover:underline">
+              St. Monica Junior School · Kasanje, Uganda
+            </Link>
           </p>
           <h1 id="hero-heading" className="uhu-animate-in uhu-animate-in-delay-1 max-w-4xl text-4xl font-extrabold leading-[1.08] tracking-tight md:text-6xl lg:text-7xl">
             {SITE.tagline}

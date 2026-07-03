@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import DonateCta from "@/components/DonateCta";
 import { NewsCards, PageHero } from "@/components/Sections";
 
@@ -20,6 +21,9 @@ export default function AktuellesPage() {
               Spendengala am <strong>18.09.2026, 19:00 Uhr</strong> im Hauk-Erkinger-Saal Rechberghausen — Einblicke
               ins Schulprojekt mit Dr. Denis Mpanga und Fabio Tino Vercelli.
             </p>
+            <Link href="/kontakt/" className="mt-4 inline-flex text-sm font-bold text-[#40916c] hover:underline">
+              Anmeldung & Kontakt →
+            </Link>
           </div>
         </div>
       </section>

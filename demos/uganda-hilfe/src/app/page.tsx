@@ -32,8 +32,10 @@ export default function HomePage() {
             </Link>
           </div>
           <div className="uhu-photo-shadow overflow-hidden rounded-3xl">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={`${BASE}/images/school-1.jpg`} alt="Schulgebäude in Kasanje" className="h-full w-full object-cover" />
+            <Link href="/galerie/" className="block">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={`${BASE}/images/school-1.jpg`} alt="Schulgebäude in Kasanje" className="h-full w-full object-cover transition duration-500 hover:scale-[1.02]" />
+            </Link>
           </div>
         </div>
       </section>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import DonateCta from "@/components/DonateCta";
 import { PageHero, ProjectCards } from "@/components/Sections";
 
@@ -23,6 +24,14 @@ export default function ProjektePage() {
               Aktuell besuchen über 360 Kinder die St. Monica Junior School. Mit Ihrer Unterstützung erweitern wir
               Kapazitäten, Instandsetzung der älteren Gebäude und sportliche Angebote am Campus.
             </p>
+            <div className="mt-6 flex flex-wrap gap-4">
+              <Link href="/spenden/" className="uhu-btn-primary text-sm">
+                Jetzt spenden
+              </Link>
+              <Link href="/galerie/" className="uhu-btn-outline text-sm">
+                Galerie ansehen
+              </Link>
+            </div>
           </div>
         </div>
       </section>
