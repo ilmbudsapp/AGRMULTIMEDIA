@@ -1,15 +1,17 @@
 import Link from "next/link";
-import { BASE, CONTACTS, DONATION, NAV, SITE } from "@/lib/site";
+import { HeaderLogo } from "@/components/HeaderLogo";
+import { CONTACTS, DONATION, NAV, SITE } from "@/lib/site";
 
 export default function Footer() {
   return (
     <footer className="bg-[#0f3d22] text-white">
       <div className="uhu-container uhu-section grid gap-10 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <Link href="/" className="inline-block">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={`${BASE}/images/logo.png`} alt="" width={140} height={58} className="mb-4 h-12 w-auto brightness-0 invert" />
-          </Link>
+          <HeaderLogo
+            imgClassName="mb-4 h-12 w-auto brightness-0 invert"
+            width={140}
+            height={58}
+          />
           <p className="max-w-xs text-sm leading-relaxed text-white/80">{SITE.description}</p>
         </div>
         <div>

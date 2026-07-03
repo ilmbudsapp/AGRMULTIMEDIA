@@ -1,5 +1,5 @@
 1:"$Sreact.fragment"
-2:I[2837,["/demo/uganda-hilfe/_next/static/chunks/2eiq5lc6h_cq5.js","/demo/uganda-hilfe/_next/static/chunks/2pz2goqgnwf-0.js"],"default"]
-3:I[6769,["/demo/uganda-hilfe/_next/static/chunks/2eiq5lc6h_cq5.js","/demo/uganda-hilfe/_next/static/chunks/2pz2goqgnwf-0.js"],"default"]
+2:I[2837,["/demo/uganda-hilfe/_next/static/chunks/3hvkn0qa0e2sc.js","/demo/uganda-hilfe/_next/static/chunks/2pz2goqgnwf-0.js"],"default"]
+3:I[6769,["/demo/uganda-hilfe/_next/static/chunks/3hvkn0qa0e2sc.js","/demo/uganda-hilfe/_next/static/chunks/2pz2goqgnwf-0.js"],"default"]
 4:[]
-0:{"rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"isPartial":false,"staleTime":300,"varyParams":"$W4","buildId":"lnk2SxqJZTmivYPDI89SC"}
+0:{"rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"isPartial":false,"staleTime":300,"varyParams":"$W4","buildId":"49bDGyQNIq4POXJx676IA"}

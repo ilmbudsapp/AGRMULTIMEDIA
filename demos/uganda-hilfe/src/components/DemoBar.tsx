@@ -1,6 +1,3 @@
-import Link from "next/link";
-import { BASE } from "@/lib/site";
-
 export default function DemoBar() {
   return (
     <div
@@ -26,23 +23,4 @@ export default function DemoBar() {
 
 export function demoTopOffsetClass() {
   return "pt-9";
-}
-
-export function HeaderLogo({ className = "" }: { className?: string }) {
-  return (
-    <Link
-      href="/"
-      className={`inline-flex shrink-0 items-center ${className}`}
-      aria-label="Uganda-Hilfe Unterland e.V. — Startseite"
-    >
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={`${BASE}/images/logo.png`}
-        alt="Uganda-Hilfe Unterland e.V."
-        width={156}
-        height={65}
-        className="h-[3.25rem] w-auto object-contain"
-      />
-    </Link>
-  );
 }

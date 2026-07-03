@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { BASE, NAV } from "@/lib/site";
-import { HeaderLogo } from "./DemoBar";
+import { HeaderLogo } from "./HeaderLogo";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
