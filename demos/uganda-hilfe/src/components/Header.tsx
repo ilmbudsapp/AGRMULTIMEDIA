@@ -13,7 +13,7 @@ export default function Header() {
   return (
     <header className="sticky top-9 z-50 border-b border-[#14532d]/10 bg-white/95 backdrop-blur-md">
       <div className="uhu-container flex h-16 items-center justify-between gap-4">
-        <HeaderLogo />
+        <HeaderLogo className="mr-2" />
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Hauptnavigation">
           {NAV.map((item) => {

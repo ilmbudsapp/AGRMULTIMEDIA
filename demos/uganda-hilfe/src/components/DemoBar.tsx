@@ -30,13 +30,19 @@ export function demoTopOffsetClass() {
 
 export function HeaderLogo({ className = "" }: { className?: string }) {
   return (
-    <Link href="/" className={`inline-flex items-center gap-3 ${className}`}>
+    <Link
+      href="/"
+      className={`inline-flex shrink-0 items-center ${className}`}
+      aria-label="Uganda-Hilfe Unterland e.V. — Startseite"
+    >
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={`${BASE}/images/logo.png`} alt="" width={120} height={50} className="h-10 w-auto object-contain" />
-      <span className="hidden text-sm font-bold leading-tight text-[#14532d] sm:block">
-        Uganda-Hilfe
-        <span className="block text-xs font-medium text-[#52796f]">Unterland e.V.</span>
-      </span>
+      <img
+        src={`${BASE}/images/logo.png`}
+        alt="Uganda-Hilfe Unterland e.V."
+        width={156}
+        height={65}
+        className="h-[3.25rem] w-auto object-contain"
+      />
     </Link>
   );
 }
