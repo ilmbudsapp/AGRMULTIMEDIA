@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-uhu-white: #ffffff;
+  --color-uhu-dark: #14532d;
+  --color-uhu-dark-deep: #0f3d22;
+  --color-uhu-green: #40916c;
+  --color-uhu-green-light: #52b788;
+  --color-uhu-green-soft: #d8f3dc;
+  --color-uhu-muted: #52796f;
+  --font-sans: var(--font-source-sans);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-uhu-white);
+  color: #1a1a1a;
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.uhu-container {
+  width: min(100% - 2rem, 72rem);
+  margin-inline: auto;
+}
+
+.uhu-section {
+  padding-block: clamp(3.5rem, 8vw, 6rem);
+}
+
+.uhu-gradient-hero {
+  background: linear-gradient(135deg, rgba(15, 61, 34, 0.92) 0%, rgba(20, 83, 45, 0.78) 45%, rgba(64, 145, 108, 0.55) 100%);
+}
+
+.uhu-card {
+  border-radius: 1.25rem;
+  border: 1px solid rgba(20, 83, 45, 0.1);
+  background: white;
+  box-shadow: 0 18px 50px rgba(15, 61, 34, 0.08);
+}
+
+.uhu-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  padding: 0.85rem 1.6rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  background: var(--color-uhu-green);
+  color: white;
+  transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 10px 30px rgba(64, 145, 108, 0.35);
+}
+
+.uhu-btn-primary:hover {
+  background: var(--color-uhu-green-light);
+  transform: translateY(-2px);
+}
+
+.uhu-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  padding: 0.85rem 1.6rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  color: white;
+  background: transparent;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.uhu-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
+}
+
+.uhu-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  padding: 0.85rem 1.6rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: 2px solid var(--color-uhu-dark);
+  color: var(--color-uhu-dark);
+  background: transparent;
+  transition: background 0.2s, color 0.2s;
+}
+
+.uhu-btn-outline:hover {
+  background: var(--color-uhu-dark);
+  color: white;
+}
+
+@keyframes uhu-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.uhu-animate-in {
+  animation: uhu-fade-up 0.7s ease-out both;
+}
+
+.uhu-animate-in-delay-1 {
+  animation-delay: 0.12s;
+}
+
+.uhu-animate-in-delay-2 {
+  animation-delay: 0.24s;
+}
+
+.uhu-animate-in-delay-3 {
+  animation-delay: 0.36s;
+}

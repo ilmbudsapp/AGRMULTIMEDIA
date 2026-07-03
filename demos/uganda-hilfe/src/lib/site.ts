@@ -1,0 +1,138 @@
+export const BASE = "/demo/uganda-hilfe";
+
+export const SITE = {
+  name: "Uganda-Hilfe Unterland e.V.",
+  shortName: "Uganda-Hilfe Unterland",
+  tagline: "Gemeinsam schenken wir Kindern Zukunft.",
+  description:
+    "Die Uganda-Hilfe Unterland e.V. unterstützt Bildung und Perspektiven für Kinder in Kasanje, Uganda — an der St. Monica Junior School.",
+  url: "https://www.agrmultimedia.eu/demo/uganda-hilfe/",
+  email: "info@uganda-hilfe-unterland.org",
+  address: "Stuttgarter Straße 50, 73033 Göppingen",
+  schoolUrl: "https://stmonicakasanje.com",
+};
+
+export const NAV = [
+  { href: "/", label: "Home" },
+  { href: "/ueber-uns/", label: "Über uns" },
+  { href: "/projekte/", label: "Projekte" },
+  { href: "/uganda-reisen/", label: "Uganda Reisen" },
+  { href: "/galerie/", label: "Galerie" },
+  { href: "/aktuelles/", label: "Aktuelles" },
+  { href: "/spenden/", label: "Spenden" },
+  { href: "/kontakt/", label: "Kontakt" },
+] as const;
+
+export const STATS = [
+  { value: 367, suffix: "+", label: "Kinder an der Schule" },
+  { value: 2015, suffix: "", label: "Verein gegründet" },
+  { value: 220, suffix: "+", label: "Stipendien möglich" },
+  { value: 11, suffix: "", label: "Lehrkräfte vor Ort" },
+] as const;
+
+export const PROJECTS = [
+  {
+    title: "Ubuntu Complex",
+    summary:
+      "Neuer Schulcampus in Kasanje — über 200.000 € Investition in fünf Bauabschnitten. Im März 2024 gewidmet, Name nach dem Ubuntu-Prinzip: Gemeinschaftssinn.",
+    image: `${BASE}/images/school-2.jpg`,
+    tag: "Schulbau",
+  },
+  {
+    title: "Schulküche & Verpflegung",
+    summary:
+      "Neue Küche am Ubuntu Complex — täglich zwei warme Mahlzeiten für die Kinder. Pflasterarbeiten, Inbetriebnahme und nachhaltiger Betrieb vor Ort.",
+    image: `${BASE}/images/kitchen.jpg`,
+    tag: "Verpflegung",
+  },
+  {
+    title: "Stipendien & Patenschaften",
+    summary:
+      "140 € jährlich finanzieren Schulgeld, Uniform, Lernmaterial und Mahlzeiten — besonders wichtig für Waisenkinder in Kasanje und Umgebung.",
+    image: `${BASE}/images/meals.jpg`,
+    tag: "Bildung",
+  },
+  {
+    title: "Sport & Campus",
+    summary:
+      "Fußball, Volleyball und Sitzgelegenheiten am Campus — Raum für Bewegung, Gemeinschaft und ein liebevolles Lernumfeld.",
+    image: `${BASE}/images/playground.jpg`,
+    tag: "Infrastruktur",
+  },
+] as const;
+
+export const NEWS = [
+  {
+    date: "06.06.2026",
+    title: "Uganda-Reise 2026",
+    excerpt:
+      "Eine Reisegruppe rund um Fabio Tino Vercelli besuchte die St. Monica School — persönliche Begegnungen, Fortschritte vor Ort und neue Impulse für unsere Projekte.",
+    image: `${BASE}/images/trip-2026.jpg`,
+  },
+  {
+    date: "05.06.2026",
+    title: "Neue Küche erfolgreich in Betrieb",
+    excerpt:
+      "Die Schulküche am Ubuntu Complex ist fertig — tägliche Verpflegung für Hunderte Kinder ist damit gesichert.",
+    image: `${BASE}/images/kitchen.jpg`,
+  },
+  {
+    date: "05.06.2026",
+    title: "Christian Gaus übernimmt den Vorsitz",
+    excerpt:
+      "Nach zehn Jahren übergibt Wolfgang Friederich den Vorsitz an Christian Gaus — Dank für ein Jahrzehnt Engagement.",
+    image: `${BASE}/images/board-1.jpg`,
+  },
+  {
+    date: "06.06.2026",
+    title: "Pflasterarbeiten vor der Küche",
+    excerpt:
+      "Fortschritte am Ubuntu Complex: Pflasterarbeiten schaffen sichere Wege rund um die neue Küche.",
+    image: `${BASE}/images/paving.jpg`,
+  },
+] as const;
+
+export const TRIPS = [
+  { year: "2012", title: "Erste Begegnung", text: "Wolfgang Friederich und Denis Mpanga reisen nach Kasanje — die St. Monica Junior School eröffnet ihr erstes Gebäude mit drei Klassen." },
+  { year: "2015", title: "Vereinsgründung & Erweiterung", text: "Uganda-Hilfe Unterland e.V. gegründet am 22. Januar. Im Juli Erweiterung um vier Klassenzimmer — ca. 25.000 €." },
+  { year: "2018", title: "Uganda-Team Göppingen", text: "Zwölf Personen reisen nach Uganda — über 9.000 € Spenden und enge Freundschaften vor Ort." },
+  { year: "2020", title: "16-köpfige Reisegruppe", text: "24.02.–07.03.2020: Erster Bauabschnitt des neuen Schulgebäudes abgeschlossen. Flug und Unterkunft privat finanziert." },
+  { year: "2024", title: "Ubuntu Complex", text: "Feierliche Einweihung des neuen Schulcampus — Meilenstein für über 200.000 € Investition." },
+  { year: "2026", title: "Reise & Kücheneinweihung", text: "Acht-köpfige Gruppe aus Göppingen — Küche in Betrieb, ca. 3.000 € Spenden für zwei Monate Verpflegung." },
+] as const;
+
+export const GALLERY = [
+  { src: `${BASE}/images/hero.jpg`, alt: "Kinder in Kasanje, Uganda" },
+  { src: `${BASE}/images/school-1.jpg`, alt: "Schulgebäude St. Monica" },
+  { src: `${BASE}/images/school-2.jpg`, alt: "Neues Schulgebäude" },
+  { src: `${BASE}/images/playground.jpg`, alt: "Spielplatz der Schule" },
+  { src: `${BASE}/images/meals.jpg`, alt: "Essensausgabe für Schüler" },
+  { src: `${BASE}/images/team-goeppingen.jpg`, alt: "Uganda-Team Göppingen" },
+  { src: `${BASE}/images/trip-2026.jpg`, alt: "Uganda-Reise 2026" },
+  { src: `${BASE}/images/kitchen.jpg`, alt: "Neue Schulküche" },
+  { src: `${BASE}/images/paving.jpg`, alt: "Pflasterarbeiten am Campus" },
+  { src: `${BASE}/images/board-1.jpg`, alt: "Vorstandsteam" },
+  { src: `${BASE}/images/news-1.jpg`, alt: "Projektarbeit in Uganda" },
+] as const;
+
+export const TEAM = [
+  { name: "Christian Gaus", role: "1. Vorsitzender" },
+  { name: "Dr. Denis Mpanga", role: "2. Vorsitzender" },
+  { name: "Fabio Tino Vercelli", role: "Vorstandsmitglied · Uganda-Team Göppingen" },
+  { name: "Markus Starz", role: "Schriftführer" },
+  { name: "Andreas Friederich", role: "Schatzmeister" },
+] as const;
+
+export const DONATION = {
+  bank: "VBU Volksbank im Unterland",
+  iban: "DE46 6206 3263 0198 0930 04",
+  bic: "GENODES1VLS",
+  holder: "Uganda-Hilfe Unterland e.V.",
+  stipendAmount: 140,
+};
+
+export const CONTACTS = [
+  { name: "Allgemeine Anfragen", email: "info@uganda-hilfe-unterland.org", phone: null, address: "Stuttgarter Straße 50, 73033 Göppingen" },
+  { name: "Markus Starz (Schwaigern)", email: "markus.starz@uganda-hilfe-unterland.org", phone: "07138 2375129", address: "Gratstraße 34, 74193 Schwaigern" },
+  { name: "Fabio Vercelli (Göppingen)", email: "fabio.vercelli@uganda-hilfe-unterland.org", phone: "0178 4995533", address: null },
+] as const;

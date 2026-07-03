@@ -16,3 +16,7 @@ client/public/sitemap.xml
 .vercel
 
 build-output.log
+
+# Next.js Uganda-Hilfe demo build artifacts
+demos/uganda-hilfe/.next
+demos/uganda-hilfe/out

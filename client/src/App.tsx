@@ -51,6 +51,7 @@ const Terms = lazy(() => import("@/pages/terms"));
 const Cookies = lazy(() => import("@/pages/cookies"));
 const AisaOsmaniDemoRedirect = lazy(() => import("@/pages/demo/aisa-osmani"));
 const TairovicDarkVerzijaDemoRedirect = lazy(() => import("@/pages/demo/tairovic-dark-verzija"));
+const UgandaHilfeDemoRedirect = lazy(() => import("@/pages/demo/uganda-hilfe"));
 const NotFound = lazy(() => import("@/pages/not-found"));
 
 function Router() {
@@ -97,6 +98,7 @@ function Router() {
       <Route path="/demo/tairovic-bez-verzija">{() => <Redirect to="/demo/tairovic-dark-verzija" />}</Route>
       <Route path="/demo/tairovic-azzura-verzija">{() => <Redirect to="/demo/tairovic-dark-verzija" />}</Route>
       <Route path="/demo/tairovic-dark-verzija" component={TairovicDarkVerzijaDemoRedirect} />
+      <Route path="/demo/uganda-hilfe" component={UgandaHilfeDemoRedirect} />
       <Route component={NotFound} />
     </Switch>
   );
