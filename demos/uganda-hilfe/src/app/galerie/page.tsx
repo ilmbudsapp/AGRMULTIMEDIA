@@ -5,7 +5,7 @@ import { GalleryGrid, PageHero } from "@/components/Sections";
 
 export const metadata: Metadata = {
   title: "Galerie",
-  description: "Eindrücke aus Kasanje — Schule, Kinder, Projekte und Uganda-Reisen.",
+  description: "Eindrücke aus Kasanje – Schule, Kinder, Projekte und Uganda-Reisen.",
 };
 
 export default function GaleriePage() {

@@ -6,7 +6,7 @@ import { BASE, TEAM } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Über uns",
-  description: "Geschichte und Mission des Uganda-Hilfe Unterland e.V. — Bildung für Kinder in Kasanje.",
+  description: "Geschichte und Mission des Uganda-Hilfe Unterland e.V. – Bildung für Kinder in Kasanje.",
 };
 
 export default function UeberUnsPage() {
@@ -21,13 +21,13 @@ export default function UeberUnsPage() {
           <div className="prose prose-lg max-w-none text-[#52796f]">
             <p>
               Der Verein <strong className="text-[#14532d]">Uganda-Hilfe Unterland e.V. (UHU)</strong> entstand aus
-              einer privaten Initiative. Pfarrer Denis Mpanga aus Uganda promovierte an der Universität Tübingen — dort
-              lernten er und Wolfgang Friederich 2012 einander kennen.
+              einer privaten Initiative. Pfarrer Denis Mpanga aus Uganda promovierte an der Universität Tübingen – dort
+              lernten Wolfgang Friederich und Denis Mpanga 2012 einander kennen.
             </p>
             <p>
               Denis Mpanga engagiert sich seit 2005 im Bildungsbereich in einem ländlichen Raum, etwa 40 km südwestlich
               von Kampala. Gemeinsam reisten sie noch im selben Jahr nach Uganda, wo die St. Monica Junior School in
-              Kasanje gerade ihr erstes Schulgebäude eröffnete — mehr dazu unter{" "}
+              Kasanje gerade ihr erstes Schulgebäude eröffnete – mehr dazu unter{" "}
               <Link href="/uganda-reisen/" className="font-semibold text-[#40916c] hover:underline">
                 Uganda Reisen
               </Link>
@@ -42,13 +42,13 @@ export default function UeberUnsPage() {
               Lernmittel, Lehrkräfte, Schulbusse, tägliche Verpflegung und Schuluniformen.
             </p>
             <p>
-              Im Juli 2015 folgte die Erweiterung um vier Klassenzimmer — damals mit nur 28 Vereinsmitgliedern und
+              Im Juli 2015 folgte die Erweiterung um vier Klassenzimmer – damals mit nur 28 Vereinsmitgliedern und
               Kosten von ca. 25.000 €. Heute ist der{" "}
               <Link href="/projekte/" className="font-semibold text-[#40916c] hover:underline">
                 Ubuntu Complex
               </Link>{" "}
-              mit über 200.000 € Investition das Herzstück — gewidmet im März 2024, benannt nach dem Prinzip
-              „Gemeinschaftssinn“. Eindrücke finden Sie in unserer{" "}
+              mit über 200.000 € Investition das Herzstück – im März 2024 feierlich eingeweiht und nach dem Prinzip
+              „Gemeinschaftssinn“ benannt. Eindrücke finden Sie in unserer{" "}
               <Link href="/galerie/" className="font-semibold text-[#40916c] hover:underline">
                 Galerie
               </Link>
@@ -73,7 +73,7 @@ export default function UeberUnsPage() {
                 ))}
               </ul>
               <Link href="/kontakt/" className="mt-5 inline-flex text-sm font-bold text-[#40916c] hover:underline">
-                Kontakt zum Vorstand →
+                Kontakt aufnehmen →
               </Link>
             </div>
           </div>

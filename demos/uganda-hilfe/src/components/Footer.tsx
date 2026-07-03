@@ -121,7 +121,7 @@ export default function Footer() {
             <span className="hidden sm:inline" aria-hidden>
               ·
             </span>
-            <span>Demo by AGRMULTIMEDIA</span>
+            <span>Demo von AGRMULTIMEDIA</span>
           </div>
         </div>
       </div>

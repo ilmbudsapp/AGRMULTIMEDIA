@@ -21,7 +21,7 @@ export default function Hero() {
             {SITE.tagline}
           </h1>
           <p className="uhu-animate-in uhu-animate-in-delay-2 mt-6 max-w-2xl text-lg leading-relaxed text-white/90 md:text-xl">
-            Bildung, Verpflegung und ein liebevolles Umfeld für Kinder — unterstützt vom Uganda-Hilfe Unterland e.V.
+            Bildung, Verpflegung und ein liebevolles Umfeld für Kinder – unterstützt vom Verein Uganda-Hilfe Unterland e.V.
           </p>
           <div className="uhu-animate-in uhu-animate-in-delay-3 mt-10 flex flex-wrap gap-4">
             <Link href="/spenden/" className="uhu-btn-primary">

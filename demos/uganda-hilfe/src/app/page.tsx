@@ -23,12 +23,12 @@ export default function HomePage() {
               </h2>
               <p className="mt-5 text-base leading-relaxed text-[#52796f]">
                 Die St. Monica Junior School in Kasanje erfüllt die akademischen, körperlichen, sozialen und emotionalen
-                Bedürfnisse von Kindern in diesem sensiblen Alter — mit zwei Mahlzeiten täglich, Schuluniform und
-                liebevoller Betreuung.
+                Bedürfnisse von Kindern in diesem sensiblen Alter – täglich zwei warme Mahlzeiten, Schuluniform und
+                liebevolle Betreuung inklusive.
               </p>
               <p className="mt-4 text-base leading-relaxed text-[#52796f]">
-                Der Verein Uganda-Hilfe Unterland e.V. entstand 2015 aus einer Freundschaft zwischen Wolfgang Friederich
-                und Denis Mpanga und unterstützt seither Bau, Ausstattung und Betrieb der Schule.
+                Der Verein Uganda-Hilfe Unterland e.V. entstand 2015 aus der Freundschaft zwischen Wolfgang Friederich
+                und Denis Mpanga und unterstützt seither Bau, Ausstattung und den Betrieb der Schule.
               </p>
               <Link href="/ueber-uns/" className="uhu-btn-outline mt-8">
                 Mehr über uns

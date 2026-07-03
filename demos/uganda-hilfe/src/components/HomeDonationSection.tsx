@@ -58,7 +58,7 @@ export default function HomeDonationSection() {
                   <path d="M14 2v6h6M8 13h8M8 17h5" />
                 </svg>
               </div>
-              <h3 className="text-xl font-extrabold text-[#14532d]">SEPA Lastschrift</h3>
+              <h3 className="text-xl font-extrabold text-[#14532d]">SEPA-Lastschrift</h3>
               <p className="mt-4 flex-1 text-sm leading-relaxed text-[#52796f]">
                 Mit dem SEPA-Lastschriftmandat können Sie uns regelmäßig und zuverlässig unterstützen. Formular
                 ausfüllen, unterschreiben und an uns senden.
@@ -83,9 +83,9 @@ export default function HomeDonationSection() {
                   <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-extrabold text-[#14532d]">PayPal Spende</h3>
+              <h3 className="text-xl font-extrabold text-[#14532d]">PayPal-Spende</h3>
               <p className="mt-4 max-w-xs text-sm leading-relaxed text-[#52796f]">
-                Spenden Sie schnell und sicher online — ideal für Einzelspenden aus dem In- und Ausland.
+                Spenden Sie schnell und sicher online – ideal für Einzelspenden aus dem In- und Ausland.
               </p>
               <div className="mt-8 w-full">
                 <PayPalDonateButton size="large" className="w-full" />

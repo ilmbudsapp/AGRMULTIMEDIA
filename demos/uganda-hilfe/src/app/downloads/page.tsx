@@ -12,7 +12,7 @@ export default function DownloadsPage() {
     <>
       <PageHero
         title="Downloads"
-        subtitle="Formulare, Projektinformationen und Spendenunterlagen — als PDF zum Herunterladen."
+        subtitle="Formulare, Projektinformationen und Spendenunterlagen – als PDF zum Herunterladen."
       />
       <section className="uhu-section">
         <div className="uhu-container">

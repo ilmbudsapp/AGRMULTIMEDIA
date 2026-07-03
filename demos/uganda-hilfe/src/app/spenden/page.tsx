@@ -39,7 +39,9 @@ export default function SpendenPage() {
                 <dd className="font-mono text-[#52796f]">{DONATION.bic}</dd>
               </div>
             </dl>
-            <p className="mt-6 text-sm text-[#52796f]">Spendenbescheinigung auf Wunsch. SEPA-Lastschrift optional möglich.</p>
+            <p className="mt-6 text-sm text-[#52796f]">
+              Spendenbescheinigung auf Wunsch. Regelmäßige Unterstützung per SEPA-Lastschrift ist ebenfalls möglich.
+            </p>
             <a href={`${BASE}/downloads/sepa-lastschrift-formular.pdf`} download className="uhu-btn-outline mt-4 inline-flex text-sm">
               SEPA-Formular herunterladen
             </a>
@@ -48,7 +50,7 @@ export default function SpendenPage() {
             <h2 className="text-2xl font-extrabold text-[#14532d]">Stipendium schenken</h2>
             <p className="mt-4 text-[#52796f]">
               Mit <strong className="text-[#14532d]">{DONATION.stipendAmount} € pro Jahr</strong> finanzieren Sie
-              Schulgeld, Uniform, Lernmaterial und Verpflegung für ein Kind — besonders wichtig für Waisenkinder.
+              Schulgeld, Uniform, Lernmaterial und Verpflegung für ein Kind – besonders wichtig für Waisenkinder.
             </p>
             <ul className="mt-6 space-y-3 text-sm text-[#52796f]">
               <li>✓ Persönliche Patenschaft möglich</li>
@@ -56,13 +58,13 @@ export default function SpendenPage() {
               <li>✓ Bildung schafft Zukunft</li>
             </ul>
             <Link href="/projekte/" className="mt-6 inline-flex text-sm font-bold text-[#40916c] hover:underline">
-              Unsere Projekte ansehen →
+              Mehr erfahren →
             </Link>
           </div>
           <div className="uhu-card flex flex-col items-center justify-center p-8 text-center lg:col-span-2">
-            <h2 className="text-2xl font-extrabold text-[#14532d]">PayPal Spende</h2>
+            <h2 className="text-2xl font-extrabold text-[#14532d]">PayPal-Spende</h2>
             <p className="mt-4 max-w-xl text-sm leading-relaxed text-[#52796f]">
-              Unterstützen Sie uns schnell und sicher online — ideal für Einzelspenden.
+              Unterstützen Sie uns schnell und sicher online – ideal für Einzelspenden.
             </p>
             <div className="mt-6">
               <PayPalDonateButton size="large" />
@@ -72,7 +74,7 @@ export default function SpendenPage() {
       </section>
       <DonateCta
         title="Jede Spende zählt"
-        text="Ob Einzelspende oder Stipendium — Sie ermöglichen Kindern sichere Bildung, Verpflegung und Hoffnung."
+        text="Ob Einzelspende oder Stipendium – Sie ermöglichen Kindern sichere Bildung, Verpflegung und Hoffnung."
       />
     </>
   );

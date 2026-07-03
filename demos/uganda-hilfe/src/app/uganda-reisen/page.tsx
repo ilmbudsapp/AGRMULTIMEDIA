@@ -5,7 +5,7 @@ import { PageHero, Timeline } from "@/components/Sections";
 import { BASE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Uganda Reisen",
-  description: "Reiseberichte und Meilensteine der Uganda-Hilfe Unterland — von 2012 bis heute.",
+  description: "Reiseberichte und Meilensteine der Uganda-Hilfe Unterland – von 2012 bis heute.",
 };
 
 export default function UgandaReisenPage() {
@@ -37,8 +37,8 @@ export default function UgandaReisenPage() {
       </section>
       <DonateCta
         compact
-        title="Reisen verbinden — Spenden verändern"
-        text="Reisekosten tragen unsere Helfer in der Regel selbst. Ihre Spende wirkt direkt in Schulbau, Verpflegung und Unterricht."
+        title="Reisen verbinden – Spenden verändern"
+        text="Reisekosten tragen unsere Helferinnen und Helfer in der Regel selbst. Ihre Spende wirkt direkt in Schulbau, Verpflegung und Unterricht."
       />
     </>
   );

@@ -47,7 +47,7 @@ export function NewsCards({ limit }: { limit?: number }) {
               <time className="text-xs font-bold uppercase tracking-wide text-[#40916c]">{item.date}</time>
               <h3 className="mt-2 text-lg font-extrabold text-[#14532d]">{item.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-[#52796f]">{item.excerpt}</p>
-              <span className="mt-3 inline-flex text-sm font-bold text-[#40916c]">Weiterlesen →</span>
+              <span className="mt-3 inline-flex text-sm font-bold text-[#40916c]">Mehr erfahren →</span>
             </div>
           </div>
         </Link>

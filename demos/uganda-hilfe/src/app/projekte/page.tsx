@@ -13,7 +13,7 @@ export default function ProjektePage() {
     <>
       <PageHero
         title="Unsere Projekte"
-        subtitle="Vom Ubuntu Complex bis zur Schulküche — jede Spende fließt in konkrete Bildungsarbeit in Kasanje."
+        subtitle="Vom Ubuntu Complex bis zur Schulküche – jede Spende fließt in konkrete Bildungsarbeit in Kasanje."
       />
       <section className="uhu-section">
         <div className="uhu-container">
@@ -22,7 +22,8 @@ export default function ProjektePage() {
             <h2 className="text-2xl font-extrabold text-[#14532d]">Zukunftsziel: 500 Kinder</h2>
             <p className="mt-4 max-w-3xl text-[#52796f]">
               Aktuell besuchen über 360 Kinder die St. Monica Junior School. Mit Ihrer Unterstützung erweitern wir
-              Kapazitäten, Instandsetzung der älteren Gebäude und sportliche Angebote am Campus.
+              die Kapazitäten, treiben die Instandsetzung der älteren Gebäude voran und schaffen sportliche Angebote
+              am Campus.
             </p>
             <div className="mt-6 flex flex-wrap gap-4">
               <Link href="/spenden/" className="uhu-btn-primary text-sm">

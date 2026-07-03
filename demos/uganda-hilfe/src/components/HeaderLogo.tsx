@@ -35,7 +35,7 @@ export function HeaderLogo({
       href="/"
       scroll={!isHomePath(pathname)}
       className={`inline-flex shrink-0 items-center ${className}`}
-      aria-label="Uganda-Hilfe Unterland e.V. — Startseite"
+      aria-label="Uganda-Hilfe Unterland e.V. – Startseite"
       onClick={(e) => {
         if (isHomePath(pathname)) {
           e.preventDefault();

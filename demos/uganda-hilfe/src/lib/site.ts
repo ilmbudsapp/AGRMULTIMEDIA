@@ -5,7 +5,7 @@ export const SITE = {
   shortName: "Uganda-Hilfe Unterland",
   tagline: "Gemeinsam schenken wir Kindern Zukunft.",
   description:
-    "Die Uganda-Hilfe Unterland e.V. unterstützt Bildung und Perspektiven für Kinder in Kasanje, Uganda — an der St. Monica Junior School.",
+    "Die Uganda-Hilfe Unterland e.V. unterstützt Bildung und Perspektiven für Kinder in Kasanje, Uganda – an der St. Monica Junior School.",
   url: "https://www.agrmultimedia.eu/demo/uganda-hilfe/",
   email: "info@uganda-hilfe-unterland.org",
   phone: "07138 2375129",
@@ -14,7 +14,7 @@ export const SITE = {
 };
 
 export const NAV = [
-  { href: "/", label: "Home" },
+  { href: "/", label: "Start" },
   { href: "/ueber-uns/", label: "Über uns" },
   { href: "/projekte/", label: "Projekte" },
   { href: "/uganda-reisen/", label: "Uganda Reisen" },
@@ -35,10 +35,10 @@ export const LEGAL = {
   organization: SITE.name,
   legalForm: "e.V. (eingetragener Verein)",
   address: SITE.address,
-  representedBy: "[Vorstand — Name(n) bitte vom Verein eintragen]",
-  registerCourt: "[Registergericht — bitte eintragen, z. B. Amtsgericht …]",
-  registerNumber: "[Vereinsregisternummer — bitte eintragen]",
-  contentResponsible: "[Name und Anschrift — verantwortlich gemäß § 18 Abs. 2 MStV]",
+  representedBy: "[Vorstand – Name(n) bitte vom Verein eintragen]",
+  registerCourt: "[Registergericht – bitte eintragen, z. B. Amtsgericht …]",
+  registerNumber: "[Vereinsregisternummer – bitte eintragen]",
+  contentResponsible: "[Name und Anschrift – verantwortlich gemäß § 18 Abs. 2 MStV]",
   hostingProvider: "Vercel Inc. (Demo-Hosting über AGRMULTIMEDIA)",
   supervisoryAuthority: "Die zuständige Landesdatenschutzbehörde am Sitz des Verantwortlichen",
 } as const;
@@ -46,7 +46,7 @@ export const LEGAL = {
 export const STATS = [
   { value: 367, suffix: "+", label: "Kinder an der Schule", href: "/projekte/" },
   { value: 2015, suffix: "", label: "Verein gegründet", href: "/ueber-uns/" },
-  { value: 220, suffix: "+", label: "Stipendien möglich", href: "/spenden/" },
+  { value: 220, suffix: "+", label: "Patenschaften möglich", href: "/spenden/" },
   { value: 11, suffix: "", label: "Lehrkräfte vor Ort", href: "/ueber-uns/" },
 ] as const;
 
@@ -54,7 +54,7 @@ export const PROJECTS = [
   {
     title: "Ubuntu Complex",
     summary:
-      "Neuer Schulcampus in Kasanje — über 200.000 € Investition in fünf Bauabschnitten. Im März 2024 gewidmet, Name nach dem Ubuntu-Prinzip: Gemeinschaftssinn.",
+      "Neuer Schulcampus in Kasanje – über 200.000 € Investition in fünf Bauabschnitten. Im März 2024 feierlich eingeweiht und nach dem Ubuntu-Prinzip des Gemeinschaftssinns benannt.",
     image: `${BASE}/images/school-2.jpg`,
     tag: "Schulbau",
     href: "/galerie/",
@@ -62,7 +62,7 @@ export const PROJECTS = [
   {
     title: "Schulküche & Verpflegung",
     summary:
-      "Neue Küche am Ubuntu Complex — täglich zwei warme Mahlzeiten für die Kinder. Pflasterarbeiten, Inbetriebnahme und nachhaltiger Betrieb vor Ort.",
+      "Neue Küche am Ubuntu Complex – täglich zwei warme Mahlzeiten für die Kinder. Mit Pflasterarbeiten, Inbetriebnahme und nachhaltigem Betrieb vor Ort.",
     image: `${BASE}/images/kitchen.jpg`,
     tag: "Verpflegung",
     href: "/aktuelles/",
@@ -70,7 +70,7 @@ export const PROJECTS = [
   {
     title: "Stipendien & Patenschaften",
     summary:
-      "140 € jährlich finanzieren Schulgeld, Uniform, Lernmaterial und Mahlzeiten — besonders wichtig für Waisenkinder in Kasanje und Umgebung.",
+      "140 € jährlich finanzieren Schulgeld, Uniform, Lernmaterial und Mahlzeiten – besonders wichtig für Waisenkinder in Kasanje und Umgebung.",
     image: `${BASE}/images/meals.jpg`,
     tag: "Bildung",
     href: "/spenden/",
@@ -78,7 +78,7 @@ export const PROJECTS = [
   {
     title: "Sport & Campus",
     summary:
-      "Fußball, Volleyball und Sitzgelegenheiten am Campus — Raum für Bewegung, Gemeinschaft und ein liebevolles Lernumfeld.",
+      "Fußball, Volleyball und Sitzgelegenheiten am Campus – Raum für Bewegung, Gemeinschaft und ein liebevolles Lernumfeld.",
     image: `${BASE}/images/playground.jpg`,
     tag: "Infrastruktur",
     href: "/galerie/",
@@ -90,7 +90,7 @@ export const NEWS = [
     date: "06.06.2026",
     title: "Uganda-Reise 2026",
     excerpt:
-      "Eine Reisegruppe rund um Fabio Tino Vercelli besuchte die St. Monica School — persönliche Begegnungen, Fortschritte vor Ort und neue Impulse für unsere Projekte.",
+      "Eine Reisegruppe rund um Fabio Tino Vercelli besuchte die St. Monica Junior School – persönliche Begegnungen, Fortschritte vor Ort und neue Impulse für unsere Projekte.",
     image: `${BASE}/images/trip-2026.jpg`,
     href: "/uganda-reisen/",
   },
@@ -98,7 +98,7 @@ export const NEWS = [
     date: "05.06.2026",
     title: "Neue Küche erfolgreich in Betrieb",
     excerpt:
-      "Die Schulküche am Ubuntu Complex ist fertig — tägliche Verpflegung für Hunderte Kinder ist damit gesichert.",
+      "Die Schulküche am Ubuntu Complex ist fertig – die tägliche Verpflegung für Hunderte Kinder ist damit gesichert.",
     image: `${BASE}/images/kitchen.jpg`,
     href: "/projekte/",
   },
@@ -106,7 +106,7 @@ export const NEWS = [
     date: "05.06.2026",
     title: "Christian Gaus übernimmt den Vorsitz",
     excerpt:
-      "Nach zehn Jahren übergibt Wolfgang Friederich den Vorsitz an Christian Gaus — Dank für ein Jahrzehnt Engagement.",
+      "Nach zehn Jahren übergibt Wolfgang Friederich den Vorsitz an Christian Gaus – wir danken für zehn Jahre engagierten Einsatz.",
     image: `${BASE}/images/board-1.jpg`,
     href: "/ueber-uns/",
   },
@@ -121,12 +121,12 @@ export const NEWS = [
 ] as const;
 
 export const TRIPS = [
-  { year: "2012", title: "Erste Begegnung", text: "Wolfgang Friederich und Denis Mpanga reisen nach Kasanje — die St. Monica Junior School eröffnet ihr erstes Gebäude mit drei Klassen.", href: "/ueber-uns/" },
-  { year: "2015", title: "Vereinsgründung & Erweiterung", text: "Uganda-Hilfe Unterland e.V. gegründet am 22. Januar. Im Juli Erweiterung um vier Klassenzimmer — ca. 25.000 €.", href: "/ueber-uns/" },
-  { year: "2018", title: "Uganda-Team Göppingen", text: "Zwölf Personen reisen nach Uganda — über 9.000 € Spenden und enge Freundschaften vor Ort.", href: "/uganda-reisen/" },
-  { year: "2020", title: "16-köpfige Reisegruppe", text: "24.02.–07.03.2020: Erster Bauabschnitt des neuen Schulgebäudes abgeschlossen. Flug und Unterkunft privat finanziert.", href: "/uganda-reisen/" },
-  { year: "2024", title: "Ubuntu Complex", text: "Feierliche Einweihung des neuen Schulcampus — Meilenstein für über 200.000 € Investition.", href: "/projekte/" },
-  { year: "2026", title: "Reise & Kücheneinweihung", text: "Acht-köpfige Gruppe aus Göppingen — Küche in Betrieb, ca. 3.000 € Spenden für zwei Monate Verpflegung.", href: "/aktuelles/" },
+  { year: "2012", title: "Erste Begegnung", text: "Wolfgang Friederich und Denis Mpanga reisen nach Kasanje – die St. Monica Junior School eröffnet ihr erstes Gebäude mit drei Klassen.", href: "/ueber-uns/" },
+  { year: "2015", title: "Vereinsgründung & Erweiterung", text: "Der Verein Uganda-Hilfe Unterland e.V. wird am 22. Januar gegründet. Im Juli folgt die Erweiterung um vier Klassenzimmer – für ca. 25.000 €.", href: "/ueber-uns/" },
+  { year: "2018", title: "Uganda-Team Göppingen", text: "Zwölf Personen reisen nach Uganda – über 9.000 € Spenden und enge Freundschaften vor Ort.", href: "/uganda-reisen/" },
+  { year: "2020", title: "16-köpfige Reisegruppe", text: "24.02.–07.03.2020: Erster Bauabschnitt des neuen Schulgebäudes abgeschlossen. Flug und Unterkunft werden privat finanziert.", href: "/uganda-reisen/" },
+  { year: "2024", title: "Ubuntu Complex", text: "Feierliche Einweihung des neuen Schulcampus – ein Meilenstein mit über 200.000 € Investition.", href: "/projekte/" },
+  { year: "2026", title: "Reise & Kücheneinweihung", text: "Acht-köpfige Gruppe aus Göppingen – Küche in Betrieb, ca. 3.000 € Spenden für zwei Monate Verpflegung.", href: "/aktuelles/" },
 ] as const;
 
 export const GALLERY = [
@@ -179,8 +179,8 @@ export const SOCIAL = [
 
 export const DOWNLOADS = [
   {
-    title: "SEPA Lastschrift Formular",
-    description: "Formular für regelmäßige Spenden per SEPA-Lastschrift — einfach ausfüllen und an uns senden.",
+    title: "SEPA-Lastschriftformular",
+    description: "Formular für regelmäßige Spenden per SEPA-Lastschrift – einfach ausfüllen und an uns senden.",
     file: `${BASE}/downloads/sepa-lastschrift-formular.pdf`,
   },
   {
@@ -200,12 +200,12 @@ export const DOWNLOADS = [
   },
   {
     title: "Spendeninfo: Stipendien",
-    description: "Patenschaften und Stipendien — 140 € jährlich schenken einem Kind Bildung und Zukunft.",
+    description: "Patenschaften und Stipendien – 140 € jährlich schenken einem Kind Bildung und Zukunft.",
     file: `${BASE}/downloads/spendeninfo-stipendium.pdf`,
   },
   {
     title: "Projektinfo: Waisenkinder",
-    description: "Unterstützung für Waisenkinder in Kasanje — Schulgeld, Verpflegung und liebevolle Betreuung.",
+    description: "Unterstützung für Waisenkinder in Kasanje – Schulgeld, Verpflegung und liebevolle Betreuung.",
     file: `${BASE}/downloads/projektinfo-waisenkinder.pdf`,
   },
 ] as const;

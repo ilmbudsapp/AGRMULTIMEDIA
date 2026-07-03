@@ -18,8 +18,8 @@ export default function DatenschutzPage() {
       subtitle="Informationen zur Verarbeitung personenbezogener Daten (Demo-Website)"
     >
       <p className="uhu-legal-note">
-        Hinweis: Diese Datenschutzerklärung ist als Muster für die Demo-Website erstellt. Platzhalter
-        müssen durch den Verein bzw. eine Rechtsberatung verbindlich ergänzt werden.
+        Hinweis: Diese Datenschutzerklärung wurde als Muster für die Demo-Website erstellt. Platzhalter
+        müssen vom Verein bzw. einer Rechtsberatung verbindlich ergänzt werden.
       </p>
 
       <h2>1. Datenschutz auf einen Blick</h2>
@@ -100,7 +100,7 @@ export default function DatenschutzPage() {
       <ul>
         <li>Browsertyp und Browserversion</li>
         <li>verwendetes Betriebssystem</li>
-        <li>Referrer URL</li>
+        <li>Referrer-URL</li>
         <li>Hostname des zugreifenden Rechners</li>
         <li>Uhrzeit der Serveranfrage</li>
         <li>IP-Adresse</li>
@@ -199,7 +199,7 @@ export default function DatenschutzPage() {
       <p>
         Unsere Internetseiten verwenden so genannte „Cookies“. Cookies sind kleine Datenpakete und
         richten auf Ihrem Endgerät keinen Schaden an. Sie werden entweder vorübergehend für die Dauer
-        einer Sitzung (Session-Cookies) oder dauerhaft ( permanente Cookies) auf Ihrem Endgerät
+        einer Sitzung (Session-Cookies) oder dauerhaft (permanente Cookies) auf Ihrem Endgerät
         gespeichert.
       </p>
       <p>
@@ -221,7 +221,7 @@ export default function DatenschutzPage() {
         aus dem Projekt bereitgestellt.
       </p>
 
-      <h2>13. Social Media Links</h2>
+      <h2>13. Links zu sozialen Netzwerken</h2>
       <p>
         Auf unserer Website befinden sich Verlinkungen zu unseren Profilen in sozialen Netzwerken
         (z. B. Facebook, Instagram). Beim Anklicken werden Sie auf die jeweilige Plattform
@@ -265,7 +265,7 @@ export default function DatenschutzPage() {
         Arbeitsplatzes oder des Orts des mutmaßlichen Verstoßes.
       </p>
       <p>
-        Zuständige Aufsichtsbehörde: {LEGAL.supervisoryAuthority} — bitte vom Verein verbindlich
+        Zuständige Aufsichtsbehörde: {LEGAL.supervisoryAuthority} – bitte vom Verein verbindlich
         ergänzen (z. B. Landesbeauftragter für den Datenschutz Baden-Württemberg).
       </p>
 

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function KontaktPage() {
   return (
     <>
-      <PageHero title="Kontakt" subtitle="Wir freuen uns auf Ihre Nachricht — ob Spende, Stipendium oder allgemeine Fragen." />
+      <PageHero title="Kontakt" subtitle="Wir freuen uns auf Ihre Nachricht – ob Spende, Stipendium oder allgemeine Fragen." />
       <section className="uhu-section">
         <div className="uhu-container grid gap-8 lg:grid-cols-2">
           <div className="space-y-6">
@@ -31,7 +31,9 @@ export default function KontaktPage() {
           </div>
           <form className="uhu-card p-8" aria-label="Kontaktformular">
             <h2 className="text-xl font-extrabold text-[#14532d]">Nachricht senden</h2>
-            <p className="mt-2 text-sm text-[#52796f]">Demo-Formular — in der Live-Version an info@{SITE.email.split("@")[1]} angebunden.</p>
+            <p className="mt-2 text-sm text-[#52796f]">
+              Demo-Formular – in der Live-Version an info@{SITE.email.split("@")[1]} angebunden.
+            </p>
             <p className="mt-2 text-sm text-[#52796f]">
               Fragen zu{" "}
               <Link href="/spenden/" className="font-semibold text-[#40916c] hover:underline">

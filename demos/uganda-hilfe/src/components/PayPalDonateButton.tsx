@@ -56,7 +56,7 @@ export default function PayPalDonateButton({ size = "default", className = "" }:
         target="_blank"
         rel="noopener noreferrer"
         className={classes}
-        aria-label="Mit PayPal spenden — öffnet PayPal in neuem Tab"
+        aria-label="Mit PayPal spenden – öffnet PayPal in neuem Tab"
       >
         {inner}
       </a>

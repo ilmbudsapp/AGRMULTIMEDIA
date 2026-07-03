@@ -18,7 +18,7 @@ export default function ImpressumPage() {
       subtitle="Angaben gemäß § 5 TMG und § 18 Abs. 2 MStV (Demo-Website)"
     >
       <p className="uhu-legal-note">
-        Hinweis: Dies ist eine Demo-Website. Die folgenden Angaben enthalten Platzhalter, wo
+        Hinweis: Dies ist eine Demo-Website. Die folgenden Angaben enthalten Platzhalter, an denen
         verbindliche Vereinsdaten noch eingetragen werden müssen.
       </p>
 
