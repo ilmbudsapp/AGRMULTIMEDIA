@@ -172,7 +172,7 @@ export const SOCIAL = [
   },
   {
     label: "Instagram",
-    href: "https://www.instagram.com/",
+    href: "https://www.instagram.com/stmonicajuniorschool/",
     icon: "instagram",
   },
 ] as const;
