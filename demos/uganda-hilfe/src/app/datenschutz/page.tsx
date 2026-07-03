@@ -203,10 +203,21 @@ export default function DatenschutzPage() {
         gespeichert.
       </p>
       <p>
-        <strong>Demo-Hinweis:</strong> Diese Demo-Website setzt derzeit keine optionalen
-        Tracking- oder Marketing-Cookies ein. Technisch notwendige Cookies können durch den Hosting-
-        bzw. Sicherheitsbetrieb entstehen. Vor produktivem Einsatz ist ein Cookie-Consent-Management
-        zu prüfen.
+        Beim ersten Besuch dieser Website erscheint ein Cookie-Banner. Ihre Auswahl wird in Ihrem
+        Browser (localStorage) gespeichert, damit der Hinweis nicht erneut angezeigt wird.
+      </p>
+      <p>
+        <strong>Derzeit aktiv:</strong> Nur technisch notwendige Cookies – insbesondere zur
+        Speicherung Ihrer Cookie-Einwilligung sowie ggf. durch den Hosting- und Sicherheitsbetrieb.
+      </p>
+      <p>
+        <strong>Optionale Kategorien (derzeit deaktiviert):</strong> Statistik (z. B. Google
+        Analytics) und Marketing (z. B. Meta Pixel) können später über die Cookie-Einstellungen
+        freigegeben werden, sobald der Verein diese Dienste einbindet.
+      </p>
+      <p>
+        Sie können Ihre Einwilligung jederzeit über den Link „Cookie-Einstellungen“ im Footer
+        ändern oder widerrufen.
       </p>
 
       <h2>12. Eingebettete Inhalte / externe Links</h2>

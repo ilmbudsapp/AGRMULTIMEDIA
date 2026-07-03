@@ -4,7 +4,7 @@ export default function StickyDonateButton() {
   return (
     <Link
       href="/spenden/"
-      className="fixed bottom-5 right-5 z-50 inline-flex items-center gap-2 rounded-full bg-[#40916c] px-5 py-3 text-sm font-bold text-white shadow-[0_12px_40px_rgba(64,145,108,0.45)] transition hover:scale-105 hover:bg-[#52b788] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#14532d]"
+      className="uhu-sticky-donate fixed bottom-5 right-5 z-50 inline-flex items-center gap-2 rounded-full bg-[#40916c] px-5 py-3 text-sm font-bold text-white shadow-[0_12px_40px_rgba(64,145,108,0.45)] transition-[bottom,transform,background-color] duration-300 hover:scale-105 hover:bg-[#52b788] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#14532d]"
       aria-label="Jetzt spenden"
     >
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden>

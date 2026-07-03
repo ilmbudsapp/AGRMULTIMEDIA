@@ -263,3 +263,13 @@ body {
   font-size: 0.9rem;
   color: #52796f;
 }
+
+body.uhu-cookie-banner-visible .uhu-sticky-donate {
+  bottom: clamp(7.5rem, 22vh, 13rem);
+}
+
+@media (min-width: 640px) {
+  body.uhu-cookie-banner-visible .uhu-sticky-donate {
+    bottom: clamp(6.5rem, 18vh, 10rem);
+  }
+}

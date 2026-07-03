@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import CookieConsent from "@/components/CookieConsent";
 import DemoBar from "@/components/DemoBar";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
@@ -30,6 +31,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <main id="main-content">{children}</main>
         <Footer />
         <StickyDonateButton />
+        <CookieConsent />
       </body>
     </html>
   );

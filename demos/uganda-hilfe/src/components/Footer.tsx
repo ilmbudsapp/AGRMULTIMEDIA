@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CookieSettingsLink from "@/components/CookieSettingsLink";
 import FooterQrCode from "@/components/FooterQrCode";
 import { HeaderLogo } from "@/components/HeaderLogo";
 import PayPalDonateButton from "@/components/PayPalDonateButton";
@@ -118,6 +119,7 @@ export default function Footer() {
                 {item.label}
               </Link>
             ))}
+            <CookieSettingsLink className="hover:text-[#d8f3dc] hover:underline" />
             <span className="hidden sm:inline" aria-hidden>
               ·
             </span>
