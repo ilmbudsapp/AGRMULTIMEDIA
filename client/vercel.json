@@ -115,6 +115,16 @@
       "permanent": false
     },
     {
+      "source": "/demo/imperium-clean",
+      "destination": "/demo/imperium-clean/index.html",
+      "permanent": false
+    },
+    {
+      "source": "/demo/imperium-clean/",
+      "destination": "/demo/imperium-clean/index.html",
+      "permanent": false
+    },
+    {
       "source": "/demo",
       "destination": "/demo/index.html",
       "permanent": false
