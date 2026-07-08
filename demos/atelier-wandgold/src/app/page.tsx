@@ -7,6 +7,7 @@ import {
   STATS,
   TRUST_FEATURES,
 } from "@/lib/content";
+import ColorPalettePanel from "@/components/ColorPalettePanel";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import ContactForm from "@/components/ContactForm";
 import CtaBand from "@/components/CtaBand";
@@ -25,14 +26,16 @@ export default function Home() {
       <section id="start" className="hero" aria-labelledby="hero-heading">
         <div className="heroGrid">
           <div className="heroContent fadeUp">
-            <p className="eyebrow">Malermeister · {SITE.city}</p>
-            <h1 id="hero-heading">Ihr Malermeister für moderne Räume in Stuttgart</h1>
+            <p className="eyebrow heroEyebrow">Malermeister · {SITE.city}</p>
+            <h1 id="hero-heading" className="heroTitle">
+              Ihr Malermeister für moderne Räume in Stuttgart
+            </h1>
             <p className="heroText">
               Hochwertige Malerarbeiten, kreative Wandgestaltung und saubere Renovierungen für
               Privatkunden und Unternehmen.
             </p>
 
-            <div className="ctaRow">
+            <div className="ctaRow heroCta">
               <a href="#kontakt" className="btn primary">
                 Kostenloses Angebot anfordern
               </a>
@@ -40,6 +43,8 @@ export default function Home() {
                 Per WhatsApp kontaktieren
               </a>
             </div>
+
+            <ColorPalettePanel />
 
             <ul className="heroBadges" aria-label="Qualitätsmerkmale">
               {TRUST_FEATURES.slice(0, 3).map((item) => (

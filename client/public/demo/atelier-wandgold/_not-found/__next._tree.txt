@@ -1,2 +1,2 @@
-:HL["/demo/atelier-wandgold/_next/static/chunks/0uq5cgg_zt_rb.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"_1zhixxc37nDOPcPjnYj8"}
+:HL["/demo/atelier-wandgold/_next/static/chunks/0fod8x6y-drzw.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"wDrfauauELFDlDICYfIFS"}
