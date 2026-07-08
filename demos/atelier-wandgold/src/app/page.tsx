@@ -24,18 +24,23 @@ export default function Home() {
   return (
     <main>
       <section id="start" className="hero" aria-labelledby="hero-heading">
+        <div className="heroBlur heroBlurOne" aria-hidden />
+        <div className="heroBlur heroBlurTwo" aria-hidden />
+
         <div className="heroGrid">
-          <div className="heroContent fadeUp">
-            <p className="eyebrow heroEyebrow">Malermeister · {SITE.city}</p>
-            <h1 id="hero-heading" className="heroTitle">
+          <div className="heroContent">
+            <p className="eyebrow" data-reveal-instant data-reveal-delay="0">
+              Malermeister · {SITE.city}
+            </p>
+            <h1 id="hero-heading" data-reveal-instant data-reveal-delay="100">
               Ihr Malermeister für moderne Räume in Stuttgart
             </h1>
-            <p className="heroText">
+            <p className="heroText" data-reveal-instant data-reveal-delay="200">
               Hochwertige Malerarbeiten, kreative Wandgestaltung und saubere Renovierungen für
               Privatkunden und Unternehmen.
             </p>
 
-            <div className="ctaRow heroCta">
+            <div className="ctaRow heroCta" data-reveal-instant data-reveal-delay="300">
               <a href="#kontakt" className="btn primary">
                 Kostenloses Angebot anfordern
               </a>
@@ -44,38 +49,42 @@ export default function Home() {
               </a>
             </div>
 
-            <ColorPalettePanel />
-
-            <ul className="heroBadges" aria-label="Qualitätsmerkmale">
+            <ul className="heroBadges" aria-label="Qualitätsmerkmale" data-reveal-instant data-reveal-delay="400">
               {TRUST_FEATURES.slice(0, 3).map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
           </div>
 
-          <div className="heroVisual fadeIn">
+          <div className="heroVisual" data-reveal-instant data-reveal-delay="150">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={img("hero")}
               alt="Moderner renovierter Innenraum – Malerarbeiten Stuttgart"
-              className="heroImage"
+              className="heroImage card3d"
               fetchPriority="high"
             />
-            <div className="heroCard">
+            <div className="heroCard card3d">
               <span>Seit 2012</span>
               <strong>Meisterqualität</strong>
               <p>Sauber · Termintreu · Premium</p>
             </div>
           </div>
         </div>
+
+        <ColorPalettePanel />
       </section>
 
       <section id="intro" className="section intro">
-        <div className="fadeUp">
-          <p className="eyebrow">Warum {SITE.name}?</p>
-          <h2>Ihr Malerbetrieb für Renovierung, Fassade und Wandgestaltung in Stuttgart</h2>
+        <div>
+          <p className="eyebrow" data-reveal data-reveal-delay="0">
+            Warum {SITE.name}?
+          </p>
+          <h2 data-reveal data-reveal-delay="100">
+            Ihr Malerbetrieb für Renovierung, Fassade und Wandgestaltung in Stuttgart
+          </h2>
         </div>
-        <p className="fadeUp">
+        <p data-reveal data-reveal-delay="200">
           Als erfahrener Malermeister verbinden wir präzises Handwerk mit modernem Design – für
           Wohnungen, Büros, Praxen und exklusive Immobilien. Vertrauen Sie auf saubere Baustellen,
           transparente Beratung und Ergebnisse, die überzeugen.
@@ -84,8 +93,13 @@ export default function Home() {
 
       <section className="statsSection" aria-label="Zahlen und Fakten">
         <div className="statsGrid">
-          {STATS.map((stat) => (
-            <article className="statCard fadeUp" key={stat.label}>
+          {STATS.map((stat, i) => (
+            <article
+              className="statCard card3d"
+              key={stat.label}
+              data-reveal
+              data-reveal-delay={String(i * 80)}
+            >
               <strong>{stat.value}</strong>
               <span>{stat.label}</span>
             </article>
@@ -94,8 +108,13 @@ export default function Home() {
       </section>
 
       <section className="features" aria-label="Vorteile">
-        {TRUST_FEATURES.map((item) => (
-          <div className="feature fadeUp" key={item}>
+        {TRUST_FEATURES.map((item, i) => (
+          <div
+            className="feature card3d"
+            key={item}
+            data-reveal
+            data-reveal-delay={String(i * 80)}
+          >
             <span aria-hidden>✓</span>
             <h3>{item}</h3>
           </div>
@@ -103,18 +122,27 @@ export default function Home() {
       </section>
 
       <section id="leistungen" className="section leistungen">
-        <div className="sectionHead fadeUp">
-          <p className="eyebrow">Leistungen</p>
-          <h2>Professionelle Malerarbeiten für Innen, Außen und Renovierung</h2>
-          <p className="sectionLead">
+        <div className="sectionHead">
+          <p className="eyebrow" data-reveal data-reveal-delay="0">
+            Leistungen
+          </p>
+          <h2 data-reveal data-reveal-delay="100">
+            Professionelle Malerarbeiten für Innen, Außen und Renovierung
+          </h2>
+          <p className="sectionLead" data-reveal data-reveal-delay="200">
             Von Innenanstrich über Fassadenarbeiten bis zur kompletten Renovierung – Ihr
             Malerbetrieb in Stuttgart aus einer Hand.
           </p>
         </div>
 
         <div className="grid">
-          {SERVICES.map(({ title, desc, icon }) => (
-            <article className="service fadeUp" key={title}>
+          {SERVICES.map(({ title, desc, icon }, i) => (
+            <article
+              className="service card3d"
+              key={title}
+              data-reveal
+              data-reveal-delay={String(Math.min(i * 60, 360))}
+            >
               <ServiceIcon name={icon} />
               <h3>{title}</h3>
               <p>{desc}</p>
@@ -133,10 +161,14 @@ export default function Home() {
       />
 
       <section id="projekte" className="section projects">
-        <div className="sectionHead fadeUp">
-          <p className="eyebrow">Referenzen</p>
-          <h2>Ausgewählte Projekte unseres Malerbetriebs</h2>
-          <p className="sectionLead">
+        <div className="sectionHead">
+          <p className="eyebrow" data-reveal data-reveal-delay="0">
+            Referenzen
+          </p>
+          <h2 data-reveal data-reveal-delay="100">
+            Ausgewählte Projekte unseres Malerbetriebs
+          </h2>
+          <p className="sectionLead" data-reveal data-reveal-delay="200">
             Ein Einblick in unsere Arbeiten – von eleganten Innenräumen bis zur Fassadengestaltung in
             Stuttgart.
           </p>
@@ -145,8 +177,10 @@ export default function Home() {
         <div className="projectGrid">
           {PROJECTS.map((project, i) => (
             <article
-              className={`project fadeUp${i === 0 ? " large" : ""}`}
+              className={`project card3d${i === 0 ? " large" : ""}`}
               key={project.title}
+              data-reveal
+              data-reveal-delay={String(i * 100)}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={img(project.image)} alt={project.alt} loading="lazy" />
@@ -159,7 +193,7 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="projectsCta fadeUp">
+        <div className="projectsCta" data-reveal>
           <a href="#kontakt" className="btn primary">
             Projekt besprechen
           </a>
@@ -167,26 +201,41 @@ export default function Home() {
       </section>
 
       <section id="vorher-nachher" className="beforeAfter section" aria-labelledby="before-after-heading">
-        <div className="sectionHead fadeUp">
-          <p className="eyebrow">Vorher / Nachher</p>
-          <h2 id="before-after-heading">Der Unterschied liegt im Detail</h2>
-          <p className="sectionLead">
+        <div className="sectionHead">
+          <p className="eyebrow" data-reveal data-reveal-delay="0">
+            Vorher / Nachher
+          </p>
+          <h2 id="before-after-heading" data-reveal data-reveal-delay="100">
+            Der Unterschied liegt im Detail
+          </h2>
+          <p className="sectionLead" data-reveal data-reveal-delay="200">
             Sehen Sie selbst, wie professionelle Malerarbeiten einen Raum verwandeln – ziehen Sie den
             Regler, um den Vergleich zu sehen.
           </p>
         </div>
-        <BeforeAfterSlider />
+        <div data-reveal data-reveal-delay="150">
+          <BeforeAfterSlider />
+        </div>
       </section>
 
       <section id="bewertungen" className="section reviews">
-        <div className="sectionHead fadeUp">
-          <p className="eyebrow">Kundenstimmen</p>
-          <h2>Was unsere Kunden sagen</h2>
+        <div className="sectionHead">
+          <p className="eyebrow" data-reveal data-reveal-delay="0">
+            Kundenstimmen
+          </p>
+          <h2 data-reveal data-reveal-delay="100">
+            Was unsere Kunden sagen
+          </h2>
         </div>
 
         <div className="reviewGrid">
-          {REVIEWS.map((review) => (
-            <article className="review fadeUp" key={review.name}>
+          {REVIEWS.map((review, i) => (
+            <article
+              className="review card3d"
+              key={review.name}
+              data-reveal
+              data-reveal-delay={String(i * 100)}
+            >
               <div className="stars" aria-label="5 von 5 Sternen">
                 ★★★★★
               </div>
@@ -199,14 +248,23 @@ export default function Home() {
       </section>
 
       <section id="ablauf" className="section process">
-        <div className="sectionHead fadeUp">
-          <p className="eyebrow">Ablauf</p>
-          <h2>In 3 Schritten zu Ihrem neuen Raumgefühl</h2>
+        <div className="sectionHead">
+          <p className="eyebrow" data-reveal data-reveal-delay="0">
+            Ablauf
+          </p>
+          <h2 data-reveal data-reveal-delay="100">
+            In 3 Schritten zu Ihrem neuen Raumgefühl
+          </h2>
         </div>
 
         <div className="steps">
-          {PROCESS.map((step) => (
-            <article className="stepCard fadeUp" key={step.step}>
+          {PROCESS.map((step, i) => (
+            <article
+              className="stepCard card3d"
+              key={step.step}
+              data-reveal
+              data-reveal-delay={String(i * 100)}
+            >
               <span>{step.step}</span>
               <h3>{step.title}</h3>
               <p>{step.desc}</p>
@@ -219,15 +277,19 @@ export default function Home() {
 
       <section id="kontakt" className="contact section">
         <div className="contactGrid">
-          <div className="contactInfo fadeUp">
-            <p className="eyebrow eyebrowLight">Kontakt</p>
-            <h2>Bereit für Ihr nächstes Projekt?</h2>
-            <p>
+          <div className="contactInfo">
+            <p className="eyebrow eyebrowLight" data-reveal data-reveal-delay="0">
+              Kontakt
+            </p>
+            <h2 data-reveal data-reveal-delay="100">
+              Bereit für Ihr nächstes Projekt?
+            </h2>
+            <p data-reveal data-reveal-delay="200">
               Fordern Sie jetzt Ihr unverbindliches Angebot an. Wir melden uns schnellstmöglich –
               telefonisch, per WhatsApp oder E-Mail.
             </p>
 
-            <ul className="contactList">
+            <ul className="contactList" data-reveal data-reveal-delay="250">
               <li>
                 <span>Telefon</span>
                 <a href={`tel:${SITE.phone}`}>{SITE.phoneDisplay}</a>
@@ -248,7 +310,7 @@ export default function Home() {
               </li>
             </ul>
 
-            <div className="ctaRow ctaRow--inline">
+            <div className="ctaRow ctaRow--inline" data-reveal data-reveal-delay="300">
               <a href={waUrl} className="btn primary" target="_blank" rel="noopener noreferrer">
                 Jetzt per WhatsApp
               </a>
@@ -258,7 +320,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="contactFormWrap fadeUp">
+          <div className="contactFormWrap card3d" data-reveal data-reveal-delay="150">
             <h3>Anfrage senden</h3>
             <ContactForm />
           </div>

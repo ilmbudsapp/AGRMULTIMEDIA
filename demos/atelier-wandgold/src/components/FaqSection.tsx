@@ -8,10 +8,14 @@ export default function FaqSection() {
 
   return (
     <section id="faq" className="section faqSection">
-      <div className="sectionHead fadeUp">
-        <p className="eyebrow">FAQ</p>
-        <h2>Häufig gestellte Fragen</h2>
-        <p className="sectionLead">
+      <div className="sectionHead">
+        <p className="eyebrow" data-reveal data-reveal-delay="0">
+          FAQ
+        </p>
+        <h2 data-reveal data-reveal-delay="100">
+          Häufig gestellte Fragen
+        </h2>
+        <p className="sectionLead" data-reveal data-reveal-delay="200">
           Antworten auf die wichtigsten Fragen zu Angebot, Ablauf und unseren Leistungen als
           Malerbetrieb in Stuttgart.
         </p>
@@ -21,7 +25,12 @@ export default function FaqSection() {
         {FAQ.map((item, i) => {
           const isOpen = open === i;
           return (
-            <article key={item.q} className={`faqItem fadeUp${isOpen ? " isOpen" : ""}`}>
+            <article
+              key={item.q}
+              className={`faqItem card3d${isOpen ? " isOpen" : ""}`}
+              data-reveal
+              data-reveal-delay={String(Math.min(i * 80, 320))}
+            >
               <button
                 type="button"
                 className="faqQuestion"

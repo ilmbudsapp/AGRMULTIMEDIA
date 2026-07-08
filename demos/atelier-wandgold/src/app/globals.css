@@ -67,6 +67,9 @@
   --navy: #0f2744;
   --shadow: 0 4px 24px rgba(26, 95, 168, 0.08);
   --shadow-lg: 0 16px 48px rgba(26, 95, 168, 0.12);
+  --shadow-premium: 0 20px 60px rgba(15, 45, 80, 0.12);
+  --shadow-premium-hover: 0 28px 72px rgba(15, 45, 80, 0.18);
+  --shadow-lift: 0 12px 40px rgba(15, 45, 80, 0.1);
   --demo-bar-h: 2.25rem;
   --header-h: 4.75rem;
   --scroll-offset: calc(var(--demo-bar-h) + var(--header-h) + 0.75rem);
@@ -105,6 +108,85 @@ a {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+/* ── Scroll reveal ── */
+[data-reveal],
+[data-reveal-instant] {
+  opacity: 0;
+  transform: translateY(32px);
+  transition:
+    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+[data-reveal].is-revealed,
+[data-reveal-instant].is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-reveal-delay="0"] {
+  transition-delay: 0s;
+}
+
+[data-reveal-delay="80"] {
+  transition-delay: 0.08s;
+}
+
+[data-reveal-delay="100"] {
+  transition-delay: 0.1s;
+}
+
+[data-reveal-delay="150"] {
+  transition-delay: 0.15s;
+}
+
+[data-reveal-delay="200"] {
+  transition-delay: 0.2s;
+}
+
+[data-reveal-delay="250"] {
+  transition-delay: 0.25s;
+}
+
+[data-reveal-delay="300"] {
+  transition-delay: 0.3s;
+}
+
+[data-reveal-delay="400"] {
+  transition-delay: 0.4s;
+}
+
+[data-reveal-delay="320"] {
+  transition-delay: 0.32s;
+}
+
+[data-reveal-delay="360"] {
+  transition-delay: 0.36s;
+}
+
+/* ── Premium 3D cards ── */
+.card3d {
+  box-shadow: var(--shadow-premium);
+  transition:
+    transform 0.38s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.38s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card3d:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-premium-hover);
+}
+
+.heroImage.card3d:hover,
+.project.card3d:hover {
+  transform: translateY(-6px) scale(1.005);
+}
+
+.project.card3d:hover img {
+  transform: scale(1.06);
 }
 
 /* ── Demo bar ── */
@@ -412,20 +494,33 @@ a {
 
 .hero {
   position: relative;
-  padding: 48px 7% 80px;
-  background: linear-gradient(135deg, var(--off-white) 0%, var(--light-blue) 55%, var(--white) 100%);
+  padding: 48px 7% 64px;
+  background: linear-gradient(160deg, var(--off-white) 0%, var(--light-blue) 48%, var(--white) 100%);
   overflow: hidden;
 }
 
-.hero::before {
-  content: "";
+.heroBlur {
   position: absolute;
-  top: -120px;
-  right: -80px;
-  width: 480px;
-  height: 480px;
-  background: radial-gradient(circle, rgba(26, 95, 168, 0.08), transparent 70%);
+  border-radius: 50%;
+  filter: blur(80px);
   pointer-events: none;
+  z-index: 0;
+}
+
+.heroBlurOne {
+  width: 420px;
+  height: 420px;
+  top: -80px;
+  left: -100px;
+  background: rgba(168, 197, 218, 0.45);
+}
+
+.heroBlurTwo {
+  width: 360px;
+  height: 360px;
+  right: -60px;
+  top: 120px;
+  background: rgba(212, 232, 247, 0.55);
 }
 
 .heroGrid {
@@ -440,82 +535,208 @@ a {
 }
 
 .heroContent {
-  display: grid;
-  grid-template-columns: 1fr min(280px, 38%);
-  column-gap: 28px;
-  grid-template-areas:
-    "eyebrow eyebrow"
-    "title panel"
-    "text panel"
-    "cta panel"
-    "badges badges";
+  max-width: 620px;
 }
 
-.heroEyebrow {
-  grid-area: eyebrow;
+/* ── Material board / color panel ── */
+.materialBoardWrap {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 56px auto 0;
+  perspective: 1200px;
 }
 
-.heroTitle {
-  grid-area: title;
+.materialBoardGlow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  pointer-events: none;
+  z-index: 0;
 }
 
-.heroText {
-  grid-area: text;
+.materialBoardGlow--left {
+  width: 280px;
+  height: 280px;
+  left: 8%;
+  top: 20%;
+  background: rgba(168, 197, 218, 0.5);
 }
 
-.heroCta {
-  grid-area: cta;
+.materialBoardGlow--right {
+  width: 320px;
+  height: 320px;
+  right: 5%;
+  bottom: 10%;
+  background: rgba(143, 169, 140, 0.35);
 }
 
-.heroBadges {
-  grid-area: badges;
+.materialBoardSurface {
+  position: relative;
+  padding: 28px 20px 36px;
+  border-radius: 32px;
+  background: linear-gradient(180deg, rgba(232, 242, 251, 0.5) 0%, rgba(248, 250, 252, 0.2) 100%);
 }
 
-/* ── Color palette panel ── */
-.colorPanel {
-  grid-area: panel;
-  align-self: start;
-  animation-delay: 0.35s;
+.materialBoardDeskShadow {
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  bottom: 18px;
+  height: 48px;
+  background: radial-gradient(ellipse, rgba(15, 45, 80, 0.16) 0%, transparent 72%);
+  filter: blur(8px);
+  pointer-events: none;
 }
 
-.colorPanelInner {
-  padding: 20px 18px 22px;
-  border-radius: 22px;
+.materialBoardPanel {
+  position: relative;
+  z-index: 1;
+  padding: 36px 40px 32px;
+  border-radius: 28px;
   background: rgba(255, 255, 255, 0.78);
-  backdrop-filter: blur(18px);
-  border: 1px solid rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(22px);
+  border: 1px solid rgba(255, 255, 255, 0.92);
   box-shadow:
-    0 16px 44px rgba(26, 95, 168, 0.11),
+    0 28px 80px rgba(15, 45, 80, 0.14),
+    0 8px 24px rgba(15, 45, 80, 0.08),
     inset 0 1px 0 rgba(255, 255, 255, 0.95);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-  overflow: hidden;
+  transform: rotateX(4deg) rotate(-0.6deg);
+  transform-style: preserve-3d;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s ease;
 }
 
-.colorPanel:hover .colorPanelInner {
-  transform: translateY(-4px);
+.materialBoardPanel:hover {
+  transform: rotateX(2deg) rotate(0deg) translateY(-8px);
   box-shadow:
-    0 24px 52px rgba(26, 95, 168, 0.15),
+    0 36px 96px rgba(15, 45, 80, 0.18),
+    0 12px 32px rgba(15, 45, 80, 0.1),
     inset 0 1px 0 rgba(255, 255, 255, 1);
 }
 
-/* ── Fanned color chip deck ── */
-.colorFanStage {
-  position: relative;
-  height: 148px;
-  margin: 0 auto 12px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
+.materialBoardHeader {
+  text-align: center;
+  margin-bottom: 32px;
 }
 
+.materialBoardEyebrow {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+
+.materialBoardTitle {
+  font-family: "Playfair Display Local", Georgia, serif;
+  font-size: clamp(1.35rem, 3vw, 1.85rem);
+  line-height: 1.2;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.materialBoardSubtitle {
+  font-size: 1.02rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.materialBoardBody {
+  display: grid;
+  grid-template-columns: minmax(200px, 280px) 1fr;
+  gap: 36px;
+  align-items: center;
+}
+
+.materialBoardFan {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  min-height: 200px;
+}
+
+.colorFanPivot--large {
+  width: 260px;
+  height: 168px;
+}
+
+.colorFanStrip--large {
+  width: 18px;
+  height: 150px;
+  margin-left: -9px;
+  top: 14px;
+}
+
+.colorFanRivet--large {
+  width: 14px;
+  height: 14px;
+  margin-left: -7px;
+  top: 8px;
+}
+
+.materialSwatches {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px 16px;
+  list-style: none;
+}
+
+.materialSwatchItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.materialSwatch {
+  display: block;
+  width: 72px;
+  height: 72px;
+  border-radius: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.95);
+  box-shadow:
+    0 10px 28px rgba(15, 45, 80, 0.14),
+    inset 0 -3px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.materialSwatch:hover {
+  transform: scale(1.1) translateY(-4px);
+  box-shadow:
+    0 16px 36px rgba(15, 45, 80, 0.2),
+    inset 0 -3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.materialSwatchName {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  line-height: 1.25;
+}
+
+.materialBoardNote {
+  margin-top: 28px;
+  text-align: center;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--blue-dark);
+  padding-top: 20px;
+  border-top: 1px solid rgba(26, 95, 168, 0.1);
+}
+
+/* ── Fanned color chip deck (shared) ── */
 .colorFanShadow {
   position: absolute;
   bottom: 4px;
   left: 50%;
   transform: translateX(-50%);
   width: 72%;
-  height: 18px;
-  background: radial-gradient(ellipse, rgba(30, 41, 59, 0.18) 0%, transparent 72%);
+  height: 22px;
+  background: radial-gradient(ellipse, rgba(30, 41, 59, 0.2) 0%, transparent 72%);
   pointer-events: none;
 }
 
@@ -589,35 +810,6 @@ a {
   pointer-events: none;
 }
 
-.colorPanelCopy {
-  text-align: center;
-  padding-top: 4px;
-}
-
-.colorPanelEyebrow {
-  font-size: 0.68rem;
-  font-weight: 800;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--blue);
-  margin-bottom: 6px;
-}
-
-.colorPanelTitle {
-  font-family: "Playfair Display Local", Georgia, serif;
-  font-size: 0.92rem;
-  line-height: 1.35;
-  color: var(--text);
-  margin-bottom: 8px;
-}
-
-.colorPanelNote {
-  font-size: 0.76rem;
-  font-weight: 600;
-  color: var(--text-muted);
-  line-height: 1.45;
-}
-
 .heroVisual {
   position: relative;
 }
@@ -627,7 +819,6 @@ a {
   height: clamp(320px, 42vw, 520px);
   object-fit: cover;
   border-radius: 24px;
-  box-shadow: var(--shadow-lg);
 }
 
 .heroCard {
@@ -637,8 +828,7 @@ a {
   width: 240px;
   padding: 24px;
   border-radius: 20px;
-  background: var(--white);
-  box-shadow: var(--shadow-lg);
+  background: linear-gradient(165deg, var(--white) 0%, #f4f8fc 100%);
   border: 1px solid rgba(26, 95, 168, 0.1);
 }
 
@@ -837,18 +1027,11 @@ h3 {
 }
 
 .statCard {
-  background: var(--white);
+  background: linear-gradient(165deg, var(--white) 0%, #f4f8fc 100%);
   padding: 32px 24px;
   border-radius: 20px;
   text-align: center;
-  box-shadow: var(--shadow);
   border: 1px solid rgba(26, 95, 168, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.statCard:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
 }
 
 .statCard strong {
@@ -877,16 +1060,10 @@ h3 {
 }
 
 .feature {
-  background: var(--white);
+  background: linear-gradient(165deg, var(--white) 0%, #f6f9fc 100%);
   padding: 28px;
   border-radius: 20px;
-  box-shadow: var(--shadow);
   border: 1px solid rgba(26, 95, 168, 0.06);
-  transition: transform 0.3s ease;
-}
-
-.feature:hover {
-  transform: translateY(-4px);
 }
 
 .feature span {
@@ -902,7 +1079,7 @@ h3 {
 
 /* ── Leistungen ── */
 .leistungen {
-  background: var(--white);
+  background: linear-gradient(180deg, var(--white) 0%, #f4f9fd 100%);
 }
 
 .grid {
@@ -914,15 +1091,8 @@ h3 {
 .service {
   padding: 28px;
   border-radius: 20px;
-  background: var(--off-white);
+  background: linear-gradient(165deg, var(--off-white) 0%, var(--white) 100%);
   border: 1px solid rgba(26, 95, 168, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-}
-
-.service:hover {
-  transform: translateY(-6px);
-  background: var(--white);
-  box-shadow: var(--shadow-lg);
 }
 
 .serviceIcon {
@@ -1005,7 +1175,7 @@ h3 {
 
 /* ── Projects ── */
 .projects {
-  background: var(--off-white);
+  background: linear-gradient(180deg, var(--off-white) 0%, var(--light-blue) 120%);
 }
 
 .projectGrid {
@@ -1019,7 +1189,6 @@ h3 {
   height: 300px;
   border-radius: 24px;
   overflow: hidden;
-  box-shadow: var(--shadow);
 }
 
 .project.large {
@@ -1082,7 +1251,7 @@ h3 {
 
 /* ── Before / After slider ── */
 .beforeAfter {
-  background: var(--light-blue);
+  background: linear-gradient(180deg, var(--light-blue) 0%, #eef5fb 100%);
 }
 
 .baSlider {
@@ -1095,7 +1264,6 @@ h3 {
   height: clamp(280px, 50vw, 480px);
   border-radius: 24px;
   overflow: hidden;
-  box-shadow: var(--shadow-lg);
   user-select: none;
 }
 
@@ -1192,16 +1360,10 @@ h3 {
 }
 
 .review {
-  background: var(--off-white);
+  background: linear-gradient(165deg, var(--off-white) 0%, var(--white) 100%);
   padding: 32px;
   border-radius: 20px;
   border: 1px solid rgba(26, 95, 168, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.review:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow);
 }
 
 .stars {
@@ -1245,15 +1407,9 @@ h3 {
 
 .stepCard {
   padding: 32px;
-  background: var(--white);
+  background: linear-gradient(165deg, var(--white) 0%, #f6f9fc 100%);
   border-radius: 20px;
   border-top: 4px solid var(--blue);
-  box-shadow: var(--shadow);
-  transition: transform 0.3s ease;
-}
-
-.stepCard:hover {
-  transform: translateY(-4px);
 }
 
 .stepCard span {
@@ -1289,13 +1445,7 @@ h3 {
   border-radius: 16px;
   margin-bottom: 12px;
   overflow: hidden;
-  background: var(--off-white);
-  transition: box-shadow 0.3s ease;
-}
-
-.faqItem.isOpen {
-  box-shadow: var(--shadow);
-  background: var(--white);
+  background: linear-gradient(165deg, var(--off-white) 0%, var(--white) 100%);
 }
 
 .faqQuestion {
@@ -1398,11 +1548,14 @@ h3 {
   color: var(--light-blue-2);
 }
 
+.faqItem.isOpen {
+  background: var(--white);
+}
+
 .contactFormWrap {
   background: var(--white);
   padding: 36px;
   border-radius: 24px;
-  box-shadow: var(--shadow-lg);
 }
 
 .contactFormWrap h3 {
@@ -1544,46 +1697,41 @@ footer > p a:hover {
     scroll-behavior: auto;
   }
 
-  .colorPanel:hover .colorPanelInner,
+  [data-reveal],
+  [data-reveal-instant] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .card3d:hover,
+  .materialBoardPanel:hover,
+  .materialSwatch:hover,
   .colorFanStrip:hover {
     transform: none;
     filter: none;
   }
 
-  .fadeUp,
-  .fadeIn,
   .btn,
-  .service,
-  .project img,
-  .statCard,
-  .feature,
-  .review,
-  .stepCard {
-    animation: none;
+  .project img {
     transition: none;
   }
 }
 
 /* ── Responsive ── */
 @media (max-width: 1100px) {
-  .heroContent {
+  .materialBoardBody {
     grid-template-columns: 1fr;
-    grid-template-areas:
-      "eyebrow"
-      "title"
-      "text"
-      "cta"
-      "panel"
-      "badges";
+    gap: 28px;
   }
 
-  .colorPanel {
-    max-width: 360px;
+  .materialSwatches {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .colorFanPivot {
-    transform: scale(0.92);
-    transform-origin: bottom center;
+  .materialBoardPanel {
+    transform: rotateX(2deg);
+    padding: 28px 24px;
   }
 
   .navLinksDesktop {
@@ -1635,16 +1783,32 @@ footer > p a:hover {
     max-width: none;
   }
 
-  .colorPanel {
-    max-width: 100%;
+  .materialBoardWrap {
+    margin-top: 40px;
   }
 
-  .colorFanStage {
-    height: 136px;
+  .materialBoardPanel {
+    transform: none;
+    padding: 24px 20px;
   }
 
-  .colorFanPivot {
-    transform: scale(0.88);
+  .materialBoardPanel:hover {
+    transform: translateY(-4px);
+  }
+
+  .materialSwatches {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 12px;
+  }
+
+  .materialSwatch {
+    width: 64px;
+    height: 64px;
+    border-radius: 18px;
+  }
+
+  .colorFanPivot--large {
+    transform: scale(0.9);
     transform-origin: bottom center;
   }
 
@@ -1726,12 +1890,9 @@ footer > p a:hover {
     grid-template-columns: 1fr;
   }
 
-  .colorPanel {
-    max-width: 100%;
-  }
-
-  .colorFanPivot {
-    transform: scale(0.82);
+  .materialSwatch {
+    width: 56px;
+    height: 56px;
   }
 
   .heroBadges {

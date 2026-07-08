@@ -22,13 +22,13 @@ export default function CtaBand({
   const waUrl = `https://wa.me/${SITE.whatsapp}`;
 
   return (
-    <section className={`ctaBand ctaBand--${variant} fadeUp`}>
+    <section className={`ctaBand ctaBand--${variant}`}>
       <div className="ctaBandInner">
         <div>
-          <h2>{title}</h2>
-          {text && <p>{text}</p>}
+          <h2 data-reveal data-reveal-delay="0">{title}</h2>
+          {text && <p data-reveal data-reveal-delay="100">{text}</p>}
         </div>
-        <div className="ctaRow ctaRow--inline">
+        <div className="ctaRow ctaRow--inline" data-reveal data-reveal-delay="200">
           <a href={primaryHref} className="btn primary">
             {primaryLabel}
           </a>

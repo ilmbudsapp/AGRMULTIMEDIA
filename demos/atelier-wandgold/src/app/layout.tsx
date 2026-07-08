@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ScrollRevealInit from "@/components/ScrollRevealInit";
 import DemoBar from "@/components/DemoBar";
 import SiteHeader from "@/components/SiteHeader";
 import WhatsAppFab from "@/components/WhatsAppFab";
@@ -26,6 +27,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <SiteHeader />
         {children}
         <WhatsAppFab />
+        <ScrollRevealInit />
       </body>
     </html>
   );

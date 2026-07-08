@@ -21,7 +21,7 @@ export default function BeforeAfterSlider() {
   }, []);
 
   return (
-    <div className="baSlider fadeUp">
+    <div className="baSlider card3d">
       <div ref={frameRef} className="baSliderFrame">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={after} alt="Raum nach der Renovierung durch Malermeister Stuttgart" className="baAfter" />
