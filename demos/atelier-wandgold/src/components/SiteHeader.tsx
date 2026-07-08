@@ -10,6 +10,7 @@ const NAV = [
   { href: "#vorher-nachher", label: "Vorher/Nachher" },
   { href: "#bewertungen", label: "Bewertungen" },
   { href: "#ablauf", label: "Ablauf" },
+  { href: "#faq", label: "FAQ" },
   { href: "#kontakt", label: "Kontakt" },
 ] as const;
 
@@ -18,7 +19,7 @@ export default function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
+    const onScroll = () => setScrolled(window.scrollY > 12);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -53,14 +54,8 @@ export default function SiteHeader() {
         </nav>
 
         <div className="navActions">
-          <a
-            href={`https://wa.me/${SITE.whatsapp}`}
-            className="navWaBtn"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="WhatsApp Anfrage"
-          >
-            WhatsApp
+          <a href="#kontakt" className="navCtaBtn">
+            Angebot anfordern
           </a>
 
           <button
@@ -88,6 +83,9 @@ export default function SiteHeader() {
             {label}
           </a>
         ))}
+        <a href="#kontakt" className="mobileNavCta" onClick={closeMenu}>
+          Angebot anfordern
+        </a>
         <a
           href={`https://wa.me/${SITE.whatsapp}`}
           className="mobileNavWa"
@@ -95,7 +93,7 @@ export default function SiteHeader() {
           rel="noopener noreferrer"
           onClick={closeMenu}
         >
-          WhatsApp Anfrage
+          WhatsApp
         </a>
       </nav>
     </header>
