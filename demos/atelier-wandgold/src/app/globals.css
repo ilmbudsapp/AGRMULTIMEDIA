@@ -441,7 +441,7 @@ a {
 
 .heroContent {
   display: grid;
-  grid-template-columns: 1fr min(248px, 36%);
+  grid-template-columns: 1fr min(280px, 38%);
   column-gap: 28px;
   grid-template-areas:
     "eyebrow eyebrow"
@@ -479,22 +479,119 @@ a {
 }
 
 .colorPanelInner {
-  padding: 22px 20px;
+  padding: 20px 18px 22px;
   border-radius: 22px;
-  background: rgba(255, 255, 255, 0.72);
-  backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
   box-shadow:
-    0 12px 40px rgba(26, 95, 168, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    0 16px 44px rgba(26, 95, 168, 0.11),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
+  overflow: hidden;
 }
 
 .colorPanel:hover .colorPanelInner {
   transform: translateY(-4px);
   box-shadow:
-    0 20px 48px rgba(26, 95, 168, 0.14),
-    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+    0 24px 52px rgba(26, 95, 168, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
+}
+
+/* ── Fanned color chip deck ── */
+.colorFanStage {
+  position: relative;
+  height: 148px;
+  margin: 0 auto 12px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.colorFanShadow {
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 72%;
+  height: 18px;
+  background: radial-gradient(ellipse, rgba(30, 41, 59, 0.18) 0%, transparent 72%);
+  pointer-events: none;
+}
+
+.colorFanPivot {
+  position: relative;
+  width: 200px;
+  height: 132px;
+}
+
+.colorFanStrip {
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  width: 13px;
+  height: 118px;
+  margin-left: -6.5px;
+  transform-origin: 50% 0;
+  transform: rotate(var(--fan-rotate, 0deg));
+  border-radius: 2px 2px 5px 5px;
+  box-shadow:
+    0 3px 10px rgba(15, 23, 42, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease,
+    filter 0.35s ease;
+  cursor: default;
+  z-index: 1;
+}
+
+.colorFanStrip span {
+  flex: 1;
+  min-height: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.colorFanStrip span:last-child {
+  border-bottom: none;
+}
+
+.colorFanPivot:hover .colorFanStrip {
+  filter: brightness(0.97);
+}
+
+.colorFanStrip:hover {
+  transform: rotate(var(--fan-rotate, 0deg)) translateY(-8px) scale(1.06);
+  z-index: 20;
+  filter: brightness(1.06);
+  box-shadow:
+    0 10px 24px rgba(15, 23, 42, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.45);
+}
+
+.colorFanRivet {
+  position: absolute;
+  left: 50%;
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  margin-left: -5px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #e8ecf0, #b8c0c8);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.2),
+    inset 0 1px 1px rgba(255, 255, 255, 0.6);
+  z-index: 30;
+  pointer-events: none;
+}
+
+.colorPanelCopy {
+  text-align: center;
+  padding-top: 4px;
 }
 
 .colorPanelEyebrow {
@@ -508,51 +605,16 @@ a {
 
 .colorPanelTitle {
   font-family: "Playfair Display Local", Georgia, serif;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   line-height: 1.35;
   color: var(--text);
-  margin-bottom: 18px;
-}
-
-.colorSwatches {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  list-style: none;
-  margin-bottom: 16px;
-}
-
-.colorSwatches li {
-  display: flex;
-}
-
-.colorSwatch {
-  display: block;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.95);
-  box-shadow:
-    0 4px 12px rgba(30, 41, 59, 0.14),
-    inset 0 -2px 4px rgba(0, 0, 0, 0.06);
-  cursor: default;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.colorSwatch:hover {
-  transform: scale(1.14);
-  box-shadow:
-    0 8px 20px rgba(30, 41, 59, 0.2),
-    inset 0 -2px 4px rgba(0, 0, 0, 0.08);
-  z-index: 1;
+  margin-bottom: 8px;
 }
 
 .colorPanelNote {
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 600;
   color: var(--text-muted);
-  padding-top: 14px;
-  border-top: 1px solid rgba(26, 95, 168, 0.1);
   line-height: 1.45;
 }
 
@@ -1483,8 +1545,9 @@ footer > p a:hover {
   }
 
   .colorPanel:hover .colorPanelInner,
-  .colorSwatch:hover {
+  .colorFanStrip:hover {
     transform: none;
+    filter: none;
   }
 
   .fadeUp,
@@ -1516,6 +1579,11 @@ footer > p a:hover {
 
   .colorPanel {
     max-width: 360px;
+  }
+
+  .colorFanPivot {
+    transform: scale(0.92);
+    transform-origin: bottom center;
   }
 
   .navLinksDesktop {
@@ -1571,9 +1639,13 @@ footer > p a:hover {
     max-width: 100%;
   }
 
-  .colorSwatch {
-    width: 38px;
-    height: 38px;
+  .colorFanStage {
+    height: 136px;
+  }
+
+  .colorFanPivot {
+    transform: scale(0.88);
+    transform-origin: bottom center;
   }
 
   .hero {
@@ -1658,9 +1730,8 @@ footer > p a:hover {
     max-width: 100%;
   }
 
-  .colorSwatch {
-    width: 38px;
-    height: 38px;
+  .colorFanPivot {
+    transform: scale(0.82);
   }
 
   .heroBadges {
