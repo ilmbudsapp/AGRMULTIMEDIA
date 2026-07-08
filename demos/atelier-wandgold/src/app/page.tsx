@@ -57,13 +57,16 @@ export default function Home() {
           </div>
 
           <div className="heroVisual" data-reveal-instant data-reveal-delay="150">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={img("hero")}
-              alt="Moderner renovierter Innenraum – Malerarbeiten Stuttgart"
-              className="heroImage card3d"
-              fetchPriority="high"
-            />
+            <div className="heroImageFrame card3d">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={img("hero")}
+                alt="Maler streicht eine Wand mit Farbrolle – Malerbetrieb Stuttgart"
+                className="heroImage"
+                fetchPriority="high"
+              />
+              <div className="heroImageGradient" aria-hidden />
+            </div>
             <div className="heroCard card3d">
               <span>Seit 2012</span>
               <strong>Meisterqualität</strong>

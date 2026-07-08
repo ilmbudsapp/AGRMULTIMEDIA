@@ -182,6 +182,10 @@ a {
 
 .heroImage.card3d:hover,
 .project.card3d:hover {
+  transform: none;
+}
+
+.project.card3d:hover {
   transform: translateY(-6px) scale(1.005);
 }
 
@@ -814,11 +818,76 @@ a {
   position: relative;
 }
 
-.heroImage {
-  width: 100%;
-  height: clamp(320px, 42vw, 520px);
-  object-fit: cover;
+.heroImageFrame {
+  position: relative;
   border-radius: 24px;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.heroImage {
+  display: block;
+  width: 100%;
+  height: clamp(340px, 44vw, 540px);
+  object-fit: cover;
+  object-position: 58% center;
+  transform: scale(1.08);
+  transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.heroImageFrame:hover .heroImage {
+  transform: scale(1.12);
+}
+
+.heroImageGradient {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    90deg,
+    rgba(248, 250, 252, 0.98) 0%,
+    rgba(248, 250, 252, 0.82) 16%,
+    rgba(232, 242, 251, 0.45) 32%,
+    rgba(255, 255, 255, 0.08) 52%,
+    transparent 68%
+  );
+  pointer-events: none;
+}
+
+.heroImageFrame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: 24px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+  pointer-events: none;
+}
+
+.heroVisual::before {
+  content: "";
+  position: absolute;
+  right: -20px;
+  top: 10%;
+  width: 55%;
+  height: 70%;
+  background: radial-gradient(ellipse, rgba(168, 197, 218, 0.35) 0%, transparent 72%);
+  filter: blur(28px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.heroImage.card3d:hover,
+.heroImageFrame.card3d:hover {
+  transform: translateY(-6px);
+}
+
+.heroImageFrame.card3d:hover {
+  box-shadow: var(--shadow-premium-hover);
+}
+
+.heroImageFrame.card3d:hover .heroImage {
+  transform: scale(1.12);
 }
 
 .heroCard {

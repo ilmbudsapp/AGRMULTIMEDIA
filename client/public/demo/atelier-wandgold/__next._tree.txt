@@ -1,3 +1,3 @@
-:HL["/demo/atelier-wandgold/_next/static/chunks/0ohof7njry01p.css","style"]
+:HL["/demo/atelier-wandgold/_next/static/chunks/0_68otdo8sk3t.css","style"]
 :HL["/demo/atelier-wandgold/images/hero.jpg","image",{"fetchPriority":"high"}]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"FegS0dLeu0rnWGGXzKq9k"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"pUsWwIR5Mv04yN7JZGsRi"}
