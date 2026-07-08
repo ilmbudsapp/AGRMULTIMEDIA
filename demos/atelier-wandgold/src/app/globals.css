@@ -830,8 +830,8 @@ a {
   width: 100%;
   height: clamp(340px, 44vw, 540px);
   object-fit: cover;
-  object-position: 58% center;
-  transform: scale(1.08);
+  object-position: center center;
+  transform: scale(1.04);
   transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
