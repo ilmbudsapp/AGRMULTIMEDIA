@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import DemoBar from "@/components/DemoBar";
+import SiteHeader from "@/components/SiteHeader";
+import WhatsAppFab from "@/components/WhatsAppFab";
 import { SITE } from "@/lib/site";
 import "./globals.css";
 
@@ -20,7 +22,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="de">
       <body className="hasDemoBar">
         <DemoBar />
+        <SiteHeader />
         {children}
+        <WhatsAppFab />
       </body>
     </html>
   );

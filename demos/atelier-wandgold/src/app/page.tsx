@@ -9,26 +9,10 @@ export default function Home() {
 
   return (
     <main>
-      <section className="hero">
-        <nav className="nav" aria-label="Hauptnavigation">
-          <div className="logo">
-            <span>AW</span>
-            <div>
-              <strong>{SITE.name}</strong>
-              <small>{SITE.tagline}</small>
-            </div>
-          </div>
-
-          <div className="navLinks">
-            <a href="#leistungen">Leistungen</a>
-            <a href="#projekte">Projekte</a>
-            <a href="#kontakt">Kontakt</a>
-          </div>
-        </nav>
-
+      <section id="start" className="hero" aria-labelledby="hero-heading">
         <div className="heroContent fadeUp">
           <p className="eyebrow">Premium Malerbetrieb in {SITE.city}</p>
-          <h1>Edle Wandgestaltung für Räume mit Charakter.</h1>
+          <h1 id="hero-heading">Edle Wandgestaltung für Räume mit Charakter.</h1>
           <p className="heroText">
             Hochwertige Malerarbeiten, moderne Oberflächen, Fassaden und Renovierungen für Privatkunden,
             Büros und exklusive Immobilien.
@@ -51,7 +35,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section intro">
+      <section id="intro" className="section intro">
         <div>
           <p className="eyebrow">Warum {SITE.name}?</p>
           <h2>Wir streichen nicht nur Wände. Wir gestalten Atmosphäre.</h2>
@@ -131,7 +115,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="beforeAfter" aria-labelledby="before-after-heading">
+      <section id="vorher-nachher" className="beforeAfter" aria-labelledby="before-after-heading">
         <div className="section">
           <p className="eyebrow">Vorher / Nachher</p>
           <h2 id="before-after-heading">Der Unterschied liegt im Detail.</h2>
@@ -151,7 +135,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="reviews section dark">
+      <section id="bewertungen" className="reviews section dark">
         <p className="eyebrow">Kundenstimmen</p>
         <h2>Was Kunden über uns sagen</h2>
 
@@ -172,7 +156,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="process section">
+      <section id="ablauf" className="process section">
         <p className="eyebrow">Ablauf</p>
         <h2>In 3 Schritten zu Ihrem neuen Raumgefühl.</h2>
 
@@ -215,13 +199,19 @@ export default function Home() {
       </section>
 
       <footer>
-        <div className="logo">
+        <a href="#start" className="logo logoLink" aria-label={`${SITE.name} – zurück zum Anfang`}>
           <span>AW</span>
           <div>
             <strong>{SITE.name}</strong>
             <small>{SITE.tagline}</small>
           </div>
-        </div>
+        </a>
+
+        <nav className="footerNav" aria-label="Footer Navigation">
+          <a href="#leistungen">Leistungen</a>
+          <a href="#projekte">Projekte</a>
+          <a href="#kontakt">Kontakt</a>
+        </nav>
 
         <p>Demo-Website erstellt von AGRMULTIMEDIA</p>
         <a href="https://www.agrmultimedia.eu/">www.agrmultimedia.eu</a>

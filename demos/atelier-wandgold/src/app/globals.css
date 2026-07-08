@@ -62,6 +62,8 @@
   --muted: #756f66;
   --white: #ffffff;
   --demo-bar-h: 2.25rem;
+  --header-h: 4.75rem;
+  --scroll-offset: calc(var(--demo-bar-h) + var(--header-h) + 0.5rem);
 }
 
 * {
@@ -72,6 +74,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--scroll-offset);
 }
 
 body {
@@ -123,7 +126,199 @@ a {
 }
 
 .hasDemoBar .hero {
-  padding-top: calc(32px + var(--demo-bar-h));
+  padding-top: calc(48px + var(--demo-bar-h) + var(--header-h));
+}
+
+/* ── Sticky site header ── */
+.siteHeader {
+  position: fixed;
+  top: var(--demo-bar-h);
+  left: 0;
+  right: 0;
+  z-index: 90;
+  color: white;
+  transition: background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.siteHeader.isScrolled {
+  background: rgba(17, 16, 14, 0.94);
+  backdrop-filter: blur(16px);
+  border-bottom-color: rgba(201, 164, 92, 0.22);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.28);
+}
+
+.siteHeaderInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: var(--header-h);
+  padding: 0.65rem 7%;
+}
+
+.logoLink {
+  transition: opacity 0.2s ease;
+}
+
+.logoLink:hover {
+  opacity: 0.88;
+}
+
+.logoLink:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
+.navLinksDesktop {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem 1.35rem;
+  color: #eee2cf;
+  font-weight: 500;
+  font-size: 0.92rem;
+}
+
+.navLinksDesktop a {
+  padding: 0.35rem 0;
+  white-space: nowrap;
+}
+
+.navLinksDesktop a:hover {
+  color: var(--gold);
+}
+
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-shrink: 0;
+}
+
+.navWaBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  background: #25d366;
+  color: white;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.navWaBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+}
+
+.menuToggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  border: 1px solid rgba(201, 164, 92, 0.45);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  cursor: pointer;
+}
+
+.menuToggle span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: var(--gold);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.siteHeader .menuToggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.siteHeader .menuToggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.siteHeader .menuToggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.mobileNav {
+  display: none;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.75rem 7% 1.25rem;
+  background: rgba(9, 8, 7, 0.98);
+  border-top: 1px solid rgba(201, 164, 92, 0.18);
+}
+
+.mobileNav.isOpen {
+  display: flex;
+}
+
+.mobileNav a {
+  padding: 0.85rem 0.5rem;
+  color: #eee2cf;
+  font-weight: 600;
+  font-size: 1.05rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.mobileNav a:hover {
+  color: var(--gold);
+}
+
+.mobileNavWa {
+  margin-top: 0.5rem;
+  text-align: center;
+  border-radius: 999px !important;
+  background: #25d366 !important;
+  color: white !important;
+  border-bottom: none !important;
+  padding: 1rem !important;
+}
+
+/* ── Floating WhatsApp button ── */
+.waFab {
+  position: fixed;
+  right: max(1rem, env(safe-area-inset-right));
+  bottom: max(1rem, env(safe-area-inset-bottom));
+  z-index: 85;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-height: 56px;
+  padding: 0 1.15rem 0 0.95rem;
+  border-radius: 999px;
+  background: #25d366;
+  color: white;
+  font-weight: 800;
+  font-size: 0.92rem;
+  box-shadow: 0 10px 36px rgba(37, 211, 102, 0.42);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.waFab svg {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+}
+
+.waFab:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 14px 40px rgba(37, 211, 102, 0.5);
+}
+
+.waFab:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 3px;
 }
 
 .hero {
@@ -149,18 +344,27 @@ a {
 }
 
 .nav {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
+  display: none;
 }
 
 .logo {
   display: flex;
   align-items: center;
   gap: 14px;
+  min-width: 0;
+}
+
+.logo div {
+  min-width: 0;
+}
+
+.logo strong {
+  display: block;
+  font-size: clamp(0.95rem, 2.5vw, 1.05rem);
+  line-height: 1.15;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .logo span {
@@ -179,24 +383,14 @@ a {
   display: block;
   color: #cfc7b8;
   margin-top: 2px;
-}
-
-.navLinks {
-  display: flex;
-  gap: 30px;
-  color: #eee2cf;
-  font-weight: 500;
-}
-
-.navLinks a:hover {
-  color: var(--gold);
+  font-size: 0.72rem;
 }
 
 .heroContent {
   position: relative;
   z-index: 2;
   max-width: 760px;
-  padding-top: 150px;
+  padding-top: 80px;
 }
 
 .eyebrow {
@@ -541,6 +735,22 @@ footer {
   flex-wrap: wrap;
 }
 
+.footerNav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+}
+
+.footerNav a {
+  color: #cfc7b8;
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.footerNav a:hover {
+  color: var(--gold);
+}
+
 footer p {
   color: #cfc7b8;
 }
@@ -593,22 +803,54 @@ footer a {
   }
 }
 
-@media (max-width: 900px) {
-  .navLinks {
+@media (max-width: 1100px) {
+  .navLinksDesktop {
     display: none;
   }
 
+  .menuToggle {
+    display: flex;
+  }
+
+  .navWaBtn {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  :root {
+    --header-h: 4.25rem;
+  }
+
+  .siteHeaderInner {
+    padding-inline: 5%;
+  }
+
+  .hero {
+    padding-inline: 5%;
+    min-height: auto;
+    padding-bottom: 48px;
+  }
+
   .heroContent {
-    padding-top: 110px;
+    padding-top: 48px;
   }
 
   .heroCard {
     position: relative;
     right: auto;
     bottom: auto;
-    margin-top: 60px;
+    margin-top: 48px;
     width: 100%;
     max-width: 320px;
+  }
+
+  .section {
+    padding: 72px 5%;
+  }
+
+  .features {
+    padding: 0 5% 72px;
   }
 
   .intro,
@@ -624,22 +866,109 @@ footer a {
   .project.large,
   .project,
   .baGrid div {
-    height: 420px;
+    height: 320px;
   }
 
   .project.large {
     grid-row: auto;
   }
 
+  .baGrid {
+    padding-inline: 5%;
+    padding-bottom: 72px;
+  }
+
+  .contact {
+    padding: 72px 5%;
+  }
+
   .contactBox {
-    padding: 36px;
+    padding: 32px 24px;
   }
 
   h1 {
-    font-size: 54px;
+    font-size: clamp(2.25rem, 10vw, 3.4rem);
   }
 
   h2 {
-    font-size: 42px;
+    font-size: clamp(1.75rem, 7vw, 2.5rem);
+  }
+
+  .heroText {
+    font-size: 1.05rem;
+    line-height: 1.65;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+    padding: 14px 20px;
+  }
+
+  .ctaRow {
+    flex-direction: column;
+  }
+
+  .waFabLabel {
+    display: none;
+  }
+
+  .waFab {
+    width: 56px;
+    height: 56px;
+    padding: 0;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px 5%;
+    gap: 16px;
+  }
+
+  .footerNav {
+    width: 100%;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo span {
+    width: 44px;
+    height: 44px;
+    font-size: 0.85rem;
+  }
+
+  .logo strong {
+    font-size: 0.88rem;
+  }
+
+  .logo small {
+    font-size: 0.65rem;
+  }
+
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .feature {
+    padding: 24px;
+  }
+
+  .service,
+  .review,
+  .steps div {
+    padding: 24px;
+  }
+
+  .hero::after {
+    width: 280px;
+    height: 280px;
+    right: -80px;
+    top: 80px;
   }
 }
