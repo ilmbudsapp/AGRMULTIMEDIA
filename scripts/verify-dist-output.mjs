@@ -16,6 +16,8 @@ const requiredDemoIndexes = [
   path.join(outputDir, "demo", "tairovic-dark-verzija", "index.html"),
   path.join(outputDir, "demo", "tairovic-dark-verzija", "impressum.html"),
   path.join(outputDir, "demo", "tairovic-dark-verzija", "datenschutz.html"),
+  path.join(outputDir, "demo", "uganda-hilfe", "index.html"),
+  path.join(outputDir, "demo", "atelier-wandgold", "index.html"),
   path.join(outputDir, "demo", "index.html"),
 ];
 
