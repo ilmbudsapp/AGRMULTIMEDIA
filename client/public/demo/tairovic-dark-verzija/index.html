@@ -650,21 +650,64 @@ h1,h2,.title h2,.page-hero h1,.work h3,.card h3{
   inset:0;
   z-index:10000;
   display:flex;
+  flex-direction:column;
   align-items:center;
   justify-content:center;
-  padding:48px 20px 20px;
+  padding:48px 72px 32px;
   background:rgba(var(--overlay),.78);
   backdrop-filter:blur(8px);
 }
 .galerie-lightbox[hidden]{display:none!important}
-.galerie-lightbox img{
+.galerie-lightbox-stage{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
   max-width:min(96vw,1100px);
-  max-height:88vh;
+  flex:1;
+  min-height:0;
+}
+.galerie-lightbox img{
+  max-width:100%;
+  max-height:min(78vh,820px);
   width:auto;
   height:auto;
   object-fit:contain;
   border-radius:8px;
   box-shadow:0 24px 60px rgba(0,0,0,.55);
+}
+.galerie-lightbox-nav{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:48px;
+  height:48px;
+  border:1px solid rgba(255,255,255,.22);
+  border-radius:50%;
+  background:rgba(255,255,255,.1);
+  color:#fff;
+  font-size:22px;
+  line-height:1;
+  cursor:pointer;
+  transition:background .2s,border-color .2s,opacity .2s;
+  z-index:2;
+}
+.galerie-lightbox-nav:hover:not(:disabled){
+  background:rgba(212,175,55,.28);
+  border-color:var(--gold2);
+}
+.galerie-lightbox-nav:disabled{
+  opacity:.28;
+  cursor:default;
+}
+.galerie-lightbox-prev{left:16px}
+.galerie-lightbox-next{right:16px}
+.galerie-lightbox-counter{
+  margin:14px 0 0;
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:.08em;
+  color:rgba(255,255,255,.72);
 }
 .galerie-lightbox-close{
   position:absolute;
@@ -1058,6 +1101,10 @@ textarea{height:145px}
   .winter-grid .galerie-thumb{min-height:108px}
   .video-grid{grid-template-columns:1fr;gap:12px}
   .video-item video{max-height:min(65vh,480px)}
+  .galerie-lightbox{padding:56px 12px 20px}
+  .galerie-lightbox-nav{width:40px;height:40px;font-size:18px}
+  .galerie-lightbox-prev{left:8px}
+  .galerie-lightbox-next{right:8px}
 }
 </style>
 </head>
@@ -2208,7 +2255,12 @@ textarea{height:145px}
 
 <div id="galerie-lightbox" class="galerie-lightbox" hidden role="dialog" aria-modal="true" aria-label="Bildansicht">
   <button type="button" class="galerie-lightbox-close" aria-label="Schließen">&times;</button>
-  <img src="" alt="" id="galerie-lightbox-img" decoding="async">
+  <button type="button" class="galerie-lightbox-nav galerie-lightbox-prev" aria-label="Vorheriges Bild">&#10094;</button>
+  <button type="button" class="galerie-lightbox-nav galerie-lightbox-next" aria-label="Nächstes Bild">&#10095;</button>
+  <div class="galerie-lightbox-stage">
+    <img src="" alt="" id="galerie-lightbox-img" decoding="async">
+  </div>
+  <p class="galerie-lightbox-counter" id="galerie-lightbox-counter" aria-live="polite"></p>
 </div>
 
 <footer class="footer">
@@ -2319,30 +2371,87 @@ activatePage(SITE.pageFromLocation(),{push:false,replace:true});
 (function(){
   const lb=document.getElementById("galerie-lightbox");
   const lbImg=document.getElementById("galerie-lightbox-img");
+  const lbCounter=document.getElementById("galerie-lightbox-counter");
   const closeBtn=lb&&lb.querySelector(".galerie-lightbox-close");
+  const prevBtn=lb&&lb.querySelector(".galerie-lightbox-prev");
+  const nextBtn=lb&&lb.querySelector(".galerie-lightbox-next");
   if(!lb||!lbImg)return;
-  const openLb=(src,alt)=>{
-    lbImg.src=src;
-    lbImg.alt=alt||"";
+
+  let slides=[];
+  let index=0;
+
+  const slideFromBtn=(btn)=>{
+    const img=btn.querySelector("img");
+    return{
+      src:btn.dataset.full||(img&&img.src)||"",
+      alt:(img&&img.alt)||""
+    };
+  };
+
+  const getSlidePool=(btn)=>{
+    const arbeiten=document.getElementById("arbeiten");
+    if(arbeiten&&arbeiten.contains(btn)){
+      return Array.from(arbeiten.querySelectorAll(".galerie-thumb"));
+    }
+    const grid=btn.closest(".galerie-grid");
+    return grid?Array.from(grid.querySelectorAll(".galerie-thumb")):[btn];
+  };
+
+  const updateNav=()=>{
+    if(prevBtn)prevBtn.disabled=index<=0;
+    if(nextBtn)nextBtn.disabled=index>=slides.length-1;
+    if(lbCounter){
+      lbCounter.textContent=slides.length>1?(index+1)+" / "+slides.length:"";
+    }
+  };
+
+  const showSlide=(i)=>{
+    if(!slides.length)return;
+    index=Math.max(0,Math.min(i,slides.length-1));
+    const slide=slides[index];
+    lbImg.src=slide.src;
+    lbImg.alt=slide.alt;
+    updateNav();
+  };
+
+  const openLb=(btn)=>{
+    const pool=getSlidePool(btn);
+    slides=pool.map(slideFromBtn).filter(s=>s.src);
+    index=Math.max(0,pool.indexOf(btn));
+    if(!slides.length)return;
+    showSlide(index);
     lb.hidden=false;
     document.body.style.overflow="hidden";
+    closeBtn&&closeBtn.focus();
   };
+
   const closeLb=()=>{
     lb.hidden=true;
     lbImg.removeAttribute("src");
     lbImg.alt="";
+    slides=[];
+    index=0;
+    if(lbCounter)lbCounter.textContent="";
     document.body.style.overflow="";
   };
+
+  const step=(delta)=>{
+    if(lb.hidden||slides.length<2)return;
+    showSlide(index+delta);
+  };
+
   document.querySelectorAll(".galerie-thumb").forEach(btn=>{
-    btn.addEventListener("click",()=>{
-      const img=btn.querySelector("img");
-      openLb(btn.dataset.full||img.src,img&&img.alt);
-    });
+    btn.addEventListener("click",()=>openLb(btn));
   });
   closeBtn&&closeBtn.addEventListener("click",closeLb);
+  prevBtn&&prevBtn.addEventListener("click",e=>{e.stopPropagation();step(-1);});
+  nextBtn&&nextBtn.addEventListener("click",e=>{e.stopPropagation();step(1);});
   lb.addEventListener("click",e=>{if(e.target===lb)closeLb();});
   document.addEventListener("keydown",e=>{
-    if(e.key==="Escape"&&!lb.hidden)closeLb();
+    if(lb.hidden)return;
+    if(e.key==="Escape")closeLb();
+    if(e.key==="ArrowRight"){e.preventDefault();step(1);}
+    if(e.key==="ArrowLeft"){e.preventDefault();step(-1);}
   });
 })();
 
