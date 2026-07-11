@@ -6,7 +6,7 @@ const OUT = path.resolve("client/public/demo/jo-gebaeudereinigung/assets");
 fs.mkdirSync(OUT, { recursive: true });
 
 const imgs = [
-  ["hero-banner.webp", "https://images.unsplash.com/photo-1585421514284-efb74c2b69ba?auto=format&fit=crop&w=1900&q=85"],
+  ["hero-banner.webp", "https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?auto=format&fit=crop&w=2000&q=88"],
   ["hero-main.webp", "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1400&q=85"],
   ["hero-window.webp", "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=900&q=85"],
   ["hero-vacuum.webp", "https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?auto=format&fit=crop&w=900&q=85"],
