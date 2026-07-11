@@ -121,40 +121,38 @@ nav{height:82px;display:flex;align-items:center;justify-content:space-between}
 .navlinks a:not(.btn):hover:after{width:100%}
 .menu{display:none;background:none;border:0;color:var(--navy);font-size:1.6rem;cursor:pointer}
 
-/* HERO — full-width banner (M&M style, light blue) */
+/* HERO — full-width banner, photo dominant */
 .hero-banner{
-  position:relative;min-height:clamp(460px,62vh,660px);
+  position:relative;min-height:clamp(480px,68vh,720px);
   display:flex;align-items:center;justify-content:center;text-align:center;
-  background-color:#c8e4f5;
+  background-color:#5a8aa8;
   background-image:
-    linear-gradient(180deg,rgba(232,244,252,.22) 0%,rgba(255,255,255,.30) 100%),
+    linear-gradient(180deg,rgba(10,61,92,.18) 0%,rgba(10,61,92,.32) 100%),
     url('/demo/jo-gebaeudereinigung/assets/hero-banner.webp');
-  background-position:center 42%;
+  background-position:center center;
   background-size:cover;
   background-repeat:no-repeat;
-  padding:72px 20px 88px;
+  padding:88px 20px 96px;
 }
 .hero-banner__content{
   position:relative;z-index:2;max-width:920px;
-  padding:28px 34px;
-  background:rgba(255,255,255,.78);
-  backdrop-filter:blur(10px);
-  border-radius:14px;
-  border:1px solid rgba(255,255,255,.85);
-  box-shadow:0 16px 48px rgba(10,61,92,.12);
+  padding:0;
   animation:heroIn 1s ease both;
 }
 .hero-banner h1{
   font-family:"Plus Jakarta Sans",sans-serif;
   font-size:clamp(2.4rem,6.2vw,4.6rem);
   font-weight:800;letter-spacing:-.04em;line-height:1.05;
-  color:var(--navy);margin-bottom:12px;
-  text-shadow:0 1px 0 rgba(255,255,255,.6);
+  color:#fff;margin-bottom:12px;
+  text-shadow:0 3px 24px rgba(0,0,0,.55),0 1px 4px rgba(0,0,0,.4);
 }
-.hero-banner h1 span{color:var(--blue)}
+.hero-banner h1 span{color:#b8ecff}
 .hero-banner .hero-sub{
-  font-size:clamp(1rem,2vw,1.25rem);color:var(--muted);font-weight:600;margin-bottom:28px;
+  font-size:clamp(1rem,2vw,1.15rem);color:rgba(255,255,255,.94);font-weight:600;margin-bottom:28px;
+  text-shadow:0 2px 16px rgba(0,0,0,.5);
 }
+.hero-banner .trust{color:#fff}
+.hero-banner .check{background:rgba(255,255,255,.22);color:#fff}
 .btn-hero{
   border-radius:6px;min-height:50px;padding:0 28px;font-size:.95rem;
   box-shadow:0 14px 32px rgba(22,134,217,.32);
