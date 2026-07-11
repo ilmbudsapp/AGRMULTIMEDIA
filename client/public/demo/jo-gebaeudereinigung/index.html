@@ -90,11 +90,11 @@ p{margin:0}
 }
 .demo-bar span{color:var(--cyan)}
 
-.topbar{background:rgba(255,255,255,.72);border-bottom:1px solid rgba(10,61,92,.08);font-size:.84rem;color:var(--muted)}
-.topbar .container{min-height:42px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.topbar{background:linear-gradient(90deg,var(--blue),#0d7ec8);font-size:.84rem;color:#fff;border-bottom:none}
+.topbar .container{min-height:44px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
 .toplinks{display:flex;gap:22px;flex-wrap:wrap}
-.topbar a{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--navy)}
-.mini{color:var(--blue);font-weight:800}
+.topbar a{display:flex;align-items:center;gap:8px;font-weight:700;color:#fff}
+.mini{color:#dff3ff;font-weight:800}
 
 header{
   position:sticky;top:0;z-index:1000;
@@ -121,83 +121,43 @@ nav{height:82px;display:flex;align-items:center;justify-content:space-between}
 .navlinks a:not(.btn):hover:after{width:100%}
 .menu{display:none;background:none;border:0;color:var(--navy);font-size:1.6rem;cursor:pointer}
 
-/* HERO */
-.hero-wrap{padding:48px 0 88px}
-.hero{
-  display:grid;grid-template-columns:1.02fr .98fr;gap:48px;align-items:center;
+/* HERO — full-width banner (M&M style, light blue) */
+.hero-banner{
+  position:relative;min-height:clamp(420px,58vh,620px);
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.78) 0%,rgba(232,244,252,.88) 100%),
+    url('/demo/jo-gebaeudereinigung/assets/hero-banner.webp') center/cover no-repeat;
+  padding:72px 20px 88px;
 }
-.hero-copy .kicker{
-  display:inline-flex;align-items:center;gap:8px;
-  padding:10px 16px;border-radius:999px;
-  background:rgba(255,255,255,.86);border:1px solid rgba(22,134,217,.18);
-  color:var(--blue);font-size:.78rem;font-weight:800;letter-spacing:.08em;
-  text-transform:uppercase;margin-bottom:22px;
-  box-shadow:0 12px 30px rgba(10,61,92,.06);
-  animation:heroIn .9s ease both;
+.hero-banner__content{
+  position:relative;z-index:2;max-width:920px;
+  animation:heroIn 1s ease both;
 }
-.hero h1{
+.hero-banner h1{
   font-family:"Plus Jakarta Sans",sans-serif;
-  font-size:clamp(2.6rem,5.8vw,4.8rem);
-  font-weight:800;letter-spacing:-.045em;line-height:1.02;
-  color:var(--navy);
-  animation:heroIn 1s ease both;animation-delay:.08s;
+  font-size:clamp(2.4rem,6.2vw,4.6rem);
+  font-weight:800;letter-spacing:-.04em;line-height:1.05;
+  color:var(--navy);margin-bottom:12px;
 }
-.hero h1 span{
-  background:linear-gradient(135deg,var(--blue),var(--cyan));
-  -webkit-background-clip:text;background-clip:text;color:transparent;
+.hero-banner .hero-sub{
+  font-size:clamp(1rem,2vw,1.25rem);color:var(--muted);font-weight:600;margin-bottom:28px;
 }
-.hero p{
-  max-width:580px;color:var(--muted);font-size:clamp(1rem,1.6vw,1.15rem);
-  margin:22px 0 30px;line-height:1.75;
-  animation:heroIn 1s ease both;animation-delay:.16s;
+.btn-hero{
+  border-radius:6px;min-height:50px;padding:0 28px;font-size:.95rem;
+  box-shadow:0 14px 32px rgba(22,134,217,.32);
 }
-.actions{display:flex;gap:14px;flex-wrap:wrap;animation:heroIn 1s ease both;animation-delay:.24s}
-.trust{
-  display:flex;gap:22px;flex-wrap:wrap;margin-top:34px;
-  color:var(--navy);font-weight:700;font-size:.88rem;
-  animation:heroIn 1s ease both;animation-delay:.32s;
+.hero-banner .trust{
+  justify-content:center;margin-top:36px;
+  animation:heroIn 1s ease both;animation-delay:.2s;
 }
-.trust span{display:flex;align-items:center;gap:9px}
-
-.hero-visual{position:relative;animation:heroVisual 1.1s ease both;animation-delay:.12s}
-.hero-main{
-  min-height:520px;border-radius:32px;overflow:hidden;position:relative;
-  box-shadow:var(--shadow);transform:perspective(1100px) rotateY(-4deg);
-  border:6px solid rgba(255,255,255,.88);
-}
-.hero-main img{width:100%;height:100%;min-height:520px;object-fit:cover}
-.hero-main:after{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg,transparent 55%, rgba(10,61,92,.28));
-  pointer-events:none;
-}
-.hero-float{
-  position:absolute;border-radius:20px;overflow:hidden;
-  box-shadow:0 18px 44px rgba(10,61,92,.18);
-  border:4px solid #fff;
-  transform:perspective(900px);
-}
-.hero-float img{width:100%;height:100%;object-fit:cover}
-.hero-float--window{width:42%;height:170px;right:-18px;top:36px;transform:rotateY(-6deg) rotateZ(2deg)}
-.hero-float--vacuum{width:38%;height:150px;left:-16px;bottom:48px;transform:rotateY(5deg) rotateZ(-2deg)}
-.hero-badge{
-  position:absolute;right:28px;bottom:28px;z-index:2;
-  background:rgba(255,255,255,.92);backdrop-filter:blur(12px);
-  padding:16px 20px;border-radius:18px;
-  box-shadow:0 16px 40px rgba(10,61,92,.14);
-  border:1px solid rgba(255,255,255,.8);
-}
-.hero-badge b{display:block;font-size:1.8rem;font-weight:800;color:var(--blue);line-height:1}
-.hero-badge span{font-size:.72rem;text-transform:uppercase;font-weight:800;letter-spacing:.08em;color:var(--muted)}
 
 @keyframes heroIn{
   from{opacity:0;transform:translateY(28px) perspective(800px) rotateX(10deg)}
   to{opacity:1;transform:translateY(0) perspective(800px) rotateX(0)}
 }
-@keyframes heroVisual{
-  from{opacity:0;transform:translateX(24px) scale(.96)}
-  to{opacity:1;transform:translateX(0) scale(1)}
-}
+.trust{display:flex;gap:22px;flex-wrap:wrap;color:var(--navy);font-weight:700;font-size:.88rem}
+.trust span{display:flex;align-items:center;gap:9px}
 
 .intro{padding:100px 0 90px}
 .intro-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
@@ -222,13 +182,22 @@ nav{height:82px;display:flex;align-items:center;justify-content:space-between}
 .section-head p{color:var(--muted);font-size:1.02rem;margin-top:16px}
 .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
 .card{
-  min-height:280px;padding:28px 22px;border:1px solid rgba(10,61,92,.08);
+  min-height:280px;padding:0;border:1px solid rgba(10,61,92,.08);
   border-radius:22px;background:rgba(255,255,255,.78);
   position:relative;overflow:hidden;transition:transform .35s,box-shadow .35s;
   transform-style:preserve-3d;
 }
 .card:hover{transform:translateY(-10px) perspective(900px) rotateX(4deg);box-shadow:var(--shadow)}
-.num{position:absolute;right:16px;top:8px;font-size:3rem;font-weight:800;color:#e6f2f9;line-height:1}
+.card-img{width:100%;height:150px;object-fit:cover;display:block}
+.card-body{padding:22px 22px 26px}
+.card-body .ico{margin-bottom:18px}
+.num{position:absolute;right:16px;top:118px;font-size:3rem;font-weight:800;color:rgba(255,255,255,.92);line-height:1;text-shadow:0 2px 12px rgba(10,61,92,.35)}
+.card-img-wrap{position:relative}
+.card-img-wrap:after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 40%,rgba(10,61,92,.35));
+  pointer-events:none;
+}
 .ico{
   width:54px;height:54px;border-radius:14px;background:linear-gradient(145deg,#eaf6fd,#d8effc);
   color:var(--blue);display:grid;place-items:center;font-size:1.4rem;margin-bottom:36px;
@@ -240,7 +209,9 @@ nav{height:82px;display:flex;align-items:center;justify-content:space-between}
   padding:90px 0;
   background:linear-gradient(135deg,#f0f9ff 0%,#e3f2fb 100%);
 }
-.service-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;align-items:center}
+.service-grid{display:grid;grid-template-columns:.9fr 1fr 1fr;gap:40px;align-items:center}
+.service-photo{border-radius:22px;overflow:hidden;box-shadow:var(--shadow);min-height:360px}
+.service-photo img{width:100%;height:100%;min-height:360px;object-fit:cover}
 .service-grid p{color:var(--muted);margin-top:18px}
 .list{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .list div{
@@ -252,11 +223,13 @@ nav{height:82px;display:flex;align-items:center;justify-content:space-between}
 .process{padding:90px 0}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .step{
-  padding:32px;border-radius:22px;background:rgba(255,255,255,.86);
+  padding:0;border-radius:22px;background:rgba(255,255,255,.86);
   box-shadow:0 12px 35px rgba(10,61,92,.06);border:1px solid rgba(10,61,92,.06);
-  transition:transform .3s;
+  transition:transform .3s;overflow:hidden;
 }
 .step:hover{transform:translateY(-6px) perspective(800px) rotateX(3deg)}
+.step-img{width:100%;height:160px;object-fit:cover;display:block}
+.step-body{padding:24px 28px 28px}
 .step b{display:block;font-size:2.6rem;font-weight:800;color:var(--blue);margin-bottom:12px;line-height:1}
 .step h3{margin-bottom:8px;color:var(--navy);font-weight:800}
 .step p{color:var(--muted)}
@@ -272,16 +245,18 @@ nav{height:82px;display:flex;align-items:center;justify-content:space-between}
 .stars{color:#ffc94d;letter-spacing:.16em;font-size:1.1rem;margin:12px 0}
 .rating p{color:#c5d9e4}
 .quote{
-  padding:36px;border-radius:22px;background:rgba(255,255,255,.86);
+  padding:0;border-radius:22px;background:rgba(255,255,255,.86);
   font-size:1.08rem;line-height:1.85;border:1px solid rgba(10,61,92,.08);
-  box-shadow:0 12px 35px rgba(10,61,92,.06);
+  box-shadow:0 12px 35px rgba(10,61,92,.06);overflow:hidden;
 }
+.quote-img{width:100%;height:200px;object-fit:cover;display:block}
+.quote-body{padding:32px 36px 36px}
 
 .cta{padding:0 0 90px}
 .cta-box{
   padding:52px;border-radius:28px;color:#fff;
-  background:linear-gradient(110deg,rgba(10,61,92,.95),rgba(22,134,217,.88)),
-    url('/demo/jo-gebaeudereinigung/assets/about-main.webp') center/cover;
+  background:linear-gradient(110deg,rgba(10,61,92,.92),rgba(22,134,217,.85)),
+    url('/demo/jo-gebaeudereinigung/assets/cta-bg.webp') center/cover;
   display:flex;align-items:center;justify-content:space-between;gap:36px;
   box-shadow:var(--shadow);
 }
@@ -335,26 +310,23 @@ footer h3{color:#fff;margin-bottom:14px;font-size:1rem}
   .navlinks{display:none;position:absolute;top:82px;left:0;right:0;background:#fff;padding:24px 28px;flex-direction:column;align-items:flex-start;box-shadow:var(--shadow)}
   .navlinks.open{display:flex}
   .menu{display:block}
-  .hero,.intro-grid,.service-grid,.review-grid,.contact-grid{grid-template-columns:1fr}
+  .intro-grid,.service-grid,.review-grid,.contact-grid{grid-template-columns:1fr}
+  .service-grid .service-photo{min-height:280px;order:-1}
+  .service-grid .service-photo img{min-height:280px}
   .cards{grid-template-columns:repeat(2,1fr)}
   .steps{grid-template-columns:1fr}
-  .hero-main,.hero-main img{min-height:420px}
-  .hero-float--window{right:8px;top:20px;width:44%}
-  .hero-float--vacuum{left:8px;bottom:28px;width:40%}
 }
 @media(max-width:680px){
   .container{width:min(100% - 26px,1180px)}
   .mini{display:none}
   .topbar .container{justify-content:center}
-  .hero-wrap{padding-top:28px}
-  .hero h1{font-size:2.35rem}
-  .actions .btn,.form .btn{width:100%}
+  .hero-banner{min-height:380px;padding:56px 16px 72px}
+  .hero-banner h1{font-size:2.15rem}
   .mainphoto{width:100%;height:380px}
   .smallphoto{display:none}
   .features,.cards,.list,.form{grid-template-columns:1fr}
   .cta-box{padding:32px 22px;flex-direction:column;align-items:flex-start}
   .footer-grid{grid-template-columns:1fr}
-  .hero-float--window,.hero-float--vacuum{display:none}
   .wa{width:56px;height:56px;right:16px;bottom:16px}
 }
 </style>
@@ -365,27 +337,14 @@ footer h3{color:#fff;margin-bottom:14px;font-size:1rem}
 <div class="topbar"><div class="container"><div class="toplinks"><a href="tel:+491791183460">☎ 0179 1183460</a><a href="#kontakt">📍 Hemmingstedter Schanze 8, 28219 Bremen</a></div><div class="mini">Sauber. Zuverlässig. Persönlich.</div></div></div>
 <header><nav class="container"><a class="logo" href="#start"><div class="mark">J&O</div><div><strong>J & O Gebäudereinigung</strong><small>Professionelle Reinigung in Bremen</small></div></a><button class="menu" type="button" aria-label="Menü" onclick="document.querySelector('.navlinks').classList.toggle('open')">☰</button><div class="navlinks"><a href="#start">Startseite</a><a href="#ueber">Über uns</a><a href="#leistungen">Leistungen</a><a href="#ablauf">Ablauf</a><a href="#kontakt">Kontakt</a><a class="btn btn-primary" href="tel:+491791183460">Jetzt anrufen</a></div></nav></header>
 <main>
-<section class="hero-wrap" id="start"><div class="container hero">
-  <div class="hero-copy">
-    <div class="kicker">✦ Gebäudereinigung in Bremen</div>
-    <h1>Sauberkeit, auf die Sie sich <span>verlassen können.</span></h1>
-    <p>Professionelle Reinigung für Wohnungen, Büros, Unternehmen und Hotels – gründlich, flexibel und zuverlässig. Unser Team reinigt Böden, Fenster und Arbeitsbereiche mit Sorgfalt.</p>
-    <div class="actions">
-      <a class="btn btn-primary" href="#kontakt">Kostenloses Angebot anfordern</a>
-      <a class="btn btn-whatsapp" target="_blank" rel="noopener" href="https://wa.me/491791183460?text=Hallo%20J%20%26%20O%20Geb%C3%A4udereinigung%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Ihre%20Reinigungsleistungen.">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.883 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Per WhatsApp anfragen
-      </a>
-    </div>
-    <div class="trust"><span><i class="check">✓</i> Individuelle Angebote</span><span><i class="check">✓</i> Flexible Termine</span><span><i class="check">✓</i> Privat & Gewerbe</span></div>
+<section class="hero-banner" id="start">
+  <div class="hero-banner__content">
+    <h1>Professionelles<br>Reinigungsunternehmen</h1>
+    <p class="hero-sub">J & O Gebäudereinigung in Bremen — Böden, Fenster &amp; Arbeitsbereiche</p>
+    <a class="btn btn-primary btn-hero" href="#leistungen">Unsere Leistungen</a>
+    <div class="trust"><span><i class="check">✓</i> Individuelle Angebote</span><span><i class="check">✓</i> Flexible Termine</span><span><i class="check">✓</i> Privat &amp; Gewerbe</span></div>
   </div>
-  <div class="hero-visual">
-    <div class="hero-main"><img src="/demo/jo-gebaeudereinigung/assets/hero-main.webp" alt="Professionelles Reinigungsteam bei der Arbeit in Bremen" width="640" height="520" fetchpriority="high"></div>
-    <div class="hero-float hero-float--window"><img src="/demo/jo-gebaeudereinigung/assets/hero-window.webp" alt="Fensterreinigung durch geschultes Personal" width="260" height="170" loading="lazy"></div>
-    <div class="hero-float hero-float--vacuum"><img src="/demo/jo-gebaeudereinigung/assets/hero-vacuum.webp" alt="Bodenreinigung und Staubsaugen im Büro" width="240" height="150" loading="lazy"></div>
-    <div class="hero-badge"><b>100%</b><span>Einsatz für Sauberkeit</span></div>
-  </div>
-</div></section>
+</section>
 
 <section class="intro reveal" id="ueber"><div class="container intro-grid">
   <div class="photo reveal reveal-delay-1"><img class="mainphoto" src="/demo/jo-gebaeudereinigung/assets/about-main.webp" alt="Gebäudereinigung Bremen" width="520" height="520" loading="lazy"><img class="smallphoto" src="/demo/jo-gebaeudereinigung/assets/about-small.webp" alt="Reinigungskraft bei der Arbeit" width="240" height="220" loading="lazy"><div class="badge"><b>100%</b><span>Einsatz für Sauberkeit</span></div></div>
@@ -395,16 +354,17 @@ footer h3{color:#fff;margin-bottom:14px;font-size:1rem}
 <section class="services reveal" id="leistungen"><div class="container">
   <div class="section-head reveal"><span class="eyebrow">Unsere Leistungen</span><h2>Professionelle Reinigung für jeden Bedarf</h2><p>Von der regelmäßigen Unterhaltsreinigung bis zur intensiven Grund- und Umzugsreinigung – passende Lösungen für Privat- und Geschäftskunden.</p></div>
   <div class="cards">
-    <article class="card reveal reveal-delay-1"><span class="num">01</span><div class="ico">✦</div><h3>Büro- & Arbeitsplatzreinigung</h3><p>Saubere und gepflegte Arbeitsplätze für ein angenehmes und professionelles Umfeld.</p></article>
-    <article class="card reveal reveal-delay-2"><span class="num">02</span><div class="ico">⌂</div><h3>Haus- & Standardreinigung</h3><p>Regelmäßige, gründliche Reinigung von Wohnungen, Häusern und gemeinschaftlichen Bereichen.</p></article>
-    <article class="card reveal reveal-delay-3"><span class="num">03</span><div class="ico">▦</div><h3>Firmen- & Hotelreinigung</h3><p>Individuell abgestimmte Reinigungspläne für Unternehmen, Gewerbeflächen und Hotels.</p></article>
-    <article class="card reveal reveal-delay-3"><span class="num">04</span><div class="ico">◫</div><h3>Fensterreinigung</h3><p>Streifenfreie Reinigung von Fenstern, Glasflächen und Rahmen – innen und außen.</p></article>
+    <article class="card reveal reveal-delay-1"><div class="card-img-wrap"><img class="card-img" src="/demo/jo-gebaeudereinigung/assets/service-buero.webp" alt="Büroreinigung Bremen" width="280" height="150" loading="lazy"><span class="num">01</span></div><div class="card-body"><div class="ico">✦</div><h3>Büro- & Arbeitsplatzreinigung</h3><p>Saubere und gepflegte Arbeitsplätze für ein angenehmes und professionelles Umfeld.</p></div></article>
+    <article class="card reveal reveal-delay-2"><div class="card-img-wrap"><img class="card-img" src="/demo/jo-gebaeudereinigung/assets/service-haus.webp" alt="Hausreinigung Bremen" width="280" height="150" loading="lazy"><span class="num">02</span></div><div class="card-body"><div class="ico">⌂</div><h3>Haus- & Standardreinigung</h3><p>Regelmäßige, gründliche Reinigung von Wohnungen, Häusern und gemeinschaftlichen Bereichen.</p></div></article>
+    <article class="card reveal reveal-delay-3"><div class="card-img-wrap"><img class="card-img" src="/demo/jo-gebaeudereinigung/assets/service-firma.webp" alt="Firmenreinigung Bremen" width="280" height="150" loading="lazy"><span class="num">03</span></div><div class="card-body"><div class="ico">▦</div><h3>Firmen- & Hotelreinigung</h3><p>Individuell abgestimmte Reinigungspläne für Unternehmen, Gewerbeflächen und Hotels.</p></div></article>
+    <article class="card reveal reveal-delay-3"><div class="card-img-wrap"><img class="card-img" src="/demo/jo-gebaeudereinigung/assets/service-fenster.webp" alt="Fensterreinigung Bremen" width="280" height="150" loading="lazy"><span class="num">04</span></div><div class="card-body"><div class="ico">◫</div><h3>Fensterreinigung</h3><p>Streifenfreie Reinigung von Fenstern, Glasflächen und Rahmen – innen und außen.</p></div></article>
   </div>
 </div></section>
 
 <section class="service-block reveal"><div class="container service-grid">
-  <div class="reveal"><span class="eyebrow">Komplettservice</span><h2>Alles aus einer Hand</h2><p>Sie benötigen eine einmalige Intensivreinigung oder regelmäßige Unterstützung? Wir erstellen Ihnen ein individuelles Angebot.</p><a class="btn btn-primary" href="#kontakt" style="margin-top:24px">Unverbindlich anfragen</a></div>
-  <div class="list reveal reveal-delay-1">
+  <div class="service-photo reveal reveal-delay-1"><img src="/demo/jo-gebaeudereinigung/assets/service-side.webp" alt="Reinigungsteam bei der Bodenpflege" width="400" height="360" loading="lazy"></div>
+  <div class="reveal reveal-delay-2"><span class="eyebrow">Komplettservice</span><h2>Alles aus einer Hand</h2><p>Sie benötigen eine einmalige Intensivreinigung oder regelmäßige Unterstützung? Wir erstellen Ihnen ein individuelles Angebot.</p><a class="btn btn-primary" href="#kontakt" style="margin-top:24px">Unverbindlich anfragen</a></div>
+  <div class="list reveal reveal-delay-3">
     <div><i class="check">✓</i>Büro- und Arbeitsplatzreinigung</div><div><i class="check">✓</i>Grundreinigung</div><div><i class="check">✓</i>Standardreinigung</div><div><i class="check">✓</i>Fensterreinigung innen & außen</div>
     <div><i class="check">✓</i>Matratzenreinigung</div><div><i class="check">✓</i>Polsterreinigung</div><div><i class="check">✓</i>Umzugsreinigung</div><div><i class="check">✓</i>Hotelreinigung</div>
   </div>
@@ -413,9 +373,9 @@ footer h3{color:#fff;margin-bottom:14px;font-size:1rem}
 <section class="process reveal" id="ablauf"><div class="container">
   <div class="section-head reveal"><span class="eyebrow">Einfach & transparent</span><h2>So funktioniert die Zusammenarbeit</h2><p>Von der ersten Anfrage bis zum sauberen Ergebnis – unkompliziert, persönlich und zuverlässig.</p></div>
   <div class="steps">
-    <article class="step reveal reveal-delay-1"><b>01</b><h3>Anfrage senden</h3><p>Kontaktieren Sie uns telefonisch, per WhatsApp oder über das Kontaktformular.</p></article>
-    <article class="step reveal reveal-delay-2"><b>02</b><h3>Bedarf abstimmen</h3><p>Wir besprechen Ihre Räume, Wünsche, den Umfang und einen passenden Termin.</p></article>
-    <article class="step reveal reveal-delay-3"><b>03</b><h3>Sauberes Ergebnis</h3><p>Unser Team führt die vereinbarten Arbeiten gründlich und zuverlässig aus.</p></article>
+    <article class="step reveal reveal-delay-1"><img class="step-img" src="/demo/jo-gebaeudereinigung/assets/process-1.webp" alt="Anfrage senden" width="360" height="160" loading="lazy"><div class="step-body"><b>01</b><h3>Anfrage senden</h3><p>Kontaktieren Sie uns telefonisch, per WhatsApp oder über das Kontaktformular.</p></div></article>
+    <article class="step reveal reveal-delay-2"><img class="step-img" src="/demo/jo-gebaeudereinigung/assets/process-2.webp" alt="Bedarf abstimmen" width="360" height="160" loading="lazy"><div class="step-body"><b>02</b><h3>Bedarf abstimmen</h3><p>Wir besprechen Ihre Räume, Wünsche, den Umfang und einen passenden Termin.</p></div></article>
+    <article class="step reveal reveal-delay-3"><img class="step-img" src="/demo/jo-gebaeudereinigung/assets/process-3.webp" alt="Sauberes Ergebnis" width="360" height="160" loading="lazy"><div class="step-body"><b>03</b><h3>Sauberes Ergebnis</h3><p>Unser Team führt die vereinbarten Arbeiten gründlich und zuverlässig aus.</p></div></article>
   </div>
 </div></section>
 
@@ -423,7 +383,7 @@ footer h3{color:#fff;margin-bottom:14px;font-size:1rem}
   <div class="section-head reveal"><span class="eyebrow">Kundenstimmen</span><h2>Qualität, die überzeugt</h2><p>Eine professionelle Reinigung zeigt sich im Ergebnis – und in der Zufriedenheit unserer Kunden.</p></div>
   <div class="review-grid">
     <div class="rating reveal reveal-delay-1"><div class="score">4,6/5</div><div class="stars">★★★★★</div><h3>Google-Bewertung</h3><p>Basierend auf öffentlich sichtbaren Kundenrezensionen.</p></div>
-    <div class="quote reveal reveal-delay-2">„Zuverlässigkeit, sorgfältige Arbeit und eine unkomplizierte Kommunikation stehen bei uns im Mittelpunkt. Wir möchten, dass Sie sich in sauberen Räumen rundum wohlfühlen.“<br><br><strong>J & O Gebäudereinigung</strong><br><small>Ihr Reinigungspartner in Bremen</small></div>
+    <div class="quote reveal reveal-delay-2"><img class="quote-img" src="/demo/jo-gebaeudereinigung/assets/review-team.webp" alt="J & O Reinigungsteam" width="640" height="200" loading="lazy"><div class="quote-body">„Zuverlässigkeit, sorgfältige Arbeit und eine unkomplizierte Kommunikation stehen bei uns im Mittelpunkt. Wir möchten, dass Sie sich in sauberen Räumen rundum wohlfühlen.“<br><br><strong>J & O Gebäudereinigung</strong><br><small>Ihr Reinigungspartner in Bremen</small></div></div>
   </div>
 </div></section>
 
