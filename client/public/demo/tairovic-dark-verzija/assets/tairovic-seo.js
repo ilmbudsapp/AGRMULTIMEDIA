@@ -100,6 +100,9 @@
   const SAME_AS = [
     "https://www.facebook.com/ajet.tairovic.1",
     "https://maps.google.com/?q=Kirchstr.+32,+56564+Neuwied",
+    "https://de.wikipedia.org/wiki/Geb%C3%A4udereinigung",
+    "https://www.wikidata.org/wiki/Q899336",
+    "https://www.linkedin.com/company/tairovic-gebaeudeservice",
   ];
 
   const AREA_SERVED = [
@@ -163,20 +166,58 @@
     };
   }
 
+  function placeNodes() {
+    return [
+      {
+        "@type": "Place",
+        "@id": ORIGIN + "/#place-neuwied",
+        name: "Neuwied",
+        address: { "@type": "PostalAddress", addressLocality: "Neuwied", addressCountry: "DE" },
+      },
+      {
+        "@type": "Place",
+        "@id": ORIGIN + "/#place-koblenz",
+        name: "Koblenz",
+        address: { "@type": "PostalAddress", addressLocality: "Koblenz", addressCountry: "DE" },
+      },
+      {
+        "@type": "Place",
+        "@id": ORIGIN + "/#place-andernach",
+        name: "Andernach",
+        address: { "@type": "PostalAddress", addressLocality: "Andernach", addressCountry: "DE" },
+      },
+      {
+        "@type": "Place",
+        "@id": ORIGIN + "/#place-bendorf",
+        name: "Bendorf",
+        address: { "@type": "PostalAddress", addressLocality: "Bendorf", addressCountry: "DE" },
+      },
+    ];
+  }
+
   function personAuthorNode() {
     return {
       "@type": "Person",
       "@id": AUTHOR_ID,
       name: "Mevlida Tairovic",
       jobTitle: "Inhaberin & Fachkraft Gebäudereinigung",
-      worksFor: { "@id": ORG_ID },
       knowsAbout: [
         "Gebäudereinigung",
         "Treppenhausreinigung",
+        "Unterhaltsreinigung",
+        "Grundreinigung",
+        "Glasreinigung",
+        "Sonderreinigung",
         "Hausmeisterservice",
+        "Objektbetreuung",
         "Gartenpflege",
         "Winterdienst",
       ],
+      hasCredential: [
+        { "@type": "EducationalOccupationalCredential", name: "Arbeitssicherheit Unterweisung" },
+        { "@type": "EducationalOccupationalCredential", name: "Hygiene Reinigungswirtschaft" },
+      ],
+      worksFor: { "@id": ORG_ID },
     };
   }
 
@@ -309,7 +350,7 @@
   function breadcrumbSchema(page) {
     const url = absoluteUrl(page);
     const items = [
-      { "@type": "ListItem", position: 1, name: "Home", item: ORIGIN + "/" },
+      { "@type": "ListItem", position: 1, name: "Startseite", item: ORIGIN + "/" },
     ];
     if (page && page !== "home") {
       items.push({
@@ -323,6 +364,48 @@
       "@type": "BreadcrumbList",
       "@id": url + "#breadcrumb",
       itemListElement: items,
+    };
+  }
+
+  function standaloneBreadcrumbSchema(page) {
+    const items = [
+      { "@type": "ListItem", position: 1, name: "Startseite", item: ORIGIN + "/" },
+    ];
+    if (page && page !== "home") {
+      items.push({
+        "@type": "ListItem",
+        position: 2,
+        name: PAGE_NAMES[page] || page,
+        item: absoluteUrl(page),
+      });
+    } else {
+      items.push({
+        "@type": "ListItem",
+        position: 2,
+        name: "Leistungen",
+        item: ORIGIN + "/gebaeudereinigung",
+      });
+    }
+    return {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: items,
+    };
+  }
+
+  function primaryVideoSchema() {
+    return {
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      name: "Gebäudereinigung Tairovic – Reinigung im Einsatz",
+      description: "Professionelle Gebäudereinigung in Neuwied — Treppenhaus, Böden, Glasreinigung.",
+      thumbnailUrl: OG_IMAGE,
+      uploadDate: "2026-07-26",
+      contentUrl: ORIGIN + "/demo/tairovic-dark-verzija/assets/videos/video-01.mp4",
+      embedUrl: ORIGIN + "/unsere-arbeiten",
+      transcript:
+        "Einblick in die Gebäudereinigung von Tairovic Gebäudeservice in Neuwied: Einscheibenmaschine im Eingangsbereich, Bodenpflege im Flur, Hochglanzreinigung und Glasreinigung.",
+      publisher: { "@type": "Organization", name: "Tairovic Gebäudeservice", url: ORIGIN + "/" },
     };
   }
 
@@ -423,14 +506,30 @@
   }
 
   function videoObjectsFromPage(page) {
-    if (page !== "arbeiten") return [];
-    const root = document.getElementById("arbeiten");
-    if (!root) return [];
     const videos = [];
+    const primary = {
+      "@type": "VideoObject",
+      "@id": ORIGIN + "/demo/tairovic-dark-verzija/assets/videos/video-01.mp4#video",
+      name: "Gebäudereinigung Tairovic – Firmenvorstellung",
+      description: "Professionelle Gebäudereinigung in Neuwied — Einscheibenmaschine im Eingangsbereich.",
+      thumbnailUrl: OG_IMAGE,
+      contentUrl: ORIGIN + "/demo/tairovic-dark-verzija/assets/videos/video-01.mp4",
+      embedUrl: ORIGIN + "/unsere-arbeiten",
+      uploadDate: "2026-07-26",
+      transcript:
+        "Video zeigt Gebäudereinigung durch Tairovic Gebäudeservice: Einscheibenmaschine, Bodenpflege, Glasreinigung in Neuwied.",
+      publisher: { "@id": ORG_ID },
+    };
+    if (page === "home" || page === "arbeiten") videos.push(primary);
+
+    if (page !== "arbeiten") return videos;
+    const root = document.getElementById("arbeiten");
+    if (!root) return videos;
     root.querySelectorAll("video source, video[src]").forEach((el, i) => {
       const src = el.getAttribute("src") || el.src;
       if (!src) return;
       const abs = src.startsWith("http") ? src : ORIGIN + (src.startsWith("/") ? src : "/" + src);
+      if (abs.includes("video-01.mp4")) return;
       videos.push({
         "@type": "VideoObject",
         "@id": abs + "#video",
@@ -438,7 +537,7 @@
         description: "Projektvideo aus Gebäudereinigung und Objektpflege in Neuwied.",
         thumbnailUrl: OG_IMAGE,
         contentUrl: abs,
-        uploadDate: "2025-06-01",
+        uploadDate: "2026-07-26",
         publisher: { "@id": ORG_ID },
       });
     });
@@ -457,6 +556,7 @@
       cleaningServiceNode(),
       breadcrumbSchema(page),
       howToNode(),
+      ...placeNodes(),
     ];
 
     const svc = pageServiceNode(page);
@@ -499,7 +599,8 @@
 
   function ensureJsonLd() {
     document.querySelectorAll('script[type="application/ld+json"]').forEach((el) => {
-      if (el.id !== "ld-graph" && el.id !== "ld-graph-static") el.remove();
+      const keep = ["ld-graph", "ld-graph-static", "ld-breadcrumb", "ld-video"];
+      if (!keep.includes(el.id)) el.remove();
     });
     let script = document.getElementById("ld-graph");
     if (!script) {
@@ -509,6 +610,26 @@
       document.head.appendChild(script);
     }
     return script;
+  }
+
+  function ensureStandaloneSchemas(page) {
+    let bc = document.getElementById("ld-breadcrumb");
+    if (!bc) {
+      bc = document.createElement("script");
+      bc.type = "application/ld+json";
+      bc.id = "ld-breadcrumb";
+      document.head.appendChild(bc);
+    }
+    bc.textContent = JSON.stringify(standaloneBreadcrumbSchema(page));
+
+    let vid = document.getElementById("ld-video");
+    if (!vid) {
+      vid = document.createElement("script");
+      vid.type = "application/ld+json";
+      vid.id = "ld-video";
+      document.head.appendChild(vid);
+    }
+    vid.textContent = JSON.stringify(primaryVideoSchema());
   }
 
   function apply(page) {
@@ -534,6 +655,7 @@
     ensureCanonical().href = url;
 
     ensureJsonLd().textContent = JSON.stringify(buildGraph(key));
+    ensureStandaloneSchemas(key);
   }
 
   function applyLegal(page) {

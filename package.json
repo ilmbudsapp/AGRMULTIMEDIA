@@ -16,6 +16,7 @@
     "transcode-video-editing-mobile": "node scripts/transcode-video-editing-mobile-friendly.mjs",
     "check:sitemap": "node scripts/check-sitemap-access.mjs",
     "tairovic:seo": "node scripts/tairovic-seo-optimize.mjs",
+    "tairovic:audit-v2": "node scripts/tairovic-audit-v2.mjs",
     "db:push": "drizzle-kit push"
   },
   "dependencies": {
