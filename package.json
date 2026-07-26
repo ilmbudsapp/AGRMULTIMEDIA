@@ -15,6 +15,7 @@
     "extract-video-editing-posters": "node scripts/extract-video-editing-posters.mjs",
     "transcode-video-editing-mobile": "node scripts/transcode-video-editing-mobile-friendly.mjs",
     "check:sitemap": "node scripts/check-sitemap-access.mjs",
+    "tairovic:seo": "node scripts/tairovic-seo-optimize.mjs",
     "db:push": "drizzle-kit push"
   },
   "dependencies": {

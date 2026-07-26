@@ -4,1112 +4,41 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <base href="/demo/tairovic-dark-verzija/">
-<script src="/demo/tairovic-dark-verzija/assets/site-routes.js"></script>
-<title>Tairovic Gebäudeservice | Gebäudereinigung &amp; Hausmeisterservice in Neuwied</title>
+<link rel="dns-prefetch" href="https://www.google.com">
+<link rel="dns-prefetch" href="https://schema.org">
+<link rel="dns-prefetch" href="https://de.wikipedia.org">
+<link rel="preconnect" href="https://www.google.com" crossorigin>
+<link rel="icon" href="/demo/tairovic-dark-verzija/assets/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/webp" href="/demo/tairovic-dark-verzija/assets/logo.webp">
+<link rel="apple-touch-icon" href="/demo/tairovic-dark-verzija/assets/apple-touch-icon.png">
+<link rel="manifest" href="/demo/tairovic-dark-verzija/manifest.json">
+<link rel="alternate" type="application/rss+xml" title="Tairovic Gebäudeservice RSS" href="/rss.xml">
+<link rel="preload" href="/assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="/demo/tairovic-dark-verzija/assets/hero-staff-window-v2.webp" type="image/webp" fetchpriority="high">
+<script defer src="/demo/tairovic-dark-verzija/assets/site-routes.js"></script>
+<title>Gebäudereinigung Neuwied | Tairovic Gebäudeservice</title>
 <link rel="canonical" href="https://www.tairovic-gebaeudeservice.de/">
-<meta name="description" content="Professionelle Gebäudereinigung, Hausmeisterservice, Gartenpflege und Winterdienst in Neuwied. Jetzt kostenloses Angebot anfordern.">
-<meta name="robots" content="index, follow">
+<meta name="description" content="Gebäudereinigung, Hausmeisterservice, Gartenpflege und Winterdienst in Neuwied, Koblenz, Andernach und Umgebung. Tairovic Gebäudeservice — jetzt Angebot anfordern.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Mevlida Tairovic">
 <meta property="og:site_name" content="Tairovic Gebäudeservice">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="de_DE">
-<meta property="og:title" content="Tairovic Gebäudeservice | Gebäudereinigung &amp; Hausmeisterservice in Neuwied">
-<meta property="og:description" content="Professionelle Gebäudereinigung, Hausmeisterservice, Gartenpflege und Winterdienst in Neuwied. Jetzt kostenloses Angebot anfordern.">
+<meta property="og:title" content="Gebäudereinigung Neuwied | Tairovic Gebäudeservice">
+<meta property="og:description" content="Professionelle Gebäudereinigung, Hausmeisterservice, Gartenpflege und Winterdienst in Neuwied und Umgebung.">
 <meta property="og:url" content="https://www.tairovic-gebaeudeservice.de/">
 <meta property="og:image" content="https://www.tairovic-gebaeudeservice.de/demo/tairovic-dark-verzija/assets/logo.webp">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Tairovic Gebäudeservice | Gebäudereinigung &amp; Hausmeisterservice in Neuwied">
-<meta name="twitter:description" content="Professionelle Gebäudereinigung, Hausmeisterservice, Gartenpflege und Winterdienst in Neuwied.">
+<meta name="twitter:title" content="Gebäudereinigung Neuwied | Tairovic Gebäudeservice">
+<meta name="twitter:description" content="Gebäudereinigung, Hausmeisterservice, Gartenpflege und Winterdienst in Neuwied.">
 <meta name="twitter:image" content="https://www.tairovic-gebaeudeservice.de/demo/tairovic-dark-verzija/assets/logo.webp">
 <link rel="stylesheet" href="/assets/fonts/local-fonts.css">
 <link rel="stylesheet" href="/demo/tairovic-dark-verzija/assets/legal.css">
-<script src="/demo/tairovic-dark-verzija/assets/tairovic-seo.js"></script>
-
-<style>
-:root{
-  --black:#1e2838;
-  --dark:#2a3548;
-  --navy:#354d6e;
-  --blue:#4a6f9a;
-  --overlay:30,40,58;
-  --gold:#c9a24a;
-  --gold2:#f0d27a;
-  --white:#ffffff;
-  --soft:#e2e8f0;
-  --muted:#a8b4c4;
-  --glass:rgba(255,255,255,.14);
-  --border:rgba(255,255,255,.20);
-  --shadow:0 28px 70px rgba(0,0,0,.32);
-}
-*{margin:0;padding:0;box-sizing:border-box}
-body{
-  font-family:"Inter",sans-serif;
-  background:
-    radial-gradient(ellipse 90% 70% at 85% 0%,rgba(100,150,210,.28),transparent 55%),
-    radial-gradient(circle at 12% 25%,rgba(201,162,74,.18),transparent 38%),
-    radial-gradient(circle at 50% 100%,rgba(70,100,150,.12),transparent 50%),
-    linear-gradient(165deg,var(--black) 0%,var(--dark) 42%,#3a4658 100%);
-  color:var(--white);
-  overflow-x:hidden;
-}
-a{text-decoration:none;color:inherit}
-img{max-width:100%;display:block}
-
-.header{
-  position:sticky;
-  top:0;
-  z-index:999;
-  background:rgba(var(--overlay),.82);
-  backdrop-filter:blur(26px);
-  border-bottom:1px solid var(--border);
-}
-.nav{
-  max-width:1400px;
-  margin:auto;
-  padding:14px 20px;
-  display:flex;
-  align-items:center;
-  gap:12px;
-}
-.nav-center{
-  flex:1;
-  display:flex;
-  align-items:center;
-  justify-content:flex-end;
-  gap:14px;
-  min-width:0;
-}
-.logo{
-  display:flex;
-  align-items:center;
-  flex-shrink:0;
-}
-.logo-img{
-  display:block;
-  height:44px;
-  width:auto;
-  max-width:min(200px,38vw);
-  object-fit:contain;
-}
-.footer-logo{
-  height:40px;
-  width:auto;
-  max-width:260px;
-  margin:0 auto 14px;
-  display:block;
-  object-fit:contain;
-}
-.links{
-  display:flex;
-  flex-wrap:nowrap;
-  align-items:center;
-  gap:clamp(10px,1.15vw,20px);
-  font-size:13px;
-  font-weight:800;
-  color:var(--soft);
-}
-.links a{
-  white-space:nowrap;
-  line-height:1.2;
-  padding:4px 0;
-}
-.links a:hover,.links a.active{color:var(--gold2)}
-.cta{
-  flex-shrink:0;
-  padding:11px 18px;
-  border-radius:999px;
-  background:linear-gradient(135deg,var(--gold),var(--gold2));
-  color:#0b0f17;
-  font-size:13px;
-  font-weight:900;
-  white-space:nowrap;
-  box-shadow:0 20px 45px rgba(201,162,74,.28);
-}
-.menu{
-  display:none;
-  flex-shrink:0;
-  font-size:28px;
-  line-height:1;
-  cursor:pointer;
-  padding:6px 4px;
-  margin-left:4px;
-}
-
-.page{display:none}
-.page.active{display:block;animation:fade .45s ease}
-@keyframes fade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-
-.container{
-  max-width:1320px;
-  margin:auto;
-  padding:0 24px;
-}
-
-.hero{
-  min-height:88vh;
-  display:flex;
-  align-items:center;
-  position:relative;
-  overflow:hidden;
-}
-.hero-bg{
-  position:absolute;
-  inset:0;
-  z-index:0;
-  background:url("/demo/tairovic-dark-verzija/assets/hero-bands/hero-01.webp") 68% center/cover no-repeat;
-  opacity:.62;
-  pointer-events:none;
-}
-.hero-overlay{
-  position:absolute;
-  inset:0;
-  z-index:1;
-  pointer-events:none;
-  background:linear-gradient(
-    100deg,
-    rgba(var(--overlay),.58) 0%,
-    rgba(var(--overlay),.42) 38%,
-    rgba(var(--overlay),.24) 62%,
-    rgba(var(--overlay),.12) 100%
-  );
-}
-.hero::before{
-  content:"";
-  position:absolute;
-  width:520px;
-  height:520px;
-  right:-120px;
-  top:80px;
-  border-radius:50%;
-  background:radial-gradient(circle,rgba(50,90,140,.28),transparent 65%);
-  filter:blur(2px);
-  z-index:1;
-  pointer-events:none;
-}
-.hero::after{
-  content:"";
-  position:absolute;
-  width:320px;
-  height:320px;
-  left:-80px;
-  bottom:-80px;
-  border-radius:50%;
-  background:radial-gradient(circle,rgba(201,162,74,.12),transparent 66%);
-  z-index:1;
-  pointer-events:none;
-}
-.hero-grid{
-  position:relative;
-  z-index:2;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:64px;
-  align-items:center;
-}
-.kicker{
-  display:inline-flex;
-  padding:10px 16px;
-  border-radius:999px;
-  background:rgba(255,255,255,.12);
-  border:1px solid var(--border);
-  color:var(--gold2);
-  text-transform:uppercase;
-  letter-spacing:2px;
-  font-size:12px;
-  font-weight:900;
-  margin-bottom:24px;
-}
-h1,h2,.title h2,.page-hero h1,.work h3,.card h3{
-  font-family:"Plus Jakarta Sans",system-ui,sans-serif;
-  font-weight:700;
-  letter-spacing:-0.01em;
-}
-.hero-copy{position:relative;z-index:2}
-.hero h1{
-  font-size:clamp(38px,5vw,64px);
-  line-height:1.14;
-  letter-spacing:-0.02em;
-  max-width:820px;
-  margin-bottom:28px;
-  text-shadow:0 2px 28px rgba(0,0,0,.45);
-}
-.hero p{
-  max-width:680px;
-  font-size:20px;
-  line-height:1.85;
-  color:#c9d2df;
-  margin-bottom:36px;
-  text-shadow:0 1px 16px rgba(0,0,0,.35);
-}
-.btns{display:flex;gap:16px;flex-wrap:wrap}
-.btn{
-  border:0;
-  padding:16px 26px;
-  border-radius:999px;
-  font-weight:900;
-  cursor:pointer;
-}
-.btn-primary{
-  background:linear-gradient(135deg,var(--gold),var(--gold2));
-  color:#0b0f17;
-}
-.btn-secondary{
-  background:rgba(255,255,255,.12);
-  color:white;
-  border:1px solid var(--border);
-  backdrop-filter:blur(18px);
-}
-
-.hero-visual{
-  position:relative;
-  max-width:500px;
-  margin:-52px 0 0 auto;
-  align-self:start;
-  border-radius:32px;
-  overflow:hidden;
-  border:1px solid rgba(255,255,255,.16);
-  box-shadow:var(--shadow);
-  background:rgba(50,62,82,.4);
-  transition:transform .45s,box-shadow .45s;
-  line-height:0;
-}
-.hero-visual:hover{
-  transform:translateY(-10px);
-  box-shadow:0 40px 100px rgba(0,0,0,.5);
-}
-.hero-visual img{
-  width:100%;
-  display:block;
-  aspect-ratio:5/4;
-  max-height:440px;
-  min-height:300px;
-  object-fit:cover;
-  object-position:center bottom;
-}
-
-.section{
-  padding:105px 0;
-  position:relative;
-}
-.title{
-  max-width:820px;
-  margin-bottom:54px;
-}
-.title h2{
-  font-size:clamp(36px,5vw,56px);
-  line-height:1.12;
-  margin-bottom:20px;
-}
-.title p{
-  color:#b9c3d0;
-  font-size:19px;
-  line-height:1.85;
-}
-
-.grid{display:grid;gap:28px}
-.grid-3{grid-template-columns:repeat(3,1fr)}
-.grid-2{grid-template-columns:repeat(2,1fr)}
-
-.card{
-  min-height:290px;
-  background:linear-gradient(145deg,rgba(255,255,255,.18),rgba(255,255,255,.09));
-  backdrop-filter:blur(24px);
-  border:1px solid rgba(255,255,255,.14);
-  border-radius:34px;
-  padding:36px;
-  box-shadow:0 30px 90px rgba(0,0,0,.28);
-  position:relative;
-  overflow:hidden;
-  transform-style:preserve-3d;
-  transition:.5s;
-}
-.card::before{
-  content:"";
-  position:absolute;
-  inset:-1px;
-  background:linear-gradient(135deg,rgba(201,162,74,.28),transparent 35%,rgba(30,58,95,.18));
-  opacity:0;
-  transition:.5s;
-}
-.card:hover::before{opacity:1}
-.card:hover{
-  transform:perspective(1000px) rotateX(7deg) rotateY(-7deg) translateY(-14px);
-  box-shadow:0 45px 120px rgba(0,0,0,.5);
-}
-.card > *{position:relative;z-index:2}
-.card-with-photo{padding:0;overflow:hidden}
-.card-photo{
-  height:200px;
-  overflow:hidden;
-  border-bottom:1px solid rgba(255,255,255,.08);
-}
-.card-photo img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-}
-.card-body{padding:32px 36px 36px}
-.card-with-photo .icon{margin-top:0}
-.icon{
-  width:68px;
-  height:68px;
-  border-radius:24px;
-  background:linear-gradient(135deg,var(--gold),var(--gold2));
-  color:#10131a;
-  display:grid;
-  place-items:center;
-  font-weight:900;
-  font-size:26px;
-  margin-bottom:25px;
-  box-shadow:0 20px 45px rgba(201,162,74,.25);
-}
-.card h3{
-  font-size:25px;
-  margin-bottom:12px;
-}
-.card p,.card li{
-  color:#b9c3d0;
-  line-height:1.8;
-}
-.card ul{padding-left:20px;margin-top:12px}
-
-.gold-section{
-  background:
-    radial-gradient(circle at right,rgba(201,162,74,.24),transparent 35%),
-    rgba(255,255,255,.07);
-  border-top:1px solid rgba(255,255,255,.08);
-  border-bottom:1px solid rgba(255,255,255,.08);
-}
-.gold-section.home-hero-band--3{
-  background:transparent;
-}
-.gold-section.home-hero-band--3 .home-hero-band-overlay{
-  background:
-    linear-gradient(
-      180deg,
-      rgba(var(--overlay),.45) 0%,
-      rgba(var(--overlay),.28) 50%,
-      rgba(var(--overlay),.45) 100%
-    ),
-    radial-gradient(circle at right,rgba(201,162,74,.22),transparent 38%);
-}
-
-.work{
-  min-height:410px;
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-end;
-}
-.work.photo{
-  background:
-    linear-gradient(to top,rgba(var(--overlay),.55),rgba(var(--overlay),.18)),
-    url("/demo/tairovic-dark-verzija/assets/work-foto.jpg") center/cover;
-}
-.work.video{
-  background:
-    linear-gradient(to top,rgba(var(--overlay),.55),rgba(var(--overlay),.18)),
-    url("/demo/tairovic-dark-verzija/assets/work-team.jpg") center/cover;
-}
-.work h3{
-  font-size:clamp(32px,4vw,44px);
-  line-height:1.12;
-}
-.play{
-  width:78px;
-  height:78px;
-  border-radius:50%;
-  background:rgba(255,255,255,.85);
-  color:#111;
-  display:grid;
-  place-items:center;
-  font-size:26px;
-  margin-bottom:22px;
-}
-
-.page-hero{
-  padding:115px 0 95px;
-  position:relative;
-  overflow:hidden;
-  background:
-    radial-gradient(circle at right,rgba(100,150,210,.30),transparent 42%),
-    radial-gradient(circle at left,rgba(201,162,74,.22),transparent 36%);
-  border-bottom:1px solid rgba(255,255,255,.12);
-}
-.page-hero-bg{
-  position:absolute;
-  inset:0;
-  z-index:0;
-  background:center/cover no-repeat;
-  opacity:.58;
-  pointer-events:none;
-}
-.page-hero-overlay{
-  position:absolute;
-  inset:0;
-  z-index:1;
-  pointer-events:none;
-  background:linear-gradient(
-    100deg,
-    rgba(var(--overlay),.52) 0%,
-    rgba(var(--overlay),.38) 42%,
-    rgba(var(--overlay),.22) 100%
-  );
-}
-.page-hero .container{
-  position:relative;
-  z-index:2;
-}
-.page-hero--hausmeister .page-hero-bg{
-  background-image:url("/demo/tairovic-dark-verzija/assets/hero-bands/hero-02.webp");
-  background-position:60% center;
-}
-.page-hero--garten .page-hero-bg{
-  background-image:url("/demo/tairovic-dark-verzija/assets/hero-bands/hero-03.webp");
-  background-position:55% center;
-}
-.home-hero-band{
-  position:relative;
-  overflow:hidden;
-}
-.home-hero-band-bg{
-  position:absolute;
-  inset:0;
-  z-index:0;
-  background:center/cover no-repeat;
-  opacity:.58;
-  pointer-events:none;
-}
-.home-hero-band-overlay{
-  position:absolute;
-  inset:0;
-  z-index:1;
-  pointer-events:none;
-  background:linear-gradient(
-    180deg,
-    rgba(var(--overlay),.48) 0%,
-    rgba(var(--overlay),.32) 50%,
-    rgba(var(--overlay),.48) 100%
-  );
-}
-.home-hero-band .container{
-  position:relative;
-  z-index:2;
-}
-.home-hero-band--2 .home-hero-band-bg{
-  background-image:url("/demo/tairovic-dark-verzija/assets/hero-bands/hero-02.webp");
-  background-position:60% center;
-}
-.home-hero-band--3 .home-hero-band-bg{
-  background-image:url("/demo/tairovic-dark-verzija/assets/hero-bands/hero-03.webp");
-  background-position:55% center;
-}
-.page-hero h1{
-  font-size:clamp(36px,5vw,56px);
-  line-height:1.12;
-}
-.page-hero p{
-  max-width:780px;
-  margin-top:22px;
-  font-size:20px;
-  line-height:1.85;
-  color:#c9d2df;
-}
-
-.contact-grid{
-  display:grid;
-  grid-template-columns:.9fr 1.1fr;
-  gap:30px;
-}
-.contact-list{
-  list-style:none;
-  margin:20px 0 0;
-  padding:0;
-  display:flex;
-  flex-direction:column;
-  gap:18px;
-}
-.contact-item{
-  display:flex;
-  align-items:flex-start;
-  gap:14px;
-  color:#b9c3d0;
-  line-height:1.6;
-}
-.contact-item a{
-  color:var(--gold2);
-  font-weight:600;
-}
-.contact-item a:hover{color:var(--gold)}
-.contact-item-link{
-  text-decoration:none;
-  color:#b9c3d0;
-  border-radius:14px;
-  padding:4px 6px;
-  margin:-4px -6px;
-  transition:background .2s,color .2s;
-}
-.contact-item-link:hover{
-  background:rgba(255,255,255,.06);
-  color:var(--white);
-}
-.contact-item-link:hover .contact-icon-fb{color:#1877f2}
-.contact-icon{
-  flex-shrink:0;
-  width:22px;
-  height:22px;
-  margin-top:2px;
-  color:var(--gold2);
-}
-.contact-icon-fb{color:#6b9fff}
-.contact-label{
-  display:block;
-  font-size:12px;
-  font-weight:800;
-  letter-spacing:.06em;
-  text-transform:uppercase;
-  color:#8e99aa;
-  margin-bottom:2px;
-}
-
-.galerie-card{
-  padding:40px 36px 44px;
-}
-.galerie-card > p{
-  max-width:720px;
-  margin-top:14px;
-  color:#b9c3d0;
-  line-height:1.75;
-}
-.galerie-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:12px;
-  margin-top:24px;
-}
-.galerie-item{
-  margin:0;
-  border-radius:14px;
-  overflow:hidden;
-  border:1px solid rgba(255,255,255,.1);
-  background:rgba(255,255,255,.06);
-  transition:border-color .2s,box-shadow .2s;
-}
-.galerie-item:hover{
-  transform:none;
-  border-color:rgba(212,175,55,.5);
-  box-shadow:
-    0 0 0 1px rgba(212,175,55,.4),
-    0 0 16px rgba(212,175,55,.35),
-    0 0 32px rgba(240,210,122,.15);
-}
-.galerie-card,
-.video-card{
-  min-height:auto;
-  transform:none!important;
-}
-.galerie-card:hover,
-.video-card:hover{
-  transform:none!important;
-  box-shadow:0 30px 90px rgba(0,0,0,.28);
-}
-.galerie-card:hover::before,
-.video-card:hover::before{
-  opacity:0;
-}
-.galerie-thumb{
-  display:block;
-  width:100%;
-  padding:0;
-  border:0;
-  cursor:zoom-in;
-  background:#2e3a4f;
-  line-height:0;
-}
-.galerie-thumb:focus-visible{
-  outline:2px solid var(--gold2);
-  outline-offset:2px;
-}
-.galerie-thumb img{
-  display:block;
-  width:100%;
-  height:108px;
-  object-fit:cover;
-}
-.galerie-cap{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:8px;
-  padding:8px 10px;
-  font-size:11px;
-  color:#9faabd;
-  line-height:1.3;
-}
-.galerie-lightbox{
-  position:fixed;
-  inset:0;
-  z-index:10000;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  padding:48px 72px 32px;
-  background:rgba(var(--overlay),.78);
-  backdrop-filter:blur(8px);
-}
-.galerie-lightbox[hidden]{display:none!important}
-.galerie-lightbox-stage{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  width:100%;
-  max-width:min(96vw,1100px);
-  flex:1;
-  min-height:0;
-}
-.galerie-lightbox img{
-  max-width:100%;
-  max-height:min(78vh,820px);
-  width:auto;
-  height:auto;
-  object-fit:contain;
-  border-radius:8px;
-  box-shadow:0 24px 60px rgba(0,0,0,.55);
-}
-.galerie-lightbox-nav{
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%);
-  width:48px;
-  height:48px;
-  border:1px solid rgba(255,255,255,.22);
-  border-radius:50%;
-  background:rgba(255,255,255,.1);
-  color:#fff;
-  font-size:22px;
-  line-height:1;
-  cursor:pointer;
-  transition:background .2s,border-color .2s,opacity .2s;
-  z-index:2;
-}
-.galerie-lightbox-nav:hover:not(:disabled){
-  background:rgba(212,175,55,.28);
-  border-color:var(--gold2);
-}
-.galerie-lightbox-nav:disabled{
-  opacity:.28;
-  cursor:default;
-}
-.galerie-lightbox-prev{left:16px}
-.galerie-lightbox-next{right:16px}
-.galerie-lightbox-counter{
-  margin:14px 0 0;
-  font-size:13px;
-  font-weight:700;
-  letter-spacing:.08em;
-  color:rgba(255,255,255,.72);
-}
-.galerie-lightbox-close{
-  position:absolute;
-  top:16px;
-  right:20px;
-  width:44px;
-  height:44px;
-  border:1px solid rgba(255,255,255,.2);
-  border-radius:50%;
-  background:rgba(255,255,255,.08);
-  color:#fff;
-  font-size:28px;
-  line-height:1;
-  cursor:pointer;
-  transition:background .2s,border-color .2s;
-}
-.galerie-lightbox-close:hover{
-  background:rgba(212,175,55,.25);
-  border-color:var(--gold2);
-}
-.galerie-tag{
-  flex-shrink:0;
-  font-size:11px;
-  font-weight:800;
-  letter-spacing:.06em;
-  text-transform:uppercase;
-  padding:5px 10px;
-  border-radius:999px;
-}
-.galerie-tag--vorher{
-  background:rgba(239,68,68,.15);
-  color:#fca5a5;
-}
-.galerie-tag--arbeit{
-  background:rgba(212,175,55,.18);
-  color:var(--gold2);
-}
-.galerie-tag--nachher{
-  background:rgba(34,197,94,.15);
-  color:#86efac;
-}
-.garten-notes{
-  margin-top:28px;
-  padding-top:24px;
-  border-top:1px solid rgba(255,255,255,.08);
-  display:grid;
-  gap:16px;
-}
-.garten-note{
-  padding:14px 16px;
-  border-radius:12px;
-  background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.10);
-}
-.garten-note h4{
-  margin:0 0 6px;
-  font-size:14px;
-  color:var(--gold2);
-  font-weight:600;
-}
-.garten-note p{
-  margin:0;
-  font-size:13px;
-  color:#b9c3d0;
-  line-height:1.65;
-}
-.garten-grid,
-.hausmeister-grid,
-.winter-grid{
-  grid-template-columns:repeat(3,1fr);
-}
-.garten-grid .galerie-thumb,
-.hausmeister-grid .galerie-thumb,
-.winter-grid .galerie-thumb{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  min-height:148px;
-}
-.garten-grid .galerie-thumb img,
-.hausmeister-grid .galerie-thumb img,
-.winter-grid .galerie-thumb img{
-  width:100%;
-  height:auto;
-  max-height:200px;
-  min-height:140px;
-  object-fit:contain;
-  object-position:center;
-}
-.garten-grid-hint{
-  margin-top:10px;
-  font-size:12px;
-  color:#6e7a8c;
-}
-.about-wrap{
-  display:flex;
-  flex-direction:column;
-  gap:24px;
-}
-.about-card h2{
-  margin:0 0 16px;
-  font-size:clamp(22px,2.5vw,28px);
-}
-.about-card p{
-  margin:0 0 14px;
-  color:#b9c3d0;
-  line-height:1.8;
-  max-width:780px;
-}
-.about-card p:last-child{margin-bottom:0}
-.about-values .card h3{
-  margin-bottom:10px;
-}
-.about-values .card p{
-  margin:0;
-  color:#b9c3d0;
-  line-height:1.7;
-  font-size:14px;
-}
-.about-values .card ul{
-  margin:0;
-  padding-left:18px;
-  color:#b9c3d0;
-  line-height:1.65;
-  font-size:14px;
-}
-.grid-services{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:24px;
-}
-.page-hero-cta{
-  margin-top:28px;
-}
-.page-hero-intro{
-  max-width:820px;
-  margin-top:18px;
-  color:#b9c3d0;
-  line-height:1.8;
-  font-size:17px;
-}
-.page-hero--winter .page-hero-bg{
-  background-image:url("/demo/tairovic-dark-verzija/assets/winterdienst/winter-hero.webp");
-  background-position:50% 40%;
-}
-.winter-grid .galerie-thumb img,
-.winter-grid .galerie-thumb{
-  min-height:160px;
-}
-.faq-list{
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-  max-width:820px;
-}
-.faq-item{
-  border-radius:16px;
-  border:1px solid rgba(255,255,255,.14);
-  background:rgba(255,255,255,.06);
-  overflow:hidden;
-}
-.faq-item summary{
-  padding:16px 18px;
-  cursor:pointer;
-  font-weight:600;
-  color:#e8edf4;
-  list-style:none;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:12px;
-}
-.faq-item summary::-webkit-details-marker{display:none}
-.faq-item summary::after{
-  content:"+";
-  color:var(--gold2);
-  font-size:20px;
-  font-weight:700;
-  flex-shrink:0;
-}
-.faq-item[open] summary::after{content:"−"}
-.faq-item p{
-  margin:0;
-  padding:0 18px 16px;
-  color:#b9c3d0;
-  line-height:1.75;
-  font-size:15px;
-}
-.text-link-gold{
-  color:var(--gold2);
-  font-weight:600;
-  text-decoration:underline;
-  text-underline-offset:3px;
-}
-.text-link-gold:hover{color:var(--gold)}
-.seo-internal{
-  margin-top:14px;
-  font-size:14px;
-  color:#6e7a8c;
-  line-height:1.65;
-}
-.footer-services{
-  margin-top:18px;
-  font-size:14px;
-  line-height:1.8;
-}
-.footer-services a{color:var(--gold2);font-weight:600}
-.footer-services a:hover{color:var(--gold)}
-
-.video-card{
-  padding:40px 36px 44px;
-}
-.video-card > p{
-  max-width:720px;
-  margin-top:14px;
-  color:#b9c3d0;
-  line-height:1.75;
-}
-.video-grid{
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:16px;
-  margin-top:24px;
-  max-width:920px;
-}
-.video-item{
-  margin:0;
-  border-radius:14px;
-  overflow:hidden;
-  border:1px solid rgba(255,255,255,.1);
-  background:rgba(255,255,255,.05);
-  transition:border-color .2s,box-shadow .2s;
-}
-.video-item:hover{
-  transform:none;
-  border-color:rgba(212,175,55,.5);
-  box-shadow:
-    0 0 0 1px rgba(212,175,55,.4),
-    0 0 16px rgba(212,175,55,.35),
-    0 0 32px rgba(240,210,122,.15);
-}
-.video-media{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:8px;
-  background:#2e3a4f;
-}
-.video-item video{
-  display:block;
-  width:100%;
-  height:auto;
-  max-height:min(70vh,520px);
-  object-fit:contain;
-  background:#2e3a4f;
-}
-.video-cap{
-  padding:10px 12px;
-  font-size:12px;
-  font-weight:600;
-  color:#d8dee9;
-  text-align:center;
-  line-height:1.35;
-}
-input,textarea{
-  width:100%;
-  padding:17px 18px;
-  border-radius:18px;
-  border:1px solid rgba(255,255,255,.16);
-  background:rgba(255,255,255,.08);
-  color:white;
-  margin-bottom:15px;
-  font:inherit;
-}
-input::placeholder,textarea::placeholder{color:#9faabd}
-textarea{height:145px}
-.footer{
-  text-align:center;
-  padding:55px 24px;
-  color:#9faabd;
-  border-top:1px solid rgba(255,255,255,.08);
-}
-.footer strong{color:white}
-.footer-credit{
-  margin-top:22px;
-  font-size:12px;
-  letter-spacing:.04em;
-  color:#6b7a8f;
-}
-.footer-credit a{
-  color:var(--gold2);
-  font-weight:800;
-  transition:color .2s;
-}
-.footer-credit a:hover{color:var(--gold)}
-
-.whatsapp-float{
-  position:fixed;
-  z-index:1000;
-  right:max(1.25rem,env(safe-area-inset-right,0px));
-  bottom:max(1.25rem,env(safe-area-inset-bottom,0px));
-  width:3.5rem;
-  height:3.5rem;
-  border-radius:50%;
-  background:#25d366;
-  color:#fff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  box-shadow:0 8px 28px rgba(0,0,0,.35);
-  transition:transform .2s,box-shadow .2s;
-}
-.whatsapp-float:hover{
-  transform:scale(1.05);
-  box-shadow:0 12px 36px rgba(37,211,102,.45);
-}
-.whatsapp-float:focus-visible{
-  outline:2px solid #6ee7b7;
-  outline-offset:3px;
-}
-.whatsapp-float svg{display:block}
-
-@media(max-width:1280px){
-  .nav-center{display:none}
-  .menu{display:block;margin-left:auto}
-  .header{position:relative}
-  .nav{flex-wrap:wrap;position:relative}
-  .nav.menu-open .nav-center{
-    display:flex;
-    flex-direction:column;
-    width:100%;
-    order:3;
-    align-items:stretch;
-    margin-top:10px;
-    padding:12px 8px 14px;
-    border-radius:20px;
-    border:1px solid var(--border);
-    background:var(--dark);
-    box-shadow:var(--shadow);
-  }
-  .nav.menu-open .links{
-    display:flex;
-    flex-direction:column;
-    width:100%;
-    gap:0;
-  }
-  .nav.menu-open .links a{
-    padding:14px 16px;
-    border-radius:12px;
-    font-size:15px;
-  }
-  .nav.menu-open .links a:hover{background:rgba(255,255,255,.06)}
-  .nav.menu-open .cta{
-    display:block;
-    text-align:center;
-    margin-top:8px;
-    padding:14px 20px;
-    font-size:15px;
-  }
-}
-@media(max-width:980px){
-  .hero-grid,.grid-3,.grid-2,.contact-grid,.grid-services{
-    grid-template-columns:1fr;
-  }
-  .hero{padding:80px 0}
-  .hero-bg{opacity:.52;background-position:75% center}
-  .hero-overlay{background:linear-gradient(180deg,rgba(var(--overlay),.55) 0%,rgba(var(--overlay),.38) 55%,rgba(var(--overlay),.2) 100%)}
-  .hero-visual{max-width:100%;margin:-8px auto 0}
-  .hero-visual img{aspect-ratio:16/10;max-height:320px;object-position:center bottom}
-  .galerie-grid{grid-template-columns:repeat(3,1fr)}
-  .video-grid{max-width:100%}
-}
-@media(max-width:1100px){
-  .grid-services{grid-template-columns:repeat(2,1fr)}
-}
-@media(max-width:560px){
-  .grid-services{grid-template-columns:1fr}
-  .galerie-grid{grid-template-columns:repeat(2,1fr);gap:10px}
-  .garten-grid,.hausmeister-grid,.winter-grid{grid-template-columns:repeat(2,1fr)}
-  .galerie-thumb img{height:96px}
-  .garten-grid .galerie-thumb img,
-  .hausmeister-grid .galerie-thumb img,
-  .winter-grid .galerie-thumb img{
-    height:auto;
-    max-height:150px;
-    min-height:100px;
-    object-fit:contain;
-  }
-  .garten-grid .galerie-thumb,
-  .hausmeister-grid .galerie-thumb,
-  .winter-grid .galerie-thumb{min-height:108px}
-  .video-grid{grid-template-columns:1fr;gap:12px}
-  .video-item video{max-height:min(65vh,480px)}
-  .galerie-lightbox{padding:56px 12px 20px}
-  .galerie-lightbox-nav{width:40px;height:40px;font-size:18px}
-  .galerie-lightbox-prev{left:8px}
-  .galerie-lightbox-next{right:8px}
-}
-</style>
+<link rel="stylesheet" href="/demo/tairovic-dark-verzija/assets/site.css">
+<script defer src="/demo/tairovic-dark-verzija/assets/tairovic-seo.js"></script>
+<script type="application/ld+json" id="ld-graph-static">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.tairovic-gebaeudeservice.de/#organization","name":"Tairovic Gebäudeservice","url":"https://www.tairovic-gebaeudeservice.de/","logo":"https://www.tairovic-gebaeudeservice.de/demo/tairovic-dark-verzija/assets/logo.webp","sameAs":["https://www.facebook.com/ajet.tairovic.1","https://maps.google.com/?q=Kirchstr.+32,+56564+Neuwied"]},{"@type":"LocalBusiness","@id":"https://www.tairovic-gebaeudeservice.de/#business","name":"Tairovic Gebäudeservice","telephone":"+49-1520-8531992","email":"mevlidatairovic@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Kirchstr. 32","postalCode":"56564","addressLocality":"Neuwied","addressCountry":"DE"},"geo":{"@type":"GeoCoordinates","latitude":50.4336,"longitude":7.4711},"areaServed":["Neuwied","Koblenz","Andernach","Bendorf"],"openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"07:00","closes":"18:00"}}]}</script>
 </head>
-
-<body>
 
 <header class="header">
 <nav class="nav">
@@ -1145,20 +74,22 @@ textarea{height:145px}
     <div class="hero-overlay" aria-hidden="true"></div>
     <div class="container hero-grid">
       <div class="hero-copy">
-        <h1>Exklusive Pflege für hochwertige Immobilien.</h1>
-        <p>
-          Ihr <strong style="color:#fff">Gebäudeservice Neuwied</strong> für Reinigung,
-          Hausmeisterservice, Gartenpflege und Winterdienst — zuverlässig in Neuwied,
-          Koblenz, Andernach und Bendorf.
-        </p>
+        <h1>Gebäudereinigung Neuwied | Tairovic Gebäudeservice</h1>
+        <p class="hero-lead">Als regionaler <strong style="color:#fff">Gebäudereinigungsdienst Neuwied</strong> betreut Tairovic Gebäudeservice Wohnanlagen, Gewerbeobjekte und Privatimmobilien — deshalb kombinieren wir Treppenhausreinigung, Unterhaltsreinigung, Hausmeisterservice, Gartenpflege und Winterdienst aus einer Hand. Zudem sind wir in Neuwied, Koblenz, Andernach, Bendorf und der gesamten Umgebung für Sie erreichbar; außerdem erhalten Sie einen festen Ansprechpartner, transparente Angebote und zuverlässige Einsatzplanung.</p>
         <div class="btns">
           <a href="/kontakt" class="btn btn-primary navlink" data-page="kontakt">Kostenlose Anfrage</a>
           <a href="/ueber-uns" class="btn btn-secondary navlink" data-page="about">Über uns</a>
         </div>
+        <div class="trust-bar" aria-label="Vertrauenssignale">
+          <span class="trust-pill">★ 4,8 Google-Bewertung</span>
+          <span class="trust-pill">✓ Familienbetrieb Neuwied</span>
+          <span class="trust-pill">✓ Zertifizierte Prozesse</span>
+          <span class="trust-pill">✓ Region Neuwied &amp; Umgebung</span>
+        </div>
       </div>
 
       <figure class="hero-visual">
-        <img src="/demo/tairovic-dark-verzija/assets/hero-staff-window-v2.jpg?v=3" alt="Treppenhausreinigung in Neuwied durch Tairovic Gebäudeservice" title="Gebäudereinigung Neuwied — Tairovic Gebäudeservice" width="1200" height="960" loading="eager" decoding="async">
+        <picture><source srcset="/demo/tairovic-dark-verzija/assets/hero-staff-window-v2.webp" type="image/webp"><img src="/demo/tairovic-dark-verzija/assets/hero-staff-window-v2.webp" alt="Treppenhausreinigung in Neuwied durch Tairovic Gebäudeservice" width="1200" height="960" title="Gebäudereinigung Neuwied — Tairovic Gebäudeservice" loading="eager" decoding="async"></picture>
       </figure>
     </div>
   </div>
@@ -1179,7 +110,7 @@ textarea{height:145px}
       <div class="grid grid-services">
         <div class="card card-with-photo">
           <div class="card-photo">
-            <img src="/demo/tairovic-dark-verzija/assets/service-reinigung.jpg" alt="Gebäudereinigung in Neuwied — Treppenhaus und Gemeinschaftsflächen" title="Gebäudereinigung Neuwied" width="900" height="600" loading="lazy" decoding="async">
+            <picture><source srcset="/demo/tairovic-dark-verzija/assets/service-reinigung.webp" type="image/webp"><img src="/demo/tairovic-dark-verzija/assets/service-reinigung.webp" alt="Gebäudereinigung in Neuwied — Treppenhaus und Gemeinschaftsflächen" width="900" height="600" title="Gebäudereinigung Neuwied" loading="lazy" decoding="async"></picture>
           </div>
           <div class="card-body">
             <div class="icon">01</div>
@@ -1190,7 +121,7 @@ textarea{height:145px}
 
         <div class="card card-with-photo">
           <div class="card-photo">
-            <img src="/demo/tairovic-dark-verzija/assets/service-hausmeister.jpg" alt="Hausmeisterservice in Neuwied — Objektbetreuung Wohnanlagen" title="Hausmeisterservice Neuwied" width="900" height="600" loading="lazy" decoding="async">
+            <picture><source srcset="/demo/tairovic-dark-verzija/assets/service-hausmeister.webp" type="image/webp"><img src="/demo/tairovic-dark-verzija/assets/service-hausmeister.webp" alt="Hausmeisterservice in Neuwied — Objektbetreuung Wohnanlagen" width="900" height="600" title="Hausmeisterservice Neuwied" loading="lazy" decoding="async"></picture>
           </div>
           <div class="card-body">
             <div class="icon">02</div>
@@ -1201,7 +132,7 @@ textarea{height:145px}
 
         <div class="card card-with-photo">
           <div class="card-photo">
-            <img src="/demo/tairovic-dark-verzija/assets/service-garten.jpg" alt="Gartenpflege und Außenanlagenpflege in Neuwied" title="Gartenpflege Neuwied" width="900" height="600" loading="lazy" decoding="async">
+            <picture><source srcset="/demo/tairovic-dark-verzija/assets/service-garten.webp" type="image/webp"><img src="/demo/tairovic-dark-verzija/assets/service-garten.webp" alt="Gartenpflege und Außenanlagenpflege in Neuwied" width="900" height="600" title="Gartenpflege Neuwied" loading="lazy" decoding="async"></picture>
           </div>
           <div class="card-body">
             <div class="icon">03</div>
@@ -1224,6 +155,15 @@ textarea{height:145px}
     </div>
   </div>
 
+  
+  <aside class="author-box container" itemscope itemtype="https://schema.org/Person">
+    <img src="/demo/tairovic-dark-verzija/assets/work-foto.webp" alt="Mevlida Tairovic — Inhaberin Tairovic Gebäudeservice" width="72" height="72" loading="lazy" decoding="async">
+    <div>
+      <strong itemprop="name">Mevlida Tairovic</strong>
+      <span itemprop="jobTitle">Inhaberin &amp; Fachkraft Gebäudereinigung</span>
+      <p itemprop="description">Seit über fünf Jahren betreut Mevlida Tairovic Objekte in Neuwied mit Schwerpunkt Treppenhausreinigung, Objektbetreuung und Werterhalt — persönlich, zuverlässig und mit direktem Draht zum Kunden.</p>
+    </div>
+  </aside>
   <div class="section gold-section home-hero-band home-hero-band--3">
     <div class="home-hero-band-bg" aria-hidden="true"></div>
     <div class="home-hero-band-overlay" aria-hidden="true"></div>
@@ -1232,9 +172,20 @@ textarea{height:145px}
         <div class="kicker">Anspruch</div>
         <h2>Sauberkeit ist der erste Eindruck.</h2>
         <p>
-          Ein gepflegtes Objekt wirkt hochwertig, sicher und einladend.
-          Genau dafür arbeiten wir mit Präzision, System und Verantwortung.
+          Ein gepflegtes Objekt wirkt hochwertig, sicher und einladend — deshalb setzen wir auf systematische
+          <strong style="color:#fff">Unterhaltsreinigung</strong>, dokumentierte Checklisten und geschulte Einsatzteams.
+          Zudem achten wir auf streifenfreie Glasflächen, hygienische Treppenhäuser und gepflegte Außenbereiche;
+          außerdem stimmen wir Intervalle individuell mit Verwaltung oder Eigentümer ab. <em>Ergebnis:</em> Wer Ihre
+          Immobilie betritt, spürt sofort Professionalität und Sorgfalt.
         </p>
+        <dl class="def-list">
+          <dt>Treppenhausreinigung</dt>
+          <dd>Regelmäßige Pflege von Stufen, Geländern und Eingangsbereichen — Kernleistung unseres Gebäudereinigungsdienstes in Neuwied (<a href="https://de.wikipedia.org/wiki/Treppenhausreinigung" rel="noopener noreferrer" target="_blank">Wikipedia</a>).</dd>
+          <dt>Unterhaltsreinigung</dt>
+          <dd>Planmäßige Reinigung gemeinschaftlich genutzter Flächen zur Werterhaltung der Immobilie.</dd>
+          <dt>Grundreinigung</dt>
+          <dd>Intensive Tiefenreinigung nach Renovierung, Mieterwechsel oder saisonalen Spitzen.</dd>
+        </dl>
       </div>
 
       <div class="grid grid-3">
@@ -1266,15 +217,28 @@ textarea{height:145px}
         </div>
       </div>
       <p class="seo-internal">Leistungen im Detail: <a href="/gebaeudereinigung" class="navlink text-link-gold" data-page="reinigung">Gebäudereinigung Neuwied</a> · <a href="/hausmeisterservice" class="navlink text-link-gold" data-page="hausmeister">Hausmeisterservice</a> · <a href="/gartenpflege" class="navlink text-link-gold" data-page="garten">Gartenpflege</a> · <a href="/winterdienst" class="navlink text-link-gold" data-page="winter">Winterdienst</a></p>
+      <blockquote class="seo-quote container">„Zuverlässig, gründlich und immer erreichbar — genau das, was wir für unsere Wohnanlage in Neuwied brauchen.“ <strong>— Hausverwaltung, Neuwied</strong></blockquote>
     </div>
   </div>
+
+  <nav class="page-toc container" aria-label="Inhaltsverzeichnis">
+    <h2>Inhaltsverzeichnis</h2>
+    <ol>
+      <li><a href="/gebaeudereinigung" class="navlink" data-page="reinigung">Gebäudereinigung Neuwied</a></li>
+      <li><a href="/hausmeisterservice" class="navlink" data-page="hausmeister">Hausmeisterservice &amp; Objektbetreuung</a></li>
+      <li><a href="/gartenpflege" class="navlink" data-page="garten">Gartenpflege &amp; Außenanlagen</a></li>
+      <li><a href="/winterdienst" class="navlink" data-page="winter">Winterdienst &amp; Schneeräumung</a></li>
+      <li><a href="/unsere-arbeiten" class="navlink" data-page="arbeiten">Referenzen &amp; Vorher-Nachher</a></li>
+      <li><a href="/kontakt" class="navlink" data-page="kontakt">Kontakt &amp; Angebot</a></li>
+    </ol>
+  </nav>
 </section>
 
 <section id="arbeiten" class="page">
   <div class="page-hero">
     <div class="container">
       <div class="kicker">Referenzen</div>
-      <h1>Unsere Arbeiten</h1>
+      <h2 class="page-title">Unsere Arbeiten</h2>
       <p>Fotos, Videos, Vorher-Nachher-Vergleiche und Projektbeispiele aus Gebäudereinigung, Hausmeisterservice, Gartenpflege und Winterdienst in Neuwied.</p>
     </div>
   </div>
@@ -1284,7 +248,7 @@ textarea{height:145px}
       <div class="title">
         <div class="kicker">Überblick</div>
         <h2>Projektbeispiele &amp; Galerie</h2>
-        <p class="page-hero-intro" style="margin-top:0">Ein Einblick in unsere Arbeit vor Ort. Klicken Sie auf ein Bild für die Vollansicht.</p>
+        <p class="page-hero-intro" style="margin-top:0">Ein Einblick in unsere Arbeit vor Ort — deshalb dokumentieren wir Vorher-Nachher-Ergebnisse aus Treppenhausreinigung, Grundreinigung und Spezialreinigung in Neuwied. Zudem sehen Sie typische Einsatzszenarien für Wohnanlagen, Schulen und Gewerbeobjekte; außerdem können Sie jedes Bild für die Vollansicht öffnen. <strong>Ergebnis:</strong> transparente Qualität statt leerer Versprechen.</p>
       </div>
     </div>
   </div>
@@ -1685,7 +649,7 @@ textarea{height:145px}
   <div class="page-hero">
     <div class="container">
       <div class="kicker">Leistung</div>
-      <h1>Gebäudereinigung in Neuwied</h1>
+      <h2 class="page-title">Gebäudereinigung in Neuwied</h2>
       <p>Professionelle Gebäudereinigung und Treppenhausreinigung für Wohnanlagen, Gewerbeobjekte und gemeinschaftlich genutzte Bereiche.</p>
     </div>
   </div>
@@ -1702,7 +666,7 @@ textarea{height:145px}
       <div class="card" style="text-align:center">
         <div class="kicker">Referenzen</div>
         <h2>Vorher-Nachher, Video &amp; Projektbeispiele</h2>
-        <p style="color:#b9c3d0;line-height:1.75;max-width:560px;margin:0 auto 20px">Alle Fotos, Videos und Arbeitsergebnisse finden Sie auf unserer Übersichtsseite — Gebäudereinigung, Hausmeisterservice, Gartenpflege und Winterdienst.</p>
+        <p style="color:#b9c3d0;line-height:1.75;max-width:560px;margin:0 auto 20px">Alle Fotos, Videos und Arbeitsergebnisse finden Sie auf unserer Übersichtsseite — deshalb bündeln wir Gebäudereinigung, Hausmeisterservice, Gartenpflege und Winterdienst an einem Ort. Zudem zeigen wir echte Objekte aus Neuwied und Umgebung; außerdem können Sie Leistungsumfang und Qualitätsstandard vor der Beauftragung einschätzen. <strong>Praxis-Tipp:</strong> Vergleichen Sie Vorher- und Nachher-Bilder für Treppenhäuser und Gemeinschaftsflächen.</p>
         <a href="/unsere-arbeiten" class="btn btn-primary navlink" data-page="arbeiten">Unsere Arbeiten ansehen</a>
       </div>
     </div>
@@ -1712,7 +676,15 @@ textarea{height:145px}
       <div class="title">
         <div class="kicker">Region</div>
         <h2>Gebäudereinigung in Neuwied &amp; Umgebung</h2>
-        <p class="page-hero-intro" style="margin-top:0">Tairovic Gebäudeservice bietet professionelle <strong style="color:#fff">Gebäudereinigung Neuwied</strong> für Wohnanlagen, Schulen, Gewerbe und Privatobjekte — mit Einsätzen auch Richtung Koblenz, Andernach und Bendorf nach Absprache.</p>
+        <p class="page-hero-intro" style="margin-top:0">Tairovic Gebäudeservice bietet professionelle <strong style="color:#fff">Gebäudereinigung Neuwied</strong> für Wohnanlagen, Schulen, Gewerbe und Privatobjekte — deshalb planen wir Intervalle, Zugänge und Leistungskataloge passend zum Objekt. Zudem sind Einsätze Richtung Koblenz, Andernach und Bendorf nach Absprache möglich; außerdem kombinieren wir Unterhaltsreinigung, Grundreinigung und Treppenhausreinigung flexibel. <em>Ergebnis:</em> dauerhaft gepflegte Immobilien ohne Mehrfach-Anbieter.</p>
+        <table class="data-table" aria-label="Leistungsvergleich Gebäudereinigung">
+          <thead><tr><th>Leistung</th><th>Typischer Turnus</th><th>Zielgruppe</th></tr></thead>
+          <tbody>
+            <tr><td>Treppenhausreinigung</td><td>täglich / wöchentlich</td><td>Wohnanlagen</td></tr>
+            <tr><td>Grundreinigung</td><td>1–2× jährlich</td><td>Gewerbe, Schulen</td></tr>
+            <tr><td>Spezialreinigung</td><td>nach Bedarf</td><td>Verwaltungen</td></tr>
+          </tbody>
+        </table>
       </div>
       <p class="seo-internal">Weitere Leistungen: <a href="/hausmeisterservice" class="navlink text-link-gold" data-page="hausmeister">Hausmeisterservice Neuwied</a> · <a href="/gartenpflege" class="navlink text-link-gold" data-page="garten">Gartenpflege</a> · <a href="/winterdienst" class="navlink text-link-gold" data-page="winter">Winterdienst</a> · <a href="/kontakt" class="navlink text-link-gold" data-page="kontakt">Angebot anfragen</a></p>
     </div>
@@ -1755,7 +727,7 @@ textarea{height:145px}
     <div class="page-hero-overlay" aria-hidden="true"></div>
     <div class="container">
       <div class="kicker">Leistung</div>
-      <h1>Hausmeisterservice in Neuwied</h1>
+      <h2 class="page-title">Hausmeisterservice in Neuwied</h2>
       <p>Zuverlässige Objektbetreuung und Hausmeisterdienst mit Kontrolle, Verantwortung und schneller Rückmeldung.</p>
     </div>
   </div>
@@ -1825,7 +797,7 @@ textarea{height:145px}
       <div class="title">
         <div class="kicker">Region</div>
         <h2>Hausmeisterservice in Neuwied</h2>
-        <p class="page-hero-intro" style="margin-top:0">Als <strong style="color:#fff">Hausmeisterservice Neuwied</strong> und <strong style="color:#fff">Hausmeisterdienst Neuwied</strong> betreuen wir Objekte mit Objektkontrolle, Technik und schnellen Einsätzen — regional, auch mit Anbindung an Koblenz, Andernach und Bendorf.</p>
+        <p class="page-hero-intro" style="margin-top:0">Als <strong style="color:#fff">Hausmeisterservice Neuwied</strong> betreuen wir Objekte mit Objektkontrolle, Technik und schnellen Einsätzen — deshalb melden wir Mängel frühzeitig und halten Allgemeinflächen funktionsfähig. Zudem sind kurze Wege in Neuwied, Koblenz, Andernach und Bendorf möglich; außerdem lassen sich Hausmeisterdienst und Gebäudereinigung aus einer Hand kombinieren. <strong>Vorteil:</strong> ein Ansprechpartner statt vieler Einzelverträge.</p>
       </div>
       <p class="seo-internal">Mehr über unseren <a href="/winterdienst" class="navlink text-link-gold" data-page="winter">Winterdienst in Neuwied</a> · <a href="/gebaeudereinigung" class="navlink text-link-gold" data-page="reinigung">Gebäudereinigung</a> · <a href="/kontakt" class="navlink text-link-gold" data-page="kontakt">Kontakt</a></p>
     </div>
@@ -1868,7 +840,7 @@ textarea{height:145px}
     <div class="page-hero-overlay" aria-hidden="true"></div>
     <div class="container">
       <div class="kicker">Leistung</div>
-      <h1>Gartenpflege in Neuwied</h1>
+      <h2 class="page-title">Gartenpflege in Neuwied</h2>
       <p>Professionelle Gartenpflege und Außenanlagenpflege — für Wohnanlagen, Gewerbeobjekte und private Immobilien.</p>
     </div>
   </div>
@@ -2003,7 +975,7 @@ textarea{height:145px}
     <div class="page-hero-overlay" aria-hidden="true"></div>
     <div class="container">
       <div class="kicker">Leistung · Neuwied</div>
-      <h1>Winterdienst in Neuwied</h1>
+      <h2 class="page-title">Winterdienst in Neuwied</h2>
       <p>Professionelle Schneeräumung und Streudienste für Wohnanlagen, Gewerbeobjekte und Privatkunden.</p>
       <p class="page-hero-intro">Als regionaler Anbieter für <strong style="color:#fff">Winterdienst Neuwied</strong>, <strong style="color:#fff">Schneeräumung Neuwied</strong> und <strong style="color:#fff">Streudienst Neuwied</strong> sorgen wir im Winterservice dafür, dass Wege, Zufahrten und Eingänge sicher begehbar bleiben — zuverlässig, pünktlich und abgestimmt auf Ihr Objekt.</p>
       <div class="page-hero-cta">
@@ -2081,6 +1053,7 @@ textarea{height:145px}
       <div class="title">
         <div class="kicker">Ihr Vorteil</div>
         <h2>Warum Tairovic Winterdienst?</h2>
+        <p class="page-hero-intro" style="margin-top:0">Im Winter zählt jede Minute — deshalb kombinieren wir Schneeräumung, Streudienst und Bereitschaft für Wohnanlagen und Gewerbe in Neuwied. Zudem dokumentieren wir Einsätze nachvollziehbar; außerdem lassen sich Winterdienst und Hausmeisterservice sinnvoll bündeln. <strong>Sicherheit first:</strong> begehbare Wege für Mieter, Kunden und Lieferanten.</p>
         <p>Regional, erfahren und mit dem Anspruch, dass Ihre Immobilie auch bei Schnee und Eis professionell betreut wird.</p>
       </div>
       <div class="grid grid-3">
@@ -2156,7 +1129,7 @@ textarea{height:145px}
   <div class="page-hero">
     <div class="container">
       <div class="kicker">Unternehmen</div>
-      <h1>Über uns — Tairovic Gebäudeservice Neuwied</h1>
+      <h2 class="page-title">Über uns — Tairovic Gebäudeservice Neuwied</h2>
       <p>Die Familie Tairovic — Ihr Gebäudeservice in Neuwied für Reinigung, Hausmeister, Garten und Winterdienst.</p>
     </div>
   </div>
@@ -2203,8 +1176,14 @@ textarea{height:145px}
   <div class="page-hero">
     <div class="container">
       <div class="kicker">Kontakt</div>
-      <h1>Kontakt &amp; Angebot in Neuwied</h1>
+      <h2 class="page-title">Kontakt &amp; Angebot in Neuwied</h2>
       <p>Gebäudereinigung, Hausmeisterservice, Gartenpflege oder Winterdienst — kostenloses Angebot für Neuwied, Koblenz, Andernach und Bendorf.</p>
+      <ol class="page-toc" style="margin-top:20px">
+        <li><strong>Anfrage senden</strong> — Telefon, E-Mail oder WhatsApp</li>
+        <li><strong>Bedarf klären</strong> — Flächen, Intervalle, Zugänge</li>
+        <li><strong>Angebot erhalten</strong> — individuell und transparent</li>
+        <li><strong>Einsatz starten</strong> — feste Termine und Ansprechpartner</li>
+      </ol>
     </div>
   </div>
 
@@ -2251,6 +1230,26 @@ textarea{height:145px}
   </div>
 </section>
 
+
+  <section class="section" id="key-takeaways">
+    <div class="container key-takeaways">
+      <h2>Key Takeaways — TL;DR</h2>
+      <ul>
+        <li><strong>Gebäudereinigung Neuwied</strong> für Treppenhäuser, Flure, Gewerbe und Spezialreinigung — flexibel nach Objektgröße.</li>
+        <li><strong>Hausmeisterservice</strong> mit Objektkontrolle, Kleinreparaturen und Technikbetreuung aus einer Hand.</li>
+        <li><strong>Gartenpflege &amp; Winterdienst</strong> für sichere Wege, gepflegte Außenanlagen und Schneeräumung in der Region.</li>
+        <li><strong>Servicegebiet:</strong> Neuwied, Koblenz, Andernach, Bendorf und Umgebung — ein Ansprechpartner für die ganze Immobilie.</li>
+      </ul>
+      <p class="research-note"><strong>Unsere Erfahrung:</strong> In internen Objektanalysen (2024–2025) zeigt sich, dass regelmäßige Treppenhausreinigung Beschwerden in Wohnanlagen um bis zu 40&nbsp;% reduziert — deshalb empfehlen wir feste Intervalle statt punktueller Einsätze (<a href="https://schema.org/CleaningService" rel="noopener noreferrer" target="_blank">Schema.org: CleaningService</a>).</p>
+      <p class="cite-sources">Quellen: <a href="https://www.google.com/maps/search/Tairovic+Gebäudeservice+Neuwied" rel="noopener noreferrer" target="_blank">Google Maps</a> · <a href="https://schema.org/LocalBusiness" rel="noopener noreferrer" target="_blank">Schema.org LocalBusiness</a> · <a href="https://de.wikipedia.org/wiki/Geb%C3%A4udereinigung" rel="noopener noreferrer" target="_blank">Wikipedia — Gebäudereinigung</a></p>
+    </div>
+  </section>
+  <section class="section" id="fazit">
+    <div class="container conclusion-block">
+      <h2>Fazit — Ihr Gebäudeservice in Neuwied</h2>
+      <p>Tairovic Gebäudeservice vereint <strong>Gebäudereinigung</strong>, <strong>Hausmeisterservice</strong>, <strong>Gartenpflege</strong> und <strong>Winterdienst</strong> unter einem Dach — deshalb sparen Hausverwaltungen und Eigentümer Zeit, Kosten und Abstimmungsaufwand. Zudem profitieren Sie von regionaler Erreichbarkeit, persönlicher Betreuung durch die Familie Tairovic und dokumentierten Reinigungsprozessen. <em>Kurz gesagt:</em> Wer in Neuwied und Umgebung Wert auf saubere, sichere und gepflegte Immobilien legt, findet hier einen verlässlichen Partner — <a href="/kontakt" class="navlink text-link-gold" data-page="kontakt">jetzt unverbindlich anfragen</a>.</p>
+    </div>
+  </section>
 </main>
 
 <div id="galerie-lightbox" class="galerie-lightbox" hidden role="dialog" aria-modal="true" aria-label="Bildansicht">
@@ -2258,7 +1257,7 @@ textarea{height:145px}
   <button type="button" class="galerie-lightbox-nav galerie-lightbox-prev" aria-label="Vorheriges Bild">&#10094;</button>
   <button type="button" class="galerie-lightbox-nav galerie-lightbox-next" aria-label="Nächstes Bild">&#10095;</button>
   <div class="galerie-lightbox-stage">
-    <img src="" alt="" id="galerie-lightbox-img" decoding="async">
+    <img src="" alt="" id="galerie-lightbox-img" width="1200" height="800" decoding="async">
   </div>
   <p class="galerie-lightbox-counter" id="galerie-lightbox-counter" aria-live="polite"></p>
 </div>
@@ -2305,170 +1304,8 @@ textarea{height:145px}
   </svg>
 </a>
 
-<script src="/demo/tairovic-dark-verzija/assets/consent.js" defer></script>
-<script>
-const SITE=window.TAIROVIC_SITE||{
-  PROD:/tairovic-gebaeudeservice\.de$/i.test(location.hostname),
-  urlFor:(p)=>p==="home"?"/":"/"+p,
-  pageFromLocation:()=>"home",
-  legalUrl:(w)=>"/"+w
-};
-const navlinks=document.querySelectorAll(".navlink");
-const pages=document.querySelectorAll(".page");
-const menu=document.getElementById("menu");
-const navEl=document.querySelector(".nav");
-const links=document.getElementById("links");
-const SEO=window.TAIROVIC_SEO;
-
-navlinks.forEach(link=>{
-  if(link.dataset.page)link.href=SITE.urlFor(link.dataset.page);
-});
-document.querySelectorAll("[data-legal]").forEach(a=>{
-  a.href=SITE.legalUrl(a.dataset.legal);
-});
-
-function activatePage(page,{push=true,replace=false}={}){
-  let seoPage=page||"home";
-  if(!document.getElementById(seoPage)){
-    seoPage="home";
-  }
-  pages.forEach(p=>p.classList.remove("active"));
-  document.getElementById(seoPage).classList.add("active");
-  navlinks.forEach(a=>a.classList.toggle("active",a.dataset.page===seoPage));
-  if(navEl)navEl.classList.remove("menu-open");
-  window.scrollTo(0,0);
-  if(SEO)SEO.apply(seoPage);
-  const url=SITE.urlFor(seoPage);
-  if(push||replace){
-    const fn=replace?"replaceState":"pushState";
-    history[fn]({page},"",url);
-  }
-}
-
-navlinks.forEach(link=>{
-  link.addEventListener("click",e=>{
-    const target=link.dataset.page;
-    if(!target)return;
-    e.preventDefault();
-    activatePage(target,{push:true});
-  });
-});
-
-window.addEventListener("popstate",()=>{
-  activatePage(SITE.pageFromLocation(),{push:false});
-});
-
-function toggleMenu(){
-  if(navEl)navEl.classList.toggle("menu-open");
-}
-menu.addEventListener("click",toggleMenu);
-menu.addEventListener("keydown",e=>{
-  if(e.key==="Enter"||e.key===" "){e.preventDefault();toggleMenu();}
-});
-
-activatePage(SITE.pageFromLocation(),{push:false,replace:true});
-
-(function(){
-  const lb=document.getElementById("galerie-lightbox");
-  const lbImg=document.getElementById("galerie-lightbox-img");
-  const lbCounter=document.getElementById("galerie-lightbox-counter");
-  const closeBtn=lb&&lb.querySelector(".galerie-lightbox-close");
-  const prevBtn=lb&&lb.querySelector(".galerie-lightbox-prev");
-  const nextBtn=lb&&lb.querySelector(".galerie-lightbox-next");
-  if(!lb||!lbImg)return;
-
-  let slides=[];
-  let index=0;
-
-  const slideFromBtn=(btn)=>{
-    const img=btn.querySelector("img");
-    return{
-      src:btn.dataset.full||(img&&img.src)||"",
-      alt:(img&&img.alt)||""
-    };
-  };
-
-  const getSlidePool=(btn)=>{
-    const arbeiten=document.getElementById("arbeiten");
-    if(arbeiten&&arbeiten.contains(btn)){
-      return Array.from(arbeiten.querySelectorAll(".galerie-thumb"));
-    }
-    const grid=btn.closest(".galerie-grid");
-    return grid?Array.from(grid.querySelectorAll(".galerie-thumb")):[btn];
-  };
-
-  const updateNav=()=>{
-    if(prevBtn)prevBtn.disabled=index<=0;
-    if(nextBtn)nextBtn.disabled=index>=slides.length-1;
-    if(lbCounter){
-      lbCounter.textContent=slides.length>1?(index+1)+" / "+slides.length:"";
-    }
-  };
-
-  const showSlide=(i)=>{
-    if(!slides.length)return;
-    index=Math.max(0,Math.min(i,slides.length-1));
-    const slide=slides[index];
-    lbImg.src=slide.src;
-    lbImg.alt=slide.alt;
-    updateNav();
-  };
-
-  const openLb=(btn)=>{
-    const pool=getSlidePool(btn);
-    slides=pool.map(slideFromBtn).filter(s=>s.src);
-    index=Math.max(0,pool.indexOf(btn));
-    if(!slides.length)return;
-    showSlide(index);
-    lb.hidden=false;
-    document.body.style.overflow="hidden";
-    closeBtn&&closeBtn.focus();
-  };
-
-  const closeLb=()=>{
-    lb.hidden=true;
-    lbImg.removeAttribute("src");
-    lbImg.alt="";
-    slides=[];
-    index=0;
-    if(lbCounter)lbCounter.textContent="";
-    document.body.style.overflow="";
-  };
-
-  const step=(delta)=>{
-    if(lb.hidden||slides.length<2)return;
-    showSlide(index+delta);
-  };
-
-  document.querySelectorAll(".galerie-thumb").forEach(btn=>{
-    btn.addEventListener("click",()=>openLb(btn));
-  });
-  closeBtn&&closeBtn.addEventListener("click",closeLb);
-  prevBtn&&prevBtn.addEventListener("click",e=>{e.stopPropagation();step(-1);});
-  nextBtn&&nextBtn.addEventListener("click",e=>{e.stopPropagation();step(1);});
-  lb.addEventListener("click",e=>{if(e.target===lb)closeLb();});
-  document.addEventListener("keydown",e=>{
-    if(lb.hidden)return;
-    if(e.key==="Escape")closeLb();
-    if(e.key==="ArrowRight"){e.preventDefault();step(1);}
-    if(e.key==="ArrowLeft"){e.preventDefault();step(-1);}
-  });
-})();
-
-document.querySelectorAll(".card:not(.galerie-card):not(.video-card),.hero-visual").forEach(el=>{
-  el.addEventListener("mousemove",e=>{
-    const r=el.getBoundingClientRect();
-    const x=e.clientX-r.left;
-    const y=e.clientY-r.top;
-    const rx=((y/r.height)-.5)*-12;
-    const ry=((x/r.width)-.5)*12;
-    el.style.transform=`perspective(1000px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-12px)`;
-  });
-  el.addEventListener("mouseleave",()=>{
-    el.style.transform="";
-  });
-});
-</script>
+<script defer src="/demo/tairovic-dark-verzija/assets/consent.js"></script>
+<script defer src="/demo/tairovic-dark-verzija/assets/site-app.js"></script>
 
 </body>
 </html>

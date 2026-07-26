@@ -1,0 +1,25 @@
+{
+  "name": "Tairovic Gebäudeservice",
+  "short_name": "Tairovic",
+  "description": "Gebäudereinigung, Hausmeisterservice, Gartenpflege und Winterdienst in Neuwied und Umgebung.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#1e2838",
+  "theme_color": "#c9a24a",
+  "lang": "de-DE",
+  "icons": [
+    {
+      "src": "/demo/tairovic-dark-verzija/assets/logo.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any"
+    },
+    {
+      "src": "/demo/tairovic-dark-verzija/assets/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

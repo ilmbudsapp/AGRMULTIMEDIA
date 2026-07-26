@@ -88,7 +88,7 @@ export default function middleware(request: Request): Response | undefined {
     });
   }
 
-  if (url.pathname === "/sitemap.xml" || url.pathname === "/robots.txt") {
+  if (url.pathname === "/sitemap.xml" || url.pathname === "/robots.txt" || url.pathname === "/rss.xml" || url.pathname === "/manifest.json") {
     const rewriteUrl = new URL(request.url);
     rewriteUrl.pathname = `${DEMO_PREFIX}${url.pathname}`;
     return new Response(null, {

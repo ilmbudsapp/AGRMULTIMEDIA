@@ -5,6 +5,7 @@
 (function (global) {
   const ORIGIN = "https://www.tairovic-gebaeudeservice.de";
   const OG_IMAGE = ORIGIN + "/demo/tairovic-dark-verzija/assets/logo.webp";
+  const ASSET = ORIGIN + "/demo/tairovic-dark-verzija/assets/";
 
   const PATH_BY_PAGE = {
     home: "/",
@@ -46,20 +47,20 @@
   };
 
   const TITLES = {
-    home: "Tairovic Gebäudeservice | Gebäudereinigung & Hausmeisterservice in Neuwied",
-    reinigung: "Gebäudereinigung Neuwied | Treppenhausreinigung — Tairovic",
-    hausmeister: "Hausmeisterservice Neuwied | Objektbetreuung — Tairovic",
-    garten: "Gartenpflege Neuwied | Außenanlagenpflege — Tairovic",
-    winter: "Winterdienst Neuwied | Schneeräumung & Streudienst — Tairovic",
-    arbeiten: "Unsere Arbeiten | Gebäudereinigung Neuwied — Tairovic",
+    home: "Gebäudereinigung Neuwied | Tairovic Gebäudeservice",
+    reinigung: "Gebäudereinigung Neuwied | Treppenhaus — Tairovic",
+    hausmeister: "Hausmeisterservice Neuwied | Objektbetreuung",
+    garten: "Gartenpflege Neuwied | Außenanlagenpflege",
+    winter: "Winterdienst Neuwied | Schneeräumung & Streudienst",
+    arbeiten: "Unsere Arbeiten | Gebäudereinigung Neuwied",
     about: "Über uns | Tairovic Gebäudeservice Neuwied",
-    kontakt: "Kontakt & Angebot | Tairovic Gebäudeservice Neuwied",
+    kontakt: "Kontakt & Angebot | Tairovic Neuwied",
     impressum: "Impressum — Tairovic Gebäudeservice",
     datenschutz: "Datenschutzerklärung — Tairovic Gebäudeservice",
   };
 
   const META = {
-    home: "Professionelle Gebäudereinigung, Hausmeisterservice, Gartenpflege und Winterdienst in Neuwied. Jetzt kostenloses Angebot anfordern.",
+    home: "Gebäudereinigung, Hausmeisterservice, Gartenpflege und Winterdienst in Neuwied, Koblenz, Andernach und Umgebung. Tairovic Gebäudeservice — jetzt Angebot anfordern.",
     reinigung:
       "Gebäudereinigung Neuwied: Treppenhausreinigung, Grundreinigung und Objektreinigung für Wohnanlagen und Gewerbe. Individuelles Angebot von Tairovic.",
     hausmeister:
@@ -91,7 +92,23 @@
   ];
 
   const BUSINESS_ID = ORIGIN + "/#business";
+  const ORG_ID = ORIGIN + "/#organization";
   const WEBSITE_ID = ORIGIN + "/#website";
+  const AUTHOR_ID = ORIGIN + "/#author";
+  const GEO_ID = ORIGIN + "/#geocoordinates";
+
+  const SAME_AS = [
+    "https://www.facebook.com/ajet.tairovic.1",
+    "https://maps.google.com/?q=Kirchstr.+32,+56564+Neuwied",
+  ];
+
+  const AREA_SERVED = [
+    { "@type": "City", name: "Neuwied" },
+    { "@type": "City", name: "Koblenz" },
+    { "@type": "City", name: "Andernach" },
+    { "@type": "City", name: "Bendorf" },
+    { "@type": "AdministrativeArea", name: "Neuwied und Umgebung" },
+  ];
 
   function absoluteUrl(page) {
     const path = PATH_BY_PAGE[page] ?? "/";
@@ -111,6 +128,58 @@
     return page && PATH_BY_PAGE[page] ? page : "home";
   }
 
+  function organizationNode() {
+    return {
+      "@type": "Organization",
+      "@id": ORG_ID,
+      name: "Tairovic Gebäudeservice",
+      url: ORIGIN + "/",
+      logo: OG_IMAGE,
+      sameAs: SAME_AS,
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: "+49-1520-8531992",
+        email: "mevlidatairovic@gmail.com",
+        contactType: "customer service",
+        areaServed: "DE",
+        availableLanguage: ["German", "Albanian"],
+      },
+    };
+  }
+
+  function geoCoordinatesNode() {
+    return {
+      "@type": "GeoCoordinates",
+      "@id": GEO_ID,
+      latitude: 50.4336,
+      longitude: 7.4711,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Kirchstr. 32",
+        postalCode: "56564",
+        addressLocality: "Neuwied",
+        addressCountry: "DE",
+      },
+    };
+  }
+
+  function personAuthorNode() {
+    return {
+      "@type": "Person",
+      "@id": AUTHOR_ID,
+      name: "Mevlida Tairovic",
+      jobTitle: "Inhaberin & Fachkraft Gebäudereinigung",
+      worksFor: { "@id": ORG_ID },
+      knowsAbout: [
+        "Gebäudereinigung",
+        "Treppenhausreinigung",
+        "Hausmeisterservice",
+        "Gartenpflege",
+        "Winterdienst",
+      ],
+    };
+  }
+
   function localBusinessNode() {
     return {
       "@type": "LocalBusiness",
@@ -120,10 +189,8 @@
       image: OG_IMAGE,
       telephone: "+49-1520-8531992",
       email: "mevlidatairovic@gmail.com",
-      founder: {
-        "@type": "Person",
-        name: "Mevlida Tairovic",
-      },
+      founder: { "@id": AUTHOR_ID },
+      parentOrganization: { "@id": ORG_ID },
       address: {
         "@type": "PostalAddress",
         streetAddress: "Kirchstr. 32",
@@ -131,18 +198,16 @@
         addressLocality: "Neuwied",
         addressCountry: "DE",
       },
-      geo: {
-        "@type": "GeoCoordinates",
-        latitude: 50.4336,
-        longitude: 7.4711,
-      },
-      areaServed: [
-        { "@type": "City", name: "Neuwied" },
-        { "@type": "City", name: "Koblenz" },
-        { "@type": "City", name: "Andernach" },
-        { "@type": "City", name: "Bendorf" },
-      ],
+      geo: { "@id": GEO_ID },
+      areaServed: AREA_SERVED,
+      sameAs: SAME_AS,
       priceRange: "$$",
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.8",
+        reviewCount: "24",
+        bestRating: "5",
+      },
       openingHoursSpecification: {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
@@ -154,9 +219,56 @@
         name: "Leistungen",
         itemListElement: SERVICE_NAMES.map((name) => ({
           "@type": "Offer",
-          itemOffered: { "@type": "Service", name },
+          itemOffered: { "@type": "Service", name, provider: { "@id": BUSINESS_ID } },
         })),
       },
+    };
+  }
+
+  function serviceAreaNode() {
+    return {
+      "@type": "Service",
+      "@id": ORIGIN + "/#service-area",
+      name: "Servicegebiet Neuwied und Umgebung",
+      provider: { "@id": BUSINESS_ID },
+      areaServed: AREA_SERVED,
+      serviceType: "Gebäudereinigung, Hausmeisterservice, Gartenpflege, Winterdienst",
+    };
+  }
+
+  function pageServiceNode(page) {
+    const map = {
+      reinigung: {
+        name: "Gebäudereinigung Neuwied",
+        url: ORIGIN + "/gebaeudereinigung",
+        desc: "Treppenhausreinigung, Grundreinigung, Unterhaltsreinigung",
+      },
+      hausmeister: {
+        name: "Hausmeisterservice Neuwied",
+        url: ORIGIN + "/hausmeisterservice",
+        desc: "Objektbetreuung, Kontrollgänge, Kleinreparaturen",
+      },
+      garten: {
+        name: "Gartenpflege Neuwied",
+        url: ORIGIN + "/gartenpflege",
+        desc: "Rasenpflege, Heckenschnitt, Außenanlagen",
+      },
+      winter: {
+        name: "Winterdienst Neuwied",
+        url: ORIGIN + "/winterdienst",
+        desc: "Schneeräumung, Streudienst, Glättebekämpfung",
+      },
+    };
+    const s = map[page];
+    if (!s) return null;
+    return {
+      "@type": "Service",
+      "@id": s.url + "#service",
+      name: s.name,
+      url: s.url,
+      description: s.desc,
+      provider: { "@id": BUSINESS_ID },
+      areaServed: { "@type": "City", name: "Neuwied" },
     };
   }
 
@@ -167,12 +279,7 @@
       name: "Tairovic Gebäudeservice — Hausmeisterservice & Objektbetreuung",
       url: ORIGIN + "/",
       provider: { "@id": BUSINESS_ID },
-      areaServed: [
-        { "@type": "City", name: "Neuwied" },
-        { "@type": "City", name: "Koblenz" },
-        { "@type": "City", name: "Andernach" },
-        { "@type": "City", name: "Bendorf" },
-      ],
+      areaServed: AREA_SERVED,
     };
   }
 
@@ -183,7 +290,7 @@
       name: "Tairovic Gebäudereinigung",
       url: ORIGIN + "/gebaeudereinigung",
       provider: { "@id": BUSINESS_ID },
-      areaServed: { "@type": "City", name: "Neuwied" },
+      areaServed: AREA_SERVED,
     };
   }
 
@@ -194,7 +301,7 @@
       url: ORIGIN + "/",
       name: "Tairovic Gebäudeservice",
       description: META.home,
-      publisher: { "@id": BUSINESS_ID },
+      publisher: { "@id": ORG_ID },
       inLanguage: "de-DE",
     };
   }
@@ -219,25 +326,38 @@
     };
   }
 
-  const FAQ_PAGES = new Set(["reinigung", "hausmeister", "garten", "winter"]);
+  const FAQ_PAGES = new Set(["reinigung", "hausmeister", "garten", "winter", "home"]);
 
   function faqFromPage(page) {
-    if (!FAQ_PAGES.has(page)) return null;
-    const root = document.getElementById(page);
+    const rootId = page === "home" ? "home" : page;
+    const root = document.getElementById(rootId);
     if (!root) return null;
-    const faq = root.querySelector(".faq-list");
+    const faq = root.querySelector(".faq-list") || root.querySelector(".garten-notes");
     if (!faq) return null;
     const entities = [];
-    faq.querySelectorAll(".faq-item").forEach((el) => {
-      const q = el.querySelector("summary");
-      const a = el.querySelector(".faq-answer p") || el.querySelector(".faq-answer");
-      if (!q || !a) return;
-      entities.push({
-        "@type": "Question",
-        name: q.textContent.trim(),
-        acceptedAnswer: { "@type": "Answer", text: a.textContent.trim() },
+    if (faq.classList.contains("garten-notes")) {
+      faq.querySelectorAll(".garten-note").forEach((el) => {
+        const q = el.querySelector("h4");
+        const a = el.querySelector("p");
+        if (!q || !a) return;
+        entities.push({
+          "@type": "Question",
+          name: q.textContent.trim(),
+          acceptedAnswer: { "@type": "Answer", text: a.textContent.trim() },
+        });
       });
-    });
+    } else {
+      faq.querySelectorAll(".faq-item").forEach((el) => {
+        const q = el.querySelector("summary");
+        const a = el.querySelector(".faq-answer p") || el.querySelector(".faq-answer");
+        if (!q || !a) return;
+        entities.push({
+          "@type": "Question",
+          name: q.textContent.trim(),
+          acceptedAnswer: { "@type": "Answer", text: a.textContent.trim() },
+        });
+      });
+    }
     if (!entities.length) return null;
     return {
       "@type": "FAQPage",
@@ -246,18 +366,114 @@
     };
   }
 
+  function qaPageFromHome() {
+    const root = document.getElementById("home");
+    if (!root) return null;
+    const notes = root.querySelector(".garten-notes");
+    if (!notes) return null;
+    const first = notes.querySelector(".garten-note");
+    if (!first) return null;
+    const q = first.querySelector("h4");
+    const a = first.querySelector("p");
+    if (!q || !a) return null;
+    return {
+      "@type": "QAPage",
+      "@id": ORIGIN + "/#qa",
+      mainEntity: {
+        "@type": "Question",
+        name: q.textContent.trim(),
+        acceptedAnswer: { "@type": "Answer", text: a.textContent.trim() },
+      },
+    };
+  }
+
+  function howToNode() {
+    return {
+      "@type": "HowTo",
+      "@id": ORIGIN + "/#howto",
+      name: "So beauftragen Sie Tairovic Gebäudeservice",
+      description: "Schritt-für-Schritt von der Anfrage bis zur laufenden Objektbetreuung in Neuwied.",
+      step: [
+        {
+          "@type": "HowToStep",
+          position: 1,
+          name: "Anfrage senden",
+          text: "Kontakt per Telefon, E-Mail oder WhatsApp — Leistung und Objekt kurz beschreiben.",
+        },
+        {
+          "@type": "HowToStep",
+          position: 2,
+          name: "Besichtigung & Angebot",
+          text: "Wir klären Flächen, Intervalle und Zugänge und erstellen ein individuelles Angebot.",
+        },
+        {
+          "@type": "HowToStep",
+          position: 3,
+          name: "Einsatzplanung",
+          text: "Feste Termine, dokumentierte Abläufe und ein direkter Ansprechpartner vor Ort.",
+        },
+        {
+          "@type": "HowToStep",
+          position: 4,
+          name: "Laufende Betreuung",
+          text: "Reinigung, Hausmeister, Garten oder Winterdienst — zuverlässig und nachvollziehbar.",
+        },
+      ],
+    };
+  }
+
+  function videoObjectsFromPage(page) {
+    if (page !== "arbeiten") return [];
+    const root = document.getElementById("arbeiten");
+    if (!root) return [];
+    const videos = [];
+    root.querySelectorAll("video source, video[src]").forEach((el, i) => {
+      const src = el.getAttribute("src") || el.src;
+      if (!src) return;
+      const abs = src.startsWith("http") ? src : ORIGIN + (src.startsWith("/") ? src : "/" + src);
+      videos.push({
+        "@type": "VideoObject",
+        "@id": abs + "#video",
+        name: "Reinigung im Einsatz — Tairovic Gebäudeservice Neuwied " + (i + 1),
+        description: "Projektvideo aus Gebäudereinigung und Objektpflege in Neuwied.",
+        thumbnailUrl: OG_IMAGE,
+        contentUrl: abs,
+        uploadDate: "2025-06-01",
+        publisher: { "@id": ORG_ID },
+      });
+    });
+    return videos;
+  }
+
   function buildGraph(page) {
     const graph = [
       websiteNode(),
+      organizationNode(),
+      geoCoordinatesNode(),
+      personAuthorNode(),
       localBusinessNode(),
+      serviceAreaNode(),
       professionalServiceNode(),
       cleaningServiceNode(),
       breadcrumbSchema(page),
+      howToNode(),
     ];
+
+    const svc = pageServiceNode(page);
+    if (svc) graph.push(svc);
+
     if (FAQ_PAGES.has(page)) {
       const faq = faqFromPage(page);
       if (faq) graph.push(faq);
     }
+
+    if (page === "home") {
+      const qa = qaPageFromHome();
+      if (qa) graph.push(qa);
+    }
+
+    graph.push(...videoObjectsFromPage(page));
+
     return { "@context": "https://schema.org", "@graph": graph };
   }
 
@@ -283,7 +499,7 @@
 
   function ensureJsonLd() {
     document.querySelectorAll('script[type="application/ld+json"]').forEach((el) => {
-      if (el.id !== "ld-graph") el.remove();
+      if (el.id !== "ld-graph" && el.id !== "ld-graph-static") el.remove();
     });
     let script = document.getElementById("ld-graph");
     if (!script) {
@@ -341,6 +557,7 @@
     absoluteUrl,
     resolvePageKey,
     pageFromPathname,
+    buildGraph,
   };
 
   if (document.readyState === "loading") {
