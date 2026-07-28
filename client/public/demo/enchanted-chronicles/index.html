@@ -119,11 +119,9 @@ button{font:inherit;cursor:pointer}
 
 .hero__copy > *{opacity:0;animation:cinematicFadeIn 1.2s var(--ease-out) forwards}
 .hero__eyebrow{animation-delay:.08s}
-.hero__title{animation-delay:.22s}
-.hero__subtitle{animation-delay:.38s}
-.hero__author{animation-delay:.48s}
-.hero__desc{animation-delay:.58s}
-.hero__actions{animation-delay:.72s}
+.hero__subtitle{animation-delay:1.65s}
+.hero__desc{animation-delay:1.78s}
+.hero__actions{animation-delay:1.92s}
 
 .hero__eyebrow{
   display:inline-flex;align-items:center;gap:10px;
@@ -137,7 +135,7 @@ button{font:inherit;cursor:pointer}
 .hero__eyebrow::after{background:linear-gradient(90deg,var(--gold),transparent)}
 
 .hero__title{
-  position:relative;
+  position:relative;overflow:hidden;
   font-family:"Playfair Display",Georgia,serif;
   font-size:clamp(2.5rem,5.8vw,4.25rem);
   font-weight:900;line-height:1.06;letter-spacing:-.015em;
@@ -146,8 +144,14 @@ button{font:inherit;cursor:pointer}
   -webkit-background-clip:text;background-clip:text;
   -webkit-text-fill-color:transparent;
   margin-bottom:12px;
-  filter:drop-shadow(0 4px 24px rgba(244,199,107,.3));
-  animation:cinematicFadeIn 1.2s .22s var(--ease-out) forwards,titleShimmer 6s ease-in-out infinite;
+  opacity:0;
+  animation:heroTitleReveal 1.2s 1.4s var(--ease-out) forwards,titleShimmer 6s 2.6s ease-in-out infinite;
+}
+.hero__title::after{
+  content:"";position:absolute;top:0;left:-100%;width:55%;height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,233,176,.45),transparent);
+  animation:titleHighlightSweep 5.5s 2.8s ease-in-out infinite;
+  pointer-events:none;
 }
 .hero__subtitle{
   font-family:"Playfair Display",Georgia,serif;
@@ -308,6 +312,15 @@ button{font:inherit;cursor:pointer}
 @keyframes fogDrift{from{transform:translateX(-2%) translateY(0)}to{transform:translateX(3%) translateY(-3%)}}
 @keyframes fogDrift2{from{transform:translateX(2%) translateY(2%)}to{transform:translateX(-4%) translateY(-2%)}}
 @keyframes titleShimmer{0%,100%{background-position:0% center}50%{background-position:100% center}}
+@keyframes heroTitleReveal{
+  from{opacity:0;transform:translateY(24px);filter:drop-shadow(0 0 0 transparent)}
+  to{opacity:1;transform:translateY(0);filter:drop-shadow(0 4px 28px rgba(244,199,107,.45))}
+}
+@keyframes titleHighlightSweep{
+  0%,100%{left:-100%;opacity:0}
+  45%{opacity:1}
+  55%{left:120%;opacity:0}
+}
 @keyframes btnPulse{
   0%,100%{box-shadow:0 4px 24px rgba(244,199,107,.4),0 0 40px rgba(244,199,107,.15)}
   50%{box-shadow:0 4px 28px rgba(244,199,107,.55),0 0 55px rgba(244,199,107,.28)}
@@ -437,8 +450,9 @@ button{font:inherit;cursor:pointer}
 </section>
 
 <section class="elenco section-gold-rule" id="elenco">
+  <div class="magic-particles" data-particles aria-hidden="true"></div>
   <div class="elenco__inner">
-    <header class="elenco__head glass-panel">
+    <header class="elenco__head glass-panel reveal reveal--glow">
       <span class="elenco__label">Stories</span>
       <h2 class="elenco__title">Story Collection</h2>
       <p class="elenco__sub">Discover a growing library of magical tales filled with courage, mystery, friendship, and adventure. Each story is written with heart &mdash; created to inspire, uplift, and spark imagination.</p>
@@ -720,16 +734,16 @@ button{font:inherit;cursor:pointer}
 
 <section class="mission-vision section-gold-rule" id="mission">
   <div class="mission-vision__inner">
-    <header class="mission-vision__head glass-panel reveal">
+    <header class="mission-vision__head glass-panel reveal reveal--slide-left">
       <span class="mission-vision__label">Our Purpose</span>
       <h2 class="mission-vision__title">Mission &amp; Vision</h2>
     </header>
-    <div class="mission-vision__grid">
-      <article class="mission-vision__card reveal">
+    <div class="mission-vision__grid reveal-stagger">
+      <article class="mission-vision__card reveal-stagger__item">
         <h3 class="mission-vision__card-title">Mission</h3>
         <p class="mission-vision__card-text">Our mission is to create magical stories that inspire courage, kindness, imagination, and emotional connection &mdash; offering readers of all ages a place where wonder feels real.</p>
       </article>
-      <article class="mission-vision__card reveal">
+      <article class="mission-vision__card reveal-stagger__item">
         <h3 class="mission-vision__card-title">Vision</h3>
         <p class="mission-vision__card-text">Our vision is to build a global home for timeless tales that touch hearts across generations, creating a universe where magic, storytelling, and creativity thrive together.</p>
       </article>
@@ -738,7 +752,8 @@ button{font:inherit;cursor:pointer}
 </section>
 
 <section class="about-teaser section-gold-rule" id="about">
-  <div class="about-teaser__inner glass-panel">
+  <div class="magic-particles" data-particles aria-hidden="true"></div>
+  <div class="about-teaser__inner glass-panel reveal reveal--glow">
     <span class="about-teaser__label">About</span>
     <h2 class="about-teaser__title">About Me</h2>
     <p class="about-teaser__desc">Learn more about the creator behind Enchanted Chronicles &mdash; the storyteller who brings these magical worlds to life.</p>
@@ -747,7 +762,7 @@ button{font:inherit;cursor:pointer}
 </section>
 
 <section class="newsletter section-gold-rule" id="newsletter">
-  <div class="newsletter__inner glass-panel reveal">
+  <div class="newsletter__inner glass-panel reveal reveal--glow">
     <span class="newsletter__label">Stay Connected</span>
     <h2 class="newsletter__title">Join the Adventure</h2>
     <p class="newsletter__desc">Join the adventure &mdash; receive new stories, magical updates, behind&#8209;the&#8209;scenes insights, and exclusive content delivered straight to your inbox. Become part of the Enchanted Chronicles community and never miss a new tale.</p>
@@ -760,7 +775,7 @@ button{font:inherit;cursor:pointer}
 </section>
 
 <section class="support-author section-gold-rule" id="support">
-  <div class="support-author__inner glass-panel reveal">
+  <div class="support-author__inner glass-panel reveal reveal--scale">
     <span class="support-author__label">Support</span>
     <h2 class="support-author__title">Support the Author</h2>
     <p class="support-author__desc">If these stories inspire you, consider supporting the author. Your kindness helps keep the magic alive and allows new tales to be written.</p>
@@ -855,7 +870,8 @@ button{font:inherit;cursor:pointer}
   }
 
   function initParts(){
-    parts=Array.from({length:110},()=>({
+    const count=window.matchMedia("(max-width:768px)").matches?48:110;
+    parts=Array.from({length:count},()=>({
       x:Math.random()*w,y:Math.random()*h,
       r:Math.random()*2.2+.3,
       a:Math.random()*.45+.08,
@@ -889,8 +905,10 @@ button{font:inherit;cursor:pointer}
     requestAnimationFrame(draw);
   }
 
-  resize();initParts();draw();
-  window.addEventListener("resize",()=>{resize();initParts()});
+  if(!window.matchMedia("(prefers-reduced-motion:reduce)").matches){
+    resize();initParts();draw();
+    window.addEventListener("resize",()=>{resize();initParts()});
+  }
 })();
 </script>
 </body>

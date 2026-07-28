@@ -220,6 +220,61 @@ img{display:block;max-width:100%}
 .cinematic-stagger > *:nth-child(6){animation-delay:.58s}
 .cinematic-stagger > *:nth-child(7){animation-delay:.68s}
 
+/* ── Floating magical particles ── */
+.magic-particles{
+  position:absolute;inset:0;z-index:1;
+  pointer-events:none;overflow:hidden;
+}
+.magic-particles i{
+  position:absolute;display:block;border-radius:50%;
+  background:var(--gold-soft);
+  box-shadow:0 0 10px var(--gold-glow);
+  opacity:0;
+  animation:magicParticleDrift var(--dur,9s) var(--delay,0s) ease-in-out infinite;
+}
+.magic-particles i:nth-child(3n){background:rgba(255,248,240,.85);box-shadow:0 0 8px rgba(255,255,255,.35)}
+@keyframes magicParticleDrift{
+  0%,100%{opacity:0;transform:translate(0,0) scale(.75)}
+  18%{opacity:.55}
+  50%{opacity:.28;transform:translate(var(--dx,18px),var(--dy,-28px)) scale(1.15)}
+  78%{opacity:.42}
+}
+
+/* ── Scroll-triggered scene transitions ── */
+.reveal{
+  opacity:0;transform:translateY(20px);
+  transition:opacity 1.2s var(--ease-out),transform 1.2s var(--ease-out),box-shadow 1.4s var(--ease-out);
+}
+.reveal.is-visible{opacity:1;transform:none}
+.reveal--slide-left{transform:translateX(-28px)}
+.reveal--slide-left.is-visible{transform:none}
+.reveal--slide-right{transform:translateX(28px)}
+.reveal--slide-right.is-visible{transform:none}
+.reveal--scale{transform:translateY(16px) scale(.97)}
+.reveal--scale.is-visible{transform:none}
+.reveal--glow.is-visible{
+  box-shadow:0 12px 40px rgba(0,0,0,.3),0 0 28px rgba(244,199,107,.14);
+}
+.reveal-stagger__item{
+  opacity:0;transform:translateY(24px);
+  transition:opacity 1.2s var(--ease-out),transform 1.2s var(--ease-out),box-shadow 1.4s var(--ease-out);
+}
+.reveal-stagger.is-active .reveal-stagger__item{
+  opacity:1;transform:none;
+  box-shadow:0 12px 40px rgba(0,0,0,.28),0 0 20px rgba(244,199,107,.1);
+}
+.reveal-stagger.is-active .reveal-stagger__item:nth-child(1){transition-delay:.08s}
+.reveal-stagger.is-active .reveal-stagger__item:nth-child(2){transition-delay:.22s}
+.reveal-stagger.is-active .reveal-stagger__item:nth-child(3){transition-delay:.36s}
+.reveal-stagger.is-active .reveal-stagger__item:nth-child(4){transition-delay:.5s}
+.reveal-stagger.is-active .reveal-stagger__item:nth-child(5){transition-delay:.64s}
+.reveal-stagger.is-active .reveal-stagger__item:nth-child(6){transition-delay:.78s}
+.scene-enter{
+  opacity:0;transform:translateY(16px);
+  transition:opacity 1.2s var(--ease-out),transform 1.2s var(--ease-out);
+}
+.scene-enter.is-visible{opacity:1;transform:none}
+
 /* ── Elenco (story catalog) ── */
 .elenco{
   position:relative;
@@ -239,7 +294,7 @@ img{display:block;max-width:100%}
   background:var(--netflix-overlay);
 }
 .elenco__inner{
-  position:relative;z-index:1;
+  position:relative;z-index:2;
   width:min(1100px,calc(100% - 48px));
   margin:0 auto;
 }
@@ -373,7 +428,7 @@ img{display:block;max-width:100%}
   background:var(--netflix-overlay);
 }
 .about-teaser__inner{
-  position:relative;z-index:1;
+  position:relative;z-index:2;
   width:min(640px,calc(100% - 48px));
   margin:0 auto;text-align:center;
 }
@@ -609,7 +664,7 @@ img{display:block;max-width:100%}
   background:var(--netflix-overlay);
 }
 .static-page__banner .static-page__inner{
-  position:relative;z-index:1;
+  position:relative;z-index:2;
   padding:clamp(28px,5vw,36px) clamp(32px,5.5vw,40px);
 }
 .static-page__inner{
@@ -657,12 +712,6 @@ img{display:block;max-width:100%}
   font-size:2rem;font-weight:800;color:var(--gold);margin:16px 0;
 }
 .static-page__price-card p{font-size:.92rem;color:var(--muted);line-height:1.6}
-
-.reveal{
-  opacity:0;transform:translateY(20px);
-  transition:opacity 1.2s var(--ease-out),transform 1.2s var(--ease-out);
-}
-.reveal.is-visible{opacity:1;transform:none}
 
 @keyframes bgFadeIn{from{opacity:0}to{opacity:1}}
 
@@ -752,6 +801,8 @@ img{display:block;max-width:100%}
   }
   .glass-panel,.footer-note__content{padding:16px}
   .static-page__banner .static-page__inner{padding:16px 20px}
+  .magic-particles{opacity:.55}
+  .magic-particles i:nth-child(n+8){display:none}
 }
 @media(max-width:960px){
   .story-page__inner{grid-template-columns:1fr}
@@ -775,5 +826,7 @@ img{display:block;max-width:100%}
   .cinematic-load,.cinematic-stagger > *{
     animation:none!important;
   }
-  .reveal{opacity:1;transform:none;transition:none}
+  .reveal,.reveal-stagger__item,.scene-enter{opacity:1;transform:none;transition:none}
+  .magic-particles{display:none}
+  #particles{display:none}
 }
