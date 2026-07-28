@@ -379,6 +379,13 @@ button{font:inherit;cursor:pointer}
   </div>
 </header>
 
+<button type="button" class="ambient-toggle" id="ambient-toggle" aria-label="Play ambient music" aria-pressed="false">
+  <svg class="ambient-toggle__icon" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z"/>
+  </svg>
+  <span class="ambient-toggle__label">Ambient</span>
+</button>
+
 <section class="hero" id="hero">
   <div class="hero__photo" aria-hidden="true"></div>
   <div class="hero__bg" aria-hidden="true">
@@ -798,6 +805,7 @@ button{font:inherit;cursor:pointer}
 </footer>
 
 <script src="/demo/enchanted-chronicles/assets/site.js" defer></script>
+<script src="/demo/enchanted-chronicles/assets/ambient-audio.js" defer></script>
 <script>
 (function(){
   const hero=document.getElementById("hero");
