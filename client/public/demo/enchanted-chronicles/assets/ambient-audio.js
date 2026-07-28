@@ -2,35 +2,26 @@
   if(window.__ecAmbientInit)return;
   window.__ecAmbientInit=true;
 
-  const AUDIO_SRC="/demo/enchanted-chronicles/assets/audio/lord-of-the-land.mp3";
-  const VOLUME=0.55;
-  const FADE_MS=900;
+  const path=window.location.pathname.replace(/\/index\.html$/i,"/");
+  const isHome=path.endsWith("/enchanted-chronicles")||path.endsWith("/enchanted-chronicles/");
+  if(!isHome)return;
 
-  const btn=document.getElementById("ambient-toggle");
-  const credit=document.getElementById("audio-credit");
-  if(!btn)return;
+  const AUDIO_SRC="/demo/enchanted-chronicles/assets/audio/lord-of-the-land.mp3";
+  const TARGET_VOL=0.5;
+  const FADE_MS=1200;
 
   const audio=new Audio(AUDIO_SRC);
   audio.loop=true;
   audio.preload="auto";
   audio.volume=0;
 
-  let playing=false;
   let fadeTimer=null;
+  let started=false;
 
-  function setUI(on){
-    btn.classList.toggle("is-playing",on);
-    btn.setAttribute("aria-pressed",on?"true":"false");
-    btn.setAttribute("aria-label",on?"Mute medieval music":"Play medieval music");
-    const label=btn.querySelector(".ambient-toggle__label");
-    if(label)label.textContent=on?"Music On":"Medieval";
-    if(credit)credit.hidden=!on;
-  }
-
-  function fadeTo(target, done){
+  function fadeTo(target){
     if(fadeTimer)clearInterval(fadeTimer);
     const start=audio.volume;
-    const steps=18;
+    const steps=20;
     let i=0;
     fadeTimer=setInterval(()=>{
       i++;
@@ -39,42 +30,39 @@
         clearInterval(fadeTimer);
         fadeTimer=null;
         audio.volume=target;
-        if(done)done();
       }
     },FADE_MS/steps);
   }
 
-  async function play(){
+  async function startMusic(){
+    if(started&& !audio.paused)return;
     try{
       await audio.play();
-      playing=true;
-      fadeTo(VOLUME);
-      setUI(true);
-    }catch(err){
-      console.warn("Music play blocked:",err);
-      btn.classList.add("ambient-toggle--blocked");
-      const label=btn.querySelector(".ambient-toggle__label");
-      if(label)label.textContent="Tap to Play";
-    }
+      started=true;
+      fadeTo(TARGET_VOL);
+    }catch(_){}
   }
 
-  function stop(){
-    playing=false;
-    fadeTo(0,()=>{
+  function stopMusic(){
+    if(!started)return;
+    fadeTo(0);
+    setTimeout(()=>{
       audio.pause();
       audio.currentTime=0;
-    });
-    setUI(false);
+      started=false;
+    },FADE_MS);
   }
 
-  btn.addEventListener("click",()=>{
-    btn.classList.remove("ambient-toggle--blocked");
-    playing?stop():play();
-  });
+  startMusic();
+
+  document.addEventListener("click",startMusic,{once:true,passive:true});
+  document.addEventListener("touchstart",startMusic,{once:true,passive:true});
+  document.addEventListener("keydown",startMusic,{once:true});
 
   document.addEventListener("visibilitychange",()=>{
-    if(!playing)return;
     if(document.hidden)audio.pause();
-    else audio.play().catch(()=>{});
+    else if(started)audio.play().catch(()=>{});
   });
+
+  window.addEventListener("pagehide",stopMusic);
 })();
