@@ -101,7 +101,7 @@ img{display:block;max-width:100%}
   gap:clamp(20px,3vw,28px);
 }
 .elenco__card{
-  display:flex;gap:18px;align-items:flex-start;
+  display:flex;gap:18px;align-items:center;
   padding:20px;border-radius:16px;
   background:rgba(255,255,255,.03);
   border:1px solid rgba(244,199,107,.12);
@@ -115,8 +115,10 @@ img{display:block;max-width:100%}
 }
 .elenco__thumb{
   position:relative;flex-shrink:0;
-  width:140px;height:105px;
+  width:118px;
+  padding:4px;
   border-radius:10px;overflow:hidden;
+  background:linear-gradient(180deg,rgba(12,16,32,.85),rgba(6,8,18,.95));
   box-shadow:0 0 0 1px rgba(244,199,107,.15);
 }
 .elenco__thumb-glow{
@@ -126,8 +128,10 @@ img{display:block;max-width:100%}
 }
 .elenco__thumb img{
   position:relative;z-index:1;
-  width:100%;height:100%;
-  object-fit:cover;object-position:center;
+  display:block;width:100%;height:auto;
+  max-height:172px;
+  object-fit:contain;object-position:center;
+  border-radius:6px;
 }
 .elenco__meta{flex:1;min-width:0}
 .elenco__num{
@@ -205,8 +209,7 @@ img{display:block;max-width:100%}
 }
 .story-page__cover img{
   position:relative;z-index:1;
-  width:100%;max-width:300px;height:auto;
-  max-height:min(400px,48vh);
+  display:block;width:100%;max-width:280px;height:auto;
   object-fit:contain;object-position:center;
   border-radius:18px;
   box-shadow:0 0 0 1px rgba(244,199,107,.12);
@@ -240,18 +243,16 @@ img{display:block;max-width:100%}
   .story-page__inner{grid-template-columns:1fr}
   .story-page__cover-wrap{
     position:relative;top:auto;
-    max-width:240px;margin:0 auto 8px;
+    max-width:280px;margin:0 auto 8px;
     justify-self:center;
   }
-  .story-page__cover img{
-    max-width:240px;
-    max-height:min(320px,42vh);
-  }
+  .story-page__cover img{max-width:220px}
   .elenco__card{padding:16px;gap:16px}
-  .elenco__thumb{width:120px;height:90px}
+  .elenco__thumb{width:104px}
+  .elenco__thumb img{max-height:156px}
   .elenco__grid{grid-template-columns:1fr}
 }
 @media(max-width:480px){
-  .elenco__card{align-items:center}
-  .elenco__thumb{width:110px;height:82px;flex-shrink:0}
+  .elenco__thumb{width:96px}
+  .elenco__thumb img{max-height:144px}
 }
