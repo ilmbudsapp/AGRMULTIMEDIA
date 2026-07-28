@@ -168,7 +168,11 @@ img{display:block;max-width:100%}
 }
 .elenco__sub{
   font-size:clamp(.95rem,1.6vw,1.05rem);
-  color:var(--muted);max-width:520px;margin:0 auto;line-height:1.7;
+  color:var(--muted);max-width:560px;margin:0 auto;line-height:1.7;
+}
+.elenco__intro{
+  font-size:clamp(.92rem,1.5vw,1rem);
+  color:rgba(236,232,255,.72);max-width:680px;margin:20px auto 0;line-height:1.75;
 }
 .elenco__grid{
   display:grid;
@@ -236,6 +240,40 @@ img{display:block;max-width:100%}
   font-size:.85rem;color:rgba(168,158,201,.5);font-style:italic;
 }
 
+.about-teaser{
+  position:relative;
+  padding:clamp(64px,10vh,96px) 0;
+  background:linear-gradient(180deg,#0d0820 0%,#070b1a 100%);
+  border-top:1px solid rgba(255,255,255,.05);
+}
+.about-teaser::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse 60% 50% at 50% 100%,rgba(244,199,107,.06),transparent 60%);
+}
+.about-teaser__inner{
+  position:relative;z-index:1;
+  width:min(640px,calc(100% - 48px));
+  margin:0 auto;text-align:center;
+}
+.about-teaser__label{
+  display:inline-block;
+  font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:12px;
+}
+.about-teaser__title{
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:clamp(1.75rem,4vw,2.5rem);
+  font-weight:800;line-height:1.15;margin-bottom:16px;
+  background:linear-gradient(135deg,#fff,var(--gold-soft));
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.about-teaser__desc{
+  font-size:clamp(.95rem,1.6vw,1.05rem);
+  color:var(--muted);line-height:1.7;margin-bottom:28px;
+}
+.about-teaser__link{display:inline-flex}
+
 .static-page{
   padding-top:var(--site-header-h);
   min-height:100vh;
@@ -254,10 +292,14 @@ img{display:block;max-width:100%}
 .static-page__title{
   font-family:"Playfair Display",Georgia,serif;
   font-size:clamp(2rem,4.5vw,2.75rem);
-  font-weight:800;line-height:1.15;margin-bottom:24px;
+  font-weight:800;line-height:1.15;margin-bottom:16px;
   background:linear-gradient(135deg,#fff,var(--gold-soft));
   -webkit-background-clip:text;background-clip:text;
   -webkit-text-fill-color:transparent;
+}
+.static-page__lead{
+  font-size:clamp(.95rem,1.6vw,1.05rem);
+  color:var(--muted);line-height:1.7;margin-bottom:28px;
 }
 .static-page__text{
   font-size:1.05rem;line-height:1.85;color:rgba(236,232,255,.88);
