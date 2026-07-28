@@ -113,6 +113,7 @@ img{display:block;max-width:100%}
   background:rgba(244,199,107,.04);
   box-shadow:0 12px 40px rgba(0,0,0,.35),0 0 32px rgba(244,199,107,.08);
 }
+/* Elenco thumb: full cover visible (contain) — never crop titles. */
 .elenco__thumb{
   position:relative;flex-shrink:0;
   width:118px;
@@ -207,6 +208,7 @@ img{display:block;max-width:100%}
   background:radial-gradient(circle at 50% 40%,rgba(244,199,107,.2) 0%,rgba(100,140,220,.12) 40%,transparent 65%);
   filter:blur(28px);pointer-events:none;
 }
+/* Story page: full cover visible (contain) — proportional, no crop. */
 .story-page__cover img{
   position:relative;z-index:1;
   display:block;width:100%;max-width:280px;height:auto;
