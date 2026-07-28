@@ -2,11 +2,12 @@
   if(window.__ecAmbientInit)return;
   window.__ecAmbientInit=true;
 
-  const AUDIO_SRC="/demo/enchanted-chronicles/assets/audio/medieval-ambient.wav";
-  const VOLUME=0.82;
-  const FADE_MS=800;
+  const AUDIO_SRC="/demo/enchanted-chronicles/assets/audio/lord-of-the-land.mp3";
+  const VOLUME=0.55;
+  const FADE_MS=900;
 
   const btn=document.getElementById("ambient-toggle");
+  const credit=document.getElementById("audio-credit");
   if(!btn)return;
 
   const audio=new Audio(AUDIO_SRC);
@@ -20,15 +21,16 @@
   function setUI(on){
     btn.classList.toggle("is-playing",on);
     btn.setAttribute("aria-pressed",on?"true":"false");
-    btn.setAttribute("aria-label",on?"Mute background music":"Play background music");
+    btn.setAttribute("aria-label",on?"Mute medieval music":"Play medieval music");
     const label=btn.querySelector(".ambient-toggle__label");
-    if(label)label.textContent=on?"Music On":"Play Music";
+    if(label)label.textContent=on?"Music On":"Medieval";
+    if(credit)credit.hidden=!on;
   }
 
   function fadeTo(target, done){
     if(fadeTimer)clearInterval(fadeTimer);
     const start=audio.volume;
-    const steps=16;
+    const steps=18;
     let i=0;
     fadeTimer=setInterval(()=>{
       i++;
@@ -48,9 +50,8 @@
       playing=true;
       fadeTo(VOLUME);
       setUI(true);
-      try{sessionStorage.setItem("ec-ambient","1")}catch(_){}
     }catch(err){
-      console.warn("Ambient play blocked:",err);
+      console.warn("Music play blocked:",err);
       btn.classList.add("ambient-toggle--blocked");
       const label=btn.querySelector(".ambient-toggle__label");
       if(label)label.textContent="Tap to Play";
@@ -64,7 +65,6 @@
       audio.currentTime=0;
     });
     setUI(false);
-    try{sessionStorage.setItem("ec-ambient","0")}catch(_){}
   }
 
   btn.addEventListener("click",()=>{
