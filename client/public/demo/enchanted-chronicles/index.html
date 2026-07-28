@@ -7,6 +7,7 @@
 <meta name="description" content="Enchanted Chronicles — a magical collection of fantasy stories filled with adventure, heroes, mythical creatures, and enchanted worlds. Explore original tales crafted to inspire imagination, courage, and wonder.">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#070b1a">
+<link rel="preload" as="image" href="/demo/enchanted-chronicles/images/hero-bg.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,500;1,600&display=swap" rel="stylesheet">
@@ -32,9 +33,22 @@ button{font:inherit;cursor:pointer}
 .hero{
   position:relative;min-height:100vh;display:flex;align-items:center;
   padding-top:var(--site-header-h,92px);overflow:hidden;
-  background:linear-gradient(165deg,#050810 0%,#0a0618 35%,#12082a 65%,#1a0f3a 100%);
+  background:#070b1a;
 }
-.hero__bg{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.hero__photo{
+  position:absolute;inset:0;z-index:0;
+  background:url("/demo/enchanted-chronicles/images/hero-bg.png") center/cover no-repeat;
+  animation:sectionBgReveal 1.6s var(--ease-out) both;
+}
+.hero__photo::before{
+  content:"";position:absolute;inset:0;
+  background:rgba(0,0,0,.55);
+}
+.hero__photo::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(to bottom,rgba(0,0,0,.8) 0%,rgba(0,0,0,.25) 38%,transparent 62%);
+}
+.hero__bg{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden;opacity:.35}
 .hero__bg-layer{position:absolute;inset:-12%;will-change:transform;transition:transform .15s linear}
 .hero__nebula{
   background:
@@ -91,10 +105,10 @@ button{font:inherit;cursor:pointer}
     radial-gradient(ellipse 82% 72% at 50% 50%,transparent 28%,rgba(4,6,16,.7) 100%),
     linear-gradient(180deg,rgba(7,11,26,.25) 0%,transparent 28%,rgba(7,11,26,.5) 100%);
 }
-#particles{position:absolute;inset:0;z-index:1;pointer-events:none}
+#particles{position:absolute;inset:0;z-index:2;pointer-events:none}
 
 .hero__inner{
-  position:relative;z-index:2;
+  position:relative;z-index:3;
   width:min(1280px,calc(100% - 48px));
   margin:0 auto;
   display:grid;grid-template-columns:1.05fr .95fr;
@@ -304,6 +318,10 @@ button{font:inherit;cursor:pointer}
 .footer-note a{color:var(--gold);font-weight:600}
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(36px)}to{opacity:1;transform:none}}
+@keyframes sectionBgReveal{
+  from{opacity:0;transform:scale(1.04)}
+  to{opacity:1;transform:scale(1)}
+}
 @keyframes moonPulse{0%,100%{opacity:.85;transform:scale(1)}50%{opacity:1;transform:scale(1.04)}}
 @keyframes starsFloat{from{transform:translateY(0)}to{transform:translateY(-12px)}}
 @keyframes fogDrift{from{transform:translateX(-2%) translateY(0)}to{transform:translateX(3%) translateY(-3%)}}
@@ -364,6 +382,7 @@ button{font:inherit;cursor:pointer}
 </header>
 
 <section class="hero" id="hero">
+  <div class="hero__photo" aria-hidden="true"></div>
   <div class="hero__bg" aria-hidden="true">
     <div class="hero__bg-layer hero__nebula" data-parallax="0.018"></div>
     <div class="hero__bg-layer hero__fog" data-parallax="0.025"></div>

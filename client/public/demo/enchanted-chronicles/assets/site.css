@@ -133,9 +133,22 @@ img{display:block;max-width:100%}
   position:relative;z-index:2;text-align:center;
   padding:28px 20px 36px;font-size:.78rem;color:rgba(168,158,201,.6);
   border-top:1px solid rgba(255,255,255,.06);
-  background:rgba(7,11,26,.85);
   line-height:1.65;
+  overflow:hidden;
+  isolation:isolate;
 }
+.footer-note::before{
+  content:"";position:absolute;inset:0;z-index:-2;
+  background:url("/demo/enchanted-chronicles/images/about-bg.png") center/cover no-repeat;
+  animation:sectionBgReveal 1.4s var(--ease-out) both;
+}
+.footer-note::after{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:rgba(0,0,0,.75);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+}
+.footer-note > *{position:relative;z-index:1}
 .footer-note p{margin:0 0 10px}
 .footer-note p:last-child{margin-bottom:0}
 .footer-note__cta{
@@ -159,12 +172,17 @@ img{display:block;max-width:100%}
 .elenco{
   position:relative;
   padding:clamp(72px,12vh,110px) 0 clamp(64px,10vh,96px);
-  background:linear-gradient(180deg,#070b1a 0%,#0a1028 50%,#0d0820 100%);
   overflow:hidden;
+  background:#070b1a url("/demo/enchanted-chronicles/images/stories-bg.png") center/cover no-repeat;
+  animation:sectionBgReveal 1.4s var(--ease-out) both;
 }
 .elenco::before{
-  content:"";position:absolute;inset:0;pointer-events:none;
-  background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(88,52,180,.12),transparent 60%);
+  content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
+  background:rgba(0,0,0,.45);
+}
+.elenco::after{
+  content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
+  background:linear-gradient(to bottom,rgba(0,0,0,.8) 0%,rgba(0,0,0,.15) 40%,transparent 65%);
 }
 .elenco__inner{
   position:relative;z-index:1;
@@ -209,8 +227,10 @@ img{display:block;max-width:100%}
 .elenco__card{
   display:flex;gap:18px;align-items:center;
   padding:20px;border-radius:16px;
-  background:rgba(255,255,255,.03);
+  background:rgba(7,11,26,.82);
   border:1px solid rgba(244,199,107,.12);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
   transition:transform .35s var(--ease-out),border-color .35s,box-shadow .35s,background .35s;
   touch-action:manipulation;-webkit-tap-highlight-color:transparent;
 }
@@ -280,12 +300,18 @@ img{display:block;max-width:100%}
 .about-teaser{
   position:relative;
   padding:clamp(64px,10vh,96px) 0;
-  background:linear-gradient(180deg,#0d0820 0%,#070b1a 100%);
   border-top:1px solid rgba(255,255,255,.05);
+  overflow:hidden;
+  background:#070b1a url("/demo/enchanted-chronicles/images/about-bg.png") center/cover no-repeat;
+  animation:sectionBgReveal 1.4s var(--ease-out) both;
 }
 .about-teaser::before{
-  content:"";position:absolute;inset:0;pointer-events:none;
-  background:radial-gradient(ellipse 60% 50% at 50% 100%,rgba(244,199,107,.06),transparent 60%);
+  content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
+  background:rgba(0,0,0,.6);
+}
+.about-teaser::after{
+  content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
+  background:linear-gradient(to bottom,rgba(0,0,0,.8) 0%,rgba(0,0,0,.2) 42%,transparent 68%);
 }
 .about-teaser__inner{
   position:relative;z-index:1;
@@ -505,7 +531,25 @@ img{display:block;max-width:100%}
 .static-page{
   padding-top:var(--site-header-h);
   min-height:100vh;
-  background:linear-gradient(180deg,#070b1a 0%,#0a1028 40%,#0d0820 100%);
+  background:#070b1a;
+}
+.static-page__banner{
+  position:relative;
+  padding:clamp(48px,8vh,72px) 0 clamp(56px,9vh,80px);
+  background:#070b1a url("/demo/enchanted-chronicles/images/about-bg.png") center/cover no-repeat;
+  animation:sectionBgReveal 1.4s var(--ease-out) both;
+}
+.static-page__banner::before{
+  content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
+  background:rgba(0,0,0,.6);
+}
+.static-page__banner::after{
+  content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
+  background:linear-gradient(to bottom,rgba(0,0,0,.8) 0%,rgba(0,0,0,.2) 42%,transparent 68%);
+}
+.static-page__banner .static-page__inner{
+  position:relative;z-index:1;
+  padding-top:0;padding-bottom:0;
 }
 .static-page__inner{
   width:min(760px,calc(100% - 48px));
@@ -558,6 +602,12 @@ img{display:block;max-width:100%}
   transition:opacity .85s var(--ease-out),transform .85s var(--ease-out);
 }
 .reveal.is-visible{opacity:1;transform:none}
+
+@keyframes bgFadeIn{from{opacity:0}to{opacity:1}}
+@keyframes sectionBgReveal{
+  from{opacity:0;transform:scale(1.04)}
+  to{opacity:1;transform:scale(1)}
+}
 
 /* ── Story page ── */
 .story-page{
@@ -652,4 +702,9 @@ img{display:block;max-width:100%}
 @media(max-width:480px){
   .elenco__thumb{width:96px}
   .elenco__thumb img{max-height:144px}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero__photo,.elenco,.about-teaser,.static-page__banner,.footer-note::before{
+    animation:none!important;
+  }
 }
