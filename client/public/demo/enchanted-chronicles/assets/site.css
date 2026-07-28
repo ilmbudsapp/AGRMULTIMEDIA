@@ -599,12 +599,12 @@ img{display:block;max-width:100%}
 }
 .static-page__banner .static-page__inner{
   position:relative;z-index:1;
-  padding-top:0;padding-bottom:0;
+  padding:clamp(28px,5vw,36px) clamp(32px,5.5vw,40px);
 }
 .static-page__inner{
   width:min(760px,calc(100% - 48px));
   margin:0 auto;
-  padding:clamp(40px,8vh,72px) 0 clamp(64px,10vh,96px);
+  padding-block:clamp(40px,8vh,72px) clamp(64px,10vh,96px);
 }
 .static-page__label{
   display:inline-block;
@@ -739,7 +739,8 @@ img{display:block;max-width:100%}
   .elenco::before,.about-teaser::before,.static-page__banner::before,.footer-note::after{
     background:var(--netflix-overlay-mobile);
   }
-  .glass-panel,.footer-note__content{padding:16px}
+  .glass-panel,.footer-note__content{padding:20px 24px}
+  .static-page__banner .static-page__inner{padding:20px 26px}
 }
 @media(max-width:960px){
   .story-page__inner{grid-template-columns:1fr}
