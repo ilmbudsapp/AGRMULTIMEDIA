@@ -8,6 +8,8 @@
   --muted:#a89ec9;
   --ease-out:cubic-bezier(.22,1,.36,1);
   --site-header-h:92px;
+  --netflix-overlay:linear-gradient(to bottom,rgba(0,0,0,.75),rgba(0,0,0,.35));
+  --netflix-overlay-mobile:linear-gradient(to bottom,rgba(0,0,0,.6),rgba(0,0,0,.25));
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -136,23 +138,36 @@ img{display:block;max-width:100%}
   line-height:1.65;
   overflow:hidden;
   isolation:isolate;
+  animation:cinematicFadeIn 1.2s var(--ease-out) both;
 }
 .footer-note::before{
   content:"";position:absolute;inset:0;z-index:-2;
-  background:url("/demo/enchanted-chronicles/images/about-bg.png") center/cover no-repeat;
-  animation:sectionBgReveal 1.4s var(--ease-out) both;
+  background-image:url("/demo/enchanted-chronicles/images/about-bg.png");
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
 }
 .footer-note::after{
   content:"";position:absolute;inset:0;z-index:-1;
-  background:rgba(0,0,0,.75);
-  backdrop-filter:blur(10px);
-  -webkit-backdrop-filter:blur(10px);
+  background:var(--netflix-overlay);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
 }
-.footer-note > *{position:relative;z-index:1}
+.footer-note__content{
+  position:relative;z-index:1;
+  max-width:560px;margin:0 auto;
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  background:rgba(0,0,0,.35);
+  border-radius:12px;
+  padding:24px;
+  border:1px solid rgba(244,199,107,.1);
+}
 .footer-note p{margin:0 0 10px}
 .footer-note p:last-child{margin-bottom:0}
 .footer-note__cta{
-  max-width:520px;margin:0 auto 16px;
+  margin:0 0 12px;
   font-size:.88rem;color:rgba(236,232,255,.75);line-height:1.65;
 }
 .footer-note__cta-link{
@@ -168,28 +183,61 @@ img{display:block;max-width:100%}
 .footer-note__credit{font-size:.76rem;color:rgba(168,158,201,.5)}
 .footer-note a{color:var(--gold);font-weight:600}
 
+/* ── Cinematic / Netflix enhancements ── */
+.glass-panel{
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  background:rgba(0,0,0,.35);
+  border-radius:12px;
+  padding:24px;
+  border:1px solid rgba(244,199,107,.12);
+  box-shadow:0 8px 32px rgba(0,0,0,.28);
+}
+@keyframes cinematicFadeIn{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.cinematic-load{
+  animation:cinematicFadeIn 1.2s var(--ease-out) both;
+}
+.cinematic-stagger > *{
+  opacity:0;
+  animation:cinematicFadeIn 1.2s var(--ease-out) forwards;
+}
+.cinematic-stagger > *:nth-child(1){animation-delay:.08s}
+.cinematic-stagger > *:nth-child(2){animation-delay:.18s}
+.cinematic-stagger > *:nth-child(3){animation-delay:.28s}
+.cinematic-stagger > *:nth-child(4){animation-delay:.38s}
+.cinematic-stagger > *:nth-child(5){animation-delay:.48s}
+.cinematic-stagger > *:nth-child(6){animation-delay:.58s}
+.cinematic-stagger > *:nth-child(7){animation-delay:.68s}
+
 /* ── Elenco (story catalog) ── */
 .elenco{
   position:relative;
   padding:clamp(72px,12vh,110px) 0 clamp(64px,10vh,96px);
   overflow:hidden;
-  background:#070b1a url("/demo/enchanted-chronicles/images/stories-bg.png") center/cover no-repeat;
-  animation:sectionBgReveal 1.4s var(--ease-out) both;
+  background-color:#070b1a;
+  background-image:url("/demo/enchanted-chronicles/images/stories-bg.png");
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  animation:cinematicFadeIn 1.2s var(--ease-out) both;
 }
 .elenco::before{
   content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
-  background:rgba(0,0,0,.45);
-}
-.elenco::after{
-  content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
-  background:linear-gradient(to bottom,rgba(0,0,0,.8) 0%,rgba(0,0,0,.15) 40%,transparent 65%);
+  background:var(--netflix-overlay);
 }
 .elenco__inner{
   position:relative;z-index:1;
   width:min(1100px,calc(100% - 48px));
   margin:0 auto;
 }
-.elenco__head{text-align:center;margin-bottom:clamp(40px,6vw,56px)}
+.elenco__head{
+  text-align:center;margin-bottom:clamp(40px,6vw,56px);
+  max-width:760px;margin-left:auto;margin-right:auto;
+}
 .elenco__label{
   display:inline-block;
   font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
@@ -302,16 +350,17 @@ img{display:block;max-width:100%}
   padding:clamp(64px,10vh,96px) 0;
   border-top:1px solid rgba(255,255,255,.05);
   overflow:hidden;
-  background:#070b1a url("/demo/enchanted-chronicles/images/about-bg.png") center/cover no-repeat;
-  animation:sectionBgReveal 1.4s var(--ease-out) both;
+  background-color:#070b1a;
+  background-image:url("/demo/enchanted-chronicles/images/about-bg.png");
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  animation:cinematicFadeIn 1.2s var(--ease-out) both;
 }
 .about-teaser::before{
   content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
-  background:rgba(0,0,0,.6);
-}
-.about-teaser::after{
-  content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
-  background:linear-gradient(to bottom,rgba(0,0,0,.8) 0%,rgba(0,0,0,.2) 42%,transparent 68%);
+  background:var(--netflix-overlay);
 }
 .about-teaser__inner{
   position:relative;z-index:1;
@@ -536,16 +585,17 @@ img{display:block;max-width:100%}
 .static-page__banner{
   position:relative;
   padding:clamp(48px,8vh,72px) 0 clamp(56px,9vh,80px);
-  background:#070b1a url("/demo/enchanted-chronicles/images/about-bg.png") center/cover no-repeat;
-  animation:sectionBgReveal 1.4s var(--ease-out) both;
+  background-color:#070b1a;
+  background-image:url("/demo/enchanted-chronicles/images/about-bg.png");
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  animation:cinematicFadeIn 1.2s var(--ease-out) both;
 }
 .static-page__banner::before{
   content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
-  background:rgba(0,0,0,.6);
-}
-.static-page__banner::after{
-  content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
-  background:linear-gradient(to bottom,rgba(0,0,0,.8) 0%,rgba(0,0,0,.2) 42%,transparent 68%);
+  background:var(--netflix-overlay);
 }
 .static-page__banner .static-page__inner{
   position:relative;z-index:1;
@@ -598,16 +648,12 @@ img{display:block;max-width:100%}
 .static-page__price-card p{font-size:.92rem;color:var(--muted);line-height:1.6}
 
 .reveal{
-  opacity:0;transform:translateY(24px);
-  transition:opacity .85s var(--ease-out),transform .85s var(--ease-out);
+  opacity:0;transform:translateY(20px);
+  transition:opacity 1.2s var(--ease-out),transform 1.2s var(--ease-out);
 }
 .reveal.is-visible{opacity:1;transform:none}
 
 @keyframes bgFadeIn{from{opacity:0}to{opacity:1}}
-@keyframes sectionBgReveal{
-  from{opacity:0;transform:scale(1.04)}
-  to{opacity:1;transform:scale(1)}
-}
 
 /* ── Story page ── */
 .story-page{
@@ -686,6 +732,15 @@ img{display:block;max-width:100%}
 }
 .story-page__footer{margin-top:40px}
 
+@media(max-width:768px){
+  .hero__photo,.elenco,.about-teaser,.static-page__banner,.footer-note::before{
+    background-attachment:scroll!important;
+  }
+  .elenco::before,.about-teaser::before,.static-page__banner::before,.footer-note::after{
+    background:var(--netflix-overlay-mobile);
+  }
+  .glass-panel,.footer-note__content{padding:16px}
+}
 @media(max-width:960px){
   .story-page__inner{grid-template-columns:1fr}
   .story-page__cover-wrap{
@@ -704,7 +759,9 @@ img{display:block;max-width:100%}
   .elenco__thumb img{max-height:144px}
 }
 @media(prefers-reduced-motion:reduce){
-  .hero__photo,.elenco,.about-teaser,.static-page__banner,.footer-note::before{
+  .hero__photo,.elenco,.about-teaser,.static-page__banner,.footer-note,
+  .cinematic-load,.cinematic-stagger > *{
     animation:none!important;
   }
+  .reveal{opacity:1;transform:none;transition:none}
 }
