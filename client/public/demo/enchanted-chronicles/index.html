@@ -284,10 +284,20 @@ button{font:inherit;cursor:pointer}
 
 .footer-note{
   position:relative;z-index:2;text-align:center;
-  padding:24px 16px 32px;font-size:.78rem;color:rgba(168,158,201,.6);
+  padding:28px 20px 36px;font-size:.78rem;color:rgba(168,158,201,.6);
   border-top:1px solid rgba(255,255,255,.06);
   background:rgba(7,11,26,.85);
+  line-height:1.65;
 }
+.footer-note p{margin:0 0 10px}
+.footer-note p:last-child{margin-bottom:0}
+.footer-note__copy{color:rgba(236,232,255,.78);font-weight:600;font-size:.82rem}
+.footer-note__legal{
+  max-width:560px;margin:0 auto 12px;
+  font-size:.74rem;color:rgba(168,158,201,.55);line-height:1.6;
+}
+.footer-note__legal em{font-style:italic;color:rgba(236,232,255,.65)}
+.footer-note__credit{font-size:.76rem;color:rgba(168,158,201,.5)}
 .footer-note a{color:var(--gold);font-weight:600}
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(36px)}to{opacity:1;transform:none}}
@@ -699,8 +709,9 @@ button{font:inherit;cursor:pointer}
 </section>
 
 <footer class="footer-note">
-  Demo preview for <strong>The Enchanted Chronicles</strong> · Web design by
-  <a href="https://www.agrmultimedia.eu/" target="_blank" rel="noopener noreferrer">AGRMULTIMEDIA</a>
+  <p class="footer-note__copy">&copy; 2026 Agron Osmani. All rights reserved.</p>
+  <p class="footer-note__legal">The stories, text, and illustrations in <em>The Enchanted Chronicles</em> are protected by copyright. Unauthorized copying, reproduction, or publication on other websites is prohibited.</p>
+  <p class="footer-note__credit">Web design by <a href="https://www.agrmultimedia.eu/" target="_blank" rel="noopener noreferrer">AGRMULTIMEDIA</a></p>
 </footer>
 
 <script src="/demo/enchanted-chronicles/assets/site.js" defer></script>
