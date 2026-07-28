@@ -164,21 +164,27 @@ button{font:inherit;cursor:pointer}
   box-shadow:0 4px 24px rgba(244,199,107,.4),0 0 40px rgba(244,199,107,.18);
   animation:btnPulse 3.5s ease-in-out infinite;
 }
-.btn-primary:hover{
-  transform:translateY(-4px) scale(1.02);
-  box-shadow:0 14px 40px rgba(244,199,107,.55),0 0 70px rgba(244,199,107,.3);
-  animation:none;
-}
 .btn-secondary{
   background:rgba(255,255,255,.05);color:var(--gold-soft);
   border:1px solid rgba(244,199,107,.4);
   backdrop-filter:blur(10px);
   box-shadow:0 0 24px rgba(244,199,107,.08);
 }
-.btn-secondary:hover{
-  transform:translateY(-4px);
-  background:rgba(244,199,107,.12);border-color:var(--gold);
-  box-shadow:0 8px 32px rgba(244,199,107,.22);
+@media(hover:hover) and (pointer:fine){
+  .btn-primary:hover{
+    transform:translateY(-4px) scale(1.02);
+    box-shadow:0 14px 40px rgba(244,199,107,.55),0 0 70px rgba(244,199,107,.3);
+    animation:none;
+  }
+  .btn-secondary:hover{
+    transform:translateY(-4px);
+    background:rgba(244,199,107,.12);border-color:var(--gold);
+    box-shadow:0 8px 32px rgba(244,199,107,.22);
+  }
+  .showcase__arrow:hover{
+    background:rgba(244,199,107,.18);transform:scale(1.08);
+    box-shadow:0 0 28px rgba(244,199,107,.3);
+  }
 }
 
 .hero__visual{
@@ -261,10 +267,7 @@ button{font:inherit;cursor:pointer}
   display:flex;align-items:center;justify-content:center;
   transition:background .25s,transform .25s,box-shadow .25s;
   box-shadow:0 4px 16px rgba(0,0,0,.35);
-}
-.showcase__arrow:hover{
-  background:rgba(244,199,107,.18);transform:scale(1.08);
-  box-shadow:0 0 28px rgba(244,199,107,.3);
+  touch-action:manipulation;-webkit-tap-highlight-color:transparent;
 }
 .showcase__arrow svg{width:18px;height:18px;fill:currentColor}
 .showcase__arrow--prev{margin-left:-18px}
@@ -825,6 +828,5 @@ button{font:inherit;cursor:pointer}
   window.addEventListener("resize",()=>{resize();initParts()});
 })();
 </script>
-<script src="/demo/enchanted-chronicles/assets/site.js" defer></script>
 </body>
 </html>

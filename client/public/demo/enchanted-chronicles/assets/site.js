@@ -1,4 +1,7 @@
 (function(){
+  if(window.__ecSiteInit)return;
+  window.__ecSiteInit=true;
+
   const header=document.querySelector(".site-header");
   const toggle=header&&header.querySelector(".site-nav__toggle");
   const panel=header&&header.querySelector(".site-nav__panel");
@@ -17,12 +20,19 @@
       toggle.setAttribute("aria-label","Close menu");
       document.body.classList.add("nav-open");
     }
-    toggle.addEventListener("click",()=>{
+    function onToggle(e){
+      e.preventDefault();
+      e.stopPropagation();
       header.classList.contains("is-open")?closeNav():openNav();
-    });
+    }
+    toggle.addEventListener("click",onToggle);
     links.forEach(a=>a.addEventListener("click",closeNav));
     document.addEventListener("keydown",e=>{
       if(e.key==="Escape")closeNav();
+    });
+    document.addEventListener("click",e=>{
+      if(!header.classList.contains("is-open"))return;
+      if(!header.contains(e.target))closeNav();
     });
     window.matchMedia("(min-width:769px)").addEventListener("change",e=>{
       if(e.matches)closeNav();
