@@ -68,4 +68,23 @@
   }else{
     reveals.forEach(el=>el.classList.add("is-visible"));
   }
+
+  document.querySelectorAll(".newsletter__form").forEach(form=>{
+    form.addEventListener("submit",e=>{
+      e.preventDefault();
+      const input=form.querySelector(".newsletter__input");
+      const btn=form.querySelector(".newsletter__submit");
+      if(!input||!input.value.trim())return;
+      const prev=btn.textContent;
+      btn.textContent="Thank you!";
+      btn.disabled=true;
+      input.disabled=true;
+      setTimeout(()=>{
+        btn.textContent=prev;
+        btn.disabled=false;
+        input.disabled=false;
+        input.value="";
+      },3000);
+    });
+  });
 })();
