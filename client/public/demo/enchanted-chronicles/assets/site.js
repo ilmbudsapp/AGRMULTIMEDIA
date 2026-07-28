@@ -33,9 +33,13 @@
     const norm=p=>p.replace(/\/index\.html$/i,"/").replace(/\/+$/,"")||"/";
     const current=norm(window.location.pathname);
     links.forEach(link=>{
-      const linkPath=norm(new URL(link.href,window.location.origin).pathname);
-      const isHome=linkPath.endsWith("/enchanted-chronicles")&&current.endsWith("/enchanted-chronicles");
-      if(current===linkPath||isHome){
+      const url=new URL(link.href,window.location.origin);
+      const linkPath=norm(url.pathname);
+      const linkHash=url.hash;
+      const isHome=!linkHash&&linkPath.endsWith("/enchanted-chronicles")&&current.endsWith("/enchanted-chronicles");
+      const isStories=linkHash==="#elenco"&&(current.includes("/stories/")||(current.endsWith("/enchanted-chronicles")&&window.location.hash==="#elenco"));
+      const isAbout=linkPath.endsWith("/about.html")&&current.endsWith("/about.html");
+      if(isHome||isStories||isAbout){
         link.classList.add("is-active");
         link.setAttribute("aria-current","page");
       }
