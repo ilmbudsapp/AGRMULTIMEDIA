@@ -300,6 +300,84 @@ button{font:inherit;cursor:pointer}
 }
 .footer-note a{color:var(--gold);font-weight:600}
 
+/* ── Story Section #1 ── */
+.story{
+  position:relative;
+  padding:clamp(64px,10vh,100px) 0;
+  background:linear-gradient(180deg,#070b1a 0%,#0a1028 40%,#0d0820 100%);
+  overflow:hidden;
+}
+.story::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse 60% 50% at 20% 30%,rgba(80,120,200,.08),transparent 60%);
+}
+.story__inner{
+  position:relative;z-index:1;
+  width:min(1200px,calc(100% - 48px));
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:minmax(280px,.85fr) 1.15fr;
+  gap:clamp(32px,5vw,64px);
+  align-items:start;
+}
+.story__cover-wrap{
+  position:sticky;top:80px;
+}
+.story__cover{
+  position:relative;border-radius:18px;overflow:hidden;
+}
+.story__cover-glow{
+  position:absolute;inset:-10%;
+  background:radial-gradient(circle at 50% 40%,rgba(244,199,107,.2) 0%,rgba(100,140,220,.12) 40%,transparent 65%);
+  filter:blur(28px);pointer-events:none;
+}
+.story__cover-particles{
+  position:absolute;inset:-15%;z-index:2;pointer-events:none;
+}
+.story__cover-particles i{
+  position:absolute;display:block;border-radius:50%;
+  background:var(--gold-soft);box-shadow:0 0 8px var(--gold-glow);
+  animation:orbitParticle 5s ease-in-out infinite;
+}
+.story__cover-particles i:nth-child(1){top:10%;left:8%;width:3px;height:3px}
+.story__cover-particles i:nth-child(2){top:30%;right:6%;width:4px;height:4px;animation-delay:.8s}
+.story__cover-particles i:nth-child(3){bottom:20%;left:4%;width:3px;height:3px;animation-delay:1.4s}
+.story__cover-particles i:nth-child(4){bottom:8%;right:12%;width:2px;height:2px;animation-delay:.5s}
+.story__cover img{
+  position:relative;z-index:1;
+  width:100%;border-radius:18px;
+  box-shadow:0 0 0 1px rgba(244,199,107,.12);
+}
+.story__label{
+  display:inline-block;
+  font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:12px;
+}
+.story__title{
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:clamp(2rem,4vw,3rem);
+  font-weight:800;line-height:1.1;
+  color:#fff;margin-bottom:28px;
+  background:linear-gradient(135deg,#fff,var(--gold-soft));
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.story__text{
+  font-size:clamp(.94rem,1.5vw,1.04rem);
+  line-height:1.85;color:var(--muted);
+}
+.story__text p{margin-bottom:1.15em}
+.story__text p:last-child{margin-bottom:0}
+.story__text em{color:var(--gold-soft);font-style:italic}
+.story__back{margin-top:40px}
+
+.reveal{
+  opacity:0;transform:translateY(28px);
+  transition:opacity .9s var(--ease-out),transform .9s var(--ease-out);
+}
+.reveal.is-visible{opacity:1;transform:none}
+.reveal--delay{transition-delay:.15s}
+
 @keyframes fadeUp{from{opacity:0;transform:translateY(36px)}to{opacity:1;transform:none}}
 @keyframes moonPulse{0%,100%{opacity:.85;transform:scale(1)}50%{opacity:1;transform:scale(1.04)}}
 @keyframes starsFloat{from{transform:translateY(0)}to{transform:translateY(-12px)}}
@@ -326,6 +404,9 @@ button{font:inherit;cursor:pointer}
   .hero__copy{order:1}.hero__visual{order:0}
   .showcase__arrow--prev{margin-left:-8px}
   .showcase__arrow--next{margin-right:-8px}
+  .story__inner{grid-template-columns:1fr}
+  .story__cover-wrap{position:relative;top:auto;max-width:min(360px,88vw);margin:0 auto}
+  .story__content{text-align:left}
 }
 @media(max-width:480px){
   .hero__actions{flex-direction:column;width:100%;max-width:300px;margin:0 auto}
@@ -373,8 +454,8 @@ button{font:inherit;cursor:pointer}
         <p><em>Enjoy this magical journey!</em></p>
       </div>
       <div class="hero__actions">
-        <a class="btn btn-primary" href="#read">Read the First Story</a>
-        <a class="btn btn-secondary" href="#tales">Explore All Tales</a>
+        <a class="btn btn-primary" href="#story-1">Read the First Story</a>
+        <a class="btn btn-secondary" href="#story-1">Explore All Tales</a>
       </div>
     </div>
 
@@ -414,6 +495,53 @@ button{font:inherit;cursor:pointer}
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="story" id="story-1">
+  <div class="story__inner">
+    <div class="story__cover-wrap reveal">
+      <div class="story__cover">
+        <div class="story__cover-glow" aria-hidden="true"></div>
+        <div class="story__cover-particles" aria-hidden="true">
+          <i></i><i></i><i></i><i></i>
+        </div>
+        <img src="/demo/enchanted-chronicles/images/midnight-fisherman.webp" alt="The Midnight Fisherman — story illustration" width="800" height="1000" loading="lazy" decoding="async">
+      </div>
+    </div>
+
+    <article class="story__content reveal reveal--delay">
+      <span class="story__label">Story #1</span>
+      <h2 class="story__title">The Midnight Fisherman</h2>
+      <div class="story__text">
+        <p>In the quiet, serene hours of the night, an old fisherman named Sabin set out on his small, weathered boat. The full moon hung high above the misty mountains, casting a soft glow over the calm, dark waters of the lake. Sabin, with his wrinkled face and wise, tired eyes, held a lantern in one hand. Its warm light flickered gently, painting dancing shadows across the surface of the water.</p>
+        <p>Sabin was poor, and his family depended on the fish he caught each night to survive. Despite his age and the chill of the night air, he ventured out evening after evening, hoping to bring home enough to feed his loved ones. His boat, though old, was sturdy—a faithful companion through countless nights on the lake.</p>
+        <p>As he rowed toward his favorite spot, the mist swirled around him, creating an ethereal atmosphere. The only sounds were the gentle lapping of water against the boat and the distant hoot of an owl. It was peaceful, almost magical—a stark contrast to the hardships he faced during the day.</p>
+        <p>Sabin cast his line into the water and watched it disappear into the inky depths. He waited patiently, his mind drifting to memories of laughter, joy, love, and loss. The lantern&rsquo;s glow illuminated his weathered face, revealing the determination etched into every line.</p>
+        <p>Minutes turned into hours. Then Sabin felt something strange—an energy in the air, as if the night itself was alive. The water beneath his boat began to ripple, and a faint, glowing light rose from the depths.</p>
+        <p>Intrigued and wary, Sabin leaned over the side of the boat. The glow grew brighter, illuminating the lake in an otherworldly shimmer. Something moved beneath the surface—large, graceful, and impossibly elegant. Its scales glimmered like diamonds.</p>
+        <p>Suddenly, the water erupted. A magnificent creature emerged—a being unlike anything Sabin had ever seen. It had the body of a fish, but wings that glowed with iridescent light. Its eyes were large, intelligent, and ancient. When it opened its mouth, a melodious voice filled the air.</p>
+        <p>&ldquo;Greetings, Sabin,&rdquo; the creature said, soothing yet powerful. &ldquo;I am Lyria, the Guardian of the Lake. You have shown great dedication and perseverance. Your courage has not gone unnoticed.&rdquo;</p>
+        <p>Sabin trembled, but an odd calm washed over him. &ldquo;What do you want from me, Lyria?&rdquo;</p>
+        <p>&ldquo;To share a secret,&rdquo; she replied. &ldquo;Deep within this lake lies a treasure that can change your fate. It grants wishes—but only to those pure of heart.&rdquo;</p>
+        <p>Sabin&rsquo;s mind raced. &ldquo;How can I find it?&rdquo;</p>
+        <p>Lyria&rsquo;s wings shimmered. &ldquo;Follow the light of the full moon. Trust your instincts. The journey will test your courage, your wisdom, and your heart. Only by remaining true to yourself will you unlock the treasure&rsquo;s power.&rdquo;</p>
+        <p>With that, Lyria descended into the depths, leaving Sabin alone with her words echoing in his mind.</p>
+        <p>The next night, Sabin prepared for his journey. Under the full moon, he set sail. The lake was eerily calm, thick with anticipation. Hours later, he reached a secluded part of the lake he had never explored. The air hummed with unseen energy.</p>
+        <p>A dense fog enveloped his boat. Shadowy figures emerged—ghostly apparitions whispering doubt and fear. &ldquo;Turn back, old man. You are not strong enough.&rdquo;</p>
+        <p>Sabin stood firm. &ldquo;I will not be swayed. I do this for my family.&rdquo; The apparitions faded. The fog lifted. Sabin had passed the first trial.</p>
+        <p>Days passed. Sabin pressed on, guided by moonlight. One night, he heard a sorrowful song. On a small island sat a siren, singing of lost love. She looked at him. &ldquo;Many have tried to reach the treasure. None succeeded. Will you?&rdquo;</p>
+        <p>&ldquo;I must,&rdquo; Sabin said. The siren gifted him a glowing amulet. &ldquo;This will light your path. Use it wisely.&rdquo; With renewed strength, Sabin continued.</p>
+        <p>He reached a forest of reeds and lilies. There he met Elysia, Guardian of the Forest. She led him to the Tree of Memories, where Sabin relived moments of joy and sorrow. The memory of his late wife, Alia, shone brightest. Her love gave him the key to continue.</p>
+        <p>Finally, Sabin reached a golden-lit clearing and a towering stone archway. A voice welcomed him to his final trial. He stepped through—and entered a surreal realm of illusions, puzzles, and shifting landscapes. He endured days of trials, driven by love for his family.</p>
+        <p>At last, he reached a golden tree. A wise sage emerged and handed him an ornate chest. &ldquo;You have proven worthy,&rdquo; the sage said. &ldquo;This treasure grants wishes—but its true power lies in the wisdom you gained.&rdquo;</p>
+        <p>Sabin returned to his boat as dawn broke. He rowed home, changed forever. His family embraced him with tears of joy. When he opened the chest, a warm golden light filled their home—a symbol of love, unity, and hope.</p>
+        <p>From that day forward, Sabin&rsquo;s family lived in abundance. And the Guardians watched over them, proud of the fisherman who faced the unknown and found the true treasure within himself.</p>
+      </div>
+      <div class="story__back">
+        <a class="btn btn-secondary" href="#hero">Back to Stories</a>
+      </div>
+    </article>
   </div>
 </section>
 
@@ -530,6 +658,16 @@ button{font:inherit;cursor:pointer}
 
   resize();initParts();draw();
   window.addEventListener("resize",()=>{resize();initParts()});
+
+  const reveals=document.querySelectorAll(".reveal");
+  if("IntersectionObserver" in window){
+    const io=new IntersectionObserver(entries=>{
+      entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("is-visible");io.unobserve(e.target)}});
+    },{threshold:.12,rootMargin:"0px 0px -40px 0px"});
+    reveals.forEach(el=>io.observe(el));
+  }else{
+    reveals.forEach(el=>el.classList.add("is-visible"));
+  }
 })();
 </script>
 </body>
