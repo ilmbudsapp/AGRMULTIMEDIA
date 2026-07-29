@@ -15,20 +15,24 @@
 <body>
 
 <header class="site-header">
-  <div class="demo-bar">Demo-Website · Privremeni preview · <span>AGRMULTIMEDIA</span></div>
+  <div class="demo-bar"><span data-i18n="demoBar">Demo-Website · Temporary preview ·</span> <span>AGRMULTIMEDIA</span></div>
   <div class="site-nav">
     <div class="site-nav__inner">
-      <a class="site-nav__brand" href="/demo/enchanted-chronicles/">The Enchanted Chronicles</a>
-      <button type="button" class="site-nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav-menu">
+      <a class="site-nav__brand" href="/demo/enchanted-chronicles/" data-i18n="nav.brand">The Enchanted Chronicles</a>
+      <div class="lang-switch" role="group" data-i18n-attr="aria-label:nav.language">
+        <button type="button" class="lang-switch__btn is-active" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" class="lang-switch__btn" data-lang="de" aria-pressed="false">DE</button>
+      </div>
+      <button type="button" class="site-nav__toggle" data-i18n-attr="aria-label:nav.openMenu" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav-menu">
         <span class="site-nav__toggle-bar"></span>
         <span class="site-nav__toggle-bar"></span>
         <span class="site-nav__toggle-bar"></span>
       </button>
-      <nav class="site-nav__panel" id="site-nav-menu" aria-label="Main navigation">
+      <nav class="site-nav__panel" id="site-nav-menu" data-i18n-attr="aria-label:nav.mainNav" aria-label="Main navigation">
         <ul class="site-nav__list">
-          <li><a class="site-nav__link" href="/demo/enchanted-chronicles/">Home Page</a></li>
-          <li><a class="site-nav__link" href="/demo/enchanted-chronicles/#elenco">Stories</a></li>
-          <li><a class="site-nav__link" href="/demo/enchanted-chronicles/about.html">About Me</a></li>
+          <li><a class="site-nav__link" href="/demo/enchanted-chronicles/" data-i18n="nav.home">Home Page</a></li>
+          <li><a class="site-nav__link" href="/demo/enchanted-chronicles/#elenco" data-i18n="nav.stories">Stories</a></li>
+          <li><a class="site-nav__link" href="/demo/enchanted-chronicles/about.html" data-i18n="nav.about">About Me</a></li>
         </ul>
       </nav>
     </div>
@@ -39,7 +43,7 @@
   <div class="story-page__top">
     <a class="story-page__back" href="/demo/enchanted-chronicles/#elenco">
       <svg viewBox="0 0 24 24"><path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
-      Back to Elenco
+      <span data-i18n="story.backToElenco">Back to Elenco</span>
     </a>
   </div>
 
@@ -135,6 +139,7 @@
   <p class="footer-note__credit">Web design by <a href="https://www.agrmultimedia.eu/" target="_blank" rel="noopener noreferrer">AGRMULTIMEDIA</a></p>
 </footer>
 
+<script src="/demo/enchanted-chronicles/assets/i18n.js" defer></script>
 <script src="/demo/enchanted-chronicles/assets/site.js" defer></script>
 </body>
 </html>

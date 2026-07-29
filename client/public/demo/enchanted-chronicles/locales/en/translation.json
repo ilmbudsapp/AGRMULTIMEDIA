@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "homeTitle": "The Enchanted Chronicles | Tales of Magic and Mystery",
+    "homeDescription": "Enchanted Chronicles — a magical collection of fantasy stories filled with adventure, heroes, mythical creatures, and enchanted worlds. Explore original tales crafted to inspire imagination, courage, and wonder.",
+    "aboutTitle": "About Me | The Enchanted Chronicles",
+    "aboutDescription": "Enchanted Chronicles — a magical collection of fantasy stories filled with adventure, heroes, mythical creatures, and enchanted worlds. Explore original tales crafted to inspire imagination, courage, and wonder."
+  },
+  "nav": {
+    "brand": "The Enchanted Chronicles",
+    "home": "Home Page",
+    "stories": "Stories",
+    "about": "About Me",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "mainNav": "Main navigation",
+    "language": "Language"
+  },
+  "demoBar": "Demo-Website · Temporary preview ·",
+  "hero": {
+    "eyebrow": "Enchanted Chronicles",
+    "title": "Welcome to Enchanted Chronicles",
+    "subtitle": "Where imagination becomes reality.",
+    "desc": "Where imagination awakens, magic breathes, and every story opens a doorway to wonder. Step into a world of enchanted forests, brave heroes, mythical creatures, and timeless adventures — crafted to inspire hearts of all ages. Your journey begins here.",
+    "btnFirstStory": "Read the First Story",
+    "btnExplore": "Explore All Tales",
+    "coverFrontAlt": "The Enchanted Chronicles — front cover",
+    "coverBackAlt": "The Enchanted Chronicles — back cover",
+    "prevCover": "Previous cover",
+    "nextCover": "Next cover",
+    "bookCovers": "Book covers",
+    "coverFront": "Front cover",
+    "coverBack": "Back cover"
+  },
+  "elenco": {
+    "label": "Stories",
+    "title": "Story Collection",
+    "sub": "Discover a growing library of magical tales filled with courage, mystery, friendship, and adventure. Each story is written with heart — created to inspire, uplift, and spark imagination.",
+    "intro": "Welcome to the Story Collection — the heart of Enchanted Chronicles. Here you'll find tales of bravery, kindness, mystery, and magic. Every story is a journey into a world where imagination has no limits, where heroes rise from unexpected places, and where hope shines even in the darkest forests. Choose your adventure and let the magic begin.",
+    "stats": "20 magical stories already published — and many more on the way. Explore the full collection and dive into a world of imagination and wonder.",
+    "storyNum": "Story #{{n}}",
+    "readTale": "Read tale"
+  },
+  "comingSoon": {
+    "label": "What's Next",
+    "title": "New Stories Coming Soon",
+    "desc": "The magic continues — new adventures, new heroes, and new enchanted worlds are already in the making. Stay tuned for upcoming tales that will expand the universe of Enchanted Chronicles."
+  },
+  "missionVision": {
+    "label": "Our Purpose",
+    "title": "Mission & Vision",
+    "missionTitle": "Mission",
+    "missionText": "Our mission is to create magical stories that inspire courage, kindness, imagination, and emotional connection — offering readers of all ages a place where wonder feels real.",
+    "visionTitle": "Vision",
+    "visionText": "Our vision is to build a global home for timeless tales that touch hearts across generations, creating a universe where magic, storytelling, and creativity thrive together."
+  },
+  "about": {
+    "label": "About",
+    "title": "About Me",
+    "lead": "Learn more about the creator behind Enchanted Chronicles — the storyteller who brings these magical worlds to life.",
+    "text1": "My name is Agron — and I create worlds. For as long as I can remember, stories have been my way of capturing emotion, imagination, and the beauty of human courage. Enchanted Chronicles is my personal universe: a place where magic lives in every forest, where heroes rise from ordinary lives, and where every tale carries a message of hope, kindness, and adventure.",
+    "text2": "I write to inspire. I write to remind people that bravery comes in many forms, that imagination is a gift, and that even the smallest spark can light up the darkest night. Thank you for being part of this journey. May these stories bring you the same joy and wonder that creating them brought to me.",
+    "teaserDesc": "Learn more about the creator behind Enchanted Chronicles — the storyteller who brings these magical worlds to life.",
+    "btnMeet": "Meet the Storyteller"
+  },
+  "newsletter": {
+    "label": "Stay Connected",
+    "title": "Join the Adventure",
+    "desc": "Join the adventure — receive new stories, magical updates, behind-the-scenes insights, and exclusive content delivered straight to your inbox. Become part of the Enchanted Chronicles community and never miss a new tale.",
+    "emailLabel": "Email address",
+    "placeholder": "Your email address",
+    "submit": "Subscribe",
+    "thanks": "Thank you!",
+    "formLabel": "Newsletter signup"
+  },
+  "support": {
+    "label": "Support",
+    "title": "Support the Author",
+    "desc": "If these stories inspire you, consider supporting the author. Your kindness helps keep the magic alive and allows new tales to be written.",
+    "donate": "Donate via PayPal"
+  },
+  "footer": {
+    "ctaBefore": "Support the magic —",
+    "ctaLink": "donate via PayPal",
+    "ctaAfter": "and help new stories come to life.",
+    "copy": "© Enchanted Chronicles — Crafted with imagination and heart. All stories are original works created to inspire wonder and adventure."
+  },
+  "story": {
+    "backToElenco": "Back to Elenco"
+  }
+}

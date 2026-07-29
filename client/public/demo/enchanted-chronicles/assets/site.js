@@ -8,16 +8,19 @@
   const links=header?[...header.querySelectorAll(".site-nav__link")]:[];
 
   if(header&&toggle&&panel){
+    function menuLabel(open){
+      return window.ecT?window.ecT(open?"nav.closeMenu":"nav.openMenu"):(open?"Close menu":"Open menu");
+    }
     function closeNav(){
       header.classList.remove("is-open");
       toggle.setAttribute("aria-expanded","false");
-      toggle.setAttribute("aria-label","Open menu");
+      toggle.setAttribute("aria-label",menuLabel(false));
       document.body.classList.remove("nav-open");
     }
     function openNav(){
       header.classList.add("is-open");
       toggle.setAttribute("aria-expanded","true");
-      toggle.setAttribute("aria-label","Close menu");
+      toggle.setAttribute("aria-label",menuLabel(true));
       document.body.classList.add("nav-open");
     }
     function onToggle(e){
@@ -36,6 +39,10 @@
     });
     window.matchMedia("(min-width:769px)").addEventListener("change",e=>{
       if(e.matches)closeNav();
+    });
+    window.addEventListener("ec:languagechange",()=>{
+      if(header.classList.contains("is-open"))toggle.setAttribute("aria-label",menuLabel(true));
+      else toggle.setAttribute("aria-label",menuLabel(false));
     });
   }
 
@@ -127,12 +134,13 @@
       const input=form.querySelector(".newsletter__input");
       const btn=form.querySelector(".newsletter__submit");
       if(!input||!input.value.trim())return;
-      const prev=btn.textContent;
-      btn.textContent="Thank you!";
+      const thanks=window.ecT?window.ecT("newsletter.thanks"):"Thank you!";
+      const submitLabel=window.ecT?window.ecT("newsletter.submit"):btn.textContent;
+      btn.textContent=thanks;
       btn.disabled=true;
       input.disabled=true;
       setTimeout(()=>{
-        btn.textContent=prev;
+        btn.textContent=submitLabel;
         btn.disabled=false;
         input.disabled=false;
         input.value="";
