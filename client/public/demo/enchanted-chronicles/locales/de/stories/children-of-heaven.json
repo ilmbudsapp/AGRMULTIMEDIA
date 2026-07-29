@@ -1,76 +1,266 @@
 {
   "slug": "children-of-heaven",
-  "metaTitle": "Children of Heaven | The Enchanted Chronicles",
-  "metaDescription": "Children of Heaven — a magical tale from The Enchanted Chronicles by Agron Osmani.",
-  "label": "Story #5",
-  "title": "Children of Heaven",
-  "coverAlt": "Children of Heaven — story illustration",
-  "parts": [
-    "The Heavenly Realm",
-    "The Wonders of Heaven",
-    "Back on Earth",
-    "Messages from Heaven",
-    "Eternal Peace",
-    "Epilogue — The Eternal Guide"
+  "number": 5,
+  "metaTitle": "Kinder des Himmels | The Enchanted Chronicles",
+  "metaDescription": "Kinder des Himmels — eine magische Geschichte aus The Enchanted Chronicles von Agron Osmani.",
+  "label": "Geschichte #5",
+  "title": "Kinder des Himmels",
+  "cardTitle": "Kinder des Himmels",
+  "excerpt": "Marko, ein neunjähriger Junge mit hellen Augen und blondem Haar, lebte in einem kleinen, gemütlichen Haus mit seiner Familie. Er liebte einfache Freuden…",
+  "coverAlt": "Kinder des Himmels — Geschichtenillustration",
+  "blocks": [
+    {
+      "type": "p",
+      "text": "Marko, ein neunjähriger Junge mit hellen Augen und blondem Haar, lebte in einem kleinen, gemütlichen Haus mit seiner Familie. Er liebte einfache Freuden — Fußball spielen mit Freunden, Parks erkunden, auf Bäume klettern und durch enge Gassen beim Versteckspiel rennen. Sein Lachen hallte durch die Nachbarschaft und erfüllte sie mit Leben."
+    },
+    {
+      "type": "p",
+      "text": "Ana, ein achtjähriges Mädchen mit goldenem Haar und einem strahlenden Lächeln, lebte nebenan mit ihrer Mutter und Großmutter. Sie liebte Zeichnen und Malen und verbrachte Stunden damit, farbenfrohe Bilder von allem um sie herum zu erschaffen. Ana und Marko waren unzertrennlich — beste Freunde, die Nachmittage im Garten verbrachten oder Geschichten unter der alten Eiche teilten."
+    },
+    {
+      "type": "p",
+      "text": "Trotz des drohenden Krieges blieb ihre Nachbarschaft eine Oase der Unschuld. Ihre Familien waren eng verbunden und teilten oft Mahlzeiten und Feiern. Markos jüngere Schwester liebte Anas Zeichnungen, und Anas Großmutter wachte liebevoll über sie und erzählte Geschichten aus ihrer eigenen Kindheit."
+    },
+    {
+      "type": "p",
+      "text": "Aber als der Krieg näher rückte, begann sich das Leben zu verändern. Das ferne Grollen von Explosionen und das Dröhnen von Flugzeugen über ihnen wurden häufiger. Markos Vater warnte ihn, sich von Fenstern fernzuhalten. Anas Mutter tröstete sie mit Geschichten und versuchte, ihre Angst zu maskieren."
+    },
+    {
+      "type": "p",
+      "text": "An einem schicksalhaften Tag heulten die Sirenen lauter als je zuvor. Rauch verdunkelte den Himmel. Beide Familien eilten in Deckung, als die Bombardierung begann. Der Boden bebte heftig."
+    },
+    {
+      "type": "p",
+      "text": "Und dann — wurde alles dunkel."
+    },
+    {
+      "type": "part",
+      "text": "Das Himmlische Reich"
+    },
+    {
+      "type": "p",
+      "text": "Marko und Ana öffneten ihre Augen an einem heiteren, atemberaubenden Ort. Üppiges grünes Gras erstreckte sich endlos, Blumen parfümierten die Luft, und der Himmel strahlte in perfektem Blau. Sie fühlten Frieden, wie sie ihn noch nie gekannt hatten."
+    },
+    {
+      "type": "p",
+      "text": "„Wo sind wir?", flüsterte Ana."
+    },
+    {
+      "type": "p",
+      "text": "„Ich weiß es nicht", antwortete Marko leise. „Aber… es fühlt sich sicher an.""
+    },
+    {
+      "type": "p",
+      "text": "Tiere versammelten sich um sie herum — Rehe, Kaninchen, Vögel, sogar wilde Kreaturen — ruhig und sanft, angezogen von der Präsenz der Kinder."
+    },
+    {
+      "type": "p",
+      "text": "Ein alter Mann mit langem weißen Bart näherte sich, sein Lächeln war warm und gütig. Es war Abraham, der biblische Patriarch."
+    },
+    {
+      "type": "p",
+      "text": "„Willkommen, Kinder", sagte er sanft. „Wie seid ihr hierher gekommen?""
+    },
+    {
+      "type": "p",
+      "text": "Marko zögerte. „Wir… wissen es nicht. Alles wurde dunkel, und dann waren wir hier.""
+    },
+    {
+      "type": "p",
+      "text": "Abraham nickte. „Ihr seid jetzt im Himmel — einem Ort des Friedens, der Schönheit und der Sicherheit. Ihr seid frei von Angst.""
+    },
+    {
+      "type": "p",
+      "text": "Die Erkenntnis überkam sie langsam. Sie waren nicht mehr auf der Erde. Aber sie waren zusammen, und sie waren sicher."
+    },
+    {
+      "type": "p",
+      "text": "Ein Reh trat vor. „Wie war euer Leben auf der Erde?""
+    },
+    {
+      "type": "p",
+      "text": "Marko sprach zuerst. „Ich lebte mit meiner Mama, Papa und kleiner Schwester. Ich liebte Fußball und die Erkundung von Parks. Aber als der Krieg begann, änderte sich alles. Wir waren immer vorsichtig.""
+    },
+    {
+      "type": "p",
+      "text": "Ana fügte leise hinzu: „Ich lebte mit meiner Mama und Oma. Ich liebte das Zeichnen. Sie versuchten, mich ruhig zu halten, wenn die Sirenen heulten… aber ich konnte sehen, wie verängstigt sie waren.""
+    },
+    {
+      "type": "p",
+      "text": "Abraham hörte mit Tränen in den Augen zu — bewegt von ihrer Unschuld und ihrem Mut."
+    },
+    {
+      "type": "p",
+      "text": "„Ihr habt viel ertragen", sagte er. „Aber hier werdet ihr Frieden finden.""
+    },
+    {
+      "type": "part",
+      "text": "Die Wunder Des Himmels"
+    },
+    {
+      "type": "p",
+      "text": "Abraham führte sie durch die Schönheit des Himmels — Gärten, die mit leuchtenden Blumen glühten, Seen, die wie Kristall schimmerten, Bäume, die Melodien der Harmonie flüsterten."
+    },
+    {
+      "type": "p",
+      "text": "Vögel in allen Farben sangen über ihnen. Schmetterlinge tanzten in der Luft. Tiere folgten ihnen liebevoll."
+    },
+    {
+      "type": "p",
+      "text": "„Im Himmel", sagte Abraham, „existiert alles in perfekter Harmonie.""
+    },
+    {
+      "type": "p",
+      "text": "Eine weise Eule fragte: „Was vermisst ihr am meisten von der Erde?""
+    },
+    {
+      "type": "p",
+      "text": "Marko lächelte traurig. „Fußball spielen mit meinen Freunden… und das Lachen meiner kleinen Schwester.""
+    },
+    {
+      "type": "p",
+      "text": "Ana flüsterte: „Zeichnen. Malen. Und die Geschichten, die mir meine Mama und Oma erzählten.""
+    },
+    {
+      "type": "p",
+      "text": "Abraham legte eine sanfte Hand auf ihre Schultern. „Ihr werdet hier neue Erinnerungen schaffen — schöne.""
+    },
+    {
+      "type": "p",
+      "text": "Sie besuchten den Baum der Erinnerungen, dessen Stamm mit Geschichten von Seelen beschnitzt war, die im Himmel Frieden gefunden hatten."
+    },
+    {
+      "type": "p",
+      "text": "„Ihr werdet eines Tages eure eigenen Erinnerungen hinzufügen", sagte Abraham."
+    },
+    {
+      "type": "p",
+      "text": "Sie wateten durch einen Kristallfluss, begrüßten Tiere am gegenüberliegenden Ufer und erkundeten Wiesen voller leuchtender Blumen."
+    },
+    {
+      "type": "p",
+      "text": "Marko und Ana fühlten, wie Freude in ihnen aufblühte — reine, friedliche, unbeschwerte Freude."
+    },
+    {
+      "type": "part",
+      "text": "Zurück Auf Der Erde"
+    },
+    {
+      "type": "p",
+      "text": "Währenddessen ertrank die Erde in Verwüstung."
+    },
+    {
+      "type": "p",
+      "text": "Markos Eltern suchten durch Trümmer und riefen seinen Namen. Die Schreie seiner Mutter hallten durch die Ruinen."
+    },
+    {
+      "type": "p",
+      "text": "Sein Vater hob eine Platte Schutt — und fand Markos leblosen Körper darunter. Ihre Herzen zersplitterten."
+    },
+    {
+      "type": "p",
+      "text": "In der Nähe fand Anas Großmutter Anas kleinen Körper unter einem gefallenen Stein. Sie brach zusammen und hielt ihre Enkelin in den Armen."
+    },
+    {
+      "type": "p",
+      "text": "Nachbarn versammelten sich und halfen den trauernden Familien, die Kinder für die Bestattung vorzubereiten. Die Gemeinschaft trauerte tief."
+    },
+    {
+      "type": "p",
+      "text": "Bei der Beerdigung waren die kleinen Särge mit Blumen bedeckt. Markos Vater sprach durch Tränen: „Marko war ein strahlendes Licht. Wir werden ihn jeden Tag vermissen.""
+    },
+    {
+      "type": "p",
+      "text": "Anas Mutter flüsterte: „Ana brachte Schönheit in die Welt. Ihr Geist wird weiterleben.""
+    },
+    {
+      "type": "p",
+      "text": "Die Särge wurden in die Erde gesenkt, während Gebete die Luft erfüllten."
+    },
+    {
+      "type": "part",
+      "text": "Botschaften Aus Dem Himmel"
+    },
+    {
+      "type": "p",
+      "text": "Im Himmel landeten zwei weiße Tauben neben Abraham."
+    },
+    {
+      "type": "p",
+      "text": "„Die Kinder wurden begraben", sagte eine Taube leise. „Ihre Familien trauern.""
+    },
+    {
+      "type": "p",
+      "text": "Abraham schrieb zwei Botschaften:"
+    },
+    {
+      "type": "p",
+      "text": "„Marko ist im Himmel. Er hat Frieden, Ruhe und Glück gefunden." — Abraham"
+    },
+    {
+      "type": "p",
+      "text": "„Ana ist im Himmel. Sie hat Frieden, Ruhe und Glück gefunden." — Abraham"
+    },
+    {
+      "type": "p",
+      "text": "Er band jede Botschaft an das Bein einer Taube."
+    },
+    {
+      "type": "p",
+      "text": "„Geht", sagte er. „Bringt Trost.""
+    },
+    {
+      "type": "p",
+      "text": "Die Tauben flogen zur Erde hinab und überbrachten die Botschaften an die trauernden Familien."
+    },
+    {
+      "type": "part",
+      "text": "Ewiger Frieden"
+    },
+    {
+      "type": "p",
+      "text": "Marko und Ana erkundeten weiter den Himmel — entdeckten Wasserfälle, verborgene Haine und endlose Felder voller Blumen. Sie fühlten sich sicher, geliebt und frei."
+    },
+    {
+      "type": "p",
+      "text": "Abraham wachte über sie mit einem zärtlichen Lächeln."
+    },
+    {
+      "type": "p",
+      "text": "„Ihr seid bemerkenswerte Seelen", sagte er. „Hier werdet ihr wahres Glück finden.""
+    },
+    {
+      "type": "p",
+      "text": "Als die Sonne in einer Feuersbrunst von Farben unterging, versammelte Abraham die Kinder und Tiere."
+    },
+    {
+      "type": "p",
+      "text": "„Im Himmel", sagte er, „findet jede Seele ihren Platz. Ihr seid Teil einer größeren Harmonie.""
+    },
+    {
+      "type": "p",
+      "text": "Marko und Ana sahen sich an, ihre Herzen voller Dankbarkeit."
+    },
+    {
+      "type": "p",
+      "text": "Sie wussten, dass sie zu Hause waren."
+    },
+    {
+      "type": "part",
+      "text": "Epilog — Der Ewige Führer"
+    },
+    {
+      "type": "p",
+      "text": "Im Himmel wird jedes Kind von Abraham begrüßt. Er wird ihr Führer, Beschützer und Freund."
+    },
+    {
+      "type": "p",
+      "text": "Krieg ist eine schreckliche Sache. Aber jedes durch Krieg verlorene Kind findet einen verdienten Platz im Himmel — einen Ort des Friedens, der Schönheit und der Liebe."
+    },
+    {
+      "type": "p",
+      "text": "Ihre Geister leuchten hell, für immer sicher, für immer geliebt."
+    }
   ],
-  "paragraphs": [
-    "Marko, a nine‑year‑old boy with bright eyes and yellow hair, lived in a small, cozy house with his family. He loved simple joys—playing soccer with friends, exploring parks, climbing trees, and racing through narrow streets during hide‑and‑seek. His laughter echoed through the neighborhood, filling it with life.",
-    "Ana, an eight‑year‑old girl with golden hair and a radiant smile, lived next door with her mother and grandmother. She adored drawing and painting, spending hours creating colorful pictures of everything around her. Ana and Marko were inseparable—best friends who spent afternoons in the garden or shared stories beneath the old oak tree.",
-    "Despite the looming war, their neighborhood remained a pocket of innocence. Their families were close, often sharing meals and celebrations. Marko's younger sister adored Ana's drawings, and Ana's grandmother watched over them lovingly, telling stories from her own childhood.",
-    "But as the war crept closer, life began to change. The distant rumble of explosions and the roar of planes overhead became more frequent. Marko's father warned him to stay away from windows. Ana's mother comforted her with stories, trying to mask her fear.",
-    "One fateful day, the sirens wailed louder than ever. Smoke darkened the sky. Both families rushed to take shelter as the bombing began. The ground shook violently.",
-    "And then—everything went dark.",
-    "Marko and Ana opened their eyes in a serene, breathtaking place. Lush green grass stretched endlessly, flowers perfumed the air, and the sky shone a perfect blue. They felt peace unlike anything they had ever known.",
-    "\"Where are we?\" Ana whispered.",
-    "\"I don't know,\" Marko replied softly. \"But... it feels safe.\"",
-    "Animals gathered around them—deer, rabbits, birds, even wild creatures—calm and gentle, drawn to the children's presence.",
-    "An old man with a long white beard approached, his smile warm and kind. It was Abraham, the biblical patriarch.",
-    "\"Welcome, children,\" he said gently. \"How did you come to be here?\"",
-    "Marko hesitated. \"We... don't know. Everything went dark, and then we were here.\"",
-    "Abraham nodded. \"You are in heaven now—a place of peace, beauty, and safety. You are free from fear.\"",
-    "The realization washed over them slowly. They were no longer on Earth. But they were together, and they were safe.",
-    "A deer stepped forward. \"What was your life like on Earth?\"",
-    "Marko spoke first. \"I lived with my mom, dad, and little sister. I loved soccer and exploring parks. But when the war started, everything changed. We were always careful.\"",
-    "Ana added softly, \"I lived with my mom and grandma. I loved drawing. They tried to keep me calm when the sirens wailed... but I could see how scared they were.\"",
-    "Abraham listened with tears in his eyes—moved by their innocence and bravery.",
-    "\"You have endured much,\" he said. \"But here, you will find peace.\"",
-    "Abraham guided them through heaven's beauty—gardens glowing with vibrant flowers, lakes shimmering like crystal, trees whispering melodies of harmony.",
-    "Birds of every color sang overhead. Butterflies danced in the air. Animals followed them lovingly.",
-    "\"In heaven,\" Abraham said, \"everything exists in perfect harmony.\"",
-    "A wise owl asked, \"What do you miss most from Earth?\"",
-    "Marko smiled sadly. \"Playing soccer with my friends... and my little sister's laughter.\"",
-    "Ana whispered, \"Drawing. Painting. And the stories my mom and grandma told me.\"",
-    "Abraham placed a gentle hand on their shoulders. \"You will create new memories here—beautiful ones.\"",
-    "They visited the Tree of Memories, its trunk carved with stories of souls who found peace in heaven.",
-    "\"You will add your own memories someday,\" Abraham said.",
-    "They waded through a crystal river, greeted animals on the opposite bank, and explored meadows filled with glowing flowers.",
-    "Marko and Ana felt joy blooming inside them—pure, peaceful, unburdened joy.",
-    "Meanwhile, Earth was drowning in devastation.",
-    "Marko's parents searched through rubble, calling his name. His mother's cries echoed through the ruins.",
-    "His father lifted a slab of debris—and found Marko's lifeless body beneath it. Their hearts shattered.",
-    "Nearby, Ana's grandmother found Ana's small body under a fallen stone. She collapsed, cradling her granddaughter in her arms.",
-    "Neighbors gathered, helping the grieving families prepare the children for burial. The community mourned deeply.",
-    "At the funeral, the small coffins were covered in flowers. Marko's father spoke through tears: \"Marko was a bright light. We will miss him every day.\"",
-    "Ana's mother whispered, \"Ana brought beauty into the world. Her spirit will live on.\"",
-    "The coffins were lowered into the ground as prayers filled the air.",
-    "In heaven, two white doves landed beside Abraham.",
-    "\"The children have been buried,\" one dove said softly. \"Their families are grieving.\"",
-    "Abraham wrote two messages:",
-    "\"Marko is in heaven. He has found peace, tranquility, and happiness.\" — Abraham",
-    "\"Ana is in heaven. She has found peace, tranquility, and happiness.\" — Abraham",
-    "He tied each message to a dove's leg.",
-    "\"Go,\" he said. \"Bring comfort.\"",
-    "The doves flew down to Earth, delivering the messages to the grieving families.",
-    "Marko and Ana continued exploring heaven—discovering waterfalls, hidden groves, and endless fields of flowers. They felt safe, loved, and free.",
-    "Abraham watched over them with a tender smile.",
-    "\"You are remarkable souls,\" he said. \"Here, you will find true happiness.\"",
-    "As the sun set in a blaze of colors, Abraham gathered the children and animals.",
-    "\"In heaven,\" he said, \"every soul finds its place. You are part of a greater harmony.\"",
-    "Marko and Ana looked at each other, hearts full of gratitude.",
-    "They knew they were home.",
-    "In heaven, every child is greeted by Abraham. He becomes their guide, protector, and friend.",
-    "War is a terrible thing. But every child lost to war finds a deserved place in heaven—a place of peace, beauty, and love.",
-    "Their spirits shine brightly, forever safe, forever cherished."
-  ],
-  "backToStories": "Back to Stories"
+  "backToStories": "Zurück zu den Geschichten"
 }
