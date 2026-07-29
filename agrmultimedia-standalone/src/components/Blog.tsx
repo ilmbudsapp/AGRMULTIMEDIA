@@ -1,0 +1,180 @@
+import { ArrowRight } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { Link } from "wouter";
+import AuthorByline from "@/components/AuthorByline";
+import { BLOG_POSTS_DE } from "@/data/blogPostsDe";
+
+type BlogProps = { asPage?: boolean };
+
+type BlogPostCard = {
+  id: number;
+  slug: string;
+  title: string;
+  description: string;
+  image: string;
+  imageAlt?: string;
+  category: string;
+  date: string;
+  categoryColor: string;
+};
+
+export default function Blog({ asPage = false }: BlogProps) {
+  const { t, currentLanguage } = useLanguage();
+  
+  const legacyPosts: BlogPostCard[] = [
+    {
+      id: 1,
+      slug: "digital-marketing-trends-2024",
+      title: t.blog.posts.trends.title,
+      description: t.blog.posts.trends.description,
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
+      imageAlt: "Digital marketing analytics workspace — blog cover",
+      category: t.blog.posts.trends.category,
+      date: "07.03.2026",
+      categoryColor: "bg-electric-blue"
+    },
+    {
+      id: 2,
+      slug: "website-conversion-optimization",
+      title: t.blog.posts.conversion.title,
+      description: t.blog.posts.conversion.description,
+      image: "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
+      imageAlt: "UX and web design conversion optimization — blog cover",
+      category: t.blog.posts.conversion.category,
+      date: "07.03.2026",
+      categoryColor: "bg-purple-500"
+    },
+    {
+      id: 3,
+      slug: "video-marketing-power",
+      title: t.blog.posts.video.title,
+      description: t.blog.posts.video.description,
+      image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
+      imageAlt: "Video marketing and AI multimedia production — blog cover",
+      category: t.blog.posts.video.category,
+      date: "07.03.2026",
+      categoryColor: "bg-red-500"
+    },
+    {
+      id: 4,
+      slug: "food-truck-web-500",
+      title: t.blog.posts.foodTruck.title,
+      description: t.blog.posts.foodTruck.description,
+      image: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
+      imageAlt: "Food truck business and local web design Geislingen — blog cover",
+      category: t.blog.posts.foodTruck.category,
+      date: "07.03.2026",
+      categoryColor: "bg-green-500"
+    }
+  ];
+
+  const germanPosts: BlogPostCard[] = BLOG_POSTS_DE.map((post, i) => ({
+    id: 100 + i,
+    slug: post.slug,
+    title: post.title,
+    description: post.description,
+    image: post.image,
+    imageAlt: post.imageAlt,
+    category: post.category,
+    date: post.date,
+    categoryColor: "bg-electric-blue",
+  }));
+
+  const blogPosts =
+    currentLanguage === "de"
+      ? [...germanPosts, ...legacyPosts]
+      : legacyPosts;
+
+  return (
+    <section id="blog" className="py-24 bg-[#f0eff7]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <p className="text-electric-blue font-semibold text-sm uppercase tracking-[0.2em] mb-3">{t.nav.blog}</p>
+          {asPage ? (
+            <h1 className="text-4xl md:text-5xl font-extrabold text-navy mb-4 tracking-tight" data-testid="blog-title">
+              {t.blog.title}
+            </h1>
+          ) : (
+            <h2 className="text-4xl md:text-5xl font-extrabold text-navy mb-4 tracking-tight" data-testid="blog-title">
+              {t.blog.title}
+            </h2>
+          )}
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto" data-testid="blog-subtitle">
+            {t.blog.subtitle}
+          </p>
+          {asPage ? (
+            <div className="mt-8 max-w-3xl mx-auto">
+              <AuthorByline variant="darkOnLight" />
+            </div>
+          ) : null}
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {blogPosts.map((post) => (
+            <article 
+              key={post.id} 
+              className="bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover-scale"
+              data-testid={`blog-post-${post.id}`}
+            >
+              <img 
+                src={post.image} 
+                alt={post.imageAlt ?? post.title} 
+                loading="lazy"
+                decoding="async"
+                className="w-full h-48 object-cover"
+                data-testid={`blog-post-image-${post.id}`}
+              />
+              <div className="p-6">
+                <div className="flex items-center mb-4">
+                  <span 
+                    className={`${post.categoryColor} text-white text-xs px-3 py-1 rounded-full`}
+                    data-testid={`blog-post-category-${post.id}`}
+                  >
+                    {post.category}
+                  </span>
+                  <span 
+                    className="text-gray-500 text-sm ml-auto"
+                    data-testid={`blog-post-date-${post.id}`}
+                  >
+                    {post.date}
+                  </span>
+                </div>
+                <h3 
+                  className="text-xl font-semibold text-navy mb-3"
+                  data-testid={`blog-post-title-${post.id}`}
+                >
+                  {post.title}
+                </h3>
+                <p 
+                  className="text-gray-600 mb-4"
+                  data-testid={`blog-post-description-${post.id}`}
+                >
+                  {post.description}
+                </p>
+                <Link href={`/blog/${post.slug}`}>
+                  <button 
+                    type="button"
+                    className="inline-flex items-center text-electric-blue font-semibold hover:text-purple-500 transition-colors duration-300"
+                    data-testid={`blog-post-cta-${post.id}`}
+                    aria-label={`${t.blog.readMore}: ${post.title}`}
+                  >
+                    {t.blog.readMore} <ArrowRight className="w-4 h-4 ml-2" aria-hidden />
+                  </button>
+                </Link>
+              </div>
+            </article>
+          ))}
+        </div>
+        
+        <div className="text-center mt-12">
+          <button 
+            className="bg-gradient-to-r from-electric-blue to-purple-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300"
+            data-testid="blog-view-all-cta"
+          >
+            {t.blog.viewAll}
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+}

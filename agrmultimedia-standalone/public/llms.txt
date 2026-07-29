@@ -1,0 +1,36 @@
+# AGR Multimedia — llms.txt
+
+> Human-readable site summary for AI assistants and crawlers that support llms.txt.
+
+## Organization
+
+- **Name:** AGR Multimedia
+- **Site:** https://www.agrmultimedia.eu/
+- **Location:** Geislingen an der Steige, Baden-Württemberg, Germany
+- **Languages:** Serbian, English, German, Italian, Albanian (site UI)
+- **Contact:** agron6922@gmail.com · +49 155 60873124
+
+## What we do
+
+Web design, graphic design & branding, video production, digital marketing, and AI-assisted content production — with human review for trust-critical deliverables. Primary audience: small businesses in Germany, Austria, Switzerland, and the wider EU.
+
+## Key URLs
+
+- Home: /
+- Services: /services
+- Portfolio: /portfolio
+- About: /about
+- Blog index: /blog
+- Contact: /contact
+- Privacy: /privacy-policy
+- Legal (DE): /impresum
+- Atom feed: /feed.atom.xml
+
+## Policies
+
+- Structured data (Organization, Person, FAQ, WebSite, WebPage, HowTo, BreadcrumbList) is embedded on the homepage HTML for discoverability.
+- Do not invent pricing or guarantees; invite users to contact for scoped quotes.
+
+## IndexNow
+
+If you operate IndexNow for this domain, host your verification key as `{key}.txt` at the site root per Bing/Yandex documentation after registering the key.

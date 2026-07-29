@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "homeTitle": "The Enchanted Chronicles | Geschichten voller Magie und Geheimnis",
+    "homeDescription": "Enchanted Chronicles — eine magische Sammlung fantasyvoller Geschichten voller Abenteuer, Helden, mythischer Wesen und verzauberter Welten. Entdecke originelle Erzählungen, die Fantasie, Mut und Staunen wecken.",
+    "aboutTitle": "Über mich | The Enchanted Chronicles",
+    "aboutDescription": "Enchanted Chronicles — eine magische Sammlung fantasyvoller Geschichten voller Abenteuer, Helden, mythischer Wesen und verzauberter Welten. Entdecke originelle Erzählungen, die Fantasie, Mut und Staunen wecken."
+  },
+  "nav": {
+    "brand": "The Enchanted Chronicles",
+    "home": "Startseite",
+    "stories": "Geschichten",
+    "about": "Über mich",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen",
+    "mainNav": "Hauptnavigation",
+    "language": "Sprache"
+  },
+  "demoBar": "Demo-Website · Vorübergehende Vorschau ·",
+  "hero": {
+    "eyebrow": "Die Verzauberten Chroniken",
+    "title": "Willkommen bei den Verzauberten Chroniken",
+    "subtitle": "Wo Fantasie Wirklichkeit wird.",
+    "desc": "Wo Fantasie erwacht, Magie atmet und jede Geschichte eine Tür zum Staunen öffnet. Betritt eine Welt verzauberter Wälder, mutiger Helden, mythischer Kreaturen und zeitloser Abenteuer — geschaffen, um Herzen jeden Alters zu berühren. Deine Reise beginnt hier.",
+    "btnFirstStory": "Erste Geschichte lesen",
+    "btnExplore": "Alle Geschichten entdecken",
+    "coverFrontAlt": "The Enchanted Chronicles — Vorderseite",
+    "coverBackAlt": "The Enchanted Chronicles — Rückseite",
+    "prevCover": "Vorheriges Cover",
+    "nextCover": "Nächstes Cover",
+    "bookCovers": "Buchcover",
+    "coverFront": "Vorderseite",
+    "coverBack": "Rückseite"
+  },
+  "elenco": {
+    "label": "Geschichten",
+    "title": "Geschichtensammlung",
+    "sub": "Entdecke eine wachsende Bibliothek magischer Erzählungen voller Mut, Geheimnis, Freundschaft und Abenteuer. Jede Geschichte ist mit Herz geschrieben — um zu inspirieren, zu erheben und die Fantasie zu entfachen.",
+    "intro": "Willkommen in der Geschichtensammlung — dem Herzen von Enchanted Chronicles. Hier findest du Erzählungen von Tapferkeit, Güte, Geheimnis und Magie. Jede Geschichte ist eine Reise in eine Welt ohne Grenzen der Fantasie, in der Helden aus unerwarteten Orten hervorgehen und Hoffnung selbst in den dunkelsten Wäldern leuchtet. Wähle dein Abenteuer und lass die Magie beginnen.",
+    "stats": "20 magische Geschichten bereits veröffentlicht — und viele weitere folgen. Entdecke die gesamte Sammlung und tauche ein in eine Welt voller Fantasie und Staunen.",
+    "storyNum": "Geschichte Nr. {{n}}",
+    "readTale": "Geschichte lesen"
+  },
+  "comingSoon": {
+    "label": "Was kommt als Nächstes",
+    "title": "Neue Geschichten demnächst",
+    "desc": "Die Magie geht weiter — neue Abenteuer, neue Helden und neue verzauberte Welten entstehen bereits. Bleib gespannt auf kommende Erzählungen, die das Universum von Enchanted Chronicles erweitern."
+  },
+  "missionVision": {
+    "label": "Unser Anliegen",
+    "title": "Mission & Vision",
+    "missionTitle": "Mission",
+    "missionText": "Unsere Mission ist es, magische Geschichten zu schaffen, die Mut, Güte, Fantasie und emotionale Verbundenheit inspirieren — und Lesern jeden Alters einen Ort zu bieten, an dem Wunder greifbar wirken.",
+    "visionTitle": "Vision",
+    "visionText": "Unsere Vision ist es, ein globales Zuhause für zeitlose Erzählungen zu schaffen, die Herzen über Generationen hinweg berühren — ein Universum, in dem Magie, Geschichtenerzählen und Kreativität gemeinsam gedeihen."
+  },
+  "about": {
+    "label": "Über mich",
+    "title": "Über mich",
+    "lead": "Erfahre mehr über den Schöpfer von Enchanted Chronicles — den Geschichtenerzähler, der diese magischen Welten zum Leben erweckt.",
+    "text1": "Mein Name ist Agron — und ich erschaffe Welten. So lange ich denken kann, sind Geschichten mein Weg, Emotionen, Fantasie und die Schönheit menschlichen Mutes einzufangen. Enchanted Chronicles ist mein persönliches Universum: ein Ort, an dem Magie in jedem Wald lebt, Helden aus gewöhnlichen Leben hervorgehen und jede Erzählung eine Botschaft der Hoffnung, Güte und des Abenteuers trägt.",
+    "text2": "Ich schreibe, um zu inspirieren. Ich schreibe, um Menschen daran zu erinnern, dass Mut viele Formen annimmt, dass Fantasie ein Geschenk ist und dass selbst der kleinste Funke die dunkelste Nacht erhellen kann. Danke, dass du Teil dieser Reise bist. Mögen dir diese Geschichten dieselbe Freude und dasselbe Staunen schenken, die mich beim Erschaffen erfüllt haben.",
+    "teaserDesc": "Erfahre mehr über den Schöpfer von Enchanted Chronicles — den Geschichtenerzähler, der diese magischen Welten zum Leben erweckt.",
+    "btnMeet": "Den Geschichtenerzähler kennenlernen"
+  },
+  "newsletter": {
+    "label": "Bleib in Verbindung",
+    "title": "Schließe dich dem Abenteuer an",
+    "desc": "Schließe dich dem Abenteuer an — erhalte neue Geschichten, magische Updates, Einblicke hinter die Kulissen und exklusive Inhalte direkt in dein Postfach. Werde Teil der Enchanted-Chronicles-Community und verpasse keine neue Erzählung.",
+    "emailLabel": "E-Mail-Adresse",
+    "placeholder": "Deine E-Mail-Adresse",
+    "submit": "Abonnieren",
+    "thanks": "Vielen Dank!",
+    "formLabel": "Newsletter-Anmeldung"
+  },
+  "support": {
+    "label": "Unterstützung",
+    "title": "Den Autor unterstützen",
+    "desc": "Wenn dich diese Geschichten inspirieren, erwäge, den Autor zu unterstützen. Deine Großzügigkeit hält die Magie am Leben und ermöglicht neue Erzählungen.",
+    "donate": "Über PayPal spenden"
+  },
+  "footer": {
+    "ctaBefore": "Unterstütze die Magie —",
+    "ctaLink": "spende über PayPal",
+    "ctaAfter": "und hilf mit, neue Geschichten entstehen zu lassen.",
+    "copy": "© Enchanted Chronicles — Mit Fantasie und Herz geschaffen. Alle Geschichten sind Originalwerke, die Staunen und Abenteuer wecken sollen."
+  },
+  "story": {
+    "backToElenco": "Zurück zur Sammlung"
+  }
+}

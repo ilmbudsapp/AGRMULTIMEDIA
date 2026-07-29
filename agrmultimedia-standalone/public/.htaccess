@@ -1,0 +1,65 @@
+# agrmultimedia.eu — direct bypass for crawler files; SPA fallback only after
+Options -MultiViews
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  RewriteRule ^sitemap\.xml$ - [L,NC]
+  RewriteRule ^robots\.txt$ - [L,NC]
+  RewriteRule ^feed\.atom\.xml$ - [L,NC]
+  RewriteRule ^llms\.txt$ - [L,NC]
+  RewriteRule ^manifest\.json$ - [L,NC]
+  RewriteRule ^agrmm2026indexnowkey01\.txt$ - [L,NC]
+
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+<IfModule mod_authz_core.c>
+  <FilesMatch "^(sitemap\.xml|robots\.txt|feed\.atom\.xml)$">
+    Require all granted
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_mime.c>
+  <Files "sitemap.xml">
+    ForceType application/xml
+  </Files>
+  <Files "feed.atom.xml">
+    ForceType application/xml
+  </Files>
+</IfModule>
+
+<IfModule mod_deflate.c>
+  <FilesMatch "^(sitemap\.xml|feed\.atom\.xml)$">
+    SetEnv no-gzip 1
+    SetEnv dont-vary 1
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_brotli.c>
+  <FilesMatch "^(sitemap\.xml|feed\.atom\.xml)$">
+    SetEnv no-brotli 1
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_headers.c>
+  <Files "sitemap.xml">
+    Header always unset Content-Encoding
+    Header always unset X-Robots-Tag
+    Header always set Content-Type "application/xml; charset=UTF-8"
+  </Files>
+  <Files "robots.txt">
+    Header always unset X-Robots-Tag
+    Header always set Content-Type "text/plain; charset=UTF-8"
+  </Files>
+  <Files "feed.atom.xml">
+    Header always unset Content-Encoding
+    Header always unset X-Robots-Tag
+    Header always set Content-Type "application/xml; charset=UTF-8"
+  </Files>
+</IfModule>

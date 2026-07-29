@@ -1,0 +1,122 @@
+{
+  "a-tale-of-childhood-past": {
+    "number": 7,
+    "cardTitle": "Eine Geschichte aus vergangener Kindheit",
+    "excerpt": "In einem malerischen Dorf, tief in der Landschaft gelegen, wurde die Ankunft des Winters von den jüngsten Einwohnern sehnsüchtig erwartet…",
+    "label": "Geschichte #7"
+  },
+  "adventures-of-oliver": {
+    "number": 2,
+    "cardTitle": "Die Abenteuer von Oliver",
+    "excerpt": "Tief in einer kleinen, abgelegenen Hütte, versteckt im Herzen des Waldes, lebte eine bescheidene Familie. Jakob, ein geschickter Holzfäller, seine Frau Eliza und ihr junger Sohn Oliver…",
+    "label": "Geschichte #2"
+  },
+  "aurelius-and-the-forest-of-wonders": {
+    "number": 4,
+    "cardTitle": "Aurelius und der Wald der Wunder",
+    "excerpt": "Es war einmal in einem Reich, in dem das Gewöhnliche sich mit dem Außergewöhnlichen verflocht, ein prächtiger Wald voller Magie und Geheimnis…",
+    "label": "Geschichte #4"
+  },
+  "billy-and-the-magic-of-hope": {
+    "number": 16,
+    "cardTitle": "Billy und die Magie der Hoffnung",
+    "excerpt": "In dem bescheidenen Dorf Geislingen, eingebettet zwischen sanften Hügeln und grünen Wiesen, lebte eine Gemeinschaft fleißiger, herzensguter Menschen…",
+    "label": "Geschichte #16"
+  },
+  "children-of-heaven": {
+    "number": 5,
+    "cardTitle": "Kinder des Himmels",
+    "excerpt": "Marko, ein neunjähriger Junge mit hellen Augen und blondem Haar, lebte in einem kleinen, gemütlichen Haus mit seiner Familie. Er liebte einfache Freuden…",
+    "label": "Geschichte #5"
+  },
+  "enchanted-castle": {
+    "number": 3,
+    "cardTitle": "Das Verzauberte Schloss",
+    "excerpt": "Im Licht des Vollmonds stand das alte Schloss hoch und imposant, seine gotischen Türme durchbohrten den Nachthimmel. Warmes Licht leuchtete aus seinen Fenstern…",
+    "label": "Geschichte #3"
+  },
+  "midnight-fisherman": {
+    "number": 1,
+    "cardTitle": "Der Mitternachtsfischer",
+    "excerpt": "In den stillen, friedlichen Stunden der Nacht fuhr ein alter Fischer namens Sabin mit seinem kleinen, verwitterten Boot hinaus. Der Vollmond hing hoch über den nebligen Bergen…",
+    "label": "Geschichte #1"
+  },
+  "miras-quest-to-save-her-parents": {
+    "number": 15,
+    "cardTitle": "Miras Suche nach ihren Eltern",
+    "excerpt": "In einem malerischen Dorf im Herzen eines grünen Tals lebte ein mutiges junges Mädchen namens Mira. Das Dorf, Eldoria, war eine friedliche Oase…",
+    "label": "Geschichte #15"
+  },
+  "the-ancient-forest-and-the-old-man": {
+    "number": 18,
+    "cardTitle": "Der uralte Wald und der alte Mann",
+    "excerpt": "Tief in einem uralten, geheimnisvollen Wald lebte ein bescheidener alter Mann namens Eamon. Sein Besitz war spärlich — eine kleine Holzhütte, ein abgetragener Umhang…",
+    "label": "Geschichte #18"
+  },
+  "the-brave-knight": {
+    "number": 14,
+    "cardTitle": "Der Tapfere Ritter",
+    "excerpt": "Es war einmal im Königreich Aranthia ein tapferer Ritter namens Agron. Im ganzen Land bekannt für seinen Mut…",
+    "label": "Geschichte #14"
+  },
+  "the-castle-of-shadows": {
+    "number": 8,
+    "cardTitle": "Das Schloss der Schatten",
+    "excerpt": "Am Rande eines dunklen, dichten Waldes stand ein gotisches Schloss mit hochragenden Türmen, die den Himmel durchbohrten. Gehüllt in ewigen Nebel…",
+    "label": "Geschichte #8"
+  },
+  "the-dream-of-the-old-singer": {
+    "number": 10,
+    "cardTitle": "Der Traum des alten Sängers",
+    "excerpt": "In einem kleinen, verarmten Dorf am Rande der Welt lebte ein alter Mann namens Jovan. Er hatte sein ganzes Leben damit verbracht, das Land zu bearbeiten…",
+    "label": "Geschichte #10"
+  },
+  "the-giant-komodo-and-the-unsettled-debts": {
+    "number": 17,
+    "cardTitle": "Der Riesige Komodo und die Unbeglichenen Schulden",
+    "excerpt": "Im Land Veridian, einem Reich üppiger Wälder und hoher Berge, lag ein verborgenes Dorf namens Stoneshade…",
+    "label": "Geschichte #17"
+  },
+  "the-mysterious-disappearance": {
+    "number": 13,
+    "cardTitle": "Das geheimnisvolle Verschwinden",
+    "excerpt": "Es war einmal in einem kleinen Dorf am Rande eines weiten und geheimnisvollen Waldes, da lebte ein junger Mann namens Benjamin…",
+    "label": "Geschichte #13"
+  },
+  "the-protector-of-aeloria": {
+    "number": 9,
+    "cardTitle": "Der Beschützer von Aeloria",
+    "excerpt": "Im friedlichen Land Aeloria, eingebettet zwischen sanften Hügeln und üppigen grünen Feldern, lag ein malerisches Dorf. Die Dorfbewohner waren einfache Leute…",
+    "label": "Geschichte #9"
+  },
+  "the-savior-vlad": {
+    "number": 19,
+    "cardTitle": "Der Retter Vlad",
+    "excerpt": "In einem fernen Land, umgeben von hohen Bergen und uralten Wäldern, lag das friedliche Dorf Bravenford…",
+    "label": "Geschichte #19"
+  },
+  "the-tale-of-the-kind-hearted-giant": {
+    "number": 20,
+    "cardTitle": "Die Geschichte vom gutmütigen Riesen",
+    "excerpt": "In einem malerischen Dorf, eingebettet zwischen sanften Hügeln und dichten Wäldern, lebte ein herzensguter Junge namens Ewan. Von allen geliebt…",
+    "label": "Geschichte #20"
+  },
+  "the-terror-of-the-white-wolf": {
+    "number": 12,
+    "cardTitle": "Der Schrecken des Weißen Wolfs",
+    "excerpt": "Im Herzen eines abgelegenen, friedlichen Tals — eingebettet zwischen hohen Bergen und uralten Wäldern — lag das kleine Dorf Drakwood…",
+    "label": "Geschichte #12"
+  },
+  "the-time-traveling-dog": {
+    "number": 11,
+    "cardTitle": "Der Zeitreisende Hund",
+    "excerpt": "Im mittelalterlichen Dorf Eldoria erwachte an einem kalten Wintermorgen ein Hund namens Cubi mit einem ungewöhnlichen Gefühl. Obwohl er wie ein gewöhnlicher Hund aussah…",
+    "label": "Geschichte #11"
+  },
+  "white-bison": {
+    "number": 6,
+    "cardTitle": "Der Weiße Bison",
+    "excerpt": "In einem kleinen, verarmten Dorf am Rande eines uralten Waldes lebten die Menschen in ständigem Kampf. Ihre Ernten waren drei aufeinanderfolgende Jahreszeiten ausgefallen…",
+    "label": "Geschichte #6"
+  }
+}

@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n-title="meta.homeTitle">The Enchanted Chronicles | Tales of Magic and Mystery</title>
+<meta name="description" data-i18n-description="meta.homeDescription" content="Enchanted Chronicles — a magical collection of fantasy stories filled with adventure, heroes, mythical creatures, and enchanted worlds. Explore original tales crafted to inspire imagination, courage, and wonder.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#070b1a">
+<link rel="preload" as="image" href="/demo/enchanted-chronicles/images/hero-bg.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/demo/enchanted-chronicles/assets/site.css">
+<style>
+:root{
+  --gold:#f4c76b;
+  --gold-soft:#ffe9b0;
+  --gold-glow:rgba(244,199,107,.45);
+  --ink:#070b1a;
+  --purple:#1a0f3a;
+  --text:#ece8ff;
+  --muted:#a89ec9;
+  --ease-out:cubic-bezier(.22,1,.36,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Inter",system-ui,sans-serif;color:var(--text);background:var(--ink);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+button{font:inherit;cursor:pointer}
+
+.hero{
+  position:relative;min-height:100vh;display:flex;align-items:center;
+  padding-top:var(--site-header-h,92px);overflow:hidden;
+  background:#070b1a;
+}
+.hero__photo{
+  position:absolute;inset:0;z-index:0;
+  background-image:url("/demo/enchanted-chronicles/images/hero-bg.png");
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  animation:cinematicFadeIn 1.2s var(--ease-out) both;
+}
+.hero__photo::before{
+  content:"";position:absolute;inset:0;z-index:1;
+  background:linear-gradient(to bottom,rgba(0,0,0,.75),rgba(0,0,0,.35));
+  pointer-events:none;
+}
+.hero__bg{position:absolute;inset:0;z-index:2;pointer-events:none;overflow:hidden;opacity:.25}
+.hero__bg-layer{position:absolute;inset:-12%;will-change:transform;transition:transform .15s linear}
+.hero__nebula{
+  background:
+    radial-gradient(ellipse 60% 50% at 12% 18%,rgba(88,52,180,.4),transparent 62%),
+    radial-gradient(ellipse 55% 45% at 88% 78%,rgba(244,199,107,.14),transparent 58%),
+    radial-gradient(ellipse 80% 65% at 50% 115%,rgba(35,15,80,.55),transparent 52%);
+}
+.hero__fog{
+  inset:0;
+  background:
+    radial-gradient(ellipse 90% 40% at 50% 100%,rgba(140,120,200,.12) 0%,transparent 55%),
+    radial-gradient(ellipse 70% 35% at 20% 80%,rgba(100,80,160,.08) 0%,transparent 50%),
+    radial-gradient(ellipse 60% 30% at 80% 70%,rgba(180,160,220,.06) 0%,transparent 45%);
+  filter:blur(24px);
+  animation:fogDrift 22s ease-in-out infinite alternate;
+}
+.hero__fog--2{
+  opacity:.7;
+  animation:fogDrift2 30s ease-in-out infinite alternate-reverse;
+  filter:blur(40px);
+}
+.hero__moon{
+  top:clamp(2%,6vh,8%);right:clamp(4%,10vw,12%);
+  width:clamp(100px,18vw,190px);height:clamp(100px,18vw,190px);
+  border-radius:50%;
+  background:
+    radial-gradient(circle at 30% 28%,rgba(255,252,245,.98) 0%,rgba(255,252,245,.5) 20%,transparent 45%),
+    radial-gradient(circle at 50% 50%,rgba(220,230,255,.7) 0%,rgba(150,170,230,.25) 55%,transparent 80%);
+  filter:blur(12px);opacity:.9;
+  animation:moonPulse 12s ease-in-out infinite;
+}
+.hero__moonlight{
+  top:-20%;right:-10%;
+  width:min(90vw,800px);height:min(95vh,900px);
+  background:radial-gradient(ellipse 50% 45% at 70% 15%,rgba(200,220,255,.22) 0%,rgba(130,160,240,.08) 40%,transparent 70%);
+  filter:blur(32px);
+}
+.hero__stars{
+  inset:0;
+  background-image:
+    radial-gradient(2px 2px at 8% 14%,rgba(255,255,255,.85) 50%,transparent 51%),
+    radial-gradient(1.5px 1.5px at 22% 32%,rgba(255,248,230,.75) 50%,transparent 51%),
+    radial-gradient(2px 2px at 52% 22%,rgba(255,255,255,.8) 50%,transparent 51%),
+    radial-gradient(1.5px 1.5px at 84% 18%,rgba(255,252,240,.7) 50%,transparent 51%),
+    radial-gradient(2px 2px at 30% 72%,rgba(255,255,255,.75) 50%,transparent 51%),
+    radial-gradient(1.5px 1.5px at 64% 68%,rgba(255,248,230,.65) 50%,transparent 51%),
+    radial-gradient(2px 2px at 92% 62%,rgba(255,255,255,.7) 50%,transparent 51%);
+  filter:blur(2px);opacity:.8;
+  animation:starsFloat 28s ease-in-out infinite alternate;
+}
+.hero__vignette{
+  inset:0;
+  background:
+    radial-gradient(ellipse 82% 72% at 50% 50%,transparent 28%,rgba(4,6,16,.7) 100%),
+    linear-gradient(180deg,rgba(7,11,26,.25) 0%,transparent 28%,rgba(7,11,26,.5) 100%);
+}
+#particles{position:absolute;inset:0;z-index:3;pointer-events:none}
+
+.hero__inner{
+  position:relative;z-index:4;
+  width:min(1280px,calc(100% - 48px));
+  margin:0 auto;
+  display:grid;grid-template-columns:1.05fr .95fr;
+  gap:clamp(36px,5vw,72px);align-items:center;
+  padding:clamp(56px,10vh,96px) 0;
+}
+
+.hero__copy > *{opacity:0;animation:cinematicFadeIn 1.2s var(--ease-out) forwards}
+.hero__eyebrow{animation-delay:.08s}
+.hero__subtitle{animation-delay:1.65s}
+.hero__desc{animation-delay:1.78s}
+.hero__actions{animation-delay:1.92s}
+
+.hero__eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:.75rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:20px;
+}
+.hero__eyebrow::before,.hero__eyebrow::after{
+  content:"";width:28px;height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold));
+}
+.hero__eyebrow::after{background:linear-gradient(90deg,var(--gold),transparent)}
+
+.hero__title{
+  position:relative;overflow:hidden;
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:clamp(2.5rem,5.8vw,4.25rem);
+  font-weight:900;line-height:1.06;letter-spacing:-.015em;
+  background:linear-gradient(135deg,#fff 0%,var(--gold-soft) 40%,var(--gold) 70%,#fff 100%);
+  background-size:200% auto;
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;
+  margin-bottom:12px;
+  opacity:0;
+  animation:heroTitleReveal 1.2s 1.4s var(--ease-out) forwards,titleShimmer 6s 2.6s ease-in-out infinite;
+}
+.hero__title::after{
+  content:"";position:absolute;top:0;left:-100%;width:55%;height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,233,176,.45),transparent);
+  animation:titleHighlightSweep 5.5s 2.8s ease-in-out infinite;
+  pointer-events:none;
+}
+.hero__subtitle{
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:clamp(1.2rem,2.6vw,1.65rem);
+  font-weight:500;font-style:italic;color:var(--gold-soft);
+  margin-bottom:16px;text-shadow:0 0 30px rgba(244,199,107,.18);
+}
+.hero__author{font-size:.95rem;font-weight:600;color:var(--muted);letter-spacing:.06em;margin-bottom:26px}
+.hero__author em{color:var(--gold);font-style:normal;font-weight:700}
+.hero__desc{
+  font-size:clamp(.92rem,1.6vw,1.02rem);
+  line-height:1.75;color:var(--muted);
+  max-width:520px;margin-bottom:36px;
+}
+.hero__desc p + p{margin-top:1em}
+.hero__desc em{color:var(--gold-soft);font-style:italic}
+.hero__actions{display:flex;flex-wrap:wrap;gap:16px}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:54px;padding:0 28px;border-radius:999px;
+  font-size:.92rem;font-weight:700;letter-spacing:.03em;
+  transition:transform .25s ease-out,box-shadow .25s ease-out,background .25s ease-out;
+  border:none;
+}
+.btn-primary{
+  background:linear-gradient(135deg,#ffe097 0%,var(--gold) 50%,#d4a030 100%);
+  color:#1a0f3a;
+  box-shadow:0 4px 24px rgba(244,199,107,.4),0 0 40px rgba(244,199,107,.18);
+  animation:btnPulse 3.5s ease-in-out infinite;
+}
+.btn-secondary{
+  background:rgba(255,255,255,.05);color:var(--gold-soft);
+  border:1px solid rgba(244,199,107,.4);
+  backdrop-filter:blur(10px);
+  box-shadow:0 0 24px rgba(244,199,107,.08);
+}
+@media(hover:hover) and (pointer:fine){
+  .btn-primary:hover,.btn-secondary:hover{
+    transform:translateY(-2px);
+    box-shadow:0 0 12px rgba(255,215,0,.6);
+  }
+  .btn-primary:hover{
+    box-shadow:0 0 16px rgba(255,215,0,.65),0 8px 28px rgba(244,199,107,.35);
+    animation:none;
+  }
+  .btn-secondary:hover{
+    background:rgba(244,199,107,.12);border-color:var(--gold);
+  }
+  .showcase__arrow:hover{
+    background:rgba(244,199,107,.18);transform:scale(1.08);
+    box-shadow:0 0 28px rgba(244,199,107,.3);
+  }
+}
+
+.hero__visual{
+  opacity:0;
+  animation:cinematicFadeIn 1.2s .32s var(--ease-out) forwards;
+}
+
+.showcase{position:relative;max-width:440px;margin:0 auto}
+.showcase__stage{
+  position:relative;
+  animation:bookFloat 8s ease-in-out infinite;
+}
+.showcase__tilt{
+  position:relative;
+  transform-style:preserve-3d;
+  transition:transform .2s ease-out;
+  will-change:transform;
+}
+.showcase__aura{
+  position:absolute;inset:-14%;
+  background:
+    radial-gradient(circle at 50% 45%,rgba(244,199,107,.26) 0%,transparent 55%),
+    radial-gradient(circle at 28% 62%,rgba(120,80,220,.18) 0%,transparent 50%);
+  filter:blur(32px);pointer-events:none;
+  animation:auraPulse 6s ease-in-out infinite;
+}
+.showcase__rim{
+  position:absolute;inset:-4%;border-radius:22px;
+  background:linear-gradient(135deg,rgba(244,199,107,.45),rgba(180,140,255,.22),rgba(244,199,107,.12));
+  filter:blur(10px);opacity:.75;pointer-events:none;z-index:0;
+}
+.showcase__active-glow{
+  position:absolute;inset:-6%;border-radius:22px;z-index:0;pointer-events:none;
+  background:radial-gradient(circle at 50% 50%,rgba(244,199,107,.2) 0%,transparent 65%);
+  filter:blur(16px);
+  animation:activeGlow 4s ease-in-out infinite;
+}
+.showcase__particles{position:absolute;inset:-22%;z-index:3;pointer-events:none}
+.showcase__particles i{
+  position:absolute;display:block;border-radius:50%;
+  background:var(--gold-soft);box-shadow:0 0 10px var(--gold-glow);
+  animation:orbitParticle 5s ease-in-out infinite;
+}
+.showcase__particles i:nth-child(1){top:8%;left:6%;width:4px;height:4px;animation-delay:0s}
+.showcase__particles i:nth-child(2){top:22%;right:4%;width:3px;height:3px;animation-delay:.7s;animation-duration:4.2s}
+.showcase__particles i:nth-child(3){bottom:28%;left:2%;width:5px;height:5px;animation-delay:1.3s;animation-duration:5.8s}
+.showcase__particles i:nth-child(4){bottom:12%;right:8%;width:3px;height:3px;animation-delay:.4s;animation-duration:4.6s}
+.showcase__particles i:nth-child(5){top:48%;left:-1%;width:2px;height:2px;animation-delay:1.8s;animation-duration:6.2s}
+.showcase__particles i:nth-child(6){top:6%;right:18%;width:3px;height:3px;animation-delay:1s;animation-duration:4.8s}
+
+.showcase__book{position:relative;z-index:1;aspect-ratio:2/3;border-radius:18px}
+.showcase__carousel{
+  position:relative;width:100%;height:100%;
+  border-radius:18px;overflow:hidden;
+  box-shadow:0 0 0 1px rgba(244,199,107,.15);
+}
+.showcase__slide{
+  position:absolute;inset:0;opacity:0;
+  transition:opacity 1.2s ease;
+  pointer-events:none;
+}
+.showcase__slide.is-active{opacity:1;pointer-events:auto}
+.showcase__slide img{
+  width:100%;height:100%;object-fit:cover;
+  transform:scale(1.07);
+  transition:transform 5.5s ease;
+}
+.showcase__slide.is-active img{transform:scale(1)}
+
+.showcase__nav{
+  position:absolute;top:50%;left:0;right:0;
+  display:flex;justify-content:space-between;
+  transform:translateY(-50%);z-index:4;pointer-events:none;
+}
+.showcase__arrow{
+  pointer-events:auto;width:44px;height:44px;border-radius:50%;
+  border:1px solid rgba(244,199,107,.35);
+  background:rgba(7,11,26,.7);backdrop-filter:blur(10px);
+  color:var(--gold-soft);
+  display:flex;align-items:center;justify-content:center;
+  transition:background .25s,transform .25s,box-shadow .25s;
+  box-shadow:0 4px 16px rgba(0,0,0,.35);
+  touch-action:manipulation;-webkit-tap-highlight-color:transparent;
+}
+.showcase__arrow svg{width:18px;height:18px;fill:currentColor}
+.showcase__arrow--prev{margin-left:-18px}
+.showcase__arrow--next{margin-right:-18px}
+
+.showcase__dots{display:flex;justify-content:center;gap:12px;margin-top:24px}
+.showcase__dot{
+  width:10px;height:10px;border-radius:50%;
+  border:1px solid rgba(244,199,107,.45);
+  background:transparent;padding:0;
+  transition:background .3s,transform .3s,box-shadow .3s;
+}
+.showcase__dot.is-active{
+  background:var(--gold);transform:scale(1.2);
+  box-shadow:0 0 16px var(--gold-glow);
+}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(36px)}to{opacity:1;transform:none}}
+@keyframes cinematicFadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes moonPulse{0%,100%{opacity:.85;transform:scale(1)}50%{opacity:1;transform:scale(1.04)}}
+@keyframes starsFloat{from{transform:translateY(0)}to{transform:translateY(-12px)}}
+@keyframes fogDrift{from{transform:translateX(-2%) translateY(0)}to{transform:translateX(3%) translateY(-3%)}}
+@keyframes fogDrift2{from{transform:translateX(2%) translateY(2%)}to{transform:translateX(-4%) translateY(-2%)}}
+@keyframes titleShimmer{0%,100%{background-position:0% center}50%{background-position:100% center}}
+@keyframes heroTitleReveal{
+  from{opacity:0;transform:translateY(24px);filter:drop-shadow(0 0 0 transparent)}
+  to{opacity:1;transform:translateY(0);filter:drop-shadow(0 4px 28px rgba(244,199,107,.45))}
+}
+@keyframes titleHighlightSweep{
+  0%,100%{left:-100%;opacity:0}
+  45%{opacity:1}
+  55%{left:120%;opacity:0}
+}
+@keyframes btnPulse{
+  0%,100%{box-shadow:0 4px 24px rgba(244,199,107,.4),0 0 40px rgba(244,199,107,.15)}
+  50%{box-shadow:0 4px 28px rgba(244,199,107,.55),0 0 55px rgba(244,199,107,.28)}
+}
+@keyframes bookFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes auraPulse{0%,100%{opacity:.7;transform:scale(1)}50%{opacity:1;transform:scale(1.04)}}
+@keyframes activeGlow{0%,100%{opacity:.6}50%{opacity:1}}
+@keyframes orbitParticle{
+  0%,100%{transform:translate(0,0) scale(1);opacity:.35}
+  50%{transform:translate(10px,-14px) scale(1.35);opacity:1}
+}
+
+@media(max-width:768px){
+  .hero__photo{background-attachment:scroll!important}
+  .hero__photo::before{background:linear-gradient(to bottom,rgba(0,0,0,.6),rgba(0,0,0,.25))}
+}
+@media(max-width:960px){
+  .hero__inner{grid-template-columns:1fr;text-align:center}
+  .hero__desc{margin-left:auto;margin-right:auto}
+  .hero__actions,.hero__eyebrow{justify-content:center}
+  .showcase{max-width:min(340px,82vw)}
+  .hero__copy{order:1}.hero__visual{order:0}
+  .showcase__arrow--prev{margin-left:-8px}
+  .showcase__arrow--next{margin-right:-8px}
+}
+@media(max-width:480px){
+  .hero__actions{flex-direction:column;width:100%;max-width:300px;margin:0 auto}
+  .btn{width:100%}
+  .showcase__arrow{width:38px;height:38px}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="demo-bar"><span data-i18n="demoBar">Demo-Website · Temporary preview ·</span> <span>AGRMULTIMEDIA</span></div>
+  <div class="site-nav">
+    <div class="site-nav__inner">
+      <a class="site-nav__brand" href="/demo/enchanted-chronicles/" data-i18n="nav.brand">The Enchanted Chronicles</a>
+      <div class="lang-switch" role="group" data-i18n-attr="aria-label:nav.language">
+        <button type="button" class="lang-switch__btn is-active" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" class="lang-switch__btn" data-lang="de" aria-pressed="false">DE</button>
+      </div>
+      <button type="button" class="site-nav__toggle" data-i18n-attr="aria-label:nav.openMenu" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav-menu">
+        <span class="site-nav__toggle-bar"></span>
+        <span class="site-nav__toggle-bar"></span>
+        <span class="site-nav__toggle-bar"></span>
+      </button>
+      <nav class="site-nav__panel" id="site-nav-menu" data-i18n-attr="aria-label:nav.mainNav" aria-label="Main navigation">
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="/demo/enchanted-chronicles/" data-i18n="nav.home">Home Page</a></li>
+          <li><a class="site-nav__link" href="/demo/enchanted-chronicles/#elenco" data-i18n="nav.stories">Stories</a></li>
+          <li><a class="site-nav__link" href="/demo/enchanted-chronicles/about.html" data-i18n="nav.about">About Me</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="hero">
+  <div class="hero__photo" aria-hidden="true"></div>
+  <div class="hero__bg" aria-hidden="true">
+    <div class="hero__bg-layer hero__nebula" data-parallax="0.018"></div>
+    <div class="hero__bg-layer hero__fog" data-parallax="0.025"></div>
+    <div class="hero__bg-layer hero__fog hero__fog--2" data-parallax="0.032"></div>
+    <div class="hero__bg-layer hero__moonlight" data-parallax="0.04"></div>
+    <div class="hero__bg-layer hero__moon" data-parallax="0.055"></div>
+    <div class="hero__bg-layer hero__stars" data-parallax="0.028"></div>
+    <div class="hero__bg-layer hero__vignette"></div>
+  </div>
+  <canvas id="particles" aria-hidden="true"></canvas>
+
+  <div class="hero__inner">
+    <div class="hero__copy glass-panel">
+      <span class="hero__eyebrow" data-i18n="hero.eyebrow">Enchanted Chronicles</span>
+      <h1 class="hero__title" data-i18n="hero.title">Welcome to Enchanted Chronicles</h1>
+      <p class="hero__subtitle" data-i18n="hero.subtitle">Where imagination becomes reality.</p>
+      <div class="hero__desc">
+        <p data-i18n="hero.desc">
+          Where imagination awakens, magic breathes, and every story opens a doorway to wonder.
+          Step into a world of enchanted forests, brave heroes, mythical creatures, and timeless adventures &mdash;
+          crafted to inspire hearts of all ages. Your journey begins here.
+        </p>
+      </div>
+      <div class="hero__actions">
+        <a class="btn btn-primary" href="/demo/enchanted-chronicles/stories/midnight-fisherman.html" data-i18n="hero.btnFirstStory">Read the First Story</a>
+        <a class="btn btn-secondary" href="#elenco" data-i18n="hero.btnExplore">Explore All Tales</a>
+      </div>
+    </div>
+
+    <div class="hero__visual">
+      <div class="showcase" id="showcase">
+        <div class="showcase__stage" id="showcase-stage">
+          <div class="showcase__tilt" id="showcase-tilt">
+          <div class="showcase__aura" aria-hidden="true"></div>
+          <div class="showcase__rim" aria-hidden="true"></div>
+          <div class="showcase__active-glow" aria-hidden="true"></div>
+          <div class="showcase__particles" aria-hidden="true">
+            <i></i><i></i><i></i><i></i><i></i><i></i>
+          </div>
+          <div class="showcase__book">
+            <div class="showcase__carousel" id="carousel">
+              <div class="showcase__slide is-active">
+                <img src="/demo/enchanted-chronicles/images/cover1.webp" data-i18n-attr="alt:hero.coverFrontAlt" alt="The Enchanted Chronicles — front cover" width="600" height="900" loading="eager" decoding="async">
+              </div>
+              <div class="showcase__slide">
+                <img src="/demo/enchanted-chronicles/images/cover2.webp" data-i18n-attr="alt:hero.coverBackAlt" alt="The Enchanted Chronicles — back cover" width="600" height="900" loading="lazy" decoding="async">
+              </div>
+            </div>
+            <div class="showcase__nav">
+              <button type="button" class="showcase__arrow showcase__arrow--prev" id="prev" data-i18n-attr="aria-label:hero.prevCover" aria-label="Previous cover">
+                <svg viewBox="0 0 24 24"><path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+              </button>
+              <button type="button" class="showcase__arrow showcase__arrow--next" id="next" data-i18n-attr="aria-label:hero.nextCover" aria-label="Next cover">
+                <svg viewBox="0 0 24 24"><path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+              </button>
+            </div>
+            </div>
+          </div>
+          </div>
+        <div class="showcase__dots" role="tablist" data-i18n-attr="aria-label:hero.bookCovers" aria-label="Book covers">
+          <button type="button" class="showcase__dot is-active" data-i18n-attr="aria-label:hero.coverFront" aria-label="Front cover" aria-selected="true" data-index="0"></button>
+          <button type="button" class="showcase__dot" data-i18n-attr="aria-label:hero.coverBack" aria-label="Back cover" aria-selected="false" data-index="1"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="elenco section-gold-rule" id="elenco">
+  <div class="magic-particles" data-particles aria-hidden="true"></div>
+  <div class="elenco__inner">
+    <header class="elenco__head glass-panel reveal reveal--glow">
+      <span class="elenco__label" data-i18n="elenco.label">Stories</span>
+      <h2 class="elenco__title" data-i18n="elenco.title">Story Collection</h2>
+      <p class="elenco__sub" data-i18n="elenco.sub">Discover a growing library of magical tales filled with courage, mystery, friendship, and adventure. Each story is written with heart &mdash; created to inspire, uplift, and spark imagination.</p>
+      <p class="elenco__intro" data-i18n="elenco.intro">Welcome to the Story Collection &mdash; the heart of Enchanted Chronicles. Here you&rsquo;ll find tales of bravery, kindness, mystery, and magic. Every story is a journey into a world where imagination has no limits, where heroes rise from unexpected places, and where hope shines even in the darkest forests. Choose your adventure and let the magic begin.</p>
+      <p class="elenco__stats" data-i18n="elenco.stats">20 magical stories already published &mdash; and many more on the way. Explore the full collection and dive into a world of imagination and wonder.</p>
+    </header>
+
+    <div class="elenco__grid">
+      <a class="elenco__card reveal" href="/demo/enchanted-chronicles/stories/midnight-fisherman.html">
+        <div class="elenco__thumb">
+          <div class="elenco__thumb-glow" aria-hidden="true"></div>
+          <img src="/demo/enchanted-chronicles/images/midnight-fisherman.webp" alt="" width="176" height="234" loading="lazy" decoding="async">
+        </div>
+        <div class="elenco__meta">
+          <span class="elenco__num" data-i18n-num="1"></span>
+          <h3 class="elenco__name" data-i18n-story-card="midnight-fisherman" data-i18n-field="cardTitle"></h3>
+          <p class="elenco__excerpt" data-i18n-story-card="midnight-fisherman" data-i18n-field="excerpt"></p>
+          <span class="elenco__link"><span data-i18n="elenco.readTale">Read tale</span> <svg viewBox="0 0 24 24"><path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></span>
+        </div>
+      </a>
+
+      <a class="elenco__card reveal" href="/demo/enchanted-chronicles/stories/adventures-of-oliver.html">
+        <div class="elenco__thumb">
+          <div class="elenco__thumb-glow" aria-hidden="true"></div>
+          <img src="/demo/enchanted-chronicles/images/adventures-of-oliver.webp" alt="" width="176" height="234" loading="lazy" decoding="async">
+        </div>
+        <div class="elenco__meta">
+          <span class="elenco__num" data-i18n-num="2"></span>
+          <h3 class="elenco__name" data-i18n-story-card="adventures-of-oliver" data-i18n-field="cardTitle"></h3>
+          <p class="elenco__excerpt" data-i18n-story-card="adventures-of-oliver" data-i18n-field="excerpt"></p>
+          <span class="elenco__link"><span data-i18n="elenco.readTale">Read tale</span> <svg viewBox="0 0 24 24"><path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></span>
+        </div>
+      </a>
+
+      <a class="elenco__card reveal" href="/demo/enchanted-chronicles/stories/enchanted-castle.html">
+        <div class="elenco__thumb">
+          <div class="elenco__thumb-glow" aria-hidden="true"></div>
+          <img src="/demo/enchanted-chronicles/images/enchanted-castle.webp" alt="" width="176" height="234" loading="lazy" decoding="async">
+        </div>
+        <div class="elenco__meta">
+          <span class="elenco__num" data-i18n-num="3"></span>
+          <h3 class="elenco__name" data-i18n-story-card="enchanted-castle" data-i18n-field="cardTitle"></h3>
+          <p class="elenco__excerpt" data-i18n-story-card="enchanted-castle" data-i18n-field="excerpt"></p>
+          <span class="elenco__link"><span data-i18n="elenco.readTale">Read tale</span> <svg viewBox="0 0 24 24"><path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></span>
+        </div>
+      </a>
+
+      <a class="elenco__card reveal" href="/demo/enchanted-chronicles/stories/aurelius-and-the-forest-of-wonders.html">
+        <div class="elenco__thumb">
+          <div class="elenco__thumb-glow" aria-hidden="true"></div>
+          <img src="/demo/enchanted-chronicles/images/aurelius-forest-of-wonders.webp" alt="" width="176" height="234" loading="lazy" decoding="async">
+        </div>
+        <div class="elenco__meta">
+          <span class="elenco__num" data-i18n-num="4"></span>
+          <h3 class="elenco__name" data-i18n-story-card="aurelius-and-the-forest-of-wonders" data-i18n-field="cardTitle"></h3>
+          <p class="elenco__excerpt" data-i18n-story-card="aurelius-and-the-forest-of-wonders" data-i18n-field="excerpt"></p>
+          <span class="elenco__link"><span data-i18n="elenco.readTale">Read tale</span> <svg viewBox="0 0 24 24"><path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></span>
+        </div>
+      </a>
+
+      <a class="elenco__card reveal" href="/demo/enchanted-chronicles/stories/children-of-heaven.html">
+        <div class="elenco__thumb">
+          <div class="elenco__thumb-glow" aria-hidden="true"></div>
+          <img src="/demo/enchanted-chronicles/images/children-of-heaven.webp" alt="" width="176" height="234" loading="lazy" decoding="async">
+        </div>
+        <div class="elenco__meta">
+          <span class="elenco__num" data-i18n-num="5"></span>
+          <h3 class="elenco__name" data-i18n-story-card="children-of-heaven" data-i18n-field="cardTitle"></h3>
+          <p class="elenco__excerpt" data-i18n-story-card="children-of-heaven" data-i18n-field="excerpt"></p>
+          <span class="elenco__link"><span data-i18n="elenco.readTale">Read tale</span> <svg viewBox="0 0 24 24"><path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></span>
+        </div>
+      </a>
+
+      <a class="elenco__card reveal" href="/demo/enchanted-chronicles/stories/white-bison.html">
+        <div class="elenco__thumb">
+          <div class="elenco__thumb-glow" aria-hidden="true"></div>
+          <img src="/demo/enchanted-chronicles/images/white-bison.webp" alt="" width="176" height="234" loading="lazy" decoding="async">
+        </div>
+        <div class="elenco__meta">
+          <span class="elenco__num" data-i18n-num="6"></span>
+          <h3 class="elenco__name" data-i18n-story-card="white-bison" data-i18n-field="cardTitle"></h3>
+          <p class="elenco__excerpt" data-i18n-story-card="white-bison" data-i18n-field="excerpt"></p>
+          <span class="elenco__link"><span data-i18n="elenco.readTale">Read tale</span> <svg viewBox="0 0 24 24"><path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></span>
+        </div>
+      </a>
+
+      <a class="elenco__card reveal" href="/demo/enchanted-chronicles/stories/a-tale-of-childhood-past.html">
+        <div class="elenco__thumb">
+          <div class="elenco__thumb-glow" aria-hidden="true"></div>
+          <img src="/demo/enchanted-chronicles/images/a-tale-of-childhood-past.webp" alt="" width="176" height="234" loading="lazy" decoding="async">
+        </div>
+        <div class="elenco__meta">
+          <span class="elenco__num" data-i18n-num="7"></span>
+          <h3 class="elenco__name" data-i18n-story-card="a-tale-of-childhood-past" data-i18n-field="cardTitle"></h3>
+          <p class="elenco__excerpt" data-i18n-story-card="a-tale-of-childhood-past" data-i18n-field="excerpt"></p>
+          <span class="elenco__link"><span data-i18n="elenco.readTale">Read tale</span> <svg viewBox="0 0 24 24"><path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></span>
+        </div>
+      </a>
+
+      <a class="elenco__card reveal" href="/demo/enchanted-chronicles/stories/the-castle-of-shadows.html">
+        <div class="elenco__thumb">
+          <div class="elenco__thumb-glow" aria-hidden="true"></div>
+          <img src="/demo/enchanted-chronicles/images/the-castle-of-shadows.webp" alt="" width="176" height="234" loading="lazy" decoding="async">
+        </div>
+        <div class="elenco__meta">
+          <span class="elenco__num" data-i18n-num="8"></span>
+          <h3 class="elenco__name" data-i18n-story-card="the-castle-of-shadows" data-i18n-field="cardTitle"></h3>
+          <p class="elenco__excerpt" data-i18n-story-card="the-castle-of-shadows" data-i18n-field="excerpt"></p>
+          <span class="elenco__link"><span data-i18n="elenco.readTale">Read tale</span> <svg viewBox="0 0 24 24"><path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></span>
+        </div>
+      </a>
+
+      <a class="elenco__card reveal" href="/demo/enchanted-chronicles/stories/the-protector-of-aeloria.html">
+        <div class="elenco__thumb">
+          <div class="elenco__thumb-glow" aria-hidden="true"></div>
+          <img src="/demo/enchanted-chronicles/images/the-protector-of-aeloria.webp" alt="" width="176" height="234" loading="lazy" decoding="async">
+        </div>
+        <div class="elenco__meta">
+          <span class="elenco__num" data-i18n-num="9"></span>
+          <h3 class="elenco__name" data-i18n-story-card="the-protector-of-aeloria" data-i18n-field="cardTitle"></h3>
+          <p class="elenco__excerpt" data-i18n-story-card="the-protector-of-aeloria" data-i18n-field="excerpt"></p>
+          <span class="elenco__link"><span data-i18n="elenco.readTale">Read tale</span> <svg viewBox="0 0 24 24"><path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></span>
+        </div>
+      </a>
+
+      <a class="elenco__card reveal" href="/demo/enchanted-chronicles/stories/the-dream-of-the-old-singer.html">
+        <div class="elenco__thumb">
+          <div class="elenco__thumb-glow" aria-hidden="true"></div>
+          <img src="/demo/enchanted-chronicles/images/the-dream-of-the-old-singer.webp" alt="" width="176" height="234" loading="lazy" decoding="async">
+        </div>
+        <div class="elenco__meta">
+          <span class="elenco__num" data-i18n-num="10"></span>
+          <h3 class="elenco__name" data-i18n-story-card="the-dream-of-the-old-singer" data-i18n-field="cardTitle"></h3>
+          <p class="elenco__excerpt" data-i18n-story-card="the-dream-of-the-old-singer" data-i18n-field="excerpt"></p>
+          <span class="elenco__link"><span data-i18n="elenco.readTale">Read tale</span> <svg viewBox="0 0 24 24"><path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></span>
+        </div>
+      </a>
+
+      <a class="elenco__card reveal" href="/demo/enchanted-chronicles/stories/the-time-traveling-dog.html">
+        <div class="elenco__thumb">
+          <div class="elenco__thumb-glow" aria-hidden="true"></div>
+          <img src="/demo/enchanted-chronicles/images/the-time-traveling-dog.webp" alt="" width="176" height="234" loading="lazy" decoding="async">
+        </div>
+        <div class="elenco__meta">
+          <span class="elenco__num" data-i18n-num="11"></span>
+          <h3 class="elenco__name" data-i18n-story-card="the-time-traveling-dog" data-i18n-field="cardTitle"></h3>
+          <p class="elenco__excerpt" data-i18n-story-card="the-time-traveling-dog" data-i18n-field="excerpt"></p>
+          <span class="elenco__link"><span data-i18n="elenco.readTale">Read tale</span> <svg viewBox="0 0 24 24"><path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></span>
+        </div>
+      </a>
+
+      <a class="elenco__card reveal" href="/demo/enchanted-chronicles/stories/the-terror-of-the-white-wolf.html">
+        <div class="elenco__thumb">
+          <div class="elenco__thumb-glow" aria-hidden="true"></div>
+          <img src="/demo/enchanted-chronicles/images/the-terror-of-the-white-wolf.webp" alt="" width="176" height="234" loading="lazy" decoding="async">
+        </div>
+        <div class="elenco__meta">
+          <span class="elenco__num" data-i18n-num="12"></span>
+          <h3 class="elenco__name" data-i18n-story-card="the-terror-of-the-white-wolf" data-i18n-field="cardTitle"></h3>
+          <p class="elenco__excerpt" data-i18n-story-card="the-terror-of-the-white-wolf" data-i18n-field="excerpt"></p>
+          <span class="elenco__link"><span data-i18n="elenco.readTale">Read tale</span> <svg viewBox="0 0 24 24"><path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></span>
+        </div>
+      </a>
+
+      <a class="elenco__card reveal" href="/demo/enchanted-chronicles/stories/the-mysterious-disappearance.html">
+        <div class="elenco__thumb">
+          <div class="elenco__thumb-glow" aria-hidden="true"></div>
+          <img src="/demo/enchanted-chronicles/images/the-mysterious-disappearance.webp" alt="" width="176" height="234" loading="lazy" decoding="async">
+        </div>
+        <div class="elenco__meta">
+          <span class="elenco__num" data-i18n-num="13"></span>
+          <h3 class="elenco__name" data-i18n-story-card="the-mysterious-disappearance" data-i18n-field="cardTitle"></h3>
+          <p class="elenco__excerpt" data-i18n-story-card="the-mysterious-disappearance" data-i18n-field="excerpt"></p>
+          <span class="elenco__link"><span data-i18n="elenco.readTale">Read tale</span> <svg viewBox="0 0 24 24"><path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></span>
+        </div>
+      </a>
+
+      <a class="elenco__card reveal" href="/demo/enchanted-chronicles/stories/the-brave-knight.html">
+        <div class="elenco__thumb">
+          <div class="elenco__thumb-glow" aria-hidden="true"></div>
+          <img src="/demo/enchanted-chronicles/images/the-brave-knight.webp" alt="" width="176" height="234" loading="lazy" decoding="async">
+        </div>
+        <div class="elenco__meta">
+          <span class="elenco__num" data-i18n-num="14"></span>
+          <h3 class="elenco__name" data-i18n-story-card="the-brave-knight" data-i18n-field="cardTitle"></h3>
+          <p class="elenco__excerpt" data-i18n-story-card="the-brave-knight" data-i18n-field="excerpt"></p>
+          <span class="elenco__link"><span data-i18n="elenco.readTale">Read tale</span> <svg viewBox="0 0 24 24"><path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></span>
+        </div>
+      </a>
+
+      <a class="elenco__card reveal" href="/demo/enchanted-chronicles/stories/miras-quest-to-save-her-parents.html">
+        <div class="elenco__thumb">
+          <div class="elenco__thumb-glow" aria-hidden="true"></div>
+          <img src="/demo/enchanted-chronicles/images/miras-quest-to-save-her-parents.webp" alt="" width="176" height="234" loading="lazy" decoding="async">
+        </div>
+        <div class="elenco__meta">
+          <span class="elenco__num" data-i18n-num="15"></span>
+          <h3 class="elenco__name" data-i18n-story-card="miras-quest-to-save-her-parents" data-i18n-field="cardTitle"></h3>
+          <p class="elenco__excerpt" data-i18n-story-card="miras-quest-to-save-her-parents" data-i18n-field="excerpt"></p>
+          <span class="elenco__link"><span data-i18n="elenco.readTale">Read tale</span> <svg viewBox="0 0 24 24"><path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></span>
+        </div>
+      </a>
+
+      <a class="elenco__card reveal" href="/demo/enchanted-chronicles/stories/billy-and-the-magic-of-hope.html">
+        <div class="elenco__thumb">
+          <div class="elenco__thumb-glow" aria-hidden="true"></div>
+          <img src="/demo/enchanted-chronicles/images/billy-and-the-magic-of-hope.webp" alt="" width="176" height="234" loading="lazy" decoding="async">
+        </div>
+        <div class="elenco__meta">
+          <span class="elenco__num" data-i18n-num="16"></span>
+          <h3 class="elenco__name" data-i18n-story-card="billy-and-the-magic-of-hope" data-i18n-field="cardTitle"></h3>
+          <p class="elenco__excerpt" data-i18n-story-card="billy-and-the-magic-of-hope" data-i18n-field="excerpt"></p>
+          <span class="elenco__link"><span data-i18n="elenco.readTale">Read tale</span> <svg viewBox="0 0 24 24"><path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></span>
+        </div>
+      </a>
+
+      <a class="elenco__card reveal" href="/demo/enchanted-chronicles/stories/the-giant-komodo-and-the-unsettled-debts.html">
+        <div class="elenco__thumb">
+          <div class="elenco__thumb-glow" aria-hidden="true"></div>
+          <img src="/demo/enchanted-chronicles/images/the-giant-komodo-and-the-unsettled-debts.webp" alt="" width="176" height="234" loading="lazy" decoding="async">
+        </div>
+        <div class="elenco__meta">
+          <span class="elenco__num" data-i18n-num="17"></span>
+          <h3 class="elenco__name" data-i18n-story-card="the-giant-komodo-and-the-unsettled-debts" data-i18n-field="cardTitle"></h3>
+          <p class="elenco__excerpt" data-i18n-story-card="the-giant-komodo-and-the-unsettled-debts" data-i18n-field="excerpt"></p>
+          <span class="elenco__link"><span data-i18n="elenco.readTale">Read tale</span> <svg viewBox="0 0 24 24"><path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></span>
+        </div>
+      </a>
+
+      <a class="elenco__card reveal" href="/demo/enchanted-chronicles/stories/the-ancient-forest-and-the-old-man.html">
+        <div class="elenco__thumb">
+          <div class="elenco__thumb-glow" aria-hidden="true"></div>
+          <img src="/demo/enchanted-chronicles/images/the-ancient-forest-and-the-old-man.webp" alt="" width="176" height="234" loading="lazy" decoding="async">
+        </div>
+        <div class="elenco__meta">
+          <span class="elenco__num" data-i18n-num="18"></span>
+          <h3 class="elenco__name" data-i18n-story-card="the-ancient-forest-and-the-old-man" data-i18n-field="cardTitle"></h3>
+          <p class="elenco__excerpt" data-i18n-story-card="the-ancient-forest-and-the-old-man" data-i18n-field="excerpt"></p>
+          <span class="elenco__link"><span data-i18n="elenco.readTale">Read tale</span> <svg viewBox="0 0 24 24"><path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></span>
+        </div>
+      </a>
+
+      <a class="elenco__card reveal" href="/demo/enchanted-chronicles/stories/the-savior-vlad.html">
+        <div class="elenco__thumb">
+          <div class="elenco__thumb-glow" aria-hidden="true"></div>
+          <img src="/demo/enchanted-chronicles/images/the-savior-vlad.webp" alt="" width="176" height="234" loading="lazy" decoding="async">
+        </div>
+        <div class="elenco__meta">
+          <span class="elenco__num" data-i18n-num="19"></span>
+          <h3 class="elenco__name" data-i18n-story-card="the-savior-vlad" data-i18n-field="cardTitle"></h3>
+          <p class="elenco__excerpt" data-i18n-story-card="the-savior-vlad" data-i18n-field="excerpt"></p>
+          <span class="elenco__link"><span data-i18n="elenco.readTale">Read tale</span> <svg viewBox="0 0 24 24"><path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></span>
+        </div>
+      </a>
+
+      <a class="elenco__card reveal" href="/demo/enchanted-chronicles/stories/the-tale-of-the-kind-hearted-giant.html">
+        <div class="elenco__thumb">
+          <div class="elenco__thumb-glow" aria-hidden="true"></div>
+          <img src="/demo/enchanted-chronicles/images/the-tale-of-the-kind-hearted-giant.webp" alt="" width="176" height="234" loading="lazy" decoding="async">
+        </div>
+        <div class="elenco__meta">
+          <span class="elenco__num" data-i18n-num="20"></span>
+          <h3 class="elenco__name" data-i18n-story-card="the-tale-of-the-kind-hearted-giant" data-i18n-field="cardTitle"></h3>
+          <p class="elenco__excerpt" data-i18n-story-card="the-tale-of-the-kind-hearted-giant" data-i18n-field="excerpt"></p>
+          <span class="elenco__link"><span data-i18n="elenco.readTale">Read tale</span> <svg viewBox="0 0 24 24"><path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="coming-soon section-gold-rule" id="coming-soon">
+  <div class="coming-soon__inner glass-panel reveal">
+    <span class="coming-soon__label" data-i18n="comingSoon.label">What&rsquo;s Next</span>
+    <h2 class="coming-soon__title" data-i18n="comingSoon.title">New Stories Coming Soon</h2>
+    <p class="coming-soon__desc" data-i18n="comingSoon.desc">The magic continues &mdash; new adventures, new heroes, and new enchanted worlds are already in the making. Stay tuned for upcoming tales that will expand the universe of Enchanted Chronicles.</p>
+  </div>
+</section>
+
+<section class="mission-vision section-gold-rule" id="mission">
+  <div class="mission-vision__inner">
+    <header class="mission-vision__head glass-panel reveal reveal--slide-left">
+      <span class="mission-vision__label" data-i18n="missionVision.label">Our Purpose</span>
+      <h2 class="mission-vision__title" data-i18n="missionVision.title">Mission &amp; Vision</h2>
+    </header>
+    <div class="mission-vision__grid reveal-stagger">
+      <article class="mission-vision__card reveal-stagger__item">
+        <h3 class="mission-vision__card-title" data-i18n="missionVision.missionTitle">Mission</h3>
+        <p class="mission-vision__card-text" data-i18n="missionVision.missionText">Our mission is to create magical stories that inspire courage, kindness, imagination, and emotional connection &mdash; offering readers of all ages a place where wonder feels real.</p>
+      </article>
+      <article class="mission-vision__card reveal-stagger__item">
+        <h3 class="mission-vision__card-title" data-i18n="missionVision.visionTitle">Vision</h3>
+        <p class="mission-vision__card-text" data-i18n="missionVision.visionText">Our vision is to build a global home for timeless tales that touch hearts across generations, creating a universe where magic, storytelling, and creativity thrive together.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="about-teaser section-gold-rule" id="about">
+  <div class="magic-particles" data-particles aria-hidden="true"></div>
+  <div class="about-teaser__inner glass-panel reveal reveal--glow">
+    <span class="about-teaser__label" data-i18n="about.label">About</span>
+    <h2 class="about-teaser__title" data-i18n="about.title">About Me</h2>
+    <p class="about-teaser__desc" data-i18n="about.teaserDesc">Learn more about the creator behind Enchanted Chronicles &mdash; the storyteller who brings these magical worlds to life.</p>
+    <a class="btn btn-secondary about-teaser__link" href="/demo/enchanted-chronicles/about.html" data-i18n="about.btnMeet">Meet the Storyteller</a>
+  </div>
+</section>
+
+<section class="newsletter section-gold-rule" id="newsletter">
+  <div class="newsletter__inner glass-panel reveal reveal--glow">
+    <span class="newsletter__label" data-i18n="newsletter.label">Stay Connected</span>
+    <h2 class="newsletter__title" data-i18n="newsletter.title">Join the Adventure</h2>
+    <p class="newsletter__desc" data-i18n="newsletter.desc">Join the adventure &mdash; receive new stories, magical updates, behind&#8209;the&#8209;scenes insights, and exclusive content delivered straight to your inbox. Become part of the Enchanted Chronicles community and never miss a new tale.</p>
+    <form class="newsletter__form" action="#" method="post" data-i18n-attr="aria-label:newsletter.formLabel" aria-label="Newsletter signup">
+      <label class="visually-hidden" for="newsletter-email" data-i18n="newsletter.emailLabel">Email address</label>
+      <input class="newsletter__input" type="email" id="newsletter-email" name="email" data-i18n-placeholder="newsletter.placeholder" placeholder="Your email address" autocomplete="email" required>
+      <button class="btn btn-primary newsletter__submit" type="submit" data-i18n="newsletter.submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<section class="support-author section-gold-rule" id="support">
+  <div class="support-author__inner glass-panel reveal reveal--scale">
+    <span class="support-author__label" data-i18n="support.label">Support</span>
+    <h2 class="support-author__title" data-i18n="support.title">Support the Author</h2>
+    <p class="support-author__desc" data-i18n="support.desc">If these stories inspire you, consider supporting the author. Your kindness helps keep the magic alive and allows new tales to be written.</p>
+    <a class="btn btn-paypal support-author__btn" href="https://www.paypal.com/donate/?business=theirrealmtv%40gmail.com" target="_blank" rel="noopener noreferrer">
+      <svg class="support-author__paypal-icon" viewBox="0 0 24 24" aria-hidden="true" width="22" height="22">
+        <path fill="#003087" d="M20.1 2H7.6c-.5 0-.9.4-1 .9L4.2 18.1c-.1.5.3.9.8.9h3.3c.5 0 .9-.4 1-.9l.6-3.8c.1-.5.5-.9 1-.9h2.1c4.3 0 6.8-2.1 7.5-6.2.3-1.8 0-3.2-.8-4.2-.9-1.1-2.4-1.7-4.4-1.7z"/>
+        <path fill="#009cde" d="M18.2 7.2c-.7 4.1-3.2 6.2-7.5 6.2H8.6c-.5 0-.9.4-1 .9L6.5 20.1c-.1.5.3.9.8.9h3.1c.5 0 .9-.4 1-.9l.6-3.8c.1-.5.5-.9 1-.9h2c4.3 0 7.6-1.7 8.5-6.6.4-2.1.1-3.8-.9-5-.5-.6-1.2-1-2-1.2-.3-.1-.7-.2-1.1-.2-.4 0-.8 0-1.3.1z"/>
+        <path fill="#012169" d="M8.6 7.2H4.5c-.5 0-.9.4-1 .9L1.1 20.1c-.1.5.3.9.8.9h3.1c.5 0 .9-.4 1-.9l.6-3.8c.1-.5.5-.9 1-.9h2.1c2.5 0 4.4-.8 5.5-2.3.6-.8.9-1.8 1-2.9 0-.1 0-.2 0-.3-.5-.1-1.1-.1-1.7-.1z"/>
+      </svg>
+      <span data-i18n="support.donate">Donate via PayPal</span>
+    </a>
+  </div>
+</section>
+
+<footer class="footer-note">
+  <div class="footer-note__content glass-panel cinematic-stagger">
+  <p class="footer-note__cta"><span data-i18n="footer.ctaBefore">Support the magic —</span> <a class="footer-note__cta-link" href="https://www.paypal.com/donate/?business=theirrealmtv%40gmail.com" target="_blank" rel="noopener noreferrer" data-i18n="footer.ctaLink">donate via PayPal</a> <span data-i18n="footer.ctaAfter">and help new stories come to life.</span></p>
+  <p class="footer-note__copy" data-i18n="footer.copy">&copy; Enchanted Chronicles &mdash; Crafted with imagination and heart. All stories are original works created to inspire wonder and adventure.</p>
+  </div>
+</footer>
+
+<script src="/demo/enchanted-chronicles/assets/i18n.js" defer></script>
+<script src="/demo/enchanted-chronicles/assets/site.js" defer></script>
+<script src="/demo/enchanted-chronicles/assets/ambient-audio.js" defer></script>
+<script>
+(function(){
+  const hero=document.getElementById("hero");
+  const tilt=document.getElementById("showcase-tilt");
+  const slides=[...document.querySelectorAll(".showcase__slide")];
+  const dots=[...document.querySelectorAll(".showcase__dot")];
+  const prevBtn=document.getElementById("prev");
+  const nextBtn=document.getElementById("next");
+  const carousel=document.getElementById("carousel");
+  let current=0,timer,touchStartX=0,touchEndX=0;
+
+  function goTo(i){
+    current=(i+slides.length)%slides.length;
+    slides.forEach((s,j)=>s.classList.toggle("is-active",j===current));
+    dots.forEach((d,j)=>{
+      d.classList.toggle("is-active",j===current);
+      d.setAttribute("aria-selected",j===current?"true":"false");
+    });
+  }
+  function next(){goTo(current+1)}
+  function prev(){goTo(current-1)}
+  function startAuto(){timer=setInterval(next,4000)}
+  function resetAuto(){clearInterval(timer);startAuto()}
+
+  nextBtn.addEventListener("click",()=>{next();resetAuto()});
+  prevBtn.addEventListener("click",()=>{prev();resetAuto()});
+  dots.forEach(d=>d.addEventListener("click",()=>{goTo(+d.dataset.index);resetAuto()}));
+  startAuto();
+
+  carousel.addEventListener("touchstart",e=>{touchStartX=e.changedTouches[0].screenX},{passive:true});
+  carousel.addEventListener("touchend",e=>{
+    touchEndX=e.changedTouches[0].screenX;
+    const diff=touchStartX-touchEndX;
+    if(Math.abs(diff)>50){diff>0?next():prev();resetAuto()}
+  },{passive:true});
+
+  const parallaxLayers=[...document.querySelectorAll("[data-parallax]")];
+
+  hero.addEventListener("mousemove",e=>{
+    const parX=(e.clientX/window.innerWidth-.5)*2;
+    const parY=(e.clientY/window.innerHeight-.5)*2;
+    parallaxLayers.forEach(el=>{
+      const f=parseFloat(el.dataset.parallax);
+      el.style.transform=`translate(${parX*f*90}px,${parY*f*70}px)`;
+    });
+    if(tilt){
+      const r=tilt.getBoundingClientRect();
+      const tx=((e.clientX-r.left)/r.width-.5)*12;
+      const ty=((e.clientY-r.top)/r.height-.5)*-8;
+      tilt.style.transform=`perspective(1200px) rotateY(${tx}deg) rotateX(${ty}deg)`;
+    }
+  });
+  hero.addEventListener("mouseleave",()=>{
+    if(tilt)tilt.style.transform="";
+  });
+
+  const canvas=document.getElementById("particles");
+  const ctx=canvas.getContext("2d");
+  let parts=[],w,h,mouseX=.5,mouseY=.5;
+
+  hero.addEventListener("mousemove",e=>{
+    mouseX=e.clientX/window.innerWidth;
+    mouseY=e.clientY/window.innerHeight;
+  });
+
+  function resize(){
+    const rect=hero.getBoundingClientRect();
+    w=canvas.width=rect.width;
+    h=canvas.height=rect.height;
+  }
+
+  function initParts(){
+    const count=window.matchMedia("(max-width:768px)").matches?48:110;
+    parts=Array.from({length:count},()=>({
+      x:Math.random()*w,y:Math.random()*h,
+      r:Math.random()*2.2+.3,
+      a:Math.random()*.45+.08,
+      vx:(Math.random()-.5)*.1,
+      vy:(Math.random()-.5)*.1-.03,
+      tw:Math.random()*Math.PI*2,
+      hue:Math.random()>.65?"gold":"white"
+    }));
+  }
+
+  function draw(){
+    ctx.clearRect(0,0,w,h);
+    parts.forEach(p=>{
+      p.x+=p.vx+(mouseX-.5)*.025;
+      p.y+=p.vy+(mouseY-.5)*.025;
+      p.tw+=.012;
+      if(p.x<0)p.x=w;if(p.x>w)p.x=0;
+      if(p.y<0)p.y=h;if(p.y>h)p.y=0;
+      const alpha=p.a*(.45+.55*Math.sin(p.tw));
+      ctx.beginPath();
+      ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      if(p.hue==="gold"){
+        ctx.fillStyle=`rgba(244,199,107,${alpha})`;
+        ctx.shadowBlur=8;ctx.shadowColor="rgba(244,199,107,.65)";
+      }else{
+        ctx.fillStyle=`rgba(255,248,240,${alpha*.75})`;
+        ctx.shadowBlur=5;ctx.shadowColor="rgba(255,255,255,.45)";
+      }
+      ctx.fill();ctx.shadowBlur=0;
+    });
+    requestAnimationFrame(draw);
+  }
+
+  if(!window.matchMedia("(prefers-reduced-motion:reduce)").matches){
+    resize();initParts();draw();
+    window.addEventListener("resize",()=>{resize();initParts()});
+  }
+})();
+</script>
+</body>
+</html>

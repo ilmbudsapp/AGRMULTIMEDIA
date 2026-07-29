@@ -1,0 +1,4483 @@
+export type Language = 'de' | 'en';
+
+export interface Translations {
+  // Navigation
+  nav: {
+    home: string;
+    about: string;
+    services: string;
+    portfolio: string;
+    blog: string;
+    contact: string;
+  };
+  
+  // Hero Section
+  hero: {
+    title: string;
+    subtitle: string;
+    servicesButton: string;
+    portfolioButton: string;
+    locationTitle: string;
+    locations: string[];
+  };
+  
+  // About Section
+  about: {
+    title: string;
+    subtitle: string;
+    storyTitle: string;
+    storyP1: string;
+    storyP2: string;
+    stats: {
+      projects: string;
+      clients: string;
+      years: string;
+    };
+    certification: {
+      certified: string;
+      googlePartner: string;
+    };
+    skills: {
+      title: string;
+      creative: { title: string; items: string[] };
+      software: { title: string; items: string[] };
+      aiTools: { title: string; items: string[] };
+      office: { title: string; items: string[] };
+      languages: { title: string; items: string[] };
+    };
+  };
+  
+  // Services Section
+  services: {
+    title: string;
+    subtitle: string;
+    items: {
+      webDesign: {
+        title: string;
+        description: string;
+        features: string[];
+      };
+      graphicDesign: {
+        title: string;
+        description: string;
+        features: string[];
+      };
+      videoProduction: {
+        title: string;
+        description: string;
+        features: string[];
+      };
+      digitalMarketing: {
+        title: string;
+        description: string;
+        features: string[];
+      };
+      photography: {
+        title: string;
+        description: string;
+        features: string[];
+      };
+      consulting: {
+        title: string;
+        description: string;
+        features: string[];
+      };
+    };
+    learnMore: string;
+  };
+  
+  // Portfolio Section
+  portfolio: {
+    title: string;
+    subtitle: string;
+    filters: {
+      all: string;
+      web: string;
+      brand: string;
+      video: string;
+      photo: string;
+    };
+    items: {
+      ecommerce: {
+        title: string;
+        description: string;
+      };
+      brand: {
+        title: string;
+        description: string;
+      };
+      corporate: {
+        title: string;
+        description: string;
+      };
+      restaurant: {
+        title: string;
+        description: string;
+      };
+      product: {
+        title: string;
+        description: string;
+      };
+      packaging: {
+        title: string;
+        description: string;
+      };
+    };
+    viewDetails: string;
+  };
+  
+  // Blog Section
+  blog: {
+    title: string;
+    subtitle: string;
+    posts: {
+      trends: {
+        title: string;
+        description: string;
+        category: string;
+      };
+      conversion: {
+        title: string;
+        description: string;
+        category: string;
+      };
+      video: {
+        title: string;
+        description: string;
+        category: string;
+      };
+      foodTruck: {
+        title: string;
+        description: string;
+        category: string;
+      };
+    };
+    readMore: string;
+    viewAll: string;
+  };
+
+  // Blog Post content
+  blogPost: {
+    trends: {
+      title: string;
+      subtitle: string;
+      category: string;
+      date: string;
+      intro: string;
+      aiPersonalization: { title: string; description: string; };
+      voiceSearch: { title: string; description: string; };
+      mobileFirst: { title: string; description: string; };
+      socialCommerce: { title: string; description: string; };
+      implementation: { title: string; description: string; };
+      actionItems: { title: string; item1: string; item2: string; item3: string; item4: string; };
+    };
+    conversion: {
+      title: string;
+      subtitle: string;
+      category: string;
+      date: string;
+      intro: string;
+      userExperience: { title: string; description: string; };
+      abTesting: { title: string; description: string; };
+      callToAction: { title: string; description: string; };
+      analytics: { title: string; description: string; };
+      practicalSteps: { title: string; description: string; };
+      optimizationChecklist: {
+        title: string;
+        technical: string;
+        pageSpeed: string;
+        mobileOptimization: string;
+        formOptimization: string;
+        content: string;
+        headlines: string;
+        socialProof: string;
+        urgency: string;
+      };
+      cta: { title: string; description: string; button: string; };
+    };
+    video: {
+      title: string;
+      subtitle: string;
+      category: string;
+      date: string;
+      intro: string;
+      engagement: { title: string; description: string; };
+      conversion: { title: string; description: string; };
+      storytelling: { title: string; description: string; };
+      reach: { title: string; description: string; };
+      types: {
+        title: string;
+        product: { title: string; description: string; };
+        testimonial: { title: string; description: string; };
+        educational: { title: string; description: string; };
+        behindScenes: { title: string; description: string; };
+      };
+      strategy: {
+        title: string;
+        production: string;
+        quality: string;
+        lighting: string;
+        planning: string;
+        distribution: string;
+        platforms: string;
+        timing: string;
+        seo: string;
+      };
+      cta: { title: string; description: string; button: string; };
+    };
+  };
+
+  // Portfolio Pages content - simplified for now
+  portfolioPages: {
+    common: {
+      backToHome: string;
+      projectDetails: string; 
+      category: string;
+      results: string;
+    };
+  };
+  
+  // Contact Section
+  contact: {
+    title: string;
+    subtitle: string;
+    instruction: string;
+    trustLine: string;
+    info: {
+      title: string;
+      phone: string;
+      email: string;
+      location: string;
+    };
+    social: {
+      title: string;
+    };
+    hours: {
+      title: string;
+      weekdays: string;
+      saturday: string;
+      sunday: string;
+      closed: string;
+    };
+    success: {
+      title: string;
+      description: string;
+    };
+    error: {
+      title: string;
+      description: string;
+      validation: string;
+      emailjsMissing: string;
+    };
+    form: {
+      title: string;
+      intro: string;
+      name: string;
+      email: string;
+      message: string;
+      submit: string;
+      sending: string;
+      emailSubject: string;
+    };
+  };
+  
+  // Footer
+  footer: {
+    brand: string;
+    services: string;
+    company: string;
+    contact: string;
+    phone: string;
+    email: string;
+    location: string;
+    copyright: string;
+    privacy: string;
+    terms: string;
+    cookies: string;
+    impresum: string;
+    career: string;
+  };
+  
+  // Video Production page
+  videoProduction: {
+    hero: {
+      title: string;
+      description: string;
+    };
+    services: {
+      filming: {
+        title: string;
+        description: string;
+        features: string[];
+      };
+      editing: {
+        title: string;
+        description: string;
+        features: string[];
+      };
+      animation: {
+        title: string;
+        description: string;
+        features: string[];
+      };
+    };
+    process: {
+      title: string;
+      steps: {
+        title: string;
+        description: string;
+      }[];
+    };
+    portfolio: {
+      title: string;
+      description: string;
+    };
+    servicesTitle: string;
+    servicesSubtitle: string;
+    portfolioButtonText: string;
+    videos: Array<{
+      title: string;
+      description: string;
+    }>;
+    cta: {
+      title: string;
+      description: string;
+      button: string;
+    };
+  };
+
+  // Impresum content
+  impresum: {
+    title: string;
+    subtitle: string;
+    sections: {
+      company: {
+        title: string;
+        owner: string;
+        address: string;
+      };
+      contact: {
+        title: string;
+        email: string;
+      };
+      representative: {
+        title: string;
+        name: string;
+      };
+      tax: {
+        title: string;
+        taxNumber: string;
+        vatNumber: string;
+      };
+      profession: {
+        title: string;
+        description: string;
+      };
+    };
+  };
+
+  // Privacy Policy content
+  privacy: {
+    title: string;
+    subtitle: string;
+    sections: {
+      dataCollection: {
+        title: string;
+        content: string;
+      };
+      dataUsage: {
+        title: string;
+        content: string;
+      };
+      cookies: {
+        title: string;
+        content: string;
+      };
+      rights: {
+        title: string;
+        content: string;
+      };
+      contact: {
+        title: string;
+        content: string;
+      };
+    };
+  };
+
+  // Terms of Service content
+  terms: {
+    title: string;
+    subtitle: string;
+    sections: {
+      scope: {
+        title: string;
+        content: string;
+      };
+      services: {
+        title: string;
+        content: string;
+      };
+      liability: {
+        title: string;
+        content: string;
+      };
+      intellectual: {
+        title: string;
+        content: string;
+      };
+      termination: {
+        title: string;
+        content: string;
+      };
+    };
+  };
+
+  // Cookie Policy content
+  cookies: {
+    title: string;
+    subtitle: string;
+    sections: {
+      whatAre: {
+        title: string;
+        content: string;
+      };
+      howWeUse: {
+        title: string;
+        content: string;
+      };
+      types: {
+        title: string;
+        content: string;
+      };
+      control: {
+        title: string;
+        content: string;
+      };
+      thirdParty: {
+        title: string;
+        content: string;
+      };
+    };
+  };
+
+  // Web Design page content
+  webDesign: {
+    hero: {
+      title: string;
+      description: string;
+    };
+    services: {
+      websites: {
+        title: string;
+        description: string;
+        features: string[];
+      };
+      mobileApps: {
+        title: string;
+        description: string;
+        features: string[];
+      };
+      responsive: {
+        title: string;
+        description: string;
+        features: string[];
+      };
+    };
+    process: {
+      title: string;
+      steps: {
+        title: string;
+        description: string;
+      }[];
+    };
+    portfolio: {
+      title: string;
+      items: {
+        title: string;
+        description: string;
+      }[];
+    };
+    technologies: {
+      title: string;
+      frontend: {
+        title: string;
+        items: string[];
+      };
+      backend: {
+        title: string;
+        items: string[];
+      };
+      mobile: {
+        title: string;
+        items: string[];
+      };
+    };
+    cta: {
+      title: string;
+      description: string;
+      button: string;
+    };
+  };
+
+  // Graphic Design page content
+  graphicDesign: {
+    hero: {
+      title: string;
+      description: string;
+    };
+    services: {
+      logoDesign: {
+        title: string;
+        description: string;
+        features: string[];
+      };
+      branding: {
+        title: string;
+        description: string;
+        features: string[];
+      };
+      printMaterials: {
+        title: string;
+        description: string;
+        features: string[];
+      };
+    };
+    process: {
+      title: string;
+      steps: {
+        title: string;
+        description: string;
+      }[];
+    };
+    portfolio: {
+      title: string;
+      logos: {
+        title: string;
+        items: {
+          title: string;
+          description: string;
+          category: string;
+        }[];
+      };
+      branding: {
+        title: string;
+        items: {
+          title: string;
+          description: string;
+          category: string;
+        }[];
+      };
+      print: {
+        title: string;
+        description: string;
+      };
+      books: {
+        title: string;
+        description: string;
+      };
+    };
+    cta: {
+      title: string;
+      description: string;
+      button: string;
+    };
+  };
+
+  // Digital Marketing page content
+  digitalMarketing: {
+    hero: {
+      title: string;
+      subtitle: string;
+      description: string;
+    };
+    servicesTitle: string;
+    servicesSubtitle: string;
+    portfolioButtonText: string;
+    services: {
+      socialMedia: {
+        title: string;
+        description: string;
+        features: string[];
+      };
+      googleAds: {
+        title: string;
+        description: string;
+        features: string[];
+      };
+      contentMarketing: {
+        title: string;
+        description: string;
+        features: string[];
+      };
+    };
+    strategy: {
+      title: string;
+      steps: {
+        title: string;
+        description: string;
+      }[];
+    };
+    results: {
+      title: string;
+      description: string;
+      metrics: {
+        value: string;
+        label: string;
+        description: string;
+      }[];
+    };
+    cta: {
+      title: string;
+      description: string;
+      button: string;
+    };
+  };
+
+  // Photography page content
+  photography: {
+    hero: {
+      title: string;
+      subtitle: string;
+      description: string;
+    };
+    servicesTitle: string;
+    servicesSubtitle: string;
+    portfolioButtonText: string;
+    portfolioTitle: string;
+    portfolioDescription: string;
+    moviePosters: {
+      title: string;
+      description: string;
+      category: string;
+    }[];
+    processTitle: string;
+    processSteps: {
+      title: string;
+      description: string;
+      icon: string;
+    }[];
+    services: {
+      professionalPhotography: {
+        title: string;
+        description: string;
+        features: string[];
+      };
+      restoration: {
+        title: string;
+        description: string;
+        features: string[];
+      };
+      photomontage: {
+        title: string;
+        description: string;
+        features: string[];
+      };
+      moviePosters: {
+        title: string;
+        description: string;
+        features: string[];
+      };
+    };
+    cta: {
+      title: string;
+      description: string;
+      button: string;
+    };
+  };
+
+  // Consulting page content
+  consulting: {
+    hero: {
+      title: string;
+      subtitle: string;
+      description: string;
+    };
+    servicesTitle: string;
+    servicesSubtitle: string;
+    services: {
+      digitalStrategy: {
+        title: string;
+        description: string;
+        features: string[];
+      };
+      uxAudit: {
+        title: string;
+        description: string;
+        features: string[];
+      };
+      analytics: {
+        title: string;
+        description: string;
+        features: string[];
+      };
+    };
+    process: {
+      title: string;
+      steps: {
+        title: string;
+        description: string;
+      }[];
+    };
+    benefits: {
+      title: string;
+      items: {
+        title: string;
+        description: string;
+      }[];
+    };
+    cta: {
+      title: string;
+      description: string;
+      button: string;
+    };
+  };
+}
+
+import { itTranslations } from './i18n-it';
+
+export const translations: Record<Exclude<Language, "al">, Translations> = {
+  sr: {
+    nav: {
+      home: "Početna",
+      about: "O nama",
+      services: "Usluge",
+      portfolio: "Portfolio",
+      blog: "Blog",
+      contact: "Kontakt"
+    },
+    hero: {
+      title: "Kreativna Multimedijalna Rešenja",
+      subtitle: "Profesionalne usluge kreiranja web stranica, web dizajna, grafičkog dizajna, video produkcije, digitalnog marketinga i razvoja mobilnih aplikacija za Android i iOS za vaš biznis",
+      servicesButton: "Pogledajte usluge",
+      portfolioButton: "Naši radovi",
+      locationTitle: "Radimo sa vodećim brendovima",
+      locations: ["Stuttgart", "Milano", "Ulm"]
+    },
+    about: {
+      title: "O MULTIMEDIA AGRONDESIGN",
+      subtitle: "Kreiramo izuzetne digitalne doživljaje koji pokreću vaš biznis napred",
+      storyTitle: "Naša priča",
+      storyP1: "MULTIMEDIA AGRONDESIGN sam osnovao sa vizijom da pomažem biznis-ima da se istaknu u digitalnom svetu. Specijalizovan sam za kreiranje visokih kvaliteta multimedia sadržaja koji privlači pažnju, gradi brendove i pokreće rezultate.",
+      storyP2: "Kao iskusan dizajner, developer i marketing stručnjak, radim posvećeno da vašim idejama dam život kroz inovativna digitalna rešenja.",
+      stats: {
+        projects: "Projekata",
+        clients: "Klijenata",
+        years: "Godina"
+      },
+      certification: {
+        certified: "Sertifikovani",
+        googlePartner: "Google Partner"
+      },
+      skills: {
+        title: "Kompetencije i alati",
+        creative: {
+          title: "Kreativna koncepcija i dizajn",
+          items: ["Kreativna koncepcija", "Korporativni i logo dizajn", "Dizajn za print i digitalne medije"]
+        },
+        software: {
+          title: "Profesionalni softver",
+          items: ["Adobe Photoshop CC 2026", "Adobe Premiere Pro CC 2026", "Adobe After Effects CC 2026"]
+        },
+        aiTools: {
+          title: "AI alati",
+          items: ["Gemini", "Nano Banana", "Chat GPT", "Perplexity", "Veo 3.1", "Sora 2.0"]
+        },
+        office: {
+          title: "Office paket",
+          items: ["Microsoft Word", "Excel", "PowerPoint", "Outlook"]
+        },
+        languages: {
+          title: "Jezici",
+          items: ["Albanski (maternji)", "Italijanski (tečno)", "Srpski (tečno)", "Hrvatski (tečno)", "Nemački (tečno)"]
+        }
+      }
+    },
+    services: {
+      title: "Naše usluge",
+      subtitle: "Sveobuhvatna multimedia rešenja prilagođena vašim potrebama",
+      items: {
+        webDesign: {
+          title: "Kreiranje vašeg Web sajta i Mobilne aplikacije",
+          description: "Responsivni, SEO optimizovani web sajtovi i mobilne aplikacije za Android i iOS koji privlače posetioce i konvertuju ih u klijente.",
+          features: ["Custom dizajn", "Mobile responsivan", "SEO optimizacija", "Android & iOS aplikacije"]
+        },
+        graphicDesign: {
+          title: "Grafički Dizajn",
+          description: "Kreativni vizuelni identiteti, logotipi i marketing materijali koji izdvajaju vaš brend.",
+          features: ["Logo dizajn", "Brending", "Print materijali"]
+        },
+        videoProduction: {
+          title: "Video Produkcija",
+          description: "Profesionalni video sadržaj koji prenosi vašu poruku i angažuje auditorijum.",
+          features: ["Promocijski video", "Animacije", "Post-produkcija"]
+        },
+        digitalMarketing: {
+          title: "Digitalni Marketing",
+          description: "Strategije koje povećavaju vašu online vidljivost i privlače ciljnu publiku.",
+          features: ["Social Media", "Google Ads", "Content Marketing"]
+        },
+        photography: {
+          title: "Fotografija i Photomontaža",
+          description: "Profesionalne fotografije, restauracija starih slika, photomontaže i kreiranje filmskih postera sa vašom slikom.",
+          features: ["Profesionalno fotografisanje", "Restauracija starih fotografija", "Photomontaže svih vrsta", "Filmski posteri sa vašom slikom", "Obrada i post-produkcija", "Kreativni dizajn"]
+        },
+        consulting: {
+          title: "Konsalting",
+          description: "Stručne konsultacije za digitalne strategije i optimizaciju vašeg online prisustva.",
+          features: ["Digitalna strategija", "UX/UI audit", "Analitika"]
+        }
+      },
+      learnMore: "Saznaj više"
+    },
+    portfolio: {
+      title: "Naš Portfolio",
+      subtitle: "Pogledajte neke od naših najuspešnijih projekata koji su doneli rezultate klijentima",
+      filters: {
+        all: "Svi projekti",
+        web: "Web Dizajn",
+        brand: "Brending",
+        video: "Video",
+        photo: "Fotografija"
+      },
+      items: {
+        ecommerce: {
+          title: "E-commerce Sajt",
+          description: "Kompletan online shopping doživljaj"
+        },
+        brand: {
+          title: "Brend Identitet",
+          description: "Kompletan vizuelni identitet za startup"
+        },
+        corporate: {
+          title: "Korporativni Video",
+          description: "Predstavljanje kompanije kroz video"
+        },
+        restaurant: {
+          title: "Restoran Website",
+          description: "Elegantno online prisustvo"
+        },
+        product: {
+          title: "Product Photography",
+          description: "Studijska fotografija proizvoda"
+        },
+        packaging: {
+          title: "Packaging Dizajn",
+          description: "Kreativna ambalažna rešenja"
+        }
+      },
+      viewDetails: "Pogledaj detalje"
+    },
+    blog: {
+      title: "Blog i Novosti",
+      subtitle: "Pratite najnovije trendove u digitalnom marketingu i dizajnu",
+      posts: {
+        trends: {
+          title: "5 Najvažnijih Trendova u Digitalnom Marketingu za 2026.",
+          description: "Otkrijte najnovije trendove koji će definisati digitalni marketing u narednoj godini i kako možete prilagoditi svoju strategiju...",
+          category: "Marketing"
+        },
+        conversion: {
+          title: "Kako da Kreirate Web Sajt koji Konvertuje Posetioce",
+          description: "Pratite najbolje prakse web dizajna koji ne samo što izgleda dobro, već i efikasno konvertuje posetioce u klijente...",
+          category: "Dizajn"
+        },
+        video: {
+          title: "Moć Video Marketinga: Zašto je Video Kralj Sadržaja",
+          description: "Video marketing nije samo trend - to je budućnost digitalne komunikacije. Saznajte kako možete iskoristiti video za rast biznisa...",
+          category: "Video"
+        },
+        foodTruck: {
+          title: "Kako sam napravio web za food truck",
+          description: "Korak-po-korak objašnjavam kako sam dizajnirao i razvio jednostavan web za food truck — od strukture, dizajna i copy-ja do osnovnog SEO-a i CTA dugmadi.",
+          category: "Web dizajn"
+        }
+      },
+      readMore: "Čitaj više",
+      viewAll: "Pogledaj sve članke"
+    },
+    blogPost: {
+      trends: {
+        title: "5 Najvažnijih Trendova u Digitalnom Marketingu za 2026.",
+        subtitle: "Ostanite u korak sa najnovijim trendovima",
+        category: "Digitalni Marketing",
+        date: "07.03.2026",
+        intro: "Pejzaž digitalnog marketinga se brzo razvija. Od AI-om pokretane personalizacije do immersivnih AR iskustava, 2026. godina donosi uzbudljive prilike za preduzeća da se povežu sa svojom publiku na smisleniji način.",
+        aiPersonalization: {
+          title: "Personalizacija pokretana AI",
+          description: "Veštačka inteligencija omogućava neviđene nivoe personalizacije sadržaja, stvarajući jedinstvena korisnička iskustva prilagođena individualnim preferencama i ponašanjima."
+        },
+        voiceSearch: {
+          title: "Optimizacija za glasovnu pretragu",
+          description: "Sa pametnim zvučnicima koji postaju mainstream, optimizacija sadržaja za glasovne pretrage je ključna za održavanje vidljivosti u rezultatima pretrage."
+        },
+        mobileFirst: {
+          title: "Iskustva usmerena ka mobilnim uređajima",
+          description: "Mobilni uređaji čine većinu web saobraćaja. Dizajniranje iskustava usmerenih ka mobilnim uređajima osigurava optimalnu performansu na svim uređajima."
+        },
+        socialCommerce: {
+          title: "Integracija društvene trgovine",
+          description: "Društvene platforme postaju destinacije za kupovinu. Integracija trgovine direktno u društvena iskustva smanjuje trenje u kupovnom putovanju."
+        },
+        implementation: {
+          title: "Implementacija ovih trendova",
+          description: "Uspešna implementacija ovih trendova zahteva strateško planiranje i odgovarajuću ekspertizu. U MULTIMEDIA AGRONDESIGN-u pomajem preduzećima da se snađu u digitalnom pejzažu sa najsavremenijim rešenjima koja donose stvarne rezultate."
+        },
+        actionItems: {
+          title: "Ključne stavke za akciju",
+          item1: "Audituj svoju trenutnu strategiju digitalnog marketinga",
+          item2: "Identifikuj prilike za AI integraciju",
+          item3: "Optimizuj sadržaj za glasovnu pretragu",
+          item4: "Poboljšaj mobilno korisničko iskustvo"
+        }
+      },
+      conversion: {
+        title: "Ultimativni vodič za optimizaciju konverzije web sajta",
+        subtitle: "Pretvori posetioce u klijente",
+        category: "Optimizacija web sajta",
+        date: "07.03.2026",
+        intro: "Konvertovanje posetilaca web sajta u klijente je i umetnost i nauka. Kroz strateški dizajn, uvjerljiv sadržaj i testiranje zasnovano na podacima, možete dramatično poboljšati svoje stope konverzije i rasti svoj biznis.",
+        userExperience: {
+          title: "Dizajn korisničkog iskustva",
+          description: "Intuitivna navigacija, jasne vrednosne ponude i besprekorno korisničke tokove prirodno vode posetioce prema akcijama konverzije."
+        },
+        abTesting: {
+          title: "A/B test strategija",
+          description: "Sistematsko testiranje različitih elemenata pomaže identifikaciji onoga što najbolje rezonuje sa vašom publikom i pokreće više stope konverzije."
+        },
+        callToAction: {
+          title: "Uvjerljivi pozivi na akciju",
+          description: "Strateško postavljanje i uverljiva kopija u vašim CTA-ima mogu značajno uticati na stope konverzije i korisničku angažovanost."
+        },
+        analytics: {
+          title: "Performanse analitike",
+          description: "Uvidi zasnovani na podacima otkrivaju obrasce ponašanja korisnika i prilike za optimizaciju kroz vašu konverzioni levak."
+        },
+        practicalSteps: {
+          title: "Praktični koraci za optimizaciju",
+          description: "Uspešna optimizacija konverzije zahteva sistematski pristup. Počnite sa ovim proverenim strategijama da biste videli neposredna poboljšanja u performansama vašeg web sajta."
+        },
+        optimizationChecklist: {
+          title: "Lista za optimizaciju konverzije",
+          technical: "Tehnička optimizacija",
+          pageSpeed: "Poboljšaj brzinu učitavanja stranice",
+          mobileOptimization: "Optimizuj za mobilne uređaje",
+          formOptimization: "Pojednostavi polja forme",
+          content: "Strategija sadržaja",
+          headlines: "Kreiraj uvjerljive naslove",
+          socialProof: "Dodaj elemente društvenog dokaza",
+          urgency: "Koristi hitnost i nedostupnost"
+        },
+        cta: {
+          title: "Spreman si da pojačaš svoje konverzije?",
+          description: "Dozvoli da MULTIMEDIA AGRONDESIGN optimizuje tvoj web sajt za maksimalne konverzije. Naš pristup zasnovan na podacima donosi merljive rezultate.",
+          button: "Počni danas"
+        }
+      },
+      video: {
+        title: "Moć video marketinga: Angažovanje vaše publike u 2026.",
+        subtitle: "Angažuj publiku kroz vizuelno pripovedanje",
+        category: "Video Marketing",
+        date: "07.03.2026",
+        intro: "Video sadržaj je postao dominantna sila u digitalnom marketingu. Sa opadanjem pažnje i povećanjem vizuelne potrošnje, preduzeća koja savladaju video pripovedanje dobijaju značajnu konkurentsku prednost.",
+        engagement: {
+          title: "Više stope angažovanosti",
+          description: "Video sadržaj generiše 1200% više deljenja od teksta i slika zajedno, stvarajući moćan viralni potencijal za vaš brend."
+        },
+        conversion: {
+          title: "Poboljšane konverzije",
+          description: "Odredne stranice sa video-ima mogu povećati stope konverzije do 80%, čineći video osnovnim alatom za prodajne levkove."
+        },
+        storytelling: {
+          title: "Emocionalno pripovedanje",
+          description: "Video omogućava brendovima da pričaju uvjerljive priče koje stvaraju emocionalne veze sa svojom publikom, gradeći lojalnost i poverenje."
+        },
+        reach: {
+          title: "Prošireni doseg",
+          description: "Algoritmi društvenih medija favorizuju video sadržaj, pružajući prilike organskog dosega koje su sve ređe sa drugim tipovima sadržaja."
+        },
+        types: {
+          title: "Tipovi video sadržaja koji konvertuju",
+          product: {
+            title: "Demonstracije proizvoda",
+            description: "Pokažite svoje proizvode u akciji, ističući ključne karakteristike i prednosti na način na koji statičke slike jednostavno ne mogu."
+          },
+          testimonial: {
+            title: "Svedočanstva klijenata",
+            description: "Autentične priče klijenata grade poverenje i kredibilitet, služeći kao moćan društveni dokaz za potencijalne kupce."
+          },
+          educational: {
+            title: "Edukacijski sadržaj",
+            description: "How-to video-i i tutorijali pozicioniraju vaš brend kao eksperta u industriji dok pružaju vredan sadržaj vašoj publici."
+          },
+          behindScenes: {
+            title: "Iz kulisa",
+            description: "Dajte svojoj publici pogled iza zavese da humanizujete svoj brend i stvorite jače veze."
+          }
+        },
+        strategy: {
+          title: "Saveti za strategiju video marketinga",
+          production: "Izvrsnost produkcije",
+          quality: "Investiraj u dobru kvalitet zvuka",
+          lighting: "Koristi odgovarajuće tehnike osvetljenja",
+          planning: "Planiraj strukturu svog sadržaja",
+          distribution: "Pametna distribucija",
+          platforms: "Izaberi prave platforme",
+          timing: "Optimizuj vremena objavljivanja",
+          seo: "Koristi najbolje prakse video SEO-a"
+        },
+        cta: {
+          title: "Spreman si da iskoristiš video marketing?",
+          description: "MULTIMEDIA AGRONDESIGN stvara uvjerljiv video sadržaj koji pokreće angažovanost i konverzije. Od koncepta do distribucije, bavimo se svakim aspektom vaše video marketing strategije.",
+          button: "Počni svoje video putovanje"
+        }
+      }
+    },
+    contact: {
+      title: "Kontakt",
+      subtitle: "Stupite u kontakt direktno putem telefona ili emaila.",
+      instruction: "Pošaljite upit putem forme ispod (bez zakazivanja termina) ili nas kontaktirajte telefonom ili emailom. Odgovaramo u roku od 24 sata.",
+      trustLine: "Odgovor u roku od 24 sata",
+      info: {
+        title: "Kontakt informacije",
+        phone: "Telefon",
+        email: "Email",
+        location: "Geislingen an der Steige"
+      },
+      social: {
+        title: "Pratite nas"
+      },
+      hours: {
+        title: "Radimo",
+        weekdays: "Ponedeljak - Petak",
+        saturday: "Subota",
+        sunday: "Nedelja",
+        closed: "Zatvoreno"
+      },
+      success: {
+        title: "Poruka je poslana!",
+        description: "Javićemo vam se u najkraćem mogućem roku."
+      },
+      error: {
+        title: "Greška pri slanju poruke",
+        description: "Molimo pokušajte ponovo ili nas kontaktirajte direktno.",
+        validation: "Ime, email i poruka su obavezni",
+        emailjsMissing: "Kontakt forma nije podešena (EmailJS). Javite nam se telefonom ili emailom."
+      },
+      form: {
+        title: "Pošaljite upit",
+        intro: "Bez zakazivanja termina — samo vaša pitanja i zahtev za informacije. Odgovaramo na email.",
+        name: "Ime i prezime",
+        email: "Email",
+        message: "Vaša poruka",
+        submit: "Pošalji poruku",
+        sending: "Šaljem…",
+        emailSubject: "Upit za informacije (sajt)"
+      }
+    },
+    portfolioPages: {
+      common: {
+        backToHome: "Početna",
+        projectDetails: "Detalji Projekta",
+        category: "Kategorija",
+        results: "Rezultati"
+      }
+    },
+    footer: {
+      brand: "Kreiramo izuzetne digitalne doživljaje koji pokreću vaš biznis napred kroz inovativna multimedia rešenja.",
+      services: "Usluge",
+      company: "Kompanija",
+      contact: "Kontakt",
+      phone: "+49 15560 873124",
+      email: "agron6922@gmail.com",
+      location: "Geislingen an der Steige",
+      copyright: "© 2026 MULTIMEDIA AGRONDESIGN. Sva prava zadržana.",
+      privacy: "Privatnost",
+      terms: "Uslovi",
+      cookies: "Kolačići",
+      impresum: "Impresum",
+      career: "Karijera"
+    },
+    
+    // Impresum content
+    impresum: {
+      title: "Impresum (Pravne informacije)",
+      subtitle: "Informacije u skladu sa § 5 TMG (Nemački zakon o telemedijima)",
+      sections: {
+        company: {
+          title: "AGRONDESIGN",
+          owner: "Vlasnik: Agron Osmani",
+          address: "Luise-Hainlen-Weg 4/4\n73312 Geislingen an der Steige"
+        },
+        contact: {
+          title: "Kontakt",
+          email: "Email: agron6922@gmail.com"
+        },
+        representative: {
+          title: "Pravno zastupa",
+          name: "Agron Osmani"
+        },
+        tax: {
+          title: "Poreske informacije",
+          taxNumber: "Poreski broj (Steuernummer): 48267305956",
+          vatNumber: "Identifikacioni broj za PDV u skladu sa §27a nemačkog zakona o PDV-u (USt-IdNr.): DE354016444"
+        },
+        profession: {
+          title: "Profesionalno zvanje",
+          description: "Grafički dizajner i programer"
+        }
+      }
+    },
+
+    // Privacy Policy content (Serbian)
+    privacy: {
+      title: "Politika Privatnosti",
+      subtitle: "Informacije o zaštiti ličnih podataka u skladu sa GDPR",
+      sections: {
+        dataCollection: {
+          title: "Prikupljanje Podataka",
+          content: "Prikupljamo lične podatke koje vi dobrovoljno dajete preko kontakt forme, uključujući ime, email adresu i poruku. Ovi podaci se koriste isključivo u svrhu komunikacije i pružanja naših usluga."
+        },
+        dataUsage: {
+          title: "Korišćenje Podataka",
+          content: "Vaše lične podatke koristimo za: odgovaranje na vaše upite, pružanje requested usluga, poboljšanje našeg sajta i usluga, i slanje relevantnih informacija o našim uslugama (samo uz vašu dozvolu)."
+        },
+        cookies: {
+          title: "Kolačići (Cookies)",
+          content: "Koristimo kolačiće za poboljšanje funkcionalnosti sajta i analizu saobraćaja. Možete kontrolisati kolačiće kroz postavke vašeg browsera. Detaljnije informacije možete naći u našoj Politici Kolačića."
+        },
+        rights: {
+          title: "Vaša Prava",
+          content: "Imate pravo na pristup, ispravku, brisanje i prenosnost vaših podataka. Takođe možete ograničiti obradu ili se usprotiviti obradi vaših podataka. Za ostvarivanje ovih prava kontaktirajte nas putem emaila."
+        },
+        contact: {
+          title: "Kontakt",
+          content: "Za pitanja o zaštiti privatnosti kontaktirajte nas na: agron6922@gmail.com. Zadržavamo pravo da ažuriramo ovu politiku, o čemu ćemo vas obavestiti putem našeg sajta."
+        }
+      }
+    },
+
+    // Terms of Service content (Serbian)
+    terms: {
+      title: "Uslovi Korišćenja",
+      subtitle: "Pravila i uslovi korišćenja našeg sajta i usluga",
+      sections: {
+        scope: {
+          title: "Opseg Primene",
+          content: "Ovi uslovi se primenjuju na sve korisnike našeg sajta agrmultimedia.eu i naših usluga. Korišćenjem sajta prihvatate ove uslove u potpunosti."
+        },
+        services: {
+          title: "Naše Usluge",
+          content: "Pružamo usluge web dizajna, grafičkog dizajna, video produkcije, digitalnog marketinga i razvoja mobilnih aplikacija. Sve usluge se pružaju profesionalno i u dogovorenim rokovima."
+        },
+        liability: {
+          title: "Ograničenje Odgovornosti",
+          content: "Nismo odgovorni za štete nastale korišćenjem našeg sajta osim u slučajevima grubog nemara ili namere. Naša odgovornost je ograničena na vrednost ugovorenih usluga."
+        },
+        intellectual: {
+          title: "Intelektualna Svojina",
+          content: "Sav sadržaj na sajtu je zaštićen autorskim pravima. Zabranjeno je kopiranje, distribucija ili komercijalna upotreba bez pisane dozvole. Projekti kreirani za klijente postaju njihova svojina nakon plaćanja."
+        },
+        termination: {
+          title: "Prekid Usluga",
+          content: "Zadržavamo pravo da prekinemo pružanje usluga u slučaju kršenja uslova korišćenja. Klijenti mogu otkazati usluge uz poštovanje ugovorenih uslova otkazivanja."
+        }
+      }
+    },
+
+    // Cookie Policy content (Serbian)
+    cookies: {
+      title: "Politika Kolačića",
+      subtitle: "Kako koristimo kolačiće na našem sajtu",
+      sections: {
+        whatAre: {
+          title: "Šta su Kolačići",
+          content: "Kolačići su mali fajlovi koji se čuvaju na vašem uređaju kada posetite naš sajt. Oni nam pomažu da sajt funkcioniše bolje i pružimo vam bolji korisnik doživljaj."
+        },
+        howWeUse: {
+          title: "Kako Koristimo Kolačiće",
+          content: "Koristimo kolačiće za: pamćenje vaših jezika i postavki, analizu prometa na sajtu, poboljšanje performansi sajta, i obezbeđivanje sigurnosnih funkcija."
+        },
+        types: {
+          title: "Vrste Kolačića",
+          content: "Koristimo esencijalne kolačiće (potrebni za rad sajta), analitičke kolačiće (Google Analytics), funkcionalne kolačiće (pamćenje postavki), i performanse kolačiće (optimizacija sajta)."
+        },
+        control: {
+          title: "Kontrola Kolačića",
+          content: "Možete kontrolisati kolačiće kroz postavke vašeg browsera. Možete ih blokirati ili obrisati, ali to može uticati na funkcionalnost sajta. Većina browsera automatski prihvata kolačiće."
+        },
+        thirdParty: {
+          title: "Kolačići Treće Strane",
+          content: "Koristimo Google Analytics za analizu prometa. Google može postaviti svoje kolačiće. Molimo vas da proverite Google-ovu politiku privatnosti za više informacija o njihovim kolačićima."
+        }
+      }
+    },
+
+    webDesign: {
+      hero: {
+        title: "Kreiranje Web Sajtova i Mobilnih Aplikacija",
+        description: "Profesionalno razvijam responsivne web sajtove i mobilne aplikacije za Android i iOS koji privlače posetioce, poboljšavaju korisničko iskustvo i efikasno konvertuju posetioce u klijente kroz moderne tehnologije i optimizovan dizajn."
+      },
+      services: {
+        websites: {
+          title: "Web Sajtovi",
+          description: "Kreiram moderne, responsivne web sajtove koji rade savršeno na svim uređajima",
+          features: ["Responsivan Dizajn", "SEO Optimizacija", "Brzo Učitavanje", "CMS Integracija", "Sigurnost", "Analytics"]
+        },
+        mobileApps: {
+          title: "Mobilne Aplikacije",
+          description: "Razvijam native i cross-platform aplikacije za Android i iOS platforme",
+          features: ["Android Aplikacije", "iOS Aplikacije", "Cross-platform", "Push Notifikacije", "Offline Funkcionalnost", "App Store Publikacija"]
+        },
+        responsive: {
+          title: "Responsive Design",
+          description: "Osiguravam da vaš sajt izgleda savršeno na svim uređajima i veličinama ekrana",
+          features: ["Mobile-First Pristup", "Tablet Optimizacija", "Desktop Perfromanse", "Touchscreen Podrška", "Retina Display", "Cross-browser Kompatibilnost"]
+        }
+      },
+      process: {
+        title: "Proces Rada",
+        steps: [
+          {
+            title: "Planiranje",
+            description: "Analiziram vaše potrebe i kreiram detaljnu strategiju projekta"
+          },
+          {
+            title: "Dizajn",
+            description: "Kreiram wireframes, mockup-e i finalni vizuelni dizajn"
+          },
+          {
+            title: "Development",
+            description: "Kodiram funkcionalnu aplikaciju koristeći najnovije tehnologije"
+          },
+          {
+            title: "Testiranje & Lansiranje",
+            description: "Temeljno testiram i uspešno lansiran projekat sa podrškom"
+          }
+        ]
+      },
+      portfolio: {
+        title: "Portfolio Projekata",
+        items: [
+          {
+            title: "TechFlow Business Solutions",
+            description: "Kompleksna web platforma za upravljanje biznisom"
+          },
+          {
+            title: "EcoMarket Online Store", 
+            description: "E-commerce platforma za ekološke proizvode"
+          },
+          {
+            title: "FitLife Mobile App",
+            description: "Personalizovana fitness aplikacija za Android i iOS"
+          },
+          {
+            title: "ILMBUDS",
+            description: "Islamska aplikacija za decu"
+          }
+        ]
+      },
+      technologies: {
+        title: "Tehnologije koje Koristim",
+        frontend: {
+          title: "Frontend",
+          items: ["React", "TypeScript", "Next.js", "Vue.js", "Tailwind CSS", "SCSS"]
+        },
+        backend: {
+          title: "Backend",
+          items: ["Node.js", "Express", "Python", "PostgreSQL", "MongoDB", "Redis"]
+        },
+        mobile: {
+          title: "Mobile",
+          items: ["React Native", "Flutter", "Swift", "Kotlin", "Firebase", "Native APIs"]
+        }
+      },
+      cta: {
+        title: "Spremni za Vaš Projekat?",
+        description: "Kontaktirajte me za besplatnu konsultaciju o vašem web sajtu ili mobilnoj aplikaciji",
+        button: "Kontaktiraj Me"
+      }
+    },
+
+    graphicDesign: {
+      hero: {
+        title: "Kreiranje Vizuelnog Identiteta i Grafički Dizajn",
+        description: "Profesionalno kreiram jedinstvene logotipe, brendove i print materijale koji izdvajaju vaš biznis od konkurencije i ostavljaju nezaboravan utisak na vašu ciljnu publiku."
+      },
+      services: {
+        logoDesign: {
+          title: "Logo Dizajn",
+          description: "Kreiram nezaboravne logotipe koji predstavljaju esenciju vašeg brenda",
+          features: ["Originalni koncepti", "Vektorski formati", "Brend priručnik", "Različite varijante", "Revizije uključene", "Vlasništvo dizajna"]
+        },
+        branding: {
+          title: "Brending",
+          description: "Kompletni vizuelni identitet koji gradi prepoznatljivost vašeg brenda",
+          features: ["Brend priručnik", "Vizuelni identitet", "Tipografija", "Paleta boja", "Aplikacije", "Smernice brenda"]
+        },
+        printMaterials: {
+          title: "Print Materijali",
+          description: "Fizički marketing materijali koji promovisuju vaš biznis profesionalno",
+          features: ["Majice i tekstil", "Pakovanja", "Kancelarijski materijal", "Marketing materijali", "Oznake i natpisi", "Brendirani proizvodi"]
+        }
+      },
+      process: {
+        title: "Kreativni Proces",
+        steps: [
+          {
+            title: "Istraživanje",
+            description: "Analiziram vaš brend, ciljnu publiku i konkurenciju"
+          },
+          {
+            title: "Koncepti",
+            description: "Kreiram početne ideje i vizuelne pravce"
+          },
+          {
+            title: "Razvoj",
+            description: "Razrađujem odabrane koncepte do finalne verzije"
+          },
+          {
+            title: "Finalizacija",
+            description: "Priprema za štampu i digitalno korišćenje"
+          }
+        ]
+      },
+      portfolio: {
+        title: "Portfolio Radova",
+        logos: {
+          title: "Logo Dizajn",
+          items: [
+            {
+              title: "InnovateTech Solutions",
+              description: "Moderna tehnološka kompanija",
+              category: "Tehnološki startup"
+            },
+            {
+              title: "GreenHarvest",
+              description: "Organska hrana i poljoprivreda",
+              category: "Organska hrana"
+            },
+            {
+              title: "AurumCraft",
+              description: "Luksuzno zlatarstvo",
+              category: "Luksuzni nakit"
+            }
+          ]
+        },
+        branding: {
+          title: "Kompletni Brending",
+          items: [
+            {
+              title: "PowerFit Pro",
+              description: "Fitness i wellness brend",
+              category: "Fitness"
+            },
+            {
+              title: "Aroma Collective",
+              description: "Premium kafić brend",
+              category: "Hrana i piće"
+            }
+          ]
+        },
+        print: {
+          title: "Print Materijali",
+          description: "Brendirane majice, kutije za pakovanje i promotivni materijali"
+        },
+        books: {
+          title: "Dizajn Knjiga",
+          description: "Profesionalni dizajn korica i raspoređenje za publikacije"
+        }
+      },
+      cta: {
+        title: "Spremni za Novi Vizuelni Identitet?",
+        description: "Kontaktirajte me za besplatnu konsultaciju o vašem brendu",
+        button: "Kontaktiraj Me"
+      }
+    },
+
+    videoProduction: {
+      hero: {
+        title: "Profesionalna Video Produkcija",
+        description: "Kreiram video sadržaj visokog kvaliteta koji prenosi vašu poruku i angažuje auditorijum kroz profesionalno snimanje, editovanje i post-produkciju."
+      },
+      services: {
+        filming: {
+          title: "Profesionalno Snimanje",
+          description: "Koristim profesionalnu opremu za kreiranje vizuelno impresivnih video materijala",
+          features: ["4K Ultra HD snimanje", "Profesionalne kamere", "Stabilizatori i gimbal sistemi", "Profesionalno osvetljenje", "Audio snimanje studijskog kvaliteta", "Dronovi za aerijalne snimke"]
+        },
+        editing: {
+          title: "Video Editovanje",
+          description: "Napredne tehnike editovanja koje transformišu sirovi materijal u angažujući sadržaj",
+          features: ["Adobe Premiere Pro", "Adobe After Effects", "Color grading i korekcija", "Zvučni dizajn i miksovanje", "Vizuelni efekti", "Titlovanje i grafike"]
+        },
+        animation: {
+          title: "Intro Template Videi",
+          description: "Kreiranje animiranih intro template videa i motion graphics visokog kvaliteta",
+          features: ["Motion graphics", "2D i 3D animacije", "Logo animacije", "Intro/outro sekvence", "Kinetic typography", "Visual effects"]
+        }
+      },
+      process: {
+        title: "Kreativni Proces",
+        steps: [
+          {
+            title: "Planiranje",
+            description: "Razvijam koncept i kreiram storyboard prema vašim ciljevima"
+          },
+          {
+            title: "Snimanje",
+            description: "Profesionalno snimanje sa vrhunskom opremom i osvetljenjem"
+          },
+          {
+            title: "Post-produkcija",
+            description: "Editovanje, color grading, zvučni dizajn i finalna obrada"
+          },
+          {
+            title: "Isporuka",
+            description: "Optimizacija za različite platforme i finalna dostava"
+          }
+        ]
+      },
+      portfolio: {
+        title: "Portfolio Video Radova",
+        description: "Primeri mojih najnovijih video produkcija sa različitim stilovima i tehnikama"
+      },
+      servicesTitle: "Moje Video Produkcijske Usluge",
+      servicesSubtitle: "Kompletne video usluge od koncepta do finalne isporuke",
+      portfolioButtonText: "Portfolio Video",
+      videos: [
+        {
+          title: "Profesionalni Intro Video",
+          description: "Animirani intro sa logo animacijom"
+        },
+        {
+          title: "Promocijski Video",
+          description: "Kreativni promocijski sadržaj"
+        },
+        {
+          title: "Motion Grafika",
+          description: "Dinamična grafika i animacije"
+        },
+        {
+          title: "Prezentacija Proizvoda",
+          description: "Prezentacija proizvoda sa 3D efektima"
+        }
+      ],
+      cta: {
+        title: "Spremni za Video Projekat?",
+        description: "Kontaktirajte me za besplatnu konsultaciju o vašem video sadržaju",
+        button: "Kontaktiraj Me"
+      }
+    },
+
+    digitalMarketing: {
+      hero: {
+        title: "Digitalni Marketing",
+        subtitle: "Strategije koje povećavaju vašu online vidljivost",
+        description: "Kreiram sveobuhvatne digitalne marketing strategije koje povećavaju vašu online vidljivost, privlače ciljnu publiku i generišu merljive rezultate kroz društvene mreže, Google Ads i content marketing."
+      },
+      servicesTitle: "Moje Digitalne Marketing Usluge",
+      servicesSubtitle: "Kompletne digitalne strategije za rast vašeg biznisa",
+      portfolioButtonText: "Rezultati Portfolio",
+      services: {
+        socialMedia: {
+          title: "Social Media Marketing",
+          description: "Upravljanje društvenim mrežama i kreiranje angažujućeg sadržaja",
+          features: ["Facebook i Instagram kampanje", "LinkedIn strategije", "YouTube optimizacija", "Influencer marketing", "Community management", "Social media analytics"]
+        },
+        googleAds: {
+          title: "Google Ads",
+          description: "Efikasne PPC kampanje koje donose kvalitetne posetioce",
+          features: ["Search kampanje", "Display advertising", "Shopping ads", "YouTube reklame", "Remarketing", "Keyword research i optimizacija"]
+        },
+        contentMarketing: {
+          title: "Content Marketing",
+          description: "Kreiranje vrednog sadržaja koji privlači i zadržava publiku",
+          features: ["Blog strategije", "SEO optimizovan sadržaj", "Email marketing", "Newsletter kampanje", "Video content", "Copywriting"]
+        }
+      },
+      strategy: {
+        title: "Strategijski Pristup",
+        steps: [
+          {
+            title: "Analiza",
+            description: "Detaljno istraživanje tržišta, konkurencije i ciljne publike"
+          },
+          {
+            title: "Strategija",
+            description: "Kreiranje prilagođene digitalne marketing strategije"
+          },
+          {
+            title: "Implementacija",
+            description: "Pokretanje kampanja sa kontinuiranim praćenjem"
+          },
+          {
+            title: "Optimizacija",
+            description: "Analiza rezultata i kontinuirano poboljšanje performansi"
+          }
+        ]
+      },
+      results: {
+        title: "Rezultati Koji Govore",
+        description: "Merljivi rezultati koji pokazuju efikasnost digitalnih marketing strategija",
+        metrics: [
+          {
+            value: "300%",
+            label: "Povećanje Prometa",
+            description: "Prosečno povećanje web saobraćaja"
+          },
+          {
+            value: "150%",
+            label: "Više Konverzija",
+            description: "Poboljšanje stope konverzije"
+          },
+          {
+            value: "250%",
+            label: "ROI Rast",
+            description: "Povećanje povrata na investiciju"
+          }
+        ]
+      },
+      cta: {
+        title: "Spremni za Digitalni Rast?",
+        description: "Kontaktirajte me za besplatnu konsultaciju o vašoj digitalnoj marketing strategiji",
+        button: "Kontaktiraj Me"
+      }
+    },
+
+    photography: {
+      hero: {
+        title: "Fotografija i Fotomontaža",
+        subtitle: "Kreativna fotografija i digitalna umetnost",
+        description: "Kreiram profesionalne fotografije, restauriram stare slike, radim fotomontaže svih vrsta i filmske postere sa vašom slikom - od kreativnih kompozicija do realističnih portreta."
+      },
+      servicesTitle: "Moje Fotografske Usluge",
+      servicesSubtitle: "Od profesionalnog fotografisanja do kreativnih fotomontaža",
+      portfolioButtonText: "Portfolio Radova",
+      portfolioTitle: "Portfolio Filmskih Postera",
+      portfolioDescription: "Primeri mojih radova - kreiranje profesionalnih filmskih postera sa različitim stilovima i atmosferama",
+      moviePosters: [
+        {
+          title: "Ragazzo con Lanterne",
+          description: "Kreativni fantazijski poster sa atmosferskim osvetljenjem",
+          category: "Fantasy"
+        },
+        {
+          title: "Il Silenzio del Boss",
+          description: "Dramski poster u stilu filmova noir",
+          category: "Drama"
+        },
+        {
+          title: "Kong",
+          description: "Epski akcioni poster sa kreaturom",
+          category: "Action"
+        },
+        {
+          title: "Gardijan",
+          description: "Zimski atmosferski poster sa snegom",
+          category: "Drama"
+        },
+        {
+          title: "Abandoned",
+          description: "Misterijski triler poster sa tamnom atmosferom",
+          category: "Thriller"
+        }
+      ],
+      processTitle: "Kreativni Proces",
+      processSteps: [
+        {
+          title: "Konsultacija",
+          description: "Razgovaramo o vašoj ideji i potrebama",
+          icon: "1"
+        },
+        {
+          title: "Kreiranje Koncepta",
+          description: "Razvijam kreativni pristup i stil",
+          icon: "2"
+        },
+        {
+          title: "Izrada",
+          description: "Profesionalna fotografija ili digitalna obrada",
+          icon: "3"
+        },
+        {
+          title: "Finalizacija",
+          description: "Poslednja obrada i isporuka u željenom formatu",
+          icon: "4"
+        }
+      ],
+      services: {
+        professionalPhotography: {
+          title: "Profesionalno Fotografisanje",
+          description: "Fotografije proizvoda, portreta, događaja i korporativne fotografije",
+          features: ["Studijske fotografije", "Proizvodi i katalozi", "Portretna fotografija", "Event fotografija"]
+        },
+        restoration: {
+          title: "Restauracija Starih Slika",
+          description: "Vraćam život oštećenim i izblelim fotografijama",
+          features: ["Uklanjanje oštećenja", "Obnavljanje boja", "Digitalna restauracija", "Popravljanje starih fotografija"]
+        },
+        photomontage: {
+          title: "Fotomontaže Svih Vrsta",
+          description: "Kreativno kombinovanje elemenata u jedinstvene kompozicije",
+          features: ["Kreativne kompozicije", "Realistične fotomontaže", "Fantazijske scene", "Reklamne fotomontaže"]
+        },
+        moviePosters: {
+          title: "Filmski Posteri sa Vašom Slikom",
+          description: "Postavite sebe u središe filmskog postera",
+          features: ["Personalizovani posteri", "Različiti filmski stilovi", "Profesionalna obrada", "Visoka rezolucija"]
+        }
+      },
+      cta: {
+        title: "Spremni za Kreativnu Fotografiju?",
+        description: "Kontaktirajte me za besplatnu konsultaciju o vašoj fotografiji ili photomontaži projektu",
+        button: "Kontaktiraj Me"
+      }
+    },
+
+    consulting: {
+      hero: {
+        title: "Konsalting i Strategijsko Savetovanje",
+        subtitle: "Stručne konsultacije za digitalni uspeh",
+        description: "Analiziram vaš trenutni digitalni pristustvo, identifikujem mogućnosti za poboljšanje i kreiram strategiju koja će povećati vašu online efikasnost, korisničko iskustvo i konverzije."
+      },
+      servicesTitle: "Moje Konsalting Usluge",
+      servicesSubtitle: "Strategijsko planiranje i optimizacija za vaš digitalni uspeh",
+      services: {
+        digitalStrategy: {
+          title: "Digitalna Strategija",
+          description: "Kreiram sveobuhvatnu digitalnu strategiju prilagođenu vašim poslovnim ciljevima",
+          features: ["Analiza tržišta i konkurencije", "Definisanje ciljne publike", "Strategija brendiranja", "Plan digitalnog marketinga", "ROI optimizacija", "Dugoročno planiranje"]
+        },
+        uxAudit: {
+          title: "UX/UI Audit",
+          description: "Detaljno analiziram vaš sajt ili aplikaciju i dajem preporuke za poboljšanje",
+          features: ["Analiza korisničkog iskustva", "Testiranje upotrebljivosti", "Analiza konverzija", "Mobile responsivnost", "Brzina učitavanja", "Accessibility provera"]
+        },
+        analytics: {
+          title: "Analitika i Izvještavanje",
+          description: "Postavljam napredne sisteme praćenja i analizirm performanse",
+          features: ["Google Analytics setup", "Conversion tracking", "A/B testiranje", "Heat map analiza", "ROI merenje", "Mesečni izvештaji"]
+        }
+      },
+      process: {
+        title: "Proces Rada",
+        steps: [
+          {
+            title: "Analiza Trenutnog Stanja",
+            description: "Detaljno analiziram vaš trenutni digitalni prisustvo i identifikujem probleme"
+          },
+          {
+            title: "Istraživanje i Strategija",
+            description: "Analiziram tržište, konkurenciju i kreiram prilagođenu strategiju"
+          },
+          {
+            title: "Implementacijski Plan",
+            description: "Kreiram detaljni plan implementacije sa jasnim koracima i rokovima"
+          },
+          {
+            title: "Praćenje i Optimizacija",
+            description: "Kontinuirano praćenje rezultata i optimizacija strategije"
+          }
+        ]
+      },
+      benefits: {
+        title: "Prednosti Profesionalnog Konsaltinga",
+        items: [
+          {
+            title: "Povećanje Konverzija",
+            description: "Optimizacija koja direktno utiče na povećanje prodaje i leads-a"
+          },
+          {
+            title: "Ušteda Vremena i Novca",
+            description: "Izbegavanje grešaka i fokusiranje na strategije koje daju rezultate"
+          },
+          {
+            title: "Konkurentska Prednost",
+            description: "Strategije koje vas izdvajaju od konkurencije"
+          },
+          {
+            title: "Merljivi Rezultati",
+            description: "Jasno definisani KPI-jevi i redovan monitoring performansi"
+          }
+        ]
+      },
+      cta: {
+        title: "Spremni za Digitalni Rast?",
+        description: "Zakažite besplatnu konsultaciju i otkrijte kako možemo poboljšati vaš digitalni pristustvo",
+        button: "Kontaktiraj Me"
+      }
+    }
+  },
+  en: {
+    nav: {
+      home: "Home",
+      about: "About",
+      services: "Services",
+      portfolio: "Portfolio",
+      blog: "Blog",
+      contact: "Contact"
+    },
+    hero: {
+      title: "Creative Multimedia Solutions",
+      subtitle: "Professional website creation, web design, graphic design, video production, digital marketing services and mobile app development for Android and iOS for your business",
+      servicesButton: "View Services",
+      portfolioButton: "Our Work",
+      locationTitle: "Working with leading brands",
+      locations: ["Stuttgart", "Milano", "Ulm"]
+    },
+    about: {
+      title: "About MULTIMEDIA AGRONDESIGN",
+      subtitle: "Creating exceptional digital experiences that drive your business forward",
+      storyTitle: "Our Story",
+      storyP1: "I founded MULTIMEDIA AGRONDESIGN with a vision to help businesses stand out in the digital world. I specialize in creating high-quality multimedia content that attracts attention, builds brands and drives results.",
+      storyP2: "As an experienced designer, developer and marketing professional, I work dedicatedly to bring your ideas to life through innovative digital solutions.",
+      stats: {
+        projects: "Projects",
+        clients: "Clients",
+        years: "Years"
+      },
+      certification: {
+        certified: "Certified",
+        googlePartner: "Google Partner"
+      },
+      skills: {
+        title: "Skills & tools",
+        creative: {
+          title: "Creative concept & design",
+          items: ["Creative concept", "Corporate & logo design", "Print & digital media design"]
+        },
+        software: {
+          title: "Professional software",
+          items: ["Adobe Photoshop CC 2026", "Adobe Premiere Pro CC 2026", "Adobe After Effects CC 2026"]
+        },
+        aiTools: {
+          title: "AI tools",
+          items: ["Gemini", "Nano Banana", "Chat GPT", "Perplexity", "Veo 3.1", "Sora 2.0"]
+        },
+        office: {
+          title: "Office suite",
+          items: ["Microsoft Word", "Excel", "PowerPoint", "Outlook"]
+        },
+        languages: {
+          title: "Languages",
+          items: ["Albanian (native)", "Italian (fluent)", "Serbian (fluent)", "Croatian (fluent)", "German (fluent)"]
+        }
+      }
+    },
+    services: {
+      title: "Our Services",
+      subtitle: "Comprehensive multimedia solutions tailored to your needs",
+      items: {
+        webDesign: {
+          title: "Creating your Website and Mobile Application",
+          description: "Responsive, SEO-optimized websites and mobile applications for Android and iOS that attract visitors and convert them into clients.",
+          features: ["Custom Design", "Mobile Responsive", "SEO Optimization", "Android & iOS Apps"]
+        },
+        graphicDesign: {
+          title: "Graphic Design",
+          description: "Creative visual identities, logos and marketing materials that make your brand stand out.",
+          features: ["Logo Design", "Branding", "Print Materials"]
+        },
+        videoProduction: {
+          title: "Video Production",
+          description: "Professional video content that conveys your message and engages your audience.",
+          features: ["Promotional Videos", "Animations", "Post-Production"]
+        },
+        digitalMarketing: {
+          title: "Digital Marketing",
+          description: "Strategies that increase your online visibility and attract your target audience.",
+          features: ["Social Media", "Google Ads", "Content Marketing"]
+        },
+        photography: {
+          title: "Photography",
+          description: "Professional product, event and portrait photography for your business.",
+          features: ["Product Photography", "Event Coverage", "Post-Processing"]
+        },
+        consulting: {
+          title: "Consulting",
+          description: "Expert consultations for digital strategies and optimization of your online presence.",
+          features: ["Digital Strategy", "UX/UI Audit", "Analytics"]
+        }
+      },
+      learnMore: "Learn More"
+    },
+    portfolio: {
+      title: "Our Portfolio",
+      subtitle: "Check out some of our most successful projects that delivered results for clients",
+      filters: {
+        all: "All Projects",
+        web: "Web Design",
+        brand: "Branding",
+        video: "Video",
+        photo: "Photography"
+      },
+      items: {
+        ecommerce: {
+          title: "E-commerce Site",
+          description: "Complete online shopping experience"
+        },
+        brand: {
+          title: "Brand Identity",
+          description: "Complete visual identity for startup"
+        },
+        corporate: {
+          title: "Corporate Video",
+          description: "Company presentation through video"
+        },
+        restaurant: {
+          title: "Restaurant Website",
+          description: "Elegant online presence"
+        },
+        product: {
+          title: "Product Photography",
+          description: "Studio product photography"
+        },
+        packaging: {
+          title: "Packaging Design",
+          description: "Creative packaging solutions"
+        }
+      },
+      viewDetails: "View Details"
+    },
+    blog: {
+      title: "Blog & News",
+      subtitle: "Follow the latest trends in digital marketing and design",
+      posts: {
+        trends: {
+          title: "5 Most Important Digital Marketing Trends for 2026",
+          description: "Discover the latest trends that will define digital marketing in the coming year and how you can adapt your strategy...",
+          category: "Marketing"
+        },
+        conversion: {
+          title: "How to Create a Website That Converts Visitors",
+          description: "Follow web design best practices that not only look good, but also effectively convert visitors into clients...",
+          category: "Design"
+        },
+        video: {
+          title: "The Power of Video Marketing: Why Video is King of Content",
+          description: "Video marketing isn't just a trend - it's the future of digital communication. Learn how you can use video for business growth...",
+          category: "Video"
+        },
+        foodTruck: {
+          title: "How I Built a Food Truck Website",
+          description: "A step-by-step breakdown of how I designed and built a simple food truck website — structure, copy, and basic SEO to turn visitors into inquiries.",
+          category: "Web Design"
+        }
+      },
+      readMore: "Read More",
+      viewAll: "View All Articles"
+    },
+    blogPost: {
+      trends: {
+        title: "5 Most Important Digital Marketing Trends for 2026",
+        subtitle: "Stay ahead with the latest trends",
+        category: "Digital Marketing",
+        date: "07.03.2026",
+        intro: "The digital marketing landscape is evolving rapidly. From AI-driven personalization to immersive AR experiences, 2026 brings exciting opportunities for businesses to connect with their audience in more meaningful ways.",
+        aiPersonalization: {
+          title: "AI-Driven Personalization",
+          description: "Artificial intelligence enables unprecedented levels of content personalization, creating unique user experiences tailored to individual preferences and behaviors."
+        },
+        voiceSearch: {
+          title: "Voice Search Optimization",
+          description: "With smart speakers becoming mainstream, optimizing content for voice searches is key to maintaining visibility in search results."
+        },
+        mobileFirst: {
+          title: "Mobile-First Experiences",
+          description: "Mobile devices account for the majority of web traffic. Designing mobile-first experiences ensures optimal performance across all devices."
+        },
+        socialCommerce: {
+          title: "Social Commerce Integration",
+          description: "Social platforms are becoming shopping destinations. Integrating commerce directly into social experiences reduces friction in the purchase journey."
+        },
+        implementation: {
+          title: "Implementing These Trends",
+          description: "Successful implementation of these trends requires strategic planning and appropriate expertise. At MULTIMEDIA AGRONDESIGN I help businesses navigate the digital landscape with cutting-edge solutions that deliver real results."
+        },
+        actionItems: {
+          title: "Key Action Items",
+          item1: "Audit your current digital marketing strategy",
+          item2: "Identify opportunities for AI integration",
+          item3: "Optimize content for voice search",
+          item4: "Improve mobile user experience"
+        }
+      },
+      conversion: {
+        title: "Ultimate Guide to Website Conversion Optimization",
+        subtitle: "Turn visitors into clients",
+        category: "Website Optimization",
+        date: "07.03.2026",
+        intro: "Converting website visitors into clients is both an art and a science. Through strategic design, compelling content and data-driven testing, you can dramatically improve your conversion rates and grow your business.",
+        userExperience: {
+          title: "User Experience Design",
+          description: "Intuitive navigation, clear value propositions and seamless user flows naturally guide visitors toward conversion actions."
+        },
+        abTesting: {
+          title: "A/B Testing Strategy",
+          description: "Systematically testing different elements helps identify what resonates best with your audience and drives higher conversion rates."
+        },
+        callToAction: {
+          title: "Compelling Calls to Action",
+          description: "Strategic placement and persuasive copy in your CTAs can significantly impact conversion rates and user engagement."
+        },
+        analytics: {
+          title: "Performance Analytics",
+          description: "Data-driven insights reveal user behavior patterns and optimization opportunities through your conversion funnel."
+        },
+        practicalSteps: {
+          title: "Practical Steps for Optimization",
+          description: "Successful conversion optimization requires a systematic approach. Start with these proven strategies to see immediate improvements in your website performance."
+        },
+        optimizationChecklist: {
+          title: "Conversion Optimization Checklist",
+          technical: "Technical optimization",
+          pageSpeed: "Improve page load speed",
+          mobileOptimization: "Optimize for mobile devices",
+          formOptimization: "Simplify form fields",
+          content: "Content strategy",
+          headlines: "Create compelling headlines",
+          socialProof: "Add social proof elements",
+          urgency: "Use urgency and scarcity"
+        },
+        cta: {
+          title: "Ready to boost your conversions?",
+          description: "Let MULTIMEDIA AGRONDESIGN optimize your website for maximum conversions. Our data-driven approach delivers measurable results.",
+          button: "Start today"
+        }
+      },
+      video: {
+        title: "The Power of Video Marketing: Engaging Your Audience in 2026",
+        subtitle: "Engage your audience through visual storytelling",
+        category: "Video Marketing",
+        date: "07.03.2026",
+        intro: "Video content has become a dominant force in digital marketing. With declining attention spans and rising visual consumption, businesses that master video storytelling gain a significant competitive advantage.",
+        engagement: {
+          title: "Higher Engagement Rates",
+          description: "Video content generates 1200% more shares than text and images combined, creating powerful viral potential for your brand."
+        },
+        conversion: {
+          title: "Improved Conversions",
+          description: "Pages with video can increase conversion rates by up to 80%, making video an essential tool for sales funnels."
+        },
+        storytelling: {
+          title: "Emotional Storytelling",
+          description: "Video allows brands to tell compelling stories that create emotional connections with their audience, building loyalty and trust."
+        },
+        reach: {
+          title: "Extended Reach",
+          description: "Social media algorithms favor video content, offering organic reach opportunities that are increasingly rare with other content types."
+        },
+        types: {
+          title: "Types of Video Content That Convert",
+          product: {
+            title: "Product Demonstrations",
+            description: "Show your products in action, highlighting key features and benefits in ways static images simply cannot."
+          },
+          testimonial: {
+            title: "Customer Testimonials",
+            description: "Authentic customer stories build trust and credibility, serving as powerful social proof for potential buyers."
+          },
+          educational: {
+            title: "Educational Content",
+            description: "How-to videos and tutorials position your brand as an industry expert while providing valuable content to your audience."
+          },
+          behindScenes: {
+            title: "Behind the Scenes",
+            description: "Give your audience a look behind the curtain to humanize your brand and create stronger connections."
+          }
+        },
+        strategy: {
+          title: "Video Marketing Strategy Tips",
+          production: "Production excellence",
+          quality: "Invest in good audio quality",
+          lighting: "Use proper lighting techniques",
+          planning: "Plan your content structure",
+          distribution: "Smart distribution",
+          platforms: "Choose the right platforms",
+          timing: "Optimize publishing times",
+          seo: "Apply video SEO best practices"
+        },
+        cta: {
+          title: "Ready to leverage video marketing?",
+          description: "MULTIMEDIA AGRONDESIGN creates compelling video content that drives engagement and conversions. From concept to distribution, we handle every aspect of your video marketing strategy.",
+          button: "Start your video journey"
+        }
+      }
+    },
+    contact: {
+      title: "Contact",
+      subtitle: "Get in touch directly via phone or email.",
+      instruction: "Send a message using the form below (no appointment booking) or reach us by phone or email. We respond within 24 hours.",
+      trustLine: "Response within 24 hours",
+      info: {
+        title: "Contact Information",
+        phone: "Phone",
+        email: "Email",
+        location: "Geislingen an der Steige"
+      },
+      social: {
+        title: "Follow Us"
+      },
+      hours: {
+        title: "Working Hours",
+        weekdays: "Monday - Friday",
+        saturday: "Saturday",
+        sunday: "Sunday",
+        closed: "Closed"
+      },
+      success: {
+        title: "Message sent!",
+        description: "We'll get back to you as soon as possible."
+      },
+      error: {
+        title: "Error sending message",
+        description: "Please try again or contact us directly.",
+        validation: "Name, email and message are required",
+        emailjsMissing: "Contact form is not configured (EmailJS). Please call or email us directly."
+      },
+      form: {
+        title: "Send an inquiry",
+        intro: "No appointment scheduling — questions and information requests only. We reply by email.",
+        name: "Full name",
+        email: "Email",
+        message: "Your message",
+        submit: "Send message",
+        sending: "Sending…",
+        emailSubject: "Website inquiry (information)"
+      }
+    },
+
+    // Temporarily simplified version for all portfolio pages
+    portfolioPages: {
+      common: {
+        backToHome: "Početna",
+        projectDetails: "Detalji Projekta",
+        category: "Kategorija",
+        results: "Rezultati"
+      }
+    },
+    footer: {
+      brand: "Creating exceptional digital experiences that drive your business forward through innovative multimedia solutions.",
+      services: "Services",
+      company: "Company",
+      contact: "Contact",
+      phone: "+49 15560 873124",
+      email: "agron6922@gmail.com",
+      location: "Geislingen an der Steige",
+      copyright: "© 2026 MULTIMEDIA AGRONDESIGN. All rights reserved.",
+      privacy: "Privacy",
+      terms: "Terms",
+      cookies: "Cookies",
+      impresum: "Legal Notice",
+      career: "Career"
+    },
+    
+    // Impresum content  
+    impresum: {
+      title: "Imprint (Legal Notice)",
+      subtitle: "Information according to § 5 TMG",
+      sections: {
+        company: {
+          title: "AGRONDESIGN",
+          owner: "Owner: Agron Osmani",
+          address: "Luise-Hainlen-Weg 4/4\n73312 Geislingen an der Steige"
+        },
+        contact: {
+          title: "Contact",
+          email: "Email: agron6922@gmail.com"
+        },
+        representative: {
+          title: "Represented by",
+          name: "Agron Osmani"
+        },
+        tax: {
+          title: "Tax Information",
+          taxNumber: "Tax Number (Steuernummer): 48267305956",
+          vatNumber: "VAT identification number in accordance with §27 a of the German VAT act (USt-IdNr.): DE354016444"
+        },
+        profession: {
+          title: "Professional Title",
+          description: "Graphic Designer & Developer"
+        }
+      }
+    },
+
+    // Privacy Policy content (English)
+    privacy: {
+      title: "Privacy Policy",
+      subtitle: "Information about personal data protection in accordance with GDPR",
+      sections: {
+        dataCollection: {
+          title: "Data Collection",
+          content: "We collect personal data that you voluntarily provide through the contact form, including name, email address and message. This data is used exclusively for communication and providing our services."
+        },
+        dataUsage: {
+          title: "Data Usage",
+          content: "We use your personal data for: responding to your inquiries, providing requested services, improving our website and services, and sending relevant information about our services (only with your permission)."
+        },
+        cookies: {
+          title: "Cookies",
+          content: "We use cookies to improve website functionality and analyze traffic. You can control cookies through your browser settings. For more detailed information, see our Cookie Policy."
+        },
+        rights: {
+          title: "Your Rights",
+          content: "You have the right to access, rectify, delete and portability of your data. You may also restrict or object to the processing of your data. To exercise these rights, contact us via email."
+        },
+        contact: {
+          title: "Contact",
+          content: "For privacy questions contact us at: agron6922@gmail.com. We reserve the right to update this policy, which we will notify you about through our website."
+        }
+      }
+    },
+
+    // Terms of Service content (English)
+    terms: {
+      title: "Terms of Service",
+      subtitle: "Rules and conditions for using our website and services",
+      sections: {
+        scope: {
+          title: "Scope of Application",
+          content: "These terms apply to all users of our website agrmultimedia.eu and our services. By using the website, you accept these terms in full."
+        },
+        services: {
+          title: "Our Services",
+          content: "We provide web design, graphic design, video production, digital marketing and mobile application development services. All services are provided professionally and within agreed timeframes."
+        },
+        liability: {
+          title: "Limitation of Liability",
+          content: "We are not liable for damages arising from the use of our website except in cases of gross negligence or intent. Our liability is limited to the value of contracted services."
+        },
+        intellectual: {
+          title: "Intellectual Property",
+          content: "All content on the website is protected by copyright. Copying, distribution or commercial use without written permission is prohibited. Projects created for clients become their property after payment."
+        },
+        termination: {
+          title: "Service Termination",
+          content: "We reserve the right to terminate services in case of violation of terms of use. Clients may cancel services subject to agreed cancellation terms."
+        }
+      }
+    },
+
+    // Cookie Policy content (English)
+    cookies: {
+      title: "Cookie Policy",
+      subtitle: "How we use cookies on our website",
+      sections: {
+        whatAre: {
+          title: "What are Cookies",
+          content: "Cookies are small files stored on your device when you visit our website. They help us make the website work better and provide you with a better user experience."
+        },
+        howWeUse: {
+          title: "How We Use Cookies",
+          content: "We use cookies for: remembering your language and settings, analyzing website traffic, improving website performance, and providing security functions."
+        },
+        types: {
+          title: "Types of Cookies",
+          content: "Essential storage (language, cookie consent) is required for operation. Analytics cookies (Google Analytics) are set only after you accept in the cookie banner."
+        },
+        control: {
+          title: "Cookie Control",
+          content: "Choose in the cookie banner (“Essential only” or “Accept all”). You can delete stored data anytime via browser settings."
+        },
+        thirdParty: {
+          title: "Third Party Cookies",
+          content: "Google Analytics loads only after consent. EmailJS processes contact form data as a processor. Fonts are self-hosted — no Google Fonts requests."
+        }
+      }
+    },
+
+    webDesign: {
+      hero: {
+        title: "Website Creation & Mobile App Development",
+        description: "I professionally develop responsive websites and mobile applications for Android and iOS that attract visitors, improve user experience, and efficiently convert visitors into clients through modern technologies and optimized design."
+      },
+      services: {
+        websites: {
+          title: "Websites",
+          description: "I create modern, responsive websites that work perfectly on all devices",
+          features: ["Responsive Design", "SEO Optimization", "Fast Loading", "CMS Integration", "Security", "Analytics"]
+        },
+        mobileApps: {
+          title: "Mobile Applications",
+          description: "I develop native and cross-platform applications for Android and iOS platforms",
+          features: ["Android Apps", "iOS Apps", "Cross-platform", "Push Notifications", "Offline Functionality", "App Store Publication"]
+        },
+        responsive: {
+          title: "Responsive Design",
+          description: "I ensure your website looks perfect on all devices and screen sizes",
+          features: ["Mobile-First Approach", "Tablet Optimization", "Desktop Performance", "Touchscreen Support", "Retina Display", "Cross-browser Compatibility"]
+        }
+      },
+      process: {
+        title: "Work Process",
+        steps: [
+          {
+            title: "Planning",
+            description: "I analyze your needs and create a detailed project strategy"
+          },
+          {
+            title: "Design",
+            description: "I create wireframes, mockups and final visual design"
+          },
+          {
+            title: "Development",
+            description: "I code functional application using the latest technologies"
+          },
+          {
+            title: "Testing & Launch",
+            description: "I thoroughly test and successfully launch the project with support"
+          }
+        ]
+      },
+      portfolio: {
+        title: "Project Portfolio",
+        items: [
+          {
+            title: "TechFlow Business Solutions",
+            description: "Complex web platform for business management"
+          },
+          {
+            title: "EcoMarket Online Store", 
+            description: "E-commerce platform for eco-friendly products"
+          },
+          {
+            title: "FitLife Mobile App",
+            description: "Personalized fitness application for Android and iOS"
+          },
+          {
+            title: "ILMBUDS",
+            description: "Islamic application for children"
+          }
+        ]
+      },
+      technologies: {
+        title: "Technologies I Use",
+        frontend: {
+          title: "Frontend",
+          items: ["React", "TypeScript", "Next.js", "Vue.js", "Tailwind CSS", "SCSS"]
+        },
+        backend: {
+          title: "Backend",
+          items: ["Node.js", "Express", "Python", "PostgreSQL", "MongoDB", "Redis"]
+        },
+        mobile: {
+          title: "Mobile",
+          items: ["React Native", "Flutter", "Swift", "Kotlin", "Firebase", "Native APIs"]
+        }
+      },
+      cta: {
+        title: "Ready for Your Project?",
+        description: "Contact me for a free consultation about your website or mobile application",
+        button: "Contact Me"
+      }
+    },
+
+    graphicDesign: {
+      hero: {
+        title: "Visual Identity Creation & Graphic Design",
+        description: "I professionally create unique logos, brands and print materials that distinguish your business from the competition and leave an unforgettable impression on your target audience."
+      },
+      services: {
+        logoDesign: {
+          title: "Logo Design",
+          description: "I create memorable logos that represent the essence of your brand",
+          features: ["Original concepts", "Vector formats", "Brandbook", "Various versions", "Revisions included", "Design ownership"]
+        },
+        branding: {
+          title: "Branding",
+          description: "Complete visual identity that builds brand recognition",
+          features: ["Brandbook", "Visual identity", "Typography", "Color palette", "Applications", "Brand Guidelines"]
+        },
+        printMaterials: {
+          title: "Print Materials",
+          description: "Physical marketing materials that promote your business professionally",
+          features: ["T-shirts & textiles", "Packaging", "Office materials", "Marketing materials", "Signage", "Branded products"]
+        }
+      },
+      process: {
+        title: "Creative Process",
+        steps: [
+          {
+            title: "Research",
+            description: "I analyze your brand, target audience and competition"
+          },
+          {
+            title: "Concepts",
+            description: "I create initial ideas and visual directions"
+          },
+          {
+            title: "Development",
+            description: "I develop selected concepts to final version"
+          },
+          {
+            title: "Finalization",
+            description: "Preparation for print and digital use"
+          }
+        ]
+      },
+      portfolio: {
+        title: "Work Portfolio",
+        logos: {
+          title: "Logo Design",
+          items: [
+            {
+              title: "InnovateTech Solutions",
+              description: "Modern technology company",
+              category: "Tech startup"
+            },
+            {
+              title: "GreenHarvest",
+              description: "Organic food and agriculture",
+              category: "Organic food"
+            },
+            {
+              title: "AurumCraft",
+              description: "Luxury jewelry",
+              category: "Luxury jewelry"
+            }
+          ]
+        },
+        branding: {
+          title: "Complete Branding",
+          items: [
+            {
+              title: "PowerFit Pro",
+              description: "Fitness and wellness brand",
+              category: "Fitness"
+            },
+            {
+              title: "Aroma Collective",
+              description: "Premium coffee shop brand",
+              category: "Food & Beverage"
+            }
+          ]
+        },
+        print: {
+          title: "Print Materials",
+          description: "Branded t-shirts, packaging boxes and promotional materials"
+        },
+        books: {
+          title: "Book Design",
+          description: "Professional cover design and layout for publications"
+        }
+      },
+      cta: {
+        title: "Ready for a New Visual Identity?",
+        description: "Contact me for a free consultation about your brand",
+        button: "Contact Me"
+      }
+    },
+
+    videoProduction: {
+      hero: {
+        title: "Professional Video Production",
+        description: "I create high-quality video content that conveys your message and engages your audience through professional filming, editing, and post-production."
+      },
+      services: {
+        filming: {
+          title: "Professional Filming",
+          description: "I use professional equipment to create visually stunning video materials",
+          features: ["4K Ultra HD filming", "Professional cameras", "Stabilizers and gimbal systems", "Professional lighting", "Studio quality audio recording", "Drones for aerial shots"]
+        },
+        editing: {
+          title: "Video Editing",
+          description: "Advanced editing techniques that transform raw footage into engaging content",
+          features: ["Adobe Premiere Pro", "Adobe After Effects", "Color grading and correction", "Sound design and mixing", "Visual effects", "Subtitles and graphics"]
+        },
+        animation: {
+          title: "Intro Template Videos",
+          description: "Creating animated intro template videos and high-quality motion graphics",
+          features: ["Motion graphics", "2D and 3D animations", "Logo animations", "Intro/outro sequences", "Kinetic typography", "Visual effects"]
+        }
+      },
+      process: {
+        title: "Creative Process",
+        steps: [
+          {
+            title: "Planning",
+            description: "I develop the concept and create storyboards according to your goals"
+          },
+          {
+            title: "Filming",
+            description: "Professional filming with top-quality equipment and lighting"
+          },
+          {
+            title: "Post-production",
+            description: "Editing, color grading, sound design, and final processing"
+          },
+          {
+            title: "Delivery",
+            description: "Optimization for different platforms and final delivery"
+          }
+        ]
+      },
+      portfolio: {
+        title: "Video Work Portfolio",
+        description: "Examples of my latest video productions with different styles and techniques"
+      },
+      servicesTitle: "My Video Production Services",
+      servicesSubtitle: "Complete video services from concept to final delivery",
+      portfolioButtonText: "Portfolio Video",
+      videos: [
+        {
+          title: "Professional Intro Video",
+          description: "Animated intro with logo animation"
+        },
+        {
+          title: "Promotional Video",
+          description: "Creative promotional content"
+        },
+        {
+          title: "Motion Graphics",
+          description: "Dynamic graphics and animations"
+        },
+        {
+          title: "Product Showcase",
+          description: "Product presentation with 3D effects"
+        }
+      ],
+      cta: {
+        title: "Ready for Your Video Project?",
+        description: "Contact me for a free consultation about your video content",
+        button: "Contact Me"
+      }
+    },
+
+    digitalMarketing: {
+      hero: {
+        title: "Digital Marketing",
+        subtitle: "Strategies that increase your online visibility",
+        description: "I create comprehensive digital marketing strategies that increase your online visibility, attract target audiences and generate measurable results through social media, Google Ads and content marketing."
+      },
+      servicesTitle: "My Digital Marketing Services",
+      servicesSubtitle: "Complete digital strategies for your business growth",
+      portfolioButtonText: "Results Portfolio",
+      services: {
+        socialMedia: {
+          title: "Social Media Marketing",
+          description: "Social media management and engaging content creation",
+          features: ["Facebook & Instagram campaigns", "LinkedIn strategies", "YouTube optimization", "Influencer marketing", "Community management", "Social media analytics"]
+        },
+        googleAds: {
+          title: "Google Ads",
+          description: "Effective PPC campaigns that bring quality visitors",
+          features: ["Search campaigns", "Display advertising", "Shopping ads", "YouTube ads", "Remarketing", "Keyword research & optimization"]
+        },
+        contentMarketing: {
+          title: "Content Marketing",
+          description: "Creating valuable content that attracts and retains audience",
+          features: ["Blog strategies", "SEO optimized content", "Email marketing", "Newsletter campaigns", "Video content", "Copywriting"]
+        }
+      },
+      strategy: {
+        title: "Strategic Approach",
+        steps: [
+          {
+            title: "Analysis",
+            description: "Detailed market, competition and target audience research"
+          },
+          {
+            title: "Strategy",
+            description: "Creating customized digital marketing strategy"
+          },
+          {
+            title: "Implementation",
+            description: "Launching campaigns with continuous monitoring"
+          },
+          {
+            title: "Optimization",
+            description: "Results analysis and continuous performance improvement"
+          }
+        ]
+      },
+      results: {
+        title: "Results That Speak",
+        description: "Measurable results that show the effectiveness of digital marketing strategies",
+        metrics: [
+          {
+            value: "300%",
+            label: "Traffic Increase",
+            description: "Average web traffic improvement"
+          },
+          {
+            value: "150%",
+            label: "More Conversions",
+            description: "Conversion rate improvement"
+          },
+          {
+            value: "250%",
+            label: "ROI Growth",
+            description: "Return on investment increase"
+          }
+        ]
+      },
+      cta: {
+        title: "Ready for Digital Growth?",
+        description: "Contact me for a free consultation about your digital marketing strategy",
+        button: "Contact Me"
+      }
+    },
+
+    photography: {
+      hero: {
+        title: "Photography & Photomontage",
+        subtitle: "Creative photography and digital art",
+        description: "I create professional photographs, restore old pictures, create photomontages of all kinds and movie posters with your image - from creative compositions to realistic portraits."
+      },
+      servicesTitle: "My Photography Services",
+      servicesSubtitle: "From professional photography to creative photomontages",
+      portfolioButtonText: "Work Portfolio",
+      portfolioTitle: "Movie Poster Portfolio",
+      portfolioDescription: "Examples of my work - creating professional movie posters with different styles and atmospheres",
+      moviePosters: [
+        {
+          title: "Ragazzo con Lanterne",
+          description: "Creative fantasy poster with atmospheric lighting",
+          category: "Fantasy"
+        },
+        {
+          title: "Il Silenzio del Boss",
+          description: "Drama poster in noir film style",
+          category: "Drama"
+        },
+        {
+          title: "Kong",
+          description: "Epic action poster with creature",
+          category: "Action"
+        },
+        {
+          title: "Gardijan",
+          description: "Winter atmospheric poster with snow",
+          category: "Drama"
+        },
+        {
+          title: "Abandoned",
+          description: "Mysterious thriller poster with dark atmosphere",
+          category: "Thriller"
+        }
+      ],
+      processTitle: "Creative Process",
+      processSteps: [
+        {
+          title: "Consultation",
+          description: "We discuss your idea and needs",
+          icon: "1"
+        },
+        {
+          title: "Concept Creation",
+          description: "I develop creative approach and style",
+          icon: "2"
+        },
+        {
+          title: "Production",
+          description: "Professional photography or digital editing",
+          icon: "3"
+        },
+        {
+          title: "Finalization",
+          description: "Final editing and delivery in desired format",
+          icon: "4"
+        }
+      ],
+      services: {
+        professionalPhotography: {
+          title: "Professional Photography",
+          description: "Product, portrait, event and corporate photography",
+          features: ["Studio photography", "Products and catalogs", "Portrait photography", "Event photography"]
+        },
+        restoration: {
+          title: "Old Photo Restoration",
+          description: "Bringing life back to damaged and faded photographs",
+          features: ["Damage removal", "Color restoration", "Digital restoration", "Old photo repair"]
+        },
+        photomontage: {
+          title: "All Types of Photomontages",
+          description: "Creative combination of elements into unique compositions",
+          features: ["Creative compositions", "Realistic montages", "Fantasy scenes", "Advertising photomontages"]
+        },
+        moviePosters: {
+          title: "Movie Posters with Your Image",
+          description: "Place yourself at the center of a movie poster",
+          features: ["Personalized posters", "Various movie styles", "Professional editing", "High resolution"]
+        }
+      },
+      cta: {
+        title: "Ready for Creative Photography?",
+        description: "Contact me for a free consultation about your photography or photomontage project",
+        button: "Contact Me"
+      }
+    },
+
+    consulting: {
+      hero: {
+        title: "Consulting & Strategic Advisory",
+        subtitle: "Expert consultations for digital success",
+        description: "I analyze your current digital presence, identify improvement opportunities and create strategies that will increase your online efficiency, user experience and conversions."
+      },
+      servicesTitle: "My Consulting Services",
+      servicesSubtitle: "Strategic planning and optimization for your digital success",
+      services: {
+        digitalStrategy: {
+          title: "Digital Strategy",
+          description: "I create comprehensive digital strategies tailored to your business goals",
+          features: ["Market and competitor analysis", "Target audience definition", "Branding strategy", "Digital marketing plan", "ROI optimization", "Long-term planning"]
+        },
+        uxAudit: {
+          title: "UX/UI Audit",
+          description: "I thoroughly analyze your website or application and provide improvement recommendations",
+          features: ["User experience analysis", "Usability testing", "Conversion analysis", "Mobile responsiveness", "Loading speed", "Accessibility check"]
+        },
+        analytics: {
+          title: "Analytics & Reporting",
+          description: "I set up advanced tracking systems and analyze performance",
+          features: ["Google Analytics setup", "Conversion tracking", "A/B testing", "Heat map analysis", "ROI measurement", "Monthly reports"]
+        }
+      },
+      process: {
+        title: "Work Process",
+        steps: [
+          {
+            title: "Current State Analysis",
+            description: "I thoroughly analyze your current digital presence and identify issues"
+          },
+          {
+            title: "Research & Strategy",
+            description: "I analyze market, competition and create tailored strategy"
+          },
+          {
+            title: "Implementation Plan",
+            description: "I create detailed implementation plan with clear steps and deadlines"
+          },
+          {
+            title: "Monitoring & Optimization",
+            description: "Continuous monitoring of results and strategy optimization"
+          }
+        ]
+      },
+      benefits: {
+        title: "Benefits of Professional Consulting",
+        items: [
+          {
+            title: "Increased Conversions",
+            description: "Optimization that directly impacts increased sales and leads"
+          },
+          {
+            title: "Time and Money Savings",
+            description: "Avoiding mistakes and focusing on strategies that deliver results"
+          },
+          {
+            title: "Competitive Advantage",
+            description: "Strategies that set you apart from competition"
+          },
+          {
+            title: "Measurable Results",
+            description: "Clearly defined KPIs and regular performance monitoring"
+          }
+        ]
+      },
+      cta: {
+        title: "Ready for Digital Growth?",
+        description: "Schedule a free consultation and discover how we can improve your digital presence",
+        button: "Contact Me"
+      }
+    }
+  },
+  de: {
+    nav: {
+      home: "Startseite",
+      about: "Über uns",
+      services: "Leistungen",
+      portfolio: "Portfolio",
+      blog: "Blog",
+      contact: "Kontakt"
+    },
+    hero: {
+      title: "Kreative Multimediale Lösungen",
+      subtitle: "Professionelle Website-Erstellung, Webdesign, Grafikdesign, Videoproduktion, Digital Marketing-Services und mobile App-Entwicklung für Android und iOS für Ihr Unternehmen",
+      servicesButton: "Leistungen ansehen",
+      portfolioButton: "Unsere Arbeiten",
+      locationTitle: "Arbeiten mit führenden Marken",
+      locations: ["Stuttgart", "Milano", "Ulm"]
+    },
+    about: {
+      title: "Über MULTIMEDIA AGRONDESIGN",
+      subtitle: "Wir schaffen außergewöhnliche digitale Erlebnisse, die Ihr Unternehmen voranbringen",
+      storyTitle: "Unsere Geschichte",
+      storyP1: "Ich habe MULTIMEDIA AGRONDESIGN mit der Vision gegründet, Unternehmen dabei zu helfen, sich in der digitalen Welt zu behaupten. Ich bin spezialisiert auf die Erstellung hochwertiger Multimedia-Inhalte, die Aufmerksamkeit erregen, Marken aufbauen und Ergebnisse erzielen.",
+      storyP2: "Als erfahrener Designer, Entwickler und Marketing-Profi arbeite ich engagiert daran, Ihre Ideen durch innovative digitale Lösungen zum Leben zu erwecken.",
+      stats: {
+        projects: "Projekte",
+        clients: "Kunden",
+        years: "Jahre"
+      },
+      certification: {
+        certified: "Zertifiziert",
+        googlePartner: "Google Partner"
+      },
+      skills: {
+        title: "Kompetenzen & Tools",
+        creative: {
+          title: "Kreative Konzeption & Design",
+          items: ["Kreative Konzeption", "Corporate & Logo Design", "Gestaltung Print & Digital Media"]
+        },
+        software: {
+          title: "Professionelle Software",
+          items: ["Adobe Photoshop CC 2026", "Adobe Premiere Pro CC 2026", "Adobe After Effects CC 2026"]
+        },
+        aiTools: {
+          title: "KI-Tools",
+          items: ["Gemini", "Nano Banana", "Chat GPT", "Perplexity", "Veo 3.1", "Sora 2.0"]
+        },
+        office: {
+          title: "Office-Paket",
+          items: ["Microsoft Word", "Excel", "PowerPoint", "Outlook"]
+        },
+        languages: {
+          title: "Sprachen",
+          items: ["Albanisch (Muttersprache)", "Italienisch (fließend)", "Serbisch (fließend)", "Kroatisch (fließend)", "Deutsch (fließend)"]
+        }
+      }
+    },
+    services: {
+      title: "Unsere Leistungen",
+      subtitle: "Umfassende Multimedia-Lösungen, maßgeschneidert für Ihre Bedürfnisse",
+      items: {
+        webDesign: {
+          title: "Erstellung Ihrer Website und Mobile Anwendung",
+          description: "Responsive, SEO-optimierte Websites und mobile Anwendungen für Android und iOS, die Besucher anziehen und in Kunden verwandeln.",
+          features: ["Custom Design", "Mobile Responsive", "SEO-Optimierung", "Android & iOS Apps"]
+        },
+        graphicDesign: {
+          title: "Grafikdesign",
+          description: "Kreative visuelle Identitäten, Logos und Marketingmaterialien, die Ihre Marke hervorheben.",
+          features: ["Logo Design", "Branding", "Printmaterialien"]
+        },
+        videoProduction: {
+          title: "Videoproduktion",
+          description: "Professionelle Videoinhalte, die Ihre Botschaft vermitteln und Ihr Publikum fesseln.",
+          features: ["Werbevideos", "Animationen", "Post-Produktion"]
+        },
+        digitalMarketing: {
+          title: "Digital Marketing",
+          description: "Strategien, die Ihre Online-Sichtbarkeit erhöhen und Ihre Zielgruppe anziehen.",
+          features: ["Social Media", "Google Ads", "Content Marketing"]
+        },
+        photography: {
+          title: "Fotografie",
+          description: "Professionelle Produkt-, Event- und Porträtfotografie für Ihr Unternehmen.",
+          features: ["Produktfotografie", "Event-Coverage", "Nachbearbeitung"]
+        },
+        consulting: {
+          title: "Beratung",
+          description: "Expertenberatung für digitale Strategien und Optimierung Ihrer Online-Präsenz.",
+          features: ["Digitale Strategie", "UX/UI Audit", "Analytik"]
+        }
+      },
+      learnMore: "Mehr erfahren"
+    },
+    portfolio: {
+      title: "Unser Portfolio",
+      subtitle: "Sehen Sie sich einige unserer erfolgreichsten Projekte an, die Ergebnisse für Kunden erzielt haben",
+      filters: {
+        all: "Alle Projekte",
+        web: "Webdesign",
+        brand: "Branding",
+        video: "Video",
+        photo: "Fotografie"
+      },
+      items: {
+        ecommerce: {
+          title: "E-Commerce-Site",
+          description: "Komplettes Online-Shopping-Erlebnis"
+        },
+        brand: {
+          title: "Markenidentität",
+          description: "Komplette visuelle Identität für Startup"
+        },
+        corporate: {
+          title: "Unternehmens-Video",
+          description: "Unternehmenspräsentation durch Video"
+        },
+        restaurant: {
+          title: "Restaurant-Website",
+          description: "Elegante Online-Präsenz"
+        },
+        product: {
+          title: "Produktfotografie",
+          description: "Studio-Produktfotografie"
+        },
+        packaging: {
+          title: "Verpackungsdesign",
+          description: "Kreative Verpackungslösungen"
+        }
+      },
+      viewDetails: "Details ansehen"
+    },
+    blog: {
+      title: "Blog & News",
+      subtitle: "Verfolgen Sie die neuesten Trends in Digital Marketing und Design",
+      posts: {
+        trends: {
+          title: "5 wichtigste Digital Marketing Trends für 2026",
+          description: "Entdecken Sie die neuesten Trends, die das Digital Marketing im kommenden Jahr definieren werden und wie Sie Ihre Strategie anpassen können...",
+          category: "Marketing"
+        },
+        conversion: {
+          title: "Wie Sie eine Website erstellen, die Besucher konvertiert",
+          description: "Folgen Sie den besten Webdesign-Praktiken, die nicht nur gut aussehen, sondern auch effektiv Besucher in Kunden verwandeln...",
+          category: "Design"
+        },
+        video: {
+          title: "Die Macht des Video-Marketings: Warum Video König der Inhalte ist",
+          description: "Video-Marketing ist nicht nur ein Trend - es ist die Zukunft der digitalen Kommunikation. Erfahren Sie, wie Sie Video für Ihr Unternehmenswachstum nutzen können...",
+          category: "Video"
+        },
+        foodTruck: {
+          title: "Wie ich eine Food-Truck-Website gebaut habe",
+          description: "Ein Schritt-für-Schritt-Guide, wie ich eine einfache Food-Truck-Website gestaltet und gebaut habe — inklusive Struktur, Text und grundlegender SEO und CTAs.",
+          category: "Webdesign"
+        }
+      },
+      readMore: "Weiterlesen",
+      viewAll: "Alle Artikel ansehen"
+    },
+    blogPost: {
+      trends: {
+        title: "5 wichtigste Digital-Marketing-Trends für 2026",
+        subtitle: "Bleiben Sie mit den neuesten Trends auf dem Laufenden",
+        category: "Digital Marketing",
+        date: "07.03.2026",
+        intro: "Die digitale Marketinglandschaft entwickelt sich rasant. Von KI-gesteuerter Personalisierung bis zu immersiven AR-Erlebnissen – 2026 bietet spannende Möglichkeiten für Unternehmen, sich auf bedeutsamere Weise mit ihrem Publikum zu verbinden.",
+        aiPersonalization: { title: "KI-gesteuerte Personalisierung", description: "Künstliche Intelligenz ermöglicht beispiellose Content-Personalisierung und schafft einzigartige Nutzererlebnisse." },
+        voiceSearch: { title: "Optimierung für Sprachsuche", description: "Optimierung von Inhalten für Sprachsuchen ist entscheidend für die Sichtbarkeit in Suchergebnissen." },
+        mobileFirst: { title: "Mobile-First-Erlebnisse", description: "Mobile-First-Design gewährleistet optimale Leistung auf allen Geräten." },
+        socialCommerce: { title: "Social-Commerce-Integration", description: "Soziale Plattformen werden zu Einkaufszielen." },
+        implementation: { title: "Umsetzung dieser Trends", description: "Erfolgreiche Umsetzung erfordert strategische Planung und Expertise." },
+        actionItems: { title: "Wichtige Maßnahmen", item1: "Audit Ihrer aktuellen Digital-Marketing-Strategie", item2: "Chancen für KI-Integration identifizieren", item3: "Content für Sprachsuche optimieren", item4: "Mobile User Experience verbessern" }
+      },
+      conversion: {
+        title: "Ultimativer Leitfaden zur Conversion-Optimierung",
+        subtitle: "Besucher in Kunden verwandeln",
+        category: "Website-Optimierung",
+        date: "07.03.2026",
+        intro: "Die Umwandlung von Website-Besuchern in Kunden ist Kunst und Wissenschaft.",
+        userExperience: { title: "User Experience Design", description: "Intuitive Navigation und nahtlose Abläufe führen Besucher zu Conversion-Aktionen." },
+        abTesting: { title: "A/B-Testing-Strategie", description: "Systematisches Testen hilft, was bei Ihrer Zielgruppe am besten funktioniert." },
+        callToAction: { title: "Überzeugende Calls-to-Action", description: "Strategische Platzierung und überzeugende Texte in CTAs steigern Conversion-Raten." },
+        analytics: { title: "Performance-Analytik", description: "Datenbasierte Einblicke zeigen Nutzerverhalten und Optimierungsmöglichkeiten." },
+        practicalSteps: { title: "Praktische Optimierungsschritte", description: "Erfolgreiche Conversion-Optimierung erfordert einen systematischen Ansatz." },
+        optimizationChecklist: {
+          title: "Conversion-Optimierungs-Checkliste",
+          technical: "Technische Optimierung", pageSpeed: "Seitenladegeschwindigkeit verbessern", mobileOptimization: "Für Mobilgeräte optimieren",
+          formOptimization: "Formularfelder vereinfachen", content: "Content-Strategie", headlines: "Überzeugende Überschriften erstellen",
+          socialProof: "Social-Proof-Elemente hinzufügen", urgency: "Dringlichkeit und Knappheit nutzen"
+        },
+        cta: { title: "Bereit, Ihre Conversion zu steigern?", description: "Lassen Sie MULTIMEDIA AGRONDESIGN Ihre Website für maximale Conversion optimieren.", button: "Jetzt starten" }
+      },
+      video: {
+        title: "Die Macht des Video-Marketings: Ihr Publikum 2026 erreichen",
+        subtitle: "Publikum durch visuelles Storytelling ansprechen",
+        category: "Video Marketing",
+        date: "07.03.2026",
+        intro: "Videoinhalte sind eine dominante Kraft im Digital Marketing.",
+        engagement: { title: "Höhere Engagement-Raten", description: "Videoinhalte generieren 1200% mehr Shares als Text und Bilder zusammen." },
+        conversion: { title: "Verbesserte Conversion", description: "Seiten mit Video können die Conversion-Rate um bis zu 80% steigern." },
+        storytelling: { title: "Emotionales Storytelling", description: "Video ermöglicht Marken, überzeugende Geschichten zu erzählen." },
+        reach: { title: "Erweiterte Reichweite", description: "Social-Media-Algorithmen begünstigen Videoinhalte." },
+        types: {
+          title: "Video-Content-Arten die konvertieren",
+          product: { title: "Produktdemonstrationen", description: "Zeigen Sie Ihre Produkte in Aktion." },
+          testimonial: { title: "Kundenreferenzen", description: "Authentische Kundengeschichten schaffen Vertrauen." },
+          educational: { title: "Bildungsinhalte", description: "How-to-Videos positionieren Ihre Marke als Experten." },
+          behindScenes: { title: "Hinter den Kulissen", description: "Geben Sie Ihrem Publikum einen Blick hinter die Kulissen." }
+        },
+        strategy: {
+          title: "Video-Marketing-Strategie-Tipps",
+          production: "Produktionsexzellenz", quality: "In gute Audioqualität investieren", lighting: "Beleuchtungstechniken nutzen",
+          planning: "Content-Struktur planen", distribution: "Intelligente Verteilung", platforms: "Richtige Plattformen wählen",
+          timing: "Veröffentlichungszeiten optimieren", seo: "Video-SEO-Best-Practices anwenden"
+        },
+        cta: { title: "Bereit für Video-Marketing?", description: "MULTIMEDIA AGRONDESIGN erstellt überzeugende Videoinhalte.", button: "Video-Reise starten" }
+      }
+    },
+    contact: {
+      title: "Kontakt",
+      subtitle: "Nehmen Sie direkt per Telefon oder E-Mail Kontakt auf.",
+      instruction: "Senden Sie uns eine Nachricht über das Formular unten (ohne Terminvereinbarung) oder kontaktieren Sie uns telefonisch oder per E-Mail. Wir antworten innerhalb von 24 Stunden.",
+      trustLine: "Antwort innerhalb von 24 Stunden",
+      info: {
+        title: "Kontaktinformationen",
+        phone: "Telefon",
+        email: "E-Mail",
+        location: "Geislingen an der Steige"
+      },
+      social: {
+        title: "Folgen Sie uns"
+      },
+      hours: {
+        title: "Arbeitszeiten",
+        weekdays: "Montag - Freitag",
+        saturday: "Samstag",
+        sunday: "Sonntag",
+        closed: "Geschlossen"
+      },
+      success: {
+        title: "Nachricht gesendet!",
+        description: "Wir melden uns so schnell wie möglich bei Ihnen."
+      },
+      error: {
+        title: "Fehler beim Senden der Nachricht",
+        description: "Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.",
+        validation: "Name, E-Mail und Nachricht sind erforderlich",
+        emailjsMissing: "Kontaktformular ist nicht konfiguriert (EmailJS). Bitte rufen Sie uns an oder schreiben Sie eine E-Mail."
+      },
+      form: {
+        title: "Anfrage senden",
+        intro: "Keine Terminbuchung — nur Fragen und Informationsanfragen. Antwort per E-Mail.",
+        name: "Name",
+        email: "E-Mail",
+        message: "Ihre Nachricht",
+        submit: "Nachricht senden",
+        sending: "Wird gesendet…",
+        emailSubject: "Informationsanfrage (Website)"
+      }
+    },
+    portfolioPages: {
+      common: {
+        backToHome: "Startseite",
+        projectDetails: "Projektdetails",
+        category: "Kategorie",
+        results: "Ergebnisse"
+      }
+    },
+    footer: {
+      brand: "Wir schaffen außergewöhnliche digitale Erlebnisse, die Ihr Unternehmen durch innovative Multimedia-Lösungen voranbringen.",
+      services: "Leistungen",
+      company: "Unternehmen",
+      contact: "Kontakt",
+      phone: "+49 15560 873124",
+      email: "agron6922@gmail.com",
+      location: "Geislingen an der Steige",
+      copyright: "© 2026 MULTIMEDIA AGRONDESIGN. Alle Rechte vorbehalten.",
+      privacy: "Datenschutz",
+      terms: "Nutzungsbedingungen",
+      cookies: "Cookies",
+      impresum: "Impressum",
+      career: "Karriere"
+    },
+    
+    // Impresum content (German)
+    impresum: {
+      title: "Impressum (Rechtliche Hinweise)",
+      subtitle: "Angaben gemäß § 5 TMG",
+      sections: {
+        company: {
+          title: "AGRONDESIGN",
+          owner: "Inhaber: Agron Osmani",
+          address: "Luise-Hainlen-Weg 4/4\n73312 Geislingen an der Steige"
+        },
+        contact: {
+          title: "Kontakt",
+          email: "E-Mail: agron6922@gmail.com"
+        },
+        representative: {
+          title: "Vertreten durch",
+          name: "Agron Osmani"
+        },
+        tax: {
+          title: "Steuerliche Angaben",
+          taxNumber: "Steuernummer: 48267305956",
+          vatNumber: "Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz (USt-IdNr.): DE354016444"
+        },
+        profession: {
+          title: "Berufsbezeichnung",
+          description: "Grafikdesigner & Entwickler"
+        }
+      }
+    },
+
+    // Privacy Policy content (German)
+    privacy: {
+      title: "Datenschutzerklärung",
+      subtitle: "Informationen zum Schutz personenbezogener Daten gemäß DSGVO",
+      sections: {
+        dataCollection: {
+          title: "Datenerfassung",
+          content: "Wir sammeln personenbezogene Daten, die Sie freiwillig über das Kontaktformular bereitstellen, einschließlich Name, E-Mail-Adresse und Nachricht. Diese Daten werden ausschließlich zur Kommunikation und Bereitstellung unserer Dienstleistungen verwendet."
+        },
+        dataUsage: {
+          title: "Datenverwendung",
+          content: "Wir verwenden Ihre personenbezogenen Daten für: Beantwortung Ihrer Anfragen, Bereitstellung angeforderter Dienstleistungen, Verbesserung unserer Website und Dienstleistungen, und Versendung relevanter Informationen über unsere Dienstleistungen (nur mit Ihrer Erlaubnis)."
+        },
+        cookies: {
+          title: "Cookies",
+          content: "Wir verwenden Cookies zur Verbesserung der Website-Funktionalität und zur Analyse des Traffics. Sie können Cookies über Ihre Browser-Einstellungen kontrollieren. Detailliertere Informationen finden Sie in unserer Cookie-Richtlinie."
+        },
+        rights: {
+          title: "Ihre Rechte",
+          content: "Sie haben das Recht auf Zugang, Berichtigung, Löschung und Übertragbarkeit Ihrer Daten. Sie können auch die Verarbeitung einschränken oder der Verarbeitung Ihrer Daten widersprechen. Um diese Rechte auszuüben, kontaktieren Sie uns per E-Mail."
+        },
+        contact: {
+          title: "Kontakt",
+          content: "Für Datenschutzfragen kontaktieren Sie uns unter: agron6922@gmail.com. Wir behalten uns das Recht vor, diese Richtlinie zu aktualisieren, worüber wir Sie über unsere Website informieren werden."
+        }
+      }
+    },
+
+    // Terms of Service content (German)
+    terms: {
+      title: "Nutzungsbedingungen",
+      subtitle: "Regeln und Bedingungen für die Nutzung unserer Website und Dienstleistungen",
+      sections: {
+        scope: {
+          title: "Anwendungsbereich",
+          content: "Diese Bedingungen gelten für alle Nutzer unserer Website agrmultimedia.eu und unserer Dienstleistungen. Durch die Nutzung der Website akzeptieren Sie diese Bedingungen vollständig."
+        },
+        services: {
+          title: "Unsere Dienstleistungen",
+          content: "Wir bieten Webdesign-, Grafikdesign-, Videoproduktions-, Digital Marketing- und mobile Anwendungsentwicklungsdienstleistungen an. Alle Dienstleistungen werden professionell und innerhalb vereinbarter Zeitrahmen erbracht."
+        },
+        liability: {
+          title: "Haftungsbeschränkung",
+          content: "Wir haften nicht für Schäden, die durch die Nutzung unserer Website entstehen, außer in Fällen grober Fahrlässigkeit oder Vorsatz. Unsere Haftung ist auf den Wert der vertraglich vereinbarten Dienstleistungen beschränkt."
+        },
+        intellectual: {
+          title: "Geistiges Eigentum",
+          content: "Alle Inhalte auf der Website sind urheberrechtlich geschützt. Kopieren, Verbreitung oder kommerzielle Nutzung ohne schriftliche Genehmigung ist verboten. Für Kunden erstellte Projekte werden nach Zahlung zu deren Eigentum."
+        },
+        termination: {
+          title: "Beendigung der Dienstleistungen",
+          content: "Wir behalten uns das Recht vor, Dienstleistungen bei Verletzung der Nutzungsbedingungen zu beenden. Kunden können Dienstleistungen unter Beachtung vereinbarter Kündigungsbedingungen kündigen."
+        }
+      }
+    },
+
+    // Cookie Policy content (German)
+    cookies: {
+      title: "Cookie-Richtlinie",
+      subtitle: "Wie wir Cookies auf unserer Website verwenden",
+      sections: {
+        whatAre: {
+          title: "Was sind Cookies",
+          content: "Cookies sind kleine Dateien, die auf Ihrem Gerät gespeichert werden, wenn Sie unsere Website besuchen. Sie helfen uns, die Website besser funktionieren zu lassen und Ihnen eine bessere Benutzererfahrung zu bieten."
+        },
+        howWeUse: {
+          title: "Wie wir Cookies verwenden",
+          content: "Wir verwenden Cookies für: Speichern Ihrer Sprach- und Einstellungen, Analyse des Website-Traffics, Verbesserung der Website-Leistung und Bereitstellung von Sicherheitsfunktionen."
+        },
+        types: {
+          title: "Arten von Cookies",
+          content: "Essenzielle Speicher (Sprache, Cookie-Einwilligung) sind für den Betrieb erforderlich. Analyse-Cookies (Google Analytics) werden erst nach Ihrer Einwilligung im Banner gesetzt."
+        },
+        control: {
+          title: "Cookie-Kontrolle",
+          content: "Sie können Ihre Wahl im Cookie-Banner treffen („Nur notwendige“ oder „Alle akzeptieren“). Sie können gespeicherte Daten jederzeit über die Browser-Einstellungen löschen."
+        },
+        thirdParty: {
+          title: "Cookies von Dritten",
+          content: "Google Analytics (Google Ireland Limited) wird nur nach Einwilligung geladen. EmailJS verarbeitet Kontaktformular-Daten als Auftragsverarbeiter. Schriftarten werden lokal gehostet — es erfolgt kein Abruf von Google Fonts."
+        }
+      }
+    },
+
+    webDesign: {
+      hero: {
+        title: "Website-Erstellung & Mobile App-Entwicklung",
+        description: "Ich entwickle professionell responsive Websites und mobile Anwendungen für Android und iOS, die Besucher anziehen, die Benutzererfahrung verbessern und Besucher effizient in Kunden umwandeln durch moderne Technologien und optimiertes Design."
+      },
+      services: {
+        websites: {
+          title: "Websites",
+          description: "Ich erstelle moderne, responsive Websites, die perfekt auf allen Geräten funktionieren",
+          features: ["Responsive Design", "SEO-Optimierung", "Schnelles Laden", "CMS-Integration", "Sicherheit", "Analytics"]
+        },
+        mobileApps: {
+          title: "Mobile Anwendungen",
+          description: "Ich entwickle native und plattformübergreifende Anwendungen für Android und iOS Plattformen",
+          features: ["Android Apps", "iOS Apps", "Plattformübergreifend", "Push-Benachrichtigungen", "Offline-Funktionalität", "App Store Veröffentlichung"]
+        },
+        responsive: {
+          title: "Responsive Design",
+          description: "Ich stelle sicher, dass Ihre Website auf allen Geräten und Bildschirmgrößen perfekt aussieht",
+          features: ["Mobile-First-Ansatz", "Tablet-Optimierung", "Desktop-Performance", "Touchscreen-Unterstützung", "Retina Display", "Cross-Browser-Kompatibilität"]
+        }
+      },
+      process: {
+        title: "Arbeitsprozess",
+        steps: [
+          {
+            title: "Planung",
+            description: "Ich analysiere Ihre Bedürfnisse und erstelle eine detaillierte Projektstrategie"
+          },
+          {
+            title: "Design",
+            description: "Ich erstelle Wireframes, Mockups und das finale visuelle Design"
+          },
+          {
+            title: "Entwicklung",
+            description: "Ich programmiere funktionale Anwendungen mit den neuesten Technologien"
+          },
+          {
+            title: "Testing & Launch",
+            description: "Ich teste gründlich und starte das Projekt erfolgreich mit Support"
+          }
+        ]
+      },
+      portfolio: {
+        title: "Projekt-Portfolio",
+        items: [
+          {
+            title: "TechFlow Business Solutions",
+            description: "Komplexe Web-Plattform für Geschäftsverwaltung"
+          },
+          {
+            title: "EcoMarket Online Store", 
+            description: "E-Commerce-Plattform für umweltfreundliche Produkte"
+          },
+          {
+            title: "FitLife Mobile App",
+            description: "Personalisierte Fitness-Anwendung für Android und iOS"
+          },
+          {
+            title: "ILMBUDS",
+            description: "Islamische Anwendung für Kinder"
+          }
+        ]
+      },
+      technologies: {
+        title: "Technologien die ich verwende",
+        frontend: {
+          title: "Frontend",
+          items: ["React", "TypeScript", "Next.js", "Vue.js", "Tailwind CSS", "SCSS"]
+        },
+        backend: {
+          title: "Backend",
+          items: ["Node.js", "Express", "Python", "PostgreSQL", "MongoDB", "Redis"]
+        },
+        mobile: {
+          title: "Mobile",
+          items: ["React Native", "Flutter", "Swift", "Kotlin", "Firebase", "Native APIs"]
+        }
+      },
+      cta: {
+        title: "Bereit für Ihr Projekt?",
+        description: "Kontaktieren Sie mich für eine kostenlose Beratung zu Ihrer Website oder mobilen Anwendung",
+        button: "Kontaktieren Sie mich"
+      }
+    },
+
+    graphicDesign: {
+      hero: {
+        title: "Visuelle Identität & Grafikdesign",
+        description: "Ich erstelle professionell einzigartige Logos, Marken und Druckmaterialien, die Ihr Unternehmen von der Konkurrenz abheben und einen unvergesslichen Eindruck bei Ihrer Zielgruppe hinterlassen."
+      },
+      services: {
+        logoDesign: {
+          title: "Logo Design",
+          description: "Ich erstelle einprägsame Logos, die die Essenz Ihrer Marke repräsentieren",
+          features: ["Originelle Konzepte", "Vektorformate", "Brandbook", "Verschiedene Versionen", "Überarbeitungen inklusive", "Design-Eigentum"]
+        },
+        branding: {
+          title: "Branding",
+          description: "Vollständige visuelle Identität, die Markenbekanntheit aufbaut",
+          features: ["Brandbook", "Visuelle Identität", "Typografie", "Farbpalette", "Anwendungen", "Brand Guidelines"]
+        },
+        printMaterials: {
+          title: "Druckmaterialien",
+          description: "Physische Marketingmaterialien, die Ihr Unternehmen professionell bewerben",
+          features: ["T-Shirts & Textilien", "Verpackungen", "Büromaterialien", "Marketingmaterialien", "Beschilderung", "Branded Produkte"]
+        }
+      },
+      process: {
+        title: "Kreativer Prozess",
+        steps: [
+          {
+            title: "Recherche",
+            description: "Ich analysiere Ihre Marke, Zielgruppe und Konkurrenz"
+          },
+          {
+            title: "Konzepte",
+            description: "Ich erstelle erste Ideen und visuelle Richtungen"
+          },
+          {
+            title: "Entwicklung",
+            description: "Ich entwickle ausgewählte Konzepte zur finalen Version"
+          },
+          {
+            title: "Finalisierung",
+            description: "Vorbereitung für Druck und digitale Nutzung"
+          }
+        ]
+      },
+      portfolio: {
+        title: "Arbeits-Portfolio",
+        logos: {
+          title: "Logo Design",
+          items: [
+            {
+              title: "InnovateTech Solutions",
+              description: "Modernes Technologieunternehmen",
+              category: "Tech startup"
+            },
+            {
+              title: "GreenHarvest",
+              description: "Bio-Lebensmittel und Landwirtschaft",
+              category: "Bio-Lebensmittel"
+            },
+            {
+              title: "AurumCraft",
+              description: "Luxus-Schmuck",
+              category: "Luxus-Schmuck"
+            }
+          ]
+        },
+        branding: {
+          title: "Komplettes Branding",
+          items: [
+            {
+              title: "PowerFit Pro",
+              description: "Fitness- und Wellness-Marke",
+              category: "Fitness"
+            },
+            {
+              title: "Aroma Collective",
+              description: "Premium-Coffeeshop-Marke",
+              category: "Food & Beverage"
+            }
+          ]
+        },
+        print: {
+          title: "Druckmaterialien",
+          description: "Branded T-Shirts, Verpackungsboxen und Werbematerialien"
+        },
+        books: {
+          title: "Buchdesign",
+          description: "Professionelles Cover-Design und Layout für Publikationen"
+        }
+      },
+      cta: {
+        title: "Bereit für eine neue visuelle Identität?",
+        description: "Kontaktieren Sie mich für eine kostenlose Beratung zu Ihrer Marke",
+        button: "Kontaktieren Sie mich"
+      }
+    },
+
+    videoProduction: {
+      hero: {
+        title: "Professionelle Videoproduktion",
+        description: "Ich erstelle hochwertigen Videoinhalt, der Ihre Botschaft vermittelt und Ihr Publikum durch professionelle Aufnahmen, Bearbeitung und Postproduktion anspricht."
+      },
+      services: {
+        filming: {
+          title: "Professionelle Aufnahmen",
+          description: "Ich verwende professionelle Ausrüstung, um visuell beeindruckende Videomaterialien zu erstellen",
+          features: ["4K Ultra HD Aufnahmen", "Professionelle Kameras", "Stabilisatoren und Gimbal-Systeme", "Professionelle Beleuchtung", "Audioaufnahme in Studioqualität", "Drohnen für Luftaufnahmen"]
+        },
+        editing: {
+          title: "Videobearbeitung",
+          description: "Fortgeschrittene Bearbeitungstechniken, die Rohmaterial in ansprechenden Inhalt verwandeln",
+          features: ["Adobe Premiere Pro", "Adobe After Effects", "Color Grading und Korrektur", "Sounddesign und Mischung", "Visuelle Effekte", "Untertitel und Grafiken"]
+        },
+        animation: {
+          title: "Intro-Template-Videos",
+          description: "Erstellung animierter Intro-Template-Videos und hochwertiger Motion Graphics",
+          features: ["Motion Graphics", "2D und 3D Animationen", "Logo-Animationen", "Intro/Outro-Sequenzen", "Kinetische Typografie", "Visuelle Effekte"]
+        }
+      },
+      process: {
+        title: "Kreativer Prozess",
+        steps: [
+          {
+            title: "Planung",
+            description: "Ich entwickle das Konzept und erstelle Storyboards entsprechend Ihren Zielen"
+          },
+          {
+            title: "Aufnahme",
+            description: "Professionelle Aufnahmen mit hochwertiger Ausrüstung und Beleuchtung"
+          },
+          {
+            title: "Postproduktion",
+            description: "Bearbeitung, Color Grading, Sounddesign und finale Verarbeitung"
+          },
+          {
+            title: "Lieferung",
+            description: "Optimierung für verschiedene Plattformen und finale Auslieferung"
+          }
+        ]
+      },
+      portfolio: {
+        title: "Video-Portfolio",
+        description: "Beispiele meiner neuesten Videoproduktionen mit verschiedenen Stilen und Techniken"
+      },
+      servicesTitle: "Meine Videoproduktions-Dienstleistungen",
+      servicesSubtitle: "Komplette Videodienstleistungen vom Konzept bis zur finalen Lieferung",
+      portfolioButtonText: "Portfolio Video",
+      videos: [
+        {
+          title: "Professionelles Intro-Video",
+          description: "Animiertes Intro mit Logo-Animation"
+        },
+        {
+          title: "Werbevideo",
+          description: "Kreativer Werbungsinhalt"
+        },
+        {
+          title: "Motion Graphics",
+          description: "Dynamische Grafiken und Animationen"
+        },
+        {
+          title: "Produktpräsentation",
+          description: "Produktpräsentation mit 3D-Effekten"
+        }
+      ],
+      cta: {
+        title: "Bereit für Ihr Videoprojekt?",
+        description: "Kontaktieren Sie mich für eine kostenlose Beratung zu Ihrem Videoinhalt",
+        button: "Kontaktieren Sie mich"
+      }
+    },
+
+    digitalMarketing: {
+      hero: {
+        title: "Digital Marketing",
+        subtitle: "Strategien, die Ihre Online-Sichtbarkeit erhöhen",
+        description: "Ich erstelle umfassende Digital-Marketing-Strategien, die Ihre Online-Sichtbarkeit erhöhen, Zielgruppen anziehen und messbare Ergebnisse durch Social Media, Google Ads und Content-Marketing generieren."
+      },
+      servicesTitle: "Meine Digital-Marketing-Dienstleistungen",
+      servicesSubtitle: "Komplette digitale Strategien für Ihr Unternehmenswachstum",
+      portfolioButtonText: "Ergebnisse Portfolio",
+      services: {
+        socialMedia: {
+          title: "Social Media Marketing",
+          description: "Social Media Management und Erstellung ansprechender Inhalte",
+          features: ["Facebook & Instagram Kampagnen", "LinkedIn Strategien", "YouTube Optimierung", "Influencer Marketing", "Community Management", "Social Media Analytics"]
+        },
+        googleAds: {
+          title: "Google Ads",
+          description: "Effektive PPC-Kampagnen, die qualitätsvolle Besucher bringen",
+          features: ["Search Kampagnen", "Display Werbung", "Shopping Ads", "YouTube Anzeigen", "Remarketing", "Keyword Research & Optimierung"]
+        },
+        contentMarketing: {
+          title: "Content Marketing",
+          description: "Erstellung wertvoller Inhalte, die Publikum anzieht und bindet",
+          features: ["Blog Strategien", "SEO optimierte Inhalte", "Email Marketing", "Newsletter Kampagnen", "Video Content", "Copywriting"]
+        }
+      },
+      strategy: {
+        title: "Strategischer Ansatz",
+        steps: [
+          {
+            title: "Analyse",
+            description: "Detaillierte Markt-, Konkurrenz- und Zielgruppenforschung"
+          },
+          {
+            title: "Strategie",
+            description: "Erstellung maßgeschneiderter Digital-Marketing-Strategien"
+          },
+          {
+            title: "Umsetzung",
+            description: "Kampagnenstart mit kontinuierlicher Überwachung"
+          },
+          {
+            title: "Optimierung",
+            description: "Ergebnisanalyse und kontinuierliche Leistungsverbesserung"
+          }
+        ]
+      },
+      results: {
+        title: "Ergebnisse, die sprechen",
+        description: "Messbare Ergebnisse, die die Wirksamkeit von Digital-Marketing-Strategien zeigen",
+        metrics: [
+          {
+            value: "300%",
+            label: "Traffic-Steigerung",
+            description: "Durchschnittliche Web-Traffic-Verbesserung"
+          },
+          {
+            value: "150%",
+            label: "Mehr Konversionen",
+            description: "Verbesserung der Konversionsrate"
+          },
+          {
+            value: "250%",
+            label: "ROI-Wachstum",
+            description: "Steigerung der Kapitalrendite"
+          }
+        ]
+      },
+      cta: {
+        title: "Bereit für digitales Wachstum?",
+        description: "Kontaktieren Sie mich für eine kostenlose Beratung zu Ihrer Digital-Marketing-Strategie",
+        button: "Kontaktieren Sie mich"
+      }
+    },
+
+    photography: {
+      hero: {
+        title: "Fotografie & Photomontage",
+        subtitle: "Kreative Fotografie und digitale Kunst",
+        description: "Ich erstelle professionelle Fotografien, restauriere alte Bilder, erstelle Photomontagen aller Art und Filmplakate mit Ihrem Bild - von kreativen Kompositionen bis zu realistischen Porträts."
+      },
+      servicesTitle: "Meine Fotografie-Dienstleistungen",
+      servicesSubtitle: "Von professioneller Fotografie bis zu kreativen Photomontagen",
+      portfolioButtonText: "Arbeiten Portfolio",
+      portfolioTitle: "Filmplakat Portfolio",
+      portfolioDescription: "Beispiele meiner Arbeit - Erstellung professioneller Filmplakate mit verschiedenen Stilen und Atmosphären",
+      moviePosters: [
+        {
+          title: "Ragazzo con Lanterne",
+          description: "Kreatives Fantasy-Plakat mit atmosphärischer Beleuchtung",
+          category: "Fantasy"
+        },
+        {
+          title: "Il Silenzio del Boss",
+          description: "Drama-Plakat im Noir-Film-Stil",
+          category: "Drama"
+        },
+        {
+          title: "Kong",
+          description: "Episches Action-Plakat mit Kreatur",
+          category: "Action"
+        },
+        {
+          title: "Gardijan",
+          description: "Winter-atmosphärisches Plakat mit Schnee",
+          category: "Drama"
+        },
+        {
+          title: "Abandoned",
+          description: "Mysteriöses Thriller-Plakat mit dunkler Atmosphäre",
+          category: "Thriller"
+        }
+      ],
+      processTitle: "Kreativer Prozess",
+      processSteps: [
+        {
+          title: "Beratung",
+          description: "Wir besprechen Ihre Idee und Anforderungen",
+          icon: "1"
+        },
+        {
+          title: "Konzepterstellung",
+          description: "Ich entwickle einen kreativen Ansatz und Stil",
+          icon: "2"
+        },
+        {
+          title: "Produktion",
+          description: "Professionelle Fotografie oder digitale Bearbeitung",
+          icon: "3"
+        },
+        {
+          title: "Finalisierung",
+          description: "Finale Bearbeitung und Lieferung im gewünschten Format",
+          icon: "4"
+        }
+      ],
+      services: {
+        professionalPhotography: {
+          title: "Professionelle Fotografie",
+          description: "Produkt-, Portrait-, Event- und Unternehmensfotografie",
+          features: ["Studio-Fotografie", "Produkte und Kataloge", "Porträtfotografie", "Event-Fotografie"]
+        },
+        restoration: {
+          title: "Restaurierung alter Fotos",
+          description: "Beschädigten und verblassten Fotografien neues Leben einhauchen",
+          features: ["Schäden entfernen", "Farb-Restaurierung", "Digitale Restaurierung", "Alte Foto-Reparatur"]
+        },
+        photomontage: {
+          title: "Alle Arten von Photomontagen",
+          description: "Kreative Kombination von Elementen zu einzigartigen Kompositionen",
+          features: ["Kreative Kompositionen", "Realistische Montagen", "Fantasy-Szenen", "Werbe-Photomontagen"]
+        },
+        moviePosters: {
+          title: "Filmplakate mit Ihrem Bild",
+          description: "Stellen Sie sich in den Mittelpunkt eines Filmplakats",
+          features: ["Personalisierte Plakate", "Verschiedene Filmstile", "Professionelle Bearbeitung", "Hohe Auflösung"]
+        }
+      },
+      cta: {
+        title: "Bereit für kreative Fotografie?",
+        description: "Kontaktieren Sie mich für eine kostenlose Beratung zu Ihrem Fotografie- oder Photomontage-Projekt",
+        button: "Kontaktieren Sie mich"
+      }
+    },
+
+    consulting: {
+      hero: {
+        title: "Beratung & Strategische Beratung",
+        subtitle: "Expertenberatung für digitalen Erfolg",
+        description: "Ich analysiere Ihre aktuelle digitale Präsenz, identifiziere Verbesserungsmöglichkeiten und erstelle Strategien, die Ihre Online-Effizienz, Benutzererfahrung und Konversionen steigern."
+      },
+      servicesTitle: "Meine Beratungsdienstleistungen",
+      servicesSubtitle: "Strategische Planung und Optimierung für Ihren digitalen Erfolg",
+      services: {
+        digitalStrategy: {
+          title: "Digitale Strategie",
+          description: "Ich erstelle umfassende digitale Strategien, die auf Ihre Geschäftsziele zugeschnitten sind",
+          features: ["Markt- und Wettbewerbsanalyse", "Zielgruppendefinition", "Branding-Strategie", "Digital-Marketing-Plan", "ROI-Optimierung", "Langfristige Planung"]
+        },
+        uxAudit: {
+          title: "UX/UI Audit",
+          description: "Ich analysiere Ihre Website oder Anwendung gründlich und gebe Verbesserungsempfehlungen",
+          features: ["Benutzererfahrungsanalyse", "Usability-Tests", "Konversionsanalyse", "Mobile Responsivität", "Ladegeschwindigkeit", "Accessibility-Prüfung"]
+        },
+        analytics: {
+          title: "Analytics & Berichterstattung",
+          description: "Ich richte erweiterte Tracking-Systeme ein und analysiere die Performance",
+          features: ["Google Analytics Setup", "Conversion Tracking", "A/B Testing", "Heat Map Analyse", "ROI Messung", "Monatliche Berichte"]
+        }
+      },
+      process: {
+        title: "Arbeitsprozess",
+        steps: [
+          {
+            title: "Ist-Zustand-Analyse",
+            description: "Ich analysiere gründlich Ihre aktuelle digitale Präsenz und identifiziere Probleme"
+          },
+          {
+            title: "Forschung & Strategie",
+            description: "Ich analysiere Markt, Wettbewerb und erstelle maßgeschneiderte Strategie"
+          },
+          {
+            title: "Umsetzungsplan",
+            description: "Ich erstelle einen detaillierten Umsetzungsplan mit klaren Schritten und Fristen"
+          },
+          {
+            title: "Überwachung & Optimierung",
+            description: "Kontinuierliche Überwachung der Ergebnisse und Strategieoptimierung"
+          }
+        ]
+      },
+      benefits: {
+        title: "Vorteile professioneller Beratung",
+        items: [
+          {
+            title: "Erhöhte Konversionen",
+            description: "Optimierung, die sich direkt auf erhöhte Verkäufe und Leads auswirkt"
+          },
+          {
+            title: "Zeit- und Geldersparnis",
+            description: "Vermeidung von Fehlern und Fokussierung auf Strategien, die Ergebnisse liefern"
+          },
+          {
+            title: "Wettbewerbsvorteil",
+            description: "Strategien, die Sie von der Konkurrenz abheben"
+          },
+          {
+            title: "Messbare Ergebnisse",
+            description: "Klar definierte KPIs und regelmäßige Leistungsüberwachung"
+          }
+        ]
+      },
+      cta: {
+        title: "Bereit für digitales Wachstum?",
+        description: "Vereinbaren Sie eine kostenlose Beratung und entdecken Sie, wie wir Ihre digitale Präsenz verbessern können",
+        button: "Kontaktieren Sie mich"
+      }
+    }
+  },
+  sq: {
+    nav: {
+      home: "Kreu",
+      about: "Rreth nesh",
+      services: "Shërbimet",
+      portfolio: "Portfolio",
+      blog: "Blog",
+      contact: "Kontakt"
+    },
+    hero: {
+      title: "Zgjidhje Kreative Multimediale",
+      subtitle: "Shërbime profesionale të krijimit të faqeve web, web dizajnit, dizajnit grafik, prodhimit të videove, marketingut dixhital dhe zhvillimit të aplikacioneve mobile për Android dhe iOS për biznesin tuaj",
+      servicesButton: "Shiko Shërbimet",
+      portfolioButton: "Puna Jonë",
+      locationTitle: "Duke punuar me marka kryesuese",
+      locations: ["Stuttgart", "Milano", "Ulm"]
+    },
+    about: {
+      title: "Rreth MULTIMEDIA AGRONDESIGN",
+      subtitle: "Duke krijuar përvojë të jashtëzakonshme dixhitale që shtyjnë biznesin tuaj përpara",
+      storyTitle: "Historia Jonë",
+      storyP1: "Unë themelova MULTIMEDIA AGRONDESIGN me një vizion për të ndihmuar bizneset të dallohen në botën dixhitale. Specializohem në krijimin e përmbajtjeve multimedia me cilësi të lartë që tërheqin vëmendjen, ndërtojnë marka dhe sjellin rezultate.",
+      storyP2: "Si një dizajner i përvojshëm, zhvillues dhe profesionist marketingu, punoj me përkushtim për t'i dhënë jetë ideve tuaja përmes zgjidhjeve inovative dixhitale.",
+      stats: {
+        projects: "Projekte",
+        clients: "Klientë",
+        years: "Vite"
+      },
+      certification: {
+        certified: "I Certifikuar",
+        googlePartner: "Partner Google"
+      },
+      skills: {
+        title: "Aftësitë dhe mjetet",
+        creative: {
+          title: "Koncept kreativ dhe dizajn",
+          items: ["Koncept kreativ", "Dizajn korporativ dhe logo", "Dizajn për print dhe media dixhitale"]
+        },
+        software: {
+          title: "Software profesional",
+          items: ["Adobe Photoshop CC 2026", "Adobe Premiere Pro CC 2026", "Adobe After Effects CC 2026"]
+        },
+        aiTools: {
+          title: "Mjetet e IA",
+          items: ["Gemini", "Nano Banana", "Chat GPT", "Perplexity", "Veo 3.1", "Sora 2.0"]
+        },
+        office: {
+          title: "Paketa Office",
+          items: ["Microsoft Word", "Excel", "PowerPoint", "Outlook"]
+        },
+        languages: {
+          title: "Gjuhët",
+          items: ["Shqip (gjuhë amtare)", "Italisht (rrjedhshëm)", "Serbisht (rrjedhshëm)", "Kroatisht (rrjedhshëm)", "Gjermanisht (rrjedhshëm)"]
+        }
+      }
+    },
+    services: {
+      title: "Shërbimet Tona",
+      subtitle: "Zgjidhje multimedia gjithëpërfshirëse të përshtatura për nevojat tuaja",
+      items: {
+        webDesign: {
+          title: "Krijimi i Faqes suaj të Internetit dhe Aplikacionit Mobil",
+          description: "Uebsajte përgjigës, të optimizuara për SEO dhe aplikacione mobile për Android dhe iOS që tërheqin vizitorë dhe i kthejnë ata në klientë.",
+          features: ["Dizajn i Personalizuar", "Mobile Responsive", "Optimizim SEO", "Aplikacione Android & iOS"]
+        },
+        graphicDesign: {
+          title: "Dizajn Grafik",
+          description: "Identitete vizuale kreative, logo dhe materiale marketingu që bëjnë që marka juaj të dallohet.",
+          features: ["Dizajn Logo", "Branding", "Materiale Print"]
+        },
+        videoProduction: {
+          title: "Prodhim Video",
+          description: "Përmbajtje video profesionale që transmeton mesazhin tuaj dhe angazhon audiencën.",
+          features: ["Video Promocionale", "Animacione", "Post-Prodhim"]
+        },
+        digitalMarketing: {
+          title: "Marketing Dixhital",
+          description: "Strategji që rrisin dukshmërinë tuaj online dhe tërheqin audiencën e synuar.",
+          features: ["Media Sociale", "Google Ads", "Marketing Përmbajtjeje"]
+        },
+        photography: {
+          title: "Fotografi",
+          description: "Fotografi profesionale produktesh, eventesh dhe portretesh për biznesin tuaj.",
+          features: ["Fotografi Produkti", "Mbulim Eventi", "Post-Processing"]
+        },
+        consulting: {
+          title: "Konsultime",
+          description: "Konsultime eksperte për strategji dixhitale dhe optimizim të prezencës suaj online.",
+          features: ["Strategji Dixhitale", "Audit UX/UI", "Analitikë"]
+        }
+      },
+      learnMore: "Mëso Më Shumë"
+    },
+    portfolio: {
+      title: "Portfolio-ja Jonë",
+      subtitle: "Shikoni disa nga projektet tona më të suksesshme që kanë sjellë rezultate për klientët",
+      filters: {
+        all: "Të Gjitha Projektet",
+        web: "Web Dizajn",
+        brand: "Branding",
+        video: "Video",
+        photo: "Fotografi"
+      },
+      items: {
+        ecommerce: {
+          title: "Sajt E-commerce",
+          description: "Përvojë e plotë blerje online"
+        },
+        brand: {
+          title: "Identitet Marke",
+          description: "Identitet vizual i plotë për startup"
+        },
+        corporate: {
+          title: "Video Korporative",
+          description: "Prezantim kompanie përmes videos"
+        },
+        restaurant: {
+          title: "Uebsajt Restoranti",
+          description: "Prezencë elegante online"
+        },
+        product: {
+          title: "Fotografi Produkti",
+          description: "Fotografi produkti në studio"
+        },
+        packaging: {
+          title: "Dizajn Ambalazhi",
+          description: "Zgjidhje kreative ambalazhi"
+        }
+      },
+      viewDetails: "Shiko Detajet"
+    },
+    blog: {
+      title: "Blog & Lajme",
+      subtitle: "Ndiq trendet më të fundit në marketing dixhital dhe dizajn",
+      posts: {
+        trends: {
+          title: "5 Trendet Më të Rëndësishme të Marketing Dixhital për 2026",
+          description: "Zbulo trendet më të fundit që do të përcaktojnë marketing dixhitalin në vitin e ardhshëm dhe si mund ta përshtatësh strategjinë tënde...",
+          category: "Marketing"
+        },
+        conversion: {
+          title: "Si të Krijosh një Uebsajt që Konverton Vizitorët",
+          description: "Ndiq praktikat më të mira të web dizajnit që jo vetëm duken mirë, por gjithashtu konvertojnë në mënyrë efektive vizitorët në klientë...",
+          category: "Dizajn"
+        },
+        video: {
+          title: "Fuqia e Video Marketingut: Pse Video është Mbreti i Përmbajtjes",
+          description: "Video marketingu nuk është vetëm një trend - është e ardhmja e komunikimit dixhital. Mëso si mund ta përdorësh videon për rritjen e biznesit...",
+          category: "Video"
+        },
+        foodTruck: {
+          title: "Si e ndërtova një faqe web për food truck",
+          description: "Një udhëzues praktik hap-pas-hapi se si dizajnova dhe ndërtova një web të thjeshtë për food truck — strukturë, copy dhe SEO bazë për të marrë më shumë kërkesa.",
+          category: "Dizajn Web"
+        }
+      },
+      readMore: "Lexo Më Shumë",
+      viewAll: "Shiko Të Gjitha Artikujt"
+    },
+    blogPost: {
+      trends: {
+        title: "5 Trendet Më të Rëndësishme të Marketingut Dixhital për 2026",
+        subtitle: "Qëndroni përpara me trendet më të fundit",
+        category: "Marketing Dixhital",
+        date: "07.03.2026",
+        intro: "Peizazhi i marketingut dixhital po evoluon shpejt. Nga personalizimi i drejtuar nga IA tek përvojat AR imersive, 2026 sjell mundësi emocionuese për bizneset.",
+        aiPersonalization: { title: "Personalizimi i drejtuar nga IA", description: "Inteligjenca artificiale mundëson nivele të papara personalizimi përmbajtjeje." },
+        voiceSearch: { title: "Optimizimi për kërkim zanor", description: "Optimizimi i përmbajtjes për kërkimet zanore është kyç për dukshmërinë." },
+        mobileFirst: { title: "Përvoja Mobile-First", description: "Dizajnimi i përvojave mobile-first siguron performancë optimale." },
+        socialCommerce: { title: "Integrimi i tregtisë sociale", description: "Platformat sociale po bëhen destinacione blerjesh." },
+        implementation: { title: "Implementimi i këtyre trendeve", description: "Implementimi i suksesshëm kërkon planifikim strategjik." },
+        actionItems: { title: "Veprimet kyçe", item1: "Auditoni strategjinë tuaj aktuale", item2: "Identifikoni mundësitë për integrim IA", item3: "Optimizoni përmbajtjen për kërkim zanor", item4: "Përmirësoni përvojën mobile" }
+      },
+      conversion: {
+        title: "Udhëzuesi për optimizimin e konvertimit",
+        subtitle: "Shndërroni vizitorët në klientë",
+        category: "Optimizim uebfaqesh",
+        date: "07.03.2026",
+        intro: "Shndërrimi i vizitorëve të faqes në klientë është art dhe shkencë.",
+        userExperience: { title: "Dizajni i përvojës së përdoruesit", description: "Navigimi intuitiv dhe rrjedhat e qëndrueshme udhëzojnë vizitorët." },
+        abTesting: { title: "Strategjia e testimit A/B", description: "Testimi sistematik ndihmon të identifikohet çfarë funksionon më mirë." },
+        callToAction: { title: "Thirrje bindëse për veprim", description: "Vendosja strategjike dhe teksti bindës në CTA rrisin konvertimet." },
+        analytics: { title: "Analitika e performancës", description: "Njohuritë e bazuara në të dhëna zbulojnë modele sjelljeje." },
+        practicalSteps: { title: "Hapat praktikë për optimizim", description: "Optimizimi i suksesshëm kërkon një qasje sistematike." },
+        optimizationChecklist: {
+          title: "Lista e kontrollit për optimizim konvertimi",
+          technical: "Optimizim teknik", pageSpeed: "Përmirësoni shpejtësinë e ngarkimit", mobileOptimization: "Optimizoni për mobile",
+          formOptimization: "Thjeshtoni fushat e formularëve", content: "Strategjia e përmbajtjes", headlines: "Krijoni titra bindëse",
+          socialProof: "Shtoni elemente provë sociale", urgency: "Përdorni urgjencë dhe mungesë"
+        },
+        cta: { title: "Gati të rrisni konvertimet?", description: "MULTIMEDIA AGRONDESIGN optimizon faqen tuaj për konvertime maksimale.", button: "Filloni sot" }
+      },
+      video: {
+        title: "Fuqia e Video Marketingut: Angazhimi i audiencës tuaj në 2026",
+        subtitle: "Angazhoni audiencën përmes tregimit vizual",
+        category: "Video Marketing",
+        date: "07.03.2026",
+        intro: "Përmbajtja video është bërë një forcë dominuese në marketingun dixhital.",
+        engagement: { title: "Norma më të larta angazhimi", description: "Përmbajtja video gjeneron 1200% më shumë ndarje se teksti dhe imazhet." },
+        conversion: { title: "Konvertime të përmirësuara", description: "Faqet me video mund të rrisin normat e konvertimit deri në 80%." },
+        storytelling: { title: "Tregim emocional", description: "Videoja lejon markat të tregojnë histori bindëse." },
+        reach: { title: "Mbulim i zgjeruar", description: "Algoritmet e mediave sociale favorizojnë përmbajtjen video." },
+        types: {
+          title: "Llojet e përmbajtjes video që konvertojnë",
+          product: { title: "Demonstrime produkti", description: "Tregoni produktet tuaja në veprim." },
+          testimonial: { title: "Dëshmitë e klientëve", description: "Historitë autentike të klientëve ndërtojnë besim." },
+          educational: { title: "Përmbajtje edukative", description: "Videot si-të bëhet pozicionojnë markën tuaj si ekspert." },
+          behindScenes: { title: "Prapa skenave", description: "Jepni audiencës një vështrim prapa skenave." }
+        },
+        strategy: {
+          title: "Këshilla për strategjinë e video marketingut",
+          production: "Ekselencë prodhimi", quality: "Investoni në cilësi të mirë audio", lighting: "Përdorni teknika ndriçimi",
+          planning: "Planifikoni strukturën e përmbajtjes", distribution: "Shpërndarje inteligjente", platforms: "Zgjidhni platformat e duhura",
+          timing: "Optimizoni kohën e publikimit", seo: "Aplikoni praktikat më të mira video SEO"
+        },
+        cta: { title: "Gati për video marketing?", description: "MULTIMEDIA AGRONDESIGN krijon përmbajtje video bindëse.", button: "Filloni udhëtimin tuaj me video" }
+      }
+    },
+    contact: {
+      title: "Kontakt",
+      subtitle: "Lidhuni me ne direkt përmes telefonit ose emailit.",
+      instruction: "Dërgoni një mesazh përmes formës më poshtë (pa caktim takimi) ose na kontaktoni me telefon ose email. Përgjigjemi brenda 24 orëve.",
+      trustLine: "Përgjigje brenda 24 orëve",
+      info: {
+        title: "Informacione Kontakti",
+        phone: "Telefon",
+        email: "Email",
+        location: "Geislingen an der Steige"
+      },
+      social: {
+        title: "Na Ndiqni"
+      },
+      hours: {
+        title: "Orët e Punës",
+        weekdays: "E Hënë - E Premte",
+        saturday: "E Shtunë",
+        sunday: "E Diel",
+        closed: "Mbyllur"
+      },
+      success: {
+        title: "Mesazhi u dërgua!",
+        description: "Do t'ju kthejmë përgjigje sa më shpejt që të jetë e mundur."
+      },
+      error: {
+        title: "Gabim në dërgimin e mesazhit",
+        description: "Ju lutemi provoni përsëri ose na kontaktoni direkt.",
+        validation: "Emri, email dhe mesazhi janë të detyrueshme",
+        emailjsMissing: "Formulari i kontaktit nuk është konfiguruar (EmailJS). Na kontaktoni me telefon ose email."
+      },
+      form: {
+        title: "Dërgo pyetje",
+        intro: "Pa caktim takimesh — vetëm pyetje dhe kërkesa informacioni. Përgjigjemi me email.",
+        name: "Emri dhe mbiemri",
+        email: "Email",
+        message: "Mesazhi juaj",
+        submit: "Dërgo mesazhin",
+        sending: "Duke dërguar…",
+        emailSubject: "Pyetje për informacion (sajti)"
+      }
+    },
+    portfolioPages: {
+      common: {
+        backToHome: "Kreu",
+        projectDetails: "Detajet e Projektit",
+        category: "Kategoria",
+        results: "Rezultatet"
+      }
+    },
+    footer: {
+      brand: "Duke krijuar përvojë të jashtëzakonshme dixhitale që shtyjnë biznesin tuaj përpara përmes zgjidhjeve inovative multimedia.",
+      services: "Shërbimet",
+      company: "Kompania",
+      contact: "Kontakt",
+      phone: "+49 15560 873124",
+      email: "agron6922@gmail.com",
+      location: "Geislingen an der Steige",
+      copyright: "© 2026 MULTIMEDIA AGRONDESIGN. Të gjitha të drejtat të rezervuara.",
+      privacy: "Privatësia",
+      terms: "Kushtet",
+      cookies: "Cookies",
+      impresum: "Impresum",
+      career: "Karriera"
+    },
+    
+    // Impresum content (Albanian)
+    impresum: {
+      title: "Impresum (Informacion Ligjor)",
+      subtitle: "Të dhëna sipas § 5 TMG (Ligji gjerman për telemedian)",
+      sections: {
+        company: {
+          title: "AGRONDESIGN",
+          owner: "Pronar: Agron Osmani",
+          address: "Luise-Hainlen-Weg 4/4\n73312 Geislingen an der Steige"
+        },
+        contact: {
+          title: "Kontakti",
+          email: "Email: agron6922@gmail.com"
+        },
+        representative: {
+          title: "Përfaqësuar nga",
+          name: "Agron Osmani"
+        },
+        tax: {
+          title: "Informacione Tatimore",
+          taxNumber: "Numri Tatimor (Steuernummer): 48267305956",
+          vatNumber: "Numri i Identifikimit të TVSH-së sipas §27a të Ligjit Gjerman të TVSH-së (USt-IdNr.): DE354016444"
+        },
+        profession: {
+          title: "Titulli Profesional",
+          description: "Dizajner Grafik & Zhvillues"
+        }
+      }
+    },
+
+    // Privacy Policy content (Albanian)
+    privacy: {
+      title: "Politika e Privatësisë",
+      subtitle: "Informacione mbi mbrojtjen e të dhënave personale në përputhje me GDPR",
+      sections: {
+        dataCollection: {
+          title: "Mbledhja e të Dhënave",
+          content: "Ne mbledhim të dhëna personale që ju jepni vullnetarisht përmes formës së kontaktit, duke përfshirë emrin, adresën e emailit dhe mesazhin. Këto të dhëna përdoren ekskluzivisht për komunikim dhe ofrimin e shërbimeve tona."
+        },
+        dataUsage: {
+          title: "Përdorimi i të Dhënave",
+          content: "Ne përdorim të dhënat tuaja personale për: përgjigjen ndaj pyetjeve tuaja, ofrimin e shërbimeve të kërkuara, përmirësimin e faqes sonë dhe shërbimeve, dhe dërgimin e informacioneve relevante mbi shërbimet tona (vetëm me lejen tuaj)."
+        },
+        cookies: {
+          title: "Cookies",
+          content: "Ne përdorim cookies për të përmirësuar funksionalitetin e faqes dhe për analizë trafikut. Ju mund t'i kontrolloni cookies përmes cilësimeve të browserit tuaj. Për informacione më të detajuara, shikoni Politikën tonë të Cookies."
+        },
+        rights: {
+          title: "Të Drejtat Tuaja",
+          content: "Ju keni të drejtën e aksesit, korrigjimit, fshirjes dhe transferimit të të dhënave tuaja. Ju gjithashtu mund të kufizoni ose kundërshtoni përpunimin e të dhënave tuaja. Për të ushtruar këto të drejta, na kontaktoni përmes emailit."
+        },
+        contact: {
+          title: "Kontakti",
+          content: "Për pyetje mbi privatësinë na kontaktoni në: agron6922@gmail.com. Ne rezervojmë të drejtën për të përditësuar këtë politikë, për të cilën do t'ju njoftojmë përmes faqes sonë."
+        }
+      }
+    },
+
+    // Terms of Service content (Albanian)
+    terms: {
+      title: "Kushtet e Shërbimit",
+      subtitle: "Rregullat dhe kushtet për përdorimin e faqes sonë dhe shërbimeve",
+      sections: {
+        scope: {
+          title: "Fushëveprimi",
+          content: "Këto kushte zbatohen për të gjithë përdoruesit e faqes sonë agrmultimedia.eu dhe shërbimeve tona. Duke përdorur faqen, ju i pranoni këto kushte plotësisht."
+        },
+        services: {
+          title: "Shërbimet Tona",
+          content: "Ne ofrojmë shërbime web dizajni, dizajni grafik, prodhimi video, marketingu dixhital dhe zhvillimi i aplikacioneve mobile. Të gjitha shërbimet ofrohen profesionalisht dhe brenda afateve të rëna dakord."
+        },
+        liability: {
+          title: "Kufizimi i Përgjegjësisë",
+          content: "Ne nuk jemi përgjegjës për dëmet që rrjedhin nga përdorimi i faqes sonë përveç rasteve të neglizhencës së rëndë ose qëllimit. Përgjegjësia jonë kufizohet në vlerën e shërbimeve të kontratuara."
+        },
+        intellectual: {
+          title: "Pronësia Intelektuale",
+          content: "I gjithë përmbajtja në faqe është e mbrojtur nga të drejtat e autorit. Kopjimi, shpërndarja ose përdorimi komercial pa leje me shkrim është i ndaluar. Projektet e krijuara për klientët bëhen pronë e tyre pas pagesës."
+        },
+        termination: {
+          title: "Ndërprerja e Shërbimeve",
+          content: "Ne rezervojmë të drejtën për të ndërprerë shërbimet në rast të shkeljes së kushteve të përdorimit. Klientët mund të anulojnë shërbimet duke respektuar kushtet e rëna dakord të anulimit."
+        }
+      }
+    },
+
+    // Cookie Policy content (Albanian)
+    cookies: {
+      title: "Politika e Cookies",
+      subtitle: "Si përdorim cookies në faqen tonë",
+      sections: {
+        whatAre: {
+          title: "Çfarë janë Cookies",
+          content: "Cookies janë skedarë të vegjël që ruhen në pajisjen tuaj kur vizitoni faqen tonë. Ato na ndihmojnë ta bëjmë faqen të funksionojë më mirë dhe t'ju ofrojmë një përvojë më të mirë përdoruesi."
+        },
+        howWeUse: {
+          title: "Si i Përdorim Cookies",
+          content: "Ne përdorim cookies për: ruajtjen e gjuhës dhe cilësimeve tuaja, analizën e trafikut të faqes, përmirësimin e performancës së faqes, dhe ofrimin e funksioneve të sigurisë."
+        },
+        types: {
+          title: "Llojet e Cookies",
+          content: "Ne përdorim cookies thelbësore (të nevojshme për funksionimin e faqes), cookies analitike (Google Analytics), cookies funksionale (ruajtja e cilësimeve), dhe cookies performancë (optimizimi i faqes)."
+        },
+        control: {
+          title: "Kontrolli i Cookies",
+          content: "Ju mund t'i kontrolloni cookies përmes cilësimeve të browserit tuaj. Ju mund t'i bllokoni ose t'i fshini, por kjo mund të ndikojë në funksionalitetin e faqes. Shumica e browserëve i pranojnë cookies automatikisht."
+        },
+        thirdParty: {
+          title: "Cookies të Palëve të Treta",
+          content: "Ne përdorim Google Analytics për analizë trafikut. Google mund të vendosë cookies të tij. Ju lutemi kontrolloni politikën e privatësisë së Google për më shumë informacione mbi cookies e tyre."
+        }
+      }
+    },
+
+    webDesign: {
+      hero: {
+        title: "Krijimi i Faqeve të Internetit dhe Zhvillimi i Aplikacioneve Mobile",
+        description: "Unë zhvilloj profesionalisht faqe interneti responsive dhe aplikacione mobile për Android dhe iOS që tërheqin vizitorët, përmirësojnë përvojën e përdoruesit dhe konvertojnë me efikasitet vizitorët në klientë përmes teknologjive moderne dhe dizajnit të optimizuar."
+      },
+      services: {
+        websites: {
+          title: "Faqe Interneti",
+          description: "Krijoj faqe interneti moderne, responsive që funksionojnë përkrysësh në të gjitha pajisjet",
+          features: ["Dizajn Responsive", "Optimizim SEO", "Ngarkimi i Shpejtë", "Integrimi CMS", "Siguria", "Analitikë"]
+        },
+        mobileApps: {
+          title: "Aplikacione Mobile",
+          description: "Zhvilloj aplikacione native dhe cross-platform për platformat Android dhe iOS",
+          features: ["Aplikacione Android", "Aplikacione iOS", "Cross-platform", "Push Njoftimet", "Funksionaliteti Offline", "Publikimi App Store"]
+        },
+        responsive: {
+          title: "Dizajn Responsive",
+          description: "Siguroj që faqja juaj të duket përkryesisht në të gjitha pajisjet dhe madhësitë e ekranit",
+          features: ["Qasja Mobile-First", "Optimizimi Tablet", "Performancë Desktop", "Mbështetja Touchscreen", "Retina Display", "Kompatibilitet Cross-browser"]
+        }
+      },
+      process: {
+        title: "Procesi i Punës",
+        steps: [
+          {
+            title: "Planifikimi",
+            description: "Analizoj nevojat tuaja dhe krijoj një strategji të detajuar projekti"
+          },
+          {
+            title: "Dizajni",
+            description: "Krijoj wireframes, mockups dhe dizajnin e fundit vizual"
+          },
+          {
+            title: "Zhvillimi",
+            description: "Kodoj aplikacion funksional duke përdorur teknologjitë më të fundit"
+          },
+          {
+            title: "Testimi & Lansimi",
+            description: "Testoj plotësisht dhe lançoj me sukses projektin me mbështetje"
+          }
+        ]
+      },
+      portfolio: {
+        title: "Portfolioja e Projekteve",
+        items: [
+          {
+            title: "TechFlow Business Solutions",
+            description: "Platformë web komplekse për menaxhimin e biznesit"
+          },
+          {
+            title: "EcoMarket Online Store", 
+            description: "Platformë e-commerce për produkte miqësore me mjedisin"
+          },
+          {
+            title: "FitLife Mobile App",
+            description: "Aplikacion fitness i personalizuar për Android dhe iOS"
+          },
+          {
+            title: "ILMBUDS",
+            description: "Aplikacion islamik për fëmijë"
+          }
+        ]
+      },
+      technologies: {
+        title: "Teknologjitë që Përdor",
+        frontend: {
+          title: "Frontend",
+          items: ["React", "TypeScript", "Next.js", "Vue.js", "Tailwind CSS", "SCSS"]
+        },
+        backend: {
+          title: "Backend",
+          items: ["Node.js", "Express", "Python", "PostgreSQL", "MongoDB", "Redis"]
+        },
+        mobile: {
+          title: "Mobile",
+          items: ["React Native", "Flutter", "Swift", "Kotlin", "Firebase", "Native APIs"]
+        }
+      },
+      cta: {
+        title: "Gati për Projektin Tuaj?",
+        description: "Kontaktoni për një konsultim falas mbi faqen tuaj të internetit ose aplikacionin mobil",
+        button: "Kontaktoni"
+      }
+    },
+
+    graphicDesign: {
+      hero: {
+        title: "Krijimi i Identitetit Vizual dhe Dizajni Grafik",
+        description: "Krijoj profesionalisht logo të veçanta, marka dhe materiale printimi që dallojnë biznesin tuaj nga konkurrentët dhe lënë një përshtypje të paharrueshme tek audienca juaj e synuar."
+      },
+      services: {
+        logoDesign: {
+          title: "Dizajni i Logos",
+          description: "Krijoj logo të paharrueshme që përfaqësojnë esencën e markës suaj",
+          features: ["Koncepte origjinale", "Formate vektori", "Brandbook", "Versione të ndryshme", "Rishikime të përfshira", "Pronësia e dizajnit"]
+        },
+        branding: {
+          title: "Brending",
+          description: "Identitet vizual i plotë që ndërton njohjen e markës",
+          features: ["Brandbook", "Identiteti vizual", "Tipografia", "Paleta e ngjyrave", "Aplikacione", "Udhëzimet e markës"]
+        },
+        printMaterials: {
+          title: "Materiale Printimi",
+          description: "Materiale marketingu fizike që promovojnë biznesin tuaj profesionalisht",
+          features: ["Bluzat & tekstilet", "Paketimet", "Materialet e zyrës", "Materialet marketingu", "Tabelat", "Produktet e markës"]
+        }
+      },
+      process: {
+        title: "Procesi Kreativ",
+        steps: [
+          {
+            title: "Hulumtimi",
+            description: "Analizoj markën tuaj, audiencën e synuar dhe konkurrencën"
+          },
+          {
+            title: "Konceptet",
+            description: "Krijoj idetë fillestare dhe drejtimet vizuale"
+          },
+          {
+            title: "Zhvillimi",
+            description: "Zhvilloj konceptet e zgjedhura deri në versionin final"
+          },
+          {
+            title: "Finalizimi",
+            description: "Përgatitje për printim dhe përdorim dixhital"
+          }
+        ]
+      },
+      portfolio: {
+        title: "Portfolioja e Punëve",
+        logos: {
+          title: "Dizajni i Logos",
+          items: [
+            {
+              title: "InnovateTech Solutions",
+              description: "Kompani moderne teknologjike",
+              category: "Tech startup"
+            },
+            {
+              title: "GreenHarvest",
+              description: "Ushqim organik dhe bujqësi",
+              category: "Ushqim organik"
+            },
+            {
+              title: "AurumCraft",
+              description: "Stolitë luksoze",
+              category: "Stoli luksoze"
+            }
+          ]
+        },
+        branding: {
+          title: "Brending i Plotë",
+          items: [
+            {
+              title: "PowerFit Pro",
+              description: "Marka fitness dhe wellness",
+              category: "Fitness"
+            },
+            {
+              title: "Aroma Collective",
+              description: "Marka premium kafeje",
+              category: "Ushqim & Pije"
+            }
+          ]
+        },
+        print: {
+          title: "Materiale Printimi",
+          description: "Bluzat me markë, kutitë e paketimit dhe materialet promocionale"
+        },
+        books: {
+          title: "Dizajni i Librave",
+          description: "Dizajni profesional i kopertinave dhe layout-i për publikime"
+        }
+      },
+      cta: {
+        title: "Gati për një Identitet të Ri Vizual?",
+        description: "Kontaktoni për një konsultim falas mbi markën tuaj",
+        button: "Kontaktoni"
+      }
+    },
+
+    videoProduction: {
+      hero: {
+        title: "Prodhimi Profesional i Videove",
+        description: "Krijoj përmbajtje video me cilësi të lartë që transmeton mesazhin tuaj dhe angazhon audiencën përmes filmimit profesional, editimit dhe post-prodhimit."
+      },
+      services: {
+        filming: {
+          title: "Filmim Profesional",
+          description: "Përdor pajisje profesionale për krijimin e materialeve video vizualisht mbresëlënëse",
+          features: ["Filmim 4K Ultra HD", "Kamera profesionale", "Stabilizatorë dhe sisteme gimbal", "Ndriçim profesional", "Regjistrimi audio me cilësi studimi", "Dronë për pamje ajrore"]
+        },
+        editing: {
+          title: "Editimi i Videove",
+          description: "Teknika të avancuara editimi që transformojnë materialin e papërpunuar në përmbajtje tërheqëse",
+          features: ["Adobe Premiere Pro", "Adobe After Effects", "Gradimi dhe korrigjimi i ngjyrave", "Dizajni dhe përzierja e tingullit", "Efekte vizuale", "Titra dhe grafika"]
+        },
+        animation: {
+          title: "Video Template Intro",
+          description: "Krijimi i video template intro të animuara dhe motion graphics me cilësi të lartë",
+          features: ["Motion graphics", "Animacione 2D dhe 3D", "Animacione logo", "Sekuenca intro/outro", "Tipografi kinetike", "Efekte vizuale"]
+        }
+      },
+      process: {
+        title: "Procesi Kreativ",
+        steps: [
+          {
+            title: "Planifikimi",
+            description: "Zhvilloj konceptin dhe krijoj storyboard sipas objektivave tuaja"
+          },
+          {
+            title: "Filmimi",
+            description: "Filmim profesional me pajisje dhe ndriçim me cilësi të lartë"
+          },
+          {
+            title: "Post-prodhimi",
+            description: "Editimi, gradimi i ngjyrave, dizajni i tingullit dhe përpunimi final"
+          },
+          {
+            title: "Dorëzimi",
+            description: "Optimizimi për platforma të ndryshme dhe dorëzimi final"
+          }
+        ]
+      },
+      portfolio: {
+        title: "Portfolio e Punëve Video",
+        description: "Shembuj të prodhimeve të mia të fundit video me stile dhe teknika të ndryshme"
+      },
+      servicesTitle: "Shërbimet e Mia të Prodhimit të Videove",
+      servicesSubtitle: "Shërbime të plota video nga koncepti deri te dorëzimi final",
+      portfolioButtonText: "Portfolio Video",
+      videos: [
+        {
+          title: "Video Intro Profesional",
+          description: "Intro i animuar me animacion logo"
+        },
+        {
+          title: "Video Promocional",
+          description: "Përmbajtje promocionale kreative"
+        },
+        {
+          title: "Motion Graphics",
+          description: "Grafika dinamike dhe animacione"
+        },
+        {
+          title: "Prezantimi i Produktit",
+          description: "Prezantimi i produktit me efekte 3D"
+        }
+      ],
+      cta: {
+        title: "Gati për Projektin tuaj Video?",
+        description: "Më kontaktoni për një konsultim falas rreth përmbajtjes suaj video",
+        button: "Më kontaktoni"
+      }
+    },
+
+    digitalMarketing: {
+      hero: {
+        title: "Marketing Dixhital",
+        subtitle: "Strategji që shtojnë dukshmërinë tuaj online",
+        description: "Krijoj strategji gjithëpërfshirëse të marketingut dixhital që shtojnë dukshmërinë tuaj online, tërheqin audiencën e synuar dhe gjenerojnë rezultate të matshme përmes mediave sociale, Google Ads dhe content marketing."
+      },
+      servicesTitle: "Shërbimet e Mia të Marketingut Dixhital",
+      servicesSubtitle: "Strategji dixhitale të plota për rritjen e biznesit tuaj",
+      portfolioButtonText: "Portfolio Rezultatesh",
+      services: {
+        socialMedia: {
+          title: "Marketing në Media Sociale",
+          description: "Menaxhimi i mediave sociale dhe krijimi i përmbajtjes tërheqëse",
+          features: ["Fushata Facebook & Instagram", "Strategji LinkedIn", "Optimizimi i YouTube", "Influencer marketing", "Menaxhimi i komunitetit", "Analytics për mediat sociale"]
+        },
+        googleAds: {
+          title: "Google Ads",
+          description: "Fushata PPC efektive që sjellin vizitorë cilësorë",
+          features: ["Fushata Search", "Display advertising", "Shopping ads", "Reklama YouTube", "Remarketing", "Hulumtimi dhe optimizimi i fjalëve kyçe"]
+        },
+        contentMarketing: {
+          title: "Content Marketing",
+          description: "Krijimi i përmbajtjes me vlerë që tërheq dhe ruan audiencën",
+          features: ["Strategji blog", "Përmbajtje e optimizuar për SEO", "Email marketing", "Fushata newsletter", "Përmbajtje video", "Copywriting"]
+        }
+      },
+      strategy: {
+        title: "Qasje Strategjike",
+        steps: [
+          {
+            title: "Analiza",
+            description: "Hulumtim i detajuar i tregut, konkurrencës dhe audiencës së synuar"
+          },
+          {
+            title: "Strategjia",
+            description: "Krijimi i strategjisë së personalizuar të marketingut dixhital"
+          },
+          {
+            title: "Implementimi",
+            description: "Nisja e fushatave me monitorim të vazhdueshëm"
+          },
+          {
+            title: "Optimizimi",
+            description: "Analiza e rezultateve dhe përmirësimi i vazhdueshëm i performancës"
+          }
+        ]
+      },
+      results: {
+        title: "Rezultate që Flasin",
+        description: "Rezultate të matshme që tregojnë efektivitetin e strategjive të marketingut dixhital",
+        metrics: [
+          {
+            value: "300%",
+            label: "Rritje Trafiku",
+            description: "Përmirësim mesatar i trafikut web"
+          },
+          {
+            value: "150%",
+            label: "Më Shumë Konvertime",
+            description: "Përmirësim i normës së konvertimit"
+          },
+          {
+            value: "250%",
+            label: "Rritje ROI",
+            description: "Rritje e kthimit të investimit"
+          }
+        ]
+      },
+      cta: {
+        title: "Gati për Rritje Dixhitale?",
+        description: "Kontaktoni për një konsultim falas mbi strategjinë tuaj të marketingut dixhital",
+        button: "Kontaktoni"
+      }
+    },
+
+    photography: {
+      hero: {
+        title: "Fotografi & Photomontazh",
+        subtitle: "Fotografi kreative dhe art dixhital",
+        description: "Krijoj fotografi profesionale, restauroj fotografi të vjetra, bëj photomontazhe të të gjitha llojeve dhe postera filmash me fotografinë tuaj - nga kompozime kreative deri te portrete realiste."
+      },
+      servicesTitle: "Shërbimet e Mia të Fotografisë",
+      servicesSubtitle: "Nga fotografia profesionale deri te photomontazhet kreative",
+      portfolioButtonText: "Portfolio Punësh",
+      portfolioTitle: "Portfolio Posterash Filmash",
+      portfolioDescription: "Shembuj të punës sime - krijimi i posterave profesionale të filmave me stile dhe atmosfera të ndryshme",
+      moviePosters: [
+        {
+          title: "Ragazzo con Lanterne",
+          description: "Poster fantazie kreativ me ndriçim atmosferik",
+          category: "Fantasy"
+        },
+        {
+          title: "Il Silenzio del Boss",
+          description: "Poster dramë në stilin e filmave noir",
+          category: "Drama"
+        },
+        {
+          title: "Kong",
+          description: "Poster epik aksioni me krijesë",
+          category: "Action"
+        },
+        {
+          title: "Gardijan",
+          description: "Poster atmosferik dimëror me borë",
+          category: "Drama"
+        },
+        {
+          title: "Abandoned",
+          description: "Poster trilleri misterios me atmosferë të errët",
+          category: "Thriller"
+        }
+      ],
+      processTitle: "Procesi Kreativ",
+      processSteps: [
+        {
+          title: "Konsultimi",
+          description: "Diskutojmë idenë dhe nevojat tuaja",
+          icon: "1"
+        },
+        {
+          title: "Krijimi i Konceptit",
+          description: "Zhvilloj qasjen kreative dhe stilin",
+          icon: "2"
+        },
+        {
+          title: "Prodhimi",
+          description: "Fotografi profesionale ose përpunim dixhital",
+          icon: "3"
+        },
+        {
+          title: "Finalizimi",
+          description: "Përpunimi final dhe dorëzimi në formatin e dëshiruar",
+          icon: "4"
+        }
+      ],
+      services: {
+        professionalPhotography: {
+          title: "Fotografi Profesionale",
+          description: "Fotografi produktesh, portretesh, ngjarjesh dhe korporative",
+          features: ["Fotografi studio", "Produkte dhe katalogë", "Fotografi portretesh", "Fotografi ngjarjesh"]
+        },
+        restoration: {
+          title: "Restaurimi i Fotografive të Vjetra",
+          description: "Duke sjellë jetë në fotografitë e dëmtuara dhe të zbehtë",
+          features: ["Heqja e dëmtimeve", "Restaurimi i ngjyrave", "Restaurim dixhital", "Riparim fotografish të vjetra"]
+        },
+        photomontage: {
+          title: "Të Gjitha Llojet e Photomontazheve",
+          description: "Kombinim kreativ i elementeve në kompozime të veçanta",
+          features: ["Kompozime kreative", "Montazhe realiste", "Skena fantazie", "Photomontazhe reklamuese"]
+        },
+        moviePosters: {
+          title: "Postera Filmash me Fotografinë Tuaj",
+          description: "Vendoseni veten në qendër të një posteri filmi",
+          features: ["Postera të personalizuar", "Stile të ndryshme filmash", "Përpunim profesional", "Rezolucion i lartë"]
+        }
+      },
+      cta: {
+        title: "Gati për Fotografi Kreative?",
+        description: "Kontaktoni për një konsultim falas mbi projektin tuaj të fotografisë ose photomontazhit",
+        button: "Kontaktoni"
+      }
+    },
+
+    consulting: {
+      hero: {
+        title: "Konsultime & Këshillim Strategjik",
+        subtitle: "Konsultime eksperte për sukses dixhital",
+        description: "Analizoj prezencën tuaj aktuale dixhitale, identifikoj mundësitë për përmirësim dhe krijoj strategji që do të rrisin efikasitetin tuaj online, përvojën e përdoruesit dhe konvertimet."
+      },
+      servicesTitle: "Shërbimet e Mia të Konsultimit",
+      servicesSubtitle: "Planifikim strategjik dhe optimizim për suksesin tuaj dixhital",
+      services: {
+        digitalStrategy: {
+          title: "Strategji Dixhitale",
+          description: "Krijoj strategji dixhitale gjithëpërfshirëse të përshtatura për objektivat tuaja të biznesit",
+          features: ["Analiza e tregut dhe konkurrentëve", "Përcaktimi i audiencës së synuar", "Strategji branding", "Plan i marketingut dixhital", "Optimizim ROI", "Planifikim afatgjatë"]
+        },
+        uxAudit: {
+          title: "Audit UX/UI",
+          description: "Analizoj me kujdes faqen tuaj ose aplikacionin dhe jap rekomandime për përmirësim",
+          features: ["Analiza e përvojës së përdoruesit", "Testim të përdorshmërisë", "Analiza e konvertimeve", "Përgjigje mobile", "Shpejtësia e ngarkimit", "Kontroll i aksesueshmërisë"]
+        },
+        analytics: {
+          title: "Analitikë & Raportim",
+          description: "Vendos sisteme të përparuara të ndjekjes dhe analizoj performancën",
+          features: ["Setup Google Analytics", "Ndjekje konvertimesh", "Testim A/B", "Analiza e heat map", "Matje ROI", "Raporte mujore"]
+        }
+      },
+      process: {
+        title: "Procesi i Punës",
+        steps: [
+          {
+            title: "Analiza e Gjendjes Aktuale",
+            description: "Analizoj me kujdes prezencën tuaj aktuale dixhitale dhe identifikoj problemet"
+          },
+          {
+            title: "Hulumtim & Strategji",
+            description: "Analizoj tregun, konkurrentët dhe krijoj strategji të personalizuar"
+          },
+          {
+            title: "Plan Implementimi",
+            description: "Krijoj plan të detajuar implementimi me hapa të qartë dhe afate"
+          },
+          {
+            title: "Monitorim & Optimizim",
+            description: "Monitorim i vazhdueshëm i rezultateve dhe optimizim i strategjisë"
+          }
+        ]
+      },
+      benefits: {
+        title: "Përfitimet e Konsultimit Profesional",
+        items: [
+          {
+            title: "Rritje e Konvertimeve",
+            description: "Optimizim që ndikon direkt në rritjen e shitjeve dhe leads"
+          },
+          {
+            title: "Kursim Kohe dhe Parash",
+            description: "Shmangje gabimesh dhe fokusim në strategji që japin rezultate"
+          },
+          {
+            title: "Avantazh Konkurrues",
+            description: "Strategji që ju ndajnë nga konkurrenca"
+          },
+          {
+            title: "Rezultate të Matshme",
+            description: "KPI të përcaktuar qartë dhe monitorim i rregullt i performancës"
+          }
+        ]
+      },
+      cta: {
+        title: "Gati për Rritje Dixhitale?",
+        description: "Caktoni një konsultim falas dhe zbuloni si mund të përmirësojmë prezencën tuaj dixhitale",
+        button: "Kontaktoni"
+      }
+    }
+  },
+  it: itTranslations
+};
+
+export const getTranslations = (lang: Language): Translations => {
+  return translations[lang] ?? translations.de;
+};
+
+export const languages: Array<{ code: Language; name: string; flag: string }> = [
+  { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
+  { code: 'en', name: 'English', flag: '🇬🇧' },
+];

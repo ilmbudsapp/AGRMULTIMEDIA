@@ -1,0 +1,73 @@
+{
+  "framework": "nextjs",
+  "redirects": [
+    {
+      "source": "/contact",
+      "destination": "/kontakt",
+      "permanent": true
+    },
+    {
+      "source": "/web-design",
+      "destination": "/webdesign-seo",
+      "permanent": true
+    },
+    {
+      "source": "/video-production",
+      "destination": "/videoproduktion",
+      "permanent": true
+    },
+    {
+      "source": "/demo-reinigung",
+      "destination": "/portfolio",
+      "permanent": true
+    },
+    {
+      "source": "/demo/berisha",
+      "destination": "/portfolio",
+      "permanent": true
+    },
+    {
+      "source": "/demo/tonis-autopflege",
+      "destination": "/portfolio",
+      "permanent": true
+    },
+    {
+      "source": "/demo/islamic-center",
+      "destination": "/portfolio",
+      "permanent": true
+    },
+    {
+      "source": "/demo/porro-lidia",
+      "destination": "/portfolio",
+      "permanent": true
+    },
+    {
+      "source": "/demo/tairovic-bez-verzija",
+      "destination": "/demo/tairovic-dark-verzija",
+      "permanent": true
+    },
+    {
+      "source": "/demo/tairovic-azzura-verzija",
+      "destination": "/demo/tairovic-dark-verzija",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/demo",
+      "destination": "/demo/index.html"
+    },
+    {
+      "source": "/demo/",
+      "destination": "/demo/index.html"
+    },
+    {
+      "source": "/demo/:slug",
+      "destination": "/demo/:slug/index.html"
+    },
+    {
+      "source": "/demo/:slug/",
+      "destination": "/demo/:slug/index.html"
+    }
+  ]
+}

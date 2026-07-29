@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <base href="/demo/aisa-osmani/">
+  <title>Aisa Osmani — Multimedia · Social Media · AI</title>
+  <meta name="description" content="Aisa Osmani — Mediendesign-Studentin. Creative Portfolio 2026: UI/UX, Bild- und Videobearbeitung, Social Media, Corporate Publishing und audiovisuelle Projekte." />
+  <link rel="stylesheet" href="/assets/fonts/local-fonts.css">
+  <style>
+    :root {
+      --bg: #06050a;
+      --text: #ffffff;
+      --gold: #ffe6a7;
+      --pink: #ffc8f3;
+      --blue: #cfd6ff;
+      --muted: rgba(255,255,255,0.58);
+      --line: rgba(255,255,255,0.10);
+      --glass: rgba(255,255,255,0.055);
+      --header-bg: rgba(6, 5, 10, 0.72);
+      --surface: rgba(255,255,255,0.06);
+      --surface-hover: rgba(255,255,255,0.08);
+      --surface-border: rgba(255,255,255,0.14);
+      --nav-text: rgba(255,255,255,0.68);
+      --mesh-1: rgba(214, 51, 255, 0.22);
+      --mesh-2: rgba(78, 92, 255, 0.24);
+      --mesh-3: rgba(255, 211, 106, 0.13);
+      --dot-grid: rgba(255,255,255,0.10);
+      --card-bg: rgba(0,0,0,0.25);
+      --hero-overlay: rgba(6,5,10,0.85);
+      --footer-text: rgba(255,255,255,0.45);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Inter", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+      transition: background 0.35s ease, color 0.35s ease;
+    }
+    a { color: inherit; text-decoration: none; }
+    img, video { max-width: 100%; display: block; }
+
+    .background {
+      position: fixed; inset: 0; z-index: -3;
+      background:
+        radial-gradient(circle at 10% 10%, var(--mesh-1), transparent 35%),
+        radial-gradient(circle at 85% 5%, var(--mesh-2), transparent 38%),
+        radial-gradient(circle at 45% 95%, var(--mesh-3), transparent 35%),
+        var(--bg);
+      transition: background 0.35s ease;
+    }
+    .background::after {
+      content: ""; position: absolute; inset: 0;
+      background-image: radial-gradient(var(--dot-grid) 1px, transparent 1px);
+      background-size: 28px 28px; opacity: 0.16;
+    }
+    #particles-canvas {
+      position: fixed; inset: 0; width: 100%; height: 100%;
+      pointer-events: none; z-index: -2;
+    }
+    .noise {
+      position: fixed; inset: 0; pointer-events: none; z-index: -1;
+      background: linear-gradient(120deg, rgba(255,255,255,0.03), transparent, rgba(255,255,255,0.02));
+    }
+
+    .container { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
+
+    header {
+      position: sticky; top: 0; z-index: 1001;
+      backdrop-filter: blur(22px);
+      background: var(--header-bg);
+      border-bottom: 1px solid var(--line);
+      transition: background 0.35s ease, border-color 0.35s ease;
+    }
+    .navbar {
+      height: 86px; display: flex; align-items: center;
+      justify-content: space-between; gap: 16px;
+    }
+    .logo {
+      display: flex; align-items: center; flex-shrink: 0;
+      transition: opacity 0.25s ease;
+    }
+    .logo:hover { opacity: 0.9; }
+    .logo-img {
+      display: block; height: 62px; width: auto; max-width: min(360px, 56vw);
+      object-fit: contain;
+    }
+
+    nav.desktop-nav {
+      display: flex; align-items: center; gap: 6px;
+      padding: 6px; border: 1px solid var(--line);
+      background: var(--surface); border-radius: 999px;
+      flex-wrap: wrap; justify-content: center;
+    }
+    nav.desktop-nav a {
+      padding: 10px 14px; border-radius: 999px; font-size: 13px;
+      color: var(--nav-text); transition: 0.25s ease;
+    }
+    nav.desktop-nav a:hover { background: var(--surface-hover); color: var(--text); }
+
+    body.en [data-de] { display: none !important; }
+    body.de [data-en] { display: none !important; }
+
+    .header-actions {
+      display: flex; align-items: center; gap: 10px; flex-shrink: 0;
+    }
+    .lang {
+      border: 1px solid var(--surface-border);
+      padding: 10px 14px; border-radius: 999px; cursor: pointer;
+      color: var(--text); background: var(--surface);
+      font-family: inherit; font-size: 13px; font-weight: 700;
+      letter-spacing: 0.04em; transition: 0.25s ease; white-space: nowrap;
+    }
+    .lang:hover { background: var(--surface-hover); }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      border: 0; border-radius: 999px; padding: 14px 22px;
+      cursor: pointer; font-weight: 800; transition: 0.25s ease; white-space: nowrap;
+      font-family: inherit; font-size: 14px;
+    }
+    .btn-primary {
+      color: #08060b;
+      background: linear-gradient(135deg, var(--gold), var(--pink), var(--blue));
+      box-shadow: 0 24px 70px rgba(255, 198, 245, 0.22);
+    }
+    .btn-primary:hover { transform: translateY(-3px); }
+    .btn-secondary {
+      background: var(--surface); border: 1px solid var(--surface-border); color: var(--text);
+    }
+    .btn-secondary:hover { background: var(--surface-hover); transform: translateY(-3px); }
+
+    .menu-toggle {
+      display: none; flex-shrink: 0; flex-direction: column; justify-content: center;
+      gap: 6px; width: 46px; height: 46px; padding: 10px;
+      border-radius: 16px; background: var(--surface);
+      border: 1px solid var(--line); cursor: pointer;
+    }
+    .menu-toggle span {
+      display: block; height: 2px; width: 100%; background: var(--text); border-radius: 2px;
+      transition: transform .3s, opacity .3s;
+    }
+    body.menu-open .menu-toggle span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    body.menu-open .menu-toggle span:nth-child(2) { opacity: 0; }
+    body.menu-open .menu-toggle span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    .mobile-nav {
+      display: none; flex-direction: column; padding: 0 0 24px;
+      border-top: 1px solid var(--line);
+    }
+    body.menu-open .mobile-nav { display: flex; }
+    body.menu-open { overflow: hidden; }
+    .mobile-nav a {
+      padding: 16px 0; color: var(--text);
+      border-bottom: 1px solid var(--line); font-size: 16px;
+    }
+    .mobile-nav .lang { margin-top: 16px; width: 100%; text-align: center; }
+
+    .hero {
+      min-height: calc(100vh - 86px);
+      display: grid; grid-template-columns: 1.05fr 0.95fr;
+      gap: 54px; align-items: center; padding: 80px 0 70px;
+    }
+    .badge {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 10px 16px; border-radius: 999px;
+      border: 1px solid var(--line); background: var(--surface);
+      color: var(--muted); font-size: 14px; margin-bottom: 28px;
+    }
+    .dot { width: 9px; height: 9px; border-radius: 50%; background: #6dffb5; box-shadow: 0 0 22px #6dffb5; }
+    .hero h1 {
+      font-size: clamp(48px, 7vw, 96px); line-height: 0.94;
+      letter-spacing: -4px; font-weight: 900;
+    }
+    .gradient-text {
+      display: block;
+      background: linear-gradient(135deg, var(--gold), var(--pink) 45%, var(--blue));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .hero p { max-width: 640px; margin-top: 24px; font-size: 19px; line-height: 1.8; color: var(--muted); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 32px; }
+    .stats {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+      margin-top: 40px; max-width: 520px;
+    }
+    .stat {
+      padding: 20px; border-radius: 24px; border: 1px solid var(--line);
+      background: var(--glass); backdrop-filter: blur(18px);
+    }
+    .stat strong { display: block; color: var(--gold); font-size: 26px; margin-bottom: 6px; }
+    .stat span { color: var(--muted); font-size: 13px; }
+
+    .hero-visual {
+      position: relative; border-radius: 48px; overflow: hidden;
+      border: 1px solid var(--line);
+      box-shadow: 0 40px 120px rgba(0,0,0,0.22);
+      min-height: 580px;
+    }
+    .hero-visual img {
+      width: 100%; height: 100%; min-height: 580px; object-fit: cover;
+    }
+    .hero-visual::after {
+      content: ""; position: absolute; inset: 0;
+      background: linear-gradient(to top, var(--hero-overlay), transparent 50%);
+    }
+    .hero-visual-caption {
+      position: absolute; bottom: 0; left: 0; right: 0; padding: 32px; z-index: 2;
+    }
+    .hero-visual-caption small {
+      letter-spacing: 4px; font-size: 11px; color: var(--muted);
+    }
+    .hero-visual-caption h2 { font-size: 28px; margin-top: 8px; letter-spacing: -1px; color: var(--text); }
+
+    section { padding: 90px 0; position: relative; }
+    .eyebrow {
+      color: rgba(255,230,167,0.72); font-size: 12px; font-weight: 800;
+      letter-spacing: 5px; text-transform: uppercase; margin-bottom: 16px;
+    }
+    .section-title {
+      font-size: clamp(34px, 5vw, 62px); line-height: 1.02;
+      letter-spacing: -2.5px; font-weight: 900; max-width: 800px;
+    }
+    .section-lead {
+      margin-top: 20px; max-width: 720px; font-size: 18px; line-height: 1.85; color: var(--muted);
+    }
+    .section-grid {
+      display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 60px; align-items: start;
+    }
+    .text-block p { color: var(--muted); font-size: 17px; line-height: 1.9; margin-bottom: 18px; }
+
+    .portfolio-nav {
+      display: flex; flex-wrap: wrap; gap: 10px; margin-top: 36px;
+    }
+    .portfolio-nav a {
+      padding: 12px 18px; border-radius: 999px; font-size: 13px; font-weight: 600;
+      border: 1px solid var(--line); background: var(--card-bg);
+      color: var(--nav-text); transition: 0.25s;
+    }
+    .portfolio-nav a:hover {
+      background: var(--surface-hover); color: var(--text); border-color: var(--surface-border);
+    }
+
+    .work-block {
+      margin-top: 70px; padding-top: 70px;
+      border-top: 1px solid var(--line);
+    }
+    .work-block:first-of-type { margin-top: 50px; padding-top: 0; border-top: 0; }
+
+    .work-header {
+      display: grid; grid-template-columns: 1fr; gap: 16px;
+      align-items: start; margin-bottom: 32px; max-width: 920px;
+    }
+    .work-header h3 {
+      font-size: clamp(28px, 4vw, 42px); letter-spacing: -1.5px; font-weight: 800;
+    }
+    .work-header p { color: var(--muted); line-height: 1.75; font-size: 16px; }
+
+    .work-feature {
+      border-radius: 36px; overflow: hidden;
+      border: 1px solid var(--line); margin-bottom: 20px;
+      background: var(--card-bg);
+    }
+    .work-feature img { width: 100%; max-height: 520px; object-fit: cover; }
+    #work-graphic .work-feature,
+    #work-graphic .gallery-item {
+      min-height: 0;
+      height: auto;
+      overflow: hidden;
+    }
+    #work-graphic .work-feature img,
+    #work-graphic .gallery-item img {
+      width: 100%;
+      height: auto;
+      max-height: none;
+      object-fit: contain;
+      min-height: 0;
+      display: block;
+      background: #0d0d12;
+    }
+    #work-graphic .gallery {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    #work-mobile .gallery {
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      justify-items: center;
+    }
+    #work-mobile .gallery-item {
+      background: transparent; border: none; box-shadow: none;
+      width: 100%; max-width: 220px;
+    }
+    #work-mobile .gallery-item:hover { box-shadow: none; transform: translateY(-4px); }
+    #work-mobile .gallery-item img {
+      width: 100%; height: auto; max-height: 420px;
+      object-fit: contain; background: transparent; display: block;
+    }
+    #work-web .gallery {
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      justify-items: center;
+    }
+    #work-web .gallery-item { max-width: 100%; }
+    #work-web .gallery-item.g-span-12 { grid-column: 1 / -1; max-width: 720px; margin: 0 auto; width: 100%; }
+    #work-web .gallery-item img {
+      width: 100%; height: auto; max-height: 280px;
+      object-fit: contain; display: block;
+    }
+    #work-web .gallery-item.g-span-12 img { max-height: 360px; }
+    .work-feature video { width: 100%; display: block; background: #000; }
+
+    .gallery {
+      display: grid; grid-template-columns: repeat(12, 1fr); gap: 14px;
+    }
+    .gallery-item {
+      border-radius: 22px; overflow: hidden;
+      border: 1px solid var(--line); background: var(--card-bg);
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+    .gallery-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.4);
+    }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; min-height: 200px; }
+    .g-span-7 { grid-column: span 7; }
+    .g-span-5 { grid-column: span 5; }
+    .g-span-4 { grid-column: span 4; }
+    .g-span-6 { grid-column: span 6; }
+    .g-span-8 { grid-column: span 8; }
+    .g-span-12 { grid-column: span 12; }
+
+    .cards {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 40px;
+    }
+    .card {
+      padding: 28px; border-radius: 30px; border: 1px solid var(--line);
+      background: var(--glass); backdrop-filter: blur(20px);
+      transition: 0.3s ease; min-height: 220px;
+    }
+    .card:hover { transform: translateY(-6px); background: rgba(255,255,255,0.08); }
+    .card-icon { font-size: 28px; margin-bottom: 20px; }
+    .card h3 { font-size: 22px; margin-bottom: 12px; }
+    .card p { color: var(--muted); line-height: 1.7; font-size: 15px; }
+
+    .skills-box {
+      border-radius: 44px; border: 1px solid var(--line);
+      background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+      padding: 48px; backdrop-filter: blur(24px);
+    }
+    .skills-layout { display: grid; grid-template-columns: 0.75fr 1.25fr; gap: 40px; align-items: center; }
+    .skills-stack { display: grid; gap: 28px; }
+    .skill-group h4 {
+      font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+      color: rgba(255,255,255,0.42); margin-bottom: 14px; font-weight: 700;
+    }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 12px; }
+    .skill-tags span {
+      padding: 12px 16px; border-radius: 999px;
+      border: 1px solid var(--line); background: rgba(0,0,0,0.26);
+      color: rgba(255,255,255,0.76); font-size: 13px;
+    }
+
+    .job-list { display: grid; gap: 12px; }
+    .job-item {
+      display: flex; align-items: center; gap: 14px; padding: 20px;
+      border-radius: 24px; border: 1px solid var(--line); background: var(--glass);
+    }
+    .check {
+      width: 28px; height: 28px; border-radius: 50%;
+      display: grid; place-items: center;
+      background: rgba(109,255,181,0.14); color: #6dffb5; font-weight: 900; flex-shrink: 0;
+    }
+    .job-item span { font-size: 17px; font-weight: 600; }
+
+    .contact-card {
+      overflow: hidden; border-radius: 48px; border: 1px solid var(--line);
+      background: var(--glass); backdrop-filter: blur(28px);
+    }
+    .contact-left { padding: 48px; }
+    .contact-links { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 32px; }
+    .contact-link {
+      min-width: 0; padding: 22px; border-radius: 26px; border: 1px solid var(--line);
+      background: var(--card-bg); transition: 0.25s;
+    }
+    .contact-link:hover { transform: translateY(-4px); background: var(--surface-hover); }
+    .contact-link b { display: block; font-size: 17px; margin-bottom: 6px; }
+    .contact-link span { color: var(--muted); font-size: 13px; word-break: break-word; }
+    footer {
+      border-top: 1px solid var(--line); padding: 32px 0;
+      color: var(--footer-text); font-size: 14px;
+    }
+    .footer-inner { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+    .reveal {
+      opacity: 0; transform: translateY(28px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 980px) {
+      nav.desktop-nav, .desktop-contact, .desktop-lang { display: none; }
+      .menu-toggle { display: flex; }
+      .hero, .section-grid, .skills-layout, .contact-card, .work-header {
+        grid-template-columns: 1fr;
+      }
+      .hero { padding-top: 50px; }
+      .hero-visual { min-height: 420px; }
+      .hero-visual img { min-height: 420px; }
+      .cards { grid-template-columns: 1fr; }
+      .g-span-7, .g-span-5, .g-span-4, .g-span-6, .g-span-8, .g-span-12 { grid-column: span 12; }
+    }
+    @media (max-width: 640px) {
+      .container { width: min(100% - 28px, 1180px); }
+      .navbar { height: 76px; }
+      .logo-img { height: 52px; max-width: min(300px, 70vw); }
+      .stats, .contact-links { grid-template-columns: 1fr; }
+      .contact-left { padding: 24px; }
+      section { padding: 64px 0; }
+    }
+  </style>
+</head>
+<body class="de">
+  <div class="background"></div>
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
+  <div class="noise"></div>
+
+  <header>
+    <div class="container navbar">
+      <a href="#top" class="logo" aria-label="Aisa Osmani — Startseite">
+        <picture>
+          <source srcset="assets/logo-aisa-osmani.webp 1x, assets/logo-aisa-osmani@2x.webp 2x" type="image/webp">
+          <img
+            src="assets/logo-aisa-osmani.png"
+            srcset="assets/logo-aisa-osmani.png 1x, assets/logo-aisa-osmani@2x.png 2x"
+            alt="Aisa Osmani — Media Designer"
+            class="logo-img"
+            width="221"
+            height="62"
+            decoding="async"
+            fetchpriority="high"
+          >
+        </picture>
+      </a>
+      <nav class="desktop-nav" aria-label="Navigation">
+        <a href="#ueber-aisa" data-de>Über mich</a>
+        <a href="#ueber-aisa" data-en>About</a>
+        <a href="#portfolio" data-de>Portfolio</a>
+        <a href="#portfolio" data-en>Portfolio</a>
+        <a href="#faehigkeiten" data-de>Skills</a>
+        <a href="#faehigkeiten" data-en>Skills</a>
+        <a href="#jobsuche" data-de>Jobs</a>
+        <a href="#jobsuche" data-en>Jobs</a>
+        <a href="#kontakt" data-de>Kontakt</a>
+        <a href="#kontakt" data-en>Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="lang desktop-lang" type="button" onclick="toggleLang()">DE / EN</button>
+        <a class="btn btn-primary desktop-contact" href="#kontakt" data-de>Kontakt →</a>
+        <a class="btn btn-primary desktop-contact" href="#kontakt" data-en>Contact →</a>
+      </div>
+      <button class="menu-toggle" type="button" aria-label="Menü" aria-expanded="false" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="container mobile-nav" id="mobileNav" aria-label="Mobile">
+      <a href="#ueber-aisa" data-de onclick="closeMenu()">Über mich</a>
+      <a href="#ueber-aisa" data-en onclick="closeMenu()">About</a>
+      <a href="#portfolio" data-de onclick="closeMenu()">Portfolio</a>
+      <a href="#portfolio" data-en onclick="closeMenu()">Portfolio</a>
+      <a href="#faehigkeiten" data-de onclick="closeMenu()">Skills</a>
+      <a href="#faehigkeiten" data-en onclick="closeMenu()">Skills</a>
+      <a href="#jobsuche" data-de onclick="closeMenu()">Jobs</a>
+      <a href="#jobsuche" data-en onclick="closeMenu()">Jobs</a>
+      <a href="#kontakt" data-de onclick="closeMenu()">Kontakt</a>
+      <a href="#kontakt" data-en onclick="closeMenu()">Contact</a>
+      <button class="lang" type="button" onclick="toggleLang(); closeMenu();">DE / EN</button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="container hero">
+      <div class="reveal">
+        <div class="badge"><span class="dot"></span> Open to Work · Multimedia · Social Media · AI</div>
+        <h1 data-de>
+          Aisa Osmani
+          <span class="gradient-text">Creative Portfolio 2026.</span>
+        </h1>
+        <h1 data-en>
+          Aisa Osmani
+          <span class="gradient-text">Creative Portfolio 2026.</span>
+        </h1>
+        <p data-de>
+          Als Mediendesign-Studentin im fortgeschrittenen Semester verbinde ich kreative Konzeption mit digitaler Umsetzung. Dieses Portfolio zeigt ausgewählte Projekte aus Studium und Praxis — von Bild- und Videobearbeitung über Social-Media-Kampagnen bis hin zu UI/UX-Designs.
+        </p>
+        <p data-en>
+          As an advanced media design student, I combine creative concept work with digital execution. This portfolio presents selected projects from studies and practice — from image and video editing through social media campaigns to UI/UX design.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#portfolio" data-de>Portfolio ansehen →</a>
+          <a class="btn btn-primary" href="#portfolio" data-en>View portfolio →</a>
+          <a class="btn btn-secondary" href="#kontakt" data-de>Kontakt</a>
+          <a class="btn btn-secondary" href="#kontakt" data-en>Contact</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><strong>7+</strong><span data-de>Projektbereiche</span><span data-en>Project areas</span></div>
+          <div class="stat"><strong>AI</strong><span data-de>Kreatives Mindset</span><span data-en>Creative mindset</span></div>
+          <div class="stat"><strong>2026</strong><span>Open to Work</span></div>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <img src="assets/hero-illustration.jpg" alt="Illustration — Aisa Osmani, Bild- und Videobearbeitung" width="900" height="1100" loading="eager" decoding="async" />
+        <div class="hero-visual-caption">
+          <small data-de>PORTFOLIO-HIGHLIGHT</small>
+          <small data-en>PORTFOLIO HIGHLIGHT</small>
+          <h2 data-de>Bild &amp; Videobearbeitung</h2>
+          <h2 data-en>Image &amp; video editing</h2>
+        </div>
+      </div>
+    </section>
+
+    <section id="ueber-aisa" class="container">
+      <div class="section-grid">
+        <div class="reveal">
+          <div class="eyebrow" data-de>Über Aisa</div>
+          <div class="eyebrow" data-en>About Aisa</div>
+          <h2 class="section-title" data-de>Ambitioniert, kreativ — bereit für neue Impulse.</h2>
+          <h2 class="section-title" data-en>Ambitious, creative — ready for new challenges.</h2>
+        </div>
+        <div class="text-block reveal">
+          <p data-de>Aisa Osmani verbindet visuelle Ästhetik, strategisches Denken und moderne AI-Tools. Der Fokus liegt auf digitalem Design, Bild- und Videobearbeitung sowie kreativer Content-Erstellung.</p>
+          <p data-en>Aisa Osmani combines visual aesthetics, strategic thinking and modern AI tools. The focus is on digital design, image and video editing, and creative content production.</p>
+          <p data-de>Diese Seite präsentiert Originalarbeiten aus dem Studium als professionelle digitale Visitenkarte für ein kreatives Team, das eine engagierte Werkstudentin sucht.</p>
+          <p data-en>This site presents original academic work as a professional digital calling card for a creative team looking for a motivated working student.</p>
+        </div>
+      </div>
+      <div class="cards">
+        <div class="card reveal">
+          <div class="card-icon">▣</div>
+          <h3>Multimedia</h3>
+          <p data-de>Design, Video, Illustration und digitale Storytelling-Formate.</p>
+          <p data-en>Design, video, illustration and digital storytelling formats.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon">◈</div>
+          <h3>Social Media</h3>
+          <p data-de>Content-Strategie, Feeds, Kampagnen und Markenkommunikation.</p>
+          <p data-en>Content strategy, feeds, campaigns and brand communication.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon">✦</div>
+          <h3 data-de>AI-Expertise</h3>
+          <h3 data-en>AI expertise</h3>
+          <p data-de>Effiziente Workflows mit intelligenten Tools und kreativer Recherche.</p>
+          <p data-en>Efficient workflows with intelligent tools and creative research.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="container">
+      <div class="reveal">
+        <div class="eyebrow">Portfolio</div>
+        <h2 class="section-title" data-de>Themenbereiche</h2>
+        <h2 class="section-title" data-en>Subject areas</h2>
+        <div class="portfolio-nav">
+          <a href="#work-mobile" data-de>Mobile Design</a>
+          <a href="#work-mobile" data-en>Mobile design</a>
+          <a href="#work-cross" data-de>Cross Media</a>
+          <a href="#work-cross" data-en>Cross media</a>
+          <a href="#work-web" data-de>Webdesign</a>
+          <a href="#work-web" data-en>Web design</a>
+          <a href="#work-graphic" data-de>Grafikdesign</a>
+          <a href="#work-graphic" data-en>Graphic design</a>
+          <a href="#work-corp" data-de>Corporate Publishing</a>
+          <a href="#work-corp" data-en>Corporate publishing</a>
+          <a href="#work-bild" data-de>Bild &amp; Video</a>
+          <a href="#work-bild" data-en>Image &amp; video</a>
+          <a href="#work-audio" data-de>Audiovisuell</a>
+          <a href="#work-audio" data-en>Audiovisual</a>
+        </div>
+      </div>
+
+      <article id="work-mobile" class="work-block reveal">
+        <div class="work-header">
+          <h3 data-de>Growli — Mobile App Design</h3>
+          <h3 data-en>Growli — mobile app design</h3>
+          <p data-de>Konzeption und UI/UX-Design einer gamifizierten Schrittzähler-App mit Umweltbezug. Im Modul Mobile App Design verbindet das Konzept Gesundheit mit Nachhaltigkeit: Gelaufene Schritte lassen einen virtuellen Park wachsen und führen schließlich zur Pflanzung eines echten Baumes. Für Motivation sorgt ein Social-Media-Bereich mit Feeds, Profilen, Bild-Postings und Chats.</p>
+          <p data-en>Concept and UI/UX design for a gamified step-counter app with an environmental theme. Developed in the Mobile App Design module, the concept links health and sustainability: steps grow a virtual park and ultimately lead to planting a real tree. A social area with feeds, profiles, image posts and chats keeps users motivated.</p>
+        </div>
+        <div class="gallery growli-gallery">
+          <div class="gallery-item"><img src="assets/growli-01-welcome.webp" alt="Growli — Willkommen" width="300" height="618" loading="lazy" decoding="async" /></div>
+          <div class="gallery-item"><img src="assets/growli-05-login.webp" alt="Growli — Registrierung" width="300" height="618" loading="lazy" decoding="async" /></div>
+          <div class="gallery-item"><img src="assets/growli-04-onboarding.webp" alt="Growli — Onboarding" width="300" height="618" loading="lazy" decoding="async" /></div>
+          <div class="gallery-item"><img src="assets/growli-06-home.webp" alt="Growli — Home Screen" width="300" height="618" loading="lazy" decoding="async" /></div>
+          <div class="gallery-item"><img src="assets/growli-07-share.webp" alt="Growli — Teilen" width="300" height="618" loading="lazy" decoding="async" /></div>
+          <div class="gallery-item"><img src="assets/growli-08-nepal.webp" alt="Growli — Baum pflanzen" width="300" height="618" loading="lazy" decoding="async" /></div>
+          <div class="gallery-item"><img src="assets/growli-09-nepal-danke.webp" alt="Growli — Nepal" width="300" height="618" loading="lazy" decoding="async" /></div>
+          <div class="gallery-item"><img src="assets/growli-10-feed.webp" alt="Growli — Feed" width="300" height="618" loading="lazy" decoding="async" /></div>
+          <div class="gallery-item"><img src="assets/growli-11-profile.webp" alt="Growli — Profil" width="300" height="618" loading="lazy" decoding="async" /></div>
+          <div class="gallery-item"><img src="assets/growli-12-settings.webp" alt="Growli — Einstellungen" width="300" height="618" loading="lazy" decoding="async" /></div>
+        </div>
+      </article>
+
+      <article id="work-cross" class="work-block reveal">
+        <div class="work-header">
+          <h3 data-de>Cross Media Webdesign — FROOZ</h3>
+          <h3 data-en>Cross-media web design — FROOZ</h3>
+          <p data-de>Markenauftritt für Frozen-Dessert: Landingpage, Social-Feed, Print-Packaging (Mango Lassi, Minze Ingwer, Rose Pistazie) und konsistente Visual Identity.</p>
+          <p data-en>Brand presence for a frozen dessert: landing page, social feed, print packaging (mango lassi, mint ginger, rose pistachio) and a consistent visual identity.</p>
+        </div>
+        <div class="work-feature">
+          <img src="assets/cross-frooz.jpg" alt="FROOZ Cross-Media Landingpage" loading="lazy" />
+        </div>
+        <div class="gallery">
+          <div class="gallery-item g-span-4"><img src="assets/cross-mango.jpg" alt="FROOZ Mango Lassi" loading="lazy" /></div>
+          <div class="gallery-item g-span-4"><img src="assets/cross-minze.jpg" alt="FROOZ Minze Ingwer" loading="lazy" /></div>
+          <div class="gallery-item g-span-4"><img src="assets/cross-rose.jpg" alt="FROOZ Rose Pistazie" loading="lazy" /></div>
+          <div class="gallery-item g-span-4"><img src="assets/cross-media.webp" alt="FROOZ Cross Media — Instagram" width="300" height="618" loading="lazy" decoding="async" /></div>
+          <div class="gallery-item g-span-4"><img src="assets/cross-insta-01.jpg" alt="Instagram Post 1" loading="lazy" /></div>
+          <div class="gallery-item g-span-4"><img src="assets/cross-insta-02.jpg" alt="Instagram Post 2" loading="lazy" /></div>
+          <div class="gallery-item g-span-4"><img src="assets/cross-insta-03.jpg" alt="Instagram Post 3" loading="lazy" /></div>
+        </div>
+      </article>
+
+      <article id="work-web" class="work-block reveal">
+        <div class="work-header">
+          <h3 data-de>Webdesign</h3>
+          <h3 data-en>Web design</h3>
+          <p data-de>Entwicklung eines strukturierten Webauftritts zur Planung und Durchführung geführter Touren. Das Projekt umfasst die strategische Vorarbeit mittels Zielgruppen-Definition und Personas sowie die visuelle Gestaltung von Logo, Style Guide (Typografie, Farbwelten) und modernen UI-Komponenten für den gesamten Touren-Ablauf.</p>
+          <p data-en>Development of a structured website for planning and running guided tours. The project includes strategic groundwork with audience definition and personas, plus visual design of the logo, style guide (typography, colour systems) and modern UI components for the full tour journey.</p>
+        </div>
+        <div class="gallery web-gallery">
+          <div class="gallery-item g-span-12"><img src="assets/web-styleguide.webp" alt="Webdesign — Prishtina Übersicht" width="720" height="702" loading="lazy" decoding="async" /></div>
+          <div class="gallery-item"><img src="assets/web-mockup-1.webp" alt="Webdesign — Homepage Mockup" width="560" height="420" loading="lazy" decoding="async" /></div>
+          <div class="gallery-item"><img src="assets/web-mockup-2.webp" alt="Webdesign — Testimonials" width="560" height="420" loading="lazy" decoding="async" /></div>
+          <div class="gallery-item"><img src="assets/web-mockup-3.webp" alt="Webdesign — Footer" width="560" height="420" loading="lazy" decoding="async" /></div>
+          <div class="gallery-item"><img src="assets/web-mockup-4.webp" alt="Webdesign — Touren" width="560" height="420" loading="lazy" decoding="async" /></div>
+        </div>
+      </article>
+
+      <article id="work-graphic" class="work-block reveal">
+        <div class="work-header">
+          <h3 data-de>Grafikdesign — Atemberge</h3>
+          <h3 data-en>Graphic design — Atemberge</h3>
+          <p data-de>Entwicklung einer Outdoor Wandermarke im Modul Grafikdesign Creative Lab von Brainstorming und Moodboard über Farbwelt und Typografie bis zum finalen Logo und der Visitenkarte. Atemberge verbindet Natur, modernen Lifestyle und funktionale Wanderbekleidung für alle Generationen.</p>
+          <p data-en>Development of an outdoor hiking brand in the Graphic Design Creative Lab module — from brainstorming and moodboard through colour palette and typography to the final logo and business card. Atemberge connects nature, modern lifestyle and functional hiking apparel for all generations.</p>
+        </div>
+        <div class="work-feature">
+          <img src="/portfolio/corporate-design/atemberge/01-moodboard.jpg" alt="Atemberge — Moodboard Outdoor-Wandermarke" loading="lazy" decoding="async" />
+        </div>
+        <div class="gallery">
+          <div class="gallery-item g-span-12"><img src="/portfolio/corporate-design/atemberge/06-logo-positiv-negativ.jpg" alt="Atemberge — Logo Positiv und Negativ" loading="lazy" decoding="async" /></div>
+        </div>
+        <div class="work-header" style="margin-top:48px">
+          <h4 data-de>Finale Visitenkarte</h4>
+          <h4 data-en>Final business card</h4>
+        </div>
+        <div class="work-feature">
+          <img src="/portfolio/corporate-design/atemberge/07-visitenkarte-mockup.png" alt="Atemberge — finale Visitenkarte Mockup" loading="lazy" decoding="async" />
+        </div>
+      </article>
+
+      <article id="work-corp" class="work-block reveal">
+        <div class="work-header">
+          <h3>Corporate Publishing</h3>
+          <p data-de>Das Projekt fängt die authentische Atmosphäre des „Caffè Orologio“ in Gussago (Italien) ein. Die visuelle Identität wurde von Grund auf über Zielgruppen-Personas, ein Moodboard und strukturierte Farbwelten definiert. Herzstück des Magazins sind eigens vor Ort produzierte Fotografien, kombiniert mit präziser Bildbearbeitung und einem klaren, modernen Layout.</p>
+          <p data-en>The project captures the authentic atmosphere of Caffè Orologio in Gussago, Italy. The visual identity was built from audience personas, a moodboard and structured colour systems. The magazine centres on on-location photography, precise image editing and a clear, modern layout.</p>
+        </div>
+        <div class="work-feature">
+          <img src="assets/corp-magazine-1.png" alt="Magazine Spread — Caffè Orologio" loading="lazy" />
+        </div>
+        <div class="gallery">
+          <div class="gallery-item g-span-4"><img src="assets/corp-magazine-2.png" alt="Magazine Mockup 2" loading="lazy" /></div>
+          <div class="gallery-item g-span-4"><img src="assets/corp-magazine-3.png" alt="Magazine Mockup 3" loading="lazy" /></div>
+          <div class="gallery-item g-span-4"><img src="assets/corp-release.png" alt="Release Tag Design" loading="lazy" /></div>
+          <div class="gallery-item g-span-12"><img src="assets/corp-magazine.jpg" alt="Magazine Layout" loading="lazy" /></div>
+        </div>
+      </article>
+
+      <article id="work-bild" class="work-block reveal">
+        <div class="work-header">
+          <h3 data-de>Bild &amp; Videobearbeitung</h3>
+          <h3 data-en>Image &amp; video editing</h3>
+          <p data-de>Konzeption und audiovisuelle Umsetzung eines animierten Album-Loops. Basierend auf festen Vorgaben wurden die Illustrationen in Procreate und Adobe Illustrator entwickelt. Im Fokus standen ein stimmiges Moodboard, präzise Bildbearbeitung sowie Animation und Videoschnitt für eine flüssige Loop-Bewegung passend zum Sound.</p>
+          <p data-en>Concept and audiovisual execution of an animated album loop. Illustrations were developed in Procreate and Adobe Illustrator based on fixed briefs. Focus areas: cohesive moodboard, precise image editing, animation and video editing for a smooth loop matched to the sound.</p>
+        </div>
+        <div class="work-feature">
+          <video src="assets/bild-video-reel.mp4" controls playsinline preload="metadata" poster="assets/hero-illustration.jpg" data-de-aria="Video Bearbeitung" data-en-aria="Video editing reel" aria-label="Video Bearbeitung"></video>
+        </div>
+        <div class="gallery">
+          <div class="gallery-item g-span-6"><img src="assets/bild-procreate-frau.png" alt="Procreate Illustration" loading="lazy" /></div>
+          <div class="gallery-item g-span-6"><img src="assets/bild-procreate-feuer.png" alt="Procreate Feuer" loading="lazy" /></div>
+          <div class="gallery-item g-span-4"><img src="assets/bild-moodboard.jpg" alt="Moodboard" loading="lazy" /></div>
+          <div class="gallery-item g-span-8"><img src="assets/bild-procreate-gesamt.jpg" alt="Gesamtwerk Procreate" loading="lazy" /></div>
+        </div>
+      </article>
+
+      <article id="work-audio" class="work-block reveal">
+        <div class="work-header">
+          <h3 data-de>Audiovisuelle Medien</h3>
+          <h3 data-en>Audiovisual media</h3>
+          <p data-de>Gezielte visuelle Konzeption als Basis für professionelle Bewegtbild-Produktionen. Zur Vorbereitung einer Realverfilmung wird der gesamte Prozess der visuellen Dramaturgie eines geplanten Werbevideos abgebildet. Basierend auf klarer Zielgruppen-Definition und den Farbvorgaben der Marke entstand der visuelle Ablauf von der ersten Ideenskizze über detaillierte Storyboards und Shots bis zu konsistenten Illustrationen. In der Pre-Production wurden Bewegungsabläufe in After Effects visualisiert und die Bildsprache in Adobe Premiere Pro finalisiert.</p>
+          <p data-en>Targeted visual concept work as the foundation for professional motion productions. To prepare a live-action shoot, the full visual dramaturgy of a planned commercial is mapped out — from first sketches and detailed storyboards to consistent illustrations, aligned with audience and brand colours. In pre-production, motion was visualised in After Effects and the visual language finalised in Adobe Premiere Pro.</p>
+        </div>
+        <div class="work-feature">
+          <video src="assets/audio-reel.mp4" controls playsinline preload="metadata" poster="assets/audio-shot-1.jpg" data-de-aria="Audiovisuelles Projekt" data-en-aria="Audiovisual project reel" aria-label="Audiovisuelles Projekt"></video>
+        </div>
+        <div class="gallery">
+          <div class="gallery-item g-span-7"><img src="assets/audio-shot-1.jpg" alt="Shot 1" loading="lazy" /></div>
+          <div class="gallery-item g-span-5"><img src="assets/audio-shot-5.jpg" alt="Shot 5" loading="lazy" /></div>
+          <div class="gallery-item g-span-12"><img src="assets/audio-7.jpg" alt="Audiovisuell Frame" loading="lazy" /></div>
+        </div>
+      </article>
+    </section>
+
+    <section id="faehigkeiten" class="container">
+      <div class="skills-box reveal">
+        <div class="skills-layout">
+          <div>
+            <div class="eyebrow" data-de>Fähigkeiten</div>
+            <div class="eyebrow" data-en>Skills</div>
+            <h2 class="section-title" data-de>Tools &amp; Kompetenzen.</h2>
+            <h2 class="section-title" data-en>Tools &amp; competencies.</h2>
+          </div>
+          <div class="skills-stack">
+            <div class="skill-group">
+              <h4 data-de>Kompetenzen</h4>
+              <h4 data-en>Competencies</h4>
+              <div class="skill-tags">
+                <span>UI/UX-Design</span><span>Mobile UX</span><span>Screen Design</span>
+                <span>Content Creation</span><span>Social Media</span><span>Cross Media</span>
+                <span>Brand Strategy</span><span>Corporate Design</span><span>Editorial Layout</span>
+                <span>Videoschnitt</span><span>Bildbearbeitung</span><span>Animation</span>
+                <span>Illustration</span><span>AI Workflows</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <h4>Tools</h4>
+              <div class="skill-tags">
+                <span>Figma</span><span>Adobe Premiere</span><span>After Effects</span>
+                <span>Illustrator</span><span>Photoshop</span><span>InDesign</span>
+                <span>Canva</span><span>Procreate</span><span>AI Tools</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="jobsuche" class="container">
+      <div class="section-grid">
+        <div class="reveal">
+          <div class="eyebrow" data-de>Werkstudent</div>
+          <div class="eyebrow" data-en>Working student</div>
+          <h2 class="section-title" data-de>Kreative Unterstützung gesucht?</h2>
+          <h2 class="section-title" data-en>Looking for creative support?</h2>
+          <p class="section-lead" style="margin-top:16px" data-de>Bereit für spannende Werkstudentenjobs in Agenturen, Marketing-Abteilungen, Studios oder Startups.</p>
+          <p class="section-lead" style="margin-top:16px" data-en>Ready for exciting working-student roles in agencies, marketing teams, studios or startups.</p>
+          <a class="btn btn-primary" href="#kontakt" style="margin-top:24px;display:inline-flex" data-de>Anfrage senden →</a>
+          <a class="btn btn-primary" href="#kontakt" style="margin-top:24px;display:inline-flex" data-en>Send inquiry →</a>
+        </div>
+        <div class="job-list reveal">
+          <div class="job-item"><div class="check">✓</div><span data-de>UX/UI Design (Werkstudent)</span><span data-en>UX/UI design (working student)</span></div>
+          <div class="job-item"><div class="check">✓</div><span data-de>Grafikdesign (Werkstudent)</span><span data-en>Graphic design (working student)</span></div>
+          <div class="job-item"><div class="check">✓</div><span data-de>Media Designer (Werkstudent)</span><span data-en>Media designer (working student)</span></div>
+          <div class="job-item"><div class="check">✓</div><span data-de>Social Media (Werkstudent)</span><span data-en>Social media (working student)</span></div>
+          <div class="job-item"><div class="check">✓</div><span data-de>Content Creator (Werkstudent)</span><span data-en>Content creator (working student)</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt" class="container">
+      <div class="contact-card reveal">
+        <div class="contact-left">
+          <div class="eyebrow" data-de>Kontakt</div>
+          <div class="eyebrow" data-en>Contact</div>
+          <h2 class="section-title" data-de>Lassen Sie uns sprechen.</h2>
+          <h2 class="section-title" data-en>Let's talk.</h2>
+          <p class="section-lead" style="margin-top:16px;font-size:16px" data-de>Für Jobangebote, Praktika oder Kooperationen.</p>
+          <p class="section-lead" style="margin-top:16px;font-size:16px" data-en>For job offers, internships or collaborations.</p>
+          <div class="contact-links">
+            <a class="contact-link" href="tel:+491792313530"><b data-de>Telefon</b><b data-en>Phone</b><span>+49 179 2313530</span></a>
+            <a class="contact-link" href="mailto:aisaosmani@gmail.com"><b>✉ E-Mail</b><span>aisaosmani@gmail.com</span></a>
+            <div class="contact-link"><b data-de>Status</b><b data-en>Status</b><span>Open to Work · 2026</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p data-de>© 2026 Aisa Osmani</p>
+      <p data-en>© 2026 Aisa Osmani</p>
+      <p>Multimedia · Social Media · AI</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      var open = document.body.classList.toggle("menu-open");
+      var btn = document.querySelector(".menu-toggle");
+      if (btn) btn.setAttribute("aria-expanded", open ? "true" : "false");
+      syncMenuAria();
+    }
+    function closeMenu() {
+      document.body.classList.remove("menu-open");
+      var btn = document.querySelector(".menu-toggle");
+      if (btn) btn.setAttribute("aria-expanded", "false");
+      syncMenuAria();
+    }
+
+    var PAGE_TITLE = {
+      de: "Aisa Osmani — Multimedia · Social Media · AI",
+      en: "Aisa Osmani — Multimedia · Social Media · AI"
+    };
+    var PAGE_DESC = {
+      de: "Aisa Osmani — Mediendesign-Studentin. Creative Portfolio 2026: UI/UX, Bild- und Videobearbeitung, Social Media, Corporate Publishing und audiovisuelle Projekte.",
+      en: "Aisa Osmani — media design student. Creative Portfolio 2026: UI/UX, image and video editing, social media, corporate publishing and audiovisual projects."
+    };
+
+    function syncLangMeta() {
+      var isEn = document.body.classList.contains("en");
+      document.documentElement.lang = isEn ? "en" : "de";
+      document.title = isEn ? PAGE_TITLE.en : PAGE_TITLE.de;
+      var meta = document.querySelector('meta[name="description"]');
+      if (meta) meta.setAttribute("content", isEn ? PAGE_DESC.en : PAGE_DESC.de);
+      document.querySelectorAll("video[data-de-aria]").forEach(function (v) {
+        v.setAttribute("aria-label", isEn ? v.getAttribute("data-en-aria") : v.getAttribute("data-de-aria"));
+      });
+      syncMenuAria();
+    }
+
+    function syncMenuAria() {
+      var btn = document.querySelector(".menu-toggle");
+      if (!btn) return;
+      var open = document.body.classList.contains("menu-open");
+      var isEn = document.body.classList.contains("en");
+      if (open) {
+        btn.setAttribute("aria-label", isEn ? "Close menu" : "Menü schließen");
+      } else {
+        btn.setAttribute("aria-label", isEn ? "Open menu" : "Menü öffnen");
+      }
+    }
+
+    function toggleLang() {
+      document.body.classList.toggle("en");
+      document.body.classList.toggle("de");
+      syncLangMeta();
+      try { localStorage.setItem("aisa-lang", document.body.classList.contains("en") ? "en" : "de"); } catch (e) {}
+    }
+
+    (function initLang() {
+      try {
+        var saved = localStorage.getItem("aisa-lang") || localStorage.getItem("aisa-demo-lang");
+        if (saved === "en" && document.body.classList.contains("de")) {
+          document.body.classList.remove("de");
+          document.body.classList.add("en");
+        }
+      } catch (e) {}
+      syncLangMeta();
+    })();
+
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 980) closeMenu();
+    });
+
+    var reveals = document.querySelectorAll(".reveal");
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) e.target.classList.add("visible");
+      });
+    }, { threshold: 0.08, rootMargin: "0px 0px -40px 0px" });
+    reveals.forEach(function (el) { io.observe(el); });
+
+    (function initParticles() {
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+      var canvas = document.getElementById("particles-canvas");
+      if (!canvas) return;
+      var ctx = canvas.getContext("2d");
+      var w = 0;
+      var h = 0;
+      var particles = [];
+      var mouseX = 0.5;
+      var mouseY = 0.5;
+      var DEPTH = 900;
+      var FOCAL = 420;
+      var COLORS = [
+        [255, 230, 167],
+        [255, 200, 243],
+        [207, 214, 255],
+        [214, 51, 255],
+        [109, 255, 181],
+        [255, 255, 255]
+      ];
+
+      function count() {
+        return window.innerWidth < 640 ? 55 : window.innerWidth < 980 ? 80 : 110;
+      }
+
+      function resize() {
+        w = canvas.width = window.innerWidth;
+        h = canvas.height = window.innerHeight;
+      }
+
+      function spawn() {
+        return {
+          x: Math.random() * w,
+          y: Math.random() * h,
+          z: Math.random() * DEPTH,
+          vx: (Math.random() - 0.5) * 0.42,
+          vy: (Math.random() - 0.5) * 0.42,
+          vz: (Math.random() - 0.5) * 0.55,
+          baseR: Math.random() * 2.2 + 0.8,
+          color: COLORS[Math.floor(Math.random() * COLORS.length)],
+          phase: Math.random() * Math.PI * 2,
+          pulse: Math.random() * 0.45 + 0.55
+        };
+      }
+
+      function project(p) {
+        var tiltX = (mouseX - 0.5) * 42;
+        var tiltY = (mouseY - 0.5) * 42;
+        var scale = FOCAL / (FOCAL + p.z);
+        return {
+          x: w * 0.5 + (p.x - w * 0.5 + tiltX) * scale,
+          y: h * 0.5 + (p.y - h * 0.5 + tiltY) * scale,
+          r: p.baseR * scale * 2.4,
+          alpha: Math.min(0.95, scale * 1.05) * (0.28 + p.pulse * 0.38),
+          scale: scale
+        };
+      }
+
+      function refill() {
+        var target = count();
+        while (particles.length < target) particles.push(spawn());
+        while (particles.length > target) particles.pop();
+      }
+
+      function drawParticle(p, now) {
+        p.x += p.vx;
+        p.y += p.vy;
+        p.z += p.vz;
+        p.x += Math.sin(now * 0.001 + p.phase) * 0.22;
+        p.y += Math.cos(now * 0.00085 + p.phase) * 0.18;
+        p.z += Math.sin(now * 0.0007 + p.phase) * 0.35;
+
+        if (p.x < -60) p.x = w + 60;
+        if (p.x > w + 60) p.x = -60;
+        if (p.y < -60) p.y = h + 60;
+        if (p.y > h + 60) p.y = -60;
+        if (p.z < 0) p.z = DEPTH;
+        if (p.z > DEPTH) p.z = 0;
+
+        var proj = project(p);
+        var pulse = 0.82 + Math.sin(now * 0.003 + p.phase) * 0.18;
+        var rgb = p.color;
+        var a = proj.alpha * pulse;
+        var glow = proj.r * 4.2;
+
+        var grad = ctx.createRadialGradient(proj.x, proj.y, 0, proj.x, proj.y, glow);
+        grad.addColorStop(0, "rgba(" + rgb[0] + "," + rgb[1] + "," + rgb[2] + "," + a + ")");
+        grad.addColorStop(0.3, "rgba(" + rgb[0] + "," + rgb[1] + "," + rgb[2] + "," + (a * 0.35) + ")");
+        grad.addColorStop(1, "rgba(" + rgb[0] + "," + rgb[1] + "," + rgb[2] + ",0)");
+        ctx.fillStyle = grad;
+        ctx.beginPath();
+        ctx.arc(proj.x, proj.y, glow, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fillStyle = "rgba(255,255,255," + (a * 0.72) + ")";
+        ctx.beginPath();
+        ctx.arc(proj.x, proj.y, proj.r * 0.42, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      function drawLinks(sorted, now) {
+        var maxDist = 120;
+        for (var i = 0; i < sorted.length; i++) {
+          var a = project(sorted[i]);
+          for (var j = i + 1; j < sorted.length; j++) {
+            if (sorted[j].z - sorted[i].z > 220) break;
+            var b = project(sorted[j]);
+            var dx = a.x - b.x;
+            var dy = a.y - b.y;
+            var dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist > maxDist) continue;
+            var alpha = (1 - dist / maxDist) * 0.14 * Math.min(a.scale, b.scale);
+            ctx.strokeStyle = "rgba(255,255,255," + alpha + ")";
+            ctx.lineWidth = 0.6;
+            ctx.beginPath();
+            ctx.moveTo(a.x, a.y);
+            ctx.lineTo(b.x, b.y);
+            ctx.stroke();
+          }
+        }
+      }
+
+      function frame(now) {
+        ctx.clearRect(0, 0, w, h);
+        var sorted = particles.slice().sort(function (a, b) { return b.z - a.z; });
+        drawLinks(sorted, now);
+        sorted.forEach(function (p) { drawParticle(p, now); });
+        requestAnimationFrame(frame);
+      }
+
+      resize();
+      refill();
+      window.addEventListener("resize", function () {
+        resize();
+        refill();
+      });
+      window.addEventListener("mousemove", function (e) {
+        mouseX = e.clientX / w;
+        mouseY = e.clientY / h;
+      }, { passive: true });
+      requestAnimationFrame(frame);
+    })();
+  </script>
+</body>
+</html>
