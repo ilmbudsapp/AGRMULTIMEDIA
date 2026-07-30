@@ -1,6 +1,7 @@
 (function(){
+  const SUPPORTED_LANGS=["en","de","it"];
   const STORAGE_KEY="ec-lang";
-  const BASE="/demo/enchanted-chronicles/locales";
+  const BASE="/locales";
   const DEFAULT_LANG="en";
 
   let lang=DEFAULT_LANG;
@@ -190,7 +191,7 @@
     let initial=DEFAULT_LANG;
     try{
       const saved=localStorage.getItem(STORAGE_KEY);
-      if(saved==="en"||saved==="de")initial=saved;
+      if(SUPPORTED_LANGS.includes(saved))initial=saved;
     }catch(_){}
     try{
       await loadLanguage(initial);

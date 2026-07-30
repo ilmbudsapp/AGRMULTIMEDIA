@@ -1,0 +1,122 @@
+{
+  "a-tale-of-childhood-past": {
+    "number": 7,
+    "cardTitle": "Un Racconto dell'Infanzia Passata",
+    "excerpt": "In un pittoresco villaggio incastonato nel profondo della campagna, l'arrivo dell'inverno era atteso con impazienza dai più giovani abitanti…",
+    "label": "Storia n. 7"
+  },
+  "adventures-of-oliver": {
+    "number": 2,
+    "cardTitle": "Le Avventure di Oliver",
+    "excerpt": "In profondità nella foresta, in una piccola capanna isolata, viveva una famiglia modesta. Jakob, abile boscaiolo, sua moglie Eliza e il giovane figlio Oliver…",
+    "label": "Storia n. 2"
+  },
+  "aurelius-and-the-forest-of-wonders": {
+    "number": 4,
+    "cardTitle": "Aurelius e la Foresta delle Meraviglie",
+    "excerpt": "C'era una volta, in un regno dove l'ordinario si intrecciava con l'extraordinario, una magnifica foresta colma di magia e mistero…",
+    "label": "Storia n. 4"
+  },
+  "billy-and-the-magic-of-hope": {
+    "number": 16,
+    "cardTitle": "Billy e la magia della speranza",
+    "excerpt": "Nel modesto villaggio di Geislingen, incastonato tra colline ondulate e prati verdeggianti, viveva una comunità di gente laboriosa e dal cuore gentile…",
+    "label": "Storia n. 16"
+  },
+  "children-of-heaven": {
+    "number": 5,
+    "cardTitle": "Figli del Cielo",
+    "excerpt": "Marko, un bambino di nove anni dagli occhi vivaci e i capelli biondi, viveva in una piccola casa accogliente con la sua famiglia. Amava le gioie semplici…",
+    "label": "Storia n. 5"
+  },
+  "enchanted-castle": {
+    "number": 3,
+    "cardTitle": "Il Castello Incantato",
+    "excerpt": "Sotto la luce della luna piena, l'antico castello si ergeva imponente, le sue torri gotiche trafiggevano il cielo notturno. Una luce calda filtrava dalle finestre…",
+    "label": "Storia n. 3"
+  },
+  "midnight-fisherman": {
+    "number": 1,
+    "cardTitle": "Il Pescatore di Mezzanotte",
+    "excerpt": "Nelle ore quiete e serene della notte, un vecchio pescatore di nome Sabin salpò con la sua piccola barca consumata dal tempo. La luna piena sospesa alta sopra le montagne avvolte nella nebbia…",
+    "label": "Storia n. 1"
+  },
+  "miras-quest-to-save-her-parents": {
+    "number": 15,
+    "cardTitle": "La missione di Mira per salvare i suoi genitori",
+    "excerpt": "In un pittoresco villaggio incastonato nel cuore di una verdeggiante valle viveva una giovane coraggiosa di nome Mira. Il villaggio, Eldoria, era un rifugio sereno…",
+    "label": "Storia n. 15"
+  },
+  "the-ancient-forest-and-the-old-man": {
+    "number": 18,
+    "cardTitle": "La foresta antica e il vecchio",
+    "excerpt": "Nel profondo di una foresta antica e misteriosa viveva un umile vecchio di nome Eamon. I suoi averi erano pochi — una piccola capanna di legno, un mantello logoro…",
+    "label": "Storia n. 18"
+  },
+  "the-brave-knight": {
+    "number": 14,
+    "cardTitle": "Il coraggioso cavaliere",
+    "excerpt": "C'era una volta, nel Regno di Aranthia, un coraggioso cavaliere di nome Agron. Conosciuto in tutta la terra per il suo coraggio…",
+    "label": "Storia n. 14"
+  },
+  "the-castle-of-shadows": {
+    "number": 8,
+    "cardTitle": "Il Castello delle Ombre",
+    "excerpt": "Ai margini di una foresta oscura e fitta sorgeva un castello gotico con torri imponenti che perforavano il cielo. Avvolto in una nebbia perpetua…",
+    "label": "Storia n. 8"
+  },
+  "the-dream-of-the-old-singer": {
+    "number": 10,
+    "cardTitle": "Il Sogno del Vecchio Cantore",
+    "excerpt": "In un piccolo villaggio impoverito ai margini del mondo viveva un vecchio di nome Jovan. Aveva trascorso tutta la vita a lavorare la terra…",
+    "label": "Storia n. 10"
+  },
+  "the-giant-komodo-and-the-unsettled-debts": {
+    "number": 17,
+    "cardTitle": "Il komodo gigante e i debiti insoluti",
+    "excerpt": "Nella terra di Veridian, un regno di foreste lussureggianti e montagne imponenti, sorgeva un villaggio nascosto chiamato Stoneshade…",
+    "label": "Storia n. 17"
+  },
+  "the-mysterious-disappearance": {
+    "number": 13,
+    "cardTitle": "La misteriosa scomparsa",
+    "excerpt": "C'era una volta, in un piccolo villaggio ai margini di una vasta e misteriosa foresta, un giovane di nome Benjamin…",
+    "label": "Storia n. 13"
+  },
+  "the-protector-of-aeloria": {
+    "number": 9,
+    "cardTitle": "Il Protettore di Aeloria",
+    "excerpt": "Nella pacifica terra di Aeloria, incastonata tra dolci colline e campi verdeggianti, sorgeva un pittoresco villaggio. Gli abitanti erano gente semplice…",
+    "label": "Storia n. 9"
+  },
+  "the-savior-vlad": {
+    "number": 19,
+    "cardTitle": "Vlad, il salvatore",
+    "excerpt": "In una terra lontana, circondata da montagne imponenti e foreste antiche, sorgeva il pacifico villaggio di Bravenford…",
+    "label": "Storia n. 19"
+  },
+  "the-tale-of-the-kind-hearted-giant": {
+    "number": 20,
+    "cardTitle": "Il racconto del gigante dal cuore gentile",
+    "excerpt": "In un pittoresco villaggio incastonato tra colline ondulate e foreste fitte viveva un ragazzo dal cuore gentile di nome Ewan. Amato da tutti…",
+    "label": "Storia n. 20"
+  },
+  "the-terror-of-the-white-wolf": {
+    "number": 12,
+    "cardTitle": "Il terrore del lupo bianco",
+    "excerpt": "Nel cuore di una remota e tranquilla valle — incastonata tra montagne imponenti e antiche foreste — sorgeva il piccolo villaggio di Drakwood…",
+    "label": "Storia n. 12"
+  },
+  "the-time-traveling-dog": {
+    "number": 11,
+    "cardTitle": "Il cane viaggiatore nel tempo",
+    "excerpt": "Nel villaggio medievale di Eldoria, in una fredda mattina d'inverno, un cane di nome Cubi si svegliò con una sensazione insolita. Pur sembrando un cane qualunque…",
+    "label": "Storia n. 11"
+  },
+  "white-bison": {
+    "number": 6,
+    "cardTitle": "Il Bisonte Bianco",
+    "excerpt": "In un piccolo villaggio impoverito ai margini di un'antica foresta, la gente viveva in una lotta continua. Per tre stagioni consecutive i raccolti erano falliti…",
+    "label": "Storia n. 6"
+  }
+}
