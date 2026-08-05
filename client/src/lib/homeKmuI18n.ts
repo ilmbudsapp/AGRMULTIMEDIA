@@ -148,6 +148,19 @@ const de: HomeKmuCopy = {
         image: "/portfolio/ilmbuds/02-ilmbuds-google-play-listing.png",
         imageAlt: "IlmBuds — Website und App-Präsenz",
       },
+      {
+        name: "The Enchanted Chronicles",
+        branch: "Fantasy-Literatur & Storytelling",
+        goal: "Professioneller Webauftritt für eine magische Geschichtensammlung — Leser weltweit ansprechen und Geschichten entdeckbar machen.",
+        implementation:
+          "Mehrsprachige Website mit illustrierten Story-Seiten, SEO-, AEO- und GEO-Optimierung sowie strukturierten Inhalten für Google und KI-Suchen.",
+        result:
+          "Live unter eigener Domain — magische Atmosphäre, klare Navigation und starke Präsenz für Fantasy-Leser international.",
+        metrics: ["+35 % mehr Seitenaufrufe", "+20 % bessere Sichtbarkeit", "+45 % schnellere Ladezeit"],
+        href: "https://www.theenchantedchronicles.com/",
+        image: "/demo/enchanted-chronicles/images/the-brave-knight.webp",
+        imageAlt: "The Enchanted Chronicles — Fantasy-Geschichten Website",
+      },
     ],
   },
   process: {
@@ -319,6 +332,17 @@ en.portfolio = {
       href: "https://www.ilmbuds.com/",
       image: "/portfolio/ilmbuds/02-ilmbuds-google-play-listing.png",
       imageAlt: "IlmBuds — website and app presence",
+    },
+    {
+      name: "The Enchanted Chronicles",
+      branch: "Fantasy literature & storytelling",
+      goal: "Professional web presence for a magical story collection — reach readers worldwide and make tales easy to discover.",
+      implementation:
+        "Multilingual site with illustrated story pages, SEO/AEO/GEO optimisation and structured content for Google and AI search.",
+      result: "Live on its own domain — immersive atmosphere, clear navigation and strong visibility for fantasy readers globally.",
+      href: "https://www.theenchantedchronicles.com/",
+      image: "/demo/enchanted-chronicles/images/the-brave-knight.webp",
+      imageAlt: "The Enchanted Chronicles — fantasy stories website",
     },
   ],
 };

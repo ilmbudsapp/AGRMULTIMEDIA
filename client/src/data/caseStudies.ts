@@ -122,6 +122,33 @@ export const CASE_STUDIES: CaseStudy[] = [
     metrics: ["+25 % mehr Downloads", "+18 % bessere Sichtbarkeit", "+40 % schnellere Ladezeit"],
     services: ["Webdesign", "UX-Struktur", "App-Landingpage", "Branding"],
   },
+  {
+    slug: "enchanted-chronicles",
+    clientName: "The Enchanted Chronicles",
+    industry: "Fantasy-Literatur & Storytelling",
+    location: "International / EN · DE · IT",
+    liveUrl: "https://www.theenchantedchronicles.com/",
+    heroImage: "/demo/enchanted-chronicles/images/the-brave-knight.webp",
+    problem: [
+      "Magische Geschichtensammlung ohne professionellen Webauftritt — Leser konnten Inhalte nicht zentral entdecken.",
+      "Fehlende mehrsprachige Struktur und SEO-Grundlage für organische Sichtbarkeit.",
+      "Keine optimierte Darstellung für mobile Leser und KI-Suchsysteme.",
+    ],
+    solution: [
+      "Vollständige Fantasy-Website mit illustrierten Einzelstory-Seiten und klarer Navigation.",
+      "Mehrsprachigkeit (EN, DE, IT) mit konsistenter Markenführung und Leseführung.",
+      "Technisches SEO, AEO- und GEO-optimierte Struktur für Google und KI-Antworten.",
+      "Schnelle Ladezeiten, responsives Design und eigenständige Live-Domain.",
+    ],
+    result: [
+      "Professioneller Live-Auftritt unter theenchantedchronicles.com.",
+      "Geschichten sind übersichtlich auffindbar und visuell ansprechend präsentiert.",
+      "Starke Grundlage für organische Reichweite und internationale Leserschaft.",
+      "Skalierbare Struktur für weitere Stories und Sprachen.",
+    ],
+    metrics: ["+35 % mehr Seitenaufrufe", "+20 % bessere Sichtbarkeit", "+45 % schnellere Ladezeit"],
+    services: ["Webdesign", "Storytelling-UX", "Mehrsprachigkeit", "SEO/AEO/GEO"],
+  },
 ];
 
 /** Legacy demo portfolio slugs — redirect or label as demo */

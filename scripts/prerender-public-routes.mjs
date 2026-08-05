@@ -75,7 +75,7 @@ const staticRoutes = [
     h1: "Portfolio AGR Multimedia",
     lead: "Case Studies: Toni's Autopflege, Tairovic Gebäudeservice, FixBike, IlmBuds — Webdesign und SEO für KMU.",
     canonical: "https://www.agrmultimedia.eu/portfolio",
-    bodyHtml: `<ul><li><a href="/portfolio/tonis-autopflege">Toni's Autopflege</a></li><li><a href="/portfolio/tairovic-gebaeudeservice">Tairovic Gebäudeservice</a></li><li><a href="/portfolio/fixbike">FixBike</a></li><li><a href="/portfolio/ilmbuds">IlmBuds</a></li></ul>`,
+    bodyHtml: `<ul><li><a href="/portfolio/tonis-autopflege">Toni's Autopflege</a></li><li><a href="/portfolio/tairovic-gebaeudeservice">Tairovic Gebäudeservice</a></li><li><a href="/portfolio/fixbike">FixBike</a></li><li><a href="/portfolio/enchanted-chronicles">The Enchanted Chronicles</a></li><li><a href="/portfolio/ilmbuds">IlmBuds</a></li></ul>`,
   },
   {
     dir: "kontakt",
@@ -154,6 +154,7 @@ const caseStudies = [
   { dir: "portfolio/tonis-autopflege", slug: "tonis-autopflege", name: "Toni's Autopflege Göppingen" },
   { dir: "portfolio/tairovic-gebaeudeservice", slug: "tairovic-gebaeudeservice", name: "Tairovic Gebäudeservice" },
   { dir: "portfolio/fixbike", slug: "fixbike", name: "FixBike Fahrradservice" },
+  { dir: "portfolio/enchanted-chronicles", slug: "enchanted-chronicles", name: "The Enchanted Chronicles" },
   { dir: "portfolio/ilmbuds", slug: "ilmbuds", name: "IlmBuds Bildungs-App" },
 ];
 

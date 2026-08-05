@@ -24,6 +24,8 @@ const AISA_DEMO = "/demo/aisa-osmani/index.html";
 const AISA_IMG = "/demo/aisa-osmani/assets/hero-illustration.jpg";
 const FIXBIKE_LIVE = "https://fixbike.online/";
 const FIXBIKE_IMG = "/portfolio/web-design/fixbike-fahrradservice-neuwied-hero.webp";
+const ENCHANTED_CHRONICLES_LIVE = "https://www.theenchantedchronicles.com/";
+const ENCHANTED_CHRONICLES_IMG = "/demo/enchanted-chronicles/images/the-brave-knight.webp";
 const LIVE_BTN =
   "inline-flex items-center gap-2 rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-[#0a0a0f] transition hover:bg-white/90";
 
@@ -261,6 +263,25 @@ export default function PortfolioShowcase() {
                 >
                   <a href={FIXBIKE_LIVE} target="_blank" rel="noopener noreferrer" className={LIVE_BTN}>
                     {p.projects.fixbike.liveCta}
+                    <ExternalLink className="h-4 w-4" aria-hidden />
+                  </a>
+                </ProjectCard>
+                <ProjectCard
+                  image={ENCHANTED_CHRONICLES_IMG}
+                  title={p.projects.enchantedChronicles.title}
+                  description={p.projects.enchantedChronicles.description}
+                  pillarLabel={p.categories.web.title}
+                  pillarIcon={LayoutGrid}
+                  pillarClass={webPillarClass}
+                  gradeBadge={p.projects.enchantedChronicles.gradeBadge}
+                >
+                  <a
+                    href={ENCHANTED_CHRONICLES_LIVE}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={LIVE_BTN}
+                  >
+                    {p.projects.enchantedChronicles.liveCta}
                     <ExternalLink className="h-4 w-4" aria-hidden />
                   </a>
                 </ProjectCard>

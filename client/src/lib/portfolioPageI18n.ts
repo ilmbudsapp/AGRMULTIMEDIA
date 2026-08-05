@@ -36,6 +36,7 @@ export interface PortfolioPageCopy {
     tairovicDarkVerzija: PortfolioProjectCopy;
     aisaOsmani: PortfolioProjectCopy;
     fixbike: PortfolioProjectCopy;
+    enchantedChronicles: PortfolioProjectCopy;
     theirrealm: {
       title: string;
       subtitle: string;
@@ -123,6 +124,13 @@ const en: PortfolioPageCopy = {
         "Professional bicycle repair and service website — fast load times, strong local GEO SEO and conversion-focused booking structure.",
       liveCta: "View live website",
       gradeBadge: "Grade A · GEO",
+    },
+    enchantedChronicles: {
+      title: "The Enchanted Chronicles",
+      description:
+        "Multilingual fantasy storytelling website — illustrated tales, SEO/AEO/GEO structure and live at theenchantedchronicles.com.",
+      liveCta: "View live website",
+      gradeBadge: "Live · Storytelling",
     },
     theirrealm: {
       title: "theirrealmtv CAT",
@@ -213,6 +221,13 @@ const de: PortfolioPageCopy = {
       liveCta: "Website live ansehen",
       gradeBadge: "Grade A · GEO",
     },
+    enchantedChronicles: {
+      title: "The Enchanted Chronicles",
+      description:
+        "Mehrsprachige Fantasy-Website mit magischen Geschichten — SEO, AEO und GEO optimiert, live unter theenchantedchronicles.com.",
+      liveCta: "Website live ansehen",
+      gradeBadge: "Live · Storytelling",
+    },
     theirrealm: {
       title: "theirrealmtv CAT",
       subtitle: "Promo-Video für Kickstarter-Kampagne",
@@ -301,6 +316,13 @@ const sr: PortfolioPageCopy = {
         "Profesionalni sajt za popravku i servis bicikala — brzo učitavanje, lokalni GEO SEO i struktura za maksimalnu konverziju.",
       liveCta: "Pogledaj live sajt",
       gradeBadge: "Grade A · GEO",
+    },
+    enchantedChronicles: {
+      title: "The Enchanted Chronicles",
+      description:
+        "Višejezički sajt za fantasy priče — ilustrovane priče, SEO/AEO/GEO struktura, live na theenchantedchronicles.com.",
+      liveCta: "Pogledaj live sajt",
+      gradeBadge: "Live · Storytelling",
     },
     theirrealm: {
       title: "theirrealmtv CAT",
@@ -391,6 +413,13 @@ const it: PortfolioPageCopy = {
       liveCta: "Sito live",
       gradeBadge: "Grade A · GEO",
     },
+    enchantedChronicles: {
+      title: "The Enchanted Chronicles",
+      description:
+        "Sito multilingue di racconti fantasy — storie illustrate, struttura SEO/AEO/GEO, live su theenchantedchronicles.com.",
+      liveCta: "Sito live",
+      gradeBadge: "Live · Storytelling",
+    },
     theirrealm: {
       title: "theirrealmtv CAT",
       subtitle: "Video promo campagna Kickstarter",
@@ -479,6 +508,13 @@ const al: PortfolioPageCopy = {
         "Faqe profesionale për riparim dhe servis biçikletash — ngarkim i shpejtë, GEO SEO lokal dhe strukturë konvertimi.",
       liveCta: "Shiko faqen live",
       gradeBadge: "Grade A · GEO",
+    },
+    enchantedChronicles: {
+      title: "The Enchanted Chronicles",
+      description:
+        "Faqe shumëgjuhëshe me tregime fantasy — histori të ilustruara, SEO/AEO/GEO, live në theenchantedchronicles.com.",
+      liveCta: "Shiko faqen live",
+      gradeBadge: "Live · Storytelling",
     },
     theirrealm: {
       title: "theirrealmtv CAT",
