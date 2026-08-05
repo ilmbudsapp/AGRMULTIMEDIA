@@ -20,4 +20,5 @@ export const VIDEO_AI_CLIPS: VideoAiClip[] = [
   { id: "06", src: asset("06.mp4"), poster: asset("posters/06.webp") },
   { id: "07", src: asset("07.mp4"), poster: asset("posters/07.webp") },
   { id: "08", src: asset("08.mp4"), poster: asset("posters/08.webp") },
+  { id: "09", src: asset("09.mp4"), poster: asset("posters/09.webp") },
 ];
