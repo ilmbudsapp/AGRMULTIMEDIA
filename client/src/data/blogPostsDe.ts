@@ -1,16 +1,10 @@
 /** German SEO blog foundation — local web design topics for Geislingen region. */
-export type BlogPostDe = {
-  slug: string;
-  title: string;
-  description: string;
-  category: string;
-  date: string;
-  image: string;
-  imageAlt: string;
-  sections: { heading: string; paragraphs: string[] }[];
-};
+import { BLOG_POSTS_DE_EXTENDED } from "./blogPostsDeExtended";
+import type { BlogPostDe } from "./blogPostDeTypes";
 
-export const BLOG_POSTS_DE: BlogPostDe[] = [
+export type { BlogPostDe } from "./blogPostDeTypes";
+
+export const BLOG_POSTS_DE_BASE: BlogPostDe[] = [
   {
     slug: "webdesign-lokale-firmen",
     title: "Warum professionelles Webdesign für lokale Firmen entscheidend ist",
@@ -113,3 +107,6 @@ export const BLOG_POSTS_DE: BlogPostDe[] = [
     ],
   },
 ];
+
+/** All DE blog posts (original + extended topical authority). */
+export const BLOG_POSTS_DE: BlogPostDe[] = [...BLOG_POSTS_DE_BASE, ...BLOG_POSTS_DE_EXTENDED];

@@ -28,8 +28,20 @@ const PAGE_LABELS: Record<string, string> = {
 };
 
 export function getBreadcrumbItems(pathname: string): BreadcrumbItem[] {
-  const items: BreadcrumbItem[] = [{ name: "Start", path: ROUTES.home }];
+  const items: BreadcrumbItem[] = [{ name: "Startseite", path: ROUTES.home }];
   if (pathname === ROUTES.home || pathname === "") return items;
+
+  if (pathname.startsWith("/blog/") && pathname !== ROUTES.blog) {
+    items.push({ name: "Blog", path: ROUTES.blog });
+    items.push({ name: "Artikel", path: pathname });
+    return items;
+  }
+
+  if (pathname.startsWith("/portfolio/") && pathname !== ROUTES.portfolio) {
+    items.push({ name: "Portfolio", path: ROUTES.portfolio });
+    items.push({ name: "Case Study", path: pathname });
+    return items;
+  }
 
   const label = PAGE_LABELS[pathname];
   if (label) {

@@ -4,6 +4,9 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import BreadcrumbNav from "@/components/BreadcrumbNav";
 import Contact from "@/components/Contact";
+import AuthorByline from "@/components/AuthorByline";
+import BlogPostingJsonLd from "@/components/BlogPostingJsonLd";
+import RelatedArticles from "@/components/RelatedArticles";
 import { BLOG_POSTS_DE } from "@/data/blogPostsDe";
 import { ROUTES } from "@/lib/siteRoutes";
 
@@ -33,12 +36,22 @@ export default function GermanBlogArticlePage() {
 
   return (
     <div className="min-h-screen w-full max-w-[100vw] overflow-x-hidden bg-[#0a0a0f]">
+      <BlogPostingJsonLd
+        slug={post.slug}
+        headline={post.title}
+        description={post.description}
+        datePublished={post.date}
+        image={post.image}
+      />
       <Navigation />
       <BreadcrumbNav />
       <main id="main-content" className="pt-8">
         <article className="mx-auto max-w-3xl px-4 pb-16 sm:px-6 lg:px-8">
-          <p className="text-sm text-blue-300">{post.category} · {post.date}</p>
-          <h1 className="mt-3 text-3xl font-bold text-white md:text-4xl">{post.title}</h1>
+          <p className="text-sm text-blue-300">
+            {post.category} · Veröffentlicht: {post.date}
+          </p>
+          <AuthorByline className="mt-3" variant="lightOnDark" language="de" />
+          <h1 className="mt-4 text-3xl font-bold text-white md:text-4xl">{post.title}</h1>
           <p className="mt-4 text-lg leading-relaxed text-gray-400">{post.description}</p>
           <img
             src={post.image}
@@ -59,11 +72,24 @@ export default function GermanBlogArticlePage() {
               </section>
             ))}
           </div>
-          <p className="mt-10">
+          <nav className="mt-10 flex flex-wrap gap-x-4 gap-y-2 text-sm" aria-label="Interne Links">
             <Link href={ROUTES.webdesignGeislingen} className="font-medium text-blue-300 hover:underline">
-              Webdesign in Geislingen an der Steige — AGR Multimedia
+              Webdesign Geislingen
             </Link>
-          </p>
+            <Link href={ROUTES.webdesignSeo} className="font-medium text-blue-300 hover:underline">
+              Webdesign &amp; SEO
+            </Link>
+            <Link href="/videoproduktion" className="font-medium text-blue-300 hover:underline">
+              Videoproduktion
+            </Link>
+            <Link href={ROUTES.about} className="font-medium text-blue-300 hover:underline">
+              Über AGR Multimedia
+            </Link>
+            <Link href={ROUTES.kontakt} className="font-medium text-blue-300 hover:underline">
+              Kontakt
+            </Link>
+          </nav>
+          <RelatedArticles currentSlug={post.slug} />
         </article>
         <Contact />
       </main>

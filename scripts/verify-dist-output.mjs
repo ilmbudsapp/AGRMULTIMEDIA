@@ -9,6 +9,11 @@ const requiredRootFiles = ["index.html", "sitemap.xml", "robots.txt"];
 const requiredPrerenderRoutes = [
   path.join(outputDir, "webdesign-geislingen-an-der-steige", "index.html"),
   path.join(outputDir, "kontakt", "index.html"),
+  path.join(outputDir, "about", "index.html"),
+  path.join(outputDir, "blog", "index.html"),
+  path.join(outputDir, "webdesign-seo", "index.html"),
+  path.join(outputDir, "blog", "webdesign-handwerker-geislingen", "index.html"),
+  path.join(outputDir, "portfolio", "tonis-autopflege", "index.html"),
 ];
 
 const requiredDemoIndexes = [

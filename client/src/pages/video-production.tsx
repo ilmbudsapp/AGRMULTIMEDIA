@@ -381,6 +381,38 @@ export default function VideoProduction() {
           </article>
         </section>
 
+        {/* YouTube */}
+        <section className="mx-auto mt-12 max-w-6xl px-4 sm:px-6 lg:px-8" aria-labelledby="youtube-showcase">
+          <h2 id="youtube-showcase" className="text-2xl font-semibold tracking-tight text-neutral-900">
+            {currentLanguage === "de" ? "Video auf YouTube" : "Video on YouTube"}
+          </h2>
+          <p className="mt-2 text-sm text-neutral-600">
+            {currentLanguage === "de"
+              ? "Demos und Portfolio-Clips auf unserem YouTube-Kanal."
+              : "Demos and portfolio clips on our YouTube channel."}
+          </p>
+          <div className="mt-6 aspect-video max-w-3xl overflow-hidden rounded-2xl border border-neutral-200 bg-black shadow-sm">
+            <iframe
+              title="AGR Multimedia YouTube"
+              src="https://www.youtube-nocookie.com/embed/wbsISIAy-hY"
+              className="h-full w-full"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+          <p className="mt-4">
+            <a
+              href="https://www.youtube.com/@AGRMultimedia"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-medium text-neutral-900 underline hover:text-neutral-600"
+            >
+              {currentLanguage === "de" ? "YouTube-Kanal @AGRMultimedia" : "YouTube channel @AGRMultimedia"}
+            </a>
+          </p>
+        </section>
+
       </main>
       <Footer />
     </div>

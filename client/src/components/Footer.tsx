@@ -1,7 +1,8 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Link, useLocation } from "wouter";
-import { Facebook, Instagram, Linkedin, MessageCircle, Mail as MailIcon, Phone, MapPin } from "lucide-react";
+import { Facebook, Instagram, Linkedin, MessageCircle, Mail as MailIcon, Phone, MapPin, Youtube } from "lucide-react";
 import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_LINK } from "@/lib/contact";
+import { FACEBOOK_URL, INSTAGRAM_URL, LINKEDIN_URL, YOUTUBE_URL } from "@/lib/socialLinks";
 import { toServiceLang, type ServiceLang } from "@/lib/servicePageI18n";
 import FooterLegalBlock from "@/components/FooterLegalBlock";
 import { getPremiumTranslations } from "@/lib/premiumI18n";
@@ -18,9 +19,6 @@ function FooterLogo({ className }: { className: string }) {
   );
 }
 
-const FACEBOOK_URL = "https://www.facebook.com/halidosmani74";
-const INSTAGRAM_URL = "https://www.instagram.com/agrondesign/";
-const LINKEDIN_URL = "https://www.linkedin.com/in/agron-osmani-228947266/";
 const EMAIL_LINK = "mailto:agron6922@gmail.com";
 
 export default function Footer() {
@@ -121,6 +119,10 @@ export default function Footer() {
               <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2" aria-label="LinkedIn">
                 <Linkedin className="w-4 h-4" />
                 <span className="text-sm">LinkedIn</span>
+              </a>
+              <a href={YOUTUBE_URL} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2" aria-label="YouTube">
+                <Youtube className="w-4 h-4" />
+                <span className="text-sm">YouTube</span>
               </a>
               <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2" aria-label="WhatsApp">
                 <MessageCircle className="w-4 h-4" />

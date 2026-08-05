@@ -1,5 +1,7 @@
 import { BUSINESS } from "@/lib/siteRoutes";
 
+import { ORGANIZATION_SAME_AS } from "@/lib/socialLinks";
+
 export function localBusinessNode(pageUrl = `${BUSINESS.url}/`) {
   return {
     "@type": ["LocalBusiness", "ProfessionalService"],
@@ -36,12 +38,7 @@ export function localBusinessNode(pageUrl = `${BUSINESS.url}/`) {
       "@type": "Person",
       name: BUSINESS.owner,
     },
-    sameAs: [
-      "https://www.facebook.com/halidosmani74",
-      "https://www.instagram.com/agrondesign/",
-      "https://www.linkedin.com/in/agron-osmani-228947266/",
-      "https://wa.me/4915560873124",
-    ],
+    sameAs: [...ORGANIZATION_SAME_AS],
     knowsAbout: [
       "Webdesign",
       "Lokales SEO",

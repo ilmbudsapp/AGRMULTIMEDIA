@@ -40,12 +40,7 @@ const WebsiteConversionOptimization = lazy(() => import("@/pages/blog/website-co
 const VideoMarketingPower = lazy(() => import("@/pages/blog/video-marketing-power"));
 const FoodTruckWeb500 = lazy(() => import("@/pages/blog/food-truck-web-500"));
 const GermanBlogArticlePage = lazy(() => import("@/pages/blog/GermanBlogArticlePage"));
-const EcommerceSite = lazy(() => import("@/pages/portfolio/ecommerce-site"));
-const RestaurantWebsite = lazy(() => import("@/pages/portfolio/restaurant-website"));
-const BrandIdentity = lazy(() => import("@/pages/portfolio/brand-identity"));
-const CorporateVideo = lazy(() => import("@/pages/portfolio/corporate-video"));
-const ProductPhotography = lazy(() => import("@/pages/portfolio/product-photography"));
-const PackagingDesign = lazy(() => import("@/pages/portfolio/packaging-design"));
+const CaseStudyRoute = lazy(() => import("@/pages/portfolio/CaseStudyRoute"));
 const Privacy = lazy(() => import("@/pages/privacy"));
 const Terms = lazy(() => import("@/pages/terms"));
 const Cookies = lazy(() => import("@/pages/cookies"));
@@ -65,12 +60,13 @@ function Router() {
       <Route path="/videoproduktion" component={VideoProduction} />
       <Route path="/bewertungen" component={BewertungenPage} />
       <Route path="/kontakt" component={ContactPage} />
-      <Route path="/portfolio/ecommerce-site" component={EcommerceSite} />
-      <Route path="/portfolio/restaurant-website" component={RestaurantWebsite} />
-      <Route path="/portfolio/brand-identity" component={BrandIdentity} />
-      <Route path="/portfolio/corporate-video" component={CorporateVideo} />
-      <Route path="/portfolio/product-photography" component={ProductPhotography} />
-      <Route path="/portfolio/packaging-design" component={PackagingDesign} />
+      <Route path="/portfolio/ecommerce-site">{() => <Redirect to="/portfolio" />}</Route>
+      <Route path="/portfolio/restaurant-website">{() => <Redirect to="/portfolio" />}</Route>
+      <Route path="/portfolio/brand-identity">{() => <Redirect to="/portfolio" />}</Route>
+      <Route path="/portfolio/corporate-video">{() => <Redirect to="/portfolio" />}</Route>
+      <Route path="/portfolio/product-photography">{() => <Redirect to="/portfolio" />}</Route>
+      <Route path="/portfolio/packaging-design">{() => <Redirect to="/portfolio" />}</Route>
+      <Route path="/portfolio/:slug" component={CaseStudyRoute} />
       <Route path="/portfolio" component={PortfolioPage} />
       <Route path="/contact">{() => <Redirect to="/kontakt" />}</Route>
       <Route path="/web-design">{() => <Redirect to="/webdesign-seo" />}</Route>
