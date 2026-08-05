@@ -89,9 +89,9 @@ const en: PremiumTranslations = {
   hero: {
     heading: "Web design Geislingen — websites that bring new customers",
     subheading:
-      "Modern websites for trades, local businesses and service providers. SEO, GEO and AEO optimised for Google and AI search.",
+      "Professional websites for trades and local businesses in Geislingen — clear structure, mobile-first. Next step: free initial consultation.",
     bullets: [],
-    primaryCta: "Free consultation",
+    primaryCta: "Request free consultation",
     secondaryCta: "View references",
     ctaMeta: "No obligation • Individual quote • Response within 24h",
   },
@@ -195,8 +195,8 @@ const en: PremiumTranslations = {
     ],
   },
   legal: {
-    impressum: "Impressum",
-    datenschutz: "Datenschutz",
+    impressum: "Legal notice",
+    datenschutz: "Privacy Policy",
   },
 };
 
@@ -204,9 +204,9 @@ const de: PremiumTranslations = {
   hero: {
     heading: "Webdesign Geislingen – Websites, die neue Kunden bringen",
     subheading:
-      "Moderne Webseiten für Handwerker, lokale Unternehmen und Dienstleister. SEO-, GEO- und AEO-optimiert für Google und KI-Suchen.",
+      "Professionelle Websites für Handwerker und lokale Firmen in Geislingen — klar strukturiert, mobil optimiert. Nächster Schritt: kostenloses Erstgespräch.",
     bullets: [],
-    primaryCta: "Kostenlose Beratung",
+    primaryCta: "Kostenlose Beratung anfragen",
     secondaryCta: "Referenzen ansehen",
     ctaMeta: "Unverbindlich • Individuelles Angebot • Antwort innerhalb von 24h",
   },
@@ -311,7 +311,7 @@ const de: PremiumTranslations = {
   },
   legal: {
     impressum: "Impressum",
-    datenschutz: "Datenschutz",
+    datenschutz: "Datenschutzerklärung",
   },
 };
 
@@ -432,7 +432,7 @@ const sr: PremiumTranslations = {
   },
   legal: {
     impressum: "Impressum",
-    datenschutz: "Datenschutz",
+    datenschutz: "Datenschutzerklärung",
   },
 };
 
@@ -553,7 +553,7 @@ const it: PremiumTranslations = {
   },
   legal: {
     impressum: "Impressum",
-    datenschutz: "Datenschutz",
+    datenschutz: "Datenschutzerklärung",
   },
 };
 
@@ -674,7 +674,7 @@ const al: PremiumTranslations = {
   },
   legal: {
     impressum: "Impressum",
-    datenschutz: "Datenschutz",
+    datenschutz: "Datenschutzerklärung",
   },
 };
 

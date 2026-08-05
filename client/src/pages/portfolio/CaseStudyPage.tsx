@@ -86,6 +86,18 @@ export default function CaseStudyPage({ study }: Props) {
 
           <section className="mt-12">
             <h2 className="text-2xl font-semibold text-white">Ergebnis</h2>
+            {study.metrics && study.metrics.length > 0 ? (
+              <ul className="mt-4 flex flex-wrap gap-3">
+                {study.metrics.map((m) => (
+                  <li
+                    key={m}
+                    className="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200"
+                  >
+                    {m}
+                  </li>
+                ))}
+              </ul>
+            ) : null}
             <ul className="mt-4 space-y-3 text-gray-300">
               {study.result.map((r) => (
                 <li key={r.slice(0, 40)} className="flex gap-2 leading-relaxed">

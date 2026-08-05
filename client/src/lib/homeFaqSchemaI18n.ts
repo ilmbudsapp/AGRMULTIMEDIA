@@ -24,10 +24,6 @@ const FAQ_BY_LANG: Record<Language, FaqPair[]> = {
       q: "Wie läuft die Zusammenarbeit?",
       a: "Kostenloses Erstgespräch, Planung und Strategie, Design und Entwicklung, dann Launch und Optimierung. Antwort auf Anfragen meist innerhalb von 24 Stunden.",
     },
-    {
-      q: "Was ist SEO, GEO und AEO?",
-      a: "SEO optimiert Ihre Website für Google-Suchen in Geislingen und der Region. GEO und AEO sorgen zusätzlich dafür, dass Ihr Unternehmen in KI-Suchen wie ChatGPT und Google AI Overview gefunden und empfohlen wird.",
-    },
   ],
   en: [
     {

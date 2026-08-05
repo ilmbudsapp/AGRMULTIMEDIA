@@ -11,8 +11,18 @@ import {
   WEBDESIGN_SEO_SECTIONS_DE,
   WEBDESIGN_SEO_SECTIONS_EN,
 } from "@/data/webdesignSeoContent";
+import PageTableOfContents from "@/components/PageTableOfContents";
+import SeoAeoEnhancement from "@/components/SeoAeoEnhancement";
 import { faqPageNode } from "@/lib/localBusinessSchema";
 import { breadcrumbListSchema } from "@/lib/breadcrumbs";
+
+const WEBDESIGN_SEO_TOC = [
+  { id: "paket-ueberblick", label: "Paket-Überblick" },
+  { id: "vorteile", label: "Vorteile" },
+  { id: "prozess", label: "Prozess" },
+  { id: "beispiele", label: "Beispiele" },
+  { id: "region", label: "Region & Lokales SEO" },
+];
 
 const INTRO: Record<string, { title: string; lead: string }> = {
   en: {
@@ -65,6 +75,7 @@ export default function WebdesignSeoPage() {
         </header>
 
         <article className="mx-auto max-w-3xl px-4 py-14 sm:px-6 lg:px-8">
+          <PageTableOfContents items={WEBDESIGN_SEO_TOC} />
           {sections.map((sec) => (
             <section key={sec.id} id={sec.id} className="mb-12">
               <h2 className="text-xl font-semibold text-white md:text-2xl">{sec.title}</h2>
@@ -98,7 +109,9 @@ export default function WebdesignSeoPage() {
             </dl>
           </section>
 
-          <p className="text-center">
+          <SeoAeoEnhancement variant="webdesign-seo" />
+
+          <p className="mt-10 text-center">
             <Link href={ROUTES.kontakt} className="inline-flex rounded-full bg-white px-8 py-3 text-sm font-semibold text-[#0a0a0f] hover:bg-white/90">
               {currentLanguage === "de" ? "Kostenlose Beratung anfragen" : "Request a free consultation"}
             </Link>

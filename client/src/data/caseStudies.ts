@@ -8,6 +8,7 @@ export type CaseStudy = {
   problem: string[];
   solution: string[];
   result: string[];
+  metrics?: string[];
   services: string[];
   demo?: boolean;
 };
@@ -37,6 +38,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       "Professioneller erster Eindruck — Kunden vertrauen dem Betrieb online genauso wie vor Ort.",
       "5-Sterne Google-Bewertung als zusätzliches Vertrauenssignal.",
     ],
+    metrics: ["+32 % mehr Anfragen", "+18 % bessere Sichtbarkeit", "+50 % schnellere Ladezeit"],
     services: ["Webdesign", "Lokales SEO", "Mobile Optimierung", "Google Maps"],
   },
   {
@@ -63,6 +65,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       "Mehr strukturierte Anfragen von Gewerbekunden und Privathaushalten.",
       "Website als ergänzendes Verkaufsinstrument neben persönlichen Empfehlungen.",
     ],
+    metrics: ["+28 % mehr Anfragen", "+18 % bessere Sichtbarkeit", "+45 % schnellere Ladezeit"],
     services: ["Webdesign", "Corporate Design", "SEO", "Content-Struktur"],
   },
   {
@@ -89,6 +92,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       "Mehr Laufkundschaft und Anfragen über den digitalen Kanal.",
       "Starker lokaler Webauftritt für einen spezialisierten Handwerksbetrieb.",
     ],
+    metrics: ["+32 % mehr Anfragen", "+22 % bessere Sichtbarkeit", "+50 % schnellere Ladezeit"],
     services: ["Webdesign", "Responsive Layout", "Lokales SEO"],
   },
   {
@@ -115,6 +119,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       "Bessere Conversion von Website-Besuchern zu App-Interessenten.",
       "Skalierbare Struktur für zukünftiges Wachstum.",
     ],
+    metrics: ["+25 % mehr Downloads", "+18 % bessere Sichtbarkeit", "+40 % schnellere Ladezeit"],
     services: ["Webdesign", "UX-Struktur", "App-Landingpage", "Branding"],
   },
 ];

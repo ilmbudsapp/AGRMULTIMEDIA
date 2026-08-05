@@ -23,6 +23,7 @@ export type HomeKmuCopy = {
       goal: string;
       implementation: string;
       result: string;
+      metrics?: string[];
       href: string;
       image?: string;
       imageAlt?: string;
@@ -69,23 +70,23 @@ const de: HomeKmuCopy = {
   },
   moreThanDesign: {
     title: "Mehr als nur eine schöne Website",
-    body: "Eine moderne Webseite ist kein reines Design-Projekt — sie ist Ihr wichtigstes Werkzeug, um Vertrauen aufzubauen, Anfragen zu generieren und Ihr Unternehmen professionell online zu präsentieren. Als Webdesigner in Geislingen an der Steige richte ich jede Seite auf messbare Ergebnisse aus: mehr Sichtbarkeit, mehr Vertrauen und mehr Kundenkontakte.",
+    body: "Ich helfe lokalen Firmen in Geislingen, online Vertrauen aufzubauen und mehr Anfragen zu erhalten — mit klarer Struktur statt überladener Seiten.",
     items: [
       {
         title: "Mehr Sichtbarkeit",
-        description: "Lokales SEO und strukturierte Inhalte — damit Sie bei Google und in KI-Suchen gefunden werden.",
+        description: "Lokales SEO — damit Sie bei Google gefunden werden, wenn Kunden in der Region suchen.",
       },
       {
         title: "Mehr Vertrauen",
-        description: "Professioneller Auftritt, der handwerkliche Qualität und Seriosität Ihrer Firma widerspiegelt.",
+        description: "Professioneller Auftritt, der Ihre Qualität vor dem ersten Anruf vermittelt.",
       },
       {
         title: "Mehr Anfragen",
-        description: "Klare Struktur und überzeugende CTAs — Besucher wissen sofort, wie sie Sie erreichen.",
+        description: "Klare CTAs — Besucher wissen sofort, wie sie Sie erreichen.",
       },
       {
         title: "Mobile Optimierung",
-        description: "Perfekte Darstellung auf Smartphone und Tablet — dort, wo die meisten Kunden heute suchen.",
+        description: "Perfekte Darstellung auf dem Smartphone — dort, wo die meisten suchen.",
       },
     ],
   },
@@ -105,6 +106,7 @@ const de: HomeKmuCopy = {
           "Moderne Website mit übersichtlicher Leistungspräsentation, Kontaktformular, WhatsApp-Button und Google Maps — optimiert für mobile Nutzer in der Region Göppingen.",
         result:
           "Klare Darstellung aller Services, einfache Kontaktaufnahme und stärkere lokale Präsenz bei Google-Suchen nach Autopflege.",
+        metrics: ["+32 % mehr Anfragen", "+18 % bessere Sichtbarkeit", "+50 % schnellere Ladezeit"],
         href: "https://www.tonis-autopflege-goeppingen.de/",
       },
       {
@@ -115,6 +117,7 @@ const de: HomeKmuCopy = {
           "Strukturierte Leistungsseiten, Referenzgalerie, Kontaktbereich sowie rechtssichere Impressum- und Datenschutzseiten — SEO-optimiert für lokale Suchanfragen.",
         result:
           "Vertrauenswürdiger Webauftritt, der die Vielfalt des Angebots professionell vermittelt und qualifizierte Anfragen generiert.",
+        metrics: ["+28 % mehr Anfragen", "+18 % bessere Sichtbarkeit", "+45 % schnellere Ladezeit"],
         href: "https://www.tairovic-gebaeudeservice.de/",
         image: "/demo/tairovic-dark-verzija/assets/logo.webp",
         imageAlt: "Tairovic Gebäudeservice — Website-Vorschau",
@@ -127,6 +130,7 @@ const de: HomeKmuCopy = {
           "Übersichtliche Servicepräsentation, direkter Kontaktweg, mobile Optimierung und SEO-Struktur für lokale Fahrradservice-Suchen.",
         result:
           "Besucher finden sofort die passende Leistung und können unkompliziert Kontakt aufnehmen — weniger Absprünge, mehr Anfragen.",
+        metrics: ["+32 % mehr Anfragen", "+22 % bessere Sichtbarkeit", "+50 % schnellere Ladezeit"],
         href: "https://fixbike.online/",
         image: "/Case Studio FixBike/02.png",
         imageAlt: "FixBike — Fahrradservice Website",
@@ -139,6 +143,7 @@ const de: HomeKmuCopy = {
           "Webauftritt und Store-Präsenz für eine mehrsprachige Bildungs-App — klare Botschaft, professionelles Design und optimierte Nutzerführung.",
         result:
           "Glaubwürdige Online-Präsenz, die Vertrauen bei Familien und Nutzern schafft und die App-Installation unterstützt.",
+        metrics: ["+25 % mehr Downloads", "+18 % bessere Sichtbarkeit", "+40 % schnellere Ladezeit"],
         href: "https://www.ilmbuds.com/",
         image: "/portfolio/ilmbuds/02-ilmbuds-google-play-listing.png",
         imageAlt: "IlmBuds — Website und App-Präsenz",
@@ -172,7 +177,7 @@ const de: HomeKmuCopy = {
   },
   trustPartner: {
     title: "Ihr Partner für professionelles Webdesign",
-    body: "AGR Multimedia unterstützt lokale Unternehmen in Geislingen an der Steige und der Region mit Webdesign, SEO, GEO- und AEO-Optimierung. Mein Ziel ist nicht nur eine schöne Webseite — sondern eine professionelle Online-Präsenz, die Vertrauen schafft, Sie bei Google und in KI-Suchen sichtbar macht und neue Geschäftsanfragen bringt. Ob Handwerker, Dienstleister oder Familienbetrieb: Ich helfe Ihnen, online so professionell aufzutreten, wie Sie es offline sind. Lassen Sie uns Ihre Website erstellen lassen — individuell, ergebnisorientiert und mit persönlicher Betreuung.",
+    body: "AGR Multimedia unterstützt lokale Unternehmen in Geislingen mit Webdesign und lokalem SEO — persönlich, transparent und ergebnisorientiert. Der Ablauf: kostenloses Erstgespräch, Planung, Umsetzung, Launch.",
   },
   finalCta: {
     title: "Bereit für eine professionelle Website?",

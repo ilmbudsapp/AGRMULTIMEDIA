@@ -2960,7 +2960,7 @@ export const translations: Record<Exclude<Language, "al">, Translations> = {
       location: "Geislingen an der Steige",
       copyright: "© 2026 MULTIMEDIA AGRONDESIGN. Alle Rechte vorbehalten.",
       privacy: "Datenschutz",
-      terms: "Nutzungsbedingungen",
+      terms: "AGB / Nutzungsbedingungen",
       cookies: "Cookies",
       impresum: "Impressum",
       career: "Karriere"

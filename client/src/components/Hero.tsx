@@ -80,7 +80,7 @@ export default function Hero() {
             {premium.hero.subheading}
           </p>
 
-          <div className="mt-10 flex flex-col items-stretch justify-center gap-4 sm:flex-row lg:justify-start">
+          <div className="mt-10 flex justify-center lg:justify-start">
             <button
               type="button"
               onClick={() => scrollTo("contact")}
@@ -88,14 +88,6 @@ export default function Hero() {
               data-testid="hero-cta-primary"
             >
               {premium.hero.primaryCta}
-            </button>
-            <button
-              type="button"
-              onClick={() => scrollTo("portfolio")}
-              className="min-h-[48px] rounded-full border border-white/20 bg-white/5 px-8 py-3 text-[0.9375rem] font-medium text-white backdrop-blur-sm transition duration-200 hover:scale-[1.02] hover:border-blue-300/50"
-              data-testid="hero-cta-secondary"
-            >
-              {premium.hero.secondaryCta}
             </button>
           </div>
           <p className="mt-3 text-center text-xs text-white/70 sm:text-sm lg:text-left">{premium.hero.ctaMeta}</p>

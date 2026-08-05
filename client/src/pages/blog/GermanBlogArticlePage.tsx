@@ -48,7 +48,8 @@ export default function GermanBlogArticlePage() {
       <main id="main-content" className="pt-8">
         <article className="mx-auto max-w-3xl px-4 pb-16 sm:px-6 lg:px-8">
           <p className="text-sm text-blue-300">
-            {post.category} · Veröffentlicht: {post.date}
+            {post.category} · Veröffentlicht:{" "}
+            <time dateTime={post.date}>{post.date}</time>
           </p>
           <AuthorByline className="mt-3" variant="lightOnDark" language="de" />
           <h1 className="mt-4 text-3xl font-bold text-white md:text-4xl">{post.title}</h1>
@@ -79,16 +80,24 @@ export default function GermanBlogArticlePage() {
             <Link href={ROUTES.webdesignSeo} className="font-medium text-blue-300 hover:underline">
               Webdesign &amp; SEO
             </Link>
-            <Link href="/videoproduktion" className="font-medium text-blue-300 hover:underline">
-              Videoproduktion
-            </Link>
-            <Link href={ROUTES.about} className="font-medium text-blue-300 hover:underline">
-              Über AGR Multimedia
+            <Link href={ROUTES.portfolio} className="font-medium text-blue-300 hover:underline">
+              Portfolio
             </Link>
             <Link href={ROUTES.kontakt} className="font-medium text-blue-300 hover:underline">
               Kontakt
             </Link>
           </nav>
+
+          <div className="mt-10 rounded-2xl border border-blue-400/30 bg-blue-500/10 px-6 py-8 text-center">
+            <p className="text-lg font-semibold text-white">Projekt starten?</p>
+            <Link
+              href={ROUTES.kontakt}
+              className="mt-4 inline-flex items-center gap-2 rounded-full bg-white px-8 py-3 text-sm font-semibold text-[#0a0a0f] hover:bg-white/90"
+            >
+              Projekt starten → Kontakt
+            </Link>
+          </div>
+
           <RelatedArticles currentSlug={post.slug} />
         </article>
         <Contact />

@@ -96,9 +96,9 @@ const CORE_DE: Record<string, RouteSeo> = {
       "Webdesign Geislingen, SEO, On-Page SEO, responsives Webdesign, digitales Marketing",
   },
   "/webdesign-geislingen-an-der-steige": {
-    title: "Webdesign Geislingen an der Steige | Websites & SEO — AGR Multimedia",
+    title: "Webdesign Geislingen – Websites für KMU",
     description:
-      "Professionelles Webdesign in Geislingen an der Steige: moderne Business-Websites, lokales SEO, responsive Design für Handwerk und kleine Firmen. Individuelles Angebot nach Erstgespräch.",
+      "Webdesign in Geislingen an der Steige für Handwerk und lokale Firmen. Lokales SEO, responsive Design. Jetzt unverbindlich anfragen.",
     keywords:
       "Webdesign Geislingen an der Steige, Webdesigner Geislingen, Website erstellen lassen Geislingen, Webagentur Geislingen, SEO Agentur Geislingen, Webdesign Göppingen",
   },
@@ -249,9 +249,9 @@ const CORE_AL: Record<string, RouteSeo> = {
 /* ─── Primary multi-page routes (SEO / AEO / GEO) ─── */
 const PRIMARY_MULTIPAGE_EN: Record<string, RouteSeo> = {
   "/webdesign-seo": {
-    title: "Professional Web Design & SEO in Geislingen | AGRMULTIMEDIA",
+    title: "Web Design & SEO Geislingen – Business Sites",
     description:
-      "Business websites with on-page SEO, AEO and GEO optimisation — individual quote after a free consultation. AGR Multimedia, Geislingen an der Steige.",
+      "Professional web design with SEO for SMEs in Geislingen. Clear structure, mobile-first, local visibility. Request a free consultation today.",
     keywords: "web design Geislingen, SEO, AEO, GEO, web design quote, AGR Multimedia",
   },
   "/videoproduktion": {
@@ -276,9 +276,9 @@ const PRIMARY_MULTIPAGE_EN: Record<string, RouteSeo> = {
 
 const PRIMARY_MULTIPAGE_DE: Record<string, RouteSeo> = {
   "/webdesign-seo": {
-    title: "Professionelles Webdesign & SEO in Geislingen - AGRMULTIMEDIA",
+    title: "Webdesign & SEO Geislingen – Business-Websites",
     description:
-      "Business-Websites mit On-Page-SEO, AEO- und GEO-Optimierung — individuelles Angebot nach kostenlosem Erstgespräch. AGR Multimedia, Geislingen an der Steige.",
+      "Professionelles Webdesign mit SEO für KMU in Geislingen. Klare Struktur, mobile Optimierung, lokale Sichtbarkeit. Jetzt Beratung anfragen.",
     keywords: "Webdesign Geislingen, SEO, AEO, GEO, Webdesign Angebot, AGR Multimedia",
   },
   "/videoproduktion": {

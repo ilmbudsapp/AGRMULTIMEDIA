@@ -3,13 +3,12 @@ import Hero from "@/components/Hero";
 import HomeFaqJsonLd from "@/components/HomeFaqJsonLd";
 import HomeLocalBusinessJsonLd from "@/components/HomeLocalBusinessJsonLd";
 import {
-  HomeKmuWhyUs,
   HomeKmuMoreThanDesign,
   HomeKmuPortfolio,
-  HomeKmuProcess,
   HomeKmuTrustPartner,
   HomeKmuFinalCta,
 } from "@/components/HomeKmuSections";
+import SeoAeoEnhancement from "@/components/SeoAeoEnhancement";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import { MAIN_LANDMARK_LABEL } from "@/lib/a11yLandmarks";
@@ -23,12 +22,13 @@ export default function Home() {
       <Navigation />
       <main id="main-content" aria-label={MAIN_LANDMARK_LABEL[currentLanguage]}>
         <Hero />
-        <HomeKmuWhyUs />
         <HomeKmuMoreThanDesign />
         <HomeKmuPortfolio />
-        <HomeKmuProcess />
         <HomeKmuTrustPartner />
         <HomeKmuFinalCta />
+        <section className="premium-section border-t border-[#333333] py-16 md:py-20">
+          <SeoAeoEnhancement variant="home" />
+        </section>
         <Contact />
         <HomeFaqJsonLd />
         <HomeLocalBusinessJsonLd />

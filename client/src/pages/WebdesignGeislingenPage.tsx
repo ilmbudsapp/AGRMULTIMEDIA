@@ -4,6 +4,8 @@ import { ChevronDown } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import BreadcrumbNav from "@/components/BreadcrumbNav";
+import PageTableOfContents from "@/components/PageTableOfContents";
+import SeoAeoEnhancement from "@/components/SeoAeoEnhancement";
 import {
   WEBDESIGN_LANDING_FAQ,
   WEBDESIGN_LANDING_H1,
@@ -28,6 +30,15 @@ function LandingJsonLd() {
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(graph) }} />
   );
 }
+
+const TOC_ITEMS = [
+  { id: "webdesign-geislingen-einleitung", label: "Webdesign in Geislingen" },
+  { id: "moderne-business-websites", label: "Business-Websites" },
+  { id: "seo-optimierte-seiten", label: "SEO-optimierte Seiten" },
+  { id: "lokale-google-sichtbarkeit", label: "Lokale Google-Sichtbarkeit" },
+  { id: "agr-multimedia-lokal", label: "AGR Multimedia vor Ort" },
+  { id: "faq", label: "Häufige Fragen" },
+];
 
 export default function WebdesignGeislingenPage() {
   const [faqOpenIndex, setFaqOpenIndex] = useState<number | null>(0);
@@ -68,6 +79,8 @@ export default function WebdesignGeislingenPage() {
                 </Link>
               </div>
             </header>
+
+            <PageTableOfContents items={TOC_ITEMS} />
 
             <div className="space-y-14 text-white/75">
               {WEBDESIGN_LANDING_SECTIONS.map((section) => (
@@ -128,6 +141,8 @@ export default function WebdesignGeislingenPage() {
                 })}
               </div>
             </section>
+
+            <SeoAeoEnhancement variant="pillar" className="mt-16" />
           </div>
         </article>
       </main>

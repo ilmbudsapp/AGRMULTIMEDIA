@@ -194,39 +194,4 @@ export const WEBDESIGN_LANDING_FAQ: WebdesignLandingFaqItem[] = [
     answer:
       "Ja. Jede Website, die ich erstelle, ist für Smartphone, Tablet und Desktop optimiert. Navigation, Schriftgrößen und Layout passen sich automatisch an — das ist Standard, weil die meisten Besucher mobil unterwegs sind.",
   },
-  {
-    question: "Können Sie meine bestehende Website überarbeiten?",
-    answer:
-      "Ja. Ein Redesign oder Relaunch ist oft sinnvoller als ein kompletter Neustart. Ich prüfe Struktur, Technik und Inhalte, modernisiere Design und Performance und behalte das bei, was bereits gut funktioniert — etwa Domain, E-Mail oder bewährte Texte.",
-  },
-  {
-    question: "Arbeiten Sie mit WordPress?",
-    answer:
-      "Ja, WordPress setze ich ein, wenn Sie Inhalte später selbst pflegen möchten. Je nach Anforderung kommen auch modernere, schlanke Lösungen infrage. Entscheidend ist, dass Technik, Geschwindigkeit und Pflegeaufwand zu Ihrem Alltag passen.",
-  },
-  {
-    question: "Helfen Sie auch bei Google Maps und lokaler Sichtbarkeit?",
-    answer:
-      "Grundlegend ja: Ich integriere Google Maps, sorge für konsistente Kontaktdaten auf der Website und berate zur Abstimmung mit Ihrem Google-Unternehmensprofil. Damit unterstützen Sie lokale Suchanfragen in Geislingen und der Region — ohne aggressives Keyword-Stuffing.",
-  },
-  {
-    question: "Muss ich alle Texte und Bilder selbst liefern?",
-    answer:
-      "Idealerweise ja — niemand kennt Ihr Geschäft besser als Sie. Wenn nötig, helfe ich beim Strukturieren und Formulieren oder ergänze Platzhalter, bis finale Inhalte vorliegen. Echte Fotos aus Ihrem Betrieb wirken auf Kunden deutlich glaubwürdiger als generische Bilder.",
-  },
-  {
-    question: "Betreuen Sie auch Kunden außerhalb von Geislingen?",
-    answer:
-      "Ja. Mein Studio sitzt in Geislingen an der Steige, ich arbeite aber auch mit Unternehmen in Göppingen, Richtung Ulm und in der weiteren Region — sowie remote, wenn Abstimmung per Video und E-Mail für Sie passt.",
-  },
-  {
-    question: "Was passiert nach dem Launch der Website?",
-    answer:
-      "Nach der Veröffentlichung können Sie mich für Updates, neue Seiten oder technische Pflege kontaktieren. WordPress-Seiten profitieren von gelegentlichen Updates; auch bei schlankeren Lösungen bin ich erreichbar, wenn sich Ihr Angebot ändert oder Sie etwas anpassen möchten.",
-  },
-  {
-    question: "Wie starte ich ein Webdesign-Projekt mit AGR Multimedia?",
-    answer:
-      "Schreiben Sie mir über das Kontaktformular auf agrmultimedia.eu, per E-Mail oder WhatsApp. Kurz beschreiben Sie Ihr Unternehmen, Ihr Ziel und ob es um eine neue Website oder ein Redesign geht. In der Regel melde ich mich innerhalb von 24 Stunden mit einer ersten Einschätzung und den nächsten Schritten.",
-  },
 ];

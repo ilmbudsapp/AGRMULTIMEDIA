@@ -194,9 +194,9 @@ const en: SpecTranslations = {
     availableIn: 'DE · EN',
   },
   seo: {
-    title: "Web design Geislingen an der Steige | Local business websites — AGR Multimedia",
+    title: "Web design Geislingen – Local business websites",
     description:
-      "Web design in Geislingen an der Steige: professional websites for trades and SMEs — responsive, SEO-ready. Individual quote after a free consultation: agron6922@gmail.com",
+      "Professional websites for local businesses in Geislingen. More customers, clear structure, modern design. Request a free consultation today.",
   },
   heroProjects: {
     heading: 'Featured projects',
@@ -412,9 +412,9 @@ const de: SpecTranslations = {
     availableIn: 'DE · EN',
   },
   seo: {
-    title: "Webdesign Geislingen – Websites, die neue Kunden bringen | AGR Multimedia",
+    title: "Webdesign Geislingen – Websites für lokale Firmen",
     description:
-      "Webdesign Geislingen an der Steige: professionelle Websites für Handwerker, lokale Unternehmen und Dienstleister — SEO, GEO und AEO optimiert. Kostenlose Beratung: agron6922@gmail.com",
+      "Professionelle Websites für lokale Firmen in Geislingen. Mehr Kunden, klare Struktur, moderne Designs. Jetzt Beratung anfragen.",
   },
   heroProjects: {
     heading: 'Ausgewählte Projekte',

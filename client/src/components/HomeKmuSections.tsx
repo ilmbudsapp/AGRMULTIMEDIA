@@ -151,6 +151,15 @@ export function HomeKmuPortfolio() {
                       <dd className="mt-1.5 leading-relaxed text-white/80">{value}</dd>
                     </div>
                   ))}
+                  {project.metrics && project.metrics.length > 0 ? (
+                    <ul className="mt-4 space-y-1.5 rounded-lg border border-emerald-500/20 bg-emerald-500/5 px-4 py-3">
+                      {project.metrics.map((metric) => (
+                        <li key={metric} className="text-sm font-medium text-emerald-200/90">
+                          {metric}
+                        </li>
+                      ))}
+                    </ul>
+                  ) : null}
                 </dl>
                 <a
                   href={project.href}
