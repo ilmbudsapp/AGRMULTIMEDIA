@@ -20,7 +20,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     industry: "Autopflege & KFZ",
     location: "Göppingen, Baden-Württemberg",
     liveUrl: "https://www.tonis-autopflege-goeppingen.de/",
-    heroImage: "/portfolio/web-design/fixbike-fahrradservice-neuwied-hero.webp",
+    heroImage: "/portfolio/reinigung/01-vorher-nachher.jpg",
     problem: [
       "Kaum online sichtbar bei lokalen Suchanfragen nach Autopflege in der Region Göppingen.",
       "Veralteter oder fehlender professioneller Webauftritt — Kunden fanden vor allem über Mund-zu-Mund-Propaganda.",

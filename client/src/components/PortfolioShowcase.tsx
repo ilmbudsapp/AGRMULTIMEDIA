@@ -18,6 +18,8 @@ import { fotoKreiraneSaAiGalleryByLang } from "@/data/fotoKreiraneSaAiGallery";
 import type { PortfolioFilterId } from "@/lib/portfolioPageI18n";
 import { toServiceLang } from "@/lib/servicePageI18n";
 
+const TONIS_AUTOPFLEGE_LIVE = "https://www.tonis-autopflege-goeppingen.de/";
+const TONIS_AUTOPFLEGE_IMG = "/portfolio/reinigung/01-vorher-nachher.jpg";
 const TAIROVIC_DARK_DEMO = "/demo/tairovic-dark-verzija/index.html";
 const TAIROVIC_DARK_IMG = "/demo/tairovic-dark-verzija/assets/logo.webp";
 const AISA_DEMO = "/demo/aisa-osmani/index.html";
@@ -223,6 +225,25 @@ export default function PortfolioShowcase() {
               intro={p.categories.web.intro}
             >
               <div className="grid gap-8 lg:grid-cols-2 xl:grid-cols-3">
+                <ProjectCard
+                  image={TONIS_AUTOPFLEGE_IMG}
+                  title={p.projects.tonisAutopflege.title}
+                  description={p.projects.tonisAutopflege.description}
+                  pillarLabel={p.categories.web.title}
+                  pillarIcon={LayoutGrid}
+                  pillarClass={webPillarClass}
+                  gradeBadge={p.projects.tonisAutopflege.gradeBadge}
+                >
+                  <a
+                    href={TONIS_AUTOPFLEGE_LIVE}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={LIVE_BTN}
+                  >
+                    {p.projects.tonisAutopflege.liveCta}
+                    <ExternalLink className="h-4 w-4" aria-hidden />
+                  </a>
+                </ProjectCard>
                 <ProjectCard
                   image={TAIROVIC_DARK_IMG}
                   imageFit="contain"

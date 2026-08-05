@@ -108,6 +108,8 @@ const de: HomeKmuCopy = {
           "Klare Darstellung aller Services, einfache Kontaktaufnahme und stärkere lokale Präsenz bei Google-Suchen nach Autopflege.",
         metrics: ["+32 % mehr Anfragen", "+18 % bessere Sichtbarkeit", "+50 % schnellere Ladezeit"],
         href: "https://www.tonis-autopflege-goeppingen.de/",
+        image: "/portfolio/reinigung/01-vorher-nachher.jpg",
+        imageAlt: "Toni's Autopflege Göppingen — Website-Vorschau",
       },
       {
         name: "Tairovic Gebäudeservice",
@@ -298,7 +300,10 @@ en.portfolio = {
       implementation:
         "Modern website with clear service overview, contact form, WhatsApp button and Google Maps — optimised for mobile users in the Göppingen area.",
       result: "Clear presentation of all services, easy contact and stronger local presence in Google searches for car care.",
+      metrics: ["+32% more enquiries", "+18% better visibility", "+50% faster load time"],
       href: "https://www.tonis-autopflege-goeppingen.de/",
+      image: "/portfolio/reinigung/01-vorher-nachher.jpg",
+      imageAlt: "Toni's Autopflege Göppingen — website preview",
     },
     {
       name: "Tairovic Gebäudeservice",

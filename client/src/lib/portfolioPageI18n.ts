@@ -33,6 +33,7 @@ export interface PortfolioPageCopy {
     ux: { title: string; description: string; cta: string };
   };
   projects: {
+    tonisAutopflege: PortfolioProjectCopy;
     tairovicDarkVerzija: PortfolioProjectCopy;
     aisaOsmani: PortfolioProjectCopy;
     fixbike: PortfolioProjectCopy;
@@ -104,6 +105,13 @@ const en: PortfolioPageCopy = {
     },
   },
   projects: {
+    tonisAutopflege: {
+      title: "Toni's Autopflege Göppingen",
+      description:
+        "Professional car care website for Göppingen — service overview, WhatsApp contact, Google Maps and local SEO for mobile customers.",
+      liveCta: "View live website",
+      gradeBadge: "Live · Local SEO",
+    },
     tairovicDarkVerzija: {
       title: "Tairovic Gebäudeservice",
       description:
@@ -200,6 +208,13 @@ const de: PortfolioPageCopy = {
     },
   },
   projects: {
+    tonisAutopflege: {
+      title: "Toni's Autopflege Göppingen",
+      description:
+        "Professionelle Autopflege-Website für Göppingen — Leistungsübersicht, WhatsApp-Kontakt, Google Maps und lokales SEO für mobile Kunden.",
+      liveCta: "Website live ansehen",
+      gradeBadge: "Live · Lokales SEO",
+    },
     tairovicDarkVerzija: {
       title: "Tairovic Gebäudeservice",
       description:
@@ -296,6 +311,13 @@ const sr: PortfolioPageCopy = {
     },
   },
   projects: {
+    tonisAutopflege: {
+      title: "Toni's Autopflege Göppingen",
+      description:
+        "Profesionalni sajt za autopflege u Göppingenu — pregled usluga, WhatsApp kontakt, Google Maps i lokalni SEO za mobilne korisnike.",
+      liveCta: "Pogledaj live sajt",
+      gradeBadge: "Live · Lokalni SEO",
+    },
     tairovicDarkVerzija: {
       title: "Tairovic Gebäudeservice",
       description:
@@ -392,6 +414,13 @@ const it: PortfolioPageCopy = {
     },
   },
   projects: {
+    tonisAutopflege: {
+      title: "Toni's Autopflege Göppingen",
+      description:
+        "Sito professionale per autopflege a Göppingen — servizi, contatto WhatsApp, Google Maps e SEO locale per clienti mobile.",
+      liveCta: "Sito live",
+      gradeBadge: "Live · SEO locale",
+    },
     tairovicDarkVerzija: {
       title: "Tairovic Gebäudeservice",
       description:
@@ -488,6 +517,13 @@ const al: PortfolioPageCopy = {
     },
   },
   projects: {
+    tonisAutopflege: {
+      title: "Toni's Autopflege Göppingen",
+      description:
+        "Faqe profesionale për autopflege në Göppingen — shërbime, WhatsApp, Google Maps dhe SEO lokal për klientë mobil.",
+      liveCta: "Shiko faqen live",
+      gradeBadge: "Live · SEO lokal",
+    },
     tairovicDarkVerzija: {
       title: "Tairovic Gebäudeservice",
       description:
