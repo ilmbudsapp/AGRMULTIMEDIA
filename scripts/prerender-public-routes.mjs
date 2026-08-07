@@ -133,9 +133,9 @@ const staticRoutes = [
   },
   {
     dir: "webdesign-geislingen-an-der-steige",
-    title: "Webdesign Geislingen an der Steige | Websites & SEO — AGR Multimedia",
+    title: "Webdesign Geislingen an der Steige | Professionelle Websites für KMU — AGR Multimedia",
     description:
-      "Professionelles Webdesign in Geislingen: Business-Websites, lokales SEO, responsive Design für Handwerk und KMU.",
+      "Professionelles Webdesign in Geislingen an der Steige für Handwerk und lokale Firmen. Lokales SEO, responsive Design, persönliche Betreuung.",
     h1: "Webdesign Geislingen an der Steige — professionelle Websites für lokale Unternehmen",
     lead: "Moderne Business-Websites mit lokalem SEO für Handwerk, Dienstleister und kleine Firmen in Geislingen.",
     canonical: "https://www.agrmultimedia.eu/webdesign-geislingen-an-der-steige",

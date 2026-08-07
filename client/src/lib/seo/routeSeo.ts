@@ -9,7 +9,7 @@ function merge(...objs: Record<string, RouteSeo>[]): Record<string, RouteSeo> {
 /* ─── Core service routes (shared structure) ─── */
 const CORE_EN: Record<string, RouteSeo> = {
   "/": {
-    title: "Web design Geislingen an der Steige | SEO & GEO — websites that win clients",
+    title: "AGR Multimedia | Web design studio Geislingen an der Steige — SEO, video & graphics",
     description:
       "Web design studio in Geislingen an der Steige: websites, SEO, GEO/AEO, video & graphics for trades and SMEs. Free consultation — reply within 24h.",
     keywords:
@@ -68,7 +68,7 @@ const CORE_EN: Record<string, RouteSeo> = {
 
 const CORE_DE: Record<string, RouteSeo> = {
   "/": {
-    title: "Webdesign Geislingen an der Steige | SEO & GEO — Websites die Kunden bringen",
+    title: "AGR Multimedia | Webdesign-Studio Geislingen an der Steige — SEO, Video & Grafik",
     description:
       "Webdesign-Studio in Geislingen an der Steige: Websites, SEO, GEO/AEO, Video & Grafik für Handwerk und KMU. Kostenlose Erstberatung — Antwort in 24h.",
     keywords:
@@ -110,9 +110,9 @@ const CORE_DE: Record<string, RouteSeo> = {
       "Webdesign Geislingen, SEO, On-Page SEO, responsives Webdesign, digitales Marketing",
   },
   "/webdesign-geislingen-an-der-steige": {
-    title: "Webdesign Geislingen – Websites für KMU",
+    title: "Webdesign Geislingen an der Steige | Professionelle Websites für KMU — AGR Multimedia",
     description:
-      "Webdesign in Geislingen an der Steige für Handwerk und lokale Firmen. Lokales SEO, responsive Design. Jetzt unverbindlich anfragen.",
+      "Professionelles Webdesign in Geislingen an der Steige für Handwerk und lokale Firmen. Lokales SEO, responsive Design, persönliche Betreuung. Jetzt unverbindlich anfragen.",
     keywords:
       "Webdesign Geislingen an der Steige, Webdesigner Geislingen, Website erstellen lassen Geislingen, Webagentur Geislingen, SEO Agentur Geislingen, Webdesign Göppingen",
   },

@@ -61,8 +61,8 @@ export default function WebdesignGeislingenPage() {
                 {WEBDESIGN_LANDING_H1}
               </h1>
               <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/70 md:text-lg">
-                Moderne Business-Websites mit lokalem SEO für Handwerk, Dienstleister und kleine Firmen — persönlich
-                umgesetzt von AGR Multimedia.
+                Moderne Business-Websites mit lokalem SEO in Geislingen an der Steige — für Handwerk, Dienstleister und
+                kleine Firmen, persönlich umgesetzt von AGR Multimedia.
               </p>
               <div className="mt-8 flex flex-wrap justify-center gap-3">
                 <Link

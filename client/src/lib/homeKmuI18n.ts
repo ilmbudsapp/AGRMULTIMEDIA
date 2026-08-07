@@ -102,8 +102,8 @@ const de: HomeKmuCopy = {
     items: [
       {
         title: "Webdesign & Webentwicklung",
-        description: "Business-Websites für Handwerk und KMU — mobil, schnell, auf Anfragen ausgelegt.",
-        href: "/webdesign-seo",
+        description: "Business-Websites für Handwerk und KMU in Geislingen an der Steige — mobil, schnell, auf Anfragen ausgelegt.",
+        href: "/webdesign-geislingen-an-der-steige",
       },
       {
         title: "SEO, GEO & AEO",
@@ -291,8 +291,8 @@ const en: HomeKmuCopy = {
     items: [
       {
         title: "Web design & development",
-        description: "Business websites for trades and SMEs — mobile-first, fast, built to convert.",
-        href: "/webdesign-seo",
+        description: "Business websites for trades and SMEs in Geislingen an der Steige — mobile-first, fast, built to convert.",
+        href: "/webdesign-geislingen-an-der-steige",
       },
       {
         title: "SEO, GEO & AEO",

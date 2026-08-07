@@ -186,15 +186,15 @@ const en: SpecTranslations = {
     moreAbout: 'Full profile & background',
   },
   hero: {
-    h1: 'Web design, AI multimedia & digital marketing — Geislingen studio, worldwide clients',
+    h1: 'Your web design studio in Geislingen an der Steige — websites that win clients',
     subheadline:
-      'Websites, branding, AI-assisted content, and SEO—delivered with a clear process from Geislingen an der Steige.',
+      'Personal studio in Geislingen an der Steige: web design, SEO, GEO/AEO, video and graphics for trades and SMEs.',
     ctaPrimary: 'Get a quote',
     ctaSecondary: 'Selected work',
     availableIn: 'DE · EN',
   },
   seo: {
-    title: "Web design Geislingen an der Steige | SEO & GEO — websites that win clients",
+    title: "AGR Multimedia | Web design studio Geislingen an der Steige — SEO, video & graphics",
     description:
       "Web design studio in Geislingen an der Steige: websites, SEO, GEO/AEO, video & graphics for trades and SMEs. Free consultation — reply within 24h.",
   },
@@ -404,15 +404,15 @@ const de: SpecTranslations = {
     moreAbout: 'Zum vollständigen Profil',
   },
   hero: {
-    h1: 'Webdesign in Geislingen an der Steige — moderne Websites, die Kunden bringen',
+    h1: 'Ihr Webdesign-Studio in Geislingen an der Steige — Websites, die Kunden bringen',
     subheadline:
-      'Webdesign, SEO, GEO/AEO, Video und Grafik — persönlich aus Geislingen an der Steige für Handwerk, Dienstleister und KMU.',
+      'Persönliches Studio in Geislingen an der Steige: Webdesign, SEO, GEO/AEO, Video und Grafik für Handwerk, Dienstleister und KMU.',
     ctaPrimary: 'Angebot anfragen',
     ctaSecondary: 'Ausgewählte Arbeiten',
     availableIn: 'DE · EN',
   },
   seo: {
-    title: "Webdesign Geislingen an der Steige | SEO & GEO — Websites die Kunden bringen",
+    title: "AGR Multimedia | Webdesign-Studio Geislingen an der Steige — SEO, Video & Grafik",
     description:
       "Webdesign-Studio in Geislingen an der Steige: Websites, SEO, GEO/AEO, Video & Grafik für Handwerk und KMU. Kostenlose Erstberatung — Antwort in 24h.",
   },
