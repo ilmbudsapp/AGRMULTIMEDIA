@@ -1,4 +1,5 @@
 import { createContext, useContext, useState, useEffect, ReactNode, useMemo, useCallback } from 'react';
+import { useLocation } from 'wouter';
 import { Language, getTranslations, Translations } from '@/lib/i18n';
 import { getSpecTranslations, SpecTranslations } from '@/lib/specTranslations';
 
@@ -34,6 +35,7 @@ const LanguageContext = createContext<LanguageContextType | null>(null);
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const [currentLanguage, setCurrentLanguage] = useState<Language>('de');
+  const [location] = useLocation();
 
   useEffect(() => {
     try {
@@ -58,6 +60,10 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
       setCurrentLanguage('de');
     }
   }, []);
+
+  useEffect(() => {
+    syncLangParamToUrl(currentLanguage);
+  }, [currentLanguage, location]);
 
   useEffect(() => {
     document.documentElement.lang = currentLanguage;
