@@ -194,7 +194,7 @@ const en: SpecTranslations = {
     availableIn: 'DE · EN',
   },
   seo: {
-    title: "Web design Geislingen | SEO & GEO — websites that convert",
+    title: "Web design Geislingen an der Steige | SEO & GEO — websites that win clients",
     description:
       "Web design studio in Geislingen an der Steige: websites, SEO, GEO/AEO, video & graphics for trades and SMEs. Free consultation — reply within 24h.",
   },
@@ -412,7 +412,7 @@ const de: SpecTranslations = {
     availableIn: 'DE · EN',
   },
   seo: {
-    title: "Webdesign Geislingen | SEO & GEO — Websites die Anfragen bringen",
+    title: "Webdesign Geislingen an der Steige | SEO & GEO — Websites die Kunden bringen",
     description:
       "Webdesign-Studio in Geislingen an der Steige: Websites, SEO, GEO/AEO, Video & Grafik für Handwerk und KMU. Kostenlose Erstberatung — Antwort in 24h.",
   },

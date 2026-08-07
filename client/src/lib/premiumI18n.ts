@@ -90,15 +90,15 @@ type PremiumTranslations = {
 const en: PremiumTranslations = {
   hero: {
     eyebrow: "Web designer · Geislingen an der Steige, BW",
-    heading: "Websites that bring local businesses more enquiries",
+    heading: "Web design in Geislingen an der Steige — modern websites that win clients",
     subheading:
-      "Web design, SEO, GEO/AEO and multimedia for trades and SMEs — one contact person, studio in Geislingen, clients across Baden-Württemberg and the EU.",
+      "Your local studio in Geislingen an der Steige: web design, SEO, GEO/AEO, video and graphics for trades and SMEs — one contact person, clients across Baden-Württemberg and the EU.",
     bullets: [
       "One point of contact — no agency ping-pong",
       "SEO + GEO/AEO built in from day one",
       "Free consultation · Reply within 24 hours",
     ],
-    trustPills: ["Studio Geislingen", "Trades & SMEs", "EU clients", "Google reviews"],
+    trustPills: ["Geislingen an der Steige", "Trades & SMEs", "Baden-Württemberg", "Google reviews"],
     primaryCta: "Free consultation",
     secondaryCta: "View portfolio",
     ctaMeta: "No obligation · Individual quote · Reply within 24h",
@@ -211,15 +211,15 @@ const en: PremiumTranslations = {
 const de: PremiumTranslations = {
   hero: {
     eyebrow: "Webdesign-Studio · Geislingen an der Steige, BW",
-    heading: "Websites, die lokale Firmen mehr Anfragen bringen",
+    heading: "Webdesign in Geislingen an der Steige — moderne Websites, die Kunden bringen",
     subheading:
-      "Webdesign, SEO, GEO/AEO, Video und Grafik für Handwerk, Dienstleister und KMU — persönlich aus Geislingen, für Kunden in Baden-Württemberg und EU.",
+      "Ihr Studio vor Ort in Geislingen an der Steige: Webdesign, SEO, GEO/AEO, Video und Grafik für Handwerk, Dienstleister und KMU — persönlich, regional in Baden-Württemberg, auch EU-weit.",
     bullets: [
       "Ein Ansprechpartner — kein Agentur-Pingpong",
       "SEO + GEO/AEO von Anfang an mitgedacht",
       "Kostenlose Erstberatung · Antwort in 24h",
     ],
-    trustPills: ["Studio Geislingen", "Handwerk & KMU", "Baden-Württemberg", "Google-Bewertungen"],
+    trustPills: ["Geislingen an der Steige", "Handwerk & KMU", "Baden-Württemberg", "Google-Bewertungen"],
     primaryCta: "Kostenlose Erstberatung",
     secondaryCta: "Referenzen ansehen",
     ctaMeta: "Unverbindlich · Individuelles Angebot · Antwort innerhalb von 24h",

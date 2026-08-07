@@ -131,8 +131,8 @@ export default function Hero() {
                 poster={VIDEO_POSTER}
                 aria-label={
                   currentLanguage === "de"
-                    ? "Showreel — AGR Multimedia Webdesign Geislingen"
-                    : "Showreel — AGR Multimedia web design Geislingen"
+                    ? "Showreel — AGR Multimedia Webdesign Geislingen an der Steige"
+                    : "Showreel — AGR Multimedia web design Geislingen an der Steige"
                 }
               >
                 <source src={PROMO_VIDEO} type="video/mp4" />
@@ -142,8 +142,8 @@ export default function Hero() {
           </div>
           <figcaption className="mt-3 text-center text-xs text-white/45 lg:text-right">
             {currentLanguage === "de"
-              ? "Showreel — Webdesign & Multimedia aus Geislingen"
-              : "Showreel — web design & multimedia from Geislingen"}
+              ? "Showreel — Webdesign & Multimedia aus Geislingen an der Steige"
+              : "Showreel — web design & multimedia from Geislingen an der Steige"}
           </figcaption>
         </figure>
       </div>
