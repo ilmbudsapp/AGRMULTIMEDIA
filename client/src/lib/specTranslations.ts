@@ -404,9 +404,9 @@ const de: SpecTranslations = {
     moreAbout: 'Zum vollständigen Profil',
   },
   hero: {
-    h1: 'Webdesign, KI-Multimedia & digitales Marketing — Studio Geislingen, Kunden weltweit',
+    h1: 'Webdesign in Geislingen an der Steige — moderne Websites, die Kunden bringen',
     subheadline:
-      'Websites, Branding, KI-Inhalte und SEO—klarer Prozess aus Geislingen an der Steige.',
+      'Webdesign, SEO, GEO/AEO, Video und Grafik — persönlich aus Geislingen an der Steige für Handwerk, Dienstleister und KMU.',
     ctaPrimary: 'Angebot anfragen',
     ctaSecondary: 'Ausgewählte Arbeiten',
     availableIn: 'DE · EN',

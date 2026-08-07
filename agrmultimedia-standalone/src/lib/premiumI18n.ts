@@ -202,9 +202,9 @@ const en: PremiumTranslations = {
 
 const de: PremiumTranslations = {
   hero: {
-    heading: "Webdesign Geislingen – Websites, die neue Kunden bringen",
+    heading: "Webdesign in Geislingen an der Steige — moderne Websites, die Kunden bringen",
     subheading:
-      "Moderne Webseiten für Handwerker, lokale Unternehmen und Dienstleister. SEO-, GEO- und AEO-optimiert für Google und KI-Suchen.",
+      "Ihr Studio vor Ort in Geislingen an der Steige: Webdesign, SEO, GEO/AEO, Video und Grafik für Handwerk, Dienstleister und KMU — persönlich, regional in Baden-Württemberg, auch EU-weit.",
     bullets: [],
     primaryCta: "Kostenlose Beratung",
     secondaryCta: "Referenzen ansehen",

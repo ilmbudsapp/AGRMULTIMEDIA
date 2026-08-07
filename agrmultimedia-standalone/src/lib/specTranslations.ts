@@ -412,7 +412,7 @@ const de: SpecTranslations = {
     availableIn: 'DE · EN',
   },
   seo: {
-    title: "Webdesign Geislingen – Websites, die neue Kunden bringen | AGR Multimedia",
+    title: "Webdesign Geislingen an der Steige | SEO & GEO — Websites die Kunden bringen",
     description:
       "Webdesign Geislingen an der Steige: professionelle Websites für Handwerker, lokale Unternehmen und Dienstleister — SEO, GEO und AEO optimiert. Kostenlose Beratung: agron6922@gmail.com",
   },
