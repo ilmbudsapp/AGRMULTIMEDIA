@@ -47,34 +47,35 @@
   };
 
   const TITLES = {
-    home: "Gebäudereinigung Neuwied | Tairovic Gebäudeservice",
-    reinigung: "Gebäudereinigung Neuwied | Treppenhaus — Tairovic",
-    hausmeister: "Hausmeisterservice Neuwied | Objektbetreuung",
-    garten: "Gartenpflege Neuwied | Außenanlagenpflege",
+    home: "Gebäudereinigung Neuwied | Hausmeisterservice — Tairovic",
+    reinigung: "Gebäudereinigung Neuwied | Treppenhaus & Objektreinigung",
+    hausmeister: "Hausmeisterservice Neuwied | Objektbetreuung & Kontrolle",
+    garten: "Gartenpflege Neuwied | Rasen, Hecken & Außenanlagen",
     winter: "Winterdienst Neuwied | Schneeräumung & Streudienst",
-    arbeiten: "Unsere Arbeiten | Gebäudereinigung Neuwied",
-    about: "Über uns | Tairovic Gebäudeservice Neuwied",
-    kontakt: "Kontakt & Angebot | Tairovic Neuwied",
+    arbeiten: "Referenzen & Vorher-Nachher | Gebäudereinigung Neuwied",
+    about: "Über uns | Familienbetrieb Gebäudeservice Neuwied",
+    kontakt: "Kontakt & Angebot | Gebäudeservice Neuwied",
     impressum: "Impressum — Tairovic Gebäudeservice",
     datenschutz: "Datenschutzerklärung — Tairovic Gebäudeservice",
   };
 
   const META = {
-    home: "Gebäudereinigung, Hausmeisterservice, Gartenpflege und Winterdienst in Neuwied, Koblenz, Andernach und Umgebung. Tairovic Gebäudeservice — jetzt Angebot anfordern.",
+    home:
+      "Gebäudereinigung, Hausmeisterservice, Garten- & Winterdienst in Neuwied, Koblenz, Andernach & Bendorf. Für Hausverwaltungen & Gewerbe — kostenloses Angebot, Antwort in 24h.",
     reinigung:
-      "Gebäudereinigung Neuwied: Treppenhausreinigung, Grundreinigung und Objektreinigung für Wohnanlagen und Gewerbe. Individuelles Angebot von Tairovic.",
+      "Gebäudereinigung Neuwied: Treppenhaus-, Unterhalts- & Grundreinigung für Wohnanlagen und Gewerbe. Feste Intervalle, faires Angebot — Tairovic.",
     hausmeister:
-      "Hausmeisterservice Neuwied: Objektkontrollen, Kleinreparaturen und zuverlässige Objektbetreuung für Wohnanlagen und Gewerbe.",
+      "Hausmeisterservice Neuwied: Objektkontrollen, Kleinreparaturen und Betreuung für Hausverwaltungen und Gewerbe. Reaktion in 24h — Tairovic.",
     garten:
-      "Gartenpflege Neuwied: Rasen, Hecken, Beete und Außenanlagenpflege. Saisonale Pflege für Wohnanlagen und Privatkunden.",
+      "Gartenpflege Neuwied: Rasenmähen, Heckenschnitt, Laubpflege für Wohnanlagen und Gewerbe. Saisonale Außenanlagenpflege in Neuwied und Umgebung.",
     winter:
-      "Winterdienst Neuwied: Schneeräumung, Streudienst und sichere Wege für Wohnanlagen, Gewerbeobjekte und Privatkunden.",
+      "Winterdienst Neuwied: Schneeräumung, Streudienst und sichere Wege für Wohnanlagen, Gewerbe und Privatkunden. Bereitschaft & Dokumentation.",
     arbeiten:
-      "Unsere Arbeiten: Gebäudereinigung, Treppenhausreinigung und Vorher-Nachher-Ergebnisse in Neuwied — Tairovic Gebäudeservice.",
+      "Referenzen Tairovic: Vorher-Nachher-Fotos und Videos aus Gebäudereinigung, Hausmeister, Garten und Winterdienst in Neuwied.",
     about:
-      "Familie Tairovic — Gebäudeservice aus Neuwied. Gebäudereinigung, Hausmeister, Garten und Winterdienst aus einer Hand.",
+      "Familie Tairovic — Gebäudeservice in Neuwied seit 2020. Reinigung, Hausmeister, Garten und Winterdienst für Verwaltungen, WEGs und Gewerbe.",
     kontakt:
-      "Kontakt Tairovic Gebäudeservice Neuwied: Angebot für Reinigung, Hausmeister, Gartenpflege oder Winterdienst anfragen.",
+      "Angebot für Gebäudereinigung, Hausmeister, Garten oder Winterdienst in Neuwied anfragen. Tel. +49 1520 8531992 — Antwort in 24h.",
     impressum: "Impressum — Tairovic Gebäudeservice, Neuwied. Angaben gemäß DDG.",
     datenschutz: "Datenschutzerklärung — Tairovic Gebäudeservice, Neuwied.",
   };
@@ -226,6 +227,8 @@
       "@type": "LocalBusiness",
       "@id": BUSINESS_ID,
       name: "Tairovic Gebäudeservice",
+      description:
+        "Gebäudereinigung, Hausmeisterservice, Gartenpflege und Winterdienst in Neuwied für Hausverwaltungen, Eigentümergemeinschaften, Gewerbeobjekte und Privatkunden.",
       url: ORIGIN + "/",
       image: OG_IMAGE,
       telephone: "+49-1520-8531992",
@@ -237,10 +240,18 @@
         streetAddress: "Kirchstr. 32",
         postalCode: "56564",
         addressLocality: "Neuwied",
+        addressRegion: "Rheinland-Pfalz",
         addressCountry: "DE",
       },
       geo: { "@id": GEO_ID },
       areaServed: AREA_SERVED,
+      audience: [
+        { "@type": "BusinessAudience", audienceType: "Hausverwaltungen" },
+        { "@type": "BusinessAudience", audienceType: "Eigentümergemeinschaften" },
+        { "@type": "BusinessAudience", audienceType: "Gewerbeobjekte" },
+        { "@type": "BusinessAudience", audienceType: "Privatkunden" },
+      ],
+      knowsAbout: SERVICE_NAMES,
       sameAs: SAME_AS,
       priceRange: "$$",
       aggregateRating: {
@@ -309,7 +320,7 @@
       url: s.url,
       description: s.desc,
       provider: { "@id": BUSINESS_ID },
-      areaServed: { "@type": "City", name: "Neuwied" },
+      areaServed: AREA_SERVED,
     };
   }
 
