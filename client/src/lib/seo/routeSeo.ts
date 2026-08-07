@@ -9,7 +9,7 @@ function merge(...objs: Record<string, RouteSeo>[]): Record<string, RouteSeo> {
 /* ─── Core service routes (shared structure) ─── */
 const CORE_EN: Record<string, RouteSeo> = {
   "/": {
-    title: "AGR Multimedia | Web design studio Geislingen an der Steige — SEO, video & graphics",
+    title: "Web design Geislingen an der Steige | AGR Multimedia — websites that win clients",
     description:
       "Web design studio in Geislingen an der Steige: websites, SEO, GEO/AEO, video & graphics for trades and SMEs. Free consultation — reply within 24h.",
     keywords:
@@ -68,7 +68,7 @@ const CORE_EN: Record<string, RouteSeo> = {
 
 const CORE_DE: Record<string, RouteSeo> = {
   "/": {
-    title: "AGR Multimedia | Webdesign-Studio Geislingen an der Steige — SEO, Video & Grafik",
+    title: "Webdesign Geislingen an der Steige | AGR Multimedia — Websites die Kunden bringen",
     description:
       "Webdesign-Studio in Geislingen an der Steige: Websites, SEO, GEO/AEO, Video & Grafik für Handwerk und KMU. Kostenlose Erstberatung — Antwort in 24h.",
     keywords:

@@ -186,15 +186,15 @@ const en: SpecTranslations = {
     moreAbout: 'Full profile & background',
   },
   hero: {
-    h1: 'Your web design studio in Geislingen an der Steige — websites that win clients',
+    h1: 'Web design in Geislingen an der Steige — modern websites that win clients',
     subheadline:
-      'Personal studio in Geislingen an der Steige: web design, SEO, GEO/AEO, video and graphics for trades and SMEs.',
+      'Your studio in Geislingen an der Steige: modern websites, SEO, GEO/AEO, video and graphics for trades and SMEs.',
     ctaPrimary: 'Get a quote',
     ctaSecondary: 'Selected work',
     availableIn: 'DE · EN',
   },
   seo: {
-    title: "AGR Multimedia | Web design studio Geislingen an der Steige — SEO, video & graphics",
+    title: "Web design Geislingen an der Steige | AGR Multimedia — websites that win clients",
     description:
       "Web design studio in Geislingen an der Steige: websites, SEO, GEO/AEO, video & graphics for trades and SMEs. Free consultation — reply within 24h.",
   },
@@ -404,15 +404,15 @@ const de: SpecTranslations = {
     moreAbout: 'Zum vollständigen Profil',
   },
   hero: {
-    h1: 'Ihr Webdesign-Studio in Geislingen an der Steige — Websites, die Kunden bringen',
+    h1: 'Webdesign in Geislingen an der Steige — moderne Websites, die Kunden bringen',
     subheadline:
-      'Persönliches Studio in Geislingen an der Steige: Webdesign, SEO, GEO/AEO, Video und Grafik für Handwerk, Dienstleister und KMU.',
+      'Ihr Studio in Geislingen an der Steige: moderne Websites, SEO, GEO/AEO, Video und Grafik für Handwerk, Dienstleister und KMU.',
     ctaPrimary: 'Angebot anfragen',
     ctaSecondary: 'Ausgewählte Arbeiten',
     availableIn: 'DE · EN',
   },
   seo: {
-    title: "AGR Multimedia | Webdesign-Studio Geislingen an der Steige — SEO, Video & Grafik",
+    title: "Webdesign Geislingen an der Steige | AGR Multimedia — Websites die Kunden bringen",
     description:
       "Webdesign-Studio in Geislingen an der Steige: Websites, SEO, GEO/AEO, Video & Grafik für Handwerk und KMU. Kostenlose Erstberatung — Antwort in 24h.",
   },

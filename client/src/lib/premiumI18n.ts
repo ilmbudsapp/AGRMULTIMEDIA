@@ -90,9 +90,9 @@ type PremiumTranslations = {
 const en: PremiumTranslations = {
   hero: {
     eyebrow: "Web designer · Geislingen an der Steige, BW",
-    heading: "Your web design studio in Geislingen an der Steige — websites that win clients",
+    heading: "Web design in Geislingen an der Steige — modern websites that win clients",
     subheading:
-      "Personal studio in Geislingen an der Steige: web design, SEO, GEO/AEO, video and graphics for trades and SMEs — one contact person, regional in Baden-Württemberg, EU-wide too.",
+      "Your studio in Geislingen an der Steige: modern websites, SEO, GEO/AEO, video and graphics for trades and SMEs — personal service across Baden-Württemberg and the EU.",
     bullets: [
       "One point of contact — no agency ping-pong",
       "SEO + GEO/AEO built in from day one",
@@ -211,9 +211,9 @@ const en: PremiumTranslations = {
 const de: PremiumTranslations = {
   hero: {
     eyebrow: "Webdesign-Studio · Geislingen an der Steige, BW",
-    heading: "Ihr Webdesign-Studio in Geislingen an der Steige — Websites, die Kunden bringen",
+    heading: "Webdesign in Geislingen an der Steige — moderne Websites, die Kunden bringen",
     subheading:
-      "Persönliches Studio in Geislingen an der Steige: Webdesign, SEO, GEO/AEO, Video und Grafik für Handwerk, Dienstleister und KMU — regional in Baden-Württemberg, auch EU-weit.",
+      "Ihr Studio in Geislingen an der Steige: moderne Websites, SEO, GEO/AEO, Video und Grafik für Handwerk, Dienstleister und KMU — persönlich, regional in Baden-Württemberg, auch EU-weit.",
     bullets: [
       "Ein Ansprechpartner — kein Agentur-Pingpong",
       "SEO + GEO/AEO von Anfang an mitgedacht",
