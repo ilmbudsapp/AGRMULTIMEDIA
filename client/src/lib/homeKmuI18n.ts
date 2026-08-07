@@ -10,6 +10,11 @@ export type HomeKmuCopy = {
     body: string;
     items: { title: string; description: string }[];
   };
+  serviceLinks: {
+    title: string;
+    intro: string;
+    items: { title: string; description: string; href: string }[];
+  };
   portfolio: {
     title: string;
     branchLabel: string;
@@ -87,6 +92,28 @@ const de: HomeKmuCopy = {
       {
         title: "Mobile Optimierung",
         description: "Perfekte Darstellung auf dem Smartphone — dort, wo die meisten suchen.",
+      },
+    ],
+  },
+  serviceLinks: {
+    title: "Leistungen — klar zugeordnet",
+    intro:
+      "Primär entwickle ich Websites für lokale Firmen in Geislingen. Grafikdesign, Social Media und Marketing ergänzen das Angebot — jeweils auf eigenen Seiten, damit Google den richtigen Intent findet.",
+    items: [
+      {
+        title: "Webdesign & Webentwicklung",
+        description: "Business-Websites mit SEO für Handwerk, Dienstleister und KMU — Fokus: Anfragen und lokale Sichtbarkeit.",
+        href: "/webdesign-seo",
+      },
+      {
+        title: "Grafikdesign & Branding",
+        description: "Logo, Flyer und Markenvisuals als Ergänzung — professionell, passend zur Website.",
+        href: "/graphic-design",
+      },
+      {
+        title: "Social Media & Digital Marketing",
+        description: "Social-Media-Inhalte, Kampagnen und KI-Multimedia für Unternehmen in Geislingen und Umgebung.",
+        href: "/digital-marketing",
       },
     ],
   },
@@ -192,7 +219,7 @@ const de: HomeKmuCopy = {
   },
   trustPartner: {
     title: "Ihr Partner für professionelles Webdesign",
-    body: "AGR Multimedia unterstützt lokale Unternehmen in Geislingen mit Webdesign und lokalem SEO — persönlich, transparent und ergebnisorientiert. Der Ablauf: kostenloses Erstgespräch, Planung, Umsetzung, Launch.",
+    body: "AGR Multimedia ist Ihre Werbeagentur für Webdesign in Geislingen an der Steige — persönlich, regional und ergebnisorientiert. Fokus: Websites, die Anfragen bringen. Grafikdesign und Marketing ergänze ich bei Bedarf.",
   },
   finalCta: {
     title: "Bereit für eine professionelle Website?",
@@ -244,6 +271,28 @@ const en: HomeKmuCopy = {
       {
         title: "Mobile Optimisation",
         description: "Perfect display on smartphone and tablet — where most customers search today.",
+      },
+    ],
+  },
+  serviceLinks: {
+    title: "Services — clearly mapped",
+    intro:
+      "Primary focus: websites for local businesses in Geislingen. Graphic design, social media and marketing complement the offer — each on its own page for clearer search intent.",
+    items: [
+      {
+        title: "Web design & development",
+        description: "Business websites with SEO for trades and SMEs — built to generate enquiries.",
+        href: "/webdesign-seo",
+      },
+      {
+        title: "Graphic design & branding",
+        description: "Logos, flyers and brand visuals as a supporting service alongside your website.",
+        href: "/graphic-design",
+      },
+      {
+        title: "Social media & digital marketing",
+        description: "Social content, campaigns and AI multimedia for businesses in Geislingen and the region.",
+        href: "/digital-marketing",
       },
     ],
   },

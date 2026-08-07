@@ -194,9 +194,9 @@ const en: SpecTranslations = {
     availableIn: 'DE · EN',
   },
   seo: {
-    title: "Web design Geislingen – Local business websites",
+    title: "Web design Geislingen | Agency for local businesses",
     description:
-      "Professional websites for local businesses in Geislingen. More customers, clear structure, modern design. Request a free consultation today.",
+      "Web design & digital agency in Geislingen an der Steige: websites for trades and SMEs. Graphic design on request. Free consultation — reply within 24h.",
   },
   heroProjects: {
     heading: 'Featured projects',
@@ -412,9 +412,9 @@ const de: SpecTranslations = {
     availableIn: 'DE · EN',
   },
   seo: {
-    title: "Webdesign Geislingen – Websites für lokale Firmen",
+    title: "Webdesign Geislingen | Werbeagentur für lokale Firmen",
     description:
-      "Professionelle Websites für lokale Firmen in Geislingen. Mehr Kunden, klare Struktur, moderne Designs. Jetzt Beratung anfragen.",
+      "Webdesign & Werbeagentur in Geislingen an der Steige: Websites für Handwerk und KMU. Grafikdesign ergänzend. Kostenlose Erstberatung — Antwort in 24h.",
   },
   heroProjects: {
     heading: 'Ausgewählte Projekte',

@@ -9,6 +9,20 @@ function normalizeLang(raw: string | null): Language {
   return 'de';
 }
 
+function syncLangParamToUrl(lang: Language) {
+  const params = new URLSearchParams(window.location.search);
+  if (lang === 'de') {
+    params.delete('lang');
+  } else {
+    params.set('lang', lang);
+  }
+  const qs = params.toString();
+  const next = `${window.location.pathname}${qs ? `?${qs}` : ''}${window.location.hash}`;
+  if (next !== `${window.location.pathname}${window.location.search}${window.location.hash}`) {
+    window.history.replaceState({}, '', next);
+  }
+}
+
 interface LanguageContextType {
   currentLanguage: Language;
   setLanguage: (lang: Language) => void;
@@ -27,12 +41,8 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
       const paramLang = params.get('lang');
       if (paramLang) {
         const lang = normalizeLang(paramLang);
-        if (paramLang !== lang) {
-          params.set('lang', lang);
-          const next = `${window.location.pathname}${params.toString() ? `?${params}` : ''}${window.location.hash}`;
-          window.history.replaceState({}, '', next);
-        }
         setCurrentLanguage(lang);
+        syncLangParamToUrl(lang);
         return;
       }
 
@@ -58,6 +68,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
       setCurrentLanguage(lang);
       localStorage.setItem('preferred-language', lang);
       document.documentElement.lang = lang;
+      syncLangParamToUrl(lang);
     } catch (error) {
       console.warn('Error setting language:', error);
     }

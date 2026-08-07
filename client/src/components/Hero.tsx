@@ -9,6 +9,9 @@ const PROMO_VIDEO = encodeURI("/Werbung Finito FULL HD COMPRESSO.mp4");
 /** WebP poster first for LCP; PNG fallback via preload in index.html if needed */
 const VIDEO_POSTER = "/hero-workspace.webp";
 
+const SECONDARY_BTN =
+  "inline-flex min-h-[48px] items-center justify-center rounded-full border border-white/25 bg-white/5 px-8 py-3 text-[0.9375rem] font-semibold text-white transition hover:border-white/40 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300/70";
+
 export default function Hero() {
   const { currentLanguage } = useLanguage();
   const premium = getPremiumTranslations(currentLanguage);
@@ -38,7 +41,7 @@ export default function Hero() {
     >
       <img
         src={VIDEO_POSTER}
-        alt="AGR Multimedia Webdesign Studio Geislingen an der Steige — Showreel Vorschau"
+        alt="AGR Multimedia — Webdesign Studio Geislingen an der Steige, Baden-Württemberg"
         aria-hidden
         loading="eager"
         fetchPriority="high"
@@ -66,9 +69,10 @@ export default function Hero() {
 
       <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-10 px-4 sm:gap-12 sm:px-6 lg:grid-cols-2 lg:gap-14 lg:px-8">
         <div className="order-1 text-center lg:order-none lg:text-left animate-fade-in-up">
+          <p className="text-xs font-medium uppercase tracking-[0.18em] text-blue-200/80">{premium.hero.eyebrow}</p>
           <h1
             id="hero-h1"
-            className="scroll-mt-24 text-[2rem] font-semibold leading-[1.1] tracking-tight text-white sm:text-[2.35rem] md:text-5xl lg:text-[3.25rem]"
+            className="mt-4 scroll-mt-24 text-[2rem] font-semibold leading-[1.1] tracking-tight text-white sm:text-[2.35rem] md:text-5xl lg:text-[3.25rem]"
             data-testid="hero-title"
           >
             {premium.hero.heading}
@@ -80,7 +84,7 @@ export default function Hero() {
             {premium.hero.subheading}
           </p>
 
-          <div className="mt-10 flex justify-center lg:justify-start">
+          <div className="mt-10 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start">
             <button
               type="button"
               onClick={() => scrollTo("contact")}
@@ -89,15 +93,11 @@ export default function Hero() {
             >
               {premium.hero.primaryCta}
             </button>
+            <Link href={ROUTES.portfolio} className={SECONDARY_BTN} data-testid="hero-cta-secondary">
+              {premium.hero.secondaryCta}
+            </Link>
           </div>
           <p className="mt-3 text-center text-xs text-white/70 sm:text-sm lg:text-left">{premium.hero.ctaMeta}</p>
-          <p className="mt-4 text-center text-sm lg:text-left">
-            <Link href={ROUTES.webdesignGeislingen} className="text-blue-200/90 underline-offset-2 hover:underline">
-              {currentLanguage === "de"
-                ? "Webdesign Geislingen an der Steige im Detail"
-                : "Web design in Geislingen an der Steige — details"}
-            </Link>
-          </p>
         </div>
 
         <figure className="order-2 w-full max-w-lg justify-self-center p-2 sm:p-3 lg:order-none lg:max-w-none lg:justify-self-end animate-fade-in-up animate-fade-in-up-delay-2">
@@ -111,7 +111,11 @@ export default function Hero() {
                 playsInline
                 preload="metadata"
                 poster={VIDEO_POSTER}
-                aria-label="Showreel — preview without sound"
+                aria-label={
+                  currentLanguage === "de"
+                    ? "Showreel — AGR Multimedia Webdesign Geislingen"
+                    : "Showreel — AGR Multimedia web design Geislingen"
+                }
               >
                 <source src={PROMO_VIDEO} type="video/mp4" />
               </video>
@@ -119,7 +123,9 @@ export default function Hero() {
             </div>
           </div>
           <figcaption className="mt-2 text-center text-xs text-white/55">
-            Showreel preview — studio montage without sound (AGR Multimedia).
+            {currentLanguage === "de"
+              ? "Showreel — Webdesign & Multimedia aus Geislingen"
+              : "Showreel — web design & multimedia from Geislingen"}
           </figcaption>
         </figure>
       </div>

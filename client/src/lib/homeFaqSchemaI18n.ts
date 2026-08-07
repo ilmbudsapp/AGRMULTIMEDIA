@@ -9,6 +9,14 @@ const FAQ_BY_LANG: Record<Language, FaqPair[]> = {
       a: "Ja — AGR Multimedia ist in Geislingen an der Steige ansässig und erstellt Websites für lokale Firmen in der Region, darunter Handwerk, Dienstleister und kleine Unternehmen.",
     },
     {
+      q: "Sind Sie eine Werbeagentur in Geislingen?",
+      a: "Ja — mit Fokus auf Webdesign für lokale Firmen. Grafikdesign, Social Media und Marketing ergänze ich passend zum Projekt, primär für KMU in Geislingen, Göppingen und Umgebung.",
+    },
+    {
+      q: "Bieten Sie auch Grafikdesign an?",
+      a: "Ja — Grafikdesign und Branding sind ergänzende Leistungen (Logo, Flyer, Visuals). Der Schwerpunkt liegt auf Webdesign und Webentwicklung für lokale Unternehmen.",
+    },
+    {
       q: "Für wen erstellen Sie Websites?",
       a: "Vor allem für kleine Unternehmen — Gebäudereinigung, Autopflege, Handwerk, Gartenbau, Transport, Fahrradservice, Restaurants und Familienbetriebe mit professionellem Online-Auftritt.",
     },

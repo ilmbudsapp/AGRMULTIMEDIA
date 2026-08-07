@@ -9,7 +9,7 @@ export function localBusinessNode(pageUrl = `${BUSINESS.url}/`) {
     name: BUSINESS.name,
     legalName: BUSINESS.legalName,
     description:
-      "Webdesign und SEO in Geislingen an der Steige — professionelle Websites für Handwerk, Dienstleister und kleine Unternehmen in der Region.",
+      "Webdesign und Werbeagentur in Geislingen an der Steige — professionelle Websites für Handwerk und KMU. Grafikdesign ergänzend.",
     url: pageUrl,
     image: `${BUSINESS.url}/og-image.jpg`,
     logo: `${BUSINESS.url}/agr-logo-white.webp`,
@@ -40,10 +40,12 @@ export function localBusinessNode(pageUrl = `${BUSINESS.url}/`) {
     },
     sameAs: [...ORGANIZATION_SAME_AS],
     knowsAbout: [
-      "Webdesign",
+      "Webdesign Geislingen",
+      "Werbeagentur",
+      "Webentwicklung",
+      "Grafikdesign",
       "Lokales SEO",
-      "Responsive Webdesign",
-      "WordPress",
+      "Social Media Marketing",
       "Kleinunternehmen Websites",
     ],
   };

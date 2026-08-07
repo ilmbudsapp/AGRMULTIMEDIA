@@ -14,6 +14,7 @@ type OptimizationPillar = {
 
 type PremiumTranslations = {
   hero: {
+    eyebrow: string;
     heading: string;
     subheading: string;
     bullets: string[];
@@ -87,13 +88,14 @@ type PremiumTranslations = {
 
 const en: PremiumTranslations = {
   hero: {
-    heading: "Web design Geislingen — websites that bring new customers",
+    eyebrow: "Web designer · Geislingen an der Steige",
+    heading: "Web design Geislingen — websites for local businesses",
     subheading:
-      "Professional websites for trades and local businesses in Geislingen — clear structure, mobile-first. Next step: free initial consultation.",
+      "Professional websites for trades and SMEs in Geislingen — built to generate enquiries. Graphic design available as a supporting service.",
     bullets: [],
-    primaryCta: "Request free consultation",
-    secondaryCta: "View references",
-    ctaMeta: "No obligation • Individual quote • Response within 24h",
+    primaryCta: "Free consultation",
+    secondaryCta: "View portfolio",
+    ctaMeta: "No obligation • Individual quote • Reply within 24h",
   },
   optimizationExcellence: {
     eyebrow: "AI & search optimization",
@@ -202,13 +204,14 @@ const en: PremiumTranslations = {
 
 const de: PremiumTranslations = {
   hero: {
-    heading: "Webdesign Geislingen – Websites, die neue Kunden bringen",
+    eyebrow: "Webdesigner · Geislingen an der Steige",
+    heading: "Webdesign für lokale Firmen in Geislingen",
     subheading:
-      "Professionelle Websites für Handwerker und lokale Firmen in Geislingen — klar strukturiert, mobil optimiert. Nächster Schritt: kostenloses Erstgespräch.",
+      "Professionelle Websites für Handwerk, Dienstleister und KMU — mit Fokus auf Anfragen und lokale Sichtbarkeit. Grafikdesign ergänze ich passend zur Marke.",
     bullets: [],
-    primaryCta: "Kostenlose Beratung anfragen",
+    primaryCta: "Kostenlose Erstberatung",
     secondaryCta: "Referenzen ansehen",
-    ctaMeta: "Unverbindlich • Individuelles Angebot • Antwort innerhalb von 24h",
+    ctaMeta: "Unverbindlich • Antwort innerhalb von 24h • Studio in Geislingen",
   },
   optimizationExcellence: {
     eyebrow: "KI- & Suchoptimierung",
@@ -317,6 +320,7 @@ const de: PremiumTranslations = {
 
 const sr: PremiumTranslations = {
   hero: {
+    eyebrow: "Web dizajner · Geislingen an der Steige",
     heading: "Moderne web stranice za male firme u Njemačkoj",
     subheading:
       "Pomažem malim firmama da izgledaju profesionalno online, dobiju više upita i budu lakše pronađene na Google-u.",
@@ -438,6 +442,7 @@ const sr: PremiumTranslations = {
 
 const it: PremiumTranslations = {
   hero: {
+    eyebrow: "Web designer · Geislingen an der Steige",
     heading: "Siti web moderni per piccole imprese in Germania",
     subheading:
       "Aiuto le piccole imprese a presentarsi in modo professionale online, ricevere più richieste ed essere trovate più facilmente su Google.",
@@ -559,6 +564,7 @@ const it: PremiumTranslations = {
 
 const al: PremiumTranslations = {
   hero: {
+    eyebrow: "Web designer · Geislingen an der Steige",
     heading: "Faqe moderne web për biznese të vogla në Gjermani",
     subheading:
       "Ndihmoj firmat e vogla të duken profesionale online, të marrin më shumë kërkesa dhe të gjenden më lehtë në Google.",

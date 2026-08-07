@@ -26,20 +26,24 @@ const COPY: Record<
   home: {
     takeawaysTitle: "Das Wichtigste auf einen Blick",
     takeaways: [
-      "Webdesign in Geislingen mit lokalem SEO bringt mehr relevante Anfragen.",
-      "Eine klare Struktur und mobile Optimierung sind Pflicht — nicht optional.",
-      "Persönliche Betreuung ohne Agentur-Overhead spart Zeit und Nerven.",
-      "Transparente Angebote nach kostenlosem Erstgespräch — ohne versteckte Kosten.",
+      "Webdesign für lokale Firmen in Geislingen — primärer Fokus von AGR Multimedia.",
+      "Werbeagentur-Leistungen mit klarem Schwerpunkt: Websites, die Anfragen bringen.",
+      "Grafikdesign und Social Media ergänzen das Angebot — auf eigenen Service-Seiten.",
+      "Kostenlose Erstberatung, Antwort meist innerhalb von 24 Stunden.",
     ],
     qaTitle: "Kurze Antworten",
     qa: [
+      {
+        q: "Was macht AGR Multimedia?",
+        a: "Webdesign und Webentwicklung für lokale Firmen in Geislingen an der Steige — Handwerk, Dienstleister und KMU. Grafikdesign und Marketing ergänzend.",
+      },
       {
         q: "Was kostet eine Website?",
         a: "Ab ca. 890 € für eine Basis-Website; SEO-Pakete ab ca. 1.490 €. Jedes Projekt ist individuell — Sie erhalten ein transparentes Angebot nach dem Erstgespräch.",
       },
       {
-        q: "Wie lange dauert ein Projekt?",
-        a: "Eine übersichtliche Business-Website ist oft in zwei bis vier Wochen umsetzbar, sofern Texte und Bilder rechtzeitig vorliegen.",
+        q: "Sind Sie eine Werbeagentur in Geislingen?",
+        a: "Ja — mit Fokus auf Webdesign für lokale Unternehmen. Social Media, Grafikdesign und KI-Multimedia biete ich ergänzend an.",
       },
       {
         q: "Warum sind professionelle Websites wichtig?",
@@ -53,16 +57,16 @@ const COPY: Record<
         def: "Gestaltung und Umsetzung Ihrer Website — Layout, Struktur und Inhalte für Vertrauen und Anfragen.",
       },
       {
+        term: "Werbeagentur",
+        def: "Agentur für Marketing und Online-Auftritt — hier mit Schwerpunkt Webdesign für lokale Firmen in Geislingen.",
+      },
+      {
         term: "Lokales SEO",
         def: "Optimierung für regionale Google-Suchen (z. B. „Webdesign Geislingen“) und Google Maps.",
       },
       {
-        term: "Conversion",
-        def: "Anteil der Besucher, die Kontakt aufnehmen — gut gemachte CTAs und klare Seiten steigern die Quote.",
-      },
-      {
-        term: "Responsive Design",
-        def: "Darstellung auf Smartphone, Tablet und Desktop — entscheidend, weil die meisten Suchen mobil erfolgen.",
+        term: "Grafikdesign",
+        def: "Logo, Flyer und Markenvisuals — ergänzend zum Webauftritt, nicht im Vordergrund.",
       },
     ],
     stat:
@@ -79,7 +83,7 @@ const COPY: Record<
     ],
     conclusionTitle: "Fazit",
     conclusion:
-      "Kurz gesagt: Eine professionelle Website in Geislingen ist kein Luxus, sondern Grundlage für Sichtbarkeit und Anfragen. AGR Multimedia setzt auf klare Struktur, lokales SEO und persönliche Betreuung — ohne leere Versprechen.",
+      "Kurz gesagt: AGR Multimedia positioniert sich als Webdesigner für lokale Firmen in Geislingen — Werbeagentur mit klarem Website-Fokus. Grafikdesign und Marketing ergänzen das Angebot. Kostenlose Erstberatung, Antwort in 24h.",
     cta: "Kostenlose Beratung anfragen",
   },
   "webdesign-seo": {

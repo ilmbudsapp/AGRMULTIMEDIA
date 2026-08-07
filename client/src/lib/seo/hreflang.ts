@@ -1,13 +1,16 @@
 /** Site origin for canonical and multilingual alternates. */
 export const SITE_ORIGIN = "https://www.agrmultimedia.eu";
 
-const LANG_ALTERNATES: { hreflang: string; langParam: string }[] = [
-  { hreflang: "de", langParam: "de" },
+const LANG_ALTERNATES: { hreflang: string; langParam: string | null }[] = [
+  { hreflang: "de", langParam: null },
   { hreflang: "en", langParam: "en" },
 ];
 
-function langPageUrl(pathname: string, langParam: string): string {
+function langPageUrl(pathname: string, langParam: string | null): string {
   const path = pathname === "" || pathname === "/" ? "/" : pathname.startsWith("/") ? pathname : `/${pathname}`;
+  if (!langParam) {
+    return path === "/" ? `${SITE_ORIGIN}/` : `${SITE_ORIGIN}${path}`;
+  }
   if (path === "/") return `${SITE_ORIGIN}/?lang=${langParam}`;
   return `${SITE_ORIGIN}${path}?lang=${langParam}`;
 }
@@ -30,7 +33,7 @@ export function syncHreflangAlternates(pathname: string): void {
   const x = document.createElement("link");
   x.rel = "alternate";
   x.hreflang = "x-default";
-  x.href = langPageUrl(pathname, "de");
+  x.href = langPageUrl(pathname, null);
   x.setAttribute("data-seo-hreflang", "1");
   document.head.appendChild(x);
 }

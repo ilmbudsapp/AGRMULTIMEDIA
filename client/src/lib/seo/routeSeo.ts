@@ -68,11 +68,11 @@ const CORE_DE: Record<string, RouteSeo> = {
       "Webdesign Geislingen, KI Multimedia, digitales Marketing, Grafikdesign, SEO, Kleinunternehmen",
   },
   "/graphic-design": {
-    title: "Grafikdesign & Branding | AGR Multimedia Geislingen",
+    title: "Grafikdesign Geislingen | Branding & Logo",
     description:
-      "Logo-Design, Branding-Systeme und Marketing-Visuals für einen professionellen Auftritt online und im Print.",
+      "Grafikdesign als Ergänzung zum Webauftritt: Logo, Branding, Flyer und Marketing-Visuals für KMU in Geislingen an der Steige.",
     keywords:
-      "Grafikdesign Geislingen, Branding, Logo-Design, Marketing Visuals, KI Multimedia",
+      "Grafikdesign Geislingen, graphic design, Branding, Logo-Design, Werbeagentur, Marketing Visuals",
   },
   "/ai-content-creation": {
     title: "KI Content Creation & Multimedia | AGR Multimedia",
@@ -82,11 +82,11 @@ const CORE_DE: Record<string, RouteSeo> = {
       "KI Multimedia, KI Content Creation, KI Video, Veo 3.1, digitales Marketing",
   },
   "/digital-marketing": {
-    title: "Digital Marketing & KI Multimedia | AGR Multimedia Geislingen",
+    title: "Social Media Agentur Geislingen | Digital Marketing",
     description:
-      "Digitales Marketing, Kampagnen und KI-Multimedia — Studio nahe Geislingen, Kunden in Europa und remote.",
+      "Social Media, Online-Marketing und KI-Multimedia für KMU in Geislingen — Kampagnen, Content und Sichtbarkeit. Beratung anfragen.",
     keywords:
-      "Digital Marketing, KI Multimedia, Online-Marketing Geislingen, Marketingstrategie, SEO, Webdesign",
+      "Social Media Agentur Geislingen, Digital Marketing, Werbeagentur, Online-Marketing, KI Multimedia",
   },
   "/web-design": {
     title: "Webdesign & SEO für Unternehmen | AGR Multimedia Geislingen",
