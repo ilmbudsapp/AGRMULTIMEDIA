@@ -5,6 +5,12 @@
   "framework": null,
   "redirects": [
     {
+      "source": "/:path*",
+      "has": [{ "type": "query", "key": "lang", "value": "de" }],
+      "destination": "/:path*",
+      "permanent": true
+    },
+    {
       "source": "/demo-reinigung",
       "destination": "/portfolio",
       "permanent": true

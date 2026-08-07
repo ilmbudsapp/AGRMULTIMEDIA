@@ -3,6 +3,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { useLocation } from "wouter";
 import { ROUTE_SEO_BY_LANG, type SeoLang } from "@/lib/seo/routeSeo";
 import { syncHreflangAlternates } from "@/lib/seo/hreflang";
+import { buildLocalePageUrl, type SeoLocale } from "@/lib/seo/multilingualUrls";
 
 function setMetaContent(metaId: string, value: string) {
   const el = document.getElementById(metaId) as HTMLMetaElement | null;
@@ -56,16 +57,14 @@ export default function MetaSEO() {
     setMetaContent("twitter-title", title);
     setMetaContent("twitter-description", description);
 
-    const canonicalPath = lookupPath;
-    const canonicalFull =
-      canonicalPath === "/" ? "https://www.agrmultimedia.eu/" : `https://www.agrmultimedia.eu${canonicalPath}`;
+    const canonicalFull = buildLocalePageUrl(lookupPath, lang as SeoLocale);
     setLinkHref("canonical-url", canonicalFull);
     setMetaContent("og-url", canonicalFull);
     setMetaContent("twitter-url", canonicalFull);
 
     document.documentElement.lang = lang;
 
-    syncHreflangAlternates(canonicalPath);
+    syncHreflangAlternates(lookupPath);
   }, [currentLanguage, location, tSpec.seo.title, tSpec.seo.description]);
 
   return null;

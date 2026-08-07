@@ -5,6 +5,10 @@ Options -MultiViews
   RewriteEngine On
   RewriteBase /
 
+  # Obsolete ?lang=de — German canonical is path without lang param
+  RewriteCond %{QUERY_STRING} (^|&)lang=de(&|$) [NC]
+  RewriteRule ^(.*)$ /$1? [R=301,L]
+
   RewriteRule ^sitemap\.xml$ - [L,NC]
   RewriteRule ^robots\.txt$ - [L,NC]
   RewriteRule ^feed\.atom\.xml$ - [L,NC]

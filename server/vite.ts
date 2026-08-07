@@ -76,6 +76,22 @@ export function serveStatic(app: Express) {
     );
   }
 
+  app.use((req, res, next) => {
+    try {
+      const url = new URL(req.originalUrl, "http://localhost");
+      const lang = url.searchParams.get("lang")?.toLowerCase();
+      if (lang === "de") {
+        url.searchParams.delete("lang");
+        const qs = url.searchParams.toString();
+        const target = `${url.pathname}${qs ? `?${qs}` : ""}`;
+        return res.redirect(301, target);
+      }
+    } catch {
+      /* fall through */
+    }
+    next();
+  });
+
   app.use(express.static(distPath));
 
   // fall through to index.html if the file doesn't exist

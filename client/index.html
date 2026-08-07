@@ -26,6 +26,30 @@
     <meta name="twitter:url" id="twitter-url" content="https://www.agrmultimedia.eu/" />
     <meta name="twitter:image" content="https://www.agrmultimedia.eu/og-image.jpg" />
     <link rel="canonical" id="canonical-url" href="https://www.agrmultimedia.eu/" />
+    <script>
+      (function () {
+        try {
+          var params = new URLSearchParams(location.search);
+          var lang = (params.get("lang") || "").toLowerCase();
+          if (lang === "de") {
+            params.delete("lang");
+            var qs = params.toString();
+            location.replace(location.pathname + (qs ? "?" + qs : "") + location.hash);
+            return;
+          }
+          if (lang === "en") {
+            var canonical = document.getElementById("canonical-url");
+            var enAbs = "https://www.agrmultimedia.eu" + (location.pathname === "/" ? "/?lang=en" : location.pathname + "?lang=en");
+            if (canonical) canonical.setAttribute("href", enAbs);
+            var ogUrl = document.getElementById("og-url");
+            if (ogUrl) ogUrl.setAttribute("content", enAbs);
+            var twUrl = document.getElementById("twitter-url");
+            if (twUrl) twUrl.setAttribute("content", enAbs);
+            document.documentElement.lang = "en";
+          }
+        } catch (e) {}
+      })();
+    </script>
     <!-- IndexNow (Bing, Yandex, Seznam.cz, Naver, …): key file must exist at https://www.agrmultimedia.eu/<key>.txt -->
     <meta name="indexnow-key" content="agrmm2026indexnowkey01" />
     <link rel="author" href="https://www.linkedin.com/in/agron-osmani-228947266/" />
