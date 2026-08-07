@@ -52,7 +52,7 @@ export type HomeKmuCopy = {
 
 const de: HomeKmuCopy = {
   whyUs: {
-    title: "Warum Unternehmen mit AGR Multimedia arbeiten",
+    title: "Warum Firmen mit AGR Multimedia arbeiten",
     cards: [
       {
         title: "SEO Optimiert",
@@ -96,29 +96,39 @@ const de: HomeKmuCopy = {
     ],
   },
   serviceLinks: {
-    title: "Leistungen — klar zugeordnet",
+    title: "Jede Leistung — eigene Seite, klarer Fokus",
     intro:
-      "Primär entwickle ich Websites für lokale Firmen in Geislingen. Grafikdesign, Social Media und Marketing ergänzen das Angebot — jeweils auf eigenen Seiten, damit Google den richtigen Intent findet.",
+      "Homepage für den Überblick. Für Google und Ihre Kunden gibt es dedizierte Seiten — Webdesign, SEO/GEO/AEO, Video, Grafik und KI-Content.",
     items: [
       {
         title: "Webdesign & Webentwicklung",
-        description: "Business-Websites mit SEO für Handwerk, Dienstleister und KMU — Fokus: Anfragen und lokale Sichtbarkeit.",
+        description: "Business-Websites für Handwerk und KMU — mobil, schnell, auf Anfragen ausgelegt.",
         href: "/webdesign-seo",
       },
       {
+        title: "SEO, GEO & AEO",
+        description: "Lokale Sichtbarkeit, Answer-Engine-Optimierung und strukturierte Inhalte für Google und KI-Suche.",
+        href: "/webdesign-seo",
+      },
+      {
+        title: "Video & Produktion",
+        description: "Imagefilme, Social-Clips und Showreels — professionell produziert für Web und Marketing.",
+        href: "/videoproduktion",
+      },
+      {
         title: "Grafikdesign & Branding",
-        description: "Logo, Flyer und Markenvisuals als Ergänzung — professionell, passend zur Website.",
+        description: "Logo, Flyer und Markenvisuals — abgestimmt auf Ihre Website und Außenauftritt.",
         href: "/graphic-design",
       },
       {
-        title: "Social Media & Digital Marketing",
-        description: "Social-Media-Inhalte, Kampagnen und KI-Multimedia für Unternehmen in Geislingen und Umgebung.",
-        href: "/digital-marketing",
+        title: "KI Content & Multimedia",
+        description: "KI-Bilder, Produktvisuals und Multimedia-Workflows für moderne Kampagnen.",
+        href: "/ai-content-creation",
       },
     ],
   },
   portfolio: {
-    title: "Referenzen — Projekte, die Ergebnisse liefern",
+    title: "Referenzen — Projekte mit messbarem Nutzen",
     branchLabel: "Branche",
     goalLabel: "Ziel",
     implementationLabel: "Umsetzung",
@@ -218,14 +228,14 @@ const de: HomeKmuCopy = {
     ],
   },
   trustPartner: {
-    title: "Ihr Partner für professionelles Webdesign",
-    body: "AGR Multimedia ist Ihre Werbeagentur für Webdesign in Geislingen an der Steige — persönlich, regional und ergebnisorientiert. Fokus: Websites, die Anfragen bringen. Grafikdesign und Marketing ergänze ich bei Bedarf.",
+    title: "Ihr Studio in Geislingen an der Steige",
+    body: "AGR Multimedia ist kein anonymer Online-Dienstleister — sondern ein lokales Studio mit persönlichem Ansprechpartner. Sie sprechen direkt mit mir über Ziele, Budget und Zeitplan. Typische Antwortzeit: innerhalb von 24 Stunden.",
   },
   finalCta: {
-    title: "Bereit für eine professionelle Website?",
-    body: "Lassen Sie uns über Ihr Projekt sprechen und gemeinsam Ihre Online-Präsenz auf das nächste Niveau bringen.",
-    button: "Kostenlose Beratung anfragen",
-    meta: "Unverbindlich • Individuelles Angebot • Antwort innerhalb von 24h",
+    title: "Bereit für mehr Anfragen über Ihre Website?",
+    body: "Kostenlose Erstberatung — ich schaue mir Ihr Projekt an und schlage einen klaren nächsten Schritt vor. Unverbindlich, ohne Druck.",
+    button: "Kostenlose Erstberatung anfragen",
+    meta: "Antwort in der Regel innerhalb von 24h · Studio Geislingen an der Steige",
   },
 };
 
@@ -275,24 +285,34 @@ const en: HomeKmuCopy = {
     ],
   },
   serviceLinks: {
-    title: "Services — clearly mapped",
+    title: "Each service — its own page, clear focus",
     intro:
-      "Primary focus: websites for local businesses in Geislingen. Graphic design, social media and marketing complement the offer — each on its own page for clearer search intent.",
+      "Homepage for overview. Dedicated pages for Google and your customers — web design, SEO/GEO/AEO, video, graphics and AI content.",
     items: [
       {
         title: "Web design & development",
-        description: "Business websites with SEO for trades and SMEs — built to generate enquiries.",
+        description: "Business websites for trades and SMEs — mobile-first, fast, built to convert.",
         href: "/webdesign-seo",
       },
       {
+        title: "SEO, GEO & AEO",
+        description: "Local visibility, answer-engine optimization and structured content for Google and AI search.",
+        href: "/webdesign-seo",
+      },
+      {
+        title: "Video & production",
+        description: "Brand films, social clips and showreels — produced for web and marketing.",
+        href: "/videoproduktion",
+      },
+      {
         title: "Graphic design & branding",
-        description: "Logos, flyers and brand visuals as a supporting service alongside your website.",
+        description: "Logos, flyers and brand visuals aligned with your website.",
         href: "/graphic-design",
       },
       {
-        title: "Social media & digital marketing",
-        description: "Social content, campaigns and AI multimedia for businesses in Geislingen and the region.",
-        href: "/digital-marketing",
+        title: "AI content & multimedia",
+        description: "AI imagery, product visuals and multimedia workflows for modern campaigns.",
+        href: "/ai-content-creation",
       },
     ],
   },
@@ -327,14 +347,14 @@ const en: HomeKmuCopy = {
     ],
   },
   trustPartner: {
-    title: "Your partner for professional web design",
-    body: "AGR Multimedia supports local businesses in Geislingen an der Steige and the region with web design, SEO, GEO and AEO optimisation. My goal is not just a beautiful website — but a professional online presence that builds trust, makes you visible on Google and in AI search, and brings new business enquiries.",
+    title: "Your studio in Geislingen an der Steige",
+    body: "AGR Multimedia is not an anonymous online provider — it's a local studio with a direct contact person. You speak with me about goals, budget and timeline. Typical reply time: within 24 hours.",
   },
   finalCta: {
-    title: "Ready for a professional website?",
-    body: "Let's talk about your project and take your online presence to the next level together.",
-    button: "Request a free consultation",
-    meta: "No obligation • Individual quote • Reply within 24h",
+    title: "Ready for more enquiries through your website?",
+    body: "Free initial consultation — I'll review your project and suggest a clear next step. No obligation, no pressure.",
+    button: "Request free consultation",
+    meta: "Reply usually within 24h · Studio in Geislingen an der Steige",
   },
 };
 

@@ -8,6 +8,13 @@ function merge(...objs: Record<string, RouteSeo>[]): Record<string, RouteSeo> {
 
 /* ─── Core service routes (shared structure) ─── */
 const CORE_EN: Record<string, RouteSeo> = {
+  "/": {
+    title: "Web design Geislingen | SEO & GEO — websites that convert",
+    description:
+      "Web design studio in Geislingen an der Steige: websites, SEO, GEO/AEO, video & graphics for trades and SMEs. Free consultation — reply within 24h.",
+    keywords:
+      "web design Geislingen, SEO Geislingen, GEO AEO, local business websites, Geislingen an der Steige",
+  },
   "/services": {
     title: "Services for Small Businesses | AGR Multimedia Geislingen",
     description:
@@ -60,6 +67,13 @@ const CORE_EN: Record<string, RouteSeo> = {
 };
 
 const CORE_DE: Record<string, RouteSeo> = {
+  "/": {
+    title: "Webdesign Geislingen | SEO & GEO — Websites die Anfragen bringen",
+    description:
+      "Webdesign-Studio in Geislingen an der Steige: Websites, SEO, GEO/AEO, Video & Grafik für Handwerk und KMU. Kostenlose Erstberatung — Antwort in 24h.",
+    keywords:
+      "Webdesign Geislingen, SEO Geislingen, GEO AEO, Website KMU, Geislingen an der Steige",
+  },
   "/services": {
     title: "Leistungen für kleine Unternehmen | AGR Multimedia Geislingen",
     description:

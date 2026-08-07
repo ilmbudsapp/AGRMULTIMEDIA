@@ -18,6 +18,7 @@ type PremiumTranslations = {
     heading: string;
     subheading: string;
     bullets: string[];
+    trustPills: string[];
     primaryCta: string;
     secondaryCta: string;
     ctaMeta: string;
@@ -88,14 +89,19 @@ type PremiumTranslations = {
 
 const en: PremiumTranslations = {
   hero: {
-    eyebrow: "Web designer · Geislingen an der Steige",
-    heading: "Web design Geislingen — websites for local businesses",
+    eyebrow: "Web designer · Geislingen an der Steige, BW",
+    heading: "Websites that bring local businesses more enquiries",
     subheading:
-      "Professional websites for trades and SMEs in Geislingen — built to generate enquiries. Graphic design available as a supporting service.",
-    bullets: [],
+      "Web design, SEO, GEO/AEO and multimedia for trades and SMEs — one contact person, studio in Geislingen, clients across Baden-Württemberg and the EU.",
+    bullets: [
+      "One point of contact — no agency ping-pong",
+      "SEO + GEO/AEO built in from day one",
+      "Free consultation · Reply within 24 hours",
+    ],
+    trustPills: ["Studio Geislingen", "Trades & SMEs", "EU clients", "Google reviews"],
     primaryCta: "Free consultation",
     secondaryCta: "View portfolio",
-    ctaMeta: "No obligation • Individual quote • Reply within 24h",
+    ctaMeta: "No obligation · Individual quote · Reply within 24h",
   },
   optimizationExcellence: {
     eyebrow: "AI & search optimization",
@@ -204,14 +210,19 @@ const en: PremiumTranslations = {
 
 const de: PremiumTranslations = {
   hero: {
-    eyebrow: "Webdesigner · Geislingen an der Steige",
-    heading: "Webdesign für lokale Firmen in Geislingen",
+    eyebrow: "Webdesign-Studio · Geislingen an der Steige, BW",
+    heading: "Websites, die lokale Firmen mehr Anfragen bringen",
     subheading:
-      "Professionelle Websites für Handwerk, Dienstleister und KMU — mit Fokus auf Anfragen und lokale Sichtbarkeit. Grafikdesign ergänze ich passend zur Marke.",
-    bullets: [],
+      "Webdesign, SEO, GEO/AEO, Video und Grafik für Handwerk, Dienstleister und KMU — persönlich aus Geislingen, für Kunden in Baden-Württemberg und EU.",
+    bullets: [
+      "Ein Ansprechpartner — kein Agentur-Pingpong",
+      "SEO + GEO/AEO von Anfang an mitgedacht",
+      "Kostenlose Erstberatung · Antwort in 24h",
+    ],
+    trustPills: ["Studio Geislingen", "Handwerk & KMU", "Baden-Württemberg", "Google-Bewertungen"],
     primaryCta: "Kostenlose Erstberatung",
     secondaryCta: "Referenzen ansehen",
-    ctaMeta: "Unverbindlich • Antwort innerhalb von 24h • Studio in Geislingen",
+    ctaMeta: "Unverbindlich · Individuelles Angebot · Antwort innerhalb von 24h",
   },
   optimizationExcellence: {
     eyebrow: "KI- & Suchoptimierung",
@@ -331,6 +342,7 @@ const sr: PremiumTranslations = {
       "Povezivanje domene i objava online",
       "Persönlicher Ansprechpartner von der Planung bis zum Launch",
     ],
+    trustPills: [],
     primaryCta: "Zatražite besplatnu procjenu",
     secondaryCta: "Pogledajte radove",
     ctaMeta: "Besplatna procjena • Bez obaveza • Odgovor u roku od 24h",
@@ -453,6 +465,7 @@ const it: PremiumTranslations = {
       "Collegamento dominio e pubblicazione online",
       "Prezzo chiaro e tempi di consegna definiti",
     ],
+    trustPills: [],
     primaryCta: "Richiedi una valutazione gratuita",
     secondaryCta: "Vedi i lavori",
     ctaMeta: "Valutazione gratuita • Senza impegno • Risposta entro 24h",
@@ -575,6 +588,7 @@ const al: PremiumTranslations = {
       "Lidhje domeni dhe publikim online",
       "Çmim i qartë dhe afat realizimi",
     ],
+    trustPills: [],
     primaryCta: "Kërko vlerësim falas",
     secondaryCta: "Shiko punët",
     ctaMeta: "Vlerësim falas • Pa detyrim • Përgjigje brenda 24 orëve",

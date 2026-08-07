@@ -9,31 +9,36 @@
   --card-foreground: hsl(224, 32%, 12%);
   --popover: hsl(0, 0%, 100%);
   --popover-foreground: hsl(224, 32%, 12%);
-  --primary: hsl(262, 83%, 58%);
+  --primary: hsl(168, 76%, 36%);
   --primary-foreground: hsl(0, 0%, 100%);
   --secondary: hsl(220, 26%, 95%);
   --secondary-foreground: hsl(224, 32%, 12%);
   --muted: hsl(220, 26%, 95%);
   --muted-foreground: hsl(220, 14%, 48%);
   --accent: hsl(220, 26%, 95%);
-  --accent-foreground: hsl(262, 83%, 58%);
+  --accent-foreground: hsl(168, 76%, 36%);
   --destructive: hsl(0, 84%, 60%);
   --destructive-foreground: hsl(0, 0%, 100%);
   --border: hsl(220, 20%, 92%);
   --input: hsl(220, 20%, 92%);
-  --ring: hsl(262, 83%, 58%);
+  --ring: hsl(168, 76%, 36%);
   --navy: hsl(224, 32%, 12%);
-  --electric-blue: hsl(217, 91%, 60%);
-  --accent-vivid: hsl(262, 83%, 58%);
+  --electric-blue: hsl(168, 60%, 42%);
+  --accent-vivid: hsl(168, 76%, 36%);
   --accent-coral: hsl(14, 90%, 58%);
   --warm-gray: hsl(220, 14%, 48%);
-  --purple-500: hsl(262, 83%, 58%);
-  --gradient-primary: linear-gradient(135deg, hsl(217, 91%, 60%), hsl(262, 83%, 58%));
-  --gradient-hero: linear-gradient(135deg, hsl(224, 45%, 18%) 0%, hsl(262, 45%, 22%) 50%, hsl(224, 45%, 14%) 100%);
-  --gradient-mesh: radial-gradient(at 40% 20%, hsl(262, 60%, 35%) 0%, transparent 50%),
-    radial-gradient(at 80% 0%, hsl(217, 70%, 40%) 0%, transparent 45%),
-    radial-gradient(at 0% 50%, hsl(262, 40%, 25%) 0%, transparent 45%);
+  --studio-bg: #07070b;
+  --studio-surface: #111116;
+  --studio-border: #2a2a30;
+  --studio-accent: #0d9488;
+  --studio-accent-hover: #14b8a6;
+  --studio-text: #f4f4f5;
+  --studio-muted: rgba(244, 244, 245, 0.72);
+  --gradient-primary: linear-gradient(135deg, hsl(168, 76%, 32%), hsl(168, 60%, 42%));
+  --gradient-hero: linear-gradient(180deg, hsl(224, 20%, 6%) 0%, hsl(224, 18%, 4%) 100%);
+  --gradient-mesh: none;
   --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
   --radius: 1rem;
   --radius-lg: 1.25rem;
   --shadow-soft: 0 4px 24px -4px rgba(0, 0, 0, 0.08), 0 8px 48px -8px rgba(0, 0, 0, 0.06);
@@ -394,19 +399,14 @@
 }
 
 .premium-section {
-  background:
-    radial-gradient(1200px circle at 10% -10%, rgba(59, 130, 246, 0.12), transparent 35%),
-    radial-gradient(900px circle at 90% 20%, rgba(147, 51, 234, 0.1), transparent 38%),
-    #0a0a0a;
+  background: var(--studio-bg);
 }
 
 .premium-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid #333333;
+  background: var(--studio-surface);
+  border: 1px solid var(--studio-border);
   border-radius: 12px;
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
 }
 
 .premium-card-hover {
@@ -414,17 +414,47 @@
 }
 
 .premium-card-hover:hover {
-  transform: translateY(-4px) scale(1.01);
-  border-color: rgba(59, 130, 246, 0.65);
-  box-shadow:
-    0 16px 40px rgba(0, 0, 0, 0.35),
-    0 0 0 1px rgba(59, 130, 246, 0.35),
-    0 0 28px rgba(59, 130, 246, 0.25);
+  transform: translateY(-3px);
+  border-color: rgba(13, 148, 136, 0.45);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
 }
 
 .premium-cta {
-  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 45%, #60a5fa 100%);
-  color: #f8fbff;
+  background: var(--studio-accent);
+  color: #f0fdfa;
+  transition: background 200ms ease, transform 200ms ease;
+}
+
+.premium-cta:hover {
+  background: var(--studio-accent-hover);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.studio-eyebrow {
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: rgba(13, 148, 136, 0.85);
+}
+
+.studio-trust-pill {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--studio-border);
+  border-radius: 9999px;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.75rem;
+  color: var(--studio-muted);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.studio-service-link {
+  border-left: 2px solid var(--studio-accent);
+  padding-left: 1rem;
 }
 
 /* Services: 3D flip cards */
