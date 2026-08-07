@@ -52,8 +52,23 @@ function sectionAssetRewrite(pathname: string): string | null {
   return match ? `${DEMO_PREFIX}/${match[1]}` : null;
 }
 
+/** Strip obsolete ?lang=de (German canonical is path without lang param). */
+function redirectIfObsoleteLangDe(request: Request): Response | undefined {
+  const url = new URL(request.url);
+  if (url.searchParams.get("lang")?.toLowerCase() !== "de") {
+    return undefined;
+  }
+  url.searchParams.delete("lang");
+  const qs = url.searchParams.toString();
+  url.search = qs ? `?${qs}` : "";
+  return Response.redirect(url.toString(), 301);
+}
+
 /** Serve Tairovic static site on client domain (same Vercel project as AGR). */
 export default function middleware(request: Request): Response | undefined {
+  const langDeRedirect = redirectIfObsoleteLangDe(request);
+  if (langDeRedirect) return langDeRedirect;
+
   if (!isTairovicHost(request.headers.get("host"))) {
     return undefined;
   }

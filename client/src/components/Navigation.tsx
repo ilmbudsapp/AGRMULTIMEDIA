@@ -6,6 +6,7 @@ import LanguageSwitcherInline from "./LanguageSwitcherInline";
 import { NAV_LANDMARK_LABEL, NAV_MOBILE_TOGGLE } from "@/lib/a11yLandmarks";
 import type { Language } from "@/lib/i18n";
 import { scrollWindowToTop } from "@/lib/instantScroll";
+import { buildLocalePageUrl } from "@/lib/seo/multilingualUrls";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,7 +35,8 @@ export default function Navigation() {
     if (location === "/") {
       e.preventDefault();
       closeMenu();
-      window.history.replaceState(null, "", "/");
+      const homeUrl = new URL(buildLocalePageUrl("/", currentLanguage === "en" ? "en" : "de"));
+      window.history.replaceState(null, "", `${homeUrl.pathname}${homeUrl.search}`);
       scrollWindowToTop();
     } else {
       closeMenu();
