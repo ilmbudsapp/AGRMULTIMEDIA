@@ -110,6 +110,13 @@
     margin: 1rem 0;
   }
 
+  #static-crawler-home video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    background: #111;
+  }
+
   #static-crawler-home figcaption {
     font-size: 0.85rem;
     color: #9ca3af;
