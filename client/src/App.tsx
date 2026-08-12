@@ -102,6 +102,8 @@ function Router() {
 
 function App() {
   useEffect(() => {
+    document.documentElement.classList.add("app-mounted");
+
     // Google Analytics loads only after explicit consent (DSGVO) — see CookieConsent.tsx
     const loadGaIfConsented = () => {
       if (!import.meta.env.VITE_GA_MEASUREMENT_ID) return;
