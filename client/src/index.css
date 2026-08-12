@@ -106,6 +106,43 @@
     background: #07070b;
   }
 
+  #static-crawler-home figure {
+    margin: 1rem 0;
+  }
+
+  #static-crawler-home figcaption {
+    font-size: 0.85rem;
+    color: #9ca3af;
+    margin-top: 0.35rem;
+  }
+
+  #static-crawler-home blockquote {
+    border-left: 3px solid #14b8a6;
+    margin: 1rem 0;
+    padding: 0.5rem 0 0.5rem 1rem;
+    color: #d1d5db;
+    font-style: italic;
+  }
+
+  #static-crawler-home pre {
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    overflow-x: auto;
+    font-size: 0.8rem;
+  }
+
+  #static-crawler-home code {
+    font-family: ui-monospace, monospace;
+    color: #a5f3fc;
+  }
+
+  #static-crawler-home nav#crawler-toc ul {
+    list-style: disc;
+    padding-left: 1.25rem;
+  }
+
   #static-crawler-home h1,
   #static-route-prerender h1 {
     font-size: 1.5rem;

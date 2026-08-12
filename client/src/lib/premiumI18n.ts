@@ -211,7 +211,7 @@ const en: PremiumTranslations = {
 const de: PremiumTranslations = {
   hero: {
     eyebrow: "Webdesign-Studio · Geislingen an der Steige, BW",
-    heading: "Webdesign in Geislingen an der Steige — moderne Websites, die Kunden bringen",
+    heading: "Webdesign Geislingen an der Steige — moderne Websites, die Kunden bringen",
     subheading:
       "Ihr Studio in Geislingen an der Steige: moderne Websites, SEO, GEO/AEO, Video und Grafik für Handwerk, Dienstleister und KMU — persönlich, regional in Baden-Württemberg, auch EU-weit.",
     bullets: [
