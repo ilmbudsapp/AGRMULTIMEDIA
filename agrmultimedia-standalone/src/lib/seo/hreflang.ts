@@ -1,5 +1,5 @@
 /** Site origin for canonical and multilingual alternates. */
-export const SITE_ORIGIN = "https://www.agrmultimedia.eu";
+export const SITE_ORIGIN = "https://www.agrmultimedia.com";
 
 const LANG_ALTERNATES: { hreflang: string; langParam: string }[] = [
   { hreflang: "de", langParam: "de" },
@@ -17,7 +17,7 @@ export function syncHreflangAlternates(pathname: string): void {
   document.querySelectorAll('link[data-seo-hreflang="1"]').forEach((el) => el.remove());
   document.querySelectorAll('link[rel="alternate"][hreflang]').forEach((el) => {
     const href = el.getAttribute("href") ?? "";
-    if (href.includes("agrmultimedia.eu")) el.remove();
+    if (href.includes("agrmultimedia.com") || href.includes("agrmultimedia.com")) el.remove();
   });
   for (const { hreflang, langParam } of LANG_ALTERNATES) {
     const link = document.createElement("link");

@@ -35,7 +35,7 @@ const de: PrivacyPolicyCopy = {
       title: "2. Allgemeine Hinweise",
       paragraphs: [
         "Personenbezogene Daten sind alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person beziehen. Wir verarbeiten personenbezogene Daten nur, soweit dies zur Bereitstellung einer funktionsfähigen Website, zur Kommunikation oder zur Erfüllung gesetzlicher Pflichten erforderlich ist.",
-        "Diese Erklärung beschreibt den Stand der auf agrmultimedia.eu eingesetzten Technologien. Wir passen sie an, wenn sich Funktionen oder Dienstleister ändern.",
+        "Diese Erklärung beschreibt den Stand der auf agrmultimedia.com eingesetzten Technologien. Wir passen sie an, wenn sich Funktionen oder Dienstleister ändern.",
       ],
     },
     {
@@ -163,7 +163,7 @@ const en: PrivacyPolicyCopy = {
       title: "2. General information",
       paragraphs: [
         "We process personal data only where necessary to operate the website, respond to enquiries, or comply with legal obligations.",
-        "This policy reflects the technologies currently used on agrmultimedia.eu and will be updated when services change.",
+        "This policy reflects the technologies currently used on agrmultimedia.com and will be updated when services change.",
       ],
     },
     {
@@ -285,7 +285,7 @@ sr.sections[1] = {
   title: "2. Opšte napomene",
   paragraphs: [
     "Lične podatke obrađujemo samo kada je to neophodno za rad sajta, odgovor na upite ili zakonske obaveze.",
-    "Ova politika odražava tehnologije na agrmultimedia.eu i biće ažurirana po potrebi.",
+    "Ova politika odražava tehnologije na agrmultimedia.com i biće ažurirana po potrebi.",
   ],
 };
 sr.sections[2] = {

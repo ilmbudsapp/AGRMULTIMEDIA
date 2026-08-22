@@ -9,7 +9,7 @@ export default function DemoBar() {
       <span>
         Demo-Version · Webseite erstellt von{" "}
         <a
-          href="https://www.agrmultimedia.eu"
+          href="https://www.agrmultimedia.com"
           target="_blank"
           rel="noopener noreferrer"
           className="underline underline-offset-2 hover:text-[#d8f3dc]"

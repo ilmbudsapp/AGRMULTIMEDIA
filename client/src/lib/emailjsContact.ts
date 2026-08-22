@@ -5,7 +5,7 @@ import emailjs from "@emailjs/browser";
  * Tvoj "Contact Us" šablon koristi: {{title}}, {{name}}, {{email}}, {{message}}, {{time}}
  *
  * Ako pada na produkciji: EmailJS → Account → Security → dozvoli origin
- * (npr. https://www.agrmultimedia.eu i https://agrmultimedia.eu).
+ * (npr. https://www.agrmultimedia.com i https://agrmultimedia.com).
  */
 const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID ?? "";
 const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID ?? "";

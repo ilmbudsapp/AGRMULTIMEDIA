@@ -9,14 +9,14 @@ const GOOGLEBOT_UA =
 const TARGETS = [
   {
     name: "AGR Multimedia (www)",
-    url: "https://www.agrmultimedia.eu/sitemap.xml",
-    robots: "https://www.agrmultimedia.eu/robots.txt",
+    url: "https://www.agrmultimedia.com/sitemap.xml",
+    robots: "https://www.agrmultimedia.com/robots.txt",
     requireWww: true,
   },
   {
     name: "AGR Multimedia (apex)",
-    url: "https://agrmultimedia.eu/sitemap.xml",
-    robots: "https://agrmultimedia.eu/robots.txt",
+    url: "https://agrmultimedia.com/sitemap.xml",
+    robots: "https://agrmultimedia.com/robots.txt",
     requireWww: false,
   },
   {
@@ -116,11 +116,11 @@ async function checkTarget(target) {
     if (target.requireDomain && !loc.startsWith(target.requireDomain)) {
       fail(`${target.url} loc wrong domain: ${loc}`);
     }
-    if (target.requireWww && !loc.startsWith("https://www.agrmultimedia.eu")) {
+    if (target.requireWww && !loc.startsWith("https://www.agrmultimedia.com")) {
       fail(`${target.url} loc missing www: ${loc}`);
     }
     if (target.requireDomain === "https://www.tairovic-gebaeudeservice.de") {
-      if (loc.includes("agrmultimedia.eu") || loc.includes("/demo/") || loc.includes("/portfolio")) {
+      if (loc.includes("agrmultimedia.com") || loc.includes("/demo/") || loc.includes("/portfolio")) {
         fail(`${target.url} loc must not contain AGR/demo/portfolio URLs: ${loc}`);
       }
     }

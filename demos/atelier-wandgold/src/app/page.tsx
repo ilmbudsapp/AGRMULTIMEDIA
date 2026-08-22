@@ -348,7 +348,7 @@ export default function Home() {
 
         <p>
           Demo Website erstellt von{" "}
-          <a href="https://www.agrmultimedia.eu/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.agrmultimedia.com/" target="_blank" rel="noopener noreferrer">
             AGRMULTIMEDIA
           </a>
         </p>

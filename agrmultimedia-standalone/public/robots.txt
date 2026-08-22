@@ -5,4 +5,4 @@ User-agent: Googlebot
 Allow: /
 Allow: /sitemap.xml
 
-Sitemap: https://www.agrmultimedia.eu/sitemap.xml
+Sitemap: https://www.agrmultimedia.com/sitemap.xml

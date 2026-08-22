@@ -1,10 +1,10 @@
 /**
  * Ping IndexNow after deploy (Bing, Yandex, etc.).
- * Requires KEY file at https://www.agrmultimedia.eu/<KEY>.txt (see client/public/).
+ * Requires KEY file at https://www.agrmultimedia.com/<KEY>.txt (see client/public/).
  * Usage: INDEXNOW_KEY=agrmm2026indexnowkey01 node scripts/ping-indexnow.mjs
  */
 const key = process.env.INDEXNOW_KEY ?? "agrmm2026indexnowkey01";
-const host = "www.agrmultimedia.eu";
+const host = "www.agrmultimedia.com";
 const urls = [`https://${host}/`];
 
 const body = {

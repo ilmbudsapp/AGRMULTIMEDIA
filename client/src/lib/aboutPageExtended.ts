@@ -63,7 +63,7 @@ const de: AboutExtended = {
   ],
   languagesTitle: "Sprachen",
   languagesText:
-    "Ich kommuniziere mit Kunden auf Deutsch, Englisch, Serbisch, Italienisch und Albanisch. Die Website agrmultimedia.eu ist mehrsprachig — für KMU in der Region ist Deutsch die Hauptsprache, internationale Projekte sind willkommen.",
+    "Ich kommuniziere mit Kunden auf Deutsch, Englisch, Serbisch, Italienisch und Albanisch. Die Website agrmultimedia.com ist mehrsprachig — für KMU in der Region ist Deutsch die Hauptsprache, internationale Projekte sind willkommen.",
   specializationTitle: "Spezialisierung",
   specializationText:
     "Mein Schwerpunkt liegt auf lokalem Webdesign und SEO für kleine und mittlere Unternehmen in Geislingen an der Steige, Göppingen und Umgebung — Handwerk, Dienstleister, Autopflege, Reinigung, Beratung. Ergänzend: Grafikdesign, Videoproduktion und KI-gestützte Inhalte mit menschlicher Qualitätskontrolle.",

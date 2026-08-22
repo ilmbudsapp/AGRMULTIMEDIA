@@ -4,7 +4,7 @@ export default function DemoBar() {
       <span className="demoBarDot" aria-hidden />
       <span>
         Demo-Version · Webseite erstellt von{" "}
-        <a href="https://www.agrmultimedia.eu" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.agrmultimedia.com" target="_blank" rel="noopener noreferrer">
           AGRMULTIMEDIA
         </a>
       </span>

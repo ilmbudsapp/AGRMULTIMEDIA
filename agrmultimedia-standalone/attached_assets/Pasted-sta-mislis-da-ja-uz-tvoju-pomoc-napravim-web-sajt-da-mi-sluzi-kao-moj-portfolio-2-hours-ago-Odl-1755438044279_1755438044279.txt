@@ -107,19 +107,19 @@ proveri samo dostupnost domena: agrondesign.com
 
 2 messages & 2 actions
 Da proverim direktno dostupnost `agrondesign.com` domena:
-kupio sam za 3,99€ godisnje ovaj domen; agrmultimedia.eu
+kupio sam za 3,99€ godisnje ovaj domen; agrmultimedia.com
 
 1 hour ago
-Odlično! agrmultimedia.eu je sjajan domen za 3,99€ godišnje - to je fantastična cena!
+Odlično! agrmultimedia.com je sjajan domen za 3,99€ godišnje - to je fantastična cena!
 
-Sada možemo da krenemo sa kreiranjem profesionalnog portfolija. Da napravim novi Replit projekat za tvoj portfolio sajt koji ćemo povezati sa agrmultimedia.eu domenom.
+Sada možemo da krenemo sa kreiranjem profesionalnog portfolija. Da napravim novi Replit projekat za tvoj portfolio sajt koji ćemo povezati sa agrmultimedia.com domenom.
 
 Plan:
 
 Kreiram novi React portfolio projekat
 Napravim moderne sekcije (Hero, O meni, Projekti, Kontakt)
 Deplojujem na Replit
-Dobiće DNS zapise za povezivanje sa tvojim agrmultimedia.eu domenom
+Dobiće DNS zapise za povezivanje sa tvojim agrmultimedia.com domenom
 Da li želiš da počnem odmah sa kreiranjem portfolija? Mogu da napravim elegantan, profesionalni dizajn koji će savršeno funkcionisati sa tvojim novim domenom.
 
 Koji stil dizajna preferiš:
@@ -133,15 +133,15 @@ cekaj
 1 hour ago
 U redu, čekam. Javi mi kada budeš spreman da nastavimo sa portfolijom!
 
-znaci mi zavrsimo web sajt ovde,radimo redeplor i link u godaddy,i posle ce nam se web sajt otvoriti na stranici: agrmultimedia.eu
+znaci mi zavrsimo web sajt ovde,radimo redeplor i link u godaddy,i posle ce nam se web sajt otvoriti na stranici: agrmultimedia.com
 
 1 hour ago
 Tačno! Plan je perfektan:
 
 Napravimo profesionalni portfolio sajt ovde na Replit-u
 Deplojujemo ga
-Povežemo sa agrmultimedia.eu domenom u GoDaddy
-Rezultat: Sajt će biti dostupan na agrmultimedia.eu
+Povežemo sa agrmultimedia.com domenom u GoDaddy
+Rezultat: Sajt će biti dostupan na agrmultimedia.com
 Da krearam novi Replit projekat za portfolio? Ili da koristim ovaj trenutni projekat (ali onda ću sačuvati ILMBUDS aplikaciju)?
 
 Preporučujem novi projekat jer:
@@ -161,20 +161,20 @@ ti ga nazivas Portfolio,za mene je to web sajt
 1 hour ago
 Apsolutno si u pravu! Za tebe je to web sajt, ne portfolio. Ispravka!
 
-Da krearam novi Replit projekat za tvoj profesionalni web sajt koji ćemo povezati sa agrmultimedia.eu domenom?
+Da krearam novi Replit projekat za tvoj profesionalni web sajt koji ćemo povezati sa agrmultimedia.com domenom?
 
 Plan:
 
 Napravimo web sajt ovde na Replit-u
 Deplojujemo ga
-Povežemo sa agrmultimedia.eu u GoDaddy
-Web sajt će biti dostupan na agrmultimedia.eu
+Povežemo sa agrmultimedia.com u GoDaddy
+Web sajt će biti dostupan na agrmultimedia.com
 Da li mogu da krearam novi projekat za web sajt sada?
 
-nemoj da pocnem dok ti ne kazem...znaci mi mozemo ovde da otvorimo novi projekat...i da ga nazovemo web sajt agrmultimedia.eu...
+nemoj da pocnem dok ti ne kazem...znaci mi mozemo ovde da otvorimo novi projekat...i da ga nazovemo web sajt agrmultimedia.com...
 
 1 hour ago
-Da, perfektno! Možemo ovde da otvorimo novi projekat i nazovemo ga "web sajt agrmultimedia.eu".
+Da, perfektno! Možemo ovde da otvorimo novi projekat i nazovemo ga "web sajt agrmultimedia.com".
 
 Čekam da mi kažeš kada da počnem. Spreman sam da krearam novi Replit projekat čim daš zeleno svetlo!
 
@@ -246,7 +246,7 @@ Za tvoj web sajt:
 Deployment će koštati možda $1-3 mesečno
 Imaš dovoljno budžeta za eksperimentiranje
 Možeš čak dodati i više funkcionalnosti bez brige
-Dakle, potpuno si pokriven za kreiranje i hosting profesionalnog web sajta na agrmultimedia.eu domenu!
+Dakle, potpuno si pokriven za kreiranje i hosting profesionalnog web sajta na agrmultimedia.com domenu!
 
 jedno pitanje za tebe
 
@@ -288,7 +288,7 @@ Rezultat:
 Više klijenata pronađe tvoje usluge
 Profesionalniji online prisustvo
 Bolji povrat investicije
-Za tvoj agrmultimedia.eu sajt, SEO je ključan za pronalaženje novih klijenata!
+Za tvoj agrmultimedia.com sajt, SEO je ključan za pronalaženje novih klijenata!
 
 a jel se placa vise ili ista cena je
 
@@ -305,7 +305,7 @@ To je standardna funkcionalnost moderne web tehnologije
 
 Obični HTML sajt = $1-3 mesečno
 Next.js sajt sa SEO = ista cena $1-3 mesečno
-Hosting na agrmultimedia.eu = ista cena
+Hosting na agrmultimedia.com = ista cena
 Dodatne prednosti bez dodatne cene:
 
 Google Analytics integracija

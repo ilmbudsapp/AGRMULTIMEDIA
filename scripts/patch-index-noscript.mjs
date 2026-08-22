@@ -56,16 +56,16 @@ const body = `
                 <p style="margin:0 0 1rem 0;">Optimizujemo za Google i klasičnu pretragu, a sadržaj strukturišemo tako da modeli kao ChatGPT i Gemini mogu tačno da citiraju vaše stranice kada predlažu rešenja. Tri stuba: <strong>SEO i tehnička izvrsnost</strong> (indeksiranje, performanse, Core Web Vitals, strukturisani podaci); <strong>AEO</strong> (jasni odgovori i definicije za sisteme odgovora); <strong>GEO / Generative Engine Optimization</strong> (transparentnost i pouzdani izvori za generativne modele).</p>
                 <div id="agr-multimedia-benchmark" style="margin:1.25rem 0;padding:1rem 1.1rem;border:1px solid rgba(129,140,248,0.38);border-radius:0.65rem;background:linear-gradient(165deg,rgba(49,46,129,0.35),rgba(7,7,11,0.92));">
                     <p style="margin:0;font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:#a5b4fc;">Naš sopstveni benchmark</p>
-                    <h3 style="font-size:1.05rem;color:#fff;margin:0.45rem 0 0.55rem 0;line-height:1.35;">Isti standard primenjujemo na agrmultimedia.eu</h3>
+                    <h3 style="font-size:1.05rem;color:#fff;margin:0.45rem 0 0.55rem 0;line-height:1.35;">Isti standard primenjujemo na agrmultimedia.com</h3>
                     <p style="margin:0 0 0.65rem;font-size:0.9rem;">Naš sajt nije samo vizit karta, već dokaz naše ekspertize. Dokazujemo naš standard kroz SEO skor od 92, osiguravajući da naša tehnologija uvek prati najnovije algoritme pretrage.</p>
                     <p style="margin:0 0 0.75rem;padding:0.65rem;border-radius:0.45rem;border:1px solid rgba(129,140,248,0.35);background:rgba(67,56,202,0.2);font-size:0.82rem;line-height:1.55;">Sistem je klasifikovao sajt kao SaaS tip (50% pouzdanosti klasifikacije), što dodatno naglašava našu tehničku dubinu i funkcionalnost koju gradimo.</p>
-                    <p style="margin:0 0 0.45rem;font-size:0.72rem;color:#9ca3af;">www.agrmultimedia.eu — izveštaj od 9. maj 2026.</p>
+                    <p style="margin:0 0 0.45rem;font-size:0.72rem;color:#9ca3af;">www.agrmultimedia.com — izveštaj od 9. maj 2026.</p>
                     <picture>
                         <source type="image/webp" srcset="/agrmultimedia-benchmark-640.webp 640w, /agrmultimedia-benchmark-960.webp 960w, /agrmultimedia-benchmark.webp 1200w" sizes="100vw" />
-                        <img src="/agrmultimedia-benchmark.jpg" alt="SEO AEO GEO izveštaj za www.agrmultimedia.eu — ukupno Grade A, SEO 92, AEO 83, GEO 78, tip sajta SaaS" width="1200" height="675" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;border-radius:0.45rem;border:1px solid rgba(255,255,255,0.08);" />
+                        <img src="/agrmultimedia-benchmark.jpg" alt="SEO AEO GEO izveštaj za www.agrmultimedia.com — ukupno Grade A, SEO 92, AEO 83, GEO 78, tip sajta SaaS" width="1200" height="675" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;border-radius:0.45rem;border:1px solid rgba(255,255,255,0.08);" />
                     </picture>
                     <table style="width:100%;border-collapse:collapse;margin:0.75rem 0 0;font-size:0.85rem;">
-                        <caption style="text-align:left;font-weight:600;color:#e0e7ff;padding-bottom:0.35rem;">www.agrmultimedia.eu — trenutni skorovi (9. maj 2026.)</caption>
+                        <caption style="text-align:left;font-weight:600;color:#e0e7ff;padding-bottom:0.35rem;">www.agrmultimedia.com — trenutni skorovi (9. maj 2026.)</caption>
                         <thead><tr style="border-bottom:1px solid #444;"><th scope="col" style="text-align:left;padding:0.35rem;">Oblast</th><th scope="col" style="text-align:left;padding:0.35rem;">Skor</th></tr></thead>
                         <tbody>
                             <tr style="border-bottom:1px solid #333;"><td style="padding:0.35rem;">SEO</td><td style="padding:0.35rem;color:#6ee7b7;">92</td></tr>
@@ -119,7 +119,7 @@ const body = `
                     <li><strong>SEO:</strong> skok sa 71 na 88 (<strong>+17</strong> poena).</li>
                 </ul>
                 <p style="margin:0 0 1rem 0;font-size:0.92rem;">Ovaj primer pokazuje transformaciju lokalnog biznisa iz digitalne nevidljivosti (Grade F) u apsolutnog lidera (Grade A) za manje od 24 sata. Fokusiranjem na Generative Engine Optimization (GEO), povećali smo vidljivost za AI modele za neverovatnih 275%.</p>
-                <p style="margin:1rem 0 0;"><a href="https://www.agrmultimedia.eu/contact" style="display:inline-block;padding:0.65rem 1.25rem;border-radius:999px;background:linear-gradient(90deg,#059669,#10b981);color:#fff;font-weight:600;text-decoration:none;">Zatražite besplatnu SEO/AI analizu vašeg sajta</a></p>
+                <p style="margin:1rem 0 0;"><a href="https://www.agrmultimedia.com/contact" style="display:inline-block;padding:0.65rem 1.25rem;border-radius:999px;background:linear-gradient(90deg,#059669,#10b981);color:#fff;font-weight:600;text-decoration:none;">Zatražite besplatnu SEO/AI analizu vašeg sajta</a></p>
             </section>
 
             <p><strong>Napomena o naslovu stranice:</strong> ovaj uvod je namerno detaljan da AI sistemi dobiju jasan kontekst bez JavaScript-a. Mi ovde opisujemo šta radimo, za koga radimo i kako merimo rezultat. Međutim, ne stajemo na estetici. Stoga povezujemo brzinu, sadržaj i SEO praksu u jednoj celini (vidi <a href="https://developers.google.com/search/docs/appearance/title-link" style="color:#93c5fd" target="_blank" rel="noopener noreferrer">Google Search Central</a>).</p>
@@ -301,12 +301,12 @@ const body = `
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "AGR Multimedia",
-  "url": "https://www.agrmultimedia.eu/",
+  "url": "https://www.agrmultimedia.com/",
   "potentialAction": {
     "@type": "SearchAction",
     "target": {
       "@type": "EntryPoint",
-      "urlTemplate": "https://www.agrmultimedia.eu/blog?q={search_term_string}"
+      "urlTemplate": "https://www.agrmultimedia.com/blog?q={search_term_string}"
     },
     "query-input": "required name=search_term_string"
   }

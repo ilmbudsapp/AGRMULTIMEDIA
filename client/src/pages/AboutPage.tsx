@@ -11,7 +11,7 @@ import { localBusinessNode } from "@/lib/localBusinessSchema";
 function AboutJsonLd() {
   const schema = {
     "@context": "https://schema.org",
-    "@graph": [localBusinessNode(`https://www.agrmultimedia.eu${ROUTES.about}`)],
+    "@graph": [localBusinessNode(`https://www.agrmultimedia.com${ROUTES.about}`)],
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />;
 }

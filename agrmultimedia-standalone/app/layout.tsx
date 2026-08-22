@@ -3,7 +3,7 @@ import "@/index.css";
 import "@/styles/fonts.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.agrmultimedia.eu"),
+  metadataBase: new URL("https://www.agrmultimedia.com"),
   title: {
     default: "AGR Multimedia | Webdesign Geislingen",
     template: "%s | AGR Multimedia",

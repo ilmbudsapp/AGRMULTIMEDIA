@@ -36,7 +36,7 @@ const INTRO: Record<string, { title: string; lead: string }> = {
 };
 
 function ServiceJsonLd() {
-  const pageUrl = `https://www.agrmultimedia.eu${ROUTES.webdesignSeo}`;
+  const pageUrl = `https://www.agrmultimedia.com${ROUTES.webdesignSeo}`;
   const graph = {
     "@context": "https://schema.org",
     "@graph": [faqPageNode(pageUrl, WEBDESIGN_SEO_FAQ_DE), breadcrumbListSchema(ROUTES.webdesignSeo)],

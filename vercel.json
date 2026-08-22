@@ -5,6 +5,24 @@
   "framework": null,
   "redirects": [
     {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "agrmultimedia.eu" }],
+      "destination": "https://www.agrmultimedia.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.agrmultimedia.eu" }],
+      "destination": "https://www.agrmultimedia.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "agrmultimedia.com" }],
+      "destination": "https://www.agrmultimedia.com/:path*",
+      "permanent": true
+    },
+    {
       "source": "/demo-reinigung",
       "destination": "/portfolio",
       "permanent": true

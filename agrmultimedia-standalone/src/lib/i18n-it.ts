@@ -421,7 +421,7 @@ export const itTranslations: Translations = {
     sections: {
       scope: {
         title: "Ambito di applicazione",
-        content: "Questi termini si applicano a tutti gli utenti del nostro sito agrmultimedia.eu e dei nostri servizi. Utilizzando il sito web, accetti integralmente questi termini."
+        content: "Questi termini si applicano a tutti gli utenti del nostro sito agrmultimedia.com e dei nostri servizi. Utilizzando il sito web, accetti integralmente questi termini."
       },
       services: {
         title: "I nostri servizi",

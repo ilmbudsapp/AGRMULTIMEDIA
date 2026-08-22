@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Scaffold agrmultimedia-standalone from existing client source.
- * Reconstructs agrmultimedia.eu as a standalone Next.js project.
+ * Reconstructs agrmultimedia.com as a standalone Next.js project.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -128,7 +128,7 @@ import "@/styles/fonts.css";
 import { Providers } from "@/components/Providers";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.agrmultimedia.eu"),
+  metadataBase: new URL("https://www.agrmultimedia.com"),
   title: {
     default: "AGR Multimedia | Webdesign Geislingen",
     template: "%s | AGR Multimedia",
@@ -412,7 +412,7 @@ write(
   path.join(OUT, "README.md"),
   `# AGR Multimedia — Standalone
 
-Standalone reconstruction of [agrmultimedia.eu](https://www.agrmultimedia.eu/) extracted from the original demo monorepo.
+Standalone reconstruction of [agrmultimedia.com](https://www.agrmultimedia.com/) extracted from the original demo monorepo.
 
 ## Stack
 
@@ -466,7 +466,7 @@ Client demos under \`/demo/*\` are static HTML served from \`public/demo/\`.
 
 ## Notes
 
-- Content, images, and translations are **unchanged** from agrmultimedia.eu
+- Content, images, and translations are **unchanged** from agrmultimedia.com
 - No content modifications in this extraction step
 `
 );

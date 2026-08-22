@@ -3,6 +3,6 @@ export const ABOUT_JSON_LD_SNIPPET = `{
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "AGR Multimedia",
-  "url": "https://www.agrmultimedia.eu",
-  "logo": "https://www.agrmultimedia.eu/agr-logo-white.webp"
+  "url": "https://www.agrmultimedia.com",
+  "logo": "https://www.agrmultimedia.com/agr-logo-white.webp"
 }`;

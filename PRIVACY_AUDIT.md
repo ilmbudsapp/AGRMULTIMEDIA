@@ -1,4 +1,4 @@
-# Privacy audit — agrmultimedia.eu
+# Privacy audit — agrmultimedia.com
 
 Date: **May 2026**
 

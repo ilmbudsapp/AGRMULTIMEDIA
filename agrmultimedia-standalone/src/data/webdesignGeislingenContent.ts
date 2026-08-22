@@ -227,6 +227,6 @@ export const WEBDESIGN_LANDING_FAQ: WebdesignLandingFaqItem[] = [
   {
     question: "Wie starte ich ein Webdesign-Projekt mit AGR Multimedia?",
     answer:
-      "Schreiben Sie mir über das Kontaktformular auf agrmultimedia.eu, per E-Mail oder WhatsApp. Kurz beschreiben Sie Ihr Unternehmen, Ihr Ziel und ob es um eine neue Website oder ein Redesign geht. In der Regel melde ich mich innerhalb von 24 Stunden mit einer ersten Einschätzung und den nächsten Schritten.",
+      "Schreiben Sie mir über das Kontaktformular auf agrmultimedia.com, per E-Mail oder WhatsApp. Kurz beschreiben Sie Ihr Unternehmen, Ihr Ziel und ob es um eine neue Website oder ein Redesign geht. In der Regel melde ich mich innerhalb von 24 Stunden mit einer ersten Einschätzung und den nächsten Schritten.",
   },
 ];

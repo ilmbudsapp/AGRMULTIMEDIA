@@ -21,5 +21,5 @@ export const BUSINESS = {
   phone: "+4915560873124",
   phoneDisplay: "+49 15560 873124",
   email: "agron6922@gmail.com",
-  url: "https://www.agrmultimedia.eu",
+  url: "https://www.agrmultimedia.com",
 } as const;

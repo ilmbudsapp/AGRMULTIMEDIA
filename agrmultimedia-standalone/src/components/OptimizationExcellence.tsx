@@ -16,7 +16,7 @@ const FIXBIKE_IMG = {
   afterStem: "/fixbike-after",
 } as const;
 
-/** Current audit — www.agrmultimedia.eu (May 9, 2026) */
+/** Current audit — www.agrmultimedia.com (May 9, 2026) */
 const SCORES_AGR = {
   seo: 92,
   aeo: 83,

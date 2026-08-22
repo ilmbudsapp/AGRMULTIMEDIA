@@ -146,15 +146,15 @@ const en: PremiumTranslations = {
     imgAltAfter: "SEO AEO GEO audit report for fixbike.online — May 9 2026, Grade A overall",
     cta: "Request a free SEO/AI analysis of your site",
     benchmarkEyebrow: "Our own benchmark",
-    benchmarkTitle: "We apply the same bar to agrmultimedia.eu",
+    benchmarkTitle: "We apply the same bar to agrmultimedia.com",
     benchmarkTrust:
       "Our site is not just a business card—it is proof of our expertise. We demonstrate our standard with an SEO score of 92, keeping our technology aligned with the latest search algorithms.",
     benchmarkSaasNote:
       "The audit tool suggested a SaaS-style site type as one possible classification—we mention it only as a technical-depth hint from the engine, not as a claim about how your business operates.",
-    benchmarkReportMeta: "www.agrmultimedia.eu — report generated May 9, 2026",
+    benchmarkReportMeta: "www.agrmultimedia.com — report generated May 9, 2026",
     benchmarkImgAlt:
-      "SEO AEO GEO report for www.agrmultimedia.eu — overall Grade A, SEO 92, AEO 83, GEO 78, site type SaaS",
-    benchmarkTableCaption: "www.agrmultimedia.eu — current scores (May 9, 2026)",
+      "SEO AEO GEO report for www.agrmultimedia.com — overall Grade A, SEO 92, AEO 83, GEO 78, site type SaaS",
+    benchmarkTableCaption: "www.agrmultimedia.com — current scores (May 9, 2026)",
   },
   services: {
     eyebrow: "Capabilities",
@@ -261,15 +261,15 @@ const de: PremiumTranslations = {
     imgAltAfter: "SEO/AEO/GEO Audit fixbike.online — 9. Mai 2026, Gesamt Grade A",
     cta: "Kostenlose SEO/KI-Analyse Ihrer Website anfordern",
     benchmarkEyebrow: "Unser eigener Benchmark",
-    benchmarkTitle: "Wir messen auch agrmultimedia.eu an derselben Leiste",
+    benchmarkTitle: "Wir messen auch agrmultimedia.com an derselben Leiste",
     benchmarkTrust:
       "Unsere Website ist keine reine Visitenkarte, sondern ein Nachweis unserer Expertise. Mit einem SEO-Score von 92 zeigen wir unseren Standard und halten unsere Technologie an aktuelle Suchalgorithmen ausgerichtet.",
     benchmarkSaasNote:
       "Das Audit-Tool schlug einen SaaS-ähnlichen Site-Typ als eine mögliche Klassifikation vor — wir erwähnen das nur als technischen Hinweis des Tools, nicht als Aussage über Ihr Geschäftsmodell.",
-    benchmarkReportMeta: "www.agrmultimedia.eu — Bericht vom 9. Mai 2026",
+    benchmarkReportMeta: "www.agrmultimedia.com — Bericht vom 9. Mai 2026",
     benchmarkImgAlt:
-      "SEO/AEO/GEO Bericht www.agrmultimedia.eu — Gesamt Grade A, SEO 92, AEO 83, GEO 78, Site-Typ SaaS",
-    benchmarkTableCaption: "www.agrmultimedia.eu — aktuelle Werte (9. Mai 2026)",
+      "SEO/AEO/GEO Bericht www.agrmultimedia.com — Gesamt Grade A, SEO 92, AEO 83, GEO 78, Site-Typ SaaS",
+    benchmarkTableCaption: "www.agrmultimedia.com — aktuelle Werte (9. Mai 2026)",
   },
   services: {
     eyebrow: "Leistungen",
@@ -382,15 +382,15 @@ const sr: PremiumTranslations = {
     imgAltAfter: "SEO/AEO/GEO izveštaj za fixbike.online — 9. maj 2026, ukupno Grade A",
     cta: "Zatražite besplatnu SEO/AI analizu vašeg sajta",
     benchmarkEyebrow: "Naš sopstveni benchmark",
-    benchmarkTitle: "Isti standard primenjujemo na agrmultimedia.eu",
+    benchmarkTitle: "Isti standard primenjujemo na agrmultimedia.com",
     benchmarkTrust:
       "Naš sajt nije samo vizit karta, već dokaz naše ekspertize. Dokazujemo naš standard kroz SEO skor od 92, osiguravajući da naša tehnologija uvek prati najnovije algoritme pretrage.",
     benchmarkSaasNote:
       "Audit alat je predložio SaaS tip sajta kao jednu moguću klasifikaciju — pominjemo to samo kao tehnički signal iz alata, ne kao tvrdnju o vašem poslovnom modelu.",
-    benchmarkReportMeta: "www.agrmultimedia.eu — izveštaj od 9. maj 2026.",
+    benchmarkReportMeta: "www.agrmultimedia.com — izveštaj od 9. maj 2026.",
     benchmarkImgAlt:
-      "SEO/AEO/GEO izveštaj za www.agrmultimedia.eu — ukupno Grade A, SEO 92, AEO 83, GEO 78, tip sajta SaaS",
-    benchmarkTableCaption: "www.agrmultimedia.eu — trenutni skorovi (9. maj 2026.)",
+      "SEO/AEO/GEO izveštaj za www.agrmultimedia.com — ukupno Grade A, SEO 92, AEO 83, GEO 78, tip sajta SaaS",
+    benchmarkTableCaption: "www.agrmultimedia.com — trenutni skorovi (9. maj 2026.)",
   },
   services: {
     eyebrow: "Usluge",
@@ -503,15 +503,15 @@ const it: PremiumTranslations = {
     imgAltAfter: "Report SEO/AEO/GEO fixbike.online — 9 mag 2026, totale Grade A",
     cta: "Richiedi un’analisi SEO/AI gratuita del tuo sito",
     benchmarkEyebrow: "Il nostro benchmark interno",
-    benchmarkTitle: "Applichiamo la stessa soglia anche ad agrmultimedia.eu",
+    benchmarkTitle: "Applichiamo la stessa soglia anche ad agrmultimedia.com",
     benchmarkTrust:
       "Il nostro sito non è solo un biglietto da visita: è la prova della nostra expertise. Lo dimostriamo con uno score SEO di 92, mantenendo lo stack allineato agli algoritmi di ricerca piu recenti.",
     benchmarkSaasNote:
       "Lo strumento di audit ha suggerito un tipo sito in stile SaaS come una possibile classificazione — lo citiamo solo come indizio tecnico del motore, non come affermazione sul vostro modello di business.",
-    benchmarkReportMeta: "www.agrmultimedia.eu — report del 9 maggio 2026",
+    benchmarkReportMeta: "www.agrmultimedia.com — report del 9 maggio 2026",
     benchmarkImgAlt:
-      "Report SEO/AEO/GEO www.agrmultimedia.eu — totale Grade A, SEO 92, AEO 83, GEO 78, tipo sito SaaS",
-    benchmarkTableCaption: "www.agrmultimedia.eu — punteggi attuali (9 maggio 2026)",
+      "Report SEO/AEO/GEO www.agrmultimedia.com — totale Grade A, SEO 92, AEO 83, GEO 78, tipo sito SaaS",
+    benchmarkTableCaption: "www.agrmultimedia.com — punteggi attuali (9 maggio 2026)",
   },
   services: {
     eyebrow: "Servizi",
@@ -624,15 +624,15 @@ const al: PremiumTranslations = {
     imgAltAfter: "Raport SEO/AEO/GEO për fixbike.online — 9 maj 2026, total Grade A",
     cta: "Kërko analizë falas SEO/AI të faqes suaj",
     benchmarkEyebrow: "Benchmark-i ynë",
-    benchmarkTitle: "E njëjta shiritë matjeje për agrmultimedia.eu",
+    benchmarkTitle: "E njëjta shiritë matjeje për agrmultimedia.com",
     benchmarkTrust:
       "Faqja jonë nuk është thjesht një kartëvizitë, por provë e ekspertizës sonë. E dëshmojmë standardin me një skor SEO 92 dhe mbajmë teknologjinë të përputhur me algoritmet më të fundit të kërkimit.",
     benchmarkSaasNote:
       "Mjeti i auditimit sugjeroi një tip siti në stil SaaS si një klasifikim i mundshëm — e përmendim vetëm si sinjal teknik nga motori, jo si pretendim për modelin tuaj të biznesit.",
-    benchmarkReportMeta: "www.agrmultimedia.eu — raporti i 9 maj 2026",
+    benchmarkReportMeta: "www.agrmultimedia.com — raporti i 9 maj 2026",
     benchmarkImgAlt:
-      "Raport SEO/AEO/GEO për www.agrmultimedia.eu — total Grade A, SEO 92, AEO 83, GEO 78, lloji SaaS",
-    benchmarkTableCaption: "www.agrmultimedia.eu — rezultatet aktuale (9 maj 2026)",
+      "Raport SEO/AEO/GEO për www.agrmultimedia.com — total Grade A, SEO 92, AEO 83, GEO 78, lloji SaaS",
+    benchmarkTableCaption: "www.agrmultimedia.com — rezultatet aktuale (9 maj 2026)",
   },
   services: {
     eyebrow: "Sherbime",

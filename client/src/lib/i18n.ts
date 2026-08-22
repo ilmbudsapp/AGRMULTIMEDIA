@@ -1163,7 +1163,7 @@ export const translations: Record<Exclude<Language, "al">, Translations> = {
       sections: {
         scope: {
           title: "Opseg Primene",
-          content: "Ovi uslovi se primenjuju na sve korisnike našeg sajta agrmultimedia.eu i naših usluga. Korišćenjem sajta prihvatate ove uslove u potpunosti."
+          content: "Ovi uslovi se primenjuju na sve korisnike našeg sajta agrmultimedia.com i naših usluga. Korišćenjem sajta prihvatate ove uslove u potpunosti."
         },
         services: {
           title: "Naše Usluge",
@@ -2137,7 +2137,7 @@ export const translations: Record<Exclude<Language, "al">, Translations> = {
       sections: {
         scope: {
           title: "Scope of Application",
-          content: "These terms apply to all users of our website agrmultimedia.eu and our services. By using the website, you accept these terms in full."
+          content: "These terms apply to all users of our website agrmultimedia.com and our services. By using the website, you accept these terms in full."
         },
         services: {
           title: "Our Services",
@@ -3031,7 +3031,7 @@ export const translations: Record<Exclude<Language, "al">, Translations> = {
       sections: {
         scope: {
           title: "Anwendungsbereich",
-          content: "Diese Bedingungen gelten für alle Nutzer unserer Website agrmultimedia.eu und unserer Dienstleistungen. Durch die Nutzung der Website akzeptieren Sie diese Bedingungen vollständig."
+          content: "Diese Bedingungen gelten für alle Nutzer unserer Website agrmultimedia.com und unserer Dienstleistungen. Durch die Nutzung der Website akzeptieren Sie diese Bedingungen vollständig."
         },
         services: {
           title: "Unsere Dienstleistungen",
@@ -3925,7 +3925,7 @@ export const translations: Record<Exclude<Language, "al">, Translations> = {
       sections: {
         scope: {
           title: "Fushëveprimi",
-          content: "Këto kushte zbatohen për të gjithë përdoruesit e faqes sonë agrmultimedia.eu dhe shërbimeve tona. Duke përdorur faqen, ju i pranoni këto kushte plotësisht."
+          content: "Këto kushte zbatohen për të gjithë përdoruesit e faqes sonë agrmultimedia.com dhe shërbimeve tona. Duke përdorur faqen, ju i pranoni këto kushte plotësisht."
         },
         services: {
           title: "Shërbimet Tona",

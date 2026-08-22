@@ -28,9 +28,9 @@ const en: HomeExperienceCopy = {
   fixbikeTitle: "Example: fixbike.online (measured audit, May 2026)",
   fixbikeBody:
     "On fixbike.online a before/after audit snapshot showed overall Grade F (49) moving to Grade A (88) in under 24 hours, with GEO 24→90 and AEO 31→85. That is one domain and one tool run — not a guarantee for every project, but it shows how we prioritize crawlable answers and generative signals.",
-  agrTitle: "Our own site: agrmultimedia.eu",
+  agrTitle: "Our own site: agrmultimedia.com",
   agrBody:
-    "On www.agrmultimedia.eu a public audit on May 9, 2026 reported SEO 92, AEO 83, GEO 78, overall Grade A. We apply the same checklist to client launches. The audit tool suggested a SaaS-style site classification as a hypothesis — we mention it only as a technical-depth signal, not as a claim about your business model.",
+    "On www.agrmultimedia.com a public audit on May 9, 2026 reported SEO 92, AEO 83, GEO 78, overall Grade A. We apply the same checklist to client launches. The audit tool suggested a SaaS-style site classification as a hypothesis — we mention it only as a technical-depth signal, not as a claim about your business model.",
   sourcesTitle: "Sources we link when we cite performance",
   sources: [
     { label: "Google Search Central — Core Web Vitals", url: "https://developers.google.com/search/docs/appearance/core-web-vitals" },
@@ -47,9 +47,9 @@ const sr: HomeExperienceCopy = {
   fixbikeTitle: "Primer: fixbike.online (meren audit, maj 2026.)",
   fixbikeBody:
     "Na fixbike.online snimak pre/posle pokazuje ukupno Grade F (49) prema Grade A (88) za manje od 24 sata, sa GEO 24→90 i AEO 31→85. To je jedan domen i jedan prolaz alata — nije garancija za svaki projekat, ali pokazuje kako prioritetizujemo citatljive odgovore.",
-  agrTitle: "Naš sajt: agrmultimedia.eu",
+  agrTitle: "Naš sajt: agrmultimedia.com",
   agrBody:
-    "Na www.agrmultimedia.eu javni audit 9. maja 2026. beleži SEO 92, AEO 83, GEO 78, ukupno Grade A. Isti checklist primenjujemo na klijentske objave. Alat je predložio SaaS klasifikaciju kao hipotezu — pominjemo je samo kao signal tehničke dubine, ne kao tvrdnju o vašem modelu poslovanja.",
+    "Na www.agrmultimedia.com javni audit 9. maja 2026. beleži SEO 92, AEO 83, GEO 78, ukupno Grade A. Isti checklist primenjujemo na klijentske objave. Alat je predložio SaaS klasifikaciju kao hipotezu — pominjemo je samo kao signal tehničke dubine, ne kao tvrdnju o vašem modelu poslovanja.",
   sourcesTitle: "Izvori koje linkujemo kada citiramo performanse",
   sources: [
     { label: "Google Search Central — Core Web Vitals", url: "https://developers.google.com/search/docs/appearance/core-web-vitals" },
@@ -66,9 +66,9 @@ const de: HomeExperienceCopy = {
   fixbikeTitle: "Beispiel: fixbike.online (gemessenes Audit, Mai 2026)",
   fixbikeBody:
     "Bei fixbike.online zeigte ein Vorher/Nachher-Snapshot insgesamt Grade F (49) zu Grade A (88) in unter 24 Stunden, GEO 24→90, AEO 31→85. Ein Domain-Fall — keine Garantie für jedes Projekt.",
-  agrTitle: "Eigene Seite: agrmultimedia.eu",
+  agrTitle: "Eigene Seite: agrmultimedia.com",
   agrBody:
-    "Auf www.agrmultimedia.eu meldete ein öffentliches Audit am 9. Mai 2026 SEO 92, AEO 83, GEO 78, gesamt Grade A. SaaS-Klassifikation nur als technische Hypothese, nicht als Aussage über Ihr Geschäftsmodell.",
+    "Auf www.agrmultimedia.com meldete ein öffentliches Audit am 9. Mai 2026 SEO 92, AEO 83, GEO 78, gesamt Grade A. SaaS-Klassifikation nur als technische Hypothese, nicht als Aussage über Ihr Geschäftsmodell.",
   sourcesTitle: "Quellen für Performance-Aussagen",
   sources: [
     { label: "Google Search Central — Core Web Vitals", url: "https://developers.google.com/search/docs/appearance/core-web-vitals" },

@@ -54,7 +54,7 @@ const staticRoutes = [
       "Agron Osmani — Gründer von AGR Multimedia. Webdesign, SEO und Multimedia für KMU in Geislingen, Göppingen und Region.",
     h1: "Über AGR Multimedia — Webdesign, KI-Multimedia & Marketing in Geislingen",
     lead: "Agron Osmani entwickelt Websites, SEO und Multimedia für Handwerk, Dienstleister und kleine Unternehmen in Geislingen an der Steige.",
-    canonical: "https://www.agrmultimedia.eu/about",
+    canonical: "https://www.agrmultimedia.com/about",
     bodyHtml: `<section><h2>Warum AGR Multimedia?</h2><ul><li>Persönliche Betreuung in Geislingen</li><li>Lokales Webdesign + SEO für KMU</li><li>Referenzen: Toni's Autopflege, Tairovic, FixBike, IlmBuds</li></ul></section><p><a href="/kontakt">Kontakt</a> · <a href="/webdesign-geislingen-an-der-steige">Webdesign Geislingen</a></p>`,
   },
   {
@@ -63,7 +63,7 @@ const staticRoutes = [
     description: "Ratgeber zu Webdesign, lokalem SEO und Conversion für KMU in Geislingen und Göppingen.",
     h1: "Blog — Webdesign & lokales SEO für KMU",
     lead: "Praxisartikel zu Webdesign, SEO, Google Maps und Conversion für Unternehmen in Geislingen und der Region.",
-    canonical: "https://www.agrmultimedia.eu/blog",
+    canonical: "https://www.agrmultimedia.com/blog",
     bodyHtml: `<ul>${uniqueBlog
       .slice(0, 20)
       .map((p) => `<li><a href="/blog/${p.slug}">${p.title}</a></li>`)
@@ -74,7 +74,7 @@ const staticRoutes = [
     title: "Portfolio — AGR Multimedia",
     h1: "Portfolio AGR Multimedia",
     lead: "Case Studies: Toni's Autopflege, Tairovic Gebäudeservice, FixBike, IlmBuds — Webdesign und SEO für KMU.",
-    canonical: "https://www.agrmultimedia.eu/portfolio",
+    canonical: "https://www.agrmultimedia.com/portfolio",
     bodyHtml: `<ul><li><a href="/portfolio/tonis-autopflege">Toni's Autopflege</a></li><li><a href="/portfolio/tairovic-gebaeudeservice">Tairovic Gebäudeservice</a></li><li><a href="/portfolio/fixbike">FixBike</a></li><li><a href="/portfolio/enchanted-chronicles">The Enchanted Chronicles</a></li><li><a href="/portfolio/ilmbuds">IlmBuds</a></li></ul>`,
   },
   {
@@ -82,7 +82,7 @@ const staticRoutes = [
     title: "Kontakt — AGR Multimedia",
     h1: "Kontakt — AGR Multimedia",
     lead: "Kostenlose Einschätzung für Webdesign, Grafik und Video. Geislingen an der Steige.",
-    canonical: "https://www.agrmultimedia.eu/kontakt",
+    canonical: "https://www.agrmultimedia.com/kontakt",
   },
   {
     dir: "webdesign-seo",
@@ -91,7 +91,7 @@ const staticRoutes = [
       "Webdesign und SEO für KMU in Geislingen — ab 890 € Basis, ab 1.490 € SEO-Paket. Individuelles Angebot nach Erstgespräch.",
     h1: "Webdesign und SEO für kleine Unternehmen",
     lead: "Business-Websites mit On-Page-SEO für Geislingen, Göppingen und Region — persönlich umgesetzt von AGR Multimedia.",
-    canonical: "https://www.agrmultimedia.eu/webdesign-seo",
+    canonical: "https://www.agrmultimedia.com/webdesign-seo",
     bodyHtml: `<section><h2>Preise ab</h2><p>Basis-Website ab 890 € · SEO-Website ab 1.490 € · Komplettpaket ab 2.290 €</p></section><p><a href="/kontakt">Angebot anfragen</a> · <a href="/webdesign-geislingen-an-der-steige">Guide Webdesign Geislingen</a></p>`,
   },
   {
@@ -99,7 +99,7 @@ const staticRoutes = [
     title: "Videoproduktion — AGR Multimedia",
     h1: "Professionelle Videoproduktion & AI Motion Design",
     lead: "Video Production Geislingen — Social Media Cuts, Corporate Videos, AI Post-Production für KMU.",
-    canonical: "https://www.agrmultimedia.eu/videoproduktion",
+    canonical: "https://www.agrmultimedia.com/videoproduktion",
     bodyHtml: `<p><a href="https://www.youtube.com/@AGRMultimedia">YouTube Kanal</a> · <a href="/kontakt">Anfrage</a></p>`,
   },
   {
@@ -107,21 +107,21 @@ const staticRoutes = [
     title: "Digital Marketing — AGR Multimedia",
     h1: "Digital Marketing für kleine Unternehmen",
     lead: "Online-Marketing, SEO und Content für KMU in Geislingen und der Region.",
-    canonical: "https://www.agrmultimedia.eu/digital-marketing",
+    canonical: "https://www.agrmultimedia.com/digital-marketing",
   },
   {
     dir: "ai-content-creation",
     title: "KI Content Creation — AGR Multimedia",
     h1: "KI-gestützte Inhaltserstellung mit Qualitätskontrolle",
     lead: "AI Content für Websites, Social Media und Marketing — mit menschlicher Prüfung.",
-    canonical: "https://www.agrmultimedia.eu/ai-content-creation",
+    canonical: "https://www.agrmultimedia.com/ai-content-creation",
   },
   {
     dir: "bewertungen",
     title: "Bewertungen — AGR Multimedia",
     h1: "Bewertungen und Google Maps",
     lead: "Verifizierte Kundenstimmen zu AGR Multimedia.",
-    canonical: "https://www.agrmultimedia.eu/bewertungen",
+    canonical: "https://www.agrmultimedia.com/bewertungen",
   },
   {
     dir: "graphic-design",
@@ -129,7 +129,7 @@ const staticRoutes = [
     description: "Logo, Corporate Design, Branding — AGR Multimedia Geislingen.",
     h1: "Grafikdesign für kleine Unternehmen",
     lead: "Corporate Design, Branding, Visitenkarten und visuelle Systeme.",
-    canonical: "https://www.agrmultimedia.eu/graphic-design",
+    canonical: "https://www.agrmultimedia.com/graphic-design",
   },
   {
     dir: "webdesign-geislingen-an-der-steige",
@@ -138,7 +138,7 @@ const staticRoutes = [
       "Professionelles Webdesign in Geislingen an der Steige für Handwerk und lokale Firmen. Lokales SEO, responsive Design, persönliche Betreuung.",
     h1: "Webdesign Geislingen an der Steige — professionelle Websites für lokale Unternehmen",
     lead: "Moderne Business-Websites mit lokalem SEO für Handwerk, Dienstleister und kleine Firmen in Geislingen.",
-    canonical: "https://www.agrmultimedia.eu/webdesign-geislingen-an-der-steige",
+    canonical: "https://www.agrmultimedia.com/webdesign-geislingen-an-der-steige",
     bodyHtml: `
     <section><h2>Professionelles Webdesign in Geislingen</h2>
     <p>Eine Website ist oft der erste Kontaktpunkt zwischen Ihrem Unternehmen und potenziellen Kunden. Professionelles Webdesign vermittelt Vertrauen und führt Besucher zum Kontakt.</p>
@@ -198,7 +198,7 @@ for (const cs of caseStudies) {
     title: `Case Study ${cs.name} — AGR Multimedia`,
     h1: `Case Study: ${cs.name}`,
     lead: `Webdesign und SEO Projekt von AGR Multimedia — ${cs.name}.`,
-    canonical: `https://www.agrmultimedia.eu/portfolio/${cs.slug}`,
+    canonical: `https://www.agrmultimedia.com/portfolio/${cs.slug}`,
     bodyHtml: `<p><a href="/portfolio">Portfolio</a> · <a href="/kontakt">Anfrage</a></p>`,
   });
 }
@@ -210,7 +210,7 @@ for (const post of uniqueBlog) {
     description: post.description,
     h1: post.title,
     lead: post.description,
-    canonical: `https://www.agrmultimedia.eu/blog/${post.slug}`,
+    canonical: `https://www.agrmultimedia.com/blog/${post.slug}`,
     bodyHtml: `<p>Autor: Agron Osmani · <a href="/webdesign-geislingen-an-der-steige">Webdesign Geislingen</a> · <a href="/webdesign-seo">Webdesign &amp; SEO</a> · <a href="/kontakt">Kontakt</a></p>`,
   });
 }

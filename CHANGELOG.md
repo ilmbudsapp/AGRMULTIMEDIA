@@ -1,4 +1,4 @@
-# Changelog — GDPR / legal compliance (agrmultimedia.eu)
+# Changelog — GDPR / legal compliance (agrmultimedia.com)
 
 ## 2026-06-03 — Tairovic Gebäudeservice (tairovic-gebaeudeservice.de)
 

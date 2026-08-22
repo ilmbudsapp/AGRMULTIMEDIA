@@ -456,7 +456,7 @@ const EXTRA_EN: Record<string, RouteSeo> = {
   },
   "/cookies": {
     title: "Cookie Policy | AGR Multimedia",
-    description: "Information about cookies and tracking technologies on agrmultimedia.eu.",
+    description: "Information about cookies and tracking technologies on agrmultimedia.com.",
     keywords: "cookie policy, GDPR cookies, AGR Multimedia",
   },
   "/blog/digital-marketing-trends-2024": {
@@ -593,7 +593,7 @@ const EXTRA_DE: Record<string, RouteSeo> = {
   },
   "/cookies": {
     title: "Cookie-Richtlinie | AGR Multimedia",
-    description: "Informationen zu Cookies und Tracking auf agrmultimedia.eu.",
+    description: "Informationen zu Cookies und Tracking auf agrmultimedia.com.",
     keywords: "Cookies, DSGVO, AGR Multimedia",
   },
   "/blog/digital-marketing-trends-2024": {
@@ -722,7 +722,7 @@ const EXTRA_IT: Record<string, RouteSeo> = {
   },
   "/cookies": {
     title: "Cookie policy | AGR Multimedia",
-    description: "Informazioni su cookie e tracciamento su agrmultimedia.eu.",
+    description: "Informazioni su cookie e tracciamento su agrmultimedia.com.",
     keywords: "cookie, GDPR, AGR Multimedia",
   },
   "/blog/digital-marketing-trends-2024": {
@@ -851,7 +851,7 @@ const EXTRA_SR: Record<string, RouteSeo> = {
   },
   "/cookies": {
     title: "Politika kolačića | AGR Multimedia",
-    description: "Informacije o kolačićima i praćenju na agrmultimedia.eu.",
+    description: "Informacije o kolačićima i praćenju na agrmultimedia.com.",
     keywords: "kolačići, GDPR, AGR Multimedia",
   },
   "/blog/digital-marketing-trends-2024": {
@@ -980,7 +980,7 @@ const EXTRA_AL: Record<string, RouteSeo> = {
   },
   "/cookies": {
     title: "Politika e cookies | AGR Multimedia",
-    description: "Informacion për cookies dhe gjurmim në agrmultimedia.eu.",
+    description: "Informacion për cookies dhe gjurmim në agrmultimedia.com.",
     keywords: "cookies, GDPR, AGR Multimedia",
   },
   "/blog/digital-marketing-trends-2024": {

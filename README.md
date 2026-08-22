@@ -21,7 +21,7 @@ MULTIMEDIA AGRONDESIGN je portfolio sajt koji predstavlja usluge: web dizajn, gr
 - Complete rebranding from "AGR Multimedia" to "MULTIMEDIA AGRONDESIGN" across all 4 languages
 - Updated footer with new contact details: Phone (+49 15560 873124), Email (agron6922@gmail.com), Location (Geislingen an der Steige, Germany)
 - Removed social media icons from footer (Facebook, Instagram, LinkedIn)
-- Successfully deployed to production domain agrmultimedia.eu
+- Successfully deployed to production domain agrmultimedia.com
 - All content converted to first-person singular format (individual work, not team)
 - Contact form saves to database successfully, email delivery pending SendGrid configuration
 - **Impresum (Legal Notice) page fully implemented**: Complete German legal compliance page with all 4 languages (Serbian, English, German, Albanian), professional design, all business details included (Tax Number: 48267305956, VAT: DE354016444), accessible via footer link /impresum

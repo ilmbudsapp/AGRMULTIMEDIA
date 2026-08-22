@@ -1,6 +1,6 @@
 # Šta smo uradili na projektu AGR Multimedia
 
-Dokument sažima sve izmene na sajtu **www.agrmultimedia.eu** (redizajn, jezici, portfolio, footer, kontakt i sl.).
+Dokument sažima sve izmene na sajtu **www.agrmultimedia.com** (redizajn, jezici, portfolio, footer, kontakt i sl.).
 
 ---
 

@@ -1,5 +1,5 @@
 /** Canonical and hreflang URL builders for de (/ path) vs en (?lang=en). */
-export const SITE_ORIGIN = "https://www.agrmultimedia.eu";
+export const SITE_ORIGIN = "https://www.agrmultimedia.com";
 
 export type SeoLocale = "de" | "en";
 

@@ -1,6 +1,6 @@
 # AGR Multimedia — Standalone
 
-Standalone reconstruction of [agrmultimedia.eu](https://www.agrmultimedia.eu/) extracted from the original demo monorepo.
+Standalone reconstruction of [agrmultimedia.com](https://www.agrmultimedia.com/) extracted from the original demo monorepo.
 
 ## Stack
 
@@ -54,5 +54,5 @@ Client demos under `/demo/*` are static HTML served from `public/demo/`.
 
 ## Notes
 
-- Content, images, and translations are **unchanged** from agrmultimedia.eu
+- Content, images, and translations are **unchanged** from agrmultimedia.com
 - No content modifications in this extraction step

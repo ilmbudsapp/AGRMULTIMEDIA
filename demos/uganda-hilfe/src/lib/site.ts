@@ -6,7 +6,7 @@ export const SITE = {
   tagline: "Gemeinsam schenken wir Kindern Zukunft.",
   description:
     "Die Uganda-Hilfe Unterland e.V. unterstützt Bildung und Perspektiven für Kinder in Kasanje, Uganda – an der St. Monica Junior School.",
-  url: "https://www.agrmultimedia.eu/demo/uganda-hilfe/",
+  url: "https://www.agrmultimedia.com/demo/uganda-hilfe/",
   email: "info@uganda-hilfe-unterland.org",
   phone: "07138 2375129",
   address: "Stuttgarter Straße 50, 73033 Göppingen",

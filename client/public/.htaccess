@@ -1,4 +1,4 @@
-# agrmultimedia.eu — direct bypass for crawler files; SPA fallback only after
+# agrmultimedia.com — direct bypass for crawler files; SPA fallback only after
 Options -MultiViews
 
 <IfModule mod_rewrite.c>

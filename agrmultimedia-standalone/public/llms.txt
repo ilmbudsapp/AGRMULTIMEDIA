@@ -5,7 +5,7 @@
 ## Organization
 
 - **Name:** AGR Multimedia
-- **Site:** https://www.agrmultimedia.eu/
+- **Site:** https://www.agrmultimedia.com/
 - **Location:** Geislingen an der Steige, Baden-Württemberg, Germany
 - **Languages:** Serbian, English, German, Italian, Albanian (site UI)
 - **Contact:** agron6922@gmail.com · +49 155 60873124

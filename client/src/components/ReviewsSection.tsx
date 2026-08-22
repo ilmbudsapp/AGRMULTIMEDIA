@@ -3,8 +3,8 @@ import { AGR_GOOGLE_REVIEWS, GOOGLE_MAPS_PLACE_URL } from "@/data/agrGoogleRevie
 import GoogleLogoMark from "@/components/GoogleLogoMark";
 import { ExternalLink, Star } from "lucide-react";
 
-const ORGANIZATION_ID = "https://www.agrmultimedia.eu/#organization";
-const REVIEWS_LD_ID = "https://www.agrmultimedia.eu/#google-maps-customer-reviews";
+const ORGANIZATION_ID = "https://www.agrmultimedia.com/#organization";
+const REVIEWS_LD_ID = "https://www.agrmultimedia.com/#google-maps-customer-reviews";
 
 function RatingStarsDecorative({ count }: { count: number }) {
   return (

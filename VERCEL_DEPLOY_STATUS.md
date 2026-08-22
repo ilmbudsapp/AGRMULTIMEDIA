@@ -8,7 +8,7 @@
 - U Vercel podešavanjima:
   - **Build Command:** `npm run build:client`
   - **Output Directory:** `dist/public`
-- Domen **www.agrmultimedia.eu** i **agrmultimedia.eu** su u Vercel Domains, DNS u GoDaddy-u je podešen (Valid Configuration)
+- Domen **www.agrmultimedia.com** i **agrmultimedia.com** su u Vercel Domains, DNS u GoDaddy-u je podešen (Valid Configuration)
 - Poslat je prazan commit da se pokrene novi deploy sa najnovijim kodom
 
 ## Zašto build pada
@@ -21,7 +21,7 @@
 3. Ako piše **client** → obrisati i ostaviti polje **prazno** (ili tačku `.`)
 4. **Save**
 5. U **Deployments** proveriti da li ima novi deploy sa porukom **"Trigger Vercel deploy from latest main"**:
-   - ako je **Ready** (zelen) → otvoriti https://www.agrmultimedia.eu (trebalo bi da radi)
+   - ako je **Ready** (zelen) → otvoriti https://www.agrmultimedia.com (trebalo bi da radi)
    - ako je **Error** → otvoriti taj deploy, pogledati **Build Logs** (crveni tekst) i reći šta piše
 
 ## Ako novi deploy nije krenuo

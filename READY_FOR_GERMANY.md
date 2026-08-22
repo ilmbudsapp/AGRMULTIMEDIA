@@ -27,7 +27,7 @@
 
 ## Quick test after deploy
 
-1. Open https://www.agrmultimedia.eu — cookie banner appears on first visit.
+1. Open https://www.agrmultimedia.com — cookie banner appears on first visit.
 2. Choose “Nur notwendige” — Network tab should show **no** `google-analytics.com`.
 3. Clear site data, reload, choose “Alle akzeptieren” — GA scripts may load.
 4. Footer: phone, email, location show icons (not broken characters).
