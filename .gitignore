@@ -8,6 +8,9 @@ vite.config.ts.*
 .local
 .env
 
+# Cursor IDE local files (never commit)
+.cursor/
+
 # Optional local QR / marketing file (not required for the site build)
 /agrmultimedia-qr.png
 
