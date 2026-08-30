@@ -6,6 +6,11 @@ import Footer from "@/components/Footer";
 import BreadcrumbNav from "@/components/BreadcrumbNav";
 import PageTableOfContents from "@/components/PageTableOfContents";
 import SeoAeoEnhancement from "@/components/SeoAeoEnhancement";
+import UpdateDate from "@/components/UpdateDate";
+import ProcessSteps from "@/components/ProcessSteps";
+import ProjectResults from "@/components/ProjectResults";
+import GeoAeoDefinitions from "@/components/GeoAeoDefinitions";
+import ComparisonTable from "@/components/ComparisonTable";
 import {
   WEBDESIGN_LANDING_FAQ,
   WEBDESIGN_LANDING_H1,
@@ -13,6 +18,7 @@ import {
 } from "@/data/webdesignGeislingenContent";
 import { breadcrumbListSchema } from "@/lib/breadcrumbs";
 import { faqPageNode, localBusinessNode } from "@/lib/localBusinessSchema";
+import { enhancedLocalBusinessNode } from "@/lib/enhancedBusinessSchema";
 import { BUSINESS, ROUTES } from "@/lib/siteRoutes";
 
 const PAGE_URL = `${BUSINESS.url}${ROUTES.webdesignGeislingen}`;
@@ -21,9 +27,19 @@ function LandingJsonLd() {
   const graph = {
     "@context": "https://schema.org",
     "@graph": [
-      localBusinessNode(PAGE_URL),
+      enhancedLocalBusinessNode(PAGE_URL),
       faqPageNode(PAGE_URL, WEBDESIGN_LANDING_FAQ),
       breadcrumbListSchema(ROUTES.webdesignGeislingen),
+      {
+        "@type": "WebPage",
+        "@id": `${PAGE_URL}#webpage`,
+        url: PAGE_URL,
+        name: WEBDESIGN_LANDING_H1,
+        description: "Webdesign-Studio in Geislingen an der Steige: moderne Websites, SEO, GEO/AEO für Handwerk und KMU.",
+        dateModified: "2026-08-30",
+        isPartOf: { "@id": `${BUSINESS.url}/#website` },
+        author: { "@id": `${BUSINESS.url}/#person` },
+      },
     ],
   };
   return (
@@ -64,6 +80,7 @@ export default function WebdesignGeislingenPage() {
                 Moderne Business-Websites mit lokalem SEO in Geislingen an der Steige — für Handwerk, Dienstleister und
                 kleine Firmen, persönlich umgesetzt von AGR Multimedia.
               </p>
+              <UpdateDate />
               <div className="mt-8 flex flex-wrap justify-center gap-3">
                 <Link
                   href={ROUTES.kontakt}
@@ -105,7 +122,27 @@ export default function WebdesignGeislingenPage() {
                   )}
                 </section>
               ))}
+
+              <section id="nachweisbare-erfolge" aria-labelledby="nachweisbare-erfolge-heading">
+                <h2
+                  id="nachweisbare-erfolge-heading"
+                  className="text-balance text-xl font-semibold leading-snug text-white md:text-2xl"
+                >
+                  Nachweisbare Erfolge für lokale Unternehmen in Geislingen
+                </h2>
+                <p className="mt-4 text-sm leading-relaxed md:text-base">
+                  Unsere Webdesign- und SEO-Arbeit liefert messbare Resultate für kleine und mittlere Unternehmen in der Region Geislingen. Bei Toni's Autopflege haben wir durch gezielte lokale SEO-Optimierung und eine moderne, mobilfreundliche Website einen Anstieg von +32% bei Kundenanfragen über die Website dokumentiert. Das Fahrradgeschäft FixBike konnte seinen SEO-Score von 49 auf 88 Punkte steigern, was zu deutlich besserer Auffindbarkeit in Google-Suchergebnissen führte. Die KFZ-Werkstatt Tairovic verzeichnete eine Steigerung der Online-Sichtbarkeit um +18% durch verbesserte lokale Rankings.
+                </p>
+                <p className="mt-4 text-sm leading-relaxed md:text-base">
+                  Diese Ergebnisse aus 2025-2026 zeigen, wie wichtig moderne Technologien wie GEO (Generative Engine Optimization) und AEO (Answer Engine Optimization) für lokale Firmen geworden sind. GEO optimiert Ihre Inhalte speziell für KI-gestützte Suchmaschinen wie ChatGPT, Perplexity oder Google Gemini, während AEO sicherstellt, dass Ihre Website bei direkten Fragen in Suchergebnissen als präzise Antwort erscheint. Für einen Handwerksbetrieb in Geislingen bedeutet das: Wenn potenzielle Kunden nach "bester Autopflege in Geislingen" oder "Fahrradreparatur in meiner Nähe" fragen, erscheint Ihr Unternehmen prominent in den Antworten – nicht nur in traditionellen Suchergebnissen, sondern auch in KI-generierten Zusammenfassungen.
+                </p>
+                <p className="mt-4 text-sm leading-relaxed md:text-base">
+                  Wichtig ist dabei: Diese Zahlen basieren auf tatsächlichen Projekten und sind dokumentiert, stellen jedoch keine Garantie für zukünftige Ergebnisse dar. Jedes Unternehmen ist einzigartig, und der Erfolg hängt von vielen Faktoren ab – von der Branche über den Wettbewerb bis zur Qualität der Inhalte. Was wir garantieren können: eine professionelle, moderne Website mit solider technischer Grundlage, die alle aktuellen SEO-, GEO- und AEO-Best-Practices erfüllt und Ihrem Unternehmen die bestmögliche Ausgangsbasis für Online-Erfolg bietet.
+                </p>
+              </section>
             </div>
+
+            <ProjectResults />
 
             <section id="faq" className="mt-16 border-t border-[#333333] pt-14" aria-labelledby="faq-heading">
               <h2 id="faq-heading" className="text-2xl font-semibold text-white md:text-3xl">
@@ -141,6 +178,11 @@ export default function WebdesignGeislingenPage() {
                 })}
               </div>
             </section>
+
+            <ProcessSteps />
+            <ProjectResults />
+            <GeoAeoDefinitions />
+            <ComparisonTable />
 
             <SeoAeoEnhancement variant="pillar" className="mt-16" />
           </div>

@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
+import AuthorSection from "@/components/AuthorSection";
 import HomeServiceLinks from "@/components/HomeServiceLinks";
 import HomeFaqJsonLd from "@/components/HomeFaqJsonLd";
 import HomeLocalBusinessJsonLd from "@/components/HomeLocalBusinessJsonLd";
@@ -24,6 +25,7 @@ export default function Home() {
       <Navigation />
       <main id="main-content" aria-label={MAIN_LANDMARK_LABEL[currentLanguage]}>
         <Hero />
+        <AuthorSection />
         <HomeKmuWhyUs />
         <HomeServiceLinks />
         <HomeKmuMoreThanDesign />

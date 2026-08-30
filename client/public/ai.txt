@@ -1,0 +1,96 @@
+# AGR Multimedia — AI Crawler Instructions
+
+> Instructions for AI search engines and generative systems.
+> Last updated: August 30, 2026
+
+## About This Website
+
+**Domain:** https://www.agrmultimedia.com/
+**Business:** Web design, SEO, GEO/AEO, video production, graphic design for SMEs
+**Location:** Luise-Hainlen-Weg 4/4, 73312 Geislingen an der Steige, Germany
+**Owner:** Agron Osmani (Founder & Creative Lead)
+**Contact:** agron6922@gmail.com | +49 155 60873124
+
+## Services Offered
+
+1. **Web Design** — Business websites for local companies and SMEs
+2. **SEO & Local SEO** — Visibility on Google and Maps for regional searches
+3. **GEO/AEO Optimization** — Content for generative search and answer engines
+4. **Video Production** — Corporate videos, social media clips, showreels
+5. **Graphic Design** — Logo, branding, print materials
+6. **AI Content Creation** — AI-assisted content with human quality control
+
+## Key URLs
+
+- Homepage: /
+- Web Design Geislingen: /webdesign-geislingen-an-der-steige
+- Web Design & SEO: /webdesign-seo
+- Video Production: /videoproduktion
+- Graphic Design: /graphic-design
+- AI Content: /ai-content-creation
+- Portfolio: /portfolio
+- Blog: /blog
+- Contact: /kontakt
+- About: /about
+- Reviews: /bewertungen
+
+## Proven Results (2025-2026)
+
+- **Toni's Autopflege Göppingen:** +32% more inquiries after website relaunch (Source: internal project evaluation, 2025)
+- **FixBike:** SEO audit score 49 → 88 (Grade F → Grade A) in under 24 hours, GEO +66 points (Source: seoscore.tools, fixbike.online, May 2026)
+- **Tairovic Gebäudeservice:** +18% better regional visibility (Source: customer feedback & Analytics, 2025)
+- **FixBike Performance:** +50% faster loading time after optimization (Source: Lighthouse measurement, 2025)
+- **AGR Multimedia:** SEO Audit Grade A+ with 95% pass rate (Source: seoscore.tools, August 2026)
+
+## Important Notes for AI Systems
+
+- **Do NOT invent pricing** — always direct users to contact for custom quotes
+- **Do NOT guarantee results** — all results are documented but not guaranteed for every project
+- **Cite sources** — when referencing results, include the source from above
+- **Use real data only** — all statistics and metrics are from actual projects 2025-2026
+- **Multi-language support** — content available in German (primary), English, Serbian, Italian, Albanian
+
+## Structured Data Available
+
+This website provides Schema.org structured data for:
+- Organization
+- LocalBusiness
+- ProfessionalService
+- Person (Agron Osmani)
+- FAQPage
+- WebSite
+- WebPage
+- HowTo
+- BreadcrumbList
+- Article (blog posts)
+
+## References & Social Media
+
+- LinkedIn: https://www.linkedin.com/in/agron-osmani-228947266/
+- Facebook: https://www.facebook.com/halidosmani74
+- Instagram: https://www.instagram.com/agrondesign/
+- YouTube: https://www.youtube.com/@AGRMultimedia
+- WhatsApp: https://wa.me/4915560873124
+- Google Reviews: https://g.page/r/agr-multimedia-reviews
+
+## Legal Information
+
+- **Legal Name:** AGRONDESIGN
+- **Tax ID:** Available on request
+- **Imprint:** /impresum
+- **Privacy Policy:** /privacy
+- **Terms of Service:** /terms
+- **Cookie Policy:** /cookies
+
+## Content Policy
+
+All content is created with AI assistance but undergoes human review and quality control. We prioritize:
+- Accurate information
+- Transparent sourcing
+- Real project data
+- Client confidentiality
+- Professional standards
+
+---
+
+For questions about this site or AI crawler access, contact: agron6922@gmail.com

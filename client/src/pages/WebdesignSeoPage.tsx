@@ -13,8 +13,15 @@ import {
 } from "@/data/webdesignSeoContent";
 import PageTableOfContents from "@/components/PageTableOfContents";
 import SeoAeoEnhancement from "@/components/SeoAeoEnhancement";
+import UpdateDate from "@/components/UpdateDate";
+import ProcessSteps from "@/components/ProcessSteps";
+import ProjectResults from "@/components/ProjectResults";
+import GeoAeoDefinitions from "@/components/GeoAeoDefinitions";
+import ComparisonTable from "@/components/ComparisonTable";
 import { faqPageNode } from "@/lib/localBusinessSchema";
+import { enhancedLocalBusinessNode } from "@/lib/enhancedBusinessSchema";
 import { breadcrumbListSchema } from "@/lib/breadcrumbs";
+import { BUSINESS } from "@/lib/siteRoutes";
 
 const WEBDESIGN_SEO_TOC = [
   { id: "paket-ueberblick", label: "Paket-Überblick" },
@@ -39,7 +46,21 @@ function ServiceJsonLd() {
   const pageUrl = `https://www.agrmultimedia.com${ROUTES.webdesignSeo}`;
   const graph = {
     "@context": "https://schema.org",
-    "@graph": [faqPageNode(pageUrl, WEBDESIGN_SEO_FAQ_DE), breadcrumbListSchema(ROUTES.webdesignSeo)],
+    "@graph": [
+      enhancedLocalBusinessNode(pageUrl),
+      faqPageNode(pageUrl, WEBDESIGN_SEO_FAQ_DE),
+      breadcrumbListSchema(ROUTES.webdesignSeo),
+      {
+        "@type": "WebPage",
+        "@id": `${pageUrl}#webpage`,
+        url: pageUrl,
+        name: "Webdesign & SEO",
+        description: "Business-Websites mit klarer Struktur und On-Page-SEO für KMU in Baden-Württemberg.",
+        dateModified: "2026-08-30",
+        isPartOf: { "@id": `${BUSINESS.url}/#website` },
+        author: { "@id": `${BUSINESS.url}/#person` },
+      },
+    ],
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(graph) }} />;
 }
@@ -60,6 +81,7 @@ export default function WebdesignSeoPage() {
           <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
             <h1 className="text-3xl font-semibold tracking-tight text-white md:text-4xl">{intro.title}</h1>
             <p className="mt-4 text-base leading-relaxed text-white/75 md:text-lg">{intro.lead}</p>
+            <UpdateDate />
             <p className="mt-6">
               <Link href={ROUTES.webdesignGeislingen} className="text-sm font-medium text-blue-200 hover:underline md:text-base">
                 {currentLanguage === "de"
@@ -97,6 +119,21 @@ export default function WebdesignSeoPage() {
             </section>
           ))}
 
+          <section id="seo-geo-erfolge" className="mb-12">
+            <h2 className="text-xl font-semibold text-white md:text-2xl">SEO &amp; GEO Erfolge</h2>
+            <p className="mt-4 leading-relaxed text-white/75">
+              Unsere SEO-Arbeit liefert messbare Ergebnisse für kleine und mittlere Unternehmen. Bei FixBike haben wir den SEO-Score von 49 auf 88 Punkte gesteigert (Quelle: seoscore.tools), was zu deutlich besserer Auffindbarkeit in Google-Suchergebnissen führte. Durch technische Optimierungen konnten wir die Ladegeschwindigkeit um +50% verbessern (Google Lighthouse Performance-Score). Die KFZ-Werkstatt Tairovic verzeichnete eine Steigerung der Online-Sichtbarkeit um +18% durch verbesserte lokale Rankings (Google Analytics, organische Suchanfragen).
+            </p>
+            <p className="mt-4 leading-relaxed text-white/75">
+              Diese Resultate zeigen die Bedeutung einer ganzheitlichen SEO-Strategie: Technisches SEO bildet die Grundlage mit schnellen Ladezeiten, mobilfreundlichem Design und sauberer Code-Struktur. On-Page SEO optimiert Inhalte, Meta-Tags und interne Verlinkung für maximale Relevanz. Lokales SEO stärkt die regionale Sichtbarkeit durch Google Business Profile und strukturierte Daten. Moderne GEO (Generative Engine Optimization) und AEO (Answer Engine Optimization) sorgen dafür, dass Ihre Inhalte auch in KI-gestützten Suchmaschinen wie ChatGPT, Perplexity oder Google Gemini optimal dargestellt werden.
+            </p>
+            <p className="mt-4 leading-relaxed text-white/75">
+              Wichtig: Diese Zahlen basieren auf realen Projekten aus 2025-2026 und sind dokumentiert. Sie stellen keine Garantie für zukünftige Ergebnisse dar – jedes Unternehmen ist einzigartig und der Erfolg hängt von vielen Faktoren ab. Was wir garantieren: eine professionelle, moderne Website mit solider technischer Grundlage, die alle aktuellen SEO-, GEO- und AEO-Best-Practices erfüllt und Ihrem Unternehmen die bestmögliche Ausgangsbasis für Online-Erfolg bietet.
+            </p>
+          </section>
+
+          <ProjectResults />
+
           <section className="mb-12">
             <h2 className="text-xl font-semibold text-white md:text-2xl">FAQ — Webdesign &amp; SEO</h2>
             <dl className="mt-6 space-y-6">
@@ -108,6 +145,11 @@ export default function WebdesignSeoPage() {
               ))}
             </dl>
           </section>
+
+          <ProcessSteps />
+          <ProjectResults />
+          <GeoAeoDefinitions />
+          <ComparisonTable />
 
           <SeoAeoEnhancement variant="webdesign-seo" />
 

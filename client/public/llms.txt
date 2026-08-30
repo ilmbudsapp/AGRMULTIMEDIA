@@ -1,14 +1,29 @@
 # AGR Multimedia — llms.txt
 
 > Human-readable site summary for AI assistants and crawlers that support llms.txt.
+> Last updated: August 30, 2026
 
 ## Organization
 
 - **Name:** AGR Multimedia
+- **Legal Name:** AGRONDESIGN
 - **Site:** https://www.agrmultimedia.com/
-- **Location:** Geislingen an der Steige, Baden-Württemberg, Germany
-- **Languages:** Serbian, English, German, Italian, Albanian (site UI)
+- **Address:** Luise-Hainlen-Weg 4/4, 73312 Geislingen an der Steige, Baden-Württemberg, Germany
+- **Coordinates:** 48.6233, 9.8283
+- **Languages:** German, English, Serbian, Italian, Albanian (site UI)
 - **Contact:** agron6922@gmail.com · +49 155 60873124
+- **Working Hours:** Monday-Friday, 09:00-18:00 CET
+- **Service Area:** Geislingen an der Steige, Göppingen, Ulm, Baden-Württemberg, Germany
+
+## Founder & Team
+
+- **Founder:** Agron Osmani
+- **Role:** Founder & Creative Lead
+- **Experience:** 5+ years in web design, SEO, GEO/AEO optimization
+- **Projects:** 20+ completed projects in Baden-Württemberg
+- **Articles:** 17 expert articles on the AGR Multimedia Blog
+- **LinkedIn:** https://www.linkedin.com/in/agron-osmani-228947266/
+- **SEO Grade:** A+ (95% pass rate, seoscore.tools, August 2026)
 
 ## What we do
 

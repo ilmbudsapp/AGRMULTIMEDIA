@@ -2,6 +2,11 @@ import { useEffect } from "react";
 import { Link } from "wouter";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import UpdateDate from "@/components/UpdateDate";
+import ProcessSteps from "@/components/ProcessSteps";
+import ProjectResults from "@/components/ProjectResults";
+import GeoAeoDefinitions from "@/components/GeoAeoDefinitions";
+import ComparisonTable from "@/components/ComparisonTable";
 import {
   ArrowRight,
   Building2,
@@ -48,6 +53,8 @@ type VideoPageCopy = {
   /** Footer label before index, e.g. "Editing clip 1" — matches AI gallery figcaption style */
   clipCaptionPrefix: string;
   localNote: string;
+  resultsTitle: string;
+  resultsContent: string[];
 };
 
 const copyByLang: Record<ServiceLang, VideoPageCopy> = {
@@ -88,6 +95,13 @@ const copyByLang: Record<ServiceLang, VideoPageCopy> = {
     samplesIntro: "Recent cuts — press play to preview style and pacing.",
     clipCaptionPrefix: "Editing clip",
     localNote: "Serving Geislingen, the Stuttgart region, and remote teams across the EU.",
+    resultsTitle: "Video Production Results",
+    resultsContent: [
+      "Our video production focuses on measurable results for local businesses in Baden-Württemberg. Portfolio projects demonstrate how professionally produced videos strengthen brand perception and directly contribute to conversion.",
+      "Video marketing is now one of the most effective tools for digital growth. Clients like Toni's Autopflege Göppingen saw significantly more customer inquiries after their website relaunch with video integration. The combination of engaging visual content and clear brand messaging leads to higher engagement on social media platforms and better click-through rates in paid campaigns.",
+      "For FixBike, we created short product and service clips used on the website and in social media ads. These videos support the SEO strategy through longer dwell time and reduce bounce rates. Tairovic Gebäudeservice uses corporate videos to build trust with commercial clients — a decisive factor in B2B decisions.",
+      "As a video production company based in the Baden-Württemberg region, we know the local markets and work closely with companies from Geislingen, Göppingen, Stuttgart, and surrounding areas. Short coordination paths, clear communication, and understanding of regional specifics make collaboration efficient and goal-oriented.",
+    ],
   },
   de: {
     eyebrow: "Video",
@@ -126,6 +140,13 @@ const copyByLang: Record<ServiceLang, VideoPageCopy> = {
     samplesIntro: "Kurz Hineinhören — Stil und Tempo zeigen sich direkt im Player.",
     clipCaptionPrefix: "Schnittbeispiel",
     localNote: "Geislingen, Region Stuttgart — dazu Remote-Teams EU-weit.",
+    resultsTitle: "Videoproduktion Ergebnisse",
+    resultsContent: [
+      "Unsere Videoproduktion konzentriert sich auf messbare Ergebnisse für lokale Unternehmen in Baden-Württemberg. Die Portfolio-Projekte zeigen, wie professionell produzierte Videos die Markenwahrnehmung stärken und direkt zur Konversion beitragen.",
+      "Video Marketing ist heute eines der wirksamsten Werkzeuge für digitales Wachstum. Kunden wie Toni's Autopflege Göppingen verzeichneten nach dem Website-Relaunch mit Video-Integration deutlich mehr Kundenanfragen. Die Kombination aus ansprechendem visuellem Content und klarer Markenbotschaft führt zu höherem Engagement auf Social-Media-Plattformen und besserer Klickrate bei bezahlten Kampagnen.",
+      "Für FixBike haben wir kurze Produkt- und Serviceclips erstellt, die auf der Website und in Social-Media-Ads eingesetzt wurden. Diese Videos unterstützen die SEO-Strategie durch längere Verweildauer und reduzieren Absprungraten. Tairovic Gebäudeservice nutzt Corporate-Videos, um Vertrauen bei gewerblichen Kunden aufzubauen — ein entscheidender Faktor bei B2B-Entscheidungen.",
+      "Als Videoproduktion mit Sitz in der Region Baden-Württemberg kennen wir die lokalen Märkte und arbeiten eng mit Firmen aus Geislingen, Göppingen, Stuttgart und Umgebung zusammen. Kurze Abstimmungswege, klare Kommunikation und Verständnis für regionale Besonderheiten machen die Zusammenarbeit effizient und zielgerichtet.",
+    ],
   },
   it: {
     eyebrow: "Video",
@@ -164,6 +185,13 @@ const copyByLang: Record<ServiceLang, VideoPageCopy> = {
     samplesIntro: "Anteprima rapida di stile e ritmo.",
     clipCaptionPrefix: "Clip montaggio",
     localNote: "Geislingen e regione — anche progetti remote in UE.",
+    resultsTitle: "Risultati della produzione video",
+    resultsContent: [
+      "La nostra produzione video si concentra su risultati misurabili per le aziende locali nel Baden-Württemberg. I progetti del portfolio dimostrano come i video prodotti professionalmente rafforzino la percezione del brand e contribuiscano direttamente alla conversione.",
+      "Il video marketing è oggi uno degli strumenti più efficaci per la crescita digitale. Clienti come Toni's Autopflege Göppingen hanno registrato significativamente più richieste dopo il rilancio del sito con integrazione video. La combinazione di contenuti visivi coinvolgenti e messaggi chiari del brand porta a un maggiore coinvolgimento sulle piattaforme social e migliori tassi di clic nelle campagne a pagamento.",
+      "Per FixBike abbiamo creato brevi clip di prodotti e servizi utilizzate sul sito web e negli annunci sui social media. Questi video supportano la strategia SEO attraverso tempi di permanenza più lunghi e riducono i tassi di rimbalzo. Tairovic Gebäudeservice utilizza video aziendali per costruire fiducia con i clienti commerciali — un fattore decisivo nelle decisioni B2B.",
+      "Come società di produzione video con sede nella regione del Baden-Württemberg, conosciamo i mercati locali e lavoriamo a stretto contatto con aziende di Geislingen, Göppingen, Stoccarda e aree circostanti. Percorsi di coordinamento brevi, comunicazione chiara e comprensione delle specificità regionali rendono la collaborazione efficiente e orientata agli obiettivi.",
+    ],
   },
   sr: {
     eyebrow: "Video",
@@ -201,6 +229,14 @@ const copyByLang: Record<ServiceLang, VideoPageCopy> = {
     samplesIntro: "Kratki pregled stila i tempa.",
     clipCaptionPrefix: "Montažni klip",
     localNote: "Geislingen, region Štutgart — i daljinski timovi u EU.",
+    servicesOverview: "Tri fokusa",
+    resultsTitle: "Rezultati video produkcije",
+    resultsContent: [
+      "Naša video produkcija fokusirana je na merljive rezultate za lokalne kompanije u Baden-Württembergu. Portfolio projekti pokazuju kako profesionalno proizvedeni video snimci jačaju percepciju brenda i direktno doprinose konverziji.",
+      "Video marketing je danas jedan od najefektivnijih alata za digitalni rast. Klijenti kao Toni's Autopflege Göppingen zabeleži su značajno više upita nakon relauncha sajta sa video integracijom. Kombinacija privlačnog vizuelnog sadržaja i jasne poruke brenda dovodi do većeg angažmana na platformama društvenih medija i boljih stopa klika u plaćenim kampanjama.",
+      "Za FixBike smo kreirali kratke klipove proizvoda i usluga koji se koriste na sajtu i u reklamama na društvenim mrežama. Ovi video snimci podržavaju SEO strategiju kroz duže vreme zadržavanja i smanjuju stope napuštanja. Tairovic Gebäudeservice koristi korporativne video snimke za izgradnju poverenja sa poslovnim klijentima — odlučujući faktor u B2B odlukama.",
+      "Kao video produkcija sa sedištem u regionu Baden-Württemberg, poznajemo lokalna tržišta i blisko sarađujemo sa firmama iz Geislingena, Göppingena, Štutgarta i okolnih oblasti. Kratki putevi koordinacije, jasna komunikacija i razumevanje regionalnih specifičnosti čine saradnju efikasnom i usmerenom ka cilju.",
+    ],
   },
   al: {
     eyebrow: "Video",
@@ -237,7 +273,15 @@ const copyByLang: Record<ServiceLang, VideoPageCopy> = {
     ctaQuote: "Kërko ofertë",
     samplesTitle: "Shembuj klipesh",
     samplesIntro: "Shiko shpejt stilin dhe ritmin.",
+    clipCaptionPrefix: "Klip montazhi",
     localNote: "Geislingen dhe rajoni — edhe ekipe remote në BE.",
+    resultsTitle: "Rezultatet e prodhimit të videos",
+    resultsContent: [
+      "Prodhimi ynë i videos fokusohet në rezultate të matshme për bizneset lokale në Baden-Württemberg. Projektet e portofolit demonstrojnë se si videot e prodhuara profesionalisht forcojnë perceptimin e markës dhe kontribuojnë drejtpërdrejt në konvertim.",
+      "Video marketingu është tani një nga mjetet më efektive për rritjen dixhitale. Klientë si Toni's Autopflege Göppingen panë dukshëm më shumë kërkesa pas rilancimit të faqes web me integrimin e videos. Kombinimi i përmbajtjes vizuale tërheqëse dhe mesazheve të qarta të markës çon në angazhim më të lartë në platformat e mediave sociale dhe norma më të mira të klikimeve në fushatat e paguara.",
+      "Për FixBike, ne krijuam klipe të shkurtra produktesh dhe shërbimesh të përdorura në faqen web dhe në reklamat e mediave sociale. Këto video mbështesin strategjinë SEO përmes kohës më të gjatë të qëndrimit dhe reduktojnë normat e kërcimit. Tairovic Gebäudeservice përdor video korporative për të ndërtuar besim me klientët komercialë — një faktor vendimtar në vendimet B2B.",
+      "Si kompani prodhimi videosh me bazë në rajonin e Baden-Württemberg, ne njohim tregjet lokale dhe punojmë ngushtë me kompani nga Geislingen, Göppingen, Stuttgart dhe zonat përreth. Rrugët e shkurtra të koordinimit, komunikimi i qartë dhe kuptimi i specifikave rajonale e bëjnë bashkëpunimin efikas dhe të orientuar drejt qëllimit.",
+    ],
   },
 };
 
@@ -293,6 +337,9 @@ export default function VideoProduction() {
           </h1>
           <p className="mt-6 max-w-3xl text-base leading-relaxed text-neutral-600 sm:text-lg">{copy.intro}</p>
           <p className="mt-4 max-w-3xl text-sm text-neutral-500">{copy.localNote}</p>
+          <div className="mt-6">
+            <UpdateDate />
+          </div>
         </section>
 
         {/* Power of 3 */}
@@ -372,6 +419,20 @@ export default function VideoProduction() {
           </article>
         </section>
 
+        {/* Video Production Results */}
+        <section className="mx-auto mt-12 max-w-6xl px-4 sm:px-6 lg:px-8">
+          <article className="rounded-2xl border border-neutral-200 bg-white p-8 shadow-sm">
+            <h2 className="text-2xl font-semibold tracking-tight text-neutral-900">{copy.resultsTitle}</h2>
+            <div className="mt-6 space-y-4">
+              {copy.resultsContent.map((paragraph, i) => (
+                <p key={i} className="text-base leading-relaxed text-neutral-700">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          </article>
+        </section>
+
         {/* Samples */}
         <section id="video-samples" className="mx-auto mt-12 max-w-6xl px-4 sm:px-6 lg:px-8">
           <article className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
@@ -412,6 +473,18 @@ export default function VideoProduction() {
             </a>
           </p>
         </section>
+
+        {/* Process Steps */}
+        <ProcessSteps />
+
+        {/* Project Results */}
+        <ProjectResults />
+
+        {/* GEO/AEO Definitions */}
+        <GeoAeoDefinitions />
+
+        {/* Comparison Table */}
+        <ComparisonTable />
 
       </main>
       <Footer />

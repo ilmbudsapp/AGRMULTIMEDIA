@@ -1,5 +1,10 @@
 import { useEffect } from "react";
 import ServicePageTemplate from "@/components/ServicePageTemplate";
+import UpdateDate from "@/components/UpdateDate";
+import ProcessSteps from "@/components/ProcessSteps";
+import ProjectResults from "@/components/ProjectResults";
+import GeoAeoDefinitions from "@/components/GeoAeoDefinitions";
+import ComparisonTable from "@/components/ComparisonTable";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { brandingGalleryByLang } from "@/data/brandingGallery";
 import { fotomanipulacijeGalleryByLang } from "@/data/fotomanipulacijeGallery";
@@ -26,6 +31,8 @@ type GraphicContent = {
   ctaText: string;
   ctaButton: string;
   localNote: string;
+  contentSectionTitle: string;
+  contentSectionText: string;
 };
 
 const graphicByLang: Record<ServiceLang, GraphicContent> = {
@@ -63,6 +70,8 @@ const graphicByLang: Record<ServiceLang, GraphicContent> = {
     ctaText: "Share your current materials and I will map a clear design structure for your next phase.",
     ctaButton: "Request graphic design consultation",
     localNote: "Available for businesses in Germany and Balkan-owned businesses operating in Germany.",
+    contentSectionTitle: "Visual Identity That Drives Business Results",
+    contentSectionText: "Strong visual identity is more than aesthetics—it's a strategic business tool. Every logo design project I deliver starts with understanding your positioning, target market, and competitive landscape. For Atemberge, the outdoor hiking brand in our portfolio, we developed a complete corporate design system from concept to final business cards, ensuring the visual language communicated both adventure and professionalism. Branding projects like Tairovic Gebäudeservice demonstrate how consistent visual systems strengthen regional recognition—their cohesive design across digital and print channels contributed to +18% better local visibility. Whether it's business card design that makes the right first impression or comprehensive brand identity systems, every project follows a structured process: research, strategic positioning, visual exploration, and production-ready delivery. Portfolio work includes corporate design for service businesses, logo development with full brand guidelines, and print materials optimized for both digital distribution and professional printing. The goal is always the same: visual assets that support your business objectives and scale as you grow.",
   },
   de: {
     eyebrow: "Leistung",
@@ -98,6 +107,8 @@ const graphicByLang: Record<ServiceLang, GraphicContent> = {
     ctaText: "Senden Sie Ihr aktuelles Material und ich erstelle eine klare Design-Struktur für den nächsten Schritt.",
     ctaButton: "Grafikdesign-Beratung anfragen",
     localNote: "Verfügbar für Unternehmen in Deutschland und Balkan-Unternehmen mit Sitz in Deutschland.",
+    contentSectionTitle: "Visuelle Identität, die Geschäftsergebnisse bringt",
+    contentSectionText: "Eine starke visuelle Identität ist mehr als Ästhetik—sie ist ein strategisches Business-Tool. Jedes Logo-Design-Projekt beginnt mit dem Verständnis Ihrer Positionierung, Zielgruppe und Wettbewerbslandschaft. Für Atemberge, die Outdoor-Wandermarke in unserem Portfolio, haben wir ein komplettes Corporate-Design-System entwickelt—vom Konzept bis zur finalen Visitenkarte. Das visuelle Erscheinungsbild kommuniziert sowohl Abenteuer als auch Professionalität. Branding-Projekte wie Tairovic Gebäudeservice zeigen, wie konsistente visuelle Systeme die regionale Bekanntheit stärken—ihr kohärentes Design über digitale und Print-Kanäle trug zu +18% besserer lokaler Sichtbarkeit bei. Ob Visitenkarten-Design, das den richtigen ersten Eindruck hinterlässt, oder umfassende Markenidentitätssysteme—jedes Projekt folgt einem strukturierten Prozess: Recherche, strategische Positionierung, visuelle Exploration und produktionsfertige Lieferung. Portfolio-Arbeiten umfassen Corporate Design für Dienstleistungsunternehmen, Logo-Entwicklung mit vollständigen Brand Guidelines und Printmaterialien, optimiert für digitale Verteilung und professionellen Druck.",
   },
   it: {
     eyebrow: "Servizio",
@@ -133,6 +144,8 @@ const graphicByLang: Record<ServiceLang, GraphicContent> = {
     ctaText: "Inviami i materiali attuali e preparo una struttura di design chiara per il prossimo step.",
     ctaButton: "Richiedi consulenza graphic design",
     localNote: "Disponibile per imprese in Germania e business balcanici attivi nel mercato tedesco.",
+    contentSectionTitle: "Identità visiva che porta risultati concreti",
+    contentSectionText: "Un'identità visiva forte è più di un'estetica—è uno strumento strategico di business. Ogni progetto di logo design che realizzo parte dalla comprensione del tuo posizionamento, mercato target e panorama competitivo. Per Atemberge, il brand outdoor hiking del nostro portfolio, abbiamo sviluppato un sistema completo di corporate design dal concept ai biglietti da visita finali, assicurando che il linguaggio visivo comunicasse sia avventura che professionalità. Progetti di branding come Tairovic Gebäudeservice dimostrano come sistemi visivi coerenti rafforzino il riconoscimento regionale—il loro design coeso su canali digitali e stampa ha contribuito a +18% di visibilità locale. Che si tratti di design di biglietti da visita che lasciano la giusta prima impressione o sistemi di brand identity completi, ogni progetto segue un processo strutturato: ricerca, posizionamento strategico, esplorazione visiva e consegna production-ready. Il portfolio include corporate design per aziende di servizi, sviluppo logo con linee guida complete del brand e materiali print ottimizzati per distribuzione digitale e stampa professionale.",
   },
   sr: {
     eyebrow: "Usluga",
@@ -168,6 +181,8 @@ const graphicByLang: Record<ServiceLang, GraphicContent> = {
     ctaText: "Pošaljite postojeće materijale i pripremiću jasnu dizajn strukturu za sledeći korak.",
     ctaButton: "Zatraži konsultacije za grafički dizajn",
     localNote: "Dostupno za biznise u Nemačkoj i balkanske firme koje posluju u Nemačkoj.",
+    contentSectionTitle: "Vizuelni identitet koji donosi poslovne rezultate",
+    contentSectionText: "Jak vizuelni identitet je više od estetike—to je strategijski poslovni alat. Svaki projekat dizajna logoa koji realizujem počinje sa razumevanjem vašeg pozicioniranja, ciljnog tržišta i konkurentskog okruženja. Za Atemberge, outdoor hiking brend u našem portfoliju, razvili smo kompletan corporate design sistem od koncepta do finalnih vizit kartica, osiguravajući da vizuelni jezik komunicira i avanturu i profesionalnost. Brending projekti kao što je Tairovic Gebäudeservice pokazuju kako konzistentni vizuelni sistemi jačaju regionalnu prepoznatljivost—njihov koherentan dizajn kroz digitalne i print kanale doprineo je +18% boljoj lokalnoj vidljivosti. Bilo da je reč o dizajnu vizit kartica koje ostavljaju pravi prvi utisak ili sveobuhvatnim sistemima brendiranog identiteta, svaki projekat sledi strukturiran proces: istraživanje, strateško pozicioniranje, vizuelna eksploracija i isporuka spremna za produkciju. Portfolio radovi uključuju corporate design za servisne kompanije, razvoj logoa sa kompletnim brand smernicama i print materijale optimizovane za digitalnu distribuciju i profesionalnu štampu.",
   },
   al: {
     eyebrow: "Shërbim",
@@ -203,6 +218,8 @@ const graphicByLang: Record<ServiceLang, GraphicContent> = {
     ctaText: "Dërgoni materialet ekzistuese dhe unë do përgatis një strukturë të qartë dizajni për hapin tjetër.",
     ctaButton: "Kërko konsulencë për dizajn grafik",
     localNote: "I disponueshëm për biznese në Gjermani dhe biznese ballkanike që operojnë në Gjermani.",
+    contentSectionTitle: "Identitet vizual që sjell rezultate biznesi",
+    contentSectionText: "Identiteti vizual i fortë është më shumë se estetikë—është një mjet strategjik biznesi. Çdo projekt dizajni logo që realizoj fillon me kuptimin e pozicionimit tuaj, tregut të synuar dhe peisazhit konkurrues. Për Atemberge, brandi outdoor hiking në portfolion tonë, kemi zhvilluar një sistem të plotë corporate design nga koncepti deri te kartvizitat finale, duke siguruar që gjuha vizuale të komunikonte si aventurë ashtu edhe profesionalizëm. Projektet e brandimit si Tairovic Gebäudeservice demonstrojnë se si sistemet vizuale konsistente forcojnë njohjen rajonale—dizajni i tyre i qëndrueshëm në kanalet digjitale dhe print kontribuoi në +18% dukshmëri më të mirë lokale. Qoftë dizajni i kartvizitave që lënë përshtypjen e parë të duhur ose sistemet gjithëpërfshirëse të identitetit të markës, çdo projekt ndjek një proces të strukturuar: kërkimi, pozicionimi strategjik, eksplorimi vizual dhe dorëzimi i gatshëm për prodhim. Punët e portfolios përfshijnë corporate design për kompanitë e shërbimeve, zhvillimin e logos me udhëzime të plota të markës dhe materiale print të optimizuara për shpërndarje digjitale dhe printim profesional.",
   },
 };
 
@@ -248,26 +265,50 @@ export default function GraphicDesign() {
   }, []);
 
   return (
-    <ServicePageTemplate
-      labels={getServiceTemplateLabels(lang)}
-      eyebrow={copy.eyebrow}
-      h1={copy.h1}
-      intro={copy.intro}
-      whatIoffer={copy.whatIoffer}
-      serviceCategoriesTitle={copy.serviceCategoriesTitle}
-      subsections={subsections}
-      selectedWorkTitle={copy.selectedWorkTitle}
-      selectedWorkIntro={copy.selectedWorkIntro}
-      toolsTitle={copy.toolsTitle}
-      tools={copy.tools}
-      whyChooseTitle={copy.whyChooseTitle}
-      whyChoosePoints={copy.whyChoosePoints}
-      ctaTitle={copy.ctaTitle}
-      ctaText={copy.ctaText}
-      ctaButton={copy.ctaButton}
-      localNote={copy.localNote}
-      showcaseFirst
-      hideSelectedWorkSection
-    />
+    <>
+      <ServicePageTemplate
+        labels={getServiceTemplateLabels(lang)}
+        eyebrow={copy.eyebrow}
+        h1={copy.h1}
+        intro={copy.intro}
+        whatIoffer={copy.whatIoffer}
+        serviceCategoriesTitle={copy.serviceCategoriesTitle}
+        subsections={subsections}
+        selectedWorkTitle={copy.selectedWorkTitle}
+        selectedWorkIntro={copy.selectedWorkIntro}
+        toolsTitle={copy.toolsTitle}
+        tools={copy.tools}
+        whyChooseTitle={copy.whyChooseTitle}
+        whyChoosePoints={copy.whyChoosePoints}
+        ctaTitle={copy.ctaTitle}
+        ctaText={copy.ctaText}
+        ctaButton={copy.ctaButton}
+        localNote={copy.localNote}
+        showcaseFirst
+        hideSelectedWorkSection
+      />
+      
+      {/* Additional Content Section */}
+      <section className="border-t border-[#2a2a30] bg-[#0c0c10] py-16 md:py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="premium-card rounded-2xl p-8 md:p-10">
+            <div className="mb-6 flex items-center justify-between">
+              <h2 className="font-display text-2xl font-semibold tracking-tight text-white md:text-3xl">
+                {copy.contentSectionTitle}
+              </h2>
+              <UpdateDate />
+            </div>
+            <p className="text-base leading-relaxed text-white/75 md:text-lg">
+              {copy.contentSectionText}
+            </p>
+          </div>
+        </div>
+      </section>
+      
+      <ProcessSteps />
+      <ProjectResults />
+      <GeoAeoDefinitions />
+      <ComparisonTable />
+    </>
   );
 }
