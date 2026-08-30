@@ -11,6 +11,8 @@ import ProcessSteps from "@/components/ProcessSteps";
 import ProjectResults from "@/components/ProjectResults";
 import GeoAeoDefinitions from "@/components/GeoAeoDefinitions";
 import ComparisonTable from "@/components/ComparisonTable";
+import RelatedServices from "@/components/RelatedServices";
+import GoogleReviewsLink from "@/components/GoogleReviewsLink";
 import {
   WEBDESIGN_LANDING_FAQ,
   WEBDESIGN_LANDING_H1,
@@ -183,6 +185,11 @@ export default function WebdesignGeislingenPage() {
             <ProjectResults />
             <GeoAeoDefinitions />
             <ComparisonTable />
+            <RelatedServices variant="webdesign" />
+            
+            <div className="mt-16 flex justify-center">
+              <GoogleReviewsLink />
+            </div>
 
             <SeoAeoEnhancement variant="pillar" className="mt-16" />
           </div>

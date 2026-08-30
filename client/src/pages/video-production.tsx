@@ -7,6 +7,7 @@ import ProcessSteps from "@/components/ProcessSteps";
 import ProjectResults from "@/components/ProjectResults";
 import GeoAeoDefinitions from "@/components/GeoAeoDefinitions";
 import ComparisonTable from "@/components/ComparisonTable";
+import GoogleReviewsLink from "@/components/GoogleReviewsLink";
 import {
   ArrowRight,
   Building2,
@@ -485,6 +486,13 @@ export default function VideoProduction() {
 
         {/* Comparison Table */}
         <ComparisonTable />
+
+        {/* Google Reviews */}
+        <section className="border-t border-[#2a2a30] py-16 md:py-20">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 text-center">
+            <GoogleReviewsLink />
+          </div>
+        </section>
 
       </main>
       <Footer />

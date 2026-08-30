@@ -18,6 +18,8 @@ import ProcessSteps from "@/components/ProcessSteps";
 import ProjectResults from "@/components/ProjectResults";
 import GeoAeoDefinitions from "@/components/GeoAeoDefinitions";
 import ComparisonTable from "@/components/ComparisonTable";
+import RelatedServices from "@/components/RelatedServices";
+import GoogleReviewsLink from "@/components/GoogleReviewsLink";
 import { faqPageNode } from "@/lib/localBusinessSchema";
 import { enhancedLocalBusinessNode } from "@/lib/enhancedBusinessSchema";
 import { breadcrumbListSchema } from "@/lib/breadcrumbs";
@@ -150,6 +152,11 @@ export default function WebdesignSeoPage() {
           <ProjectResults />
           <GeoAeoDefinitions />
           <ComparisonTable />
+          <RelatedServices variant="seo" />
+          
+          <div className="mt-16 flex justify-center">
+            <GoogleReviewsLink />
+          </div>
 
           <SeoAeoEnhancement variant="webdesign-seo" />
 
