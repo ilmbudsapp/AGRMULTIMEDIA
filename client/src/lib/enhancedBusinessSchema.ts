@@ -62,7 +62,7 @@ export function enhancedLocalBusinessNode(pageUrl: string) {
       },
       {
         "@type": "City",
-        name": "Ulm",
+        name: "Ulm",
       },
       {
         "@type": "AdministrativeArea",
