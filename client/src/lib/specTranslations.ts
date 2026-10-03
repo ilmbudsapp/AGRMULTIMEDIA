@@ -296,8 +296,8 @@ const en: SpecTranslations = {
   whyMe: {
     heading: 'Why work with me',
     subtitle:
-      'Adobe Creative Cloud, modern AI-assisted workflows, and multilingual communication—structured delivery without agency overhead.',
-    benefit1: 'Multilingual communication: I speak German, English, Italian, Serbian and Albanian.',
+      'Adobe Creative Cloud, modern AI-assisted workflows, and communication in German and English — structured delivery without agency overhead.',
+    benefit1: 'Clear communication in German and English — structured delivery without agency overhead.',
     benefit2: 'Specialized in small businesses and creators who need fast and reliable delivery.',
     benefit3: 'End-to-end support: from first idea to final website, design or video.',
     benefit4: 'AI-enhanced workflows for more creative options in less time.',
@@ -514,8 +514,8 @@ const de: SpecTranslations = {
   whyMe: {
     heading: 'Warum mit mir arbeiten',
     subtitle:
-      'Adobe Creative Cloud, moderne KI-Workflows und mehrsprachige Abstimmung—ohne Agentur-Overhead.',
-    benefit1: 'Mehrsprachige Kommunikation: Ich spreche Deutsch, Englisch, Italienisch, Serbisch und Albanisch.',
+      'Adobe Creative Cloud, moderne KI-Workflows und Abstimmung auf Deutsch und Englisch — ohne Agentur-Overhead.',
+    benefit1: 'Klare Kommunikation auf Deutsch und Englisch — ohne Agentur-Overhead.',
     benefit2: 'Spezialisiert auf kleine Unternehmen und Creator mit Bedarf an schneller und zuverlässiger Lieferung.',
     benefit3: 'End-to-End-Betreuung: von der ersten Idee bis zur fertigen Website, zum Design oder Video.',
     benefit4: 'KI-gestützte Workflows für mehr kreative Optionen in kürzerer Zeit.',

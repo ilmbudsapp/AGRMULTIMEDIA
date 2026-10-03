@@ -36,7 +36,7 @@ const de: AboutExtended = {
     "SEO-, GEO- und AEO-Grundlage für Google und KI-Suchen",
     "Transparente Angebote nach kostenlosem Erstgespräch",
     "Schnelle Umsetzung ohne Agentur-Overhead",
-    "Mehrsprachige Kommunikation (DE, EN, SR, IT, SQ)",
+    "Kommunikation auf Deutsch und Englisch",
   ],
   projectsTitle: "Ausgewählte Projekte",
   projects: [
@@ -63,7 +63,7 @@ const de: AboutExtended = {
   ],
   languagesTitle: "Sprachen",
   languagesText:
-    "Ich kommuniziere mit Kunden auf Deutsch, Englisch, Serbisch, Italienisch und Albanisch. Die Website agrmultimedia.com ist mehrsprachig — für KMU in der Region ist Deutsch die Hauptsprache, internationale Projekte sind willkommen.",
+    "Die Website agrmultimedia.com ist auf Deutsch und Englisch verfügbar. Für KMU in der Region ist Deutsch die Hauptsprache; internationale Projekte auf Englisch sind willkommen.",
   specializationTitle: "Spezialisierung",
   specializationText:
     "Mein Schwerpunkt liegt auf lokalem Webdesign und SEO für kleine und mittlere Unternehmen in Geislingen an der Steige, Göppingen und Umgebung — Handwerk, Dienstleister, Autopflege, Reinigung, Beratung. Ergänzend: Grafikdesign, Videoproduktion und KI-gestützte Inhalte mit menschlicher Qualitätskontrolle.",
@@ -93,7 +93,7 @@ const en: AboutExtended = {
     "SEO, GEO and AEO foundation for Google and AI search",
     "Transparent quotes after a free initial consultation",
     "Fast delivery without agency overhead",
-    "Multilingual communication (DE, EN, SR, IT, SQ)",
+    "Communication in German and English",
   ],
   projectsTitle: "Selected projects",
   projects: [
@@ -112,7 +112,7 @@ const en: AboutExtended = {
   ],
   languagesTitle: "Languages",
   languagesText:
-    "I work with clients in German, English, Serbian, Italian and Albanian. The site is multilingual — German is primary for local SMEs; international projects are welcome.",
+    "The website agrmultimedia.com is available in German and English. German is primary for local SMEs; international projects in English are welcome.",
   specializationTitle: "Specialisation",
   specializationText:
     "I focus on local web design and SEO for SMEs in Geislingen, Göppingen and the surrounding area — trades, services, car care, cleaning, consulting. Also graphic design, video production and AI-assisted content with human quality control.",
@@ -126,7 +126,7 @@ const en: AboutExtended = {
   ],
 };
 
-const byLang: Partial<Record<Language, AboutExtended>> = { de, en, sr: de, it: en, sq: de, al: de };
+const byLang: Partial<Record<Language, AboutExtended>> = { de, en };
 
 export function getAboutExtended(lang: Language): AboutExtended {
   return byLang[lang] ?? en;

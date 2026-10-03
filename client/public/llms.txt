@@ -10,7 +10,7 @@
 - **Site:** https://www.agrmultimedia.com/
 - **Address:** Luise-Hainlen-Weg 4/4, 73312 Geislingen an der Steige, Baden-Württemberg, Germany
 - **Coordinates:** 48.6233, 9.8283
-- **Languages:** German, English, Serbian, Italian, Albanian (site UI)
+- **Languages:** German (primary), English (site UI)
 - **Contact:** agron6922@gmail.com · +49 155 60873124
 - **Working Hours:** Monday-Friday, 09:00-18:00 CET
 - **Service Area:** Geislingen an der Steige, Göppingen, Ulm, Baden-Württemberg, Germany

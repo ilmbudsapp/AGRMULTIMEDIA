@@ -193,7 +193,7 @@ export function enhancedLocalBusinessNode(pageUrl: string) {
       telephone: BUSINESS.phone,
       email: BUSINESS.email,
       contactType: "customer service",
-      availableLanguage: ["de", "en", "sr", "it", "sq"],
+      availableLanguage: ["de", "en"],
       areaServed: "DE",
     },
     slogan: "Moderne Websites, die Kunden bringen",
