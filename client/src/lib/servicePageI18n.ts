@@ -1,6 +1,6 @@
 import type { Language } from "@/lib/i18n";
 
-export type ServiceLang = Extract<Language, "de" | "en" | "it" | "sr" | "al">;
+export type ServiceLang = "de" | "en";
 
 export type LocalizedSubsection = {
   id: string;
@@ -10,17 +10,11 @@ export type LocalizedSubsection = {
   workPlaceholder: string;
   toolsPlaceholder: string;
   cta: string;
-  /** When set, the template shows a real image grid instead of the work placeholder copy. */
   workGallery?: { src: string; alt: string }[];
-  /** Optional link shown under the image gallery (e.g. live client site). */
   workGalleryExternalLink?: { href: string; label: string };
-  /** When set, the template shows HTML5 video players (hosted under /public). */
   workVideoGallery?: { src: string; title: string; poster: string }[];
-  /** Minimal card mode used for media-first showcase sections. */
   compactMediaOnly?: boolean;
-  /** Single full-width image below the gallery (e.g. business card mockup). */
   featuredWorkImage?: { src: string; alt: string; title?: string };
-  /** Full-width gallery rows without height crop (portfolio PDFs / moodboards). */
   galleryFullWidth?: boolean;
 };
 
@@ -28,9 +22,7 @@ export type ServiceTemplateLabels = {
   whatIOffer: string;
   serviceCategories: string;
   whatThisIncludes: string;
-  /** Heading for the work samples box when a gallery is present */
   workExamples: string;
-  /** Heading when a video gallery is present */
   videoExamples: string;
   selectedWorkPlaceholder: string;
   toolsPlaceholder: string;
@@ -89,48 +81,6 @@ const templateLabelsByLang: Record<ServiceLang, ServiceTemplateLabels> = {
     whyChoose: "Warum diese Leistung wählen",
     contactCta: "Handlungsaufforderung / Kontakt",
   },
-  it: {
-    whatIOffer: "Cosa offro",
-    serviceCategories: "Categorie di servizio",
-    whatThisIncludes: "Cosa include",
-    workExamples: "Esempi di lavori",
-    videoExamples: "Esempi video",
-    selectedWorkPlaceholder: "Segnaposto per lavori selezionati",
-    toolsPlaceholder: "Segnaposto per strumenti",
-    selectedWorkSlot: "Spazio riservato",
-    futureProject: "progetto futuro",
-    toolsSoftware: "Strumenti e software che utilizzo",
-    whyChoose: "Perché scegliere questo servizio",
-    contactCta: "Invito all’azione / Contatto",
-  },
-  sr: {
-    whatIOffer: "Šta nudim",
-    serviceCategories: "Kategorije usluga",
-    whatThisIncludes: "Šta uključuje",
-    workExamples: "Primeri radova",
-    videoExamples: "Video primeri",
-    selectedWorkPlaceholder: "Rezervisano mesto za odabrane radove",
-    toolsPlaceholder: "Rezervisano mesto za alate",
-    selectedWorkSlot: "Rezervisan slot",
-    futureProject: "budući projekat",
-    toolsSoftware: "Alati i softver koji koristim",
-    whyChoose: "Zašto izabrati ovu uslugu",
-    contactCta: "Poziv na akciju / Kontakt",
-  },
-  al: {
-    whatIOffer: "Çfarë ofroj",
-    serviceCategories: "Kategoritë e shërbimit",
-    whatThisIncludes: "Çfarë përfshin",
-    workExamples: "Shembuj pune",
-    videoExamples: "Shembuj video",
-    selectedWorkPlaceholder: "Vend i rezervuar për punë të zgjedhura",
-    toolsPlaceholder: "Vend i rezervuar për mjetet",
-    selectedWorkSlot: "Hapësirë e rezervuar",
-    futureProject: "projekt i ardhshëm",
-    toolsSoftware: "Mjetet dhe softuerët që përdor",
-    whyChoose: "Pse të zgjidhni këtë shërbim",
-    contactCta: "Thirrje për veprim / Kontakt",
-  },
 };
 
 const subsectionTextByLang: Record<
@@ -157,31 +107,10 @@ const subsectionTextByLang: Record<
     toolsPlaceholder: "Platzhalter für eingesetzte Tools/Software in dieser Kategorie.",
     cta: "Details zu dieser Kategorie anfragen",
   },
-  it: {
-    intro: (title) => `${title} è strutturato per chiarezza aziendale, consegna pratica e facile espansione nelle fasi successive.`,
-    includes: ["Definizione dell’ambito", "Struttura operativa", "Formato di consegna", "Note di ottimizzazione"],
-    workPlaceholder: "Spazio per progetti futuri in questa categoria (2–6 elementi).",
-    toolsPlaceholder: "Spazio per strumenti e software usati in questa categoria.",
-    cta: "Richiedi dettagli su questa categoria",
-  },
-  sr: {
-    intro: (title) => `${title} je strukturisan za jasnu poslovnu komunikaciju, praktičnu isporuku i lako proširenje u sledećoj fazi.`,
-    includes: ["Definicija obima", "Struktura realizacije", "Format isporuke", "Napomene za optimizaciju"],
-    workPlaceholder: "Mesto za buduće projekte u ovoj kategoriji (2–6 stavki).",
-    toolsPlaceholder: "Mesto za alate i softver koji se koriste u ovoj kategoriji.",
-    cta: "Zatraži detalje za ovu kategoriju",
-  },
-  al: {
-    intro: (title) => `${title} është i strukturuar për qartësi biznesi, dorëzim praktik dhe zgjerim të lehtë në fazën tjetër.`,
-    includes: ["Përcaktimi i fushëveprimit", "Struktura e zbatimit", "Formati i dorëzimit", "Shënime optimizimi"],
-    workPlaceholder: "Hapësirë për projekte të ardhshme në këtë kategori (2–6 elemente).",
-    toolsPlaceholder: "Hapësirë për mjetet dhe softuerin e përdorur në këtë kategori.",
-    cta: "Kërko detaje për këtë kategori",
-  },
 };
 
 export function toServiceLang(lang: Language): ServiceLang {
-  if (lang === "de" || lang === "en" || lang === "it" || lang === "sr" || lang === "al") return lang;
+  if (lang === "de" || lang === "en") return lang;
   return "en";
 }
 

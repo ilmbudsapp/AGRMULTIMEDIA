@@ -733,205 +733,206 @@ export interface Translations {
   };
 }
 
-import { itTranslations } from './i18n-it';
-
-export const translations: Record<Exclude<Language, "al">, Translations> = {
-  sr: {
+export const translations: Record<Language, Translations> = {
+  en: {
     nav: {
-      home: "Početna",
-      about: "O nama",
-      services: "Usluge",
+      home: "Home",
+      about: "About",
+      services: "Services",
       portfolio: "Portfolio",
       blog: "Blog",
-      contact: "Kontakt"
+      contact: "Contact"
     },
     hero: {
-      title: "Kreativna Multimedijalna Rešenja",
-      subtitle: "Profesionalne usluge kreiranja web stranica, web dizajna, grafičkog dizajna, video produkcije, digitalnog marketinga i razvoja mobilnih aplikacija za Android i iOS za vaš biznis",
-      servicesButton: "Pogledajte usluge",
-      portfolioButton: "Naši radovi",
-      locationTitle: "Radimo sa vodećim brendovima",
+      title: "Creative Multimedia Solutions",
+      subtitle: "Professional website creation, web design, graphic design, video production, digital marketing services and mobile app development for Android and iOS for your business",
+      servicesButton: "View Services",
+      portfolioButton: "Our Work",
+      locationTitle: "Working with leading brands",
       locations: ["Stuttgart", "Milano", "Ulm"]
     },
     about: {
-      title: "O MULTIMEDIA AGRONDESIGN",
-      subtitle: "Kreiramo izuzetne digitalne doživljaje koji pokreću vaš biznis napred",
-      storyTitle: "Naša priča",
-      storyP1: "MULTIMEDIA AGRONDESIGN sam osnovao sa vizijom da pomažem biznis-ima da se istaknu u digitalnom svetu. Specijalizovan sam za kreiranje visokih kvaliteta multimedia sadržaja koji privlači pažnju, gradi brendove i pokreće rezultate.",
-      storyP2: "Kao iskusan dizajner, developer i marketing stručnjak, radim posvećeno da vašim idejama dam život kroz inovativna digitalna rešenja.",
+      title: "About MULTIMEDIA AGRONDESIGN",
+      subtitle: "Creating exceptional digital experiences that drive your business forward",
+      storyTitle: "Our Story",
+      storyP1: "I founded MULTIMEDIA AGRONDESIGN with a vision to help businesses stand out in the digital world. I specialize in creating high-quality multimedia content that attracts attention, builds brands and drives results.",
+      storyP2: "As an experienced designer, developer and marketing professional, I work dedicatedly to bring your ideas to life through innovative digital solutions.",
       stats: {
-        projects: "Projekata",
-        clients: "Klijenata",
-        years: "Godina"
+        projects: "Projects",
+        clients: "Clients",
+        years: "Years"
       },
       certification: {
-        certified: "Sertifikovani",
+        certified: "Certified",
         googlePartner: "Google Partner"
       },
       skills: {
-        title: "Kompetencije i alati",
+        title: "Skills & tools",
         creative: {
-          title: "Kreativna koncepcija i dizajn",
-          items: ["Kreativna koncepcija", "Korporativni i logo dizajn", "Dizajn za print i digitalne medije"]
+          title: "Creative concept & design",
+          items: ["Creative concept", "Corporate & logo design", "Print & digital media design"]
         },
         software: {
-          title: "Profesionalni softver",
+          title: "Professional software",
           items: ["Adobe Photoshop CC 2026", "Adobe Premiere Pro CC 2026", "Adobe After Effects CC 2026"]
         },
         aiTools: {
-          title: "AI alati",
+          title: "AI tools",
           items: ["Gemini", "Nano Banana", "Chat GPT", "Perplexity", "Veo 3.1", "Sora 2.0"]
         },
         office: {
-          title: "Office paket",
+          title: "Office suite",
           items: ["Microsoft Word", "Excel", "PowerPoint", "Outlook"]
         },
         languages: {
-          title: "Jezici",
-          items: ["Albanski (maternji)", "Italijanski (tečno)", "Srpski (tečno)", "Hrvatski (tečno)", "Nemački (tečno)"]
+          title: "Languages",
+          items: ["Albanian (native)", "Italian (fluent)", "Serbian (fluent)", "Croatian (fluent)", "German (fluent)"]
         }
       }
     },
     services: {
-      title: "Naše usluge",
-      subtitle: "Sveobuhvatna multimedia rešenja prilagođena vašim potrebama",
+      title: "Our Services",
+      subtitle: "Comprehensive multimedia solutions tailored to your needs",
       items: {
         webDesign: {
-          title: "Kreiranje vašeg Web sajta i Mobilne aplikacije",
-          description: "Responsivni, SEO optimizovani web sajtovi i mobilne aplikacije za Android i iOS koji privlače posetioce i konvertuju ih u klijente.",
-          features: ["Custom dizajn", "Mobile responsivan", "SEO optimizacija", "Android & iOS aplikacije"]
+          title: "Creating your Website and Mobile Application",
+          description: "Responsive, SEO-optimized websites and mobile applications for Android and iOS that attract visitors and convert them into clients.",
+          features: ["Custom Design", "Mobile Responsive", "SEO Optimization", "Android & iOS Apps"]
         },
         graphicDesign: {
-          title: "Grafički Dizajn",
-          description: "Kreativni vizuelni identiteti, logotipi i marketing materijali koji izdvajaju vaš brend.",
-          features: ["Logo dizajn", "Brending", "Print materijali"]
+          title: "Graphic Design",
+          description: "Creative visual identities, logos and marketing materials that make your brand stand out.",
+          features: ["Logo Design", "Branding", "Print Materials"]
         },
         videoProduction: {
-          title: "Video Produkcija",
-          description: "Profesionalni video sadržaj koji prenosi vašu poruku i angažuje auditorijum.",
-          features: ["Promocijski video", "Animacije", "Post-produkcija"]
+          title: "Video Production",
+          description: "Professional video content that conveys your message and engages your audience.",
+          features: ["Promotional Videos", "Animations", "Post-Production"]
         },
         digitalMarketing: {
-          title: "Digitalni Marketing",
-          description: "Strategije koje povećavaju vašu online vidljivost i privlače ciljnu publiku.",
+          title: "Digital Marketing",
+          description: "Strategies that increase your online visibility and attract your target audience.",
           features: ["Social Media", "Google Ads", "Content Marketing"]
         },
         photography: {
-          title: "Fotografija i Photomontaža",
-          description: "Profesionalne fotografije, restauracija starih slika, photomontaže i kreiranje filmskih postera sa vašom slikom.",
-          features: ["Profesionalno fotografisanje", "Restauracija starih fotografija", "Photomontaže svih vrsta", "Filmski posteri sa vašom slikom", "Obrada i post-produkcija", "Kreativni dizajn"]
+          title: "Photography",
+          description: "Professional product, event and portrait photography for your business.",
+          features: ["Product Photography", "Event Coverage", "Post-Processing"]
         },
         consulting: {
-          title: "Konsalting",
-          description: "Stručne konsultacije za digitalne strategije i optimizaciju vašeg online prisustva.",
-          features: ["Digitalna strategija", "UX/UI audit", "Analitika"]
+          title: "Consulting",
+          description: "Expert consultations for digital strategies and optimization of your online presence.",
+          features: ["Digital Strategy", "UX/UI Audit", "Analytics"]
         }
       },
-      learnMore: "Saznaj više"
+      learnMore: "Learn More"
     },
     portfolio: {
-      title: "Naš Portfolio",
-      subtitle: "Pogledajte neke od naših najuspešnijih projekata koji su doneli rezultate klijentima",
+      title: "Our Portfolio",
+      subtitle: "Check out some of our most successful projects that delivered results for clients",
       filters: {
-        all: "Svi projekti",
-        web: "Web Dizajn",
-        brand: "Brending",
+        all: "All Projects",
+        web: "Web Design",
+        brand: "Branding",
         video: "Video",
-        photo: "Fotografija"
+        photo: "Photography"
       },
       items: {
         ecommerce: {
-          title: "E-commerce Sajt",
-          description: "Kompletan online shopping doživljaj"
+          title: "E-commerce Site",
+          description: "Complete online shopping experience"
         },
         brand: {
-          title: "Brend Identitet",
-          description: "Kompletan vizuelni identitet za startup"
+          title: "Brand Identity",
+          description: "Complete visual identity for startup"
         },
         corporate: {
-          title: "Korporativni Video",
-          description: "Predstavljanje kompanije kroz video"
+          title: "Corporate Video",
+          description: "Company presentation through video"
         },
         restaurant: {
-          title: "Restoran Website",
-          description: "Elegantno online prisustvo"
+          title: "Restaurant Website",
+          description: "Elegant online presence"
         },
         product: {
           title: "Product Photography",
-          description: "Studijska fotografija proizvoda"
+          description: "Studio product photography"
         },
         packaging: {
-          title: "Packaging Dizajn",
-          description: "Kreativna ambalažna rešenja"
+          title: "Packaging Design",
+          description: "Creative packaging solutions"
         }
       },
-      viewDetails: "Pogledaj detalje"
+      viewDetails: "View Details"
     },
     blog: {
-      title: "Blog i Novosti",
-      subtitle: "Pratite najnovije trendove u digitalnom marketingu i dizajnu",
+      title: "Blog & News",
+      subtitle: "Follow the latest trends in digital marketing and design",
       posts: {
         trends: {
-          title: "5 Najvažnijih Trendova u Digitalnom Marketingu za 2026.",
-          description: "Otkrijte najnovije trendove koji će definisati digitalni marketing u narednoj godini i kako možete prilagoditi svoju strategiju...",
+          title: "5 Most Important Digital Marketing Trends for 2026",
+          description: "Discover the latest trends that will define digital marketing in the coming year and how you can adapt your strategy...",
           category: "Marketing"
         },
         conversion: {
-          title: "Kako da Kreirate Web Sajt koji Konvertuje Posetioce",
-          description: "Pratite najbolje prakse web dizajna koji ne samo što izgleda dobro, već i efikasno konvertuje posetioce u klijente...",
-          category: "Dizajn"
+          title: "How to Create a Website That Converts Visitors",
+          description: "Follow web design best practices that not only look good, but also effectively convert visitors into clients...",
+          category: "Design"
         },
         video: {
-          title: "Moć Video Marketinga: Zašto je Video Kralj Sadržaja",
-          description: "Video marketing nije samo trend - to je budućnost digitalne komunikacije. Saznajte kako možete iskoristiti video za rast biznisa...",
+          title: "The Power of Video Marketing: Why Video is King of Content",
+          description: "Video marketing isn't just a trend - it's the future of digital communication. Learn how you can use video for business growth...",
           category: "Video"
         },
         foodTruck: {
-          title: "Kako sam napravio web za food truck",
-          description: "Korak-po-korak objašnjavam kako sam dizajnirao i razvio jednostavan web za food truck — od strukture, dizajna i copy-ja do osnovnog SEO-a i CTA dugmadi.",
-          category: "Web dizajn"
+          title: "How I Built a Food Truck Website",
+          description: "A step-by-step breakdown of how I designed and built a simple food truck website — structure, copy, and basic SEO to turn visitors into inquiries.",
+          category: "Web Design"
         }
       },
-      readMore: "Čitaj više",
-      viewAll: "Pogledaj sve članke"
+      readMore: "Read More",
+      viewAll: "View All Articles"
     },
     blogPost: {
       trends: {
-        title: "5 Najvažnijih Trendova u Digitalnom Marketingu za 2026.",
-        subtitle: "Ostanite u korak sa najnovijim trendovima",
-        category: "Digitalni Marketing",
+        title: "5 Most Important Digital Marketing Trends for 2026",
+        subtitle: "Stay ahead with the latest trends",
+        category: "Digital Marketing",
         date: "07.03.2026",
-        intro: "Pejzaž digitalnog marketinga se brzo razvija. Od AI-om pokretane personalizacije do immersivnih AR iskustava, 2026. godina donosi uzbudljive prilike za preduzeća da se povežu sa svojom publiku na smisleniji način.",
+        intro: "The digital marketing landscape is evolving rapidly. From AI-driven personalization to immersive AR experiences, 2026 brings exciting opportunities for businesses to connect with their audience in more meaningful ways.",
         aiPersonalization: {
-          title: "Personalizacija pokretana AI",
-          description: "Veštačka inteligencija omogućava neviđene nivoe personalizacije sadržaja, stvarajući jedinstvena korisnička iskustva prilagođena individualnim preferencama i ponašanjima."
+          title: "AI-Driven Personalization",
+          description: "Artificial intelligence enables unprecedented levels of content personalization, creating unique user experiences tailored to individual preferences and behaviors."
         },
         voiceSearch: {
-          title: "Optimizacija za glasovnu pretragu",
-          description: "Sa pametnim zvučnicima koji postaju mainstream, optimizacija sadržaja za glasovne pretrage je ključna za održavanje vidljivosti u rezultatima pretrage."
+          title: "Voice Search Optimization",
+          description: "With smart speakers becoming mainstream, optimizing content for voice searches is key to maintaining visibility in search results."
         },
         mobileFirst: {
-          title: "Iskustva usmerena ka mobilnim uređajima",
-          description: "Mobilni uređaji čine većinu web saobraćaja. Dizajniranje iskustava usmerenih ka mobilnim uređajima osigurava optimalnu performansu na svim uređajima."
+          title: "Mobile-First Experiences",
+          description: "Mobile devices account for the majority of web traffic. Designing mobile-first experiences ensures optimal performance across all devices."
         },
         socialCommerce: {
-          title: "Integracija društvene trgovine",
-          description: "Društvene platforme postaju destinacije za kupovinu. Integracija trgovine direktno u društvena iskustva smanjuje trenje u kupovnom putovanju."
+          title: "Social Commerce Integration",
+          description: "Social platforms are becoming shopping destinations. Integrating commerce directly into social experiences reduces friction in the purchasing journey."
         },
         implementation: {
-          title: "Implementacija ovih trendova",
-          description: "Uspešna implementacija ovih trendova zahteva strateško planiranje i odgovarajuću ekspertizu. U MULTIMEDIA AGRONDESIGN-u pomajem preduzećima da se snađu u digitalnom pejzažu sa najsavremenijim rešenjima koja donose stvarne rezultate."
+          title: "Implementing These Trends",
+          description: "Successful implementation of these trends requires strategic planning and the right expertise. At MULTIMEDIA AGRONDESIGN, I help businesses navigate the digital landscape with cutting-edge solutions that deliver real results."
         },
         actionItems: {
-          title: "Ključne stavke za akciju",
-          item1: "Audituj svoju trenutnu strategiju digitalnog marketinga",
-          item2: "Identifikuj prilike za AI integraciju",
-          item3: "Optimizuj sadržaj za glasovnu pretragu",
-          item4: "Poboljšaj mobilno korisničko iskustvo"
+          title: "Key Action Items",
+          item1: "Audit your current digital marketing strategy",
+          item2: "Identify opportunities for AI integration",
+          item3: "Optimize content for voice search",
+          item4: "Improve mobile user experience"
         }
-      },
-      conversion: {
-        title: "Ultimativni vodič za optimizaciju konverzije web sajta",
+      }
+    }
+  },
+  de: {
+    nav: {
+      home: "Startseite",
         subtitle: "Pretvori posetioce u klijente",
         category: "Optimizacija web sajta",
         date: "07.03.2026",
@@ -3575,902 +3576,7 @@ export const translations: Record<Exclude<Language, "al">, Translations> = {
         button: "Kontaktieren Sie mich"
       }
     }
-  },
-  sq: {
-    nav: {
-      home: "Kreu",
-      about: "Rreth nesh",
-      services: "Shërbimet",
-      portfolio: "Portfolio",
-      blog: "Blog",
-      contact: "Kontakt"
-    },
-    hero: {
-      title: "Zgjidhje Kreative Multimediale",
-      subtitle: "Shërbime profesionale të krijimit të faqeve web, web dizajnit, dizajnit grafik, prodhimit të videove, marketingut dixhital dhe zhvillimit të aplikacioneve mobile për Android dhe iOS për biznesin tuaj",
-      servicesButton: "Shiko Shërbimet",
-      portfolioButton: "Puna Jonë",
-      locationTitle: "Duke punuar me marka kryesuese",
-      locations: ["Stuttgart", "Milano", "Ulm"]
-    },
-    about: {
-      title: "Rreth MULTIMEDIA AGRONDESIGN",
-      subtitle: "Duke krijuar përvojë të jashtëzakonshme dixhitale që shtyjnë biznesin tuaj përpara",
-      storyTitle: "Historia Jonë",
-      storyP1: "Unë themelova MULTIMEDIA AGRONDESIGN me një vizion për të ndihmuar bizneset të dallohen në botën dixhitale. Specializohem në krijimin e përmbajtjeve multimedia me cilësi të lartë që tërheqin vëmendjen, ndërtojnë marka dhe sjellin rezultate.",
-      storyP2: "Si një dizajner i përvojshëm, zhvillues dhe profesionist marketingu, punoj me përkushtim për t'i dhënë jetë ideve tuaja përmes zgjidhjeve inovative dixhitale.",
-      stats: {
-        projects: "Projekte",
-        clients: "Klientë",
-        years: "Vite"
-      },
-      certification: {
-        certified: "I Certifikuar",
-        googlePartner: "Partner Google"
-      },
-      skills: {
-        title: "Aftësitë dhe mjetet",
-        creative: {
-          title: "Koncept kreativ dhe dizajn",
-          items: ["Koncept kreativ", "Dizajn korporativ dhe logo", "Dizajn për print dhe media dixhitale"]
-        },
-        software: {
-          title: "Software profesional",
-          items: ["Adobe Photoshop CC 2026", "Adobe Premiere Pro CC 2026", "Adobe After Effects CC 2026"]
-        },
-        aiTools: {
-          title: "Mjetet e IA",
-          items: ["Gemini", "Nano Banana", "Chat GPT", "Perplexity", "Veo 3.1", "Sora 2.0"]
-        },
-        office: {
-          title: "Paketa Office",
-          items: ["Microsoft Word", "Excel", "PowerPoint", "Outlook"]
-        },
-        languages: {
-          title: "Gjuhët",
-          items: ["Shqip (gjuhë amtare)", "Italisht (rrjedhshëm)", "Serbisht (rrjedhshëm)", "Kroatisht (rrjedhshëm)", "Gjermanisht (rrjedhshëm)"]
-        }
-      }
-    },
-    services: {
-      title: "Shërbimet Tona",
-      subtitle: "Zgjidhje multimedia gjithëpërfshirëse të përshtatura për nevojat tuaja",
-      items: {
-        webDesign: {
-          title: "Krijimi i Faqes suaj të Internetit dhe Aplikacionit Mobil",
-          description: "Uebsajte përgjigës, të optimizuara për SEO dhe aplikacione mobile për Android dhe iOS që tërheqin vizitorë dhe i kthejnë ata në klientë.",
-          features: ["Dizajn i Personalizuar", "Mobile Responsive", "Optimizim SEO", "Aplikacione Android & iOS"]
-        },
-        graphicDesign: {
-          title: "Dizajn Grafik",
-          description: "Identitete vizuale kreative, logo dhe materiale marketingu që bëjnë që marka juaj të dallohet.",
-          features: ["Dizajn Logo", "Branding", "Materiale Print"]
-        },
-        videoProduction: {
-          title: "Prodhim Video",
-          description: "Përmbajtje video profesionale që transmeton mesazhin tuaj dhe angazhon audiencën.",
-          features: ["Video Promocionale", "Animacione", "Post-Prodhim"]
-        },
-        digitalMarketing: {
-          title: "Marketing Dixhital",
-          description: "Strategji që rrisin dukshmërinë tuaj online dhe tërheqin audiencën e synuar.",
-          features: ["Media Sociale", "Google Ads", "Marketing Përmbajtjeje"]
-        },
-        photography: {
-          title: "Fotografi",
-          description: "Fotografi profesionale produktesh, eventesh dhe portretesh për biznesin tuaj.",
-          features: ["Fotografi Produkti", "Mbulim Eventi", "Post-Processing"]
-        },
-        consulting: {
-          title: "Konsultime",
-          description: "Konsultime eksperte për strategji dixhitale dhe optimizim të prezencës suaj online.",
-          features: ["Strategji Dixhitale", "Audit UX/UI", "Analitikë"]
-        }
-      },
-      learnMore: "Mëso Më Shumë"
-    },
-    portfolio: {
-      title: "Portfolio-ja Jonë",
-      subtitle: "Shikoni disa nga projektet tona më të suksesshme që kanë sjellë rezultate për klientët",
-      filters: {
-        all: "Të Gjitha Projektet",
-        web: "Web Dizajn",
-        brand: "Branding",
-        video: "Video",
-        photo: "Fotografi"
-      },
-      items: {
-        ecommerce: {
-          title: "Sajt E-commerce",
-          description: "Përvojë e plotë blerje online"
-        },
-        brand: {
-          title: "Identitet Marke",
-          description: "Identitet vizual i plotë për startup"
-        },
-        corporate: {
-          title: "Video Korporative",
-          description: "Prezantim kompanie përmes videos"
-        },
-        restaurant: {
-          title: "Uebsajt Restoranti",
-          description: "Prezencë elegante online"
-        },
-        product: {
-          title: "Fotografi Produkti",
-          description: "Fotografi produkti në studio"
-        },
-        packaging: {
-          title: "Dizajn Ambalazhi",
-          description: "Zgjidhje kreative ambalazhi"
-        }
-      },
-      viewDetails: "Shiko Detajet"
-    },
-    blog: {
-      title: "Blog & Lajme",
-      subtitle: "Ndiq trendet më të fundit në marketing dixhital dhe dizajn",
-      posts: {
-        trends: {
-          title: "5 Trendet Më të Rëndësishme të Marketing Dixhital për 2026",
-          description: "Zbulo trendet më të fundit që do të përcaktojnë marketing dixhitalin në vitin e ardhshëm dhe si mund ta përshtatësh strategjinë tënde...",
-          category: "Marketing"
-        },
-        conversion: {
-          title: "Si të Krijosh një Uebsajt që Konverton Vizitorët",
-          description: "Ndiq praktikat më të mira të web dizajnit që jo vetëm duken mirë, por gjithashtu konvertojnë në mënyrë efektive vizitorët në klientë...",
-          category: "Dizajn"
-        },
-        video: {
-          title: "Fuqia e Video Marketingut: Pse Video është Mbreti i Përmbajtjes",
-          description: "Video marketingu nuk është vetëm një trend - është e ardhmja e komunikimit dixhital. Mëso si mund ta përdorësh videon për rritjen e biznesit...",
-          category: "Video"
-        },
-        foodTruck: {
-          title: "Si e ndërtova një faqe web për food truck",
-          description: "Një udhëzues praktik hap-pas-hapi se si dizajnova dhe ndërtova një web të thjeshtë për food truck — strukturë, copy dhe SEO bazë për të marrë më shumë kërkesa.",
-          category: "Dizajn Web"
-        }
-      },
-      readMore: "Lexo Më Shumë",
-      viewAll: "Shiko Të Gjitha Artikujt"
-    },
-    blogPost: {
-      trends: {
-        title: "5 Trendet Më të Rëndësishme të Marketingut Dixhital për 2026",
-        subtitle: "Qëndroni përpara me trendet më të fundit",
-        category: "Marketing Dixhital",
-        date: "07.03.2026",
-        intro: "Peizazhi i marketingut dixhital po evoluon shpejt. Nga personalizimi i drejtuar nga IA tek përvojat AR imersive, 2026 sjell mundësi emocionuese për bizneset.",
-        aiPersonalization: { title: "Personalizimi i drejtuar nga IA", description: "Inteligjenca artificiale mundëson nivele të papara personalizimi përmbajtjeje." },
-        voiceSearch: { title: "Optimizimi për kërkim zanor", description: "Optimizimi i përmbajtjes për kërkimet zanore është kyç për dukshmërinë." },
-        mobileFirst: { title: "Përvoja Mobile-First", description: "Dizajnimi i përvojave mobile-first siguron performancë optimale." },
-        socialCommerce: { title: "Integrimi i tregtisë sociale", description: "Platformat sociale po bëhen destinacione blerjesh." },
-        implementation: { title: "Implementimi i këtyre trendeve", description: "Implementimi i suksesshëm kërkon planifikim strategjik." },
-        actionItems: { title: "Veprimet kyçe", item1: "Auditoni strategjinë tuaj aktuale", item2: "Identifikoni mundësitë për integrim IA", item3: "Optimizoni përmbajtjen për kërkim zanor", item4: "Përmirësoni përvojën mobile" }
-      },
-      conversion: {
-        title: "Udhëzuesi për optimizimin e konvertimit",
-        subtitle: "Shndërroni vizitorët në klientë",
-        category: "Optimizim uebfaqesh",
-        date: "07.03.2026",
-        intro: "Shndërrimi i vizitorëve të faqes në klientë është art dhe shkencë.",
-        userExperience: { title: "Dizajni i përvojës së përdoruesit", description: "Navigimi intuitiv dhe rrjedhat e qëndrueshme udhëzojnë vizitorët." },
-        abTesting: { title: "Strategjia e testimit A/B", description: "Testimi sistematik ndihmon të identifikohet çfarë funksionon më mirë." },
-        callToAction: { title: "Thirrje bindëse për veprim", description: "Vendosja strategjike dhe teksti bindës në CTA rrisin konvertimet." },
-        analytics: { title: "Analitika e performancës", description: "Njohuritë e bazuara në të dhëna zbulojnë modele sjelljeje." },
-        practicalSteps: { title: "Hapat praktikë për optimizim", description: "Optimizimi i suksesshëm kërkon një qasje sistematike." },
-        optimizationChecklist: {
-          title: "Lista e kontrollit për optimizim konvertimi",
-          technical: "Optimizim teknik", pageSpeed: "Përmirësoni shpejtësinë e ngarkimit", mobileOptimization: "Optimizoni për mobile",
-          formOptimization: "Thjeshtoni fushat e formularëve", content: "Strategjia e përmbajtjes", headlines: "Krijoni titra bindëse",
-          socialProof: "Shtoni elemente provë sociale", urgency: "Përdorni urgjencë dhe mungesë"
-        },
-        cta: { title: "Gati të rrisni konvertimet?", description: "MULTIMEDIA AGRONDESIGN optimizon faqen tuaj për konvertime maksimale.", button: "Filloni sot" }
-      },
-      video: {
-        title: "Fuqia e Video Marketingut: Angazhimi i audiencës tuaj në 2026",
-        subtitle: "Angazhoni audiencën përmes tregimit vizual",
-        category: "Video Marketing",
-        date: "07.03.2026",
-        intro: "Përmbajtja video është bërë një forcë dominuese në marketingun dixhital.",
-        engagement: { title: "Norma më të larta angazhimi", description: "Përmbajtja video gjeneron 1200% më shumë ndarje se teksti dhe imazhet." },
-        conversion: { title: "Konvertime të përmirësuara", description: "Faqet me video mund të rrisin normat e konvertimit deri në 80%." },
-        storytelling: { title: "Tregim emocional", description: "Videoja lejon markat të tregojnë histori bindëse." },
-        reach: { title: "Mbulim i zgjeruar", description: "Algoritmet e mediave sociale favorizojnë përmbajtjen video." },
-        types: {
-          title: "Llojet e përmbajtjes video që konvertojnë",
-          product: { title: "Demonstrime produkti", description: "Tregoni produktet tuaja në veprim." },
-          testimonial: { title: "Dëshmitë e klientëve", description: "Historitë autentike të klientëve ndërtojnë besim." },
-          educational: { title: "Përmbajtje edukative", description: "Videot si-të bëhet pozicionojnë markën tuaj si ekspert." },
-          behindScenes: { title: "Prapa skenave", description: "Jepni audiencës një vështrim prapa skenave." }
-        },
-        strategy: {
-          title: "Këshilla për strategjinë e video marketingut",
-          production: "Ekselencë prodhimi", quality: "Investoni në cilësi të mirë audio", lighting: "Përdorni teknika ndriçimi",
-          planning: "Planifikoni strukturën e përmbajtjes", distribution: "Shpërndarje inteligjente", platforms: "Zgjidhni platformat e duhura",
-          timing: "Optimizoni kohën e publikimit", seo: "Aplikoni praktikat më të mira video SEO"
-        },
-        cta: { title: "Gati për video marketing?", description: "MULTIMEDIA AGRONDESIGN krijon përmbajtje video bindëse.", button: "Filloni udhëtimin tuaj me video" }
-      }
-    },
-    contact: {
-      title: "Kontakt",
-      subtitle: "Lidhuni me ne direkt përmes telefonit ose emailit.",
-      instruction: "Dërgoni një mesazh përmes formës më poshtë (pa caktim takimi) ose na kontaktoni me telefon ose email. Përgjigjemi brenda 24 orëve.",
-      trustLine: "Përgjigje brenda 24 orëve",
-      info: {
-        title: "Informacione Kontakti",
-        phone: "Telefon",
-        email: "Email",
-        location: "Geislingen an der Steige"
-      },
-      social: {
-        title: "Na Ndiqni"
-      },
-      hours: {
-        title: "Orët e Punës",
-        weekdays: "E Hënë - E Premte",
-        saturday: "E Shtunë",
-        sunday: "E Diel",
-        closed: "Mbyllur"
-      },
-      success: {
-        title: "Mesazhi u dërgua!",
-        description: "Do t'ju kthejmë përgjigje sa më shpejt që të jetë e mundur."
-      },
-      error: {
-        title: "Gabim në dërgimin e mesazhit",
-        description: "Ju lutemi provoni përsëri ose na kontaktoni direkt.",
-        validation: "Emri, email dhe mesazhi janë të detyrueshme",
-        emailjsMissing: "Formulari i kontaktit nuk është konfiguruar (EmailJS). Na kontaktoni me telefon ose email."
-      },
-      form: {
-        title: "Dërgo pyetje",
-        intro: "Pa caktim takimesh — vetëm pyetje dhe kërkesa informacioni. Përgjigjemi me email.",
-        name: "Emri dhe mbiemri",
-        email: "Email",
-        message: "Mesazhi juaj",
-        submit: "Dërgo mesazhin",
-        sending: "Duke dërguar…",
-        emailSubject: "Pyetje për informacion (sajti)"
-      }
-    },
-    portfolioPages: {
-      common: {
-        backToHome: "Kreu",
-        projectDetails: "Detajet e Projektit",
-        category: "Kategoria",
-        results: "Rezultatet"
-      }
-    },
-    footer: {
-      brand: "Duke krijuar përvojë të jashtëzakonshme dixhitale që shtyjnë biznesin tuaj përpara përmes zgjidhjeve inovative multimedia.",
-      services: "Shërbimet",
-      company: "Kompania",
-      contact: "Kontakt",
-      phone: "+49 15560 873124",
-      email: "agron6922@gmail.com",
-      location: "Geislingen an der Steige",
-      copyright: "© 2026 MULTIMEDIA AGRONDESIGN. Të gjitha të drejtat të rezervuara.",
-      privacy: "Privatësia",
-      terms: "Kushtet",
-      cookies: "Cookies",
-      impresum: "Impresum",
-      career: "Karriera"
-    },
-    
-    // Impresum content (Albanian)
-    impresum: {
-      title: "Impresum (Informacion Ligjor)",
-      subtitle: "Të dhëna sipas § 5 TMG (Ligji gjerman për telemedian)",
-      sections: {
-        company: {
-          title: "AGRONDESIGN",
-          owner: "Pronar: Agron Osmani",
-          address: "Luise-Hainlen-Weg 4/4\n73312 Geislingen an der Steige"
-        },
-        contact: {
-          title: "Kontakti",
-          email: "Email: agron6922@gmail.com"
-        },
-        representative: {
-          title: "Përfaqësuar nga",
-          name: "Agron Osmani"
-        },
-        tax: {
-          title: "Informacione Tatimore",
-          taxNumber: "Numri Tatimor (Steuernummer): 48267305956",
-          vatNumber: "Numri i Identifikimit të TVSH-së sipas §27a të Ligjit Gjerman të TVSH-së (USt-IdNr.): DE354016444"
-        },
-        profession: {
-          title: "Titulli Profesional",
-          description: "Dizajner Grafik & Zhvillues"
-        }
-      }
-    },
-
-    // Privacy Policy content (Albanian)
-    privacy: {
-      title: "Politika e Privatësisë",
-      subtitle: "Informacione mbi mbrojtjen e të dhënave personale në përputhje me GDPR",
-      sections: {
-        dataCollection: {
-          title: "Mbledhja e të Dhënave",
-          content: "Ne mbledhim të dhëna personale që ju jepni vullnetarisht përmes formës së kontaktit, duke përfshirë emrin, adresën e emailit dhe mesazhin. Këto të dhëna përdoren ekskluzivisht për komunikim dhe ofrimin e shërbimeve tona."
-        },
-        dataUsage: {
-          title: "Përdorimi i të Dhënave",
-          content: "Ne përdorim të dhënat tuaja personale për: përgjigjen ndaj pyetjeve tuaja, ofrimin e shërbimeve të kërkuara, përmirësimin e faqes sonë dhe shërbimeve, dhe dërgimin e informacioneve relevante mbi shërbimet tona (vetëm me lejen tuaj)."
-        },
-        cookies: {
-          title: "Cookies",
-          content: "Ne përdorim cookies për të përmirësuar funksionalitetin e faqes dhe për analizë trafikut. Ju mund t'i kontrolloni cookies përmes cilësimeve të browserit tuaj. Për informacione më të detajuara, shikoni Politikën tonë të Cookies."
-        },
-        rights: {
-          title: "Të Drejtat Tuaja",
-          content: "Ju keni të drejtën e aksesit, korrigjimit, fshirjes dhe transferimit të të dhënave tuaja. Ju gjithashtu mund të kufizoni ose kundërshtoni përpunimin e të dhënave tuaja. Për të ushtruar këto të drejta, na kontaktoni përmes emailit."
-        },
-        contact: {
-          title: "Kontakti",
-          content: "Për pyetje mbi privatësinë na kontaktoni në: agron6922@gmail.com. Ne rezervojmë të drejtën për të përditësuar këtë politikë, për të cilën do t'ju njoftojmë përmes faqes sonë."
-        }
-      }
-    },
-
-    // Terms of Service content (Albanian)
-    terms: {
-      title: "Kushtet e Shërbimit",
-      subtitle: "Rregullat dhe kushtet për përdorimin e faqes sonë dhe shërbimeve",
-      sections: {
-        scope: {
-          title: "Fushëveprimi",
-          content: "Këto kushte zbatohen për të gjithë përdoruesit e faqes sonë agrmultimedia.com dhe shërbimeve tona. Duke përdorur faqen, ju i pranoni këto kushte plotësisht."
-        },
-        services: {
-          title: "Shërbimet Tona",
-          content: "Ne ofrojmë shërbime web dizajni, dizajni grafik, prodhimi video, marketingu dixhital dhe zhvillimi i aplikacioneve mobile. Të gjitha shërbimet ofrohen profesionalisht dhe brenda afateve të rëna dakord."
-        },
-        liability: {
-          title: "Kufizimi i Përgjegjësisë",
-          content: "Ne nuk jemi përgjegjës për dëmet që rrjedhin nga përdorimi i faqes sonë përveç rasteve të neglizhencës së rëndë ose qëllimit. Përgjegjësia jonë kufizohet në vlerën e shërbimeve të kontratuara."
-        },
-        intellectual: {
-          title: "Pronësia Intelektuale",
-          content: "I gjithë përmbajtja në faqe është e mbrojtur nga të drejtat e autorit. Kopjimi, shpërndarja ose përdorimi komercial pa leje me shkrim është i ndaluar. Projektet e krijuara për klientët bëhen pronë e tyre pas pagesës."
-        },
-        termination: {
-          title: "Ndërprerja e Shërbimeve",
-          content: "Ne rezervojmë të drejtën për të ndërprerë shërbimet në rast të shkeljes së kushteve të përdorimit. Klientët mund të anulojnë shërbimet duke respektuar kushtet e rëna dakord të anulimit."
-        }
-      }
-    },
-
-    // Cookie Policy content (Albanian)
-    cookies: {
-      title: "Politika e Cookies",
-      subtitle: "Si përdorim cookies në faqen tonë",
-      sections: {
-        whatAre: {
-          title: "Çfarë janë Cookies",
-          content: "Cookies janë skedarë të vegjël që ruhen në pajisjen tuaj kur vizitoni faqen tonë. Ato na ndihmojnë ta bëjmë faqen të funksionojë më mirë dhe t'ju ofrojmë një përvojë më të mirë përdoruesi."
-        },
-        howWeUse: {
-          title: "Si i Përdorim Cookies",
-          content: "Ne përdorim cookies për: ruajtjen e gjuhës dhe cilësimeve tuaja, analizën e trafikut të faqes, përmirësimin e performancës së faqes, dhe ofrimin e funksioneve të sigurisë."
-        },
-        types: {
-          title: "Llojet e Cookies",
-          content: "Ne përdorim cookies thelbësore (të nevojshme për funksionimin e faqes), cookies analitike (Google Analytics), cookies funksionale (ruajtja e cilësimeve), dhe cookies performancë (optimizimi i faqes)."
-        },
-        control: {
-          title: "Kontrolli i Cookies",
-          content: "Ju mund t'i kontrolloni cookies përmes cilësimeve të browserit tuaj. Ju mund t'i bllokoni ose t'i fshini, por kjo mund të ndikojë në funksionalitetin e faqes. Shumica e browserëve i pranojnë cookies automatikisht."
-        },
-        thirdParty: {
-          title: "Cookies të Palëve të Treta",
-          content: "Ne përdorim Google Analytics për analizë trafikut. Google mund të vendosë cookies të tij. Ju lutemi kontrolloni politikën e privatësisë së Google për më shumë informacione mbi cookies e tyre."
-        }
-      }
-    },
-
-    webDesign: {
-      hero: {
-        title: "Krijimi i Faqeve të Internetit dhe Zhvillimi i Aplikacioneve Mobile",
-        description: "Unë zhvilloj profesionalisht faqe interneti responsive dhe aplikacione mobile për Android dhe iOS që tërheqin vizitorët, përmirësojnë përvojën e përdoruesit dhe konvertojnë me efikasitet vizitorët në klientë përmes teknologjive moderne dhe dizajnit të optimizuar."
-      },
-      services: {
-        websites: {
-          title: "Faqe Interneti",
-          description: "Krijoj faqe interneti moderne, responsive që funksionojnë përkrysësh në të gjitha pajisjet",
-          features: ["Dizajn Responsive", "Optimizim SEO", "Ngarkimi i Shpejtë", "Integrimi CMS", "Siguria", "Analitikë"]
-        },
-        mobileApps: {
-          title: "Aplikacione Mobile",
-          description: "Zhvilloj aplikacione native dhe cross-platform për platformat Android dhe iOS",
-          features: ["Aplikacione Android", "Aplikacione iOS", "Cross-platform", "Push Njoftimet", "Funksionaliteti Offline", "Publikimi App Store"]
-        },
-        responsive: {
-          title: "Dizajn Responsive",
-          description: "Siguroj që faqja juaj të duket përkryesisht në të gjitha pajisjet dhe madhësitë e ekranit",
-          features: ["Qasja Mobile-First", "Optimizimi Tablet", "Performancë Desktop", "Mbështetja Touchscreen", "Retina Display", "Kompatibilitet Cross-browser"]
-        }
-      },
-      process: {
-        title: "Procesi i Punës",
-        steps: [
-          {
-            title: "Planifikimi",
-            description: "Analizoj nevojat tuaja dhe krijoj një strategji të detajuar projekti"
-          },
-          {
-            title: "Dizajni",
-            description: "Krijoj wireframes, mockups dhe dizajnin e fundit vizual"
-          },
-          {
-            title: "Zhvillimi",
-            description: "Kodoj aplikacion funksional duke përdorur teknologjitë më të fundit"
-          },
-          {
-            title: "Testimi & Lansimi",
-            description: "Testoj plotësisht dhe lançoj me sukses projektin me mbështetje"
-          }
-        ]
-      },
-      portfolio: {
-        title: "Portfolioja e Projekteve",
-        items: [
-          {
-            title: "TechFlow Business Solutions",
-            description: "Platformë web komplekse për menaxhimin e biznesit"
-          },
-          {
-            title: "EcoMarket Online Store", 
-            description: "Platformë e-commerce për produkte miqësore me mjedisin"
-          },
-          {
-            title: "FitLife Mobile App",
-            description: "Aplikacion fitness i personalizuar për Android dhe iOS"
-          },
-          {
-            title: "ILMBUDS",
-            description: "Aplikacion islamik për fëmijë"
-          }
-        ]
-      },
-      technologies: {
-        title: "Teknologjitë që Përdor",
-        frontend: {
-          title: "Frontend",
-          items: ["React", "TypeScript", "Next.js", "Vue.js", "Tailwind CSS", "SCSS"]
-        },
-        backend: {
-          title: "Backend",
-          items: ["Node.js", "Express", "Python", "PostgreSQL", "MongoDB", "Redis"]
-        },
-        mobile: {
-          title: "Mobile",
-          items: ["React Native", "Flutter", "Swift", "Kotlin", "Firebase", "Native APIs"]
-        }
-      },
-      cta: {
-        title: "Gati për Projektin Tuaj?",
-        description: "Kontaktoni për një konsultim falas mbi faqen tuaj të internetit ose aplikacionin mobil",
-        button: "Kontaktoni"
-      }
-    },
-
-    graphicDesign: {
-      hero: {
-        title: "Krijimi i Identitetit Vizual dhe Dizajni Grafik",
-        description: "Krijoj profesionalisht logo të veçanta, marka dhe materiale printimi që dallojnë biznesin tuaj nga konkurrentët dhe lënë një përshtypje të paharrueshme tek audienca juaj e synuar."
-      },
-      services: {
-        logoDesign: {
-          title: "Dizajni i Logos",
-          description: "Krijoj logo të paharrueshme që përfaqësojnë esencën e markës suaj",
-          features: ["Koncepte origjinale", "Formate vektori", "Brandbook", "Versione të ndryshme", "Rishikime të përfshira", "Pronësia e dizajnit"]
-        },
-        branding: {
-          title: "Brending",
-          description: "Identitet vizual i plotë që ndërton njohjen e markës",
-          features: ["Brandbook", "Identiteti vizual", "Tipografia", "Paleta e ngjyrave", "Aplikacione", "Udhëzimet e markës"]
-        },
-        printMaterials: {
-          title: "Materiale Printimi",
-          description: "Materiale marketingu fizike që promovojnë biznesin tuaj profesionalisht",
-          features: ["Bluzat & tekstilet", "Paketimet", "Materialet e zyrës", "Materialet marketingu", "Tabelat", "Produktet e markës"]
-        }
-      },
-      process: {
-        title: "Procesi Kreativ",
-        steps: [
-          {
-            title: "Hulumtimi",
-            description: "Analizoj markën tuaj, audiencën e synuar dhe konkurrencën"
-          },
-          {
-            title: "Konceptet",
-            description: "Krijoj idetë fillestare dhe drejtimet vizuale"
-          },
-          {
-            title: "Zhvillimi",
-            description: "Zhvilloj konceptet e zgjedhura deri në versionin final"
-          },
-          {
-            title: "Finalizimi",
-            description: "Përgatitje për printim dhe përdorim dixhital"
-          }
-        ]
-      },
-      portfolio: {
-        title: "Portfolioja e Punëve",
-        logos: {
-          title: "Dizajni i Logos",
-          items: [
-            {
-              title: "InnovateTech Solutions",
-              description: "Kompani moderne teknologjike",
-              category: "Tech startup"
-            },
-            {
-              title: "GreenHarvest",
-              description: "Ushqim organik dhe bujqësi",
-              category: "Ushqim organik"
-            },
-            {
-              title: "AurumCraft",
-              description: "Stolitë luksoze",
-              category: "Stoli luksoze"
-            }
-          ]
-        },
-        branding: {
-          title: "Brending i Plotë",
-          items: [
-            {
-              title: "PowerFit Pro",
-              description: "Marka fitness dhe wellness",
-              category: "Fitness"
-            },
-            {
-              title: "Aroma Collective",
-              description: "Marka premium kafeje",
-              category: "Ushqim & Pije"
-            }
-          ]
-        },
-        print: {
-          title: "Materiale Printimi",
-          description: "Bluzat me markë, kutitë e paketimit dhe materialet promocionale"
-        },
-        books: {
-          title: "Dizajni i Librave",
-          description: "Dizajni profesional i kopertinave dhe layout-i për publikime"
-        }
-      },
-      cta: {
-        title: "Gati për një Identitet të Ri Vizual?",
-        description: "Kontaktoni për një konsultim falas mbi markën tuaj",
-        button: "Kontaktoni"
-      }
-    },
-
-    videoProduction: {
-      hero: {
-        title: "Prodhimi Profesional i Videove",
-        description: "Krijoj përmbajtje video me cilësi të lartë që transmeton mesazhin tuaj dhe angazhon audiencën përmes filmimit profesional, editimit dhe post-prodhimit."
-      },
-      services: {
-        filming: {
-          title: "Filmim Profesional",
-          description: "Përdor pajisje profesionale për krijimin e materialeve video vizualisht mbresëlënëse",
-          features: ["Filmim 4K Ultra HD", "Kamera profesionale", "Stabilizatorë dhe sisteme gimbal", "Ndriçim profesional", "Regjistrimi audio me cilësi studimi", "Dronë për pamje ajrore"]
-        },
-        editing: {
-          title: "Editimi i Videove",
-          description: "Teknika të avancuara editimi që transformojnë materialin e papërpunuar në përmbajtje tërheqëse",
-          features: ["Adobe Premiere Pro", "Adobe After Effects", "Gradimi dhe korrigjimi i ngjyrave", "Dizajni dhe përzierja e tingullit", "Efekte vizuale", "Titra dhe grafika"]
-        },
-        animation: {
-          title: "Video Template Intro",
-          description: "Krijimi i video template intro të animuara dhe motion graphics me cilësi të lartë",
-          features: ["Motion graphics", "Animacione 2D dhe 3D", "Animacione logo", "Sekuenca intro/outro", "Tipografi kinetike", "Efekte vizuale"]
-        }
-      },
-      process: {
-        title: "Procesi Kreativ",
-        steps: [
-          {
-            title: "Planifikimi",
-            description: "Zhvilloj konceptin dhe krijoj storyboard sipas objektivave tuaja"
-          },
-          {
-            title: "Filmimi",
-            description: "Filmim profesional me pajisje dhe ndriçim me cilësi të lartë"
-          },
-          {
-            title: "Post-prodhimi",
-            description: "Editimi, gradimi i ngjyrave, dizajni i tingullit dhe përpunimi final"
-          },
-          {
-            title: "Dorëzimi",
-            description: "Optimizimi për platforma të ndryshme dhe dorëzimi final"
-          }
-        ]
-      },
-      portfolio: {
-        title: "Portfolio e Punëve Video",
-        description: "Shembuj të prodhimeve të mia të fundit video me stile dhe teknika të ndryshme"
-      },
-      servicesTitle: "Shërbimet e Mia të Prodhimit të Videove",
-      servicesSubtitle: "Shërbime të plota video nga koncepti deri te dorëzimi final",
-      portfolioButtonText: "Portfolio Video",
-      videos: [
-        {
-          title: "Video Intro Profesional",
-          description: "Intro i animuar me animacion logo"
-        },
-        {
-          title: "Video Promocional",
-          description: "Përmbajtje promocionale kreative"
-        },
-        {
-          title: "Motion Graphics",
-          description: "Grafika dinamike dhe animacione"
-        },
-        {
-          title: "Prezantimi i Produktit",
-          description: "Prezantimi i produktit me efekte 3D"
-        }
-      ],
-      cta: {
-        title: "Gati për Projektin tuaj Video?",
-        description: "Më kontaktoni për një konsultim falas rreth përmbajtjes suaj video",
-        button: "Më kontaktoni"
-      }
-    },
-
-    digitalMarketing: {
-      hero: {
-        title: "Marketing Dixhital",
-        subtitle: "Strategji që shtojnë dukshmërinë tuaj online",
-        description: "Krijoj strategji gjithëpërfshirëse të marketingut dixhital që shtojnë dukshmërinë tuaj online, tërheqin audiencën e synuar dhe gjenerojnë rezultate të matshme përmes mediave sociale, Google Ads dhe content marketing."
-      },
-      servicesTitle: "Shërbimet e Mia të Marketingut Dixhital",
-      servicesSubtitle: "Strategji dixhitale të plota për rritjen e biznesit tuaj",
-      portfolioButtonText: "Portfolio Rezultatesh",
-      services: {
-        socialMedia: {
-          title: "Marketing në Media Sociale",
-          description: "Menaxhimi i mediave sociale dhe krijimi i përmbajtjes tërheqëse",
-          features: ["Fushata Facebook & Instagram", "Strategji LinkedIn", "Optimizimi i YouTube", "Influencer marketing", "Menaxhimi i komunitetit", "Analytics për mediat sociale"]
-        },
-        googleAds: {
-          title: "Google Ads",
-          description: "Fushata PPC efektive që sjellin vizitorë cilësorë",
-          features: ["Fushata Search", "Display advertising", "Shopping ads", "Reklama YouTube", "Remarketing", "Hulumtimi dhe optimizimi i fjalëve kyçe"]
-        },
-        contentMarketing: {
-          title: "Content Marketing",
-          description: "Krijimi i përmbajtjes me vlerë që tërheq dhe ruan audiencën",
-          features: ["Strategji blog", "Përmbajtje e optimizuar për SEO", "Email marketing", "Fushata newsletter", "Përmbajtje video", "Copywriting"]
-        }
-      },
-      strategy: {
-        title: "Qasje Strategjike",
-        steps: [
-          {
-            title: "Analiza",
-            description: "Hulumtim i detajuar i tregut, konkurrencës dhe audiencës së synuar"
-          },
-          {
-            title: "Strategjia",
-            description: "Krijimi i strategjisë së personalizuar të marketingut dixhital"
-          },
-          {
-            title: "Implementimi",
-            description: "Nisja e fushatave me monitorim të vazhdueshëm"
-          },
-          {
-            title: "Optimizimi",
-            description: "Analiza e rezultateve dhe përmirësimi i vazhdueshëm i performancës"
-          }
-        ]
-      },
-      results: {
-        title: "Rezultate që Flasin",
-        description: "Rezultate të matshme që tregojnë efektivitetin e strategjive të marketingut dixhital",
-        metrics: [
-          {
-            value: "300%",
-            label: "Rritje Trafiku",
-            description: "Përmirësim mesatar i trafikut web"
-          },
-          {
-            value: "150%",
-            label: "Më Shumë Konvertime",
-            description: "Përmirësim i normës së konvertimit"
-          },
-          {
-            value: "250%",
-            label: "Rritje ROI",
-            description: "Rritje e kthimit të investimit"
-          }
-        ]
-      },
-      cta: {
-        title: "Gati për Rritje Dixhitale?",
-        description: "Kontaktoni për një konsultim falas mbi strategjinë tuaj të marketingut dixhital",
-        button: "Kontaktoni"
-      }
-    },
-
-    photography: {
-      hero: {
-        title: "Fotografi & Photomontazh",
-        subtitle: "Fotografi kreative dhe art dixhital",
-        description: "Krijoj fotografi profesionale, restauroj fotografi të vjetra, bëj photomontazhe të të gjitha llojeve dhe postera filmash me fotografinë tuaj - nga kompozime kreative deri te portrete realiste."
-      },
-      servicesTitle: "Shërbimet e Mia të Fotografisë",
-      servicesSubtitle: "Nga fotografia profesionale deri te photomontazhet kreative",
-      portfolioButtonText: "Portfolio Punësh",
-      portfolioTitle: "Portfolio Posterash Filmash",
-      portfolioDescription: "Shembuj të punës sime - krijimi i posterave profesionale të filmave me stile dhe atmosfera të ndryshme",
-      moviePosters: [
-        {
-          title: "Ragazzo con Lanterne",
-          description: "Poster fantazie kreativ me ndriçim atmosferik",
-          category: "Fantasy"
-        },
-        {
-          title: "Il Silenzio del Boss",
-          description: "Poster dramë në stilin e filmave noir",
-          category: "Drama"
-        },
-        {
-          title: "Kong",
-          description: "Poster epik aksioni me krijesë",
-          category: "Action"
-        },
-        {
-          title: "Gardijan",
-          description: "Poster atmosferik dimëror me borë",
-          category: "Drama"
-        },
-        {
-          title: "Abandoned",
-          description: "Poster trilleri misterios me atmosferë të errët",
-          category: "Thriller"
-        }
-      ],
-      processTitle: "Procesi Kreativ",
-      processSteps: [
-        {
-          title: "Konsultimi",
-          description: "Diskutojmë idenë dhe nevojat tuaja",
-          icon: "1"
-        },
-        {
-          title: "Krijimi i Konceptit",
-          description: "Zhvilloj qasjen kreative dhe stilin",
-          icon: "2"
-        },
-        {
-          title: "Prodhimi",
-          description: "Fotografi profesionale ose përpunim dixhital",
-          icon: "3"
-        },
-        {
-          title: "Finalizimi",
-          description: "Përpunimi final dhe dorëzimi në formatin e dëshiruar",
-          icon: "4"
-        }
-      ],
-      services: {
-        professionalPhotography: {
-          title: "Fotografi Profesionale",
-          description: "Fotografi produktesh, portretesh, ngjarjesh dhe korporative",
-          features: ["Fotografi studio", "Produkte dhe katalogë", "Fotografi portretesh", "Fotografi ngjarjesh"]
-        },
-        restoration: {
-          title: "Restaurimi i Fotografive të Vjetra",
-          description: "Duke sjellë jetë në fotografitë e dëmtuara dhe të zbehtë",
-          features: ["Heqja e dëmtimeve", "Restaurimi i ngjyrave", "Restaurim dixhital", "Riparim fotografish të vjetra"]
-        },
-        photomontage: {
-          title: "Të Gjitha Llojet e Photomontazheve",
-          description: "Kombinim kreativ i elementeve në kompozime të veçanta",
-          features: ["Kompozime kreative", "Montazhe realiste", "Skena fantazie", "Photomontazhe reklamuese"]
-        },
-        moviePosters: {
-          title: "Postera Filmash me Fotografinë Tuaj",
-          description: "Vendoseni veten në qendër të një posteri filmi",
-          features: ["Postera të personalizuar", "Stile të ndryshme filmash", "Përpunim profesional", "Rezolucion i lartë"]
-        }
-      },
-      cta: {
-        title: "Gati për Fotografi Kreative?",
-        description: "Kontaktoni për një konsultim falas mbi projektin tuaj të fotografisë ose photomontazhit",
-        button: "Kontaktoni"
-      }
-    },
-
-    consulting: {
-      hero: {
-        title: "Konsultime & Këshillim Strategjik",
-        subtitle: "Konsultime eksperte për sukses dixhital",
-        description: "Analizoj prezencën tuaj aktuale dixhitale, identifikoj mundësitë për përmirësim dhe krijoj strategji që do të rrisin efikasitetin tuaj online, përvojën e përdoruesit dhe konvertimet."
-      },
-      servicesTitle: "Shërbimet e Mia të Konsultimit",
-      servicesSubtitle: "Planifikim strategjik dhe optimizim për suksesin tuaj dixhital",
-      services: {
-        digitalStrategy: {
-          title: "Strategji Dixhitale",
-          description: "Krijoj strategji dixhitale gjithëpërfshirëse të përshtatura për objektivat tuaja të biznesit",
-          features: ["Analiza e tregut dhe konkurrentëve", "Përcaktimi i audiencës së synuar", "Strategji branding", "Plan i marketingut dixhital", "Optimizim ROI", "Planifikim afatgjatë"]
-        },
-        uxAudit: {
-          title: "Audit UX/UI",
-          description: "Analizoj me kujdes faqen tuaj ose aplikacionin dhe jap rekomandime për përmirësim",
-          features: ["Analiza e përvojës së përdoruesit", "Testim të përdorshmërisë", "Analiza e konvertimeve", "Përgjigje mobile", "Shpejtësia e ngarkimit", "Kontroll i aksesueshmërisë"]
-        },
-        analytics: {
-          title: "Analitikë & Raportim",
-          description: "Vendos sisteme të përparuara të ndjekjes dhe analizoj performancën",
-          features: ["Setup Google Analytics", "Ndjekje konvertimesh", "Testim A/B", "Analiza e heat map", "Matje ROI", "Raporte mujore"]
-        }
-      },
-      process: {
-        title: "Procesi i Punës",
-        steps: [
-          {
-            title: "Analiza e Gjendjes Aktuale",
-            description: "Analizoj me kujdes prezencën tuaj aktuale dixhitale dhe identifikoj problemet"
-          },
-          {
-            title: "Hulumtim & Strategji",
-            description: "Analizoj tregun, konkurrentët dhe krijoj strategji të personalizuar"
-          },
-          {
-            title: "Plan Implementimi",
-            description: "Krijoj plan të detajuar implementimi me hapa të qartë dhe afate"
-          },
-          {
-            title: "Monitorim & Optimizim",
-            description: "Monitorim i vazhdueshëm i rezultateve dhe optimizim i strategjisë"
-          }
-        ]
-      },
-      benefits: {
-        title: "Përfitimet e Konsultimit Profesional",
-        items: [
-          {
-            title: "Rritje e Konvertimeve",
-            description: "Optimizim që ndikon direkt në rritjen e shitjeve dhe leads"
-          },
-          {
-            title: "Kursim Kohe dhe Parash",
-            description: "Shmangje gabimesh dhe fokusim në strategji që japin rezultate"
-          },
-          {
-            title: "Avantazh Konkurrues",
-            description: "Strategji që ju ndajnë nga konkurrenca"
-          },
-          {
-            title: "Rezultate të Matshme",
-            description: "KPI të përcaktuar qartë dhe monitorim i rregullt i performancës"
-          }
-        ]
-      },
-      cta: {
-        title: "Gati për Rritje Dixhitale?",
-        description: "Caktoni një konsultim falas dhe zbuloni si mund të përmirësojmë prezencën tuaj dixhitale",
-        button: "Kontaktoni"
-      }
-    }
-  },
-  it: itTranslations
+  }
 };
 
 export const getTranslations = (lang: Language): Translations => {

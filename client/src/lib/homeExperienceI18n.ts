@@ -1,10 +1,9 @@
 import type { Language } from "@/lib/i18n";
 
-type LangKey = "sr" | "en" | "de" | "it" | "al";
+type LangKey = "en" | "de";
 
 function langKey(lang: Language): LangKey {
-  if (lang === "sq" || lang === "al") return "al";
-  if (lang === "sr" || lang === "en" || lang === "de" || lang === "it") return lang;
+  if (lang === "en" || lang === "de") return lang;
   return "en";
 }
 
@@ -39,25 +38,6 @@ const en: HomeExperienceCopy = {
   ],
 };
 
-const sr: HomeExperienceCopy = {
-  eyebrow: "Iskustvo",
-  title: "Šta često vidimo u radu sa klijentima",
-  lead:
-    "U našem radu sa malim biznisima često počinjemo od istog problema: sajt izgleda uredno, ali mašine ne mogu da vas citiraju. Zato prvo popravljamo strukturu, pa tek onda „šminku“.",
-  fixbikeTitle: "Primer: fixbike.online (meren audit, maj 2026.)",
-  fixbikeBody:
-    "Na fixbike.online snimak pre/posle pokazuje ukupno Grade F (49) prema Grade A (88) za manje od 24 sata, sa GEO 24→90 i AEO 31→85. To je jedan domen i jedan prolaz alata — nije garancija za svaki projekat, ali pokazuje kako prioritetizujemo citatljive odgovore.",
-  agrTitle: "Naš sajt: agrmultimedia.com",
-  agrBody:
-    "Na www.agrmultimedia.com javni audit 9. maja 2026. beleži SEO 92, AEO 83, GEO 78, ukupno Grade A. Isti checklist primenjujemo na klijentske objave. Alat je predložio SaaS klasifikaciju kao hipotezu — pominjemo je samo kao signal tehničke dubine, ne kao tvrdnju o vašem modelu poslovanja.",
-  sourcesTitle: "Izvori koje linkujemo kada citiramo performanse",
-  sources: [
-    { label: "Google Search Central — Core Web Vitals", url: "https://developers.google.com/search/docs/appearance/core-web-vitals" },
-    { label: "Google Search Central — strukturisani podaci", url: "https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data" },
-    { label: "HTTP Archive — Web Almanac", url: "https://almanac.httparchive.org/en/2024/" },
-  ],
-};
-
 const de: HomeExperienceCopy = {
   eyebrow: "Erfahrung",
   title: "Was wir in echter Kundenarbeit sehen",
@@ -77,10 +57,7 @@ const de: HomeExperienceCopy = {
   ],
 };
 
-const it: HomeExperienceCopy = { ...en, eyebrow: "Esperienza", title: "Cosa vediamo nel lavoro reale con i clienti" };
-const al: HomeExperienceCopy = { ...en, eyebrow: "Përvojë", title: "Çfarë shohim në punën reale me klientët" };
-
-const BY_LANG: Record<LangKey, HomeExperienceCopy> = { en, de, sr, it, al };
+const BY_LANG: Record<LangKey, HomeExperienceCopy> = { en, de };
 
 export function getHomeExperienceCopy(lang: Language): HomeExperienceCopy {
   return BY_LANG[langKey(lang)] ?? en;

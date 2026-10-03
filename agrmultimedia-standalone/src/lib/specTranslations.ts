@@ -1,5 +1,5 @@
 /**
- * Translations for the modernized portfolio spec (DE, EN, IT, SR, AL).
+ * Translations for the modernized portfolio spec (DE, EN).
  * Used alongside main i18n for new sections and copy.
  */
 import { portfolioPageByLang, type PortfolioPageCopy } from "./portfolioPageI18n";
@@ -616,26 +616,24 @@ const de: SpecTranslations = {
   },
 };
 
-const it: SpecTranslations = {
-  homeAbout: {
-    lead: 'AGR Multimedia è uno studio creativo indipendente: chiarezza visiva, identità curata e risultati misurabili.',
-    moreAbout: 'Profilo completo',
-  },
-  hero: {
-    h1: 'Web design, AI multimedia e digital marketing — Geislingen e clienti globali',
-    subheadline:
-      'Siti, branding, contenuti AI e SEO—processo chiaro da Geislingen an der Steige.',
-    ctaPrimary: 'Richiedi un preventivo',
-    ctaSecondary: 'Lavori selezionati',
-    availableIn: 'DE · EN · IT · SR · AL',
-  },
-  seo: {
-    title: "AGR Multimedia — Web design e grafica · Geislingen",
-    description:
-      "Web design, AI multimedia, grafica e SEO per piccole imprese — studio a Geislingen an der Steige, Germania. Strutturiamo le pagine per AEO (estratti pronti) e GEO (affermazioni con fonti). Consulenza gratuita: agron6922@gmail.com",
-  },
-  heroProjects: {
-    heading: 'Progetti in evidenza',
+const specByLang: Record<SpecLang, SpecTranslations> = { en, de };
+
+/** Map main i18n language code to spec language (e.g. 'sq' -> 'al' for Albanian). */
+export function toSpecLang(lang: string): SpecLang {
+  if (lang === 'en') return 'en';
+  return 'de';
+}
+
+export function getSpecTranslations(lang: string): SpecTranslations {
+  return specByLang[toSpecLang(lang)] ?? en;
+}
+
+/** Display codes for language switcher: DE | EN */
+export const specLangCodes: SpecLang[] = ['de', 'en'];
+export const specLangDisplay: Record<SpecLang, string> = {
+  de: 'DE',
+  en: 'EN',
+};
     projects: [
       {
         title: 'Campagna video con AI',
@@ -1052,23 +1050,22 @@ const sr: SpecTranslations = {
   },
 };
 
-const al: SpecTranslations = {
-  homeAbout: {
-    lead: 'AGR Multimedia është një studio krijuese e fokusuar në pozicionim të qartë dhe prezencë profesionale.',
-    moreAbout: 'Profili i plotë',
-  },
-  hero: {
-    h1: 'Web design, AI multimedia dhe marketing digjital — studio Geislingen, klientë globalisht',
-    subheadline:
-      'Faqe, branding, përmbajtje AI dhe SEO—proces i qartë nga Geislingen an der Steige.',
-    ctaPrimary: 'Kërko ofertë',
-    ctaSecondary: 'Punë të zgjedhura',
-    availableIn: 'DE · EN · IT · SR · AL',
-  },
-  seo: {
-    title: "AGR Multimedia — Web dizajn & grafikë · Geislingen",
-    description:
-      "Web design, AI multimedia, dizajn grafik dhe SEO për biznese të vogla — studio në Geislingen an der Steige, Gjermani. Strukturojmë faqet për AEO (përgjigje të nxjerrshme) dhe GEO (afirmime me burime të verifikuara). Konsultë falas: agron6922@gmail.com",
+/** Map main i18n language code to spec language (e.g. 'sq' -> 'al' for Albanian). */
+export function toSpecLang(lang: string): SpecLang {
+  if (lang === 'en') return 'en';
+  return 'de';
+}
+
+export function getSpecTranslations(lang: string): SpecTranslations {
+  return specByLang[toSpecLang(lang)] ?? en;
+}
+
+/** Display codes for language switcher: DE | EN */
+export const specLangCodes: SpecLang[] = ['de', 'en'];
+export const specLangDisplay: Record<SpecLang, string> = {
+  de: 'DE',
+  en: 'EN',
+};
   },
   heroProjects: {
     heading: 'Projektet e veçuara',
