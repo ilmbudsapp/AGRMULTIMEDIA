@@ -218,7 +218,7 @@ const en: SpecTranslations = {
   },
   heroCta: {
     heading: 'Ready to grow your business?',
-    text: 'Let’s create something powerful together using AI, design and strategy.',
+    text: "Let's create something powerful together using AI, design and strategy.",
     button: 'Get a free consultation',
   },
   nav: {
