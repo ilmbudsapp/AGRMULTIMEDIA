@@ -5,8 +5,6 @@ const V = "/Video Ai";
 const P = `${V}/posters`;
 
 const clips: { src: string; poster: string }[] = [
-  { src: `${V}/10.mp4`, poster: `${P}/10.jpg` },
-  { src: `${V}/11.mp4`, poster: `${P}/11.jpg` },
   { src: `${V}/12.mp4`, poster: `${P}/12.jpg` },
   { src: `${V}/13.mp4`, poster: `${P}/13.jpg` },
   { src: `${V}/01.mp4`, poster: `${P}/01.jpg` },

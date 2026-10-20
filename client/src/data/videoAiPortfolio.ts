@@ -13,8 +13,6 @@ function asset(file: string): string {
 }
 
 export const VIDEO_AI_CLIPS: VideoAiClip[] = [
-  { id: "10", src: asset("10.mp4"), poster: asset("posters/10.webp"), portrait: true },
-  { id: "11", src: asset("11.mp4"), poster: asset("posters/11.webp"), portrait: true },
   { id: "12", src: asset("12.mp4"), poster: asset("posters/12.webp") },
   { id: "13", src: asset("13.mp4"), poster: asset("posters/13.webp") },
   { id: "01", src: asset("01.mp4"), poster: asset("posters/01.webp") },

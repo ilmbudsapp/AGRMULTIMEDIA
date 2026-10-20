@@ -7,6 +7,7 @@ export type VideoEditingClip = {
   id: string;
   src: string;
   poster: string;
+  portrait?: boolean;
 };
 
 function asset(file: string): string {
@@ -22,7 +23,21 @@ function videoFileFor(n: number): string {
 }
 
 /** Kickstarter highlight + all editing samples from `/Video editing`. */
+const AI = "/Video Ai";
+
 export const VIDEO_EDITING_CLIPS: VideoEditingClip[] = [
+  {
+    id: "unternehmen",
+    src: encodeURI(`${AI}/10.mp4`),
+    poster: encodeURI(`${AI}/posters/10.webp`),
+    portrait: true,
+  },
+  {
+    id: "movie-werbung",
+    src: encodeURI(`${AI}/11.mp4`),
+    poster: encodeURI(`${AI}/posters/11.webp`),
+    portrait: true,
+  },
   {
     id: "thear",
     src: encodeURI("/Case Studio/THEAR REALM TV-Video clip.mp4"),
