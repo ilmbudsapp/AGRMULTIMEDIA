@@ -31,16 +31,17 @@ function PortfolioVideoClipCard({
   ariaLabel: string;
 }) {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const stickPlayback = useRef(false);
 
   const playOnHover = () => {
     const el = videoRef.current;
-    if (!el) return;
+    if (!el || stickPlayback.current) return;
     void el.play().catch(() => undefined);
   };
 
   const pauseOnLeave = () => {
     const el = videoRef.current;
-    if (!el) return;
+    if (!el || stickPlayback.current) return;
     el.pause();
     el.currentTime = 0;
   };
@@ -50,8 +51,9 @@ function PortfolioVideoClipCard({
       className="group overflow-hidden rounded-xl border border-white/[0.08] bg-black/40"
       onMouseEnter={playOnHover}
       onMouseLeave={pauseOnLeave}
-      onFocus={playOnHover}
-      onBlur={pauseOnLeave}
+      onPointerDown={() => {
+        stickPlayback.current = true;
+      }}
     >
       <video
         ref={videoRef}
@@ -60,9 +62,15 @@ function PortfolioVideoClipCard({
         }
         controls
         playsInline
-        preload="metadata"
+        preload="auto"
         poster={clip.poster}
         aria-label={ariaLabel}
+        onPlay={(event) => {
+          if (event.nativeEvent.isTrusted) stickPlayback.current = true;
+        }}
+        onEnded={() => {
+          stickPlayback.current = false;
+        }}
       >
         <source src={clip.src} type="video/mp4" />
       </video>
