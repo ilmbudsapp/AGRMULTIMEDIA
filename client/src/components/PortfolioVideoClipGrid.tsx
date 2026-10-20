@@ -4,6 +4,8 @@ export type PortfolioVideoClip = {
   id: string;
   src: string;
   poster: string;
+  /** Vertical 9:16 clips (Reels) keep the full frame instead of a 16:9 crop. */
+  portrait?: boolean;
 };
 
 type Props = {
@@ -53,7 +55,9 @@ function PortfolioVideoClipCard({
     >
       <video
         ref={videoRef}
-        className="aspect-video w-full object-cover"
+        className={
+          clip.portrait ? "aspect-[9/16] w-full bg-black object-contain" : "aspect-video w-full object-cover"
+        }
         controls
         playsInline
         preload="metadata"
