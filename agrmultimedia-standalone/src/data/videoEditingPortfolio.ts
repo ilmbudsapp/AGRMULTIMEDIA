@@ -27,6 +27,12 @@ const AI = "/Video Ai";
 
 export const VIDEO_EDITING_CLIPS: VideoEditingClip[] = [
   {
+    id: "agr-reklama",
+    src: encodeURI(`${AI}/14.mp4`),
+    poster: encodeURI(`${AI}/posters/14.webp`),
+    portrait: true,
+  },
+  {
     id: "unternehmen",
     src: encodeURI(`${AI}/10.mp4`),
     poster: encodeURI(`${AI}/posters/10.webp`),
