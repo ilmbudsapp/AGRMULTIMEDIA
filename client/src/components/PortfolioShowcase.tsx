@@ -19,15 +19,15 @@ import type { PortfolioFilterId } from "@/lib/portfolioPageI18n";
 import { toServiceLang } from "@/lib/servicePageI18n";
 
 const TONIS_AUTOPFLEGE_LIVE = "https://www.tonis-autopflege-goeppingen.de/";
-const TONIS_AUTOPFLEGE_IMG = "/portfolio/reinigung/01-vorher-nachher.jpg";
+const TONIS_AUTOPFLEGE_IMG = "/portfolio/referenzen/01-tonis-autopflege.webp";
 const TAIROVIC_DARK_DEMO = "/demo/tairovic-dark-verzija/index.html";
-const TAIROVIC_DARK_IMG = "/demo/tairovic-dark-verzija/assets/logo.webp";
+const TAIROVIC_DARK_IMG = "/portfolio/referenzen/02-tairovic-gebaeudeservice.webp";
 const AISA_DEMO = "/demo/aisa-osmani/index.html";
 const AISA_IMG = "/demo/aisa-osmani/assets/hero-illustration.jpg";
 const FIXBIKE_LIVE = "https://fixbike.online/";
-const FIXBIKE_IMG = "/portfolio/web-design/fixbike-fahrradservice-neuwied-hero.webp";
+const FIXBIKE_IMG = "/portfolio/referenzen/03-fixbike.webp";
 const ENCHANTED_CHRONICLES_LIVE = "https://www.theenchantedchronicles.com/";
-const ENCHANTED_CHRONICLES_IMG = "/demo/enchanted-chronicles/images/the-brave-knight.webp";
+const ENCHANTED_CHRONICLES_IMG = "/portfolio/referenzen/05-enchanted-chronicles.webp";
 const LIVE_BTN =
   "inline-flex items-center gap-2 rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-[#0a0a0f] transition hover:bg-white/90";
 

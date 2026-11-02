@@ -145,7 +145,7 @@ const de: HomeKmuCopy = {
           "Klare Darstellung aller Services, einfache Kontaktaufnahme und stärkere lokale Präsenz bei Google-Suchen nach Autopflege.",
         metrics: ["+32 % mehr Anfragen", "+18 % bessere Sichtbarkeit", "+50 % schnellere Ladezeit"],
         href: "https://www.tonis-autopflege-goeppingen.de/",
-        image: "/portfolio/reinigung/01-vorher-nachher.jpg",
+        image: "/portfolio/referenzen/01-tonis-autopflege.webp",
         imageAlt: "Toni's Autopflege Göppingen — Website-Vorschau",
       },
       {
@@ -158,7 +158,7 @@ const de: HomeKmuCopy = {
           "Vertrauenswürdiger Webauftritt, der die Vielfalt des Angebots professionell vermittelt und qualifizierte Anfragen generiert.",
         metrics: ["+28 % mehr Anfragen", "+18 % bessere Sichtbarkeit", "+45 % schnellere Ladezeit"],
         href: "https://www.tairovic-gebaeudeservice.de/",
-        image: "/demo/tairovic-dark-verzija/assets/logo.webp",
+        image: "/portfolio/referenzen/02-tairovic-gebaeudeservice.webp",
         imageAlt: "Tairovic Gebäudeservice — Website-Vorschau",
       },
       {
@@ -171,7 +171,7 @@ const de: HomeKmuCopy = {
           "Besucher finden sofort die passende Leistung und können unkompliziert Kontakt aufnehmen — weniger Absprünge, mehr Anfragen.",
         metrics: ["+32 % mehr Anfragen", "+22 % bessere Sichtbarkeit", "+50 % schnellere Ladezeit"],
         href: "https://fixbike.online/",
-        image: "/Case Studio FixBike/02.png",
+        image: "/portfolio/referenzen/03-fixbike.webp",
         imageAlt: "FixBike — Fahrradservice Website",
       },
       {
@@ -184,7 +184,7 @@ const de: HomeKmuCopy = {
           "Glaubwürdige Online-Präsenz, die Vertrauen bei Familien und Nutzern schafft und die App-Installation unterstützt.",
         metrics: ["+25 % mehr Downloads", "+18 % bessere Sichtbarkeit", "+40 % schnellere Ladezeit"],
         href: "https://www.ilmbuds.com/",
-        image: "/portfolio/ilmbuds/02-ilmbuds-google-play-listing.png",
+        image: "/portfolio/referenzen/04-ilmbuds.webp",
         imageAlt: "IlmBuds — Website und App-Präsenz",
       },
       {
@@ -197,7 +197,7 @@ const de: HomeKmuCopy = {
           "Live unter eigener Domain — magische Atmosphäre, klare Navigation und starke Präsenz für Fantasy-Leser international.",
         metrics: ["+35 % mehr Seitenaufrufe", "+20 % bessere Sichtbarkeit", "+45 % schnellere Ladezeit"],
         href: "https://www.theenchantedchronicles.com/",
-        image: "/demo/enchanted-chronicles/images/the-brave-knight.webp",
+        image: "/portfolio/referenzen/05-enchanted-chronicles.webp",
         imageAlt: "The Enchanted Chronicles — Fantasy-Geschichten Website",
       },
     ],
@@ -371,7 +371,7 @@ en.portfolio = {
       result: "Clear presentation of all services, easy contact and stronger local presence in Google searches for car care.",
       metrics: ["+32% more enquiries", "+18% better visibility", "+50% faster load time"],
       href: "https://www.tonis-autopflege-goeppingen.de/",
-      image: "/portfolio/reinigung/01-vorher-nachher.jpg",
+      image: "/portfolio/referenzen/01-tonis-autopflege.webp",
       imageAlt: "Toni's Autopflege Göppingen — website preview",
     },
     {
@@ -382,7 +382,7 @@ en.portfolio = {
         "Structured service pages, reference gallery, contact area plus compliant legal pages — SEO-optimised for local search queries.",
       result: "Trustworthy web presence that professionally communicates the range of services and generates qualified enquiries.",
       href: "https://www.tairovic-gebaeudeservice.de/",
-      image: "/demo/tairovic-dark-verzija/assets/logo.webp",
+      image: "/portfolio/referenzen/02-tairovic-gebaeudeservice.webp",
       imageAlt: "Tairovic Gebäudeservice — website preview",
     },
     {
@@ -393,7 +393,7 @@ en.portfolio = {
         "Clear service presentation, direct contact path, mobile optimisation and SEO structure for local bicycle service searches.",
       result: "Visitors find the right service immediately and can contact you easily — fewer bounces, more enquiries.",
       href: "https://fixbike.online/",
-      image: "/Case Studio FixBike/02.png",
+      image: "/portfolio/referenzen/03-fixbike.webp",
       imageAlt: "FixBike — bicycle service website",
     },
     {
@@ -404,7 +404,7 @@ en.portfolio = {
         "Web presence and store materials for a multilingual education app — clear message, professional design and optimised user flow.",
       result: "Credible online presence that builds trust with families and users and supports app installs.",
       href: "https://www.ilmbuds.com/",
-      image: "/portfolio/ilmbuds/02-ilmbuds-google-play-listing.png",
+      image: "/portfolio/referenzen/04-ilmbuds.webp",
       imageAlt: "IlmBuds — website and app presence",
     },
     {
@@ -415,7 +415,7 @@ en.portfolio = {
         "Multilingual site with illustrated story pages, SEO/AEO/GEO optimisation and structured content for Google and AI search.",
       result: "Live on its own domain — immersive atmosphere, clear navigation and strong visibility for fantasy readers globally.",
       href: "https://www.theenchantedchronicles.com/",
-      image: "/demo/enchanted-chronicles/images/the-brave-knight.webp",
+      image: "/portfolio/referenzen/05-enchanted-chronicles.webp",
       imageAlt: "The Enchanted Chronicles — fantasy stories website",
     },
   ],

@@ -97,7 +97,7 @@ export function HomeKmuPortfolio() {
                   <img
                     src={encodeURI(project.image)}
                     alt={project.imageAlt ?? project.name}
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-cover object-top"
                     loading="lazy"
                     decoding="async"
                   />
