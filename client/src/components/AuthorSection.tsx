@@ -1,6 +1,7 @@
 import { ExternalLink } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import type { Language } from "@/lib/i18n";
+import AnimatedHeading from "./AnimatedHeading";
 
 interface AuthorCopy {
   title: string;
@@ -47,13 +48,14 @@ export default function AuthorSection() {
       aria-labelledby="author-heading"
     >
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-        <div className="premium-card rounded-2xl p-8 md:p-10">
-          <h2
+        <div className="premium-card premium-card-hover rounded-2xl p-8 md:p-10">
+          <AnimatedHeading
+            as="h2"
             id="author-heading"
             className="font-display text-center text-2xl font-semibold tracking-tight text-[var(--studio-text)] md:text-3xl"
           >
             {copy.title}
-          </h2>
+          </AnimatedHeading>
           
           <div className="mt-8 space-y-4">
             <div className="flex flex-col gap-3 text-center md:text-left">

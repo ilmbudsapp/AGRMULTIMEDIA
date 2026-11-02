@@ -6,15 +6,17 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import type { Language } from "@/lib/i18n";
 import { getHomeKmuCopy } from "@/lib/homeKmuI18n";
 import { NAV_SCROLL_ON_PAGE_HINT } from "@/lib/a11yLandmarks";
+import AnimatedHeading from "./AnimatedHeading";
 
 function SectionHeading({ id, children }: { id: string; children: string }) {
   return (
-    <h2
+    <AnimatedHeading
+      as="h2"
       id={id}
       className="font-display mx-auto max-w-3xl text-center text-2xl font-medium tracking-tight text-[var(--studio-text)] md:text-3xl lg:text-4xl"
     >
       {children}
-    </h2>
+    </AnimatedHeading>
   );
 }
 
@@ -66,7 +68,7 @@ export function HomeKmuMoreThanDesign() {
           {copy.moreThanDesign.items.map((item) => (
               <div
                 key={item.title}
-                className="rounded-xl border border-[var(--studio-border)] bg-[var(--studio-surface)] px-6 py-7 md:px-7"
+                className="premium-card premium-card-hover rounded-xl px-6 py-7 md:px-7"
               >
                 <h3 className="text-base font-semibold text-[var(--studio-text)] md:text-lg">{item.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-[var(--studio-muted)] md:text-base">{item.description}</p>
@@ -90,7 +92,7 @@ export function HomeKmuPortfolio() {
           {copy.portfolio.projects.map((project) => (
             <article
               key={project.href}
-              className="premium-card flex flex-col overflow-hidden rounded-2xl"
+              className="premium-card premium-card-hover flex flex-col overflow-hidden rounded-2xl"
             >
               {project.image ? (
                 <figure className="aspect-[16/9] overflow-hidden border-b border-[var(--studio-border)]">
@@ -166,7 +168,7 @@ export function HomeKmuProcess() {
           {copy.process.steps.map((step, index) => (
             <li
               key={step.title}
-              className="premium-card relative flex flex-col rounded-2xl p-7 md:p-8"
+              className="premium-card premium-card-hover relative flex flex-col rounded-2xl p-7 md:p-8"
             >
               <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[var(--studio-border)] bg-[#f7f2ea] text-sm font-bold text-[var(--studio-accent)]">
                 {index + 1}
@@ -206,10 +208,13 @@ export function HomeKmuFinalCta() {
   return (
     <section id="home-final-cta" className={`${SECTION_ALT_CLASS} scroll-mt-24`}>
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <div className="rounded-2xl border border-[var(--studio-border)] bg-[var(--studio-surface)] px-8 py-14 text-center shadow-[0_16px_40px_-24px_rgba(80,52,28,0.28)] md:px-14 md:py-20">
-          <h2 className="font-display mx-auto max-w-3xl text-2xl font-semibold tracking-tight text-[var(--studio-text)] md:text-3xl lg:text-4xl">
+        <div className="premium-card premium-card-hover px-8 py-14 text-center md:px-14 md:py-20">
+          <AnimatedHeading
+            as="h2"
+            className="font-display mx-auto max-w-3xl text-2xl font-semibold tracking-tight text-[var(--studio-text)] md:text-3xl lg:text-4xl"
+          >
             {copy.finalCta.title}
-          </h2>
+          </AnimatedHeading>
           <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-[var(--studio-muted)] md:text-lg">
             {copy.finalCta.body}
           </p>

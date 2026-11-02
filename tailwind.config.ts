@@ -68,7 +68,8 @@ export default {
       fontFamily: {
         sans: ["var(--font-sans)", "Plus Jakarta Sans", "system-ui", "sans-serif"],
         inter: ["Plus Jakarta Sans", "system-ui", "sans-serif"],
-        serif: ["var(--font-serif)"],
+        display: ["var(--font-display)", "Playfair Display", "Georgia", "serif"],
+        serif: ["var(--font-display)", "Playfair Display", "Georgia", "serif"],
         mono: ["var(--font-mono)"],
       },
       keyframes: {

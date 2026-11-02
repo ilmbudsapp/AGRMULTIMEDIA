@@ -26,13 +26,16 @@ const copies = [
     pkg: "@fontsource/playfair-display",
     files: [
       "playfair-display-latin-500-normal.woff2",
+      "playfair-display-latin-500-italic.woff2",
       "playfair-display-latin-600-normal.woff2",
+      "playfair-display-latin-600-italic.woff2",
       "playfair-display-latin-700-normal.woff2",
     ],
   },
   {
     pkg: "@fontsource/plus-jakarta-sans",
     files: [
+      "plus-jakarta-sans-latin-400-normal.woff2",
       "plus-jakarta-sans-latin-500-normal.woff2",
       "plus-jakarta-sans-latin-600-normal.woff2",
       "plus-jakarta-sans-latin-700-normal.woff2",
@@ -115,6 +118,13 @@ const css = `/* Self-hosted fonts for static demo pages — DSGVO-compliant, no 
 }
 @font-face {
   font-family: "Playfair Display";
+  font-style: italic;
+  font-display: swap;
+  font-weight: 500;
+  src: url("./playfair-display-latin-500-italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Playfair Display";
   font-style: normal;
   font-display: swap;
   font-weight: 600;
@@ -122,10 +132,24 @@ const css = `/* Self-hosted fonts for static demo pages — DSGVO-compliant, no 
 }
 @font-face {
   font-family: "Playfair Display";
+  font-style: italic;
+  font-display: swap;
+  font-weight: 600;
+  src: url("./playfair-display-latin-600-italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Playfair Display";
   font-style: normal;
   font-display: swap;
   font-weight: 700;
   src: url("./playfair-display-latin-700-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url("./plus-jakarta-sans-latin-400-normal.woff2") format("woff2");
 }
 @font-face {
   font-family: "Plus Jakarta Sans";

@@ -18,6 +18,7 @@ import PageLoadingFallback from "@/components/PageLoadingFallback";
 import ScrollToTop from "@/components/ScrollToTop";
 import LegacyHashRedirect from "@/components/LegacyHashRedirect";
 import WebdesignGeislingenPage from "@/pages/WebdesignGeislingenPage";
+import StudioMotion from "@/components/StudioMotion";
 
 const Home = lazy(() => import("@/pages/home"));
 const ServicesPage = lazy(() => import("@/pages/ServicesPage"));
@@ -125,6 +126,7 @@ function App() {
                 <div className="min-h-screen w-full max-w-[100vw] overflow-x-hidden">
                   <SkipToContent />
                   <MetaSEO />
+                  <StudioMotion />
                   <ScrollToTop />
                   <LegacyHashRedirect />
                   <Suspense fallback={<PageLoadingFallback />}>

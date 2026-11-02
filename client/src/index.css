@@ -37,8 +37,8 @@
   --gradient-primary: linear-gradient(135deg, #8b5e34, #c4a574);
   --gradient-hero: linear-gradient(180deg, #f7f2ea 0%, #efe6d6 100%);
   --gradient-mesh: none;
-  --font-sans: 'Outfit', system-ui, sans-serif;
-  --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
   --radius: 1rem;
   --radius-lg: 1.25rem;
   --shadow-soft: 0 8px 30px -12px rgba(80, 52, 28, 0.18);
@@ -441,17 +441,21 @@
   background: var(--studio-surface);
   border: 1px solid var(--studio-border);
   border-radius: 18px;
-  box-shadow: 0 16px 40px -24px rgba(80, 52, 28, 0.28);
+  box-shadow:
+    0 18px 44px -22px rgba(80, 52, 28, 0.32),
+    0 6px 18px -10px rgba(80, 52, 28, 0.14);
 }
 
 .premium-card-hover {
-  transition: transform 300ms ease, border-color 300ms ease, box-shadow 300ms ease;
+  transition: transform 380ms cubic-bezier(0.22, 1, 0.36, 1), border-color 300ms ease, box-shadow 300ms ease;
 }
 
 .premium-card-hover:hover {
-  transform: translateY(-4px);
-  border-color: rgba(139, 94, 52, 0.4);
-  box-shadow: 0 22px 44px -20px rgba(80, 52, 28, 0.28);
+  transform: translateY(-6px);
+  border-color: rgba(139, 94, 52, 0.42);
+  box-shadow:
+    0 28px 56px -22px rgba(80, 52, 28, 0.38),
+    0 10px 24px -12px rgba(80, 52, 28, 0.16);
 }
 
 .premium-cta {
@@ -489,7 +493,100 @@
 
 .studio-service-link {
   border-left: 2px solid var(--studio-accent);
-  padding-left: 1rem;
+}
+
+.studio-split-heading {
+  overflow: visible;
+}
+
+.studio-split-word-wrap {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  padding-bottom: 0.08em;
+  margin-bottom: -0.08em;
+}
+
+.studio-split-word {
+  display: inline-block;
+  will-change: transform, filter, opacity;
+}
+
+.hero-progress {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  max-width: 22rem;
+}
+
+.hero-progress-track {
+  position: relative;
+  flex: 1;
+  height: 2px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(139, 94, 52, 0.16);
+}
+
+.hero-progress-fill {
+  display: block;
+  height: 100%;
+  width: 0%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #8b5e34 0%, #c4a574 100%);
+  box-shadow: 0 0 16px rgba(196, 165, 116, 0.55);
+}
+
+.hero-progress-label {
+  min-width: 2.6rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--studio-accent);
+}
+
+@keyframes studioOrb {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate3d(18px, -14px, 0) scale(1.06);
+    opacity: 0.85;
+  }
+}
+
+.studio-orb {
+  animation: studioOrb 10s ease-in-out infinite;
+}
+
+.studio-orb-delay {
+  animation-delay: -4s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .studio-split-word,
+  .premium-card,
+  .studio-service-link,
+  .hero-progress-fill {
+    transform: none !important;
+    filter: none !important;
+    opacity: 1 !important;
+  }
+
+  .hero-progress-fill {
+    width: 100% !important;
+  }
+
+  .premium-card-hover:hover {
+    transform: none;
+  }
+
+  .studio-orb,
+  .studio-orb-delay {
+    animation: none;
+  }
 }
 
 /* Services: 3D flip cards */
