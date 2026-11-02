@@ -269,15 +269,22 @@
   }
 
   .glass-card {
-    background: var(--studio-surface);
-    border: 1px solid var(--studio-border);
-    box-shadow: 0 16px 40px -24px rgba(80, 52, 28, 0.22);
+    position: relative;
+    background: linear-gradient(160deg, rgba(255, 252, 247, 0.58) 0%, rgba(251, 248, 242, 0.28) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.58);
+    backdrop-filter: blur(18px) saturate(1.35);
+    -webkit-backdrop-filter: blur(18px) saturate(1.35);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.72),
+      0 16px 40px -24px rgba(80, 52, 28, 0.22);
     transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
   }
 
   .glass-card:hover {
-    border-color: rgba(139, 94, 52, 0.4);
-    box-shadow: 0 22px 44px -20px rgba(80, 52, 28, 0.28);
+    border-color: rgba(255, 255, 255, 0.78);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.85),
+      0 22px 44px -20px rgba(80, 52, 28, 0.28);
   }
 
   .hover-lift {
@@ -434,28 +441,115 @@
 }
 
 .premium-section {
-  background: var(--studio-bg);
+  position: relative;
+  isolation: isolate;
+  background-color: var(--studio-bg);
+  background-image:
+    radial-gradient(ellipse 80% 55% at 8% 0%, rgba(255, 255, 255, 0.5), transparent 58%),
+    radial-gradient(ellipse 70% 45% at 96% 100%, rgba(196, 165, 116, 0.16), transparent 55%);
 }
 
-.premium-card {
-  background: var(--studio-surface);
-  border: 1px solid var(--studio-border);
+.premium-section-alt {
+  background-color: #efe8db;
+  background-image:
+    radial-gradient(ellipse 80% 55% at 8% 0%, rgba(255, 255, 255, 0.42), transparent 58%),
+    radial-gradient(ellipse 70% 45% at 96% 100%, rgba(139, 94, 52, 0.1), transparent 55%);
+}
+
+.premium-card,
+.contact-glass-card,
+.contact-glass-panel {
+  position: relative;
+  isolation: isolate;
+  background:
+    linear-gradient(155deg, rgba(255, 255, 255, 0.62) 0%, rgba(255, 252, 247, 0.28) 42%, rgba(244, 239, 230, 0.38) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.62);
   border-radius: 18px;
+  backdrop-filter: blur(20px) saturate(1.4);
+  -webkit-backdrop-filter: blur(20px) saturate(1.4);
   box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.78),
+    inset 0 -1px 0 rgba(139, 94, 52, 0.07),
+    0 0 0 1px rgba(196, 165, 116, 0.16),
     0 18px 44px -22px rgba(80, 52, 28, 0.32),
     0 6px 18px -10px rgba(80, 52, 28, 0.14);
 }
 
+.premium-card::before,
+.contact-glass-card::before,
+.contact-glass-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background:
+    radial-gradient(120% 70% at 8% -10%, rgba(255, 255, 255, 0.78), transparent 48%),
+    linear-gradient(115deg, rgba(255, 255, 255, 0.28), transparent 36%);
+}
+
+.premium-card::after,
+.contact-glass-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(
+    105deg,
+    transparent 34%,
+    rgba(255, 255, 255, 0.55) 47%,
+    rgba(196, 165, 116, 0.28) 51%,
+    transparent 64%
+  );
+  background-size: 220% 100%;
+  background-position: 130% 0;
+  opacity: 0;
+  mix-blend-mode: soft-light;
+}
+
 .premium-card-hover {
-  transition: transform 380ms cubic-bezier(0.22, 1, 0.36, 1), border-color 300ms ease, box-shadow 300ms ease;
+  transition:
+    transform 380ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 300ms ease,
+    box-shadow 300ms ease,
+    background 300ms ease;
 }
 
 .premium-card-hover:hover {
   transform: translateY(-6px);
-  border-color: rgba(139, 94, 52, 0.42);
+  border-color: rgba(255, 255, 255, 0.86);
+  background:
+    linear-gradient(155deg, rgba(255, 255, 255, 0.78) 0%, rgba(255, 252, 247, 0.42) 46%, rgba(244, 239, 230, 0.46) 100%);
   box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.9),
+    inset 0 -1px 0 rgba(139, 94, 52, 0.08),
+    0 0 0 1px rgba(196, 165, 116, 0.28),
     0 28px 56px -22px rgba(80, 52, 28, 0.38),
     0 10px 24px -12px rgba(80, 52, 28, 0.16);
+}
+
+.premium-card-hover:hover::after {
+  opacity: 1;
+  animation: crystalSheen 1.05s ease;
+}
+
+@keyframes crystalSheen {
+  from {
+    background-position: 130% 0;
+  }
+  to {
+    background-position: -10% 0;
+  }
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .premium-card,
+  .contact-glass-card,
+  .contact-glass-panel,
+  .glass-card {
+    background: rgba(251, 248, 242, 0.94);
+  }
 }
 
 .premium-cta {
@@ -483,12 +577,15 @@
 .studio-trust-pill {
   display: inline-flex;
   align-items: center;
-  border: 1px solid var(--studio-border);
+  border: 1px solid rgba(255, 255, 255, 0.62);
   border-radius: 9999px;
   padding: 0.4rem 0.85rem;
   font-size: 0.75rem;
   color: var(--studio-muted);
-  background: rgba(255, 253, 248, 0.7);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.55), rgba(255, 252, 247, 0.28));
+  backdrop-filter: blur(12px) saturate(1.3);
+  -webkit-backdrop-filter: blur(12px) saturate(1.3);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
 .studio-service-link {
@@ -587,6 +684,13 @@
   .studio-orb-delay {
     animation: none;
   }
+
+  .premium-card-hover:hover::after,
+  .premium-card::after,
+  .contact-glass-card::after {
+    animation: none;
+    opacity: 0;
+  }
 }
 
 /* Services: 3D flip cards */
@@ -630,19 +734,13 @@
 
 /* Contact section glass */
 .contact-glass-card {
-  background: var(--studio-surface);
-  border: 1px solid var(--studio-border);
-  box-shadow: 0 12px 32px -18px rgba(80, 52, 28, 0.22);
-  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
 }
 
 .contact-glass-card:hover {
-  border-color: rgba(139, 94, 52, 0.4);
-  box-shadow: 0 16px 36px -16px rgba(80, 52, 28, 0.24);
-}
-
-.contact-glass-panel {
-  background: var(--studio-surface);
-  border: 1px solid var(--studio-border);
-  box-shadow: 0 16px 40px -24px rgba(80, 52, 28, 0.22);
+  border-color: rgba(255, 255, 255, 0.86);
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.9),
+    0 0 0 1px rgba(196, 165, 116, 0.24),
+    0 16px 36px -16px rgba(80, 52, 28, 0.24);
 }

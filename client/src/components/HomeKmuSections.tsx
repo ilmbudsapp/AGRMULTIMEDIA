@@ -29,7 +29,7 @@ function SectionLead({ children }: { children: string }) {
 }
 
 const SECTION_CLASS = "premium-section scroll-mt-24 border-t border-[var(--studio-border)] py-20 md:py-28";
-const SECTION_ALT_CLASS = `${SECTION_CLASS} bg-[#efe8db]`;
+const SECTION_ALT_CLASS = `${SECTION_CLASS} premium-section-alt`;
 
 export function HomeKmuWhyUs() {
   const { currentLanguage } = useLanguage();

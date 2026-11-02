@@ -59,16 +59,16 @@ export default function StudioMotion() {
         gsap.set(parent, { perspective: 1200 });
         gsap.fromTo(
           group,
-          { y: 68, opacity: 0, filter: "blur(12px)", rotateX: 7, scale: 0.97 },
+          { y: 68, opacity: 0, rotateX: 7, scale: 0.97 },
           {
             y: 0,
             opacity: 1,
-            filter: "blur(0px)",
             rotateX: 0,
             scale: 1,
             duration: 0.98,
             stagger: 0.11,
             ease: "power3.out",
+            clearProps: "filter",
             scrollTrigger: { trigger: parent, start: "top 86%", once: true },
           },
         );
