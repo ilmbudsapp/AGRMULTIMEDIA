@@ -47,7 +47,7 @@ export default function Portfolio({ featured = false, asPage = false }: Portfoli
       id: 10,
       title: "Aisa Osmani",
       description: aisaOsmaniDescription[currentLanguage] ?? aisaOsmaniDescription.en,
-      image: "/demo/aisa-osmani/assets/hero-illustration.jpg",
+      image: "/portfolio/referenzen/06-aisa-osmani.webp",
       category: "web",
       slug: "aisa-osmani",
       detailHref: "/demo/aisa-osmani/index.html",

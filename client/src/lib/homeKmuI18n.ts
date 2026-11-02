@@ -200,6 +200,18 @@ const de: HomeKmuCopy = {
         image: "/portfolio/referenzen/05-enchanted-chronicles.webp",
         imageAlt: "The Enchanted Chronicles — Fantasy-Geschichten Website",
       },
+      {
+        name: "Aisa Osmani — Creative Portfolio",
+        branch: "Mediendesign & Portfolio",
+        goal: "Ein premium Portfolio für Studium und Praxis — Bild, Video, Social Media und UI/UX klar und modern präsentieren.",
+        implementation:
+          "Cineastisches Webdesign mit DE/EN-Navigation, Projekt-Highlights, klarer Kontaktstrecke und einer starken Startseite für Creative Work.",
+        result:
+          "Professioneller Auftritt, der kreative Arbeiten sichtbar macht und den Open-to-Work-Status überzeugend kommuniziert.",
+        href: "/demo/aisa-osmani/index.html",
+        image: "/portfolio/referenzen/06-aisa-osmani.webp",
+        imageAlt: "Aisa Osmani — Creative Portfolio 2026 Website",
+      },
     ],
   },
   process: {
@@ -417,6 +429,18 @@ en.portfolio = {
       href: "https://www.theenchantedchronicles.com/",
       image: "/portfolio/referenzen/05-enchanted-chronicles.webp",
       imageAlt: "The Enchanted Chronicles — fantasy stories website",
+    },
+    {
+      name: "Aisa Osmani — Creative Portfolio",
+      branch: "Media design & portfolio",
+      goal: "A premium portfolio for studies and practice — present image, video, social media and UI/UX work clearly and modern.",
+      implementation:
+        "Cinematic web design with DE/EN navigation, project highlights, a clear contact path and a strong homepage for creative work.",
+      result:
+        "A professional presence that makes creative work visible and communicates an open-to-work status convincingly.",
+      href: "/demo/aisa-osmani/index.html",
+      image: "/portfolio/referenzen/06-aisa-osmani.webp",
+      imageAlt: "Aisa Osmani — Creative Portfolio 2026 website",
     },
   ],
 };
