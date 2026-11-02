@@ -90,18 +90,14 @@ type PremiumTranslations = {
 const en: PremiumTranslations = {
   hero: {
     eyebrow: "Web designer · Geislingen an der Steige, BW",
-    heading: "Web design in Geislingen an der Steige — modern websites that win clients",
+    heading: "Web design Geislingen an der Steige",
     subheading:
-      "Your studio in Geislingen an der Steige: modern websites, SEO, GEO/AEO, video and graphics for trades and SMEs — personal service across Baden-Württemberg and the EU.",
-    bullets: [
-      "One point of contact — no agency ping-pong",
-      "SEO + GEO/AEO built in from day one",
-      "Free consultation · Reply within 24 hours",
-    ],
-    trustPills: ["Geislingen an der Steige", "Trades & SMEs", "Baden-Württemberg", "Google reviews"],
-    primaryCta: "Free consultation",
-    secondaryCta: "View portfolio",
-    ctaMeta: "No obligation · Individual quote · Reply within 24h",
+      "Your work deserves a strong website. I develop custom websites for trades, service providers and small businesses — personally managed and focused on customer enquiries.",
+    bullets: [],
+    trustPills: [],
+    primaryCta: "Discuss your project with no obligation",
+    secondaryCta: "View case studies",
+    ctaMeta: "Free initial consultation · Individual quote",
   },
   optimizationExcellence: {
     eyebrow: "AI & search optimization",
@@ -211,18 +207,14 @@ const en: PremiumTranslations = {
 const de: PremiumTranslations = {
   hero: {
     eyebrow: "Webdesign-Studio · Geislingen an der Steige, BW",
-    heading: "Webdesign Geislingen an der Steige — AGR Multimedia",
+    heading: "Webdesign Geislingen an der Steige",
     subheading:
-      "Ihr Studio in Geislingen an der Steige: moderne Websites, SEO, GEO/AEO, Video und Grafik für Handwerk, Dienstleister und KMU — persönlich, regional in Baden-Württemberg, auch EU-weit.",
-    bullets: [
-      "Ein Ansprechpartner — kein Agentur-Pingpong",
-      "SEO + GEO/AEO von Anfang an mitgedacht",
-      "Kostenlose Erstberatung · Antwort in 24h",
-    ],
-    trustPills: ["Geislingen an der Steige", "Handwerk & KMU", "Baden-Württemberg", "Google-Bewertungen"],
-    primaryCta: "Kostenlose Erstberatung",
+      "Ihre Arbeit verdient eine starke Website. Ich entwickle individuelle Websites für Handwerk, Dienstleister und kleine Unternehmen — persönlich betreut und auf Kundenanfragen ausgerichtet.",
+    bullets: [],
+    trustPills: [],
+    primaryCta: "Projekt unverbindlich besprechen",
     secondaryCta: "Referenzen ansehen",
-    ctaMeta: "Unverbindlich · Individuelles Angebot · Antwort innerhalb von 24h",
+    ctaMeta: "Kostenlose Erstberatung · Individuelles Angebot",
   },
   optimizationExcellence: {
     eyebrow: "KI- & Suchoptimierung",
