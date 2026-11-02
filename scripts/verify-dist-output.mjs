@@ -63,6 +63,19 @@ for (const prerenderRoute of requiredPrerenderRoutes) {
   }
 }
 
+const blogPrerender = fs.readFileSync(
+  path.join(outputDir, "blog", "google-business-profil-bewertungen-tipps", "index.html"),
+  "utf8",
+);
+if (!blogPrerender.includes('id="canonical-url"')) {
+  console.error("FAIL: prerendered blog HTML lost id=canonical-url (English ?lang=en cannot self-canonicalize)");
+  process.exit(1);
+}
+if (!blogPrerender.includes("google-business-profil-bewertungen-tipps?lang=en")) {
+  console.error("FAIL: prerendered blog HTML missing route-specific English hreflang");
+  process.exit(1);
+}
+
 for (const demoIndex of requiredDemoIndexes) {
   if (!fs.existsSync(demoIndex)) {
     console.error(`FAIL: missing ${demoIndex}`);

@@ -158,21 +158,46 @@ const caseStudies = [
   { dir: "portfolio/ilmbuds", slug: "ilmbuds", name: "IlmBuds Bildungs-App" },
 ];
 
+function localeUrl(pathname, locale) {
+  if (locale === "de") return pathname === "/" ? "https://www.agrmultimedia.com/" : `https://www.agrmultimedia.com${pathname}`;
+  return pathname === "/" ? "https://www.agrmultimedia.com/?lang=en" : `https://www.agrmultimedia.com${pathname}?lang=en`;
+}
+
+function hreflangBlock(pathname) {
+  const de = localeUrl(pathname, "de");
+  const en = localeUrl(pathname, "en");
+  return `<link rel="alternate" hreflang="de" href="${de}" />
+    <link rel="alternate" hreflang="en" href="${en}" />
+    <link rel="alternate" hreflang="x-default" href="${de}" />`;
+}
+
 function writeShell({ dir, title, description, h1, lead, canonical, bodyHtml = "" }) {
   const routeDir = path.join(outDir, dir);
   fs.mkdirSync(routeDir, { recursive: true });
+  const pathname = `/${String(dir).replace(/\\/g, "/")}`;
   const scripts =
     indexHtml.match(/<script[^>]+src="\/assets\/[^"]+"[^>]*><\/script>/g)?.join("\n    ") ?? "";
   const moduleScript = indexHtml.match(/<script type="module"[^>]*><\/script>/)?.[0] ?? "";
   let headBlock = head
     .replace(/<title>[\s\S]*?<\/title>/i, `<title>${title}</title>`)
-    .replace(/<link rel="canonical"[^>]*>/i, `<link rel="canonical" href="${canonical}" />`);
+    // Keep id="canonical-url" so the ?lang=en head script can self-canonicalize English URLs.
+    .replace(
+      /<link rel="canonical"[^>]*>/i,
+      `<link rel="canonical" id="canonical-url" href="${canonical}" />`,
+    )
+    .replace(
+      /<link rel="alternate" hreflang="de" href="[^"]*"\s*\/>\s*<link rel="alternate" hreflang="en" href="[^"]*"\s*\/>\s*<link rel="alternate" hreflang="x-default" href="[^"]*"\s*\/>/i,
+      hreflangBlock(pathname),
+    );
   if (description) {
     headBlock = headBlock.replace(
       /<meta name="description" id="meta-description" content="[^"]*"/i,
       `<meta name="description" id="meta-description" content="${description.replace(/"/g, "&quot;")}"`,
     );
   }
+  headBlock = headBlock
+    .replace(/<meta property="og:url"[^>]*>/i, `<meta property="og:url" id="og-url" content="${canonical}" />`)
+    .replace(/<meta name="twitter:url"[^>]*>/i, `<meta name="twitter:url" id="twitter-url" content="${canonical}" />`);
   const page = `<!DOCTYPE html>
 <html lang="de">
 ${headBlock}

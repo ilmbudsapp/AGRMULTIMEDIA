@@ -52,15 +52,36 @@ const staticPaths = [
 
 const lastmod = new Date().toISOString().slice(0, 10);
 
-let xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
+function deUrl(pathname) {
+  return pathname === "/" ? `${SITE_ORIGIN}/` : `${SITE_ORIGIN}${pathname}`;
+}
+
+function enUrl(pathname) {
+  return pathname === "/" ? `${SITE_ORIGIN}/?lang=en` : `${SITE_ORIGIN}${pathname}?lang=en`;
+}
+
+function urlEntry(pathname, changefreq, priority) {
+  const de = deUrl(pathname);
+  const en = enUrl(pathname);
+  return `  <url>
+    <loc>${de}</loc>
+    <lastmod>${lastmod}</lastmod>
+    <changefreq>${changefreq}</changefreq>
+    <priority>${priority}</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="${de}"/>
+    <xhtml:link rel="alternate" hreflang="en" href="${en}"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="${de}"/>
+  </url>\n`;
+}
+
+let xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n`;
 
 for (const u of staticPaths) {
-  const loc = u.path === "/" ? `${SITE_ORIGIN}/` : `${SITE_ORIGIN}${u.path}`;
-  xml += `  <url><loc>${loc}</loc><lastmod>${lastmod}</lastmod><changefreq>${u.changefreq}</changefreq><priority>${u.priority}</priority></url>\n`;
+  xml += urlEntry(u.path, u.changefreq, u.priority);
 }
 
 for (const slug of uniqueBlog) {
-  xml += `  <url><loc>${SITE_ORIGIN}/blog/${slug}</loc><lastmod>${lastmod}</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>\n`;
+  xml += urlEntry(`/blog/${slug}`, "monthly", "0.65");
 }
 
 xml += `</urlset>\n`;
