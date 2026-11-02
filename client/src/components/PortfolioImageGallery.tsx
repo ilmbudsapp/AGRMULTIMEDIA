@@ -1,4 +1,4 @@
-﻿import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { X } from "lucide-react";
 
 export type GalleryItem = {
@@ -35,7 +35,7 @@ export default function PortfolioImageGallery({ items, closeLabel = "Close" }: P
         {items.map((item) => (
           <figure
             key={item.src}
-            className="flex min-h-[8rem] items-center justify-center overflow-hidden rounded-lg border border-white/[0.06] bg-[#0a0a0f]/50 p-2 sm:min-h-[10rem] md:min-h-0 md:p-3"
+            className="flex min-h-[8rem] items-center justify-center overflow-hidden rounded-lg border border-[var(--studio-border)] bg-[var(--studio-bg)]/50 p-2 sm:min-h-[10rem] md:min-h-0 md:p-3"
           >
             <button
               type="button"
@@ -69,7 +69,7 @@ export default function PortfolioImageGallery({ items, closeLabel = "Close" }: P
               e.stopPropagation();
               close();
             }}
-            className="absolute right-3 top-3 z-10 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white transition hover:bg-white/15 sm:right-5 sm:top-5"
+            className="absolute right-3 top-3 z-10 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/60 text-[var(--studio-text)] transition hover:bg-white/15 sm:right-5 sm:top-5"
             aria-label={closeLabel}
           >
             <X className="h-5 w-5" aria-hidden />

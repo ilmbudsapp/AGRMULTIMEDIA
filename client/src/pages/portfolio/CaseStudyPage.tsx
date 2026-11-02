@@ -16,7 +16,7 @@ export default function CaseStudyPage({ study }: Props) {
   }, [study.slug]);
 
   return (
-    <div className="min-h-screen w-full max-w-[100vw] overflow-x-hidden bg-[#0a0a0f]">
+    <div className="min-h-screen w-full max-w-[100vw] overflow-x-hidden bg-[var(--studio-bg)]">
       <Navigation />
       <BreadcrumbNav />
       <main id="main-content" className="pt-8 pb-16">
@@ -30,7 +30,7 @@ export default function CaseStudyPage({ study }: Props) {
             <p className="text-sm font-medium uppercase tracking-wider text-blue-300/90">
               {study.industry} · {study.location}
             </p>
-            <h1 className="mt-3 text-3xl font-bold tracking-tight text-white md:text-4xl">
+            <h1 className="mt-3 text-3xl font-bold tracking-tight text-[var(--studio-text)] md:text-4xl">
               Case Study: {study.clientName}
             </h1>
             <p className="mt-4 text-lg text-gray-400">
@@ -57,7 +57,7 @@ export default function CaseStudyPage({ study }: Props) {
           </div>
 
           <section className="mt-12">
-            <h2 className="text-2xl font-semibold text-white">Ausgangslage — das Problem</h2>
+            <h2 className="text-2xl font-semibold text-[var(--studio-text)]">Ausgangslage — das Problem</h2>
             <ul className="mt-4 space-y-3 text-gray-300">
               {study.problem.map((p) => (
                 <li key={p.slice(0, 40)} className="flex gap-2 leading-relaxed">
@@ -71,7 +71,7 @@ export default function CaseStudyPage({ study }: Props) {
           </section>
 
           <section className="mt-12">
-            <h2 className="text-2xl font-semibold text-white">Unsere Lösung</h2>
+            <h2 className="text-2xl font-semibold text-[var(--studio-text)]">Unsere Lösung</h2>
             <ul className="mt-4 space-y-3 text-gray-300">
               {study.solution.map((s) => (
                 <li key={s.slice(0, 40)} className="flex gap-2 leading-relaxed">
@@ -85,7 +85,7 @@ export default function CaseStudyPage({ study }: Props) {
           </section>
 
           <section className="mt-12">
-            <h2 className="text-2xl font-semibold text-white">Ergebnis</h2>
+            <h2 className="text-2xl font-semibold text-[var(--studio-text)]">Ergebnis</h2>
             {study.metrics && study.metrics.length > 0 ? (
               <ul className="mt-4 flex flex-wrap gap-3">
                 {study.metrics.map((m) => (
@@ -122,7 +122,7 @@ export default function CaseStudyPage({ study }: Props) {
             </a>
             <Link
               href={ROUTES.kontakt}
-              className="inline-flex items-center gap-2 rounded-xl border border-white/20 px-6 py-3 text-sm font-semibold text-white transition hover:border-white/40"
+              className="inline-flex items-center gap-2 rounded-xl border border-white/20 px-6 py-3 text-sm font-semibold text-[var(--studio-text)] transition hover:border-white/40"
             >
               Ähnliches Projekt anfragen
             </Link>

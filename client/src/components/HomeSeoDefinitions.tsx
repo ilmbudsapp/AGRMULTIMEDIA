@@ -165,10 +165,10 @@ export default function HomeSeoDefinitions() {
 
   return (
     <section
-      className="mt-12 border-t border-white/10 pt-10 text-white [&_dd]:text-white"
+      className="mt-12 border-t border-white/10 pt-10 text-[var(--studio-text)] [&_dd]:text-[var(--studio-text)]"
       aria-labelledby="seo-dl-heading"
     >
-      <h3 id="seo-dl-heading" className="text-lg font-semibold tracking-tight text-white">
+      <h3 id="seo-dl-heading" className="text-lg font-semibold tracking-tight text-[var(--studio-text)]">
         {pack.heading}
       </h3>
       <dl className="mt-6 space-y-5">

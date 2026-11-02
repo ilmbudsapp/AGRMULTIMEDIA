@@ -33,7 +33,7 @@ export default function BrandIdentity() {
               </Button>
             </Link>
             <div>
-              <p className="text-2xl font-bold text-gray-900 dark:text-white">
+              <p className="text-2xl font-bold text-gray-900 dark:text-[var(--studio-text)]">
                 {currentLanguage === 'sr' ? 'Brend Identitet' : 
                  currentLanguage === 'en' ? 'Brand Identity' :
                  currentLanguage === 'de' ? 'Markenidentität' : 
@@ -57,21 +57,21 @@ export default function BrandIdentity() {
         <div className="max-w-6xl mx-auto">
           {/* Project Meta */}
           <div className="flex flex-wrap items-center gap-4 mb-8">
-            <Badge className="bg-purple-500 text-white">
+            <Badge className="bg-purple-500 text-[var(--studio-text)]">
               {currentLanguage === 'sr' ? 'Brending' : 
                currentLanguage === 'en' ? 'Branding' :
                currentLanguage === 'de' ? 'Branding' : 
                currentLanguage === 'sq' ? 'Branding' :
                'Brending'}
             </Badge>
-            <Badge className="bg-pink-500 text-white">
+            <Badge className="bg-pink-500 text-[var(--studio-text)]">
               {currentLanguage === 'sr' ? 'Logo Dizajn' : 
                currentLanguage === 'en' ? 'Logo Design' :
                currentLanguage === 'de' ? 'Logo-Design' : 
                currentLanguage === 'sq' ? 'Dizajn Logo' :
                'Logo Dizajn'}
             </Badge>
-            <Badge className="bg-blue-500 text-white">
+            <Badge className="bg-blue-500 text-[var(--studio-text)]">
               {currentLanguage === 'sr' ? 'Vizuelni Identitet' : 
                currentLanguage === 'en' ? 'Visual Identity' :
                currentLanguage === 'de' ? 'Visuelle Identität' : 
@@ -94,7 +94,7 @@ export default function BrandIdentity() {
           {/* Project Overview */}
           <div className="grid lg:grid-cols-3 gap-12 mb-16">
             <div className="lg:col-span-2">
-              <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+              <h1 className="text-3xl font-bold text-gray-900 dark:text-[var(--studio-text)] mb-6">
                 {currentLanguage === 'sr' ? 'Kreiranje Kompletnog Brendovskog Identiteta' : 
                  currentLanguage === 'en' ? 'Creating Complete Brand Identity' :
                  currentLanguage === 'de' ? 'Vollständige Markenidentität erstellen' : 
@@ -338,7 +338,7 @@ export default function BrandIdentity() {
 
           {/* Brand Showcase */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-[var(--studio-text)] mb-8 text-center">
               {currentLanguage === 'sr' ? 'Brend Elementi' : 
                currentLanguage === 'en' ? 'Brand Elements' :
                currentLanguage === 'de' ? 'Markenelemente' : 
@@ -349,7 +349,7 @@ export default function BrandIdentity() {
             <div className="grid md:grid-cols-4 gap-6">
               <Card className="p-6 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl mx-auto mb-4 flex items-center justify-center">
-                  <Zap className="w-8 h-8 text-white" />
+                  <Zap className="w-8 h-8 text-[var(--studio-text)]" />
                 </div>
                 <h3 className="font-semibold mb-2">
                   {currentLanguage === 'sr' ? 'Logo Mark' : 
@@ -369,7 +369,7 @@ export default function BrandIdentity() {
 
               <Card className="p-6 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl mx-auto mb-4 flex items-center justify-center">
-                  <Palette className="w-8 h-8 text-white" />
+                  <Palette className="w-8 h-8 text-[var(--studio-text)]" />
                 </div>
                 <h3 className="font-semibold mb-2">
                   {currentLanguage === 'sr' ? 'Boje' : 
@@ -388,7 +388,7 @@ export default function BrandIdentity() {
               </Card>
 
               <Card className="p-6 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-500 rounded-2xl mx-auto mb-4 flex items-center justify-center text-white font-bold text-xl">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-500 rounded-2xl mx-auto mb-4 flex items-center justify-center text-[var(--studio-text)] font-bold text-xl">
                   Aa
                 </div>
                 <h3 className="font-semibold mb-2">
@@ -409,7 +409,7 @@ export default function BrandIdentity() {
 
               <Card className="p-6 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-red-500 rounded-2xl mx-auto mb-4 flex items-center justify-center">
-                  <Award className="w-8 h-8 text-white" />
+                  <Award className="w-8 h-8 text-[var(--studio-text)]" />
                 </div>
                 <h3 className="font-semibold mb-2">
                   {currentLanguage === 'sr' ? 'Aplikacije' : 
@@ -431,7 +431,7 @@ export default function BrandIdentity() {
 
           {/* Process Section */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-[var(--studio-text)] mb-8 text-center">
               {currentLanguage === 'sr' ? 'Kreativni Proces' : 
                currentLanguage === 'en' ? 'Creative Process' :
                currentLanguage === 'de' ? 'Kreativer Prozess' : 
@@ -441,7 +441,7 @@ export default function BrandIdentity() {
             
             <div className="grid md:grid-cols-4 gap-8">
               <div className="text-center">
-                <div className="w-12 h-12 bg-purple-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
+                <div className="w-12 h-12 bg-purple-500 text-[var(--studio-text)] rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
                   1
                 </div>
                 <h3 className="font-semibold mb-2">
@@ -461,7 +461,7 @@ export default function BrandIdentity() {
               </div>
 
               <div className="text-center">
-                <div className="w-12 h-12 bg-pink-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
+                <div className="w-12 h-12 bg-pink-500 text-[var(--studio-text)] rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
                   2
                 </div>
                 <h3 className="font-semibold mb-2">
@@ -481,7 +481,7 @@ export default function BrandIdentity() {
               </div>
 
               <div className="text-center">
-                <div className="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
+                <div className="w-12 h-12 bg-blue-500 text-[var(--studio-text)] rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
                   3
                 </div>
                 <h3 className="font-semibold mb-2">
@@ -501,7 +501,7 @@ export default function BrandIdentity() {
               </div>
 
               <div className="text-center">
-                <div className="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
+                <div className="w-12 h-12 bg-green-500 text-[var(--studio-text)] rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
                   4
                 </div>
                 <h3 className="font-semibold mb-2">
@@ -523,7 +523,7 @@ export default function BrandIdentity() {
           </div>
 
           {/* CTA Section */}
-          <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl p-8 text-white text-center">
+          <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl p-8 text-[var(--studio-text)] text-center">
             <h3 className="text-2xl font-bold mb-4">
               {currentLanguage === 'sr' ? 'Vaš Brend Zaslužuje Jedinstvenu Vizuelinu!' : 
                currentLanguage === 'en' ? 'Your Brand Deserves a Unique Visual Identity!' :

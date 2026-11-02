@@ -206,27 +206,27 @@ export default function ComparisonTable() {
   const copy = TABLE_COPY[currentLanguage];
 
   return (
-    <section className="border-t border-[#2a2a30] bg-[#0c0c10] py-16 md:py-20" aria-labelledby="comparison-heading">
+    <section className="border-t border-[var(--studio-border)] bg-[#efe8db] py-16 md:py-20" aria-labelledby="comparison-heading">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 text-center">
           <h2
             id="comparison-heading"
-            className="font-display text-2xl font-semibold tracking-tight text-white md:text-3xl"
+            className="font-display text-2xl font-semibold tracking-tight text-[var(--studio-text)] md:text-3xl"
           >
             {copy.title}
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-sm text-white/65 md:text-base">{copy.subtitle}</p>
+          <p className="mx-auto mt-4 max-w-2xl text-sm text-[var(--studio-muted)] md:text-base">{copy.subtitle}</p>
         </div>
 
         <div className="overflow-x-auto">
           <table className="w-full min-w-[600px] border-collapse text-sm">
             <thead>
-              <tr className="border-b border-[#2a2a30]">
+              <tr className="border-b border-[var(--studio-border)]">
                 {copy.columnHeaders.map((header, index) => (
                   <th
                     key={index}
-                    className={`p-4 text-left font-semibold text-white ${
-                      index === 0 ? "w-1/3" : "w-1/3 bg-[#111116]"
+                    className={`p-4 text-left font-semibold text-[var(--studio-text)] ${
+                      index === 0 ? "w-1/3" : "w-1/3 bg-[var(--studio-surface)]"
                     }`}
                   >
                     {header}
@@ -236,26 +236,26 @@ export default function ComparisonTable() {
             </thead>
             <tbody>
               {copy.rows.map((row, index) => (
-                <tr key={index} className="border-b border-[#2a2a30]/50">
-                  <td className="p-4 font-medium text-white/90">{row.criterion}</td>
-                  <td className="bg-[#111116] p-4">
+                <tr key={index} className="border-b border-[var(--studio-border)]/50">
+                  <td className="p-4 font-medium text-[var(--studio-text)]">{row.criterion}</td>
+                  <td className="bg-[var(--studio-surface)] p-4">
                     <div className="flex items-start gap-2">
                       {row.baukasten.positive ? (
                         <Check className="mt-0.5 h-5 w-5 shrink-0 text-green-400" />
                       ) : (
                         <X className="mt-0.5 h-5 w-5 shrink-0 text-red-400" />
                       )}
-                      <span className="text-white/75">{row.baukasten.text}</span>
+                      <span className="text-[var(--studio-muted)]">{row.baukasten.text}</span>
                     </div>
                   </td>
-                  <td className="bg-[#111116] p-4">
+                  <td className="bg-[var(--studio-surface)] p-4">
                     <div className="flex items-start gap-2">
                       {row.individual.positive ? (
                         <Check className="mt-0.5 h-5 w-5 shrink-0 text-green-400" />
                       ) : (
                         <X className="mt-0.5 h-5 w-5 shrink-0 text-red-400" />
                       )}
-                      <span className="text-white/75">{row.individual.text}</span>
+                      <span className="text-[var(--studio-muted)]">{row.individual.text}</span>
                     </div>
                   </td>
                 </tr>

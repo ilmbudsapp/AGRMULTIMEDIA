@@ -35,19 +35,19 @@ export default function CookieConsent() {
       aria-labelledby="cookie-consent-title"
       aria-describedby="cookie-consent-desc"
     >
-      <div className="pointer-events-auto mx-auto max-w-3xl rounded-2xl border border-white/10 bg-[#0f0f14]/95 backdrop-blur-xl shadow-2xl p-5 sm:p-6 text-white">
-        <h2 id="cookie-consent-title" className="text-lg font-bold mb-2">
+      <div className="pointer-events-auto mx-auto max-w-3xl rounded-2xl border border-[var(--studio-border)] bg-[var(--studio-surface)] p-5 text-[var(--studio-text)] shadow-[0_16px_40px_-16px_rgba(80,52,28,0.28)] sm:p-6">
+        <h2 id="cookie-consent-title" className="mb-2 font-display text-lg font-semibold">
           {copy.title}
         </h2>
-        <p id="cookie-consent-desc" className="text-sm text-gray-300 leading-relaxed mb-4">
+        <p id="cookie-consent-desc" className="mb-4 text-sm leading-relaxed text-[var(--studio-muted)]">
           {copy.body}
         </p>
-        <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:justify-between">
-          <div className="flex flex-wrap gap-3 text-xs text-gray-400">
-            <Link href="/privacy-policy" className="underline hover:text-white">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-wrap gap-3 text-xs text-[var(--studio-muted)]">
+            <Link href="/privacy-policy" className="underline hover:text-[var(--studio-accent)]">
               {copy.privacyLink}
             </Link>
-            <Link href="/cookies" className="underline hover:text-white">
+            <Link href="/cookies" className="underline hover:text-[var(--studio-accent)]">
               {copy.cookiesLink}
             </Link>
           </div>
@@ -55,14 +55,14 @@ export default function CookieConsent() {
             <button
               type="button"
               onClick={() => choose("essential")}
-              className="rounded-xl border border-white/20 px-4 py-2.5 text-sm font-semibold hover:bg-white/10 transition-colors"
+              className="rounded-full border border-[var(--studio-border)] px-4 py-2.5 text-sm font-semibold transition-colors hover:border-[var(--studio-accent)] hover:text-[var(--studio-accent)]"
             >
               {copy.essential}
             </button>
             <button
               type="button"
               onClick={() => choose("analytics")}
-              className="rounded-xl bg-violet-600 px-4 py-2.5 text-sm font-semibold hover:bg-violet-500 transition-colors"
+              className="premium-cta rounded-full px-4 py-2.5 text-sm font-semibold"
             >
               {copy.acceptAll}
             </button>

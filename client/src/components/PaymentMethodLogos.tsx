@@ -1,13 +1,13 @@
 import { SiMastercard, SiPaypal, SiVisa } from "react-icons/si";
 
-const iconClass = "h-[22px] w-auto max-w-[72px] text-white/95 drop-shadow-sm";
+const iconClass = "h-[22px] w-auto max-w-[72px] text-[var(--studio-text)] drop-shadow-sm";
 
 /** Simplified SEPA direct-debit mark for dark backgrounds (not an official EPC asset). */
 export function SepaPaymentIcon({ className }: { className?: string }) {
   return (
     <svg
       viewBox="0 0 88 32"
-      className={className ?? "h-7 w-[88px] text-white/95"}
+      className={className ?? "h-7 w-[88px] text-[var(--studio-text)]"}
       aria-hidden
       role="img"
     >

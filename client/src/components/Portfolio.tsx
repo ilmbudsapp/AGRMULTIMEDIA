@@ -91,20 +91,20 @@ export default function Portfolio({ featured = false, asPage = false }: Portfoli
   const displayItems = featured ? curatedFeatured : filteredItems;
 
   return (
-    <section id="portfolio" className={`scroll-mt-24 ${featured ? "py-20 md:py-24 bg-[#0a0a0c]" : "py-24 bg-[#0f0f14]"}`}>
+    <section id="portfolio" className={`scroll-mt-24 ${featured ? "py-20 md:py-24 bg-[var(--studio-bg)]" : "py-24 bg-[var(--studio-bg)]"}`}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`${featured ? "mb-12 md:mb-14 text-left max-w-2xl" : "text-center mb-16"}`}>
-          <p className="text-xs font-medium uppercase tracking-[0.2em] text-white/40 mb-3">{tSpec.nav.portfolio}</p>
+          <p className="text-xs font-medium uppercase tracking-[0.2em] text-[var(--studio-muted)] mb-3">{tSpec.nav.portfolio}</p>
           {asPage ? (
-            <h1 className="text-3xl md:text-4xl font-semibold text-white tracking-tight" data-testid="portfolio-title">
+            <h1 className="font-display text-3xl font-medium tracking-tight text-[var(--studio-text)] md:text-4xl" data-testid="portfolio-title">
               {tSpec.featuredPortfolio.heading}
             </h1>
           ) : (
-            <h2 className="text-3xl md:text-4xl font-semibold text-white tracking-tight" data-testid="portfolio-title">
+            <h2 className="font-display text-3xl font-medium tracking-tight text-[var(--studio-text)] md:text-4xl" data-testid="portfolio-title">
               {tSpec.featuredPortfolio.heading}
             </h2>
           )}
-          <p className={`text-white/55 text-sm md:text-base leading-relaxed ${featured ? "mt-3" : "mt-4 text-gray-400 max-w-3xl mx-auto"}`}>
+          <p className={`text-[var(--studio-muted)] text-sm md:text-base leading-relaxed ${featured ? "mt-3" : "mt-4 text-gray-400 max-w-3xl mx-auto"}`}>
             {featured ? tSpec.featuredPortfolio.featuredIntro : t.portfolio.subtitle}
           </p>
         </div>
@@ -117,8 +117,8 @@ export default function Portfolio({ featured = false, asPage = false }: Portfoli
               onClick={() => setActiveFilter(category.id)}
               className={`px-5 py-2.5 rounded-full font-medium transition-colors duration-300 ${
                 activeFilter === category.id
-                  ? 'bg-white text-[#0a0a0f]'
-                  : 'text-gray-400 hover:text-white bg-white/5 border border-white/10'
+                  ? 'bg-[var(--studio-accent)] text-[#fbf7f0]'
+                  : 'border border-[var(--studio-border)] bg-[var(--studio-surface)] text-[var(--studio-muted)] hover:text-[var(--studio-accent)]'
               }`}
               data-testid={`filter-${category.id}`}
             >
@@ -132,7 +132,7 @@ export default function Portfolio({ featured = false, asPage = false }: Portfoli
           {displayItems.map((item) => (
             <div
               key={item.id}
-              className="group relative overflow-hidden rounded-xl border border-white/[0.06] bg-white/[0.02] transition-colors hover:border-white/[0.1]"
+              className="premium-card group relative overflow-hidden rounded-xl"
               data-testid={`portfolio-item-${item.id}`}
             >
               <img 
@@ -147,7 +147,7 @@ export default function Portfolio({ featured = false, asPage = false }: Portfoli
                   <h3 className="text-white text-lg font-semibold mb-1" data-testid={`portfolio-item-title-${item.id}`}>
                     {item.title}
                   </h3>
-                  <p className="text-white/75 text-sm mb-4 line-clamp-2" data-testid={`portfolio-item-description-${item.id}`}>
+                  <p className="text-[var(--studio-muted)] text-sm mb-4 line-clamp-2" data-testid={`portfolio-item-description-${item.id}`}>
                     {item.description}
                   </p>
                   {"staticDemo" in item && item.staticDemo ? (
@@ -179,7 +179,7 @@ export default function Portfolio({ featured = false, asPage = false }: Portfoli
           <div className="mt-12 text-center">
             <Link
               href="/portfolio"
-              className="inline-flex text-sm font-medium text-white/60 hover:text-white transition-colors underline-offset-4 hover:underline"
+              className="inline-flex text-sm font-medium text-[var(--studio-muted)] hover:text-[var(--studio-accent)] transition-colors underline-offset-4 hover:underline"
             >
               {tSpec.nav.portfolio} →
             </Link>

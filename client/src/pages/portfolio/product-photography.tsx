@@ -33,7 +33,7 @@ export default function ProductPhotography() {
               </Button>
             </Link>
             <div>
-              <p className="text-2xl font-bold text-gray-900 dark:text-white">
+              <p className="text-2xl font-bold text-gray-900 dark:text-[var(--studio-text)]">
                 Product Photography
               </p>
               <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -53,21 +53,21 @@ export default function ProductPhotography() {
         <div className="max-w-6xl mx-auto">
           {/* Project Meta */}
           <div className="flex flex-wrap items-center gap-4 mb-8">
-            <Badge className="bg-amber-500 text-white">
+            <Badge className="bg-amber-500 text-[var(--studio-text)]">
               {currentLanguage === 'sr' ? 'Fotografija' : 
                currentLanguage === 'en' ? 'Photography' :
                currentLanguage === 'de' ? 'Fotografie' : 
                currentLanguage === 'sq' ? 'Fotografia' :
                'Fotografija'}
             </Badge>
-            <Badge className="bg-orange-500 text-white">
+            <Badge className="bg-orange-500 text-[var(--studio-text)]">
               {currentLanguage === 'sr' ? 'Studio' : 
                currentLanguage === 'en' ? 'Studio' :
                currentLanguage === 'de' ? 'Studio' : 
                currentLanguage === 'sq' ? 'Studio' :
                'Studio'}
             </Badge>
-            <Badge className="bg-green-500 text-white">
+            <Badge className="bg-green-500 text-[var(--studio-text)]">
               {currentLanguage === 'sr' ? 'E-commerce' : 
                currentLanguage === 'en' ? 'E-commerce' :
                currentLanguage === 'de' ? 'E-Commerce' : 
@@ -90,7 +90,7 @@ export default function ProductPhotography() {
           {/* Project Overview */}
           <div className="grid lg:grid-cols-3 gap-12 mb-16">
             <div className="lg:col-span-2">
-              <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+              <h1 className="text-3xl font-bold text-gray-900 dark:text-[var(--studio-text)] mb-6">
                 {currentLanguage === 'sr' ? 'Profesionalna Studijska Fotografija Proizvoda' : 
                  currentLanguage === 'en' ? 'Professional Product Photography Studio' :
                  currentLanguage === 'de' ? 'Professionelles Produktfotografie-Studio' : 
@@ -355,7 +355,7 @@ export default function ProductPhotography() {
 
           {/* Product Showcase Gallery */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-[var(--studio-text)] mb-8 text-center">
               {currentLanguage === 'sr' ? 'Portfolio Product Photography' : 
                currentLanguage === 'en' ? 'Product Photography Portfolio' :
                currentLanguage === 'de' ? 'Produktfotografie Portfolio' : 
@@ -396,7 +396,7 @@ export default function ProductPhotography() {
 
           {/* Photography Process */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-[var(--studio-text)] mb-8 text-center">
               {currentLanguage === 'sr' ? 'Proces Fotografisanja' : 
                currentLanguage === 'en' ? 'Photography Process' :
                currentLanguage === 'de' ? 'Fotografieprozess' : 
@@ -489,7 +489,7 @@ export default function ProductPhotography() {
 
           {/* Lighting Techniques */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-[var(--studio-text)] mb-8 text-center">
               {currentLanguage === 'sr' ? 'Osvetljavanje i Tehnike' : 
                currentLanguage === 'en' ? 'Lighting and Techniques' :
                currentLanguage === 'de' ? 'Beleuchtung und Techniken' : 
@@ -589,7 +589,7 @@ export default function ProductPhotography() {
           </div>
 
           {/* CTA Section */}
-          <div className="bg-gradient-to-r from-amber-500 to-orange-500 rounded-2xl p-8 text-white text-center">
+          <div className="bg-gradient-to-r from-amber-500 to-orange-500 rounded-2xl p-8 text-[var(--studio-text)] text-center">
             <h3 className="text-2xl font-bold mb-4">
               {currentLanguage === 'sr' ? 'Vaši Proizvodi Zaslužuju Profesionalnu Prezentaciju!' : 
                currentLanguage === 'en' ? 'Your Products Deserve Professional Presentation!' :

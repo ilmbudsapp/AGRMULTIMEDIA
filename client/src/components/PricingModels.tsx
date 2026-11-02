@@ -93,15 +93,15 @@ export default function PricingModels() {
   return (
     <section
       id="individual-quote"
-      className="premium-section scroll-mt-24 border-t border-[#333333] py-20 md:py-28"
+      className="premium-section scroll-mt-24 border-t border-[var(--studio-border)] py-20 md:py-28"
       aria-labelledby="individual-quote-heading"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <header className="mx-auto max-w-3xl text-center">
-          <h2 id="individual-quote-heading" className="text-3xl font-semibold tracking-tight text-white md:text-4xl">
+          <h2 id="individual-quote-heading" className="text-3xl font-semibold tracking-tight text-[var(--studio-text)] md:text-4xl">
             {copy.heading}
           </h2>
-          <p className="mt-6 text-base leading-relaxed text-white/80 md:text-lg">{copy.body}</p>
+          <p className="mt-6 text-base leading-relaxed text-[var(--studio-muted)] md:text-lg">{copy.body}</p>
         </header>
 
         <article className="premium-card mx-auto mt-12 max-w-2xl rounded-2xl p-7 md:p-10">
@@ -111,7 +111,7 @@ export default function PricingModels() {
             </span>
             <ul className="space-y-3">
               {copy.points.map((point) => (
-                <li key={point} className="text-sm leading-relaxed text-white/85 md:text-base">
+                <li key={point} className="text-sm leading-relaxed text-[var(--studio-muted)] md:text-base">
                   {point}
                 </li>
               ))}
@@ -122,19 +122,19 @@ export default function PricingModels() {
         <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <a
             href="/kontakt"
-            className="premium-button inline-flex items-center gap-2 px-8 py-3.5 text-sm font-semibold text-white transition duration-200 hover:scale-[1.03] md:text-base"
+            className="premium-button inline-flex items-center gap-2 px-8 py-3.5 text-sm font-semibold text-[var(--studio-text)] transition duration-200 hover:scale-[1.03] md:text-base"
           >
             {copy.primaryCta}
             <ArrowRight className="h-4 w-4" aria-hidden />
           </a>
           <a
             href="/kontakt"
-            className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-8 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition duration-200 hover:border-blue-300/50 md:text-base"
+            className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-8 py-3.5 text-sm font-semibold text-[var(--studio-text)] backdrop-blur-sm transition duration-200 hover:border-blue-300/50 md:text-base"
           >
             {copy.secondaryCta}
           </a>
         </div>
-        <p className="mx-auto mt-6 max-w-2xl text-center text-xs leading-relaxed text-white/65 md:text-sm">{copy.note}</p>
+        <p className="mx-auto mt-6 max-w-2xl text-center text-xs leading-relaxed text-[var(--studio-muted)] md:text-sm">{copy.note}</p>
       </div>
     </section>
   );

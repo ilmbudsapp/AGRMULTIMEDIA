@@ -33,7 +33,7 @@ export default function EcommerceSite() {
               </Button>
             </Link>
             <div>
-              <p className="text-2xl font-bold text-gray-900 dark:text-white">
+              <p className="text-2xl font-bold text-gray-900 dark:text-[var(--studio-text)]">
 {currentLanguage === 'sr' ? 'E-commerce Sajt' : 
                  currentLanguage === 'en' ? 'E-commerce Site' :
                  currentLanguage === 'de' ? 'E-Commerce Website' : 
@@ -56,15 +56,15 @@ export default function EcommerceSite() {
         <div className="max-w-6xl mx-auto">
           {/* Project Meta */}
           <div className="flex flex-wrap items-center gap-4 mb-8">
-            <Badge className="bg-electric-blue text-white">
+            <Badge className="bg-electric-blue text-[var(--studio-text)]">
               {currentLanguage === 'sr' ? 'Web Dizajn' : 
                currentLanguage === 'en' ? 'Web Design' :
                currentLanguage === 'de' ? 'Web-Design' : 
                currentLanguage === 'sq' ? 'Dizajn Web' :
                'Web Dizajn'}
             </Badge>
-            <Badge className="bg-green-500 text-white">E-commerce</Badge>
-            <Badge className="bg-purple-500 text-white">
+            <Badge className="bg-green-500 text-[var(--studio-text)]">E-commerce</Badge>
+            <Badge className="bg-purple-500 text-[var(--studio-text)]">
               {currentLanguage === 'sr' ? 'Mobilno Optimizovan' : 
                currentLanguage === 'en' ? 'Mobile Optimized' :
                currentLanguage === 'de' ? 'Mobil Optimiert' : 
@@ -87,7 +87,7 @@ export default function EcommerceSite() {
           {/* Project Overview */}
           <div className="grid lg:grid-cols-3 gap-12 mb-16">
             <div className="lg:col-span-2">
-              <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+              <h1 className="text-3xl font-bold text-gray-900 dark:text-[var(--studio-text)] mb-6">
                 {currentLanguage === 'sr' ? 'Profesionalni E-commerce Sajt za Modernu Trgovinu' : 
                  currentLanguage === 'en' ? 'Professional E-commerce Site for Modern Commerce' :
                  currentLanguage === 'de' ? 'Professionelle E-Commerce-Website für modernen Handel' : 
@@ -315,7 +315,7 @@ export default function EcommerceSite() {
 
           {/* Features Section */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-[var(--studio-text)] mb-8 text-center">
               {currentLanguage === 'sr' ? 'Ključne Funkcije E-commerce Sajta' : 
                currentLanguage === 'en' ? 'Key E-commerce Features' :
                currentLanguage === 'de' ? 'Wichtige E-Commerce-Funktionen' : 
@@ -387,7 +387,7 @@ export default function EcommerceSite() {
           </div>
 
           {/* CTA Section */}
-          <div className="bg-gradient-to-r from-electric-blue to-purple-500 rounded-2xl p-8 text-white text-center">
+          <div className="bg-gradient-to-r from-electric-blue to-purple-500 rounded-2xl p-8 text-[var(--studio-text)] text-center">
             <h3 className="text-2xl font-bold mb-4">
               {currentLanguage === 'sr' ? 'Spremni za Vaš E-commerce Sajt?' : 
                currentLanguage === 'en' ? 'Ready for Your E-commerce Site?' :

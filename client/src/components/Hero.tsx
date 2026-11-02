@@ -1,32 +1,16 @@
 import { Link } from "wouter";
-import { useEffect, useRef } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getPremiumTranslations } from "@/lib/premiumI18n";
 import { ROUTES } from "@/lib/siteRoutes";
 
-const PROMO_VIDEO = encodeURI("/Werbung Finito FULL HD COMPRESSO.mp4");
-const VIDEO_POSTER = "/hero-workspace.webp";
+const HERO_IMAGE = "/hero-cream-studio.jpg";
 
 const SECONDARY_BTN =
-  "inline-flex min-h-[48px] items-center justify-center rounded-full border border-white/20 bg-transparent px-8 py-3 text-[0.9375rem] font-medium text-white/90 transition hover:border-teal-500/40 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500/50";
+  "inline-flex min-h-[48px] items-center justify-center rounded-full border border-[var(--studio-border)] bg-[var(--studio-surface)] px-8 py-3 text-[0.9375rem] font-medium text-[var(--studio-text)] transition hover:border-[var(--studio-accent)] hover:text-[var(--studio-accent)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--studio-accent)]/40";
 
 export default function Hero() {
   const { currentLanguage } = useLanguage();
   const premium = getPremiumTranslations(currentLanguage);
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const v = videoRef.current;
-    if (!v) return;
-    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const sync = () => {
-      if (mq.matches) v.pause();
-      else void v.play().catch(() => {});
-    };
-    sync();
-    mq.addEventListener("change", sync);
-    return () => mq.removeEventListener("change", sync);
-  }, []);
 
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ block: "start", behavior: "auto" });
@@ -35,54 +19,39 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="premium-section relative scroll-mt-20 border-b border-[#2a2a30] pt-[5.25rem] pb-20 md:pt-32 md:pb-28"
+      className="premium-section relative overflow-hidden scroll-mt-20 border-b border-[var(--studio-border)] pt-[5.25rem] pb-16 md:pt-24 md:pb-24 lg:pb-28"
     >
-      <img
-        src={VIDEO_POSTER}
-        alt="AGR Multimedia — Webdesign Studio Geislingen an der Steige, Baden-Württemberg"
+      <div
+        className="pointer-events-none absolute inset-x-0 top-0 h-[28rem] bg-[radial-gradient(ellipse_at_top,rgba(196,165,116,0.22),transparent_62%)]"
         aria-hidden
-        loading="eager"
-        fetchPriority="high"
-        decoding="async"
-        className="sr-only"
       />
-      <video
-        ref={videoRef}
-        className="absolute inset-0 h-full w-full object-cover opacity-20"
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-        poster={VIDEO_POSTER}
+      <div
+        className="pointer-events-none absolute -left-24 bottom-10 h-80 w-80 rounded-full bg-[radial-gradient(circle,rgba(139,94,52,0.1),transparent_70%)]"
         aria-hidden
-      >
-        <source src={PROMO_VIDEO} type="video/mp4" />
-      </video>
-      <div className="absolute inset-0 bg-gradient-to-b from-[#07070b]/90 via-[#07070b]/95 to-[#07070b]" aria-hidden />
+      />
 
-      <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:px-8">
-        <div className="order-1 text-center lg:text-left animate-fade-in-up">
+      <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[0.92fr_1.08fr] lg:gap-14 lg:px-8">
+        <div className="order-2 text-center lg:order-1 lg:text-left animate-fade-in-up">
           <p className="studio-eyebrow">{premium.hero.eyebrow}</p>
           <h1
             id="hero-h1"
-            className="font-display mt-5 scroll-mt-24 text-[2rem] font-semibold leading-[1.12] tracking-tight text-white sm:text-[2.35rem] md:text-[2.75rem] lg:text-[3rem]"
+            className="font-display mt-5 scroll-mt-24 text-[2.45rem] font-medium leading-[1.06] tracking-tight text-[var(--studio-text)] sm:text-[3.1rem] md:text-[3.55rem] lg:text-[4rem]"
             data-testid="hero-title"
           >
             {premium.hero.heading}
           </h1>
           <p
-            className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-white/75 md:text-lg lg:mx-0"
+            className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-[var(--studio-muted)] md:text-lg lg:mx-0"
             data-testid="hero-subtitle"
           >
             {premium.hero.subheading}
           </p>
 
           {premium.hero.bullets.length > 0 ? (
-            <ul className="mx-auto mt-8 max-w-xl space-y-2 text-left text-sm text-white/70 lg:mx-0 md:text-base">
+            <ul className="mx-auto mt-8 max-w-xl space-y-2 text-left text-sm text-[var(--studio-muted)] lg:mx-0 md:text-base">
               {premium.hero.bullets.map((item) => (
                 <li key={item} className="flex gap-2.5">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-teal-500" aria-hidden />
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--studio-accent)]" aria-hidden />
                   <span>{item}</span>
                 </li>
               ))}
@@ -93,7 +62,7 @@ export default function Hero() {
             <button
               type="button"
               onClick={() => scrollTo("contact")}
-              className="premium-cta min-h-[48px] rounded-full px-8 py-3 text-[0.9375rem] font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500/60"
+              className="premium-cta min-h-[48px] rounded-full px-8 py-3 text-[0.9375rem] font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--studio-accent)]/50"
               data-testid="hero-cta-primary"
             >
               {premium.hero.primaryCta}
@@ -102,7 +71,9 @@ export default function Hero() {
               {premium.hero.secondaryCta}
             </Link>
           </div>
-          <p className="mt-4 text-center text-xs text-white/55 sm:text-sm lg:text-left">{premium.hero.ctaMeta}</p>
+          <p className="mt-4 text-center text-xs text-[var(--studio-muted)] sm:text-sm lg:text-left">
+            {premium.hero.ctaMeta}
+          </p>
 
           {premium.hero.trustPills.length > 0 ? (
             <div
@@ -118,32 +89,32 @@ export default function Hero() {
           ) : null}
         </div>
 
-        <figure className="order-2 w-full max-w-lg justify-self-center lg:max-w-none lg:justify-self-end animate-fade-in-up animate-fade-in-up-delay-2">
-          <div className="premium-card relative overflow-hidden">
-            <div className="relative aspect-video w-full">
-              <video
-                className="absolute inset-0 h-full w-full object-cover"
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="metadata"
-                poster={VIDEO_POSTER}
-                aria-label={
+        <figure className="order-1 w-full justify-self-center lg:order-2 lg:justify-self-end animate-fade-in-up animate-fade-in-up-delay-2">
+          <div className="relative">
+            <div
+              className="absolute -inset-3 rounded-[28px] border border-[rgba(139,94,52,0.22)] sm:-inset-4"
+              aria-hidden
+            />
+            <div className="premium-card relative overflow-hidden p-1.5 sm:p-2">
+              <img
+                src={HERO_IMAGE}
+                alt={
                   currentLanguage === "de"
-                    ? "Showreel — AGR Multimedia Webdesign Geislingen an der Steige"
-                    : "Showreel — AGR Multimedia web design Geislingen an der Steige"
+                    ? "AGR Multimedia — Premium Webdesign-Studio in Geislingen an der Steige"
+                    : "AGR Multimedia — premium web design studio in Geislingen an der Steige"
                 }
-              >
-                <source src={PROMO_VIDEO} type="video/mp4" />
-              </video>
-              <div className="absolute inset-0 bg-gradient-to-t from-[#07070b]/70 to-transparent" />
+                width={1600}
+                height={900}
+                className="aspect-[16/10] w-full rounded-[16px] object-cover"
+                fetchPriority="high"
+                decoding="async"
+              />
             </div>
           </div>
-          <figcaption className="mt-3 text-center text-xs text-white/45 lg:text-right">
+          <figcaption className="mt-4 text-center text-xs tracking-wide text-[var(--studio-muted)] lg:text-right">
             {currentLanguage === "de"
-              ? "Showreel — Webdesign & Multimedia aus Geislingen an der Steige"
-              : "Showreel — web design & multimedia from Geislingen an der Steige"}
+              ? "Studioatmosphäre — Webdesign & Multimedia aus Geislingen an der Steige"
+              : "Studio atmosphere — web design & multimedia from Geislingen an der Steige"}
           </figcaption>
         </figure>
       </div>

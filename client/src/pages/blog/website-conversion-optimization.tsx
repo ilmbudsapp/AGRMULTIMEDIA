@@ -30,7 +30,7 @@ export default function WebsiteConversionOptimization() {
               </Button>
             </Link>
             <div>
-              <p className="text-2xl font-bold text-gray-900 dark:text-white">
+              <p className="text-2xl font-bold text-gray-900 dark:text-[var(--studio-text)]">
                 {t.blogPost?.conversion?.title || "Website Conversion Optimization"}
               </p>
               <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -46,7 +46,7 @@ export default function WebsiteConversionOptimization() {
         <div className="max-w-4xl mx-auto">
           {/* Article Meta */}
           <div className="flex flex-wrap items-center gap-4 mb-8">
-            <Badge className="bg-purple-500 text-white">
+            <Badge className="bg-purple-500 text-[var(--studio-text)]">
               {t.blogPost?.conversion?.category || "Website Optimization"}
             </Badge>
             <div className="flex items-center gap-2 text-gray-600">
@@ -74,7 +74,7 @@ export default function WebsiteConversionOptimization() {
 
           {/* Article Content */}
           <article className="prose prose-lg max-w-none">
-            <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
+            <h1 className="text-4xl font-bold text-gray-900 dark:text-[var(--studio-text)] mb-6">
               {t.blogPost?.conversion?.title || "The Ultimate Guide to Website Conversion Optimization"}
             </h1>
 
@@ -124,7 +124,7 @@ export default function WebsiteConversionOptimization() {
               </Card>
             </div>
 
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mt-12 mb-6">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-[var(--studio-text)] mt-12 mb-6">
               {t.blogPost?.conversion?.practicalSteps?.title || "Practical Optimization Steps"}
             </h2>
 
@@ -183,7 +183,7 @@ export default function WebsiteConversionOptimization() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-electric-blue to-purple-500 rounded-2xl p-8 text-white my-12">
+            <div className="bg-gradient-to-r from-electric-blue to-purple-500 rounded-2xl p-8 text-[var(--studio-text)] my-12">
               <h3 className="text-2xl font-bold mb-4">
                 {t.blogPost?.conversion?.cta?.title || "Ready to Boost Your Conversions?"}
               </h3>

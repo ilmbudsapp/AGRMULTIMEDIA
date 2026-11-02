@@ -190,8 +190,8 @@ export default function SeoAeoEnhancement({ variant, className = "" }: Props) {
   return (
     <aside className={sectionClass} aria-label="SEO und AEO Ergänzungen">
       <section className="mb-12">
-        <h2 className="text-xl font-semibold text-white md:text-2xl">{c.takeawaysTitle}</h2>
-        <ul className="mt-4 space-y-2 text-white/75">
+        <h2 className="text-xl font-semibold text-[var(--studio-text)] md:text-2xl">{c.takeawaysTitle}</h2>
+        <ul className="mt-4 space-y-2 text-[var(--studio-muted)]">
           {c.takeaways.map((t) => (
             <li key={t.slice(0, 30)} className="flex gap-2">
               <span className="text-blue-400">·</span>
@@ -202,41 +202,41 @@ export default function SeoAeoEnhancement({ variant, className = "" }: Props) {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-xl font-semibold text-white md:text-2xl">{c.qaTitle}</h2>
+        <h2 className="text-xl font-semibold text-[var(--studio-text)] md:text-2xl">{c.qaTitle}</h2>
         <dl className="mt-4 space-y-4">
           {c.qa.map((item) => (
             <div key={item.q}>
-              <dt className="font-medium text-white">{item.q}</dt>
-              <dd className="mt-1 text-sm leading-relaxed text-white/75 md:text-base">{item.a}</dd>
+              <dt className="font-medium text-[var(--studio-text)]">{item.q}</dt>
+              <dd className="mt-1 text-sm leading-relaxed text-[var(--studio-muted)] md:text-base">{item.a}</dd>
             </div>
           ))}
         </dl>
       </section>
 
       <section className="mb-12">
-        <h2 className="text-xl font-semibold text-white md:text-2xl">{c.defsTitle}</h2>
+        <h2 className="text-xl font-semibold text-[var(--studio-text)] md:text-2xl">{c.defsTitle}</h2>
         <dl className="mt-4 space-y-3">
           {c.defs.map((d) => (
             <div key={d.term}>
               <dt className="font-semibold text-blue-200">{d.term}</dt>
-              <dd className="mt-1 text-sm text-white/75 md:text-base">{d.def}</dd>
+              <dd className="mt-1 text-sm text-[var(--studio-muted)] md:text-base">{d.def}</dd>
             </div>
           ))}
         </dl>
       </section>
 
-      <p className="mb-8 text-sm leading-relaxed text-white/70 md:text-base">
+      <p className="mb-8 text-sm leading-relaxed text-[var(--studio-muted)] md:text-base">
         <strong>Datenpunkt:</strong> {c.stat}{" "}
-        <cite className="not-italic text-white/50">({c.statSource})</cite>
+        <cite className="not-italic text-[var(--studio-muted)]">({c.statSource})</cite>
       </p>
 
-      <blockquote className="mb-8 border-l-4 border-blue-400/60 pl-4 italic text-white/80">
+      <blockquote className="mb-8 border-l-4 border-blue-400/60 pl-4 italic text-[var(--studio-muted)]">
         „{c.quote}" — <cite>{c.quoteCite}</cite>
       </blockquote>
 
       <section className="mb-12">
-        <h2 className="text-lg font-semibold text-white">{c.tipsTitle}</h2>
-        <ul className="mt-3 space-y-2 text-white/75">
+        <h2 className="text-lg font-semibold text-[var(--studio-text)]">{c.tipsTitle}</h2>
+        <ul className="mt-3 space-y-2 text-[var(--studio-muted)]">
           {c.tips.map((t) => (
             <li key={t}>{t}</li>
           ))}
@@ -244,9 +244,9 @@ export default function SeoAeoEnhancement({ variant, className = "" }: Props) {
       </section>
 
       <section className="rounded-2xl border border-white/10 bg-white/[0.02] p-6">
-        <h2 className="text-xl font-semibold text-white">{c.conclusionTitle}</h2>
-        <p className="mt-3 leading-relaxed text-white/80">{c.conclusion}</p>
-        <p className="mt-2 text-xs text-white/50">
+        <h2 className="text-xl font-semibold text-[var(--studio-text)]">{c.conclusionTitle}</h2>
+        <p className="mt-3 leading-relaxed text-[var(--studio-muted)]">{c.conclusion}</p>
+        <p className="mt-2 text-xs text-[var(--studio-muted)]">
           Stand: <time dateTime="2026-08-05">5. August 2026</time>
         </p>
         <Link

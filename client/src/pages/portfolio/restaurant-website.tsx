@@ -33,7 +33,7 @@ export default function RestaurantWebsite() {
               </Button>
             </Link>
             <div>
-              <p className="text-2xl font-bold text-gray-900 dark:text-white">
+              <p className="text-2xl font-bold text-gray-900 dark:text-[var(--studio-text)]">
                 {currentLanguage === 'sr' ? 'Restoran Website' : 
                  currentLanguage === 'en' ? 'Restaurant Website' :
                  currentLanguage === 'de' ? 'Restaurant-Website' : 
@@ -57,21 +57,21 @@ export default function RestaurantWebsite() {
         <div className="max-w-6xl mx-auto">
           {/* Project Meta */}
           <div className="flex flex-wrap items-center gap-4 mb-8">
-            <Badge className="bg-orange-500 text-white">
+            <Badge className="bg-orange-500 text-[var(--studio-text)]">
               {currentLanguage === 'sr' ? 'Restoran' : 
                currentLanguage === 'en' ? 'Restaurant' :
                currentLanguage === 'de' ? 'Restaurant' : 
                currentLanguage === 'sq' ? 'Restorant' :
                'Restoran'}
             </Badge>
-            <Badge className="bg-amber-500 text-white">
+            <Badge className="bg-amber-500 text-[var(--studio-text)]">
               {currentLanguage === 'sr' ? 'Web Dizajn' : 
                currentLanguage === 'en' ? 'Web Design' :
                currentLanguage === 'de' ? 'Web-Design' : 
                currentLanguage === 'sq' ? 'Dizajn Web' :
                'Web Dizajn'}
             </Badge>
-            <Badge className="bg-green-500 text-white">
+            <Badge className="bg-green-500 text-[var(--studio-text)]">
               {currentLanguage === 'sr' ? 'Online Rezervacije' : 
                currentLanguage === 'en' ? 'Online Reservations' :
                currentLanguage === 'de' ? 'Online-Reservierungen' : 
@@ -94,7 +94,7 @@ export default function RestaurantWebsite() {
           {/* Project Overview */}
           <div className="grid lg:grid-cols-3 gap-12 mb-16">
             <div className="lg:col-span-2">
-              <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+              <h1 className="text-3xl font-bold text-gray-900 dark:text-[var(--studio-text)] mb-6">
                 {currentLanguage === 'sr' ? 'Moderni Website za Restorane i Ugostiteljske Objekte' : 
                  currentLanguage === 'en' ? 'Modern Websites for Restaurants and Hospitality' :
                  currentLanguage === 'de' ? 'Moderne Websites für Restaurants und Gastronomie' : 
@@ -328,7 +328,7 @@ export default function RestaurantWebsite() {
 
           {/* Restaurant Gallery */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-[var(--studio-text)] mb-8 text-center">
               {currentLanguage === 'sr' ? 'Restoran Ambijent & Jela' : 
                currentLanguage === 'en' ? 'Restaurant Ambiance & Dishes' :
                currentLanguage === 'de' ? 'Restaurant-Ambiente & Gerichte' : 
@@ -363,7 +363,7 @@ export default function RestaurantWebsite() {
 
           {/* Features Section */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-[var(--studio-text)] mb-8 text-center">
               {currentLanguage === 'sr' ? 'Šta Čini Dobar Restoran Website?' : 
                currentLanguage === 'en' ? 'What Makes a Good Restaurant Website?' :
                currentLanguage === 'de' ? 'Was macht eine gute Restaurant-Website aus?' : 
@@ -453,7 +453,7 @@ export default function RestaurantWebsite() {
           </div>
 
           {/* CTA Section */}
-          <div className="bg-gradient-to-r from-orange-500 to-amber-500 rounded-2xl p-8 text-white text-center">
+          <div className="bg-gradient-to-r from-orange-500 to-amber-500 rounded-2xl p-8 text-[var(--studio-text)] text-center">
             <h3 className="text-2xl font-bold mb-4">
               {currentLanguage === 'sr' ? 'Vaš Restoran Zaslužuje Odličan Website!' : 
                currentLanguage === 'en' ? 'Your Restaurant Deserves an Excellent Website!' :

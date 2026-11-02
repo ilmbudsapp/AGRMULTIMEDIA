@@ -166,16 +166,16 @@ export default function ProjectResults() {
   const copy = RESULTS_COPY[currentLanguage];
 
   return (
-    <section className="border-t border-[#2a2a30] bg-[#0c0c10] py-16 md:py-20" aria-labelledby="results-heading">
+    <section className="border-t border-[var(--studio-border)] bg-[#efe8db] py-16 md:py-20" aria-labelledby="results-heading">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 text-center">
           <h2
             id="results-heading"
-            className="font-display text-2xl font-semibold tracking-tight text-white md:text-3xl"
+            className="font-display text-2xl font-semibold tracking-tight text-[var(--studio-text)] md:text-3xl"
           >
             {copy.title}
           </h2>
-          <p className="mx-auto mt-4 max-w-3xl text-sm text-white/65 md:text-base">{copy.subtitle}</p>
+          <p className="mx-auto mt-4 max-w-3xl text-sm text-[var(--studio-muted)] md:text-base">{copy.subtitle}</p>
         </div>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -189,9 +189,9 @@ export default function ProjectResults() {
                   {result.icon}
                 </div>
                 <div className="flex-1">
-                  <div className="text-xl font-bold text-white md:text-2xl">{result.metric}</div>
-                  <p className="mt-2 text-sm leading-relaxed text-white/75 md:text-base">{result.description}</p>
-                  <p className="mt-3 text-xs text-white/50">{result.source}</p>
+                  <div className="text-xl font-bold text-[var(--studio-text)] md:text-2xl">{result.metric}</div>
+                  <p className="mt-2 text-sm leading-relaxed text-[var(--studio-muted)] md:text-base">{result.description}</p>
+                  <p className="mt-3 text-xs text-[var(--studio-muted)]">{result.source}</p>
                 </div>
               </div>
             </article>

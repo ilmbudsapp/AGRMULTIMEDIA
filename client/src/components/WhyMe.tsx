@@ -12,14 +12,14 @@ export default function WhyMe() {
   const { tSpec } = useLanguage();
 
   return (
-    <section id="why-me" className="scroll-mt-24 py-20 md:py-24 bg-[#08080c] border-t border-white/[0.06]">
+    <section id="why-me" className="scroll-mt-24 border-t border-[var(--studio-border)] bg-[var(--studio-bg)] py-20 md:py-24">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mb-12 md:mb-14">
-          <p className="text-xs font-medium uppercase tracking-[0.2em] text-white/40 mb-3">AGR Multimedia</p>
-          <h2 className="text-3xl md:text-4xl font-semibold text-white tracking-tight">
+          <p className="text-xs font-medium uppercase tracking-[0.2em] text-[var(--studio-muted)] mb-3">AGR Multimedia</p>
+          <h2 className="text-3xl md:text-4xl font-semibold text-[var(--studio-text)] tracking-tight">
             {tSpec.whyMe.heading}
           </h2>
-          <p className="text-white/55 text-sm md:text-base mt-4 leading-relaxed">
+          <p className="text-[var(--studio-muted)] text-sm md:text-base mt-4 leading-relaxed">
             {tSpec.whyMe.subtitle}
           </p>
         </div>
@@ -27,12 +27,12 @@ export default function WhyMe() {
           {benefits.map(({ key, icon: Icon }) => (
             <div
               key={key}
-              className="flex gap-4 rounded-xl border border-white/[0.08] bg-white/[0.02] p-5 md:p-6"
+              className="flex gap-4 rounded-xl border border-[var(--studio-border)] bg-white/[0.02] p-5 md:p-6"
             >
-              <div className="shrink-0 w-10 h-10 rounded-lg border border-white/10 flex items-center justify-center text-white/80">
+              <div className="shrink-0 w-10 h-10 rounded-lg border border-white/10 flex items-center justify-center text-[var(--studio-muted)]">
                 <Icon className="w-5 h-5" strokeWidth={1.5} />
               </div>
-              <p className="text-white/65 text-sm leading-relaxed pt-0.5">
+              <p className="text-[var(--studio-muted)] text-sm leading-relaxed pt-0.5">
                 {tSpec.whyMe[key]}
               </p>
             </div>

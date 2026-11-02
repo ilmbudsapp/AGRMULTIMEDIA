@@ -97,14 +97,14 @@ export default function HomeServices() {
   ];
 
   return (
-    <section id="services-preview" className="premium-section scroll-mt-24 border-t border-[#333333] py-20 md:py-24">
+    <section id="services-preview" className="premium-section scroll-mt-24 border-t border-[var(--studio-border)] py-20 md:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 max-w-3xl">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-blue-300/80">{copy.eyebrow}</p>
-          <h2 className="text-3xl font-semibold tracking-tight text-white md:text-4xl">
+          <h2 className="text-3xl font-semibold tracking-tight text-[var(--studio-text)] md:text-4xl">
             {copy.heading}
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-white/70">{copy.subtitle}</p>
+          <p className="mt-4 text-base leading-relaxed text-[var(--studio-muted)]">{copy.subtitle}</p>
         </div>
 
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -117,12 +117,12 @@ export default function HomeServices() {
                 className="premium-card premium-card-hover group flex min-h-[220px] flex-col p-6"
                 aria-label={`${item.title}: ${copy.details}`}
               >
-                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl border border-[#333333] text-blue-200">
+                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl border border-[var(--studio-border)] text-blue-200">
                   <ItemIcon className="h-5 w-5" strokeWidth={1.7} />
                 </div>
-                <h3 className="text-lg font-semibold tracking-tight text-white">{item.title}</h3>
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-white/70">{item.description}</p>
-                <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-blue-200 group-hover:text-white">
+                <h3 className="text-lg font-semibold tracking-tight text-[var(--studio-text)]">{item.title}</h3>
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-[var(--studio-muted)]">{item.description}</p>
+                <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-blue-200 group-hover:text-[var(--studio-accent)]">
                   {copy.details}
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </span>

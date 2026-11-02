@@ -29,7 +29,7 @@ export default function Navigation() {
   const mobileToggle = NAV_MOBILE_TOGGLE[lang] ?? NAV_MOBILE_TOGGLE.en;
 
   const linkClass =
-    "shrink-0 whitespace-nowrap text-[0.875rem] leading-none text-white/75 hover:text-blue-200 transition-colors lg:text-[0.9rem]";
+    "shrink-0 whitespace-nowrap text-[0.875rem] leading-none text-[var(--studio-muted)] hover:text-[var(--studio-accent)] transition-colors lg:text-[0.9rem]";
 
   const onHomeClick = (e: MouseEvent) => {
     if (location === "/") {
@@ -45,7 +45,7 @@ export default function Navigation() {
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-50 border-b border-[#333333] bg-[#0a0a0a]/85 backdrop-blur-xl"
+      className="fixed top-0 left-0 right-0 z-50 border-b border-[var(--studio-border)] bg-[#f7f2ea]/88 backdrop-blur-xl"
       aria-label={NAV_LANDMARK_LABEL[currentLanguage]}
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -63,7 +63,7 @@ export default function Navigation() {
                 <img
                   src="/agr-logo-white.png"
                   alt="AGR Multimedia"
-                  className="h-9 w-auto object-contain md:h-11"
+                  className="h-9 w-auto object-contain brightness-0 md:h-11"
                   fetchPriority="high"
                   decoding="async"
                 />
@@ -99,7 +99,7 @@ export default function Navigation() {
             <button
               type="button"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-1 text-white/90"
+              className="p-1 text-[var(--studio-text)]"
               data-testid="mobile-menu-toggle"
               aria-expanded={isMenuOpen}
               aria-controls="site-mobile-menu-panel"
@@ -113,7 +113,7 @@ export default function Navigation() {
 
       <div
         id="site-mobile-menu-panel"
-        className="border-t border-[#333333] bg-[#0a0a0a] md:hidden"
+        className="border-t border-[var(--studio-border)] bg-[#f7f2ea] md:hidden"
         data-testid="mobile-menu"
         role="region"
         aria-label={NAV_LANDMARK_LABEL[lang]}
@@ -124,7 +124,7 @@ export default function Navigation() {
             <Link
               key={item.id}
               href={item.href}
-              className="block w-full whitespace-nowrap py-3 text-[0.9375rem] text-white/85"
+              className="block w-full whitespace-nowrap py-3 text-[0.9375rem] text-[var(--studio-text)]"
               data-testid={`mobile-nav-${item.id}`}
               onClick={item.isHome ? onHomeClick : closeMenu}
             >
@@ -133,7 +133,7 @@ export default function Navigation() {
           ))}
           <Link
             href="/kontakt"
-            className="mt-3 block w-full rounded-full bg-white py-3 text-center text-[0.875rem] font-semibold text-[#0a0a0f]"
+            className="premium-cta mt-3 block w-full rounded-full py-3 text-center text-[0.875rem] font-semibold"
             data-testid="mobile-nav-contact"
             onClick={closeMenu}
           >

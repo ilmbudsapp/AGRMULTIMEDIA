@@ -79,22 +79,22 @@ export default function ReviewsSection({ standalonePage = false }: { standaloneP
       />
       <section
         id="bewertungen"
-        className={`premium-section scroll-mt-24 py-20 md:py-24 ${standalonePage ? "" : "border-t border-[#333333]"}`}
+        className={`premium-section scroll-mt-24 py-20 md:py-24 ${standalonePage ? "" : "border-t border-[var(--studio-border)]"}`}
         role="region"
         aria-label={ariaRegion}
       >
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           {!standalonePage ? (
             <header className="mx-auto max-w-3xl text-center">
-              <h2 id="bewertungen-heading" className="text-3xl font-semibold tracking-tight text-white md:text-4xl">
+              <h2 id="bewertungen-heading" className="text-3xl font-semibold tracking-tight text-[var(--studio-text)] md:text-4xl">
                 {title}
               </h2>
-              <p id="bewertungen-subheading" className="mt-3 text-base leading-relaxed text-white/65 md:text-lg">
+              <p id="bewertungen-subheading" className="mt-3 text-base leading-relaxed text-[var(--studio-muted)] md:text-lg">
                 {subtitle}
               </p>
             </header>
           ) : (
-            <p id="bewertungen-subheading" className="mx-auto max-w-3xl text-center text-base leading-relaxed text-white/65 md:text-lg">
+            <p id="bewertungen-subheading" className="mx-auto max-w-3xl text-center text-base leading-relaxed text-[var(--studio-muted)] md:text-lg">
               {subtitle}
             </p>
           )}
@@ -112,19 +112,19 @@ export default function ReviewsSection({ standalonePage = false }: { standaloneP
                   >
                     <GoogleLogoMark className="h-6 w-6 opacity-95 drop-shadow-sm" />
                   </div>
-                  <p className="grow pr-10 text-base leading-relaxed text-white/85 md:pr-12">
+                  <p className="grow pr-10 text-base leading-relaxed text-[var(--studio-muted)] md:pr-12">
                     &ldquo;{rev.text}&rdquo;
                   </p>
-                  <footer className="mt-5 border-t border-white/10 pt-4">
+                  <footer className="mt-5 border-t border-[var(--studio-border)] pt-4">
                     <div className="flex flex-wrap items-center justify-between gap-2">
                       <div className="flex min-w-0 flex-wrap items-center gap-2 gap-y-1">
                         <cite className="not-italic">
-                          <span className="font-semibold text-white">{rev.author}</span>
+                          <span className="font-semibold text-[var(--studio-text)]">{rev.author}</span>
                         </cite>
                         <span className="sr-only">{ratingScreenReader}</span>
                         <RatingStarsDecorative count={rev.rating} />
                       </div>
-                      <span className="shrink-0 text-xs uppercase tracking-[0.12em] text-white/45">
+                      <span className="shrink-0 text-xs uppercase tracking-[0.12em] text-[var(--studio-muted)]">
                         {platformGoogleMaps}
                       </span>
                     </div>

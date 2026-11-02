@@ -101,14 +101,14 @@ function ServiceFlipCard({
       >
         <div ref={innerRef} className="flip-card-inner relative h-full">
           <div className="flip-card-face flip-card-front glass-flip-front flex flex-col p-6 md:p-8">
-            <div className="w-12 h-12 rounded-xl bg-white/12 flex items-center justify-center mb-5 text-white shadow-inner border border-white/10">
+            <div className="w-12 h-12 rounded-xl bg-white/12 flex items-center justify-center mb-5 text-[var(--studio-text)] shadow-inner border border-white/10">
               <Icon className="w-6 h-6" />
             </div>
-            <h3 className="text-xl font-semibold text-white mb-3 tracking-tight">{data.title}</h3>
+            <h3 className="text-xl font-semibold text-[var(--studio-text)] mb-3 tracking-tight">{data.title}</h3>
             <p className="text-gray-300/90 text-sm leading-relaxed flex-1">{data.description}</p>
             <Link
               href={detailHref}
-              className="mt-5 inline-flex text-sm font-bold text-violet-200 hover:text-white transition-colors"
+              className="mt-5 inline-flex text-sm font-bold text-violet-200 hover:text-[var(--studio-accent)] transition-colors"
               onClick={(e) => e.stopPropagation()}
             >
               {flipDetailsLink} →
@@ -117,7 +117,7 @@ function ServiceFlipCard({
 
           <div className="flip-card-face flip-card-back glass-flip-back flex flex-col items-center justify-center text-center p-6 md:p-8">
             <p className="text-xs uppercase tracking-[0.2em] text-violet-200/80 mb-2">{flipBackLabel}</p>
-            <h3 className="text-2xl md:text-3xl font-extrabold text-white mb-4 tracking-tight leading-snug">{data.flipHeadline}</h3>
+            <h3 className="text-2xl md:text-3xl font-extrabold text-[var(--studio-text)] mb-4 tracking-tight leading-snug">{data.flipHeadline}</h3>
             <p className="text-sm text-gray-200/90 mb-8 max-w-[240px] leading-relaxed">{data.flipIncludes}</p>
             <Link
               href="/kontakt"
@@ -167,14 +167,14 @@ export default function ServicesPreview() {
   const sp = tSpec.servicesPreview;
 
   return (
-    <section ref={sectionRef} id="services-preview" className="py-20 md:py-28 bg-[#08080f]">
+    <section ref={sectionRef} id="services-preview" className="py-20 md:py-28 bg-[var(--studio-bg)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Link
           href="/services"
           className="services-preview-reveal block text-center mb-14 md:mb-16 hover:opacity-95 transition-opacity"
           aria-label="Go to services"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">{sp.title}</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-[var(--studio-text)] mb-4 tracking-tight">{sp.title}</h2>
           <p className="text-gray-400 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">{sp.subtitle}</p>
         </Link>
 

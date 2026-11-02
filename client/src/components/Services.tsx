@@ -7,7 +7,7 @@ export default function Services() {
 
   const services = [
     {
-      icon: <Code className="text-white w-6 h-6" />,
+      icon: <Code className="text-[var(--studio-text)] w-6 h-6" />,
       title: t.services.items.webDesign.title,
       description: t.services.items.webDesign.description,
       features: t.services.items.webDesign.features,
@@ -15,7 +15,7 @@ export default function Services() {
       link: "/webdesign-seo",
     },
     {
-      icon: <Palette className="text-white w-6 h-6" />,
+      icon: <Palette className="text-[var(--studio-text)] w-6 h-6" />,
       title: t.services.items.graphicDesign.title,
       description: t.services.items.graphicDesign.description,
       features: t.services.items.graphicDesign.features,
@@ -23,7 +23,7 @@ export default function Services() {
       link: "/graphic-design",
     },
     {
-      icon: <Megaphone className="text-white w-6 h-6" />,
+      icon: <Megaphone className="text-[var(--studio-text)] w-6 h-6" />,
       title: t.services.items.digitalMarketing.title,
       description: t.services.items.digitalMarketing.description,
       features: t.services.items.digitalMarketing.features,
@@ -31,7 +31,7 @@ export default function Services() {
       link: "/digital-marketing",
     },
     {
-      icon: <Camera className="text-white w-6 h-6" />,
+      icon: <Camera className="text-[var(--studio-text)] w-6 h-6" />,
       title: t.services.items.photography.title,
       description: t.services.items.photography.description,
       features: t.services.items.photography.features,
@@ -39,7 +39,7 @@ export default function Services() {
       link: "/photography",
     },
     {
-      icon: <Settings className="text-white w-6 h-6" />,
+      icon: <Settings className="text-[var(--studio-text)] w-6 h-6" />,
       title: t.services.items.consulting.title,
       description: t.services.items.consulting.description,
       features: t.services.items.consulting.features,

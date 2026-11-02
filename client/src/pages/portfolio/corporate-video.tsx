@@ -33,7 +33,7 @@ export default function CorporateVideo() {
               </Button>
             </Link>
             <div>
-              <p className="text-2xl font-bold text-gray-900 dark:text-white">
+              <p className="text-2xl font-bold text-gray-900 dark:text-[var(--studio-text)]">
                 {currentLanguage === 'sr' ? 'Korporativni Video' : 
                  currentLanguage === 'en' ? 'Corporate Video' :
                  currentLanguage === 'de' ? 'Unternehmensvideo' : 
@@ -57,21 +57,21 @@ export default function CorporateVideo() {
         <div className="max-w-6xl mx-auto">
           {/* Project Meta */}
           <div className="flex flex-wrap items-center gap-4 mb-8">
-            <Badge className="bg-blue-500 text-white">
+            <Badge className="bg-blue-500 text-[var(--studio-text)]">
               {currentLanguage === 'sr' ? 'Video Produkcija' : 
                currentLanguage === 'en' ? 'Video Production' :
                currentLanguage === 'de' ? 'Videoproduktion' : 
                currentLanguage === 'sq' ? 'Prodhimi i Videos' :
                'Video Produkcija'}
             </Badge>
-            <Badge className="bg-purple-500 text-white">
+            <Badge className="bg-purple-500 text-[var(--studio-text)]">
               {currentLanguage === 'sr' ? 'Korporativni' : 
                currentLanguage === 'en' ? 'Corporate' :
                currentLanguage === 'de' ? 'Unternehmen' : 
                currentLanguage === 'sq' ? 'Korporativ' :
                'Korporativni'}
             </Badge>
-            <Badge className="bg-green-500 text-white">
+            <Badge className="bg-green-500 text-[var(--studio-text)]">
               {currentLanguage === 'sr' ? 'Motion Graphics' : 
                currentLanguage === 'en' ? 'Motion Graphics' :
                currentLanguage === 'de' ? 'Motion Graphics' : 
@@ -91,7 +91,7 @@ export default function CorporateVideo() {
             />
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
               <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                <Play className="w-10 h-10 text-white ml-2" />
+                <Play className="w-10 h-10 text-[var(--studio-text)] ml-2" />
               </div>
             </div>
           </div>
@@ -99,7 +99,7 @@ export default function CorporateVideo() {
           {/* Project Overview */}
           <div className="grid lg:grid-cols-3 gap-12 mb-16">
             <div className="lg:col-span-2">
-              <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+              <h1 className="text-3xl font-bold text-gray-900 dark:text-[var(--studio-text)] mb-6">
                 {currentLanguage === 'sr' ? 'Profesionalna Korporativna Video Produkcija' : 
                  currentLanguage === 'en' ? 'Professional Corporate Video Production' :
                  currentLanguage === 'de' ? 'Professionelle Unternehmensvideoproduktion' : 
@@ -341,7 +341,7 @@ export default function CorporateVideo() {
 
           {/* Video Editing Showcase */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-[var(--studio-text)] mb-8 text-center">
               {currentLanguage === 'sr' ? 'Video Editing Process - Adobe Premiere Pro & After Effects' : 
                currentLanguage === 'en' ? 'Video Editing Process - Adobe Premiere Pro & After Effects' :
                currentLanguage === 'de' ? 'Video-Bearbeitungsprozess - Adobe Premiere Pro & After Effects' : 
@@ -369,7 +369,7 @@ export default function CorporateVideo() {
 
           {/* Production Process */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-[var(--studio-text)] mb-8 text-center">
               {currentLanguage === 'sr' ? 'Video Produkcioni Proces' : 
                currentLanguage === 'en' ? 'Video Production Process' :
                currentLanguage === 'de' ? 'Videoproduktionsprozess' : 
@@ -462,7 +462,7 @@ export default function CorporateVideo() {
 
           {/* Software Expertise */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-[var(--studio-text)] mb-8 text-center">
               {currentLanguage === 'sr' ? 'Professional Software Expertise' : 
                currentLanguage === 'en' ? 'Professional Software Expertise' :
                currentLanguage === 'de' ? 'Professionelle Software-Expertise' : 
@@ -473,7 +473,7 @@ export default function CorporateVideo() {
             <div className="grid md:grid-cols-3 gap-8">
               <Card className="p-8 text-center bg-gradient-to-br from-purple-50 to-blue-50">
                 <div className="w-20 h-20 bg-purple-500 rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                  <Monitor className="w-10 h-10 text-white" />
+                  <Monitor className="w-10 h-10 text-[var(--studio-text)]" />
                 </div>
                 <h3 className="text-xl font-semibold mb-4">Adobe Premiere Pro</h3>
                 <p className="text-gray-600 mb-4">
@@ -493,7 +493,7 @@ export default function CorporateVideo() {
 
               <Card className="p-8 text-center bg-gradient-to-br from-blue-50 to-green-50">
                 <div className="w-20 h-20 bg-blue-500 rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                  <Layers className="w-10 h-10 text-white" />
+                  <Layers className="w-10 h-10 text-[var(--studio-text)]" />
                 </div>
                 <h3 className="text-xl font-semibold mb-4">Adobe After Effects</h3>
                 <p className="text-gray-600 mb-4">
@@ -529,7 +529,7 @@ export default function CorporateVideo() {
 
               <Card className="p-8 text-center bg-gradient-to-br from-green-50 to-orange-50">
                 <div className="w-20 h-20 bg-green-500 rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                  <Video className="w-10 h-10 text-white" />
+                  <Video className="w-10 h-10 text-[var(--studio-text)]" />
                 </div>
                 <h3 className="text-xl font-semibold mb-4">Adobe Audition</h3>
                 <p className="text-gray-600 mb-4">
@@ -566,7 +566,7 @@ export default function CorporateVideo() {
           </div>
 
           {/* CTA Section */}
-          <div className="bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl p-8 text-white text-center">
+          <div className="bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl p-8 text-[var(--studio-text)] text-center">
             <h3 className="text-2xl font-bold mb-4">
               {currentLanguage === 'sr' ? 'Spremni za Profesionalni Korporativni Video?' : 
                currentLanguage === 'en' ? 'Ready for Professional Corporate Video?' :

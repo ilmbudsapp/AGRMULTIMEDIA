@@ -29,17 +29,17 @@ export default function AboutHome() {
   const moreAboutLabel = `${tSpec.homeAbout.moreAbout} (about page)`;
 
   return (
-    <section id="about" className="premium-section scroll-mt-24 border-t border-[#333333] py-20 md:py-28">
+    <section id="about" className="premium-section scroll-mt-24 border-t border-[var(--studio-border)] py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <article className="min-w-0">
             <p className="mb-3 text-xs font-medium uppercase tracking-[0.2em] text-blue-300/80">{tSpec.nav.about}</p>
-            <h2 className="text-3xl font-semibold tracking-tight text-white md:text-4xl">{t.about.title}</h2>
-            <p className="mt-4 leading-relaxed text-white/75">{tSpec.homeAbout.lead}</p>
-            <p className="mt-4 text-sm leading-relaxed text-white/70 md:text-base">{t.about.storyP1}</p>
+            <h2 className="text-3xl font-semibold tracking-tight text-[var(--studio-text)] md:text-4xl">{t.about.title}</h2>
+            <p className="mt-4 leading-relaxed text-[var(--studio-muted)]">{tSpec.homeAbout.lead}</p>
+            <p className="mt-4 text-sm leading-relaxed text-[var(--studio-muted)] md:text-base">{t.about.storyP1}</p>
 
-            <figure className="mt-8 overflow-hidden rounded-xl border border-white/10 bg-[#0a0a12] p-4 text-left">
-              <figcaption className="mb-2 text-xs font-medium text-white/80 md:text-sm">{cap}</figcaption>
+            <figure className="mt-8 overflow-hidden rounded-xl border border-white/10 bg-[var(--studio-surface)] p-4 text-left">
+              <figcaption className="mb-2 text-xs font-medium text-[var(--studio-muted)] md:text-sm">{cap}</figcaption>
               <pre className="max-h-48 overflow-x-auto overflow-y-auto text-[0.7rem] leading-relaxed text-emerald-100/95 md:text-xs">
                 <code>{ABOUT_JSON_LD_SNIPPET}</code>
               </pre>
@@ -67,7 +67,7 @@ export default function AboutHome() {
                   decoding="async"
                 />
               </picture>
-              <figcaption className="border-t border-white/10 bg-black/25 px-3 py-2 text-center text-xs text-white/65">
+              <figcaption className="border-t border-white/10 bg-black/25 px-3 py-2 text-center text-xs text-[var(--studio-muted)]">
                 {brandCap}
               </figcaption>
             </figure>

@@ -92,12 +92,12 @@ export default function ServicePricingPackages() {
   const cta = currentLanguage === "en" ? "Request a free quote" : "Kostenloses Angebot anfragen";
 
   return (
-    <section className="border-t border-[#333333] py-16 md:py-24" aria-labelledby="pricing-packages-heading">
+    <section className="border-t border-[var(--studio-border)] py-16 md:py-24" aria-labelledby="pricing-packages-heading">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <h2 id="pricing-packages-heading" className="text-center text-2xl font-semibold text-white md:text-3xl">
+        <h2 id="pricing-packages-heading" className="text-center text-2xl font-semibold text-[var(--studio-text)] md:text-3xl">
           {heading}
         </h2>
-        <p className="mx-auto mt-4 max-w-2xl text-center text-sm text-white/70 md:text-base">{note}</p>
+        <p className="mx-auto mt-4 max-w-2xl text-center text-sm text-[var(--studio-muted)] md:text-base">{note}</p>
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {packages.map((pkg) => (
@@ -109,7 +109,7 @@ export default function ServicePricingPackages() {
                   : "border-white/10 bg-white/[0.02]"
               }`}
             >
-              <h3 className="text-lg font-semibold text-white">{pkg.name}</h3>
+              <h3 className="text-lg font-semibold text-[var(--studio-text)]">{pkg.name}</h3>
               <p className="mt-2 text-2xl font-bold text-blue-200">{pkg.priceFrom}</p>
               <ul className="mt-5 space-y-2 text-sm text-gray-300">
                 {pkg.features.map((f) => (

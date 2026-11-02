@@ -30,7 +30,7 @@ export default function VideoMarketingPower() {
               </Button>
             </Link>
             <div>
-              <p className="text-2xl font-bold text-gray-900 dark:text-white">
+              <p className="text-2xl font-bold text-gray-900 dark:text-[var(--studio-text)]">
                 {t.blogPost?.video?.title || "The Power of Video Marketing"}
               </p>
               <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -46,7 +46,7 @@ export default function VideoMarketingPower() {
         <div className="max-w-4xl mx-auto">
           {/* Article Meta */}
           <div className="flex flex-wrap items-center gap-4 mb-8">
-            <Badge className="bg-red-500 text-white">
+            <Badge className="bg-red-500 text-[var(--studio-text)]">
               {t.blogPost?.video?.category || "Video Marketing"}
             </Badge>
             <div className="flex items-center gap-2 text-gray-600">
@@ -70,7 +70,7 @@ export default function VideoMarketingPower() {
             />
             <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
               <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                <Play className="w-8 h-8 text-white ml-1" />
+                <Play className="w-8 h-8 text-[var(--studio-text)] ml-1" />
               </div>
             </div>
           </div>
@@ -79,7 +79,7 @@ export default function VideoMarketingPower() {
 
           {/* Article Content */}
           <article className="prose prose-lg max-w-none">
-            <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
+            <h1 className="text-4xl font-bold text-gray-900 dark:text-[var(--studio-text)] mb-6">
               {t.blogPost?.video?.title || "The Power of Video Marketing: Engaging Your Audience in 2024"}
             </h1>
 
@@ -129,7 +129,7 @@ export default function VideoMarketingPower() {
               </Card>
             </div>
 
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mt-12 mb-6">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-[var(--studio-text)] mt-12 mb-6">
               {t.blogPost?.video?.types?.title || "Types of Video Content That Convert"}
             </h2>
 
@@ -208,7 +208,7 @@ export default function VideoMarketingPower() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-red-500 to-purple-500 rounded-2xl p-8 text-white my-12">
+            <div className="bg-gradient-to-r from-red-500 to-purple-500 rounded-2xl p-8 text-[var(--studio-text)] my-12">
               <h3 className="text-2xl font-bold mb-4">
                 {t.blogPost?.video?.cta?.title || "Ready to Harness Video Marketing?"}
               </h3>

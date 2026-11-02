@@ -113,13 +113,13 @@ function JumpCard({
   return (
     <div
       ref={ref}
-      className={`rounded-2xl border border-white/[0.08] bg-[#0a1018]/95 p-5 ring-1 ${accentRing} animate-[fade-in-up_0.6s_ease-out_both]`}
+      className={`rounded-2xl border border-[var(--studio-border)] bg-[#0a1018]/95 p-5 ring-1 ${accentRing} animate-[fade-in-up_0.6s_ease-out_both]`}
     >
-      <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-white/45">{title}</p>
+      <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--studio-muted)]">{title}</p>
       <p className="mt-2 font-mono text-3xl font-bold tabular-nums text-emerald-300">
         +{animatedDelta}
       </p>
-      <p className="mt-2 font-mono text-sm tabular-nums text-white/65">
+      <p className="mt-2 font-mono text-sm tabular-nums text-[var(--studio-muted)]">
         {from} → {to}
       </p>
     </div>
@@ -165,7 +165,7 @@ export default function OptimizationExcellence() {
     <section
       id="optimization-excellence"
       aria-labelledby="optimization-excellence-heading"
-      className="premium-section relative scroll-mt-24 overflow-hidden border-t border-[#333333] bg-[#07070b] py-20 md:py-28"
+      className="premium-section relative scroll-mt-24 overflow-hidden border-t border-[var(--studio-border)] bg-[var(--studio-bg)] py-20 md:py-28"
     >
       <style>{`
         @keyframes fade-in-up {
@@ -195,56 +195,56 @@ export default function OptimizationExcellence() {
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-400/90">{t.eyebrow}</p>
         <h2
           id="optimization-excellence-heading"
-          className="mt-3 max-w-3xl text-2xl font-semibold tracking-tight text-white sm:text-3xl md:text-[2rem]"
+          className="mt-3 max-w-3xl text-2xl font-semibold tracking-tight text-[var(--studio-text)] sm:text-3xl md:text-[2rem]"
         >
           {t.title}
         </h2>
-        <p className="mt-5 max-w-3xl text-base leading-relaxed text-white/75">{t.lead}</p>
-        <p className="mt-4 max-w-3xl text-base leading-relaxed text-white/75">{t.why2026}</p>
-        <p className="mt-4 max-w-3xl text-base leading-relaxed text-white/80">{t.platforms}</p>
+        <p className="mt-5 max-w-3xl text-base leading-relaxed text-[var(--studio-muted)]">{t.lead}</p>
+        <p className="mt-4 max-w-3xl text-base leading-relaxed text-[var(--studio-muted)]">{t.why2026}</p>
+        <p className="mt-4 max-w-3xl text-base leading-relaxed text-[var(--studio-muted)]">{t.platforms}</p>
 
         <div className="mt-12 grid gap-5 md:grid-cols-3">
           {pillars.map((p) => (
             <article
               key={p.label}
-              className={`relative rounded-2xl border border-white/[0.08] bg-gradient-to-br ${p.accent} p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.04)] backdrop-blur-sm`}
+              className={`relative rounded-2xl border border-[var(--studio-border)] bg-gradient-to-br ${p.accent} p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.04)] backdrop-blur-sm`}
             >
               <div
                 className={`mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-black/40 ring-1 ${p.ring}`}
               >
-                <p.icon className="h-6 w-6 text-white" aria-hidden />
+                <p.icon className="h-6 w-6 text-[var(--studio-text)]" aria-hidden />
                 <span className="sr-only">{p.label}</span>
               </div>
-              <h3 className="text-lg font-semibold text-white">{p.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-white/70">{p.body}</p>
+              <h3 className="text-lg font-semibold text-[var(--studio-text)]">{p.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-[var(--studio-muted)]">{p.body}</p>
             </article>
           ))}
         </div>
 
         <div
           id="agr-multimedia-benchmark"
-          className="mt-14 rounded-2xl border border-indigo-500/35 bg-gradient-to-br from-indigo-950/50 via-[#0a0e18] to-[#07070b] p-6 shadow-[0_0_48px_rgba(99,102,241,0.14)] md:p-8"
+          className="mt-14 rounded-2xl border border-indigo-500/35 bg-gradient-to-br from-indigo-950/50 via-[#0a0e18] to-[var(--studio-bg)] p-6 shadow-[0_0_48px_rgba(99,102,241,0.14)] md:p-8"
         >
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-indigo-300/90">{t.benchmarkEyebrow}</p>
-          <h3 className="mt-3 text-xl font-semibold tracking-tight text-white md:text-2xl">{t.benchmarkTitle}</h3>
-          <p className="mt-5 max-w-3xl text-base leading-relaxed text-white/80">{t.benchmarkTrust}</p>
+          <h3 className="mt-3 text-xl font-semibold tracking-tight text-[var(--studio-text)] md:text-2xl">{t.benchmarkTitle}</h3>
+          <p className="mt-5 max-w-3xl text-base leading-relaxed text-[var(--studio-muted)]">{t.benchmarkTrust}</p>
           <p className="mt-5 rounded-xl border border-indigo-400/25 bg-indigo-500/[0.12] px-4 py-3 text-sm leading-relaxed text-indigo-50/95">
             {t.benchmarkSaasNote}
           </p>
-          <p className="mt-3 text-xs text-white/45">{t.benchmarkReportMeta}</p>
-          <div className="mt-5 overflow-hidden rounded-xl border border-white/[0.08] bg-white/[0.02] shadow-inner">
+          <p className="mt-3 text-xs text-[var(--studio-muted)]">{t.benchmarkReportMeta}</p>
+          <div className="mt-5 overflow-hidden rounded-xl border border-[var(--studio-border)] bg-white/[0.02] shadow-inner">
             <AuditScreenshotPicture
               stem={AGR_BENCHMARK_STEM}
               alt={t.benchmarkImgAlt}
               className="h-auto w-full object-cover object-top"
             />
           </div>
-          <div className="mt-6 overflow-x-auto rounded-xl border border-white/[0.08]">
+          <div className="mt-6 overflow-x-auto rounded-xl border border-[var(--studio-border)]">
             <table className="w-full min-w-[280px] border-collapse text-left text-sm">
               <caption className="sr-only">{t.benchmarkTableCaption}</caption>
               <thead>
                 <tr className="border-b border-white/[0.1] bg-white/[0.03]">
-                  <th scope="col" className="px-4 py-3 font-semibold text-white/90">
+                  <th scope="col" className="px-4 py-3 font-semibold text-[var(--studio-text)]">
                     {t.colArea}
                   </th>
                   <th scope="col" className="px-4 py-3 font-semibold text-indigo-200">
@@ -252,27 +252,27 @@ export default function OptimizationExcellence() {
                   </th>
                 </tr>
               </thead>
-              <tbody className="text-white/85">
-                <tr className="border-b border-white/[0.06]">
+              <tbody className="text-[var(--studio-muted)]">
+                <tr className="border-b border-[var(--studio-border)]">
                   <td className="px-4 py-3">{t.rowSeo}</td>
                   <td className="px-4 py-3 font-mono text-lg font-semibold tabular-nums text-emerald-300">
                     {SCORES_AGR.seo}
                   </td>
                 </tr>
-                <tr className="border-b border-white/[0.06]">
+                <tr className="border-b border-[var(--studio-border)]">
                   <td className="px-4 py-3">{t.rowAeo}</td>
                   <td className="px-4 py-3 font-mono text-lg font-semibold tabular-nums text-emerald-300">
                     {SCORES_AGR.aeo}
                   </td>
                 </tr>
-                <tr className="border-b border-white/[0.06]">
+                <tr className="border-b border-[var(--studio-border)]">
                   <td className="px-4 py-3">{t.rowGeo}</td>
                   <td className="px-4 py-3 font-mono text-lg font-semibold tabular-nums text-emerald-300">
                     {SCORES_AGR.geo}
                   </td>
                 </tr>
                 <tr className="bg-indigo-500/10">
-                  <td className="px-4 py-3 font-semibold text-white">{t.rowOverall}</td>
+                  <td className="px-4 py-3 font-semibold text-[var(--studio-text)]">{t.rowOverall}</td>
                   <td className="px-4 py-3 font-mono text-xl font-bold tabular-nums text-indigo-100">
                     {SCORES_AGR.overall} — Grade A
                   </td>
@@ -286,8 +286,8 @@ export default function OptimizationExcellence() {
           <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="text-sm font-medium text-emerald-300/95">{t.tableCaption}</p>
-              <p className="mt-1 text-xs text-white/45">{t.gradeLine}</p>
-              <p className="mt-2 text-xs font-medium text-white/55">
+              <p className="mt-1 text-xs text-[var(--studio-muted)]">{t.gradeLine}</p>
+              <p className="mt-2 text-xs font-medium text-[var(--studio-muted)]">
                 <span className="text-emerald-400/90">{t.caseSite}</span>
               </p>
             </div>
@@ -296,12 +296,12 @@ export default function OptimizationExcellence() {
             </span>
           </div>
 
-          <div className="mt-6 overflow-x-auto rounded-xl border border-white/[0.08]">
+          <div className="mt-6 overflow-x-auto rounded-xl border border-[var(--studio-border)]">
             <table className="w-full min-w-[280px] border-collapse text-left text-sm">
               <caption className="sr-only">{t.tableCaption}</caption>
               <thead>
                 <tr className="border-b border-white/[0.1] bg-white/[0.03]">
-                  <th scope="col" className="px-4 py-3 font-semibold text-white/90">
+                  <th scope="col" className="px-4 py-3 font-semibold text-[var(--studio-text)]">
                     {t.colArea}
                   </th>
                   <th scope="col" className="px-4 py-3 font-semibold text-emerald-200">
@@ -309,27 +309,27 @@ export default function OptimizationExcellence() {
                   </th>
                 </tr>
               </thead>
-              <tbody className="text-white/85">
-                <tr className="border-b border-white/[0.06]">
+              <tbody className="text-[var(--studio-muted)]">
+                <tr className="border-b border-[var(--studio-border)]">
                   <td className="px-4 py-3">{t.rowSeo}</td>
                   <td className="px-4 py-3 font-mono text-lg font-semibold tabular-nums text-emerald-300">
                     {SCORES_AFTER.seo}
                   </td>
                 </tr>
-                <tr className="border-b border-white/[0.06]">
+                <tr className="border-b border-[var(--studio-border)]">
                   <td className="px-4 py-3">{t.rowAeo}</td>
                   <td className="px-4 py-3 font-mono text-lg font-semibold tabular-nums text-emerald-300">
                     {SCORES_AFTER.aeo}
                   </td>
                 </tr>
-                <tr className="border-b border-white/[0.06]">
+                <tr className="border-b border-[var(--studio-border)]">
                   <td className="px-4 py-3">{t.rowGeo}</td>
                   <td className="px-4 py-3 font-mono text-lg font-semibold tabular-nums text-emerald-300">
                     {SCORES_AFTER.geo}
                   </td>
                 </tr>
                 <tr className="bg-emerald-500/10">
-                  <td className="px-4 py-3 font-semibold text-white">{t.rowOverall}</td>
+                  <td className="px-4 py-3 font-semibold text-[var(--studio-text)]">{t.rowOverall}</td>
                   <td className="px-4 py-3 font-mono text-xl font-bold tabular-nums text-emerald-200">
                     {SCORES_AFTER.overall}
                   </td>
@@ -340,14 +340,14 @@ export default function OptimizationExcellence() {
         </div>
 
         <div className="mt-14">
-          <h3 className="text-xl font-semibold text-white">{t.caseTitle}</h3>
-          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-white/75">{t.caseLead}</p>
+          <h3 className="text-xl font-semibold text-[var(--studio-text)]">{t.caseTitle}</h3>
+          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-[var(--studio-muted)]">{t.caseLead}</p>
 
           <div className="mt-6 grid gap-4 md:grid-cols-2">
             <figure className="overflow-hidden rounded-2xl border border-red-500/40 bg-gradient-to-b from-red-950/35 to-[#0a0a0f] shadow-[0_0_40px_rgba(239,68,68,0.08)]">
               <figcaption className="flex flex-wrap items-center justify-between gap-2 border-b border-red-500/30 bg-red-950/40 px-4 py-2.5">
                 <span className="text-xs font-semibold uppercase tracking-wide text-red-100">{t.beforeLabel}</span>
-                <span className="rounded-full border border-red-400/50 bg-red-600/90 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white shadow-sm">
+                <span className="rounded-full border border-red-400/50 bg-red-600/90 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-[var(--studio-text)] shadow-sm">
                   {t.beforeBadge}
                 </span>
               </figcaption>
@@ -355,17 +355,17 @@ export default function OptimizationExcellence() {
                 <AuditScreenshotPicture
                   stem={FIXBIKE_IMG.beforeStem}
                   alt={t.imgAltBefore}
-                  className="h-auto w-full rounded-lg border border-white/[0.06] object-cover object-top shadow-inner"
+                  className="h-auto w-full rounded-lg border border-[var(--studio-border)] object-cover object-top shadow-inner"
                 />
                 <p className="mt-2 text-center font-mono text-[11px] text-red-200/90">{t.statsBeforeSummary}</p>
-                <p className="text-center text-[11px] text-white/40">{t.beforeDate}</p>
+                <p className="text-center text-[11px] text-[var(--studio-muted)]">{t.beforeDate}</p>
               </div>
             </figure>
 
             <figure className="overflow-hidden rounded-2xl border border-emerald-500/45 bg-gradient-to-b from-emerald-950/45 to-[#0a0a0f] shadow-[0_0_48px_rgba(52,211,153,0.12)]">
               <figcaption className="flex flex-wrap items-center justify-between gap-2 border-b border-emerald-500/30 bg-emerald-950/35 px-4 py-2.5">
                 <span className="text-xs font-semibold uppercase tracking-wide text-emerald-100">{t.afterLabel}</span>
-                <span className="rounded-full border border-emerald-400/55 bg-emerald-600/95 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white shadow-sm">
+                <span className="rounded-full border border-emerald-400/55 bg-emerald-600/95 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-[var(--studio-text)] shadow-sm">
                   {t.afterBadge}
                 </span>
               </figcaption>
@@ -373,18 +373,18 @@ export default function OptimizationExcellence() {
                 <AuditScreenshotPicture
                   stem={FIXBIKE_IMG.afterStem}
                   alt={t.imgAltAfter}
-                  className="h-auto w-full rounded-lg border border-white/[0.06] object-cover object-top shadow-inner"
+                  className="h-auto w-full rounded-lg border border-[var(--studio-border)] object-cover object-top shadow-inner"
                 />
                 <p className="mt-2 text-center font-mono text-[11px] text-emerald-200/95">{t.statsAfterSummary}</p>
-                <p className="text-center text-[11px] text-white/40">{t.afterDate}</p>
+                <p className="text-center text-[11px] text-[var(--studio-muted)]">{t.afterDate}</p>
               </div>
             </figure>
           </div>
 
-          <p className="mt-8 max-w-3xl text-base leading-relaxed text-white/85">{t.caseNarrative}</p>
+          <p className="mt-8 max-w-3xl text-base leading-relaxed text-[var(--studio-muted)]">{t.caseNarrative}</p>
 
           <div className="mt-8">
-            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-white/55">{t.jumpTitle}</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[var(--studio-muted)]">{t.jumpTitle}</p>
             <div className="mt-4 grid gap-4 sm:grid-cols-3">
               <JumpCard title={t.rowGeo} delta={66} from={24} to={90} accent="geo" />
               <JumpCard title={t.rowAeo} delta={54} from={31} to={85} accent="aeo" />

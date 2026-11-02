@@ -14,7 +14,7 @@ function FooterLogo({ className }: { className: string }) {
   return (
     <picture>
       <source srcSet={LOGO_WEBP} type="image/webp" />
-      <img src={LOGO_PNG} alt="AGR Multimedia" className={className} loading="lazy" decoding="async" />
+      <img src={LOGO_PNG} alt="AGR Multimedia" className={`${className} brightness-0`} loading="lazy" decoding="async" />
     </picture>
   );
 }
@@ -82,7 +82,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#0a0a0a] border-t border-[#333333] text-white py-16">
+    <footer className="border-t border-[var(--studio-border)] bg-[#efe6d8] py-16 text-[var(--studio-text)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div data-testid="footer-brand">
@@ -91,7 +91,7 @@ export default function Footer() {
                 <button
                   type="button"
                   onClick={() => scrollToSection("hero-h1")}
-                  className="block w-fit rounded-sm outline-offset-4 transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white/40"
+                  className="block w-fit rounded-sm outline-offset-4 transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--studio-accent)]"
                   aria-label={tSpec.nav.home}
                 >
                   <FooterLogo className="h-10 w-auto md:h-11" />
@@ -99,36 +99,36 @@ export default function Footer() {
               ) : (
                 <Link
                   href="/"
-                  className="inline-block w-fit rounded-sm outline-offset-4 transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white/40"
+                  className="inline-block w-fit rounded-sm outline-offset-4 transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--studio-accent)]"
                   aria-label={tSpec.nav.home}
                 >
                   <FooterLogo className="h-10 w-auto md:h-11" />
                 </Link>
               )}
             </div>
-            <p className="text-gray-400 mb-6 text-sm">{t.footer.brand}</p>
+            <p className="mb-6 text-sm text-[var(--studio-muted)]">{t.footer.brand}</p>
             <div className="flex flex-wrap gap-3">
-              <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2" aria-label="Facebook">
+              <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer" className="text-[var(--studio-muted)] hover:text-[var(--studio-accent)] transition-colors flex items-center gap-2" aria-label="Facebook">
                 <Facebook className="w-4 h-4" />
                 <span className="text-sm">Facebook</span>
               </a>
-              <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2" aria-label="Instagram">
+              <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="text-[var(--studio-muted)] hover:text-[var(--studio-accent)] transition-colors flex items-center gap-2" aria-label="Instagram">
                 <Instagram className="w-4 h-4" />
                 <span className="text-sm">Instagram</span>
               </a>
-              <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2" aria-label="LinkedIn">
+              <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="text-[var(--studio-muted)] hover:text-[var(--studio-accent)] transition-colors flex items-center gap-2" aria-label="LinkedIn">
                 <Linkedin className="w-4 h-4" />
                 <span className="text-sm">LinkedIn</span>
               </a>
-              <a href={YOUTUBE_URL} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2" aria-label="YouTube">
+              <a href={YOUTUBE_URL} target="_blank" rel="noopener noreferrer" className="text-[var(--studio-muted)] hover:text-[var(--studio-accent)] transition-colors flex items-center gap-2" aria-label="YouTube">
                 <Youtube className="w-4 h-4" />
                 <span className="text-sm">YouTube</span>
               </a>
-              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2" aria-label="WhatsApp">
+              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="text-[var(--studio-muted)] hover:text-[var(--studio-accent)] transition-colors flex items-center gap-2" aria-label="WhatsApp">
                 <MessageCircle className="w-4 h-4" />
                 <span className="text-sm">WhatsApp</span>
               </a>
-              <a href={EMAIL_LINK} className="text-gray-400 hover:text-white transition-colors flex items-center gap-2" aria-label="Email">
+              <a href={EMAIL_LINK} className="text-[var(--studio-muted)] hover:text-[var(--studio-accent)] transition-colors flex items-center gap-2" aria-label="Email">
                 <MailIcon className="w-4 h-4" />
                 <span className="text-sm">Email</span>
               </a>
@@ -136,11 +136,11 @@ export default function Footer() {
           </div>
 
           <div data-testid="footer-services">
-            <h4 className="text-lg font-semibold mb-6 text-white">{t.footer.services}</h4>
+            <h4 className="mb-6 font-display text-lg font-semibold text-[var(--studio-text)]">{t.footer.services}</h4>
             <ul className="space-y-3">
               {services.map((s) => (
                 <li key={s.href}>
-                  <Link href={s.href} className="text-gray-400 hover:text-white transition-colors duration-300 text-left block">
+                  <Link href={s.href} className="text-[var(--studio-muted)] hover:text-[var(--studio-accent)] transition-colors duration-300 text-left block">
                     {s.label}
                   </Link>
                 </li>
@@ -149,17 +149,17 @@ export default function Footer() {
           </div>
 
             <div data-testid="footer-company">
-              <h4 className="text-lg font-semibold mb-6 text-white">{t.footer.company}</h4>
+              <h4 className="mb-6 font-display text-lg font-semibold text-[var(--studio-text)]">{t.footer.company}</h4>
               <ul className="space-y-3">
                 {mainNavLinks.map((link) => (
                   <li key={link.href}>
-                    <Link href={link.href} className="text-gray-400 hover:text-white transition-colors duration-300 block">
+                    <Link href={link.href} className="text-[var(--studio-muted)] hover:text-[var(--studio-accent)] transition-colors duration-300 block">
                       {link.label}
                     </Link>
                   </li>
                 ))}
                 <li>
-                  <Link href="/about" className="text-gray-400 hover:text-white transition-colors duration-300 block">
+                  <Link href="/about" className="text-[var(--studio-muted)] hover:text-[var(--studio-accent)] transition-colors duration-300 block">
                     {tSpec.nav.about}
                   </Link>
                 </li>
@@ -167,18 +167,18 @@ export default function Footer() {
             </div>
 
           <div data-testid="footer-contact">
-            <h4 className="text-lg font-semibold mb-6 text-white">{t.footer.contact}</h4>
+            <h4 className="mb-6 font-display text-lg font-semibold text-[var(--studio-text)]">{t.footer.contact}</h4>
             <ul className="space-y-3">
-              <li className="text-gray-400 flex items-center gap-2">
-                <Phone className="w-4 h-4 shrink-0 text-gray-500" aria-hidden />
-                <a href={`tel:${PHONE_TEL}`} className="hover:text-white transition-colors">{PHONE_DISPLAY}</a>
+              <li className="flex items-center gap-2 text-[var(--studio-muted)]">
+                <Phone className="h-4 w-4 shrink-0" aria-hidden />
+                <a href={`tel:${PHONE_TEL}`} className="transition-colors hover:text-[var(--studio-accent)]">{PHONE_DISPLAY}</a>
               </li>
-              <li className="text-gray-400 flex items-center gap-2">
-                <MailIcon className="w-4 h-4 shrink-0 text-gray-500" aria-hidden />
-                <a href="mailto:agron6922@gmail.com" className="hover:text-white transition-colors">agron6922@gmail.com</a>
+              <li className="flex items-center gap-2 text-[var(--studio-muted)]">
+                <MailIcon className="h-4 w-4 shrink-0" aria-hidden />
+                <a href="mailto:agron6922@gmail.com" className="transition-colors hover:text-[var(--studio-accent)]">agron6922@gmail.com</a>
               </li>
-              <li className="text-gray-400 flex items-center gap-2">
-                <MapPin className="w-4 h-4 shrink-0 text-gray-500" aria-hidden />
+              <li className="flex items-center gap-2 text-[var(--studio-muted)]">
+                <MapPin className="h-4 w-4 shrink-0" aria-hidden />
                 {t.footer.location}
               </li>
             </ul>
@@ -189,16 +189,16 @@ export default function Footer() {
           <FooterLegalBlock />
         </div>
 
-        <div className="border-t border-white/10 pt-8" data-testid="footer-bottom">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-500 text-sm">{t.footer.copyright}</p>
+        <div className="border-t border-[var(--studio-border)] pt-8" data-testid="footer-bottom">
+          <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
+            <p className="text-sm text-[var(--studio-muted)]">{t.footer.copyright}</p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/privacy-policy" className="text-gray-500 hover:text-white text-sm transition-colors">
+              <Link href="/privacy-policy" className="text-sm text-[var(--studio-muted)] transition-colors hover:text-[var(--studio-accent)]">
                 {premium.legal.datenschutz}
               </Link>
-              <Link href="/terms" className="text-gray-500 hover:text-white text-sm transition-colors">{t.footer.terms}</Link>
-              <Link href="/cookies" className="text-gray-500 hover:text-white text-sm transition-colors">{t.footer.cookies}</Link>
-              <Link href="/impresum" className="text-gray-500 hover:text-white text-sm transition-colors">{premium.legal.impressum}</Link>
+              <Link href="/terms" className="text-sm text-[var(--studio-muted)] transition-colors hover:text-[var(--studio-accent)]">{t.footer.terms}</Link>
+              <Link href="/cookies" className="text-sm text-[var(--studio-muted)] transition-colors hover:text-[var(--studio-accent)]">{t.footer.cookies}</Link>
+              <Link href="/impresum" className="text-sm text-[var(--studio-muted)] transition-colors hover:text-[var(--studio-accent)]">{premium.legal.impressum}</Link>
             </div>
           </div>
         </div>

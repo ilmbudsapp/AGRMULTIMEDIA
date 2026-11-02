@@ -163,7 +163,7 @@ export default function HeroMagneticMorphHeading({
         ref={h1Ref}
         id="magneticHero"
         className={cn(
-          "hero-h1 hero-title text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.15] tracking-tight text-white",
+          "hero-h1 hero-title text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.15] tracking-tight text-[var(--studio-text)]",
           className,
         )}
         style={{

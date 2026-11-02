@@ -30,7 +30,7 @@ function renderDescriptionWithLinks(text: string) {
           href={part}
           target="_blank"
           rel="noopener noreferrer"
-          className="underline decoration-white/30 underline-offset-4 transition hover:text-white"
+          className="underline decoration-white/30 underline-offset-4 transition hover:text-[var(--studio-accent)]"
         >
           {part}
         </a>
@@ -54,17 +54,17 @@ export default function CaseStudyThearRealm() {
       aria-labelledby="case-studio-heading"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <h2 id="case-studio-heading" className="text-3xl font-semibold tracking-tight text-white md:text-4xl">
+        <h2 id="case-studio-heading" className="text-3xl font-semibold tracking-tight text-[var(--studio-text)] md:text-4xl">
           {t.caseStudioHeading}
         </h2>
-        <p className="mt-4 max-w-3xl text-base leading-relaxed text-white/75 md:text-lg">{t.materialsIntro}</p>
+        <p className="mt-4 max-w-3xl text-base leading-relaxed text-[var(--studio-muted)] md:text-lg">{t.materialsIntro}</p>
 
         <div className="mt-12 space-y-8">
-          <h3 className="text-sm font-semibold uppercase tracking-[0.12em] text-white/70">{t.websitesHeading}</h3>
+          <h3 className="text-sm font-semibold uppercase tracking-[0.12em] text-[var(--studio-muted)]">{t.websitesHeading}</h3>
 
-          <article className="rounded-[12px] border border-[#333333] bg-white/[0.02] p-6 shadow-[0_8px_40px_rgba(0,0,0,0.25)] backdrop-blur-sm md:p-8">
-            <h4 className="text-xl font-semibold text-white md:text-2xl">{t.websiteProjects.first.title}</h4>
-            <p className="mt-4 max-w-4xl text-base leading-relaxed text-white/75">
+          <article className="rounded-[12px] border border-[var(--studio-border)] bg-white/[0.02] p-6 shadow-[0_8px_40px_rgba(0,0,0,0.25)] backdrop-blur-sm md:p-8">
+            <h4 className="text-xl font-semibold text-[var(--studio-text)] md:text-2xl">{t.websiteProjects.first.title}</h4>
+            <p className="mt-4 max-w-4xl text-base leading-relaxed text-[var(--studio-muted)]">
               {renderDescriptionWithLinks(t.websiteProjects.first.description)}
             </p>
             <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -90,9 +90,9 @@ export default function CaseStudyThearRealm() {
             </a>
           </article>
 
-          <article className="rounded-[12px] border border-[#333333] bg-white/[0.02] p-6 shadow-[0_8px_40px_rgba(0,0,0,0.25)] backdrop-blur-sm md:p-8">
-            <h4 className="text-xl font-semibold text-white md:text-2xl">{t.websiteProjects.second.title}</h4>
-            <p className="mt-4 max-w-4xl text-base leading-relaxed text-white/75">
+          <article className="rounded-[12px] border border-[var(--studio-border)] bg-white/[0.02] p-6 shadow-[0_8px_40px_rgba(0,0,0,0.25)] backdrop-blur-sm md:p-8">
+            <h4 className="text-xl font-semibold text-[var(--studio-text)] md:text-2xl">{t.websiteProjects.second.title}</h4>
+            <p className="mt-4 max-w-4xl text-base leading-relaxed text-[var(--studio-muted)]">
               {renderDescriptionWithLinks(t.websiteProjects.second.description)}
             </p>
             <figure className="premium-card mt-6 overflow-hidden p-0">
@@ -117,20 +117,20 @@ export default function CaseStudyThearRealm() {
 
         {/* PROJEKAT ZA THEAR REALM TV */}
         <div
-          className="mt-12 rounded-[12px] border border-[#333333] bg-white/[0.02] p-6 shadow-[0_8px_40px_rgba(0,0,0,0.25)] backdrop-blur-sm md:p-10"
+          className="mt-12 rounded-[12px] border border-[var(--studio-border)] bg-white/[0.02] p-6 shadow-[0_8px_40px_rgba(0,0,0,0.25)] backdrop-blur-sm md:p-10"
           aria-labelledby="thear-realm-project-heading"
         >
           <h3
             id="thear-realm-project-heading"
-            className="text-center text-lg font-bold uppercase tracking-[0.14em] text-white md:text-left md:text-xl lg:text-2xl"
+            className="text-center text-lg font-bold uppercase tracking-[0.14em] text-[var(--studio-text)] md:text-left md:text-xl lg:text-2xl"
           >
             {tr.innerSectionHeading}
           </h3>
-          <p className="mt-6 text-base leading-relaxed text-white/75">{tr.intro}</p>
+          <p className="mt-6 text-base leading-relaxed text-[var(--studio-muted)]">{tr.intro}</p>
 
           <a
             href="#thear-realm-tv-panel"
-            className="premium-card premium-card-hover mt-10 block rounded-[12px] px-5 py-4 text-center text-sm font-semibold uppercase tracking-[0.12em] text-blue-100 transition hover:text-white md:text-base"
+            className="premium-card premium-card-hover mt-10 block rounded-[12px] px-5 py-4 text-center text-sm font-semibold uppercase tracking-[0.12em] text-blue-100 transition hover:text-[var(--studio-accent)] md:text-base"
           >
             {tr.clientLinkLabel}
           </a>
@@ -150,7 +150,7 @@ export default function CaseStudyThearRealm() {
               ))}
             </div>
 
-            <p className="text-base leading-relaxed text-white/85 md:text-lg">{tr.toolsClosing}</p>
+            <p className="text-base leading-relaxed text-[var(--studio-muted)] md:text-lg">{tr.toolsClosing}</p>
 
             <div className="premium-card overflow-hidden p-0">
               <video
@@ -168,17 +168,17 @@ export default function CaseStudyThearRealm() {
 
         {/* COMING SOON Intro video — Case Studio 1 */}
         <div
-          className="mt-14 rounded-[12px] border border-[#333333] bg-white/[0.02] p-6 shadow-[0_8px_40px_rgba(0,0,0,0.25)] backdrop-blur-sm md:p-10"
+          className="mt-14 rounded-[12px] border border-[var(--studio-border)] bg-white/[0.02] p-6 shadow-[0_8px_40px_rgba(0,0,0,0.25)] backdrop-blur-sm md:p-10"
           aria-labelledby="coming-soon-project-heading"
         >
           <h3
             id="coming-soon-project-heading"
-            className="text-center text-lg font-bold uppercase tracking-[0.14em] text-white md:text-left md:text-xl lg:text-2xl"
+            className="text-center text-lg font-bold uppercase tracking-[0.14em] text-[var(--studio-text)] md:text-left md:text-xl lg:text-2xl"
           >
             {cs.innerSectionHeading}
           </h3>
-          <p className="mt-6 text-base leading-relaxed text-white/75">{cs.intro}</p>
-          <p className="mt-6 text-base font-medium text-white/90">{cs.materialsCaption}</p>
+          <p className="mt-6 text-base leading-relaxed text-[var(--studio-muted)]">{cs.intro}</p>
+          <p className="mt-6 text-base font-medium text-[var(--studio-text)]">{cs.materialsCaption}</p>
 
           <div id="coming-soon-studio-panel" className="mt-10 space-y-10 scroll-mt-28">
             <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3">
@@ -195,7 +195,7 @@ export default function CaseStudyThearRealm() {
               ))}
             </div>
 
-            <p className="text-base leading-relaxed text-white/85 md:text-lg">{cs.toolsClosing}</p>
+            <p className="text-base leading-relaxed text-[var(--studio-muted)] md:text-lg">{cs.toolsClosing}</p>
 
             <div className="premium-card overflow-hidden p-0">
               <video
@@ -213,17 +213,17 @@ export default function CaseStudyThearRealm() {
 
         {/* KERIM FOUNDATION — Case Studio 2 */}
         <div
-          className="mt-14 rounded-[12px] border border-[#333333] bg-white/[0.02] p-6 shadow-[0_8px_40px_rgba(0,0,0,0.25)] backdrop-blur-sm md:p-10"
+          className="mt-14 rounded-[12px] border border-[var(--studio-border)] bg-white/[0.02] p-6 shadow-[0_8px_40px_rgba(0,0,0,0.25)] backdrop-blur-sm md:p-10"
           aria-labelledby="kerim-foundation-heading"
         >
           <h3
             id="kerim-foundation-heading"
-            className="text-center text-lg font-bold uppercase tracking-[0.14em] text-white md:text-left md:text-xl lg:text-2xl"
+            className="text-center text-lg font-bold uppercase tracking-[0.14em] text-[var(--studio-text)] md:text-left md:text-xl lg:text-2xl"
           >
             {kf.innerSectionHeading}
           </h3>
-          <p className="mt-6 text-base leading-relaxed text-white/75">{kf.intro}</p>
-          <p className="mt-6 text-base font-medium text-white/90">{kf.materialsCaption}</p>
+          <p className="mt-6 text-base leading-relaxed text-[var(--studio-muted)]">{kf.intro}</p>
+          <p className="mt-6 text-base font-medium text-[var(--studio-text)]">{kf.materialsCaption}</p>
 
           <div id="kerim-foundation-panel" className="mt-10 space-y-10 scroll-mt-28">
             <figure className="premium-card mx-auto max-w-lg overflow-hidden p-4 md:p-6">
@@ -236,9 +236,9 @@ export default function CaseStudyThearRealm() {
               />
             </figure>
 
-            <p className="text-sm leading-relaxed text-white/65 md:text-base">{kf.logoFontsNote}</p>
+            <p className="text-sm leading-relaxed text-[var(--studio-muted)] md:text-base">{kf.logoFontsNote}</p>
 
-            <p className="text-base leading-relaxed text-white/85 md:text-lg">{kf.toolsClosing}</p>
+            <p className="text-base leading-relaxed text-[var(--studio-muted)] md:text-lg">{kf.toolsClosing}</p>
 
             <div className="premium-card overflow-hidden p-0">
               <video
@@ -254,7 +254,7 @@ export default function CaseStudyThearRealm() {
           </div>
         </div>
 
-        <p className="mt-14 text-center text-lg font-medium text-white md:text-xl">{t.finalCta}</p>
+        <p className="mt-14 text-center text-lg font-medium text-[var(--studio-text)] md:text-xl">{t.finalCta}</p>
       </div>
     </section>
   );

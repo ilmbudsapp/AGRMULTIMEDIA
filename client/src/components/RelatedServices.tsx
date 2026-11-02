@@ -231,11 +231,11 @@ export default function RelatedServices({ variant }: RelatedServicesProps) {
   const copy = RELATED_SERVICES[variant][currentLanguage];
 
   return (
-    <section className="border-t border-[#2a2a30] py-16 md:py-20" aria-labelledby="related-services-heading">
+    <section className="border-t border-[var(--studio-border)] py-16 md:py-20" aria-labelledby="related-services-heading">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <h2
           id="related-services-heading"
-          className="font-display mb-12 text-center text-2xl font-semibold tracking-tight text-white md:text-3xl"
+          className="font-display mb-12 text-center text-2xl font-semibold tracking-tight text-[var(--studio-text)] md:text-3xl"
         >
           {copy.title}
         </h2>
@@ -244,10 +244,10 @@ export default function RelatedServices({ variant }: RelatedServicesProps) {
           {copy.services.map((service) => (
             <Link key={service.href} href={service.href}>
               <article className="premium-card premium-card-hover group flex h-full flex-col rounded-xl p-6">
-                <h3 className="text-lg font-semibold text-white group-hover:text-blue-400 transition-colors">
+                <h3 className="text-lg font-semibold text-[var(--studio-text)] group-hover:text-blue-400 transition-colors">
                   {service.title}
                 </h3>
-                <p className="mt-3 flex-1 text-sm leading-relaxed text-white/65">{service.description}</p>
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-[var(--studio-muted)]">{service.description}</p>
                 <div className="mt-4 flex items-center gap-2 text-sm font-medium text-blue-400 group-hover:gap-3 transition-all">
                   <span>Mehr erfahren</span>
                   <ArrowRight className="h-4 w-4" />

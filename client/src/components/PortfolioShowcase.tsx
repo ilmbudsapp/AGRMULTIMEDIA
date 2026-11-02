@@ -32,7 +32,7 @@ const LIVE_BTN =
   "inline-flex items-center gap-2 rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-[#0a0a0f] transition hover:bg-white/90";
 
 const SECONDARY_BTN =
-  "inline-flex items-center gap-2 rounded-lg border border-white/20 px-5 py-2.5 text-sm font-medium text-white/90 transition hover:border-white/40 hover:text-white";
+  "inline-flex items-center gap-2 rounded-lg border border-white/20 px-5 py-2.5 text-sm font-medium text-[var(--studio-text)] transition hover:border-white/40 hover:text-[var(--studio-accent)]";
 
 function ProjectCard({
   image,
@@ -75,7 +75,7 @@ function ProjectCard({
   };
 
   return (
-    <article className="flex flex-col overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.02] shadow-[0_12px_48px_rgba(0,0,0,0.35)]">
+    <article className="flex flex-col overflow-hidden rounded-2xl border border-[var(--studio-border)] bg-white/[0.02] shadow-[0_12px_48px_rgba(0,0,0,0.35)]">
       <div
         className={`relative overflow-hidden bg-black/40 ${video ? "aspect-video" : "aspect-[16/10]"}`}
         onMouseEnter={video ? playOnHover : undefined}
@@ -118,8 +118,8 @@ function ProjectCard({
         ) : null}
       </div>
       <div className="flex flex-1 flex-col p-6 md:p-8">
-        <h3 className="text-xl font-semibold text-white md:text-2xl">{title}</h3>
-        <p className="mt-4 flex-1 text-sm leading-relaxed text-white/70 md:text-base">{description}</p>
+        <h3 className="text-xl font-semibold text-[var(--studio-text)] md:text-2xl">{title}</h3>
+        <p className="mt-4 flex-1 text-sm leading-relaxed text-[var(--studio-muted)] md:text-base">{description}</p>
         <div className="mt-6 flex flex-wrap gap-3">{children}</div>
       </div>
     </article>
@@ -140,14 +140,14 @@ function CategoryBlock({
   children: ReactNode;
 }) {
   return (
-    <section id={id} className="scroll-mt-28 border-t border-white/[0.08] pt-14 first:border-t-0 first:pt-0">
+    <section id={id} className="scroll-mt-28 border-t border-[var(--studio-border)] pt-14 first:border-t-0 first:pt-0">
       <div className="mb-8 flex items-start gap-4">
         <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#5da3f9]/30 bg-[#5da3f9]/10 text-[#93c5fd]">
           <Icon className="h-5 w-5" aria-hidden />
         </span>
         <div>
-          <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">{title}</h2>
-          <p className="mt-2 max-w-3xl text-sm leading-relaxed text-white/65 md:text-base">{intro}</p>
+          <h2 className="text-2xl font-semibold tracking-tight text-[var(--studio-text)] md:text-3xl">{title}</h2>
+          <p className="mt-2 max-w-3xl text-sm leading-relaxed text-[var(--studio-muted)] md:text-base">{intro}</p>
         </div>
       </div>
       {children}
@@ -180,14 +180,14 @@ export default function PortfolioShowcase() {
     <section className="py-16 md:py-24" aria-labelledby="portfolio-showcase-heading">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <header className="mx-auto max-w-3xl text-center">
-          <p className="text-xs font-medium uppercase tracking-[0.2em] text-white/40">{p.pageTitle}</p>
+          <p className="text-xs font-medium uppercase tracking-[0.2em] text-[var(--studio-muted)]">{p.pageTitle}</p>
           <h1
             id="portfolio-showcase-heading"
-            className="mt-3 text-3xl font-semibold tracking-tight text-white md:text-4xl"
+            className="mt-3 text-3xl font-semibold tracking-tight text-[var(--studio-text)] md:text-4xl"
           >
             {p.pageTitle}
           </h1>
-          <p className="mt-4 text-base leading-relaxed text-white/70 md:text-lg">{p.pageLead}</p>
+          <p className="mt-4 text-base leading-relaxed text-[var(--studio-muted)] md:text-lg">{p.pageLead}</p>
         </header>
 
         <div
@@ -207,7 +207,7 @@ export default function PortfolioShowcase() {
                 className={`shrink-0 whitespace-nowrap rounded-full px-4 py-2.5 text-sm font-medium transition ${
                   active
                     ? "bg-white text-[#0a0a0f]"
-                    : "border border-white/15 bg-white/5 text-white/75 hover:border-white/25 hover:text-white"
+                    : "border border-white/15 bg-white/5 text-[var(--studio-muted)] hover:border-white/25 hover:text-[var(--studio-accent)]"
                 }`}
               >
                 {tab.label}
@@ -323,11 +323,11 @@ export default function PortfolioShowcase() {
                     <Clapperboard className="h-5 w-5 text-amber-300" aria-hidden />
                     <h3 className="text-lg font-semibold text-amber-100">{p.categories.videoEditing.title}</h3>
                   </div>
-                  <p className="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
+                  <p className="mt-3 text-sm leading-relaxed text-[var(--studio-muted)] md:text-base">
                     {p.categories.videoEditing.description}
                   </p>
                   <p className="mt-4 text-sm font-medium text-amber-100/90">{p.projects.theirrealm.title}</p>
-                  <p className="mt-1 text-xs text-white/55">{p.projects.theirrealm.subtitle}</p>
+                  <p className="mt-1 text-xs text-[var(--studio-muted)]">{p.projects.theirrealm.subtitle}</p>
                   <VideoEditingClipGrid
                     clipAriaLabel={(index) =>
                       p.categories.videoEditing.clipAriaLabel.replace("{n}", String(index))
@@ -342,10 +342,10 @@ export default function PortfolioShowcase() {
 
                 <article className="flex flex-col rounded-2xl border border-violet-400/20 bg-violet-500/[0.06] p-6 md:p-8">
                   <div className="flex items-center gap-2">
-                    <Sparkles className="h-5 w-5 text-violet-300" aria-hidden />
+                    <Sparkles className="h-5 w-5 text-[var(--studio-accent)]" aria-hidden />
                     <h3 className="text-lg font-semibold text-violet-100">{p.categories.aiVideo.title}</h3>
                   </div>
-                  <p className="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
+                  <p className="mt-3 text-sm leading-relaxed text-[var(--studio-muted)] md:text-base">
                     {p.categories.aiVideo.description}
                   </p>
                   <AiVideoClipGrid
@@ -371,17 +371,17 @@ export default function PortfolioShowcase() {
               intro={p.categories.graphic.intro}
             >
               <div className="space-y-10">
-                <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 md:p-8">
-                  <h3 className="text-lg font-semibold text-white">{p.categories.brandGraphics.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
+                <div className="rounded-2xl border border-[var(--studio-border)] bg-white/[0.02] p-6 md:p-8">
+                  <h3 className="text-lg font-semibold text-[var(--studio-text)]">{p.categories.brandGraphics.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-[var(--studio-muted)] md:text-base">
                     {p.categories.brandGraphics.description}
                   </p>
                   <PortfolioImageGallery items={brandSamples} closeLabel={p.categories.galleryClose} />
                 </div>
 
-                <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 md:p-8">
-                  <h3 className="text-lg font-semibold text-white">{p.categories.aiPhoto.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
+                <div className="rounded-2xl border border-[var(--studio-border)] bg-white/[0.02] p-6 md:p-8">
+                  <h3 className="text-lg font-semibold text-[var(--studio-text)]">{p.categories.aiPhoto.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-[var(--studio-muted)] md:text-base">
                     {p.categories.aiPhoto.description}
                   </p>
                   <PortfolioImageGallery items={aiPhotoSamples} closeLabel={p.categories.galleryClose} />

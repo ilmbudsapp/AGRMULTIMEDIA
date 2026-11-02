@@ -28,7 +28,7 @@ export default function RelatedArticles({ currentSlug }: { currentSlug: string }
 
   return (
     <aside className="mt-16 rounded-2xl border border-white/10 bg-white/[0.02] p-6 md:p-8" aria-labelledby="related-articles-heading">
-      <h2 id="related-articles-heading" className="text-xl font-semibold text-white md:text-2xl">
+      <h2 id="related-articles-heading" className="text-xl font-semibold text-[var(--studio-text)] md:text-2xl">
         Verwandte Artikel
       </h2>
       <ul className="mt-5 space-y-3">

@@ -45,7 +45,7 @@ export default function GoogleReviewsLink() {
         <Star className="h-5 w-5 fill-blue-400 text-blue-400" />
         {copy.text}
       </a>
-      <p className="text-xs text-white/50">{copy.rating}</p>
+      <p className="text-xs text-[var(--studio-muted)]">{copy.rating}</p>
     </div>
   );
 }

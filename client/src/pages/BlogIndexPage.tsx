@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 
 export default function BlogIndexPage() {
   return (
-    <div className="min-h-screen w-full max-w-[100vw] overflow-x-hidden bg-[#0a0a0f]">
+    <div className="min-h-screen w-full max-w-[100vw] overflow-x-hidden bg-[var(--studio-bg)]">
       <Navigation />
       <main id="main-content" className="pt-24">
         <Blog asPage />

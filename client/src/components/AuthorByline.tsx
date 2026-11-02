@@ -57,7 +57,7 @@ export default function AuthorByline({ variant = "lightOnDark", className = "", 
 
   return (
     <p
-      className={`text-sm ${isBlog ? "text-navy/75" : "text-white/60"} ${className}`}
+      className={`text-sm ${isBlog ? "text-navy/75" : "text-[var(--studio-muted)]"} ${className}`}
       data-testid="author-byline"
     >
       <span className="text-current/85">{prefix}</span>{" "}

@@ -86,16 +86,16 @@ export default function Blog({ asPage = false }: BlogProps) {
       : legacyPosts;
 
   return (
-    <section id="blog" className="py-24 bg-[#f0eff7]">
+    <section id="blog" className="premium-section py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <p className="text-electric-blue font-semibold text-sm uppercase tracking-[0.2em] mb-3">{t.nav.blog}</p>
+          <p className="studio-eyebrow mb-3">{t.nav.blog}</p>
           {asPage ? (
-            <h1 className="text-4xl md:text-5xl font-extrabold text-navy mb-4 tracking-tight" data-testid="blog-title">
+            <h1 className="mb-4 font-display text-4xl font-medium tracking-tight text-[var(--studio-text)] md:text-5xl" data-testid="blog-title">
               {t.blog.title}
             </h1>
           ) : (
-            <h2 className="text-4xl md:text-5xl font-extrabold text-navy mb-4 tracking-tight" data-testid="blog-title">
+            <h2 className="mb-4 font-display text-4xl font-medium tracking-tight text-[var(--studio-text)] md:text-5xl" data-testid="blog-title">
               {t.blog.title}
             </h2>
           )}
@@ -127,7 +127,7 @@ export default function Blog({ asPage = false }: BlogProps) {
               <div className="p-6">
                 <div className="flex items-center mb-4">
                   <span 
-                    className={`${post.categoryColor} text-white text-xs px-3 py-1 rounded-full`}
+                    className={`${post.categoryColor} text-[var(--studio-text)] text-xs px-3 py-1 rounded-full`}
                     data-testid={`blog-post-category-${post.id}`}
                   >
                     {post.category}
@@ -140,7 +140,7 @@ export default function Blog({ asPage = false }: BlogProps) {
                   </span>
                 </div>
                 <h3 
-                  className="text-xl font-semibold text-navy mb-3"
+                  className="mb-3 font-display text-xl font-medium text-[var(--studio-text)]"
                   data-testid={`blog-post-title-${post.id}`}
                 >
                   {post.title}
@@ -154,7 +154,7 @@ export default function Blog({ asPage = false }: BlogProps) {
                 <Link href={`/blog/${post.slug}`}>
                   <button 
                     type="button"
-                    className="inline-flex items-center text-electric-blue font-semibold hover:text-purple-500 transition-colors duration-300"
+                    className="inline-flex items-center font-semibold text-[var(--studio-accent)] transition-colors duration-300 hover:text-[var(--studio-accent-hover)]"
                     data-testid={`blog-post-cta-${post.id}`}
                     aria-label={`${t.blog.readMore}: ${post.title}`}
                   >
@@ -168,7 +168,7 @@ export default function Blog({ asPage = false }: BlogProps) {
         
         <div className="text-center mt-12">
           <button 
-            className="bg-gradient-to-r from-electric-blue to-purple-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300"
+            className="bg-gradient-to-r from-electric-blue to-purple-500 text-[var(--studio-text)] px-8 py-4 rounded-full text-lg font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300"
             data-testid="blog-view-all-cta"
           >
             {t.blog.viewAll}

@@ -31,13 +31,13 @@ export default function BewertungenPage() {
   const intro = INTRO[currentLanguage] ?? INTRO.en;
 
   return (
-    <div className="min-h-screen w-full max-w-[100vw] overflow-x-hidden bg-[#07070b]">
+    <div className="min-h-screen w-full max-w-[100vw] overflow-x-hidden bg-[var(--studio-bg)]">
       <Navigation />
       <main id="main-content" className="pt-20 md:pt-24">
-        <header className="border-b border-[#333333] py-14 md:py-20">
+        <header className="border-b border-[var(--studio-border)] py-14 md:py-20">
           <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
-            <h1 className="text-3xl font-semibold tracking-tight text-white md:text-4xl">{intro.title}</h1>
-            <p className="mt-4 text-base leading-relaxed text-white/75 md:text-lg">{intro.lead}</p>
+            <h1 className="text-3xl font-semibold tracking-tight text-[var(--studio-text)] md:text-4xl">{intro.title}</h1>
+            <p className="mt-4 text-base leading-relaxed text-[var(--studio-muted)] md:text-lg">{intro.lead}</p>
           </div>
         </header>
         <ReviewsSection standalonePage />

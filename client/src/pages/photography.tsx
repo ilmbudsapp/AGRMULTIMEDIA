@@ -69,7 +69,7 @@ export default function Photography() {
               </Button>
             </Link>
             <div>
-              <p className="text-2xl font-bold text-gray-900 dark:text-white">
+              <p className="text-2xl font-bold text-gray-900 dark:text-[var(--studio-text)]">
                 {t.photography?.hero?.title || "Fotografija i Photomontaža"}
               </p>
               <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -86,7 +86,7 @@ export default function Photography() {
         <div className="relative max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-[var(--studio-text)] mb-6">
                 {t.photography?.hero?.title || "Fotografija i Photomontaža"}
               </h1>
               <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
@@ -94,7 +94,7 @@ export default function Photography() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/#contact">
-                  <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3">
+                  <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-[var(--studio-text)] px-8 py-3">
                     {t.photography?.cta?.button || "Kontaktiraj Me"}
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Button>
@@ -127,7 +127,7 @@ export default function Photography() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-[var(--studio-text)] mb-4">
               {t.photography?.servicesTitle || "Moje Fotografske Usluge"}
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
@@ -141,7 +141,7 @@ export default function Photography() {
                 <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-200 dark:group-hover:bg-blue-800/50 transition-colors">
                   <Camera className="w-6 h-6 text-blue-600 dark:text-blue-400" />
                 </div>
-                <CardTitle className="text-xl text-gray-900 dark:text-white">
+                <CardTitle className="text-xl text-gray-900 dark:text-[var(--studio-text)]">
                   {t.photography?.services?.professionalPhotography?.title || "Profesionalno Fotografisanje"}
                 </CardTitle>
                 <CardDescription className="text-gray-600 dark:text-gray-300">
@@ -165,7 +165,7 @@ export default function Photography() {
                 <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 dark:group-hover:bg-green-800/50 transition-colors">
                   <Image className="w-6 h-6 text-green-600 dark:text-green-400" />
                 </div>
-                <CardTitle className="text-xl text-gray-900 dark:text-white">
+                <CardTitle className="text-xl text-gray-900 dark:text-[var(--studio-text)]">
                   {t.photography?.services?.restoration?.title || "Restauracija Starih Slika"}
                 </CardTitle>
                 <CardDescription className="text-gray-600 dark:text-gray-300">
@@ -189,7 +189,7 @@ export default function Photography() {
                 <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-200 dark:group-hover:bg-purple-800/50 transition-colors">
                   <Palette className="w-6 h-6 text-purple-600 dark:text-purple-400" />
                 </div>
-                <CardTitle className="text-xl text-gray-900 dark:text-white">
+                <CardTitle className="text-xl text-gray-900 dark:text-[var(--studio-text)]">
                   {t.photography?.services?.photomontage?.title || "Photomontaže Svih Vrsta"}
                 </CardTitle>
                 <CardDescription className="text-gray-600 dark:text-gray-300">
@@ -213,7 +213,7 @@ export default function Photography() {
                 <div className="w-12 h-12 bg-red-100 dark:bg-red-900/30 rounded-lg flex items-center justify-center mb-4 group-hover:bg-red-200 dark:group-hover:bg-red-800/50 transition-colors">
                   <Film className="w-6 h-6 text-red-600 dark:text-red-400" />
                 </div>
-                <CardTitle className="text-xl text-gray-900 dark:text-white">
+                <CardTitle className="text-xl text-gray-900 dark:text-[var(--studio-text)]">
                   {t.photography?.services?.moviePosters?.title || "Filmski Posteri sa Vašom Slikom"}
                 </CardTitle>
                 <CardDescription className="text-gray-600 dark:text-gray-300">
@@ -239,7 +239,7 @@ export default function Photography() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/50 dark:bg-slate-800/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-[var(--studio-text)] mb-4">
               {t.photography?.portfolioTitle || "Portfolio Filmskih Postera"}
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
@@ -257,14 +257,14 @@ export default function Photography() {
                     className="w-full h-96 object-contain bg-gray-100 dark:bg-gray-800 group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute top-4 left-4">
-                    <Badge variant="secondary" className="bg-black/70 text-white">
+                    <Badge variant="secondary" className="bg-black/70 text-[var(--studio-text)]">
                       {poster.category}
                     </Badge>
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
                 <CardContent className="p-4">
-                  <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
+                  <h3 className="text-lg font-bold text-gray-900 dark:text-[var(--studio-text)] mb-2">
                     {poster.title}
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300 text-sm">
@@ -281,7 +281,7 @@ export default function Photography() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-[var(--studio-text)] mb-4">
               {t.photography?.processTitle || "Kreativni Proces"}
             </h2>
           </div>
@@ -310,10 +310,10 @@ export default function Photography() {
               }
             ]).map((step, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                <div className="w-16 h-16 bg-blue-600 text-[var(--studio-text)] rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
                   {step.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-[var(--studio-text)] mb-2">
                   {step.title}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
@@ -328,7 +328,7 @@ export default function Photography() {
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-[var(--studio-text)] mb-6">
             {t.photography?.cta?.title || "Spremni za Kreativnu Fotografiju?"}
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">

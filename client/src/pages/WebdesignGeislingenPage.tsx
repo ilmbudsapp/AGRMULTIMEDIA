@@ -62,23 +62,23 @@ export default function WebdesignGeislingenPage() {
   const [faqOpenIndex, setFaqOpenIndex] = useState<number | null>(0);
 
   return (
-    <div className="min-h-screen w-full max-w-[100vw] overflow-x-hidden bg-[#07070b]">
+    <div className="min-h-screen w-full max-w-[100vw] overflow-x-hidden bg-[var(--studio-bg)]">
       <Navigation />
       <BreadcrumbNav />
 
       <main id="main-content" className="pt-4 md:pt-6">
         <LandingJsonLd />
 
-        <article className="border-b border-[#333333] py-14 md:py-20">
+        <article className="border-b border-[var(--studio-border)] py-14 md:py-20">
           <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
             <header className="mb-12 text-center md:mb-16">
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-blue-300/80">
                 Webagentur · Geislingen an der Steige
               </p>
-              <h1 className="text-balance text-2xl font-semibold tracking-tight text-white md:text-4xl lg:text-[2.35rem]">
+              <h1 className="text-balance text-2xl font-semibold tracking-tight text-[var(--studio-text)] md:text-4xl lg:text-[2.35rem]">
                 {WEBDESIGN_LANDING_H1}
               </h1>
-              <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/70 md:text-lg">
+              <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-[var(--studio-muted)] md:text-lg">
                 Moderne Business-Websites mit lokalem SEO in Geislingen an der Steige — für Handwerk, Dienstleister und
                 kleine Firmen, persönlich umgesetzt von AGR Multimedia.
               </p>
@@ -92,7 +92,7 @@ export default function WebdesignGeislingenPage() {
                 </Link>
                 <Link
                   href={ROUTES.webdesignSeo}
-                  className="rounded-full border border-white/20 px-8 py-3 text-sm font-medium text-white hover:border-blue-300/50"
+                  className="rounded-full border border-white/20 px-8 py-3 text-sm font-medium text-[var(--studio-text)] hover:border-blue-300/50"
                 >
                   Webdesign & SEO
                 </Link>
@@ -101,12 +101,12 @@ export default function WebdesignGeislingenPage() {
 
             <PageTableOfContents items={TOC_ITEMS} />
 
-            <div className="space-y-14 text-white/75">
+            <div className="space-y-14 text-[var(--studio-muted)]">
               {WEBDESIGN_LANDING_SECTIONS.map((section) => (
                 <section key={section.id} id={section.id} aria-labelledby={`${section.id}-heading`}>
                   <h2
                     id={`${section.id}-heading`}
-                    className="text-balance text-xl font-semibold leading-snug text-white md:text-2xl"
+                    className="text-balance text-xl font-semibold leading-snug text-[var(--studio-text)] md:text-2xl"
                   >
                     {section.title}
                   </h2>
@@ -128,7 +128,7 @@ export default function WebdesignGeislingenPage() {
               <section id="nachweisbare-erfolge" aria-labelledby="nachweisbare-erfolge-heading">
                 <h2
                   id="nachweisbare-erfolge-heading"
-                  className="text-balance text-xl font-semibold leading-snug text-white md:text-2xl"
+                  className="text-balance text-xl font-semibold leading-snug text-[var(--studio-text)] md:text-2xl"
                 >
                   Nachweisbare Erfolge für lokale Unternehmen in Geislingen
                 </h2>
@@ -146,8 +146,8 @@ export default function WebdesignGeislingenPage() {
 
             <ProjectResults />
 
-            <section id="faq" className="mt-16 border-t border-[#333333] pt-14" aria-labelledby="faq-heading">
-              <h2 id="faq-heading" className="text-2xl font-semibold text-white md:text-3xl">
+            <section id="faq" className="mt-16 border-t border-[var(--studio-border)] pt-14" aria-labelledby="faq-heading">
+              <h2 id="faq-heading" className="text-2xl font-semibold text-[var(--studio-text)] md:text-3xl">
                 Häufige Fragen zum Webdesign in Geislingen
               </h2>
               <div className="mt-8 space-y-3">
@@ -156,7 +156,7 @@ export default function WebdesignGeislingenPage() {
                   return (
                     <div
                       key={item.question}
-                      className="overflow-hidden rounded-xl border border-[#333333] bg-white/[0.02]"
+                      className="overflow-hidden rounded-xl border border-[var(--studio-border)] bg-white/[0.02]"
                     >
                       <button
                         type="button"
@@ -164,14 +164,14 @@ export default function WebdesignGeislingenPage() {
                         aria-expanded={isOpen}
                         onClick={() => setFaqOpenIndex(isOpen ? null : index)}
                       >
-                        <span className="text-sm font-medium text-white md:text-base">{item.question}</span>
+                        <span className="text-sm font-medium text-[var(--studio-text)] md:text-base">{item.question}</span>
                         <ChevronDown
                           className={`h-5 w-5 shrink-0 text-blue-300 transition ${isOpen ? "rotate-180" : ""}`}
                           aria-hidden
                         />
                       </button>
                       {isOpen && (
-                        <div className="border-t border-[#333333] px-5 py-4 text-sm leading-relaxed text-white/70 md:text-base">
+                        <div className="border-t border-[var(--studio-border)] px-5 py-4 text-sm leading-relaxed text-[var(--studio-muted)] md:text-base">
                           {item.answer}
                         </div>
                       )}

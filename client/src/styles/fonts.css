@@ -1,14 +1,50 @@
-/* Self-hosted fonts — no requests to fonts.googleapis.com / fonts.gstatic.com (DSGVO) */
-/* font-display: swap is set in each @fontsource bundle */
-@import "@fontsource/plus-jakarta-sans/latin-300.css";
-@import "@fontsource/plus-jakarta-sans/latin-400.css";
-@import "@fontsource/plus-jakarta-sans/latin-500.css";
-@import "@fontsource/plus-jakarta-sans/latin-600.css";
-@import "@fontsource/plus-jakarta-sans/latin-700.css";
-@import "@fontsource/plus-jakarta-sans/latin-800.css";
-@import "@fontsource/plus-jakarta-sans/latin-400-italic.css";
-@import "@fontsource/plus-jakarta-sans/latin-600-italic.css";
-@import "@fontsource/playfair-display/latin-400.css";
-@import "@fontsource/playfair-display/latin-500.css";
-@import "@fontsource/playfair-display/latin-600.css";
-@import "@fontsource/playfair-display/latin-700.css";
+/* Self-hosted premium fonts — no Google Fonts requests */
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/outfit-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/assets/fonts/outfit-500.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/assets/fonts/outfit-600.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/assets/fonts/outfit-700.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/assets/fonts/cormorant-500.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/assets/fonts/cormorant-600.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/assets/fonts/cormorant-700.woff2") format("woff2");
+}

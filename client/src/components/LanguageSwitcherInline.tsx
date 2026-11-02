@@ -17,15 +17,15 @@ export default function LanguageSwitcherInline() {
               onClick={() => setLanguage(code as Language)}
               className={`transition-colors duration-200 ${
                 isActive
-                  ? "text-blue-200 font-semibold"
-                  : "text-white/65 hover:text-white"
+                  ? "font-semibold text-[var(--studio-accent)]"
+                  : "text-[var(--studio-muted)] hover:text-[var(--studio-text)]"
               }`}
               aria-label={`Switch to ${code.toUpperCase()}`}
             >
               {specLangDisplay[code]}
             </button>
             {i < specLangCodes.length - 1 && (
-              <span className="text-white/50 select-none">|</span>
+              <span className="select-none text-[var(--studio-border)]">|</span>
             )}
           </span>
         );

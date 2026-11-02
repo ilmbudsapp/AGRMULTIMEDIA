@@ -43,14 +43,14 @@ export default function AuthorSection() {
   return (
     <section
       id="author-section"
-      className="scroll-mt-24 border-t border-[#2a2a30] bg-[#0c0c10] py-16 md:py-20"
+      className="scroll-mt-24 border-t border-[var(--studio-border)] bg-[#efe8db] py-16 md:py-20"
       aria-labelledby="author-heading"
     >
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <div className="premium-card rounded-2xl p-8 md:p-10">
           <h2
             id="author-heading"
-            className="font-display text-center text-2xl font-semibold tracking-tight text-white md:text-3xl"
+            className="font-display text-center text-2xl font-semibold tracking-tight text-[var(--studio-text)] md:text-3xl"
           >
             {copy.title}
           </h2>
@@ -58,11 +58,11 @@ export default function AuthorSection() {
           <div className="mt-8 space-y-4">
             <div className="flex flex-col gap-3 text-center md:text-left">
               <div className="flex flex-col md:flex-row md:items-baseline md:gap-3">
-                <span className="text-lg font-semibold text-white">{copy.name}</span>
-                <span className="text-base text-blue-400">{copy.role}</span>
+                <span className="text-lg font-semibold text-[var(--studio-text)]">{copy.name}</span>
+                <span className="text-base text-[var(--studio-accent)]">{copy.role}</span>
               </div>
               
-              <div className="space-y-2 text-sm text-white/75 md:text-base">
+              <div className="space-y-2 text-sm text-[var(--studio-muted)] md:text-base">
                 <p>• {copy.experience}</p>
                 <p>• {copy.projects}</p>
                 <p>• {copy.articles}</p>
@@ -75,7 +75,7 @@ export default function AuthorSection() {
                 href="https://www.linkedin.com/in/agron-osmani-228947266/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-blue-500 px-6 py-3 text-sm font-semibold text-white transition-all hover:from-blue-500 hover:to-blue-400 hover:shadow-lg hover:shadow-blue-500/25"
+                className="premium-cta inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold"
               >
                 {copy.linkedInLabel}
                 <ExternalLink className="h-4 w-4" />

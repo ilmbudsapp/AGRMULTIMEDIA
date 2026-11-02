@@ -369,10 +369,10 @@ export default function VideoProduction() {
 
         {/* Primary CTA — immediately after pillars */}
         <section className="mx-auto mt-10 max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="rounded-2xl border border-neutral-900 bg-neutral-900 p-8 text-center shadow-[0_16px_40px_rgba(15,23,42,0.22)] sm:p-10">
+          <div className="rounded-2xl border border-[var(--studio-border)] bg-[var(--studio-surface)] p-8 text-center shadow-[0_16px_40px_-24px_rgba(80,52,28,0.28)] sm:p-10">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 text-base font-semibold text-neutral-900 transition hover:bg-neutral-200"
+              className="premium-cta inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-base font-semibold"
             >
               {copy.ctaQuote}
               <ArrowRight className="h-5 w-5 shrink-0" aria-hidden />
@@ -488,7 +488,7 @@ export default function VideoProduction() {
         <ComparisonTable />
 
         {/* Google Reviews */}
-        <section className="border-t border-[#2a2a30] py-16 md:py-20">
+        <section className="border-t border-[var(--studio-border)] py-16 md:py-20">
           <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 text-center">
             <GoogleReviewsLink />
           </div>

@@ -35,7 +35,7 @@ export default function UpdateDate() {
   const copy = UPDATE_DATE_COPY[currentLanguage];
 
   return (
-    <div className="flex items-center justify-center gap-2 text-sm text-white/50">
+    <div className="flex items-center justify-center gap-2 text-sm text-[var(--studio-muted)]">
       <Calendar className="h-4 w-4" />
       <span>
         {copy.label}: <time dateTime="2026-08-30">{copy.date}</time>

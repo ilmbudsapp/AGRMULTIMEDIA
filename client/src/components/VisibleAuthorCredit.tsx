@@ -11,7 +11,7 @@ export default function VisibleAuthorCredit({
   variant?: "dark" | "light";
 }) {
   const tone =
-    variant === "light" ? "text-gray-500 dark:text-gray-400" : "text-white/45";
+    variant === "light" ? "text-gray-500 dark:text-gray-400" : "text-[var(--studio-muted)]";
   return (
     <p
       {...(variant === "dark" ? { id: "seo-visible-byline" } : {})}

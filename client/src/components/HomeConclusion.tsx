@@ -10,7 +10,7 @@ export default function HomeConclusion() {
     <section
       id="home-conclusion"
       aria-labelledby="home-conclusion-heading"
-      className="scroll-mt-24 border-t border-white/[0.08] bg-gradient-to-b from-[#08080f] to-[#07070b] py-14 md:py-20"
+      className="scroll-mt-24 border-t border-[var(--studio-border)] bg-gradient-to-b from-[#efe8db] to-[var(--studio-bg)] py-14 md:py-20"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div
@@ -19,10 +19,10 @@ export default function HomeConclusion() {
           role="region"
           aria-labelledby="home-takeaways-heading"
         >
-          <h2 id="home-takeaways-heading" className="text-xl font-semibold text-white md:text-2xl">
+          <h2 id="home-takeaways-heading" className="text-xl font-semibold text-[var(--studio-text)] md:text-2xl">
             {c.takeawaysTitle}
           </h2>
-          <ul className="mt-4 list-disc space-y-2 pl-5 text-sm leading-relaxed text-white/85 md:text-base">
+          <ul className="mt-4 list-disc space-y-2 pl-5 text-sm leading-relaxed text-[var(--studio-muted)] md:text-base">
             {c.takeaways.map((line) => (
               <li key={line}>{line}</li>
             ))}
@@ -30,26 +30,26 @@ export default function HomeConclusion() {
         </div>
 
         <div className="mt-10 grid gap-8 lg:grid-cols-2">
-          <article className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6">
+          <article className="rounded-2xl border border-[var(--studio-border)] bg-white/[0.02] p-6">
             <h3 className="text-sm font-semibold uppercase tracking-wide text-sky-300/90">{c.whatTitle}</h3>
-            <p className="mt-3 text-sm leading-relaxed text-white/80">{c.whatWeDo}</p>
+            <p className="mt-3 text-sm leading-relaxed text-[var(--studio-muted)]">{c.whatWeDo}</p>
           </article>
-          <article className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6">
+          <article className="rounded-2xl border border-[var(--studio-border)] bg-white/[0.02] p-6">
             <h3 className="text-sm font-semibold uppercase tracking-wide text-sky-300/90">{c.whoTitle}</h3>
-            <p className="mt-3 text-sm leading-relaxed text-white/80">{c.whoFor}</p>
+            <p className="mt-3 text-sm leading-relaxed text-[var(--studio-muted)]">{c.whoFor}</p>
           </article>
         </div>
 
         <h2
           id="home-conclusion-heading"
-          className="mt-12 text-xl font-semibold tracking-tight text-white md:text-2xl"
+          className="mt-12 text-xl font-semibold tracking-tight text-[var(--studio-text)] md:text-2xl"
         >
           {c.conclusionTitle}
         </h2>
-        <p className="mt-4 max-w-3xl text-sm leading-relaxed text-white/80 md:text-base">{c.conclusion}</p>
+        <p className="mt-4 max-w-3xl text-sm leading-relaxed text-[var(--studio-muted)] md:text-base">{c.conclusion}</p>
 
-        <h3 className="mt-10 text-lg font-semibold text-white">{c.actionTitle}</h3>
-        <ol className="mt-4 list-decimal space-y-2 pl-5 text-sm leading-relaxed text-white/80 md:text-base">
+        <h3 className="mt-10 text-lg font-semibold text-[var(--studio-text)]">{c.actionTitle}</h3>
+        <ol className="mt-4 list-decimal space-y-2 pl-5 text-sm leading-relaxed text-[var(--studio-muted)] md:text-base">
           {c.actions.map((step) => (
             <li key={step}>{step}</li>
           ))}

@@ -3,46 +3,46 @@
 @import 'tailwindcss/utilities';
 
 :root {
-  --background: hsl(220, 26%, 98%);
-  --foreground: hsl(224, 32%, 12%);
-  --card: hsl(0, 0%, 100%);
-  --card-foreground: hsl(224, 32%, 12%);
-  --popover: hsl(0, 0%, 100%);
-  --popover-foreground: hsl(224, 32%, 12%);
-  --primary: hsl(168, 76%, 36%);
-  --primary-foreground: hsl(0, 0%, 100%);
-  --secondary: hsl(220, 26%, 95%);
-  --secondary-foreground: hsl(224, 32%, 12%);
-  --muted: hsl(220, 26%, 95%);
-  --muted-foreground: hsl(220, 14%, 48%);
-  --accent: hsl(220, 26%, 95%);
-  --accent-foreground: hsl(168, 76%, 36%);
+  --background: hsl(40, 43%, 94%);
+  --foreground: hsl(32, 28%, 16%);
+  --card: hsl(40, 60%, 98%);
+  --card-foreground: hsl(32, 28%, 16%);
+  --popover: hsl(40, 60%, 98%);
+  --popover-foreground: hsl(32, 28%, 16%);
+  --primary: hsl(32, 32%, 28%);
+  --primary-foreground: hsl(40, 50%, 96%);
+  --secondary: hsl(38, 36%, 90%);
+  --secondary-foreground: hsl(32, 28%, 16%);
+  --muted: hsl(38, 30%, 90%);
+  --muted-foreground: hsl(30, 14%, 38%);
+  --accent: hsl(38, 36%, 90%);
+  --accent-foreground: hsl(32, 32%, 28%);
   --destructive: hsl(0, 84%, 60%);
   --destructive-foreground: hsl(0, 0%, 100%);
-  --border: hsl(220, 20%, 92%);
-  --input: hsl(220, 20%, 92%);
-  --ring: hsl(168, 76%, 36%);
-  --navy: hsl(224, 32%, 12%);
-  --electric-blue: hsl(168, 60%, 42%);
-  --accent-vivid: hsl(168, 76%, 36%);
-  --accent-coral: hsl(14, 90%, 58%);
-  --warm-gray: hsl(220, 14%, 48%);
-  --studio-bg: #07070b;
-  --studio-surface: #111116;
-  --studio-border: #2a2a30;
-  --studio-accent: #0d9488;
-  --studio-accent-hover: #14b8a6;
-  --studio-text: #f4f4f5;
-  --studio-muted: rgba(244, 244, 245, 0.72);
-  --gradient-primary: linear-gradient(135deg, hsl(168, 76%, 32%), hsl(168, 60%, 42%));
-  --gradient-hero: linear-gradient(180deg, hsl(224, 20%, 6%) 0%, hsl(224, 18%, 4%) 100%);
+  --border: hsl(36, 28%, 82%);
+  --input: hsl(36, 28%, 82%);
+  --ring: hsl(32, 32%, 28%);
+  --navy: hsl(32, 28%, 16%);
+  --electric-blue: hsl(32, 32%, 38%);
+  --accent-vivid: hsl(32, 32%, 28%);
+  --accent-coral: hsl(18, 52%, 46%);
+  --warm-gray: hsl(30, 14%, 38%);
+  --studio-bg: #f4efe6;
+  --studio-surface: #fbf8f2;
+  --studio-border: #e4d8c6;
+  --studio-accent: #8b5e34;
+  --studio-accent-hover: #6f4928;
+  --studio-text: #2c2419;
+  --studio-muted: rgba(44, 36, 25, 0.68);
+  --gradient-primary: linear-gradient(135deg, #8b5e34, #c4a574);
+  --gradient-hero: linear-gradient(180deg, #f7f2ea 0%, #efe6d6 100%);
   --gradient-mesh: none;
-  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
-  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Outfit', system-ui, sans-serif;
+  --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   --radius: 1rem;
   --radius-lg: 1.25rem;
-  --shadow-soft: 0 4px 24px -4px rgba(0, 0, 0, 0.08), 0 8px 48px -8px rgba(0, 0, 0, 0.06);
-  --shadow-glow: 0 0 60px -12px hsl(262, 83%, 58% / 0.35);
+  --shadow-soft: 0 8px 30px -12px rgba(80, 52, 28, 0.18);
+  --shadow-glow: 0 0 40px -16px rgba(139, 94, 52, 0.28);
 }
 
 .dark {
@@ -100,10 +100,10 @@
     max-width: 48rem;
     margin: 0 auto;
     padding: 1.5rem;
-    color: #e5e7eb;
+    color: #2c2419;
     font-family: system-ui, sans-serif;
     line-height: 1.65;
-    background: #07070b;
+    background: #f4efe6;
   }
 
   #static-crawler-home figure {
@@ -153,7 +153,7 @@
   #static-crawler-home h1,
   #static-route-prerender h1 {
     font-size: 1.5rem;
-    color: #fff;
+    color: #2c2419;
     margin-bottom: 0.75rem;
   }
 
@@ -161,12 +161,12 @@
   #static-crawler-home h3,
   #static-route-prerender h2 {
     font-size: 1.15rem;
-    color: #fff;
+    color: #2c2419;
     margin: 1.25rem 0 0.5rem;
   }
 
   #static-crawler-home a {
-    color: #93c5fd;
+    color: #8b5e34;
   }
 
   #static-crawler-home table {
@@ -184,7 +184,7 @@
   }
 
   body {
-    @apply bg-[#0a0a0a] text-foreground antialiased;
+    @apply bg-[#f4efe6] text-foreground antialiased;
     font-family: var(--font-sans);
     overflow-x: hidden;
     min-height: 100vh;
@@ -234,7 +234,7 @@
     inset: 0;
     pointer-events: none;
     z-index: 9999;
-    opacity: 0.03;
+    opacity: 0.045;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
   }
 }
@@ -269,24 +269,15 @@
   }
 
   .glass-card {
-    background: rgba(255, 255, 255, 0.07);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
-    border: 1px solid rgba(255, 255, 255, 0.14);
-    box-shadow:
-      0 8px 32px rgba(0, 0, 0, 0.24),
-      inset 0 1px 0 rgba(255, 255, 255, 0.1),
-      inset 0 -1px 0 rgba(0, 0, 0, 0.05);
+    background: var(--studio-surface);
+    border: 1px solid var(--studio-border);
+    box-shadow: 0 16px 40px -24px rgba(80, 52, 28, 0.22);
     transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
   }
 
   .glass-card:hover {
-    background: rgba(255, 255, 255, 0.11);
-    border-color: rgba(255, 255, 255, 0.22);
-    box-shadow:
-      0 16px 48px rgba(0, 0, 0, 0.28),
-      inset 0 1px 0 rgba(255, 255, 255, 0.14),
-      inset 0 -1px 0 rgba(0, 0, 0, 0.06);
+    border-color: rgba(139, 94, 52, 0.4);
+    box-shadow: 0 22px 44px -20px rgba(80, 52, 28, 0.28);
   }
 
   .hover-lift {
@@ -397,7 +388,7 @@
 
 /* Hero H1: magnetic morph target (SEO text; animation via GSAP) */
 .hero-h1 {
-  color: #f8fafc;
+  color: var(--studio-text);
 }
 
 /* Hero: typed segment + glow after complete */
@@ -449,8 +440,8 @@
 .premium-card {
   background: var(--studio-surface);
   border: 1px solid var(--studio-border);
-  border-radius: 12px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  border-radius: 18px;
+  box-shadow: 0 16px 40px -24px rgba(80, 52, 28, 0.28);
 }
 
 .premium-card-hover {
@@ -458,14 +449,14 @@
 }
 
 .premium-card-hover:hover {
-  transform: translateY(-3px);
-  border-color: rgba(13, 148, 136, 0.45);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  transform: translateY(-4px);
+  border-color: rgba(139, 94, 52, 0.4);
+  box-shadow: 0 22px 44px -20px rgba(80, 52, 28, 0.28);
 }
 
 .premium-cta {
   background: var(--studio-accent);
-  color: #f0fdfa;
+  color: #fbf7f0 !important;
   transition: background 200ms ease, transform 200ms ease;
 }
 
@@ -478,11 +469,11 @@
 }
 
 .studio-eyebrow {
-  letter-spacing: 0.14em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   font-size: 0.6875rem;
-  font-weight: 600;
-  color: rgba(13, 148, 136, 0.85);
+  font-weight: 500;
+  color: var(--studio-accent);
 }
 
 .studio-trust-pill {
@@ -490,10 +481,10 @@
   align-items: center;
   border: 1px solid var(--studio-border);
   border-radius: 9999px;
-  padding: 0.35rem 0.75rem;
+  padding: 0.4rem 0.85rem;
   font-size: 0.75rem;
   color: var(--studio-muted);
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 253, 248, 0.7);
 }
 
 .studio-service-link {
@@ -542,22 +533,19 @@
 
 /* Contact section glass */
 .contact-glass-card {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(99, 102, 241, 0.04) 100%);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  background: var(--studio-surface);
+  border: 1px solid var(--studio-border);
+  box-shadow: 0 12px 32px -18px rgba(80, 52, 28, 0.22);
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .contact-glass-card:hover {
-  border-color: rgba(167, 139, 250, 0.35);
-  box-shadow: 0 16px 48px rgba(99, 102, 241, 0.12);
+  border-color: rgba(139, 94, 52, 0.4);
+  box-shadow: 0 16px 36px -16px rgba(80, 52, 28, 0.24);
 }
 
 .contact-glass-panel {
-  background: linear-gradient(160deg, rgba(255, 255, 255, 0.06) 0%, rgba(30, 27, 75, 0.35) 100%);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  background: var(--studio-surface);
+  border: 1px solid var(--studio-border);
+  box-shadow: 0 16px 40px -24px rgba(80, 52, 28, 0.22);
 }

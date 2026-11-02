@@ -74,18 +74,18 @@ export default function WebdesignSeoPage() {
   const faq = currentLanguage === "de" ? WEBDESIGN_SEO_FAQ_DE : WEBDESIGN_SEO_FAQ_DE;
 
   return (
-    <div className="min-h-screen w-full max-w-[100vw] overflow-x-hidden bg-[#07070b]">
+    <div className="min-h-screen w-full max-w-[100vw] overflow-x-hidden bg-[var(--studio-bg)]">
       <Navigation />
       <BreadcrumbNav />
       <ServiceJsonLd />
       <main id="main-content" className="pt-4 md:pt-6">
-        <header className="border-b border-[#333333] py-14 md:py-20">
+        <header className="border-b border-[var(--studio-border)] py-14 md:py-20">
           <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
-            <h1 className="text-3xl font-semibold tracking-tight text-white md:text-4xl">{intro.title}</h1>
-            <p className="mt-4 text-base leading-relaxed text-white/75 md:text-lg">{intro.lead}</p>
+            <h1 className="text-3xl font-semibold tracking-tight text-[var(--studio-text)] md:text-4xl">{intro.title}</h1>
+            <p className="mt-4 text-base leading-relaxed text-[var(--studio-muted)] md:text-lg">{intro.lead}</p>
             <UpdateDate />
             <p className="mt-6">
-              <Link href={ROUTES.webdesignGeislingen} className="text-sm font-medium text-blue-200 hover:underline md:text-base">
+              <Link href={ROUTES.webdesignGeislingen} className="text-sm font-medium text-[var(--studio-accent)] hover:underline md:text-base">
                 {currentLanguage === "de"
                   ? "Ausführlicher Guide: Webdesign Geislingen an der Steige"
                   : "Full guide: Web design Geislingen an der Steige"}
@@ -102,14 +102,14 @@ export default function WebdesignSeoPage() {
           <PageTableOfContents items={WEBDESIGN_SEO_TOC} />
           {sections.map((sec) => (
             <section key={sec.id} id={sec.id} className="mb-12">
-              <h2 className="text-xl font-semibold text-white md:text-2xl">{sec.title}</h2>
+              <h2 className="text-xl font-semibold text-[var(--studio-text)] md:text-2xl">{sec.title}</h2>
               {sec.paragraphs.map((p) => (
-                <p key={p.slice(0, 30)} className="mt-4 leading-relaxed text-white/75">
+                <p key={p.slice(0, 30)} className="mt-4 leading-relaxed text-[var(--studio-muted)]">
                   {p}
                 </p>
               ))}
               {sec.list ? (
-                <ul className="mt-4 space-y-2 text-white/75">
+                <ul className="mt-4 space-y-2 text-[var(--studio-muted)]">
                   {sec.list.map((item) => (
                     <li key={item} className="flex gap-2">
                       <span className="text-blue-400">·</span>
@@ -122,14 +122,14 @@ export default function WebdesignSeoPage() {
           ))}
 
           <section id="seo-geo-erfolge" className="mb-12">
-            <h2 className="text-xl font-semibold text-white md:text-2xl">SEO &amp; GEO Erfolge</h2>
-            <p className="mt-4 leading-relaxed text-white/75">
+            <h2 className="text-xl font-semibold text-[var(--studio-text)] md:text-2xl">SEO &amp; GEO Erfolge</h2>
+            <p className="mt-4 leading-relaxed text-[var(--studio-muted)]">
               Unsere SEO-Arbeit liefert messbare Ergebnisse für kleine und mittlere Unternehmen. Bei FixBike haben wir den SEO-Score von 49 auf 88 Punkte gesteigert (Quelle: seoscore.tools), was zu deutlich besserer Auffindbarkeit in Google-Suchergebnissen führte. Durch technische Optimierungen konnten wir die Ladegeschwindigkeit um +50% verbessern (Google Lighthouse Performance-Score). Die KFZ-Werkstatt Tairovic verzeichnete eine Steigerung der Online-Sichtbarkeit um +18% durch verbesserte lokale Rankings (Google Analytics, organische Suchanfragen).
             </p>
-            <p className="mt-4 leading-relaxed text-white/75">
+            <p className="mt-4 leading-relaxed text-[var(--studio-muted)]">
               Diese Resultate zeigen die Bedeutung einer ganzheitlichen SEO-Strategie: Technisches SEO bildet die Grundlage mit schnellen Ladezeiten, mobilfreundlichem Design und sauberer Code-Struktur. On-Page SEO optimiert Inhalte, Meta-Tags und interne Verlinkung für maximale Relevanz. Lokales SEO stärkt die regionale Sichtbarkeit durch Google Business Profile und strukturierte Daten. Moderne GEO (Generative Engine Optimization) und AEO (Answer Engine Optimization) sorgen dafür, dass Ihre Inhalte auch in KI-gestützten Suchmaschinen wie ChatGPT, Perplexity oder Google Gemini optimal dargestellt werden.
             </p>
-            <p className="mt-4 leading-relaxed text-white/75">
+            <p className="mt-4 leading-relaxed text-[var(--studio-muted)]">
               Wichtig: Diese Zahlen basieren auf realen Projekten aus 2025-2026 und sind dokumentiert. Sie stellen keine Garantie für zukünftige Ergebnisse dar – jedes Unternehmen ist einzigartig und der Erfolg hängt von vielen Faktoren ab. Was wir garantieren: eine professionelle, moderne Website mit solider technischer Grundlage, die alle aktuellen SEO-, GEO- und AEO-Best-Practices erfüllt und Ihrem Unternehmen die bestmögliche Ausgangsbasis für Online-Erfolg bietet.
             </p>
           </section>
@@ -137,12 +137,12 @@ export default function WebdesignSeoPage() {
           <ProjectResults />
 
           <section className="mb-12">
-            <h2 className="text-xl font-semibold text-white md:text-2xl">FAQ — Webdesign &amp; SEO</h2>
+            <h2 className="text-xl font-semibold text-[var(--studio-text)] md:text-2xl">FAQ — Webdesign &amp; SEO</h2>
             <dl className="mt-6 space-y-6">
               {faq.map((item) => (
                 <div key={item.question}>
-                  <dt className="font-medium text-white">{item.question}</dt>
-                  <dd className="mt-2 text-white/75">{item.answer}</dd>
+                  <dt className="font-medium text-[var(--studio-text)]">{item.question}</dt>
+                  <dd className="mt-2 text-[var(--studio-muted)]">{item.answer}</dd>
                 </div>
               ))}
             </dl>

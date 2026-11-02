@@ -43,9 +43,9 @@ export default function FinalCta() {
   }, [runReveal, currentLanguage]);
 
   return (
-    <section ref={sectionRef} className="py-20 md:py-28 bg-[#0a0a0f]">
+    <section ref={sectionRef} className="py-20 md:py-28 bg-[var(--studio-bg)]">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="final-cta-reveal text-3xl md:text-4xl font-bold text-white mb-6">
+        <h2 className="final-cta-reveal text-3xl md:text-4xl font-bold text-[var(--studio-text)] mb-6">
           {tSpec.finalCta.title}
         </h2>
         <p className="final-cta-reveal text-xl text-gray-400 mb-10 leading-relaxed">
@@ -58,7 +58,7 @@ export default function FinalCta() {
             </button>
           </a>
           <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-            <button className="bg-white/5 text-white px-10 py-4 rounded-2xl text-lg font-bold hover:bg-white/10 transition-all duration-300 border border-white/10 w-full sm:w-auto">
+            <button className="bg-white/5 text-[var(--studio-text)] px-10 py-4 rounded-2xl text-lg font-bold hover:bg-white/10 transition-all duration-300 border border-white/10 w-full sm:w-auto">
               WhatsApp
             </button>
           </a>

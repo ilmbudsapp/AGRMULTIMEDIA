@@ -497,7 +497,7 @@ export default function HomeSeoSection() {
   return (
     <section
       id="seo-content"
-      className="premium-section scroll-mt-20 border-b border-[#333333] bg-[#07070b] py-16 md:py-20"
+      className="premium-section scroll-mt-20 border-b border-[var(--studio-border)] bg-[var(--studio-bg)] py-16 md:py-20"
       aria-labelledby="seo-section-title"
     >
       <article className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
@@ -515,7 +515,7 @@ export default function HomeSeoSection() {
                   className="h-11 w-auto opacity-95"
                 />
               </picture>
-              <figcaption className="mt-1 max-w-[11rem] text-[0.65rem] leading-snug text-white/45">
+              <figcaption className="mt-1 max-w-[11rem] text-[0.65rem] leading-snug text-[var(--studio-muted)]">
                 {copy.logoCaption}
               </figcaption>
             </figure>
@@ -523,7 +523,7 @@ export default function HomeSeoSection() {
               <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-blue-300/90">{copy.eyebrow}</p>
               <h2
                 id="seo-section-title"
-                className="text-2xl font-semibold tracking-tight text-white sm:text-3xl"
+                className="text-2xl font-semibold tracking-tight text-[var(--studio-text)] sm:text-3xl"
               >
                 {copy.title}
               </h2>
@@ -531,25 +531,25 @@ export default function HomeSeoSection() {
             </div>
           </div>
           <div className="mt-4 rounded-lg border border-white/10 bg-white/[0.04] px-4 py-3">
-            <AuthorByline className="!text-white/95" />
+            <AuthorByline className="!text-[var(--studio-text)]" />
           </div>
-          <p className="mt-4 text-sm leading-relaxed text-white/70">{copy.subtitle}</p>
-          <p id="seo-answer-lead" className="mt-3 text-sm font-medium leading-relaxed text-white/90">
+          <p className="mt-4 text-sm leading-relaxed text-[var(--studio-muted)]">{copy.subtitle}</p>
+          <p id="seo-answer-lead" className="mt-3 text-sm font-medium leading-relaxed text-[var(--studio-text)]">
             {copy.answerLead}
           </p>
         </header>
 
         <aside
-          className="my-8 rounded-xl border border-blue-400/25 bg-blue-500/[0.07] px-4 py-4 text-sm leading-relaxed text-white/85"
+          className="my-8 rounded-xl border border-blue-400/25 bg-blue-500/[0.07] px-4 py-4 text-sm leading-relaxed text-[var(--studio-muted)]"
           aria-label={copy.asideAria}
         >
           <p>
-            <span className="font-medium text-white">{copy.asideLead}</span>{" "}
+            <span className="font-medium text-[var(--studio-text)]">{copy.asideLead}</span>{" "}
             <a
               href="https://www.w3.org/"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-medium text-blue-200 underline-offset-2 hover:text-white hover:underline"
+              className="font-medium text-blue-200 underline-offset-2 hover:text-[var(--studio-accent)] hover:underline"
               aria-label={copy.externalW3C}
             >
               W3C
@@ -559,7 +559,7 @@ export default function HomeSeoSection() {
               href="https://schema.org/"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-medium text-blue-200 underline-offset-2 hover:text-white hover:underline"
+              className="font-medium text-blue-200 underline-offset-2 hover:text-[var(--studio-accent)] hover:underline"
               aria-label={copy.externalSchema}
             >
               Schema.org
@@ -569,7 +569,7 @@ export default function HomeSeoSection() {
               href="https://developer.mozilla.org/en-US/docs/Web/HTML"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-medium text-blue-200 underline-offset-2 hover:text-white hover:underline"
+              className="font-medium text-blue-200 underline-offset-2 hover:text-[var(--studio-accent)] hover:underline"
               aria-label={copy.externalMdn}
             >
               MDN
@@ -578,7 +578,7 @@ export default function HomeSeoSection() {
           </p>
         </aside>
 
-        <p className="text-xs text-white/55">
+        <p className="text-xs text-[var(--studio-muted)]">
           <time dateTime={copy.lastUpdatedIso}>{copy.lastUpdatedDisplay}</time>
           <span className="sr-only"> — </span>
           <span aria-hidden="true"> · </span>
@@ -587,11 +587,11 @@ export default function HomeSeoSection() {
 
         <div
           id="seo-takeaways"
-          className="my-8 rounded-xl border border-emerald-400/30 bg-emerald-500/[0.06] px-4 py-5 text-sm leading-relaxed text-white/90"
+          className="my-8 rounded-xl border border-emerald-400/30 bg-emerald-500/[0.06] px-4 py-5 text-sm leading-relaxed text-[var(--studio-text)]"
           role="region"
           aria-labelledby="seo-takeaways-heading"
         >
-          <p id="seo-takeaways-heading" className="text-sm font-semibold tracking-tight text-white">
+          <p id="seo-takeaways-heading" className="text-sm font-semibold tracking-tight text-[var(--studio-text)]">
             {copy.takeawaysTitle}
           </p>
           <ul className="mt-3 list-disc space-y-2 pl-5 marker:text-emerald-400/90">
@@ -601,11 +601,11 @@ export default function HomeSeoSection() {
           </ul>
         </div>
 
-        <dl className="my-8 grid gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-4 text-sm text-white/85 sm:grid-cols-2">
+        <dl className="my-8 grid gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-4 text-sm text-[var(--studio-muted)] sm:grid-cols-2">
           {copy.kvLines.map(([label, val]) => (
             <div key={label}>
               <dt className="font-semibold text-blue-200">{label}:</dt>
-              <dd className="mt-0.5 leading-relaxed text-white/80">{val}</dd>
+              <dd className="mt-0.5 leading-relaxed text-[var(--studio-muted)]">{val}</dd>
             </div>
           ))}
         </dl>
@@ -614,11 +614,11 @@ export default function HomeSeoSection() {
           className="mb-10 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-4"
           aria-label={copy.tocNavAria}
         >
-          <p className="text-sm font-semibold text-white">{copy.tocTitle}</p>
-          <ol className="mt-3 list-decimal space-y-1.5 pl-5 text-sm text-blue-200/95 marker:text-white/40">
+          <p className="text-sm font-semibold text-[var(--studio-text)]">{copy.tocTitle}</p>
+          <ol className="mt-3 list-decimal space-y-1.5 pl-5 text-sm text-blue-200/95 marker:text-[var(--studio-muted)]">
             {SEO_TOPIC_IDS.map((id, i) => (
               <li key={id}>
-                <a href={`#${id}`} className="underline-offset-2 hover:text-white hover:underline">
+                <a href={`#${id}`} className="underline-offset-2 hover:text-[var(--studio-accent)] hover:underline">
                   {copy.tocLabels[i]}
                 </a>
               </li>
@@ -630,21 +630,21 @@ export default function HomeSeoSection() {
 
         <blockquote
           cite="https://www.linkedin.com/in/agron-osmani-228947266/"
-          className="my-12 border-l-4 border-blue-400/45 bg-white/[0.02] py-4 pl-5 pr-2 text-[0.9375rem] italic leading-relaxed text-white/85"
+          className="my-12 border-l-4 border-blue-400/45 bg-white/[0.02] py-4 pl-5 pr-2 text-[0.9375rem] italic leading-relaxed text-[var(--studio-muted)]"
         >
           <p>{copy.expertQuote}</p>
-          <footer className="mt-3 text-xs not-italic text-white/55">{copy.quoteAttribution}</footer>
+          <footer className="mt-3 text-xs not-italic text-[var(--studio-muted)]">{copy.quoteAttribution}</footer>
         </blockquote>
 
         <section className="border-t border-white/10 pt-10" aria-labelledby="seo-process-h2">
-          <h2 id="seo-process-h2" className="text-xl font-semibold tracking-tight text-white md:text-2xl">
+          <h2 id="seo-process-h2" className="text-xl font-semibold tracking-tight text-[var(--studio-text)] md:text-2xl">
             {copy.processH2}
           </h2>
-          <p id="seo-collab-lead" className="mt-2 text-sm text-white/75">
+          <p id="seo-collab-lead" className="mt-2 text-sm text-[var(--studio-muted)]">
             {copy.collaborationStepsTitle}
           </p>
           <ol
-            className="mt-4 list-decimal space-y-2 pl-5 text-sm leading-relaxed text-white/80 marker:text-blue-300/80"
+            className="mt-4 list-decimal space-y-2 pl-5 text-sm leading-relaxed text-[var(--studio-muted)] marker:text-blue-300/80"
             aria-labelledby="seo-collab-lead"
           >
             {copy.collaborationSteps.map((step) => (
@@ -654,30 +654,30 @@ export default function HomeSeoSection() {
         </section>
 
         <section className="mt-12 border-t border-white/10 pt-10" aria-labelledby="seo-faq-heading">
-          <h2 id="seo-faq-heading" className="text-xl font-semibold tracking-tight text-white md:text-2xl">
+          <h2 id="seo-faq-heading" className="text-xl font-semibold tracking-tight text-[var(--studio-text)] md:text-2xl">
             {copy.faqTitle}
           </h2>
           <div className="mt-4 space-y-3">
             {copy.faq.map((item) => (
               <details
                 key={item.q}
-                className="rounded-lg border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-white/85 open:bg-white/[0.05]"
+                className="rounded-lg border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-[var(--studio-muted)] open:bg-white/[0.05]"
               >
-                <summary className="cursor-pointer font-medium text-white outline-none [&::-webkit-details-marker]:hidden">
+                <summary className="cursor-pointer font-medium text-[var(--studio-text)] outline-none [&::-webkit-details-marker]:hidden">
                   {item.q}
                 </summary>
-                <p className="mt-3 leading-relaxed text-white/75">{item.a}</p>
+                <p className="mt-3 leading-relaxed text-[var(--studio-muted)]">{item.a}</p>
               </details>
             ))}
           </div>
         </section>
 
         <section className="mt-12 border-t border-white/10 pt-10" aria-labelledby="seo-jsonld-example-heading">
-          <h3 id="seo-jsonld-example-heading" className="text-lg font-semibold text-white">
+          <h3 id="seo-jsonld-example-heading" className="text-lg font-semibold text-[var(--studio-text)]">
             {copy.jsonLdExampleTitle}
           </h3>
-          <figure className="mt-4 overflow-hidden rounded-lg border border-white/10 bg-[#0a0a12]">
-            <figcaption className="border-b border-white/10 px-4 py-2 text-xs text-white/75">
+          <figure className="mt-4 overflow-hidden rounded-lg border border-white/10 bg-[var(--studio-surface)]">
+            <figcaption className="border-b border-white/10 px-4 py-2 text-xs text-[var(--studio-muted)]">
               {copy.jsonLdExampleCaption}
             </figcaption>
             <pre className="max-h-56 overflow-auto p-4 text-[0.7rem] leading-relaxed text-emerald-100/95 md:text-xs">

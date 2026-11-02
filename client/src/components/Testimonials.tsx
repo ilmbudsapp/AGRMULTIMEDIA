@@ -134,20 +134,20 @@ export default function Testimonials() {
   const copy = COPY[currentLanguage] ?? COPY.en;
 
   return (
-    <section id="testimonials" className="premium-section scroll-mt-24 border-t border-[#333333] py-20 md:py-24">
+    <section id="testimonials" className="premium-section scroll-mt-24 border-t border-[var(--studio-border)] py-20 md:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <h2 className="text-center text-3xl font-semibold tracking-tight text-white md:text-4xl">{copy.heading}</h2>
+        <h2 className="text-center text-3xl font-semibold tracking-tight text-[var(--studio-text)] md:text-4xl">{copy.heading}</h2>
         <div className="mt-10 grid gap-4 md:grid-cols-3">
           {copy.items.map((item, index) => (
             <article key={`${item.name}-${index}`}>
               <blockquote className="premium-card h-full rounded-2xl p-6 shadow-[0_8px_30px_rgba(0,0,0,0.25)] md:p-7">
-                <p className="text-base leading-relaxed text-white/85">&ldquo;{item.quote}&rdquo;</p>
+                <p className="text-base leading-relaxed text-[var(--studio-muted)]">&ldquo;{item.quote}&rdquo;</p>
                 <p className="mt-5 text-sm tracking-[0.08em] text-yellow-300/90" aria-hidden>
                   ★★★★★
                 </p>
                 <footer>
-                  <p className="mt-3 font-semibold text-white">{item.name}</p>
-                  <p className="text-sm text-white/60">{item.business}</p>
+                  <p className="mt-3 font-semibold text-[var(--studio-text)]">{item.name}</p>
+                  <p className="text-sm text-[var(--studio-muted)]">{item.business}</p>
                 </footer>
               </blockquote>
             </article>

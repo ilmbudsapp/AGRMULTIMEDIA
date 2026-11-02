@@ -64,7 +64,7 @@ export default function ServicePageTemplate({
   ];
 
   return (
-    <div className="min-h-screen w-full max-w-[100vw] overflow-x-hidden bg-[#f5f4f2] text-neutral-900">
+    <div className="min-h-screen w-full max-w-[100vw] overflow-x-hidden bg-[var(--studio-bg)] text-[var(--studio-text)]">
       <Navigation />
       <main className="pt-24 pb-20">
         <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -446,12 +446,12 @@ export default function ServicePageTemplate({
         </section>
 
         <section id="contact-cta" className="mx-auto mt-8 max-w-6xl px-4 sm:px-6 lg:px-8">
-          <article className="rounded-2xl border border-neutral-200 bg-neutral-900 p-8 text-white shadow-[0_16px_40px_rgba(15,23,42,0.22)]">
-            <h2 className="text-2xl font-semibold tracking-tight">{ctaTitle}</h2>
-            <p className="mt-3 max-w-2xl text-neutral-300">{ctaText}</p>
+          <article className="rounded-2xl border border-[var(--studio-border)] bg-[var(--studio-surface)] p-8 shadow-[0_16px_40px_-24px_rgba(80,52,28,0.28)]">
+            <h2 className="font-display text-2xl font-medium tracking-tight">{ctaTitle}</h2>
+            <p className="mt-3 max-w-2xl text-[var(--studio-muted)]">{ctaText}</p>
             <Link
               href="/contact"
-              className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-neutral-900 transition hover:bg-neutral-200"
+              className="premium-cta mt-6 inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold"
             >
               {ctaButton}
               <ArrowRight className="h-4 w-4" />

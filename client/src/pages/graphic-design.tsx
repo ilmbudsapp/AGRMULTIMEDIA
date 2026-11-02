@@ -290,16 +290,16 @@ export default function GraphicDesign() {
       />
       
       {/* Additional Content Section */}
-      <section className="border-t border-[#2a2a30] bg-[#0c0c10] py-16 md:py-20">
+      <section className="border-t border-[var(--studio-border)] bg-[#efe8db] py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="premium-card rounded-2xl p-8 md:p-10">
             <div className="mb-6 flex items-center justify-between">
-              <h2 className="font-display text-2xl font-semibold tracking-tight text-white md:text-3xl">
+              <h2 className="font-display text-2xl font-semibold tracking-tight text-[var(--studio-text)] md:text-3xl">
                 {copy.contentSectionTitle}
               </h2>
               <UpdateDate />
             </div>
-            <p className="text-base leading-relaxed text-white/75 md:text-lg">
+            <p className="text-base leading-relaxed text-[var(--studio-muted)] md:text-lg">
               {copy.contentSectionText}
             </p>
           </div>
@@ -311,7 +311,7 @@ export default function GraphicDesign() {
       <GeoAeoDefinitions />
       <ComparisonTable />
       
-      <section className="border-t border-[#2a2a30] py-16 md:py-20">
+      <section className="border-t border-[var(--studio-border)] py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 text-center">
           <GoogleReviewsLink />
         </div>

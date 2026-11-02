@@ -1,4 +1,4 @@
-﻿import { useRef } from "react";
+import { useRef } from "react";
 
 export type PortfolioVideoClip = {
   id: string;
@@ -48,7 +48,7 @@ function PortfolioVideoClipCard({
 
   return (
     <figure
-      className="group overflow-hidden rounded-xl border border-white/[0.08] bg-black/40"
+      className="group overflow-hidden rounded-xl border border-[var(--studio-border)] bg-black/40"
       onMouseEnter={playOnHover}
       onMouseLeave={pauseOnLeave}
       onPointerDown={() => {

@@ -30,7 +30,7 @@ export default function DigitalMarketingTrends2024() {
               </Button>
             </Link>
             <div>
-              <p className="text-2xl font-bold text-gray-900 dark:text-white">
+              <p className="text-2xl font-bold text-gray-900 dark:text-[var(--studio-text)]">
                 {t.blogPost?.trends?.title || "Digital Marketing Trends 2024"}
               </p>
               <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -46,7 +46,7 @@ export default function DigitalMarketingTrends2024() {
         <div className="max-w-4xl mx-auto">
           {/* Article Meta */}
           <div className="flex flex-wrap items-center gap-4 mb-8">
-            <Badge className="bg-electric-blue text-white">
+            <Badge className="bg-electric-blue text-[var(--studio-text)]">
               {t.blogPost?.trends?.category || "Digital Marketing"}
             </Badge>
             <div className="flex items-center gap-2 text-gray-600">
@@ -74,7 +74,7 @@ export default function DigitalMarketingTrends2024() {
 
           {/* Article Content */}
           <article className="prose prose-lg max-w-none">
-            <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
+            <h1 className="text-4xl font-bold text-gray-900 dark:text-[var(--studio-text)] mb-6">
               {t.blogPost?.trends?.title || "Digital Marketing Trends That Will Shape 2024"}
             </h1>
 
@@ -124,7 +124,7 @@ export default function DigitalMarketingTrends2024() {
               </Card>
             </div>
 
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mt-12 mb-6">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-[var(--studio-text)] mt-12 mb-6">
               {t.blogPost?.trends?.implementation?.title || "Implementing These Trends"}
             </h2>
 

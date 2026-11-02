@@ -105,49 +105,49 @@ export default function Contact({ asPage = false }: ContactProps) {
   }
 
   return (
-    <section ref={sectionRef} id="contact" className="scroll-mt-24 py-20 md:py-28 bg-[#06060d] border-t border-white/[0.06]">
+    <section ref={sectionRef} id="contact" className="scroll-mt-24 py-20 md:py-28 bg-[var(--studio-bg)] border-t border-[var(--studio-border)]">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <p className="contact-reveal text-violet-400 font-semibold text-sm uppercase tracking-[0.2em] mb-3">
+        <p className="contact-reveal text-[var(--studio-accent)] font-semibold text-sm uppercase tracking-[0.2em] mb-3">
           {t.nav.contact}
         </p>
         {asPage ? (
           <h1
-            className="contact-reveal text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-tight"
+            className="contact-reveal mb-4 font-display text-4xl font-medium tracking-tight text-[var(--studio-text)] md:text-5xl"
             data-testid="contact-title"
           >
             {t.contact.title}
           </h1>
         ) : (
           <h2
-            className="contact-reveal text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-tight"
+            className="contact-reveal mb-4 font-display text-4xl font-medium tracking-tight text-[var(--studio-text)] md:text-5xl"
             data-testid="contact-title"
           >
             {t.contact.title}
           </h2>
         )}
         <p
-          className="contact-reveal text-xl text-gray-300 mb-8"
+          className="contact-reveal mb-8 font-display text-xl text-[var(--studio-muted)]"
           data-testid="contact-subtitle"
         >
           {t.contact.subtitle}
         </p>
 
-        <p className="contact-reveal text-gray-400 text-base md:text-lg mb-12 max-w-xl mx-auto leading-relaxed">
+        <p className="contact-reveal mx-auto mb-12 max-w-xl text-base leading-relaxed text-[var(--studio-muted)] md:text-lg">
           {t.contact.instruction}
         </p>
 
         <form
           onSubmit={handleSubmit}
-          className="contact-reveal text-left max-w-xl mx-auto mb-14 rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-md px-5 py-6 sm:px-8 sm:py-8 shadow-[0_8px_40px_rgba(0,0,0,0.25)]"
+          className="contact-reveal premium-card mx-auto mb-14 max-w-xl px-5 py-6 text-left sm:px-8 sm:py-8"
           noValidate
           data-testid="contact-form"
         >
-          <h3 className="text-lg font-semibold text-white mb-1">{t.contact.form.title}</h3>
-          <p className="text-sm text-gray-400 mb-6 leading-relaxed">{t.contact.form.intro}</p>
+          <h3 className="text-lg font-semibold text-[var(--studio-text)] mb-1">{t.contact.form.title}</h3>
+          <p className="mb-6 text-sm leading-relaxed text-[var(--studio-muted)]">{t.contact.form.intro}</p>
 
           <div className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="contact-name" className="text-gray-300">
+              <Label htmlFor="contact-name" className="text-[var(--studio-muted)]">
                 {t.contact.form.name}
               </Label>
               <Input
@@ -161,11 +161,11 @@ export default function Contact({ asPage = false }: ContactProps) {
                   setName(e.target.value);
                 }}
                 disabled={submitState === "loading"}
-                className="border-white/15 bg-[#0a0a12] text-white placeholder:text-gray-500 focus-visible:ring-violet-500/50"
+                className="border-[var(--studio-border)] bg-[#f7f2ea] text-[var(--studio-text)] placeholder:text-[var(--studio-muted)] focus-visible:ring-[var(--studio-accent)]/40"
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="contact-email" className="text-gray-300">
+              <Label htmlFor="contact-email" className="text-[var(--studio-muted)]">
                 {t.contact.form.email}
               </Label>
               <Input
@@ -179,11 +179,11 @@ export default function Contact({ asPage = false }: ContactProps) {
                   setEmail(e.target.value);
                 }}
                 disabled={submitState === "loading"}
-                className="border-white/15 bg-[#0a0a12] text-white placeholder:text-gray-500 focus-visible:ring-violet-500/50"
+                className="border-[var(--studio-border)] bg-[#f7f2ea] text-[var(--studio-text)] placeholder:text-[var(--studio-muted)] focus-visible:ring-[var(--studio-accent)]/40"
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="contact-message" className="text-gray-300">
+              <Label htmlFor="contact-message" className="text-[var(--studio-muted)]">
                 {t.contact.form.message}
               </Label>
               <Textarea
@@ -196,37 +196,37 @@ export default function Contact({ asPage = false }: ContactProps) {
                   setMessage(e.target.value);
                 }}
                 disabled={submitState === "loading"}
-                className="min-h-[120px] resize-y border-white/15 bg-[#0a0a12] text-white placeholder:text-gray-500 focus-visible:ring-violet-500/50"
+                className="min-h-[120px] resize-y border-[var(--studio-border)] bg-[#f7f2ea] text-[var(--studio-text)] placeholder:text-[var(--studio-muted)] focus-visible:ring-[var(--studio-accent)]/40"
               />
             </div>
           </div>
 
           {submitState === "success" && (
             <div
-              className="mt-5 rounded-xl border border-emerald-500/30 bg-emerald-500/10 px-4 py-3 text-sm text-emerald-100"
+              className="mt-5 rounded-xl border border-emerald-700/25 bg-emerald-50 px-4 py-3 text-sm text-emerald-900"
               role="status"
               data-testid="contact-form-success"
             >
-              <p className="font-medium text-emerald-50">{t.contact.success.title}</p>
-              <p className="mt-1 text-emerald-100/90">{t.contact.success.description}</p>
+              <p className="font-medium text-emerald-900">{t.contact.success.title}</p>
+              <p className="mt-1 text-emerald-800">{t.contact.success.description}</p>
             </div>
           )}
 
           {submitState === "error" && feedback && (
             <div
-              className="mt-5 rounded-xl border border-red-500/35 bg-red-500/10 px-4 py-3 text-sm text-red-100"
+              className="mt-5 rounded-xl border border-red-700/25 bg-red-50 px-4 py-3 text-sm text-red-900"
               role="alert"
               data-testid="contact-form-error"
             >
-              <p className="font-medium text-red-50">{t.contact.error.title}</p>
-              <p className="mt-1 text-red-100/90">{feedback}</p>
+              <p className="font-medium text-red-900">{t.contact.error.title}</p>
+              <p className="mt-1 text-red-800">{feedback}</p>
             </div>
           )}
 
           <button
             type="submit"
             disabled={submitState === "loading"}
-            className="mt-6 w-full rounded-xl bg-violet-600 px-4 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-violet-500 disabled:opacity-60"
+            className="premium-cta mt-6 w-full rounded-full px-4 py-3 text-sm font-semibold disabled:opacity-60"
           >
             {submitState === "loading" ? (
               <span className="inline-flex items-center justify-center gap-2">
@@ -245,14 +245,14 @@ export default function Contact({ asPage = false }: ContactProps) {
             className="contact-reveal contact-glass-card w-full flex items-center gap-4 rounded-2xl px-6 py-4 justify-center lg:justify-start group"
             data-testid="contact-email"
           >
-            <div className="bg-violet-500/15 w-12 h-12 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-violet-500/25 transition-colors border border-violet-400/20">
-              <Mail className="text-violet-300 w-5 h-5" />
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[var(--studio-border)] bg-[#f7f2ea] transition-colors group-hover:border-[var(--studio-accent)]">
+              <Mail className="text-[var(--studio-accent)] w-5 h-5" />
             </div>
             <div className="text-left">
-              <p className="text-xs uppercase tracking-wider text-gray-400 font-medium">
+              <p className="text-xs font-medium uppercase tracking-wider text-[var(--studio-muted)]">
                 {t.contact.info.email}
               </p>
-              <p className="text-white font-bold text-sm sm:text-base lg:text-lg whitespace-nowrap">
+              <p className="text-[var(--studio-text)] font-bold text-sm sm:text-base lg:text-lg whitespace-nowrap">
                 {EMAIL}
               </p>
             </div>
@@ -263,14 +263,14 @@ export default function Contact({ asPage = false }: ContactProps) {
             className="contact-reveal contact-glass-card w-full flex items-center gap-4 rounded-2xl px-6 py-4 justify-center sm:justify-start group"
             data-testid="contact-phone"
           >
-            <div className="bg-violet-500/15 w-12 h-12 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-violet-500/25 transition-colors border border-violet-400/20">
-              <Phone className="text-violet-300 w-5 h-5" />
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[var(--studio-border)] bg-[#f7f2ea] transition-colors group-hover:border-[var(--studio-accent)]">
+              <Phone className="text-[var(--studio-accent)] w-5 h-5" />
             </div>
             <div className="text-left">
-              <p className="text-xs uppercase tracking-wider text-gray-400 font-medium">
+              <p className="text-xs font-medium uppercase tracking-wider text-[var(--studio-muted)]">
                 {t.contact.info.phone}
               </p>
-              <p className="text-white font-bold text-sm sm:text-base lg:text-lg whitespace-nowrap">
+              <p className="text-[var(--studio-text)] font-bold text-sm sm:text-base lg:text-lg whitespace-nowrap">
                 {PHONE}
               </p>
             </div>
@@ -283,14 +283,14 @@ export default function Contact({ asPage = false }: ContactProps) {
             className="contact-reveal contact-glass-card w-full flex items-center gap-4 rounded-2xl px-6 py-4 justify-center sm:justify-start group sm:col-span-2 lg:col-span-1"
             data-testid="contact-location"
           >
-            <div className="bg-violet-500/15 w-12 h-12 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-violet-500/25 transition-colors border border-violet-400/20">
-              <MapPin className="text-violet-300 w-5 h-5" />
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[var(--studio-border)] bg-[#f7f2ea] transition-colors group-hover:border-[var(--studio-accent)]">
+              <MapPin className="text-[var(--studio-accent)] w-5 h-5" />
             </div>
             <div className="text-left">
-              <p className="text-xs uppercase tracking-wider text-gray-400 font-medium">
+              <p className="text-xs font-medium uppercase tracking-wider text-[var(--studio-muted)]">
                 {t.contact.info.title}
               </p>
-              <p className="text-white font-bold text-sm sm:text-base lg:text-lg whitespace-nowrap">
+              <p className="text-[var(--studio-text)] font-bold text-sm sm:text-base lg:text-lg whitespace-nowrap">
                 {t.contact.info.location}
               </p>
             </div>
@@ -298,7 +298,7 @@ export default function Contact({ asPage = false }: ContactProps) {
         </div>
 
         <div className="mt-10 contact-reveal">
-          <p className="text-gray-500 text-sm" data-testid="contact-trust-line">
+          <p className="text-sm text-[var(--studio-muted)]" data-testid="contact-trust-line">
             {t.contact.trustLine}
           </p>
         </div>

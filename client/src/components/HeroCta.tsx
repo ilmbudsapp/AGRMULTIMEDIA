@@ -23,7 +23,7 @@ export default function HeroCta() {
             <a href={EMAIL_LINK} className="w-full sm:w-auto">
               <button
                 type="button"
-                className="w-full sm:w-auto inline-flex items-center justify-center px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-navy text-white font-semibold text-sm sm:text-base shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
+                className="premium-cta inline-flex w-full items-center justify-center rounded-full px-6 py-3.5 text-sm font-semibold sm:w-auto sm:px-8 sm:py-4 sm:text-base"
               >
                 {tSpec.heroCta.button}
               </button>
@@ -31,7 +31,7 @@ export default function HeroCta() {
             <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
               <button
                 type="button"
-                className="w-full sm:w-auto inline-flex items-center justify-center px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-white/5 text-white font-semibold text-sm sm:text-base border border-white/10 shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
+                className="inline-flex w-full items-center justify-center rounded-full border border-[var(--studio-border)] bg-[var(--studio-surface)] px-6 py-3.5 text-sm font-semibold text-[var(--studio-text)] sm:w-auto sm:px-8 sm:py-4 sm:text-base"
               >
                 WhatsApp
               </button>

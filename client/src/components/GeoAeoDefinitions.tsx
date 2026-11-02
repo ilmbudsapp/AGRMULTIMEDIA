@@ -151,16 +151,16 @@ export default function GeoAeoDefinitions() {
   const copy = DEFINITIONS_COPY[currentLanguage];
 
   return (
-    <section className="border-t border-[#2a2a30] py-16 md:py-20" aria-labelledby="definitions-heading">
+    <section className="border-t border-[var(--studio-border)] py-16 md:py-20" aria-labelledby="definitions-heading">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 text-center">
           <h2
             id="definitions-heading"
-            className="font-display text-2xl font-semibold tracking-tight text-white md:text-3xl"
+            className="font-display text-2xl font-semibold tracking-tight text-[var(--studio-text)] md:text-3xl"
           >
             {copy.title}
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-sm text-white/65 md:text-base">{copy.subtitle}</p>
+          <p className="mx-auto mt-4 max-w-2xl text-sm text-[var(--studio-muted)] md:text-base">{copy.subtitle}</p>
         </div>
 
         <div className="space-y-6">
@@ -175,14 +175,14 @@ export default function GeoAeoDefinitions() {
                 {def.icon}
               </div>
               <div className="flex-1">
-                <h3 className="text-lg font-semibold text-white" itemProp="name">
+                <h3 className="text-lg font-semibold text-[var(--studio-text)]" itemProp="name">
                   {def.term}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-white/75 md:text-base" itemProp="description">
+                <p className="mt-2 text-sm leading-relaxed text-[var(--studio-muted)] md:text-base" itemProp="description">
                   {def.definition}
                 </p>
                 {def.source && (
-                  <p className="mt-3 text-xs text-white/50">
+                  <p className="mt-3 text-xs text-[var(--studio-muted)]">
                     <cite>{def.source}</cite>
                   </p>
                 )}

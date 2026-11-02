@@ -33,7 +33,7 @@ export default function PackagingDesign() {
               </Button>
             </Link>
             <div>
-              <p className="text-2xl font-bold text-gray-900 dark:text-white">
+              <p className="text-2xl font-bold text-gray-900 dark:text-[var(--studio-text)]">
                 {currentLanguage === 'sr' ? 'Packaging Dizajn' : 
                  currentLanguage === 'en' ? 'Packaging Design' :
                  currentLanguage === 'de' ? 'Verpackungsdesign' : 
@@ -57,21 +57,21 @@ export default function PackagingDesign() {
         <div className="max-w-6xl mx-auto">
           {/* Project Meta */}
           <div className="flex flex-wrap items-center gap-4 mb-8">
-            <Badge className="bg-pink-500 text-white">
+            <Badge className="bg-pink-500 text-[var(--studio-text)]">
               {currentLanguage === 'sr' ? 'Packaging' : 
                currentLanguage === 'en' ? 'Packaging' :
                currentLanguage === 'de' ? 'Verpackung' : 
                currentLanguage === 'sq' ? 'Paketimi' :
                'Packaging'}
             </Badge>
-            <Badge className="bg-purple-500 text-white">
+            <Badge className="bg-purple-500 text-[var(--studio-text)]">
               {currentLanguage === 'sr' ? 'Dizajn' : 
                currentLanguage === 'en' ? 'Design' :
                currentLanguage === 'de' ? 'Design' : 
                currentLanguage === 'sq' ? 'Dizajni' :
                'Dizajn'}
             </Badge>
-            <Badge className="bg-orange-500 text-white">
+            <Badge className="bg-orange-500 text-[var(--studio-text)]">
               {currentLanguage === 'sr' ? 'Brending' : 
                currentLanguage === 'en' ? 'Branding' :
                currentLanguage === 'de' ? 'Branding' : 
@@ -94,7 +94,7 @@ export default function PackagingDesign() {
           {/* Project Overview */}
           <div className="grid lg:grid-cols-3 gap-12 mb-16">
             <div className="lg:col-span-2">
-              <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+              <h1 className="text-3xl font-bold text-gray-900 dark:text-[var(--studio-text)] mb-6">
                 {currentLanguage === 'sr' ? 'Kreativni Packaging Dizajn koji Privlači Pažnju' : 
                  currentLanguage === 'en' ? 'Creative Packaging Design that Attracts Attention' :
                  currentLanguage === 'de' ? 'Kreatives Verpackungsdesign, das Aufmerksamkeit erregt' : 
@@ -382,7 +382,7 @@ export default function PackagingDesign() {
 
           {/* Packaging Showcase */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-[var(--studio-text)] mb-8 text-center">
               {currentLanguage === 'sr' ? 'Portfolio Packaging Rešenja' : 
                currentLanguage === 'en' ? 'Packaging Solutions Portfolio' :
                currentLanguage === 'de' ? 'Verpackungslösungen Portfolio' : 
@@ -417,7 +417,7 @@ export default function PackagingDesign() {
 
           {/* Design Categories */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-[var(--studio-text)] mb-8 text-center">
               {currentLanguage === 'sr' ? 'Kategorije Packaging Dizajna' : 
                currentLanguage === 'en' ? 'Packaging Design Categories' :
                currentLanguage === 'de' ? 'Verpackungsdesign-Kategorien' : 
@@ -518,7 +518,7 @@ export default function PackagingDesign() {
 
           {/* Design Process */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-[var(--studio-text)] mb-8 text-center">
               {currentLanguage === 'sr' ? 'Kreativni Proces Packaging Dizajna' : 
                currentLanguage === 'en' ? 'Creative Packaging Design Process' :
                currentLanguage === 'de' ? 'Kreativer Verpackungsdesign-Prozess' : 
@@ -630,7 +630,7 @@ export default function PackagingDesign() {
           </div>
 
           {/* CTA Section */}
-          <div className="bg-gradient-to-r from-pink-500 to-purple-500 rounded-2xl p-8 text-white text-center">
+          <div className="bg-gradient-to-r from-pink-500 to-purple-500 rounded-2xl p-8 text-[var(--studio-text)] text-center">
             <h3 className="text-2xl font-bold mb-4">
               {currentLanguage === 'sr' ? 'Vaš Proizvod Zaslužuje Izuzetnu Ambalažu!' : 
                currentLanguage === 'en' ? 'Your Product Deserves Exceptional Packaging!' :

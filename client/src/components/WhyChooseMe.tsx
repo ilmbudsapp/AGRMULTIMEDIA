@@ -87,15 +87,15 @@ export default function WhyChooseMe() {
   const scrollHint = NAV_SCROLL_ON_PAGE_HINT[lang] ?? NAV_SCROLL_ON_PAGE_HINT.en;
 
   return (
-    <section id="why-choose-me" className="premium-section scroll-mt-24 border-t border-[#333333] py-20 md:py-24">
+    <section id="why-choose-me" className="premium-section scroll-mt-24 border-t border-[var(--studio-border)] py-20 md:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-semibold tracking-tight text-white md:text-4xl">{copy.title}</h2>
+        <h2 className="text-3xl font-semibold tracking-tight text-[var(--studio-text)] md:text-4xl">{copy.title}</h2>
 
         <ul className="mt-8 grid gap-4 md:grid-cols-2">
           {copy.points.map((point) => (
             <li key={point} className="premium-card flex items-start gap-3 p-4 md:p-5">
               <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-blue-300" strokeWidth={1.8} />
-              <span className="text-sm leading-relaxed text-white/85 md:text-base">{point}</span>
+              <span className="text-sm leading-relaxed text-[var(--studio-muted)] md:text-base">{point}</span>
             </li>
           ))}
         </ul>
@@ -105,7 +105,7 @@ export default function WhyChooseMe() {
           <span className="relative inline-flex rounded-full border border-blue-300/50 bg-blue-400/15 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-blue-100">
             {copy.ctaBadge}
           </span>
-          <p className="relative mt-4 text-lg font-semibold text-white md:text-xl">{copy.ctaLead}</p>
+          <p className="relative mt-4 text-lg font-semibold text-[var(--studio-text)] md:text-xl">{copy.ctaLead}</p>
           <a
             href="#contact"
             aria-label={`${copy.ctaButton} ${scrollHint}`}
@@ -113,7 +113,7 @@ export default function WhyChooseMe() {
           >
             {copy.ctaButton}
           </a>
-          <p className="relative mt-3 text-xs text-white/75 md:text-sm">{copy.ctaMeta}</p>
+          <p className="relative mt-3 text-xs text-[var(--studio-muted)] md:text-sm">{copy.ctaMeta}</p>
         </div>
       </div>
     </section>

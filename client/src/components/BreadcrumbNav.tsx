@@ -15,22 +15,22 @@ export default function BreadcrumbNav() {
       aria-label="Brotkrumen-Navigation"
       className="mx-auto max-w-6xl px-4 pb-4 pt-2 sm:px-6 lg:px-8"
     >
-      <ol className="flex flex-wrap items-center gap-1.5 text-xs text-white/50 md:text-sm">
+      <ol className="flex flex-wrap items-center gap-1.5 text-xs text-[var(--studio-muted)] md:text-sm">
         {items.map((item, index) => {
           const isLast = index === items.length - 1;
           return (
             <li key={item.path} className="flex items-center gap-1.5">
               {index > 0 && (
-                <span className="text-white/30" aria-hidden>
+                <span className="text-[var(--studio-border)]" aria-hidden>
                   /
                 </span>
               )}
               {isLast ? (
-                <span className="font-medium text-blue-200/90" aria-current="page">
+                <span className="font-medium text-[var(--studio-text)]" aria-current="page">
                   {item.name}
                 </span>
               ) : (
-                <Link href={item.path} className="underline-offset-2 transition hover:text-white/80 hover:underline">
+                <Link href={item.path} className="underline-offset-2 transition hover:text-[var(--studio-muted)] hover:underline">
                   {item.name}
                 </Link>
               )}

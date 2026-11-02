@@ -21,7 +21,7 @@ export default function GermanBlogArticlePage() {
 
   if (!post) {
     return (
-      <div className="min-h-screen bg-[#0a0a0f] text-white">
+      <div className="min-h-screen bg-[var(--studio-bg)] text-[var(--studio-text)]">
         <Navigation />
         <main className="mx-auto max-w-3xl px-4 py-32 text-center">
           <h1 className="text-2xl font-semibold">Artikel nicht gefunden</h1>
@@ -35,7 +35,7 @@ export default function GermanBlogArticlePage() {
   }
 
   return (
-    <div className="min-h-screen w-full max-w-[100vw] overflow-x-hidden bg-[#0a0a0f]">
+    <div className="min-h-screen w-full max-w-[100vw] overflow-x-hidden bg-[var(--studio-bg)]">
       <BlogPostingJsonLd
         slug={post.slug}
         headline={post.title}
@@ -52,7 +52,7 @@ export default function GermanBlogArticlePage() {
             <time dateTime={post.date}>{post.date}</time>
           </p>
           <AuthorByline className="mt-3" variant="lightOnDark" language="de" />
-          <h1 className="mt-4 text-3xl font-bold text-white md:text-4xl">{post.title}</h1>
+          <h1 className="mt-4 text-3xl font-bold text-[var(--studio-text)] md:text-4xl">{post.title}</h1>
           <p className="mt-4 text-lg leading-relaxed text-gray-400">{post.description}</p>
           <img
             src={post.image}
@@ -64,7 +64,7 @@ export default function GermanBlogArticlePage() {
           <div className="prose-invert mt-10 space-y-10">
             {post.sections.map((section) => (
               <section key={section.heading}>
-                <h2 className="text-xl font-semibold text-white md:text-2xl">{section.heading}</h2>
+                <h2 className="text-xl font-semibold text-[var(--studio-text)] md:text-2xl">{section.heading}</h2>
                 {section.paragraphs.map((p) => (
                   <p key={p.slice(0, 30)} className="mt-3 leading-relaxed text-gray-300">
                     {p}
@@ -89,7 +89,7 @@ export default function GermanBlogArticlePage() {
           </nav>
 
           <div className="mt-10 rounded-2xl border border-blue-400/30 bg-blue-500/10 px-6 py-8 text-center">
-            <p className="text-lg font-semibold text-white">Projekt starten?</p>
+            <p className="text-lg font-semibold text-[var(--studio-text)]">Projekt starten?</p>
             <Link
               href={ROUTES.kontakt}
               className="mt-4 inline-flex items-center gap-2 rounded-full bg-white px-8 py-3 text-sm font-semibold text-[#0a0a0f] hover:bg-white/90"
