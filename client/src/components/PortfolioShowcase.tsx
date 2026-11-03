@@ -28,6 +28,8 @@ const FIXBIKE_LIVE = "https://fixbike.online/";
 const FIXBIKE_IMG = "/portfolio/referenzen/03-fixbike.webp";
 const ENCHANTED_CHRONICLES_LIVE = "https://www.theenchantedchronicles.com/";
 const ENCHANTED_CHRONICLES_IMG = "/portfolio/referenzen/05-enchanted-chronicles.webp";
+const ILMBUDS_LIVE = "https://www.ilmbuds.com/";
+const ILMBUDS_IMG = "/portfolio/referenzen/04-ilmbuds.webp";
 const LIVE_BTN =
   "inline-flex items-center gap-2 rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-[#0a0a0f] transition hover:bg-white/90";
 
@@ -303,6 +305,20 @@ export default function PortfolioShowcase() {
                     className={LIVE_BTN}
                   >
                     {p.projects.enchantedChronicles.liveCta}
+                    <ExternalLink className="h-4 w-4" aria-hidden />
+                  </a>
+                </ProjectCard>
+                <ProjectCard
+                  image={ILMBUDS_IMG}
+                  title={p.projects.ilmbuds.title}
+                  description={p.projects.ilmbuds.description}
+                  pillarLabel={p.categories.web.title}
+                  pillarIcon={LayoutGrid}
+                  pillarClass={webPillarClass}
+                  gradeBadge={p.projects.ilmbuds.gradeBadge}
+                >
+                  <a href={ILMBUDS_LIVE} target="_blank" rel="noopener noreferrer" className={LIVE_BTN}>
+                    {p.projects.ilmbuds.liveCta}
                     <ExternalLink className="h-4 w-4" aria-hidden />
                   </a>
                 </ProjectCard>

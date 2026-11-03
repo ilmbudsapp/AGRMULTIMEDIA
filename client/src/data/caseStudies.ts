@@ -101,7 +101,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     industry: "Bildungs-App & Webauftritt",
     location: "International / EU",
     liveUrl: "https://www.ilmbuds.com/",
-    heroImage: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600",
+    heroImage: "/portfolio/referenzen/04-ilmbuds.webp",
     problem: [
       "Komplexes Produkt (Bildungs-App) brauchte einen verständlichen Web-Auftritt für Eltern, Lehrkräfte und Partner.",
       "Unklare Kommunikation des Nutzens und der Funktionen auf einer einzigen Landingpage.",

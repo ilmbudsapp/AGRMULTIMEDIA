@@ -38,6 +38,7 @@ export interface PortfolioPageCopy {
     aisaOsmani: PortfolioProjectCopy;
     fixbike: PortfolioProjectCopy;
     enchantedChronicles: PortfolioProjectCopy;
+    ilmbuds: PortfolioProjectCopy;
     theirrealm: {
       title: string;
       subtitle: string;
@@ -139,6 +140,13 @@ const en: PortfolioPageCopy = {
         "Multilingual fantasy storytelling website — illustrated tales, SEO/AEO/GEO structure and live at theenchantedchronicles.com.",
       liveCta: "View live website",
       gradeBadge: "Live · Storytelling",
+    },
+    ilmbuds: {
+      title: "ILMBUDS",
+      description:
+        "Islamic learning website for children — stories, quizzes, games and Quran content in Bosnian, German, English, Albanian and Italian. Live at ilmbuds.com.",
+      liveCta: "View live website",
+      gradeBadge: "Live · Education",
     },
     theirrealm: {
       title: "theirrealmtv CAT",
@@ -242,6 +250,13 @@ const de: PortfolioPageCopy = {
         "Mehrsprachige Fantasy-Website mit magischen Geschichten — SEO, AEO und GEO optimiert, live unter theenchantedchronicles.com.",
       liveCta: "Website live ansehen",
       gradeBadge: "Live · Storytelling",
+    },
+    ilmbuds: {
+      title: "ILMBUDS",
+      description:
+        "Islamische Lernplattform für Kinder — Geschichten, Quiz, Spiele und Koran auf Bosnisch, Deutsch, Englisch, Albanisch und Italienisch. Live unter ilmbuds.com.",
+      liveCta: "Website live ansehen",
+      gradeBadge: "Live · Bildung",
     },
     theirrealm: {
       title: "theirrealmtv CAT",
