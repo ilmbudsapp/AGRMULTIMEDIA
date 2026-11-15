@@ -29,7 +29,7 @@ export function Header() {
         Zum Inhalt
       </a>
       <div className="header-bar">
-        <a className="brand" href={pathname === "/" ? "#start" : "/#start"}>
+        <a className="brand" href="/">
           <img src="/logo.png" alt="" width={900} height={677} />
           <span>
             <strong>{site.name}</strong>
@@ -52,7 +52,12 @@ export function Header() {
       </div>
       <nav id="site-nav" className={open ? "site-nav open" : "site-nav"} aria-label="Hauptnavigation">
         {nav.map((item) => (
-          <a key={item.href} href={item.href} onClick={() => setOpen(false)}>
+          <a
+            key={item.href}
+            href={item.href}
+            aria-current={pathname === item.href ? "page" : undefined}
+            onClick={() => setOpen(false)}
+          >
             {item.label}
           </a>
         ))}

@@ -34,7 +34,7 @@ export function Gallery() {
     <section className="gallery" id="galerie">
       <div className="gallery-head" data-reveal>
         <p className="eyebrow">Referenzen</p>
-        <h2>Galerie / Referenzen</h2>
+        <h1>Galerie / Referenzen</h1>
         <p className="intro">
           Eine Auswahl ausgeführter Arbeiten. Vorher- und Nachher-Bilder zeigen denselben Auftrag.
         </p>
@@ -82,6 +82,9 @@ export function Gallery() {
           ))}
         </ul>
       )}
+      <a className="button button-gold page-cta" href="/kontakt">
+        Jetzt kostenlos und unverbindlich anfragen
+      </a>
 
       {active ? (
         <div className="lightbox" role="presentation" onClick={() => setActive(null)}>

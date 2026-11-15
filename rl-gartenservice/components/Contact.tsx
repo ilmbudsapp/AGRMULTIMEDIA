@@ -69,7 +69,7 @@ export function Contact() {
       <div className="contact-grid">
         <div data-reveal>
           <p className="eyebrow">Kontakt</p>
-          <h2>Kostenlos und unverbindlich anfragen</h2>
+          <h1>Kostenlos und unverbindlich anfragen</h1>
           <address>
             <strong>{site.name}</strong>
             <span>{site.owner}</span>

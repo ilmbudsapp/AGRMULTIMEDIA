@@ -26,7 +26,6 @@ export const metadata: Metadata = {
     template: "%s | RL Gartenservice",
   },
   description: site.description,
-  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "de_DE",

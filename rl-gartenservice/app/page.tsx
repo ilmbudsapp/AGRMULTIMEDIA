@@ -1,11 +1,13 @@
-import { About } from "@/components/About";
+import type { Metadata } from "next";
 import { Area } from "@/components/Area";
-import { Contact } from "@/components/Contact";
-import { Gallery } from "@/components/Gallery";
 import { Hero } from "@/components/Hero";
 import { Leistungen } from "@/components/Leistungen";
-import { ServiceSections } from "@/components/ServiceSections";
 import { places, serviceAreas, site, socials } from "@/content/site";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+  openGraph: { url: "/" },
+};
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -29,10 +31,12 @@ const jsonLd = {
   sameAs: socials.filter((item) => item.href).map((item) => item.href),
   makesOffer: serviceAreas.map((area) => ({
     "@type": "Offer",
+    url: `${site.url}/${area.id}`,
     itemOffered: {
       "@type": "Service",
       name: area.title,
       description: area.intro,
+      url: `${site.url}/${area.id}`,
       areaServed: "Augsburg und Umgebung",
     },
   })),
@@ -44,11 +48,7 @@ export default function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Hero />
       <Leistungen />
-      <ServiceSections />
-      <About />
-      <Gallery />
       <Area />
-      <Contact />
     </main>
   );
 }

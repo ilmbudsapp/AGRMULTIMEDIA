@@ -12,7 +12,7 @@ export function Hero() {
           <h1>{hero.title}</h1>
           <p className="hero-lead">{hero.lead}</p>
           <p className="hero-services">{hero.services}</p>
-          <a className="button button-gold" href="#kontakt">
+          <a className="button button-gold" href="/kontakt">
             {hero.cta}
           </a>
         </div>

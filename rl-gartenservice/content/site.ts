@@ -52,14 +52,14 @@ export const socials: { icon: "instagram" | "facebook" | "tiktok"; label: string
 ];
 
 export const nav = [
-  { href: "/#start", label: "Startseite" },
-  { href: "/#gartenpflege", label: "Gartenpflege" },
-  { href: "/#gartenbau", label: "Gartenbau & Außenanlagen" },
-  { href: "/#hausmeisterservice", label: "Hausmeisterservice & Reinigung" },
-  { href: "/#bodenbelag", label: "Bodenbelagsarbeiten" },
-  { href: "/#ueber-uns", label: "Über uns" },
-  { href: "/#galerie", label: "Galerie / Referenzen" },
-  { href: "/#kontakt", label: "Kontakt" },
+  { href: "/", label: "Startseite" },
+  { href: "/gartenpflege", label: "Gartenpflege" },
+  { href: "/gartenbau", label: "Gartenbau & Außenanlagen" },
+  { href: "/hausmeisterservice", label: "Hausmeisterservice & Reinigung" },
+  { href: "/bodenbelag", label: "Bodenbelagsarbeiten" },
+  { href: "/ueber-uns", label: "Über uns" },
+  { href: "/galerie", label: "Galerie / Referenzen" },
+  { href: "/kontakt", label: "Kontakt" },
 ] as const;
 
 export const hero = {
@@ -205,61 +205,61 @@ export const leistungen: {
   icon: "leaf" | "mower" | "shears" | "broom" | "floor" | "grass" | "paver" | "terrace" | "house" | "fence";
 }[] = [
   {
-    href: "/#gartenpflege",
+    href: "/gartenpflege",
     title: "Gartenpflege",
     text: "Beetpflege, Unkrautentfernung und Laubarbeiten",
     icon: "leaf",
   },
   {
-    href: "/#gartenbau",
+    href: "/gartenbau",
     title: "Rollrasen verlegen",
     text: "Schnelle und saubere Verlegung von Fertigrasen",
     icon: "grass",
   },
   {
-    href: "/#gartenpflege",
+    href: "/gartenpflege",
     title: "Rasenmähen",
     text: "Fachgerechtes Mähen und Rasenpflege",
     icon: "mower",
   },
   {
-    href: "/#gartenbau",
+    href: "/gartenbau",
     title: "Pflasterarbeiten",
     text: "Wege, Einfahrten, Terrassen und Hofflächen",
     icon: "paver",
   },
   {
-    href: "/#gartenpflege",
+    href: "/gartenpflege",
     title: "Hecken- & Strauchschnitt",
     text: "Form- und Rückschnitt für gepflegte Grünflächen",
     icon: "shears",
   },
   {
-    href: "/#gartenbau",
+    href: "/gartenbau",
     title: "Terrassenbau",
     text: "Planung und Bau individueller Terrassen",
     icon: "terrace",
   },
   {
-    href: "/#hausmeisterservice",
+    href: "/hausmeisterservice",
     title: "Reinigung",
     text: "Außenreinigung von Wegen, Terrassen und Einfahrten",
     icon: "broom",
   },
   {
-    href: "/#hausmeisterservice",
+    href: "/hausmeisterservice",
     title: "Hausmeisterservice",
     text: "Außenanlagen, kleine Reparaturen und Instandhaltung",
     icon: "house",
   },
   {
-    href: "/#bodenbelag",
+    href: "/bodenbelag",
     title: "Bodenleger",
     text: "Fachgerechte Verlegung von Bodenbelägen",
     icon: "floor",
   },
   {
-    href: "/#gartenbau",
+    href: "/gartenbau",
     title: "Zaunbau",
     text: "Montage von Zäunen für Gärten und Grundstücke",
     icon: "fence",
@@ -268,25 +268,25 @@ export const leistungen: {
 
 export const overview = [
   {
-    href: "/#gartenpflege",
+    href: "/gartenpflege",
     title: "Gartenpflege",
     text: "Rasen, Hecke, Beete und Laub — regelmäßig oder saisonal.",
     featured: true,
   },
   {
-    href: "/#gartenbau",
+    href: "/gartenbau",
     title: "Gartenbau",
     text: "Pflaster, Terrassen, Zäune und Rollrasen.",
     featured: false,
   },
   {
-    href: "/#hausmeisterservice",
+    href: "/hausmeisterservice",
     title: "Hausmeisterservice",
     text: "Für Privatkunden, Eigentümer und Hausverwaltungen.",
     featured: true,
   },
   {
-    href: "/#bodenbelag",
+    href: "/bodenbelag",
     title: "Bodenbelagsarbeiten",
     text: "Laminat, Vinyl, Parkett und Teppich.",
     featured: false,
