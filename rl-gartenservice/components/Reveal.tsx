@@ -5,18 +5,20 @@ import { useEffect } from "react";
 export function Reveal() {
   useEffect(() => {
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (!reduce && CSS.supports("animation-timeline", "view()")) return;
-    document.documentElement.classList.add("reveal-ready");
     const nodes = new Set<Element>();
     const io = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
           if (!entry.isIntersecting) continue;
-          entry.target.classList.add("is-in");
-          io.unobserve(entry.target);
+          const target = entry.target;
+          target.classList.add("is-armed");
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => target.classList.add("is-in"));
+          });
+          io.unobserve(target);
         }
       },
-      { threshold: 0.16, rootMargin: "0px 0px -6% 0px" },
+      { threshold: 0.2, rootMargin: "0px 0px -8% 0px" },
     );
 
     const watch = () => {

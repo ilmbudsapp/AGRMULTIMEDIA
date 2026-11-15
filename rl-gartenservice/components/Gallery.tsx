@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useId, useRef, useState, type CSSProperties } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import {
   gallery,
   galleryCategories,
@@ -59,25 +59,22 @@ export function Gallery() {
       {visible.length === 0 ? (
         <p className="gallery-empty">{emptyNote}</p>
       ) : (
-        <ul className="gallery-grid">
+        <ul className="gallery-grid" key={filter}>
           {visible.map((item) => (
-            <li key={item.id} data-reveal="photo" style={{ "--d": `${(visible.indexOf(item) % 3) * 80}ms` } as CSSProperties}>
-              <button
-                type="button"
-                className="shot"
-                aria-label={item.kind === "compare" ? `${item.title}: Vorher und Nachher` : item.alt}
-                onClick={() => setActive(item)}
-              >
-                {item.kind === "compare" ? (
-                  <img src={item.after.src} alt={item.after.alt} loading="lazy" />
-                ) : item.kind === "video" ? (
-                  <img src={item.poster} alt={item.alt} loading="lazy" />
-                ) : (
-                  <img src={item.src} alt={item.alt} loading="lazy" />
-                )}
-                {item.kind === "compare" ? <span className="badge">Vorher / Nachher</span> : null}
-                {item.kind === "video" ? <span className="badge">Video</span> : null}
-              </button>
+            <li key={item.id} className={item.kind === "compare" ? "gallery-item is-feature" : "gallery-item"} data-reveal="photo">
+              {item.kind === "compare" ? (
+                <Compare before={item.before} after={item.after} title={item.title} />
+              ) : (
+                <button
+                  type="button"
+                  className="shot"
+                  aria-label={item.alt}
+                  onClick={() => setActive(item)}
+                >
+                  <img src={item.kind === "video" ? item.poster : item.src} alt={item.alt} loading="lazy" />
+                  {item.kind === "video" ? <span className="badge">Video</span> : null}
+                </button>
+              )}
             </li>
           ))}
         </ul>
@@ -102,7 +99,7 @@ export function Gallery() {
               {active.kind === "compare" ? `${active.title}: Vorher / Nachher` : active.alt}
             </h3>
             {active.kind === "compare" ? (
-              <Compare before={active.before} after={active.after} />
+              <Compare before={active.before} after={active.after} title={active.title} />
             ) : active.kind === "video" ? (
               <video controls preload="none" poster={active.poster} src={active.src} />
             ) : (
@@ -118,29 +115,54 @@ export function Gallery() {
 function Compare({
   before,
   after,
+  title,
 }: {
   before: { src: string; alt: string };
   after: { src: string; alt: string };
+  title: string;
 }) {
   const [value, setValue] = useState(50);
+  const frame = useRef<HTMLDivElement>(null);
   const labelId = useId();
+  const inputId = useId();
+
+  function setFromClientX(clientX: number) {
+    const rect = frame.current?.getBoundingClientRect();
+    if (!rect || rect.width === 0) return;
+    const next = ((clientX - rect.left) / rect.width) * 100;
+    setValue(Math.min(100, Math.max(0, next)));
+  }
+
   return (
     <div className="compare">
-      <div className="compare-frame">
-        <img src={after.src} alt={after.alt} />
-        <img src={before.src} alt={before.alt} style={{ clipPath: `inset(0 ${100 - value}% 0 0)` }} />
+      <div
+        className="compare-frame"
+        ref={frame}
+        onPointerDown={(event) => {
+          event.currentTarget.setPointerCapture(event.pointerId);
+          setFromClientX(event.clientX);
+        }}
+        onPointerMove={(event) => {
+          if (!event.currentTarget.hasPointerCapture(event.pointerId)) return;
+          setFromClientX(event.clientX);
+        }}
+      >
+        <img src={after.src} alt={after.alt} loading="lazy" draggable={false} />
+        <img src={before.src} alt="" style={{ clipPath: `inset(0 ${100 - value}% 0 0)` }} loading="lazy" draggable={false} />
         <span className="compare-tag before-tag">Vorher</span>
         <span className="compare-tag after-tag">Nachher</span>
+        <span className="compare-handle" style={{ left: `${value}%` }} aria-hidden="true" />
       </div>
-      <label id={labelId} htmlFor="compare-range">
-        Vorher und Nachher vergleichen
+      <label id={labelId} htmlFor={inputId}>
+        {title}: Vorher und Nachher vergleichen
       </label>
       <input
-        id="compare-range"
+        id={inputId}
         type="range"
         min={0}
         max={100}
-        value={value}
+        step={1}
+        value={Math.round(value)}
         aria-labelledby={labelId}
         onChange={(event) => setValue(Number(event.target.value))}
       />

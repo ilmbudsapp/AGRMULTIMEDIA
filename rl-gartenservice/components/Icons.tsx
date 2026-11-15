@@ -16,7 +16,8 @@ export type IconName =
   | "paver"
   | "terrace"
   | "house"
-  | "fence";
+  | "fence"
+  | "arrow";
 
 const glyphs: Record<IconName, ReactNode> = {
   phone: (
@@ -62,85 +63,92 @@ const glyphs: Record<IconName, ReactNode> = {
   ),
   leaf: (
     <>
-      <path d="M5.5 18.5C13 17.5 18 12 19.2 5.2 12.2 6 6.2 10.2 5.5 18.5Z" />
-      <path d="M9 15.2c1.8-1.6 4.2-3.2 7.2-4.2" />
+      <path d="M5.2 18.6C12.6 17.8 18 12.4 19.4 4.8 12.2 5.6 6.2 9.8 5.2 18.6Z" />
+      <path d="M8.6 15.4c2-1.8 4.6-3.4 7.6-4.4" />
     </>
   ),
   mower: (
     <>
-      <circle cx="7.2" cy="16.6" r="2.1" />
-      <circle cx="16.2" cy="16.6" r="2.1" />
-      <path d="M9.2 16.6h4.2l1.7-4.4H19" />
-      <path d="M5 16.6H3.8" />
-      <path d="M13.2 12.2V8.4h3.2" />
+      <path d="M3.4 13.6h11.2l1.4-2.6H6.2Z" />
+      <circle cx="6.4" cy="17.2" r="2.35" />
+      <circle cx="13.6" cy="17.2" r="2.35" />
+      <path d="M11.6 11.2 17.4 5" />
+      <path d="M17.4 5h3" />
     </>
   ),
   shears: (
     <>
-      <circle cx="6.2" cy="6.4" r="2.3" />
-      <circle cx="6.2" cy="17.6" r="2.3" />
-      <path d="M8.2 7.6 20 17.2" />
-      <path d="M8.2 16.4 20 6.8" />
+      <circle cx="6.4" cy="6.6" r="2.15" />
+      <circle cx="6.4" cy="17.4" r="2.15" />
+      <path d="M8.2 7.8 19.6 16.6" />
+      <path d="M8.2 16.2 19.6 7.4" />
     </>
   ),
   broom: (
     <>
-      <path d="M14.2 3.6 9.2 13" />
-      <path d="M6.2 13h8.2l-.8 7.2H7.2L6.2 13Z" />
-      <path d="M8.4 16.2h4.2" />
+      <path d="M14.2 3.2 10.2 11.2" />
+      <path d="M5.2 12h10.4" />
+      <path d="M6.2 12.2 5 19.2" />
+      <path d="M8.4 12.2 7.8 19.8" />
+      <path d="M10.6 12.2v7.8" />
+      <path d="M12.8 12.2 13.6 19.4" />
+      <path d="M14.8 12.2 16.2 18.6" />
     </>
   ),
   floor: (
     <>
-      <path d="M4 7.2h16v4.2H4z" />
-      <path d="M4 11.4h16v4.2H4z" />
-      <path d="M12 7.2v4.2" />
-      <path d="M8.2 11.4v4.2" />
-      <path d="M15.8 11.4v4.2" />
+      <path d="M4.2 17.2 7.6 6.8h2.6L6.6 17.2Z" />
+      <path d="M8.4 17.2 11.8 6.8h2.6l-3.6 10.4Z" />
+      <path d="M12.6 17.2 16 6.8h2.6l-3.6 10.4Z" />
     </>
   ),
   grass: (
     <>
-      <path d="M12 20V9.5" />
-      <path d="M12 14c-2.6-.6-4.2-3.2-4.2-6.4 2.8.8 4.2 3.2 4.2 6.4Z" />
-      <path d="M12 13.2c2.6-.6 4.6-3.2 4.6-6.4-2.8.8-4.6 3.2-4.6 6.4Z" />
-      <path d="M4.5 20h15" />
+      <path d="M12 20c0-6-2.2-10-4.4-13.2" />
+      <path d="M12 20V4.2" />
+      <path d="M12 20c0-6 2.6-9.4 5-12.4" />
     </>
   ),
   paver: (
     <>
-      <rect x="3.8" y="3.8" width="6.6" height="6.6" rx="1.2" />
-      <rect x="13.6" y="3.8" width="6.6" height="6.6" rx="1.2" />
-      <rect x="3.8" y="13.6" width="6.6" height="6.6" rx="1.2" />
-      <rect x="13.6" y="13.6" width="6.6" height="6.6" rx="1.2" />
+      <rect x="3.4" y="6.2" width="10.2" height="7.6" rx="2" />
+      <rect x="12.6" y="11.2" width="7.6" height="6" rx="1.6" />
     </>
   ),
   terrace: (
     <>
-      <path d="M3.8 10.2h16.4" />
-      <path d="M6 10.2V6.2h12v4" />
-      <path d="M7.2 10.2V19" />
-      <path d="M16.8 10.2V19" />
-      <path d="M7.2 14.4h9.6" />
+      <path d="M3.4 9.4C6 6 8.8 4.6 12 4.6s6 1.4 8.6 4.8" />
+      <path d="M12 4.6v4.8" />
+      <path d="M4.2 14.4h15.6" />
+      <path d="M4.2 17.2h15.6" />
+      <path d="M4.2 20h15.6" />
+      <path d="M12 9.4V20" />
     </>
   ),
   house: (
     <>
-      <path d="M3.8 11.2 12 4.2l8.2 7" />
-      <path d="M6.6 10.4V20h10.8V10.4" />
-      <path d="M10.6 20v-5h2.8v5" />
+      <path d="M3.2 11.4 9.2 6.2l6 5.2" />
+      <path d="M5 10.6V18.6h8.4V10.6" />
+      <path d="M15.6 7.4h3.6v2.1h-3.6Z" />
+      <path d="M17.4 9.5v7.2" />
     </>
   ),
   fence: (
     <>
-      <path d="M6 20V8.2" />
-      <path d="M12 20V8.2" />
-      <path d="M18 20V8.2" />
-      <path d="M4.2 11.4h15.6" />
-      <path d="M4.2 15.2h15.6" />
-      <path d="M6 8.2 7.4 5.4 8.8 8.2" />
-      <path d="M12 8.2 13.4 5.4 14.8 8.2" />
-      <path d="M18 8.2 19.4 5.4 20.8 8.2" />
+      <path d="M5.2 20V9.2" />
+      <path d="M12 20V9.2" />
+      <path d="M18.8 20V9.2" />
+      <path d="M5.2 9.2 6.7 6.2 8.2 9.2" />
+      <path d="M12 9.2 13.5 6.2 15 9.2" />
+      <path d="M18.8 9.2 20.3 6.2l1.5 3" />
+      <path d="M3.6 12.4h17.6" />
+      <path d="M3.6 16h17.6" />
+    </>
+  ),
+  arrow: (
+    <>
+      <path d="M4 12h15" />
+      <path d="M13 6.5 18.5 12 13 17.5" />
     </>
   ),
 };
@@ -153,7 +161,7 @@ export function Icon({ name, ...props }: { name: IconName } & SVGProps<SVGSVGEle
       focusable="false"
       fill="none"
       stroke="currentColor"
-      strokeWidth={2}
+      strokeWidth={1.7}
       strokeLinecap="round"
       strokeLinejoin="round"
       {...props}

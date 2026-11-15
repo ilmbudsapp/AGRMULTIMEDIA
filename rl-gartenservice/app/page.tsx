@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Area } from "@/components/Area";
 import { Hero } from "@/components/Hero";
 import { Leistungen } from "@/components/Leistungen";
+import { Spotlight } from "@/components/Spotlight";
 import { places, serviceAreas, site, socials } from "@/content/site";
 
 export const metadata: Metadata = {
@@ -48,6 +49,7 @@ export default function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Hero />
       <Leistungen />
+      <Spotlight />
       <Area />
     </main>
   );
