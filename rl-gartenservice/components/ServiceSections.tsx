@@ -10,7 +10,7 @@ export function ServiceSections() {
           className={area.featured ? "band band-featured" : "band"}
         >
           <div className="band-inner">
-            <div className="band-copy">
+            <div className="band-copy" data-reveal>
               <p className="eyebrow">{area.featured ? "Schwerpunkt" : "Weiterer Bereich"}</p>
               <h2>{area.title}</h2>
               <p className="intro">{area.intro}</p>
@@ -28,7 +28,7 @@ export function ServiceSections() {
               </div>
             </div>
             {area.image ? (
-              <figure className="band-photo">
+              <figure className="band-photo" data-reveal="photo">
                 <img src={area.image.src} alt={area.image.alt} loading="lazy" />
               </figure>
             ) : null}

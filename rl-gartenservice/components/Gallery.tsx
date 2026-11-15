@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useId, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState, type CSSProperties } from "react";
 import {
   gallery,
   galleryCategories,
@@ -32,7 +32,7 @@ export function Gallery() {
 
   return (
     <section className="gallery" id="galerie">
-      <div className="gallery-head">
+      <div className="gallery-head" data-reveal>
         <p className="eyebrow">Referenzen</p>
         <h2>Galerie / Referenzen</h2>
         <p className="intro">
@@ -61,7 +61,7 @@ export function Gallery() {
       ) : (
         <ul className="gallery-grid">
           {visible.map((item) => (
-            <li key={item.id}>
+            <li key={item.id} data-reveal="photo" style={{ "--d": `${(visible.indexOf(item) % 3) * 80}ms` } as CSSProperties}>
               <button
                 type="button"
                 className="shot"

@@ -23,6 +23,8 @@ export const site = {
     country: "Deutschland",
   },
   areaLine: "Landkreis Augsburg und Umgebung bis 70 km",
+  /** Zameni pravim brojem kad klijent potvrdi. */
+  satisfiedClients: 150,
   title: "RL Gartenservice | Gartenpflege & Hausmeisterservice in Augsburg",
   description:
     "RL Gartenservice in Gersthofen: Gartenpflege, Gartenbau, Hausmeisterservice und Bodenbelagsarbeiten für Augsburg und Umgebung. Jetzt kostenlos und unverbindlich anfragen.",
@@ -193,6 +195,74 @@ export const serviceAreas: ServiceArea[] = [
         ],
       },
     ],
+  },
+];
+
+export const leistungen: {
+  href: string;
+  title: string;
+  text: string;
+  icon: "leaf" | "mower" | "shears" | "broom" | "floor" | "grass" | "paver" | "terrace" | "house" | "fence";
+}[] = [
+  {
+    href: "/#gartenpflege",
+    title: "Gartenpflege",
+    text: "Beetpflege, Unkrautentfernung und Laubarbeiten",
+    icon: "leaf",
+  },
+  {
+    href: "/#gartenbau",
+    title: "Rollrasen verlegen",
+    text: "Schnelle und saubere Verlegung von Fertigrasen",
+    icon: "grass",
+  },
+  {
+    href: "/#gartenpflege",
+    title: "Rasenmähen",
+    text: "Fachgerechtes Mähen und Rasenpflege",
+    icon: "mower",
+  },
+  {
+    href: "/#gartenbau",
+    title: "Pflasterarbeiten",
+    text: "Wege, Einfahrten, Terrassen und Hofflächen",
+    icon: "paver",
+  },
+  {
+    href: "/#gartenpflege",
+    title: "Hecken- & Strauchschnitt",
+    text: "Form- und Rückschnitt für gepflegte Grünflächen",
+    icon: "shears",
+  },
+  {
+    href: "/#gartenbau",
+    title: "Terrassenbau",
+    text: "Planung und Bau individueller Terrassen",
+    icon: "terrace",
+  },
+  {
+    href: "/#hausmeisterservice",
+    title: "Reinigung",
+    text: "Außenreinigung von Wegen, Terrassen und Einfahrten",
+    icon: "broom",
+  },
+  {
+    href: "/#hausmeisterservice",
+    title: "Hausmeisterservice",
+    text: "Außenanlagen, kleine Reparaturen und Instandhaltung",
+    icon: "house",
+  },
+  {
+    href: "/#bodenbelag",
+    title: "Bodenleger",
+    text: "Fachgerechte Verlegung von Bodenbelägen",
+    icon: "floor",
+  },
+  {
+    href: "/#gartenbau",
+    title: "Zaunbau",
+    text: "Montage von Zäunen für Gärten und Grundstücke",
+    icon: "fence",
   },
 ];
 

@@ -1,7 +1,7 @@
 "use client";
 
-import { FormEvent, useState } from "react";
-import { Icon, type IconName } from "@/components/Icons";
+import { FormEvent, useState, type CSSProperties } from "react";
+import { IconBadge, type IconName } from "@/components/Icons";
 import { serviceOptions, site, socials } from "@/content/site";
 import { LIMITS, type FieldErrors } from "@/lib/contact";
 
@@ -67,7 +67,7 @@ export function Contact() {
   return (
     <section className="contact" id="kontakt">
       <div className="contact-grid">
-        <div>
+        <div data-reveal>
           <p className="eyebrow">Kontakt</p>
           <h2>Kostenlos und unverbindlich anfragen</h2>
           <address>
@@ -83,7 +83,7 @@ export function Contact() {
             {channels.map((item) => {
               const body = (
                 <>
-                  <Icon name={item.icon} />
+                  <IconBadge name={item.icon} />
                   <span>
                     <strong>{item.label}</strong>
                     {item.value}
@@ -112,7 +112,7 @@ export function Contact() {
           </figure>
         </div>
 
-        <form className="inquiry" onSubmit={onSubmit} noValidate>
+        <form className="inquiry" data-reveal style={{ "--d": "120ms" } as CSSProperties} onSubmit={onSubmit} noValidate>
           <div className="field">
             <label htmlFor="name">Name</label>
             <input

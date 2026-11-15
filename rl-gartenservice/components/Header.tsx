@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { Icon } from "@/components/Icons";
+import { IconBadge } from "@/components/Icons";
 import { nav, site } from "@/content/site";
 
 export function Header() {
@@ -37,7 +37,7 @@ export function Header() {
           </span>
         </a>
         <a className="header-call" href={site.phoneTel}>
-          <Icon name="phone" />
+          <IconBadge name="phone" />
           Anrufen
         </a>
         <button

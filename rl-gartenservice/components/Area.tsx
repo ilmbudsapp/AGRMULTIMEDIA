@@ -3,7 +3,7 @@ import { places, site } from "@/content/site";
 export function Area() {
   return (
     <section className="area" id="einsatzgebiet">
-      <div className="area-inner">
+      <div className="area-inner" data-reveal>
         <div>
           <p className="eyebrow">Einsatzgebiet</p>
           <h2>Augsburg & Umgebung</h2>

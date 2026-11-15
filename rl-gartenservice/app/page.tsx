@@ -3,6 +3,7 @@ import { Area } from "@/components/Area";
 import { Contact } from "@/components/Contact";
 import { Gallery } from "@/components/Gallery";
 import { Hero } from "@/components/Hero";
+import { Leistungen } from "@/components/Leistungen";
 import { ServiceSections } from "@/components/ServiceSections";
 import { places, serviceAreas, site, socials } from "@/content/site";
 
@@ -42,6 +43,7 @@ export default function HomePage() {
     <main id="inhalt">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Hero />
+      <Leistungen />
       <ServiceSections />
       <About />
       <Gallery />
