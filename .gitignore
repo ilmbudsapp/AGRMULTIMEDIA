@@ -23,3 +23,14 @@ build-output.log
 # Next.js Uganda-Hilfe demo build artifacts
 demos/uganda-hilfe/.next
 demos/uganda-hilfe/out
+
+# RL Gartenservice local site
+rl-gartenservice/node_modules
+rl-gartenservice/.next
+rl-gartenservice/data
+rl-gartenservice/.env.local
+.tmp-rl-review
+.tmp-rl-prepare-media.mjs
+.tmp-rl-review-sheets.mjs
+.tmp-rl-video-frames.mjs
+.tmp-rl-video-sheet.mjs

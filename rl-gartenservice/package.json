@@ -1,0 +1,24 @@
+{
+  "name": "rl-gartenservice",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3010",
+    "build": "next build",
+    "start": "next start -p 3010",
+    "check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "next": "16.2.10",
+    "nodemailer": "^8.0.2",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.16.11",
+    "@types/nodemailer": "^8.0.0",
+    "@types/react": "^19.2.4",
+    "@types/react-dom": "^19.2.3",
+    "typescript": "^5.6.3"
+  }
+}
