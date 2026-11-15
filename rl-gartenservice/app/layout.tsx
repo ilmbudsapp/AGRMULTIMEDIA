@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Outfit, Source_Sans_3 } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { site } from "@/content/site";
 import "./globals.css";
 
@@ -49,6 +50,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         {children}
         <Footer />
+        <WhatsAppFloat />
       </body>
     </html>
   );

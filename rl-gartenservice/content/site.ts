@@ -30,22 +30,23 @@ export const site = {
 
 /**
  * Prazan href znači da tačan link još nije stigao.
- * Na sajtu se prikazuju samo stavke koje imaju href.
+ * Facebook i TikTok se ipak prikazuju, sa imenom i ikonom, dok link ne stigne.
  */
-export const socials: { label: string; handle: string; href: string }[] = [
+export const socials: { icon: "instagram" | "facebook" | "tiktok"; label: string; handle: string; href: string }[] = [
   {
+    icon: "instagram",
     label: "Instagram",
     handle: "rl_gartenservice_augsburg",
     href: "https://www.instagram.com/rl_gartenservice_augsburg/",
   },
   {
+    icon: "instagram",
     label: "Instagram",
     handle: "rlbodenlegeraugsburg",
     href: "https://www.instagram.com/rlbodenlegeraugsburg/",
   },
-  { label: "Facebook", handle: "RL Gartenservice", href: "" },
-  { label: "TikTok", handle: "RL Gartenservice", href: "" },
-  { label: "Google Unternehmensprofil", handle: "", href: "" },
+  { icon: "facebook", label: "Facebook", handle: "RL Gartenservice", href: "" },
+  { icon: "tiktok", label: "TikTok", handle: "RL Gartenservice", href: "" },
 ];
 
 export const nav = [

@@ -24,7 +24,7 @@ npm run build
 `content/site.ts`
 
 - tekstovi, telefon, mejl, meni, usluge, mesta, galerija
-- društvene mreže: prazan `href` se ne prikazuje. Ubaci tačan URL kad stigne.
+- društvene mreže: Facebook i TikTok se vide i bez linka. Ubaci tačan URL u `href` kad stigne, pa postaju klikabilni.
 
 Nova fotografija:
 

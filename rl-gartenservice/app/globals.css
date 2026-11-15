@@ -87,6 +87,8 @@ p { margin: 0 0 1rem; }
   padding: 0.55rem 0.95rem;
   cursor: pointer;
 }
+.header-call { display: inline-flex; align-items: center; gap: 0.4rem; }
+.header-call svg { width: 1rem; height: 1rem; }
 .menu-button { display: inline-flex; background: transparent; color: var(--green); }
 .site-nav {
   display: none;
@@ -353,8 +355,51 @@ p { margin: 0 0 1rem; }
 .contact { padding: 0 1.25rem clamp(4rem, 8vw, 6.5rem); }
 .contact-grid { display: grid; gap: 2rem; }
 address { font-style: normal; display: grid; gap: 0.2rem; margin-bottom: 1rem; }
-.contact-links { list-style: none; padding: 0; margin: 0 0 1.2rem; display: grid; gap: 0.35rem; }
-.contact-links a { color: var(--green); }
+.contact-links { list-style: none; padding: 0; margin: 0 0 1.2rem; display: grid; gap: 0.55rem; }
+.contact-links a, .contact-links .channel {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+.contact-links svg { width: 1.45rem; height: 1.45rem; color: var(--green-2); flex: none; }
+.contact-links strong { display: block; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--green-3); }
+.contact-links a:hover { color: var(--green-2); }
+.wa-float {
+  position: fixed;
+  z-index: 45;
+  right: 1.1rem;
+  bottom: 1.1rem;
+  width: 4.1rem;
+  height: 4.1rem;
+  border-radius: 50%;
+  background: #1faa59;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  box-shadow: 0 12px 28px rgba(16, 40, 28, 0.32);
+  animation: wa-around 22s linear infinite;
+}
+.wa-float:hover, .wa-float:focus-visible { animation-play-state: paused; }
+.wa-float svg { width: 2rem; height: 2rem; position: relative; z-index: 1; }
+.wa-spin {
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: 2px solid rgba(31, 170, 89, 0.28);
+  border-top-color: #1faa59;
+  border-right-color: var(--gold);
+  animation: wa-spin 1.35s linear infinite;
+}
+@keyframes wa-spin { to { transform: rotate(360deg); } }
+@keyframes wa-around {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(calc(-100vw + 7.2rem), 0); }
+  50% { transform: translate(calc(-100vw + 7.2rem), calc(-100vh + 12rem)); }
+  75% { transform: translate(0, calc(-100vh + 12rem)); }
+}
 .qr-block {
   display: flex;
   gap: 0.9rem;
@@ -399,7 +444,7 @@ address { font-style: normal; display: grid; gap: 0.2rem; margin-bottom: 1rem; }
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 1rem;
-  padding: 2rem 1.25rem;
+  padding: 2rem 1.25rem 5.5rem;
   background: #1a1f1c;
   color: #f3f0e8;
 }
@@ -448,4 +493,5 @@ address { font-style: normal; display: grid; gap: 0.2rem; margin-bottom: 1rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .wa-float, .wa-spin { animation: none; }
 }
