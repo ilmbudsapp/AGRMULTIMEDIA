@@ -1,9 +1,10 @@
 import { notFound } from "next/navigation";
-import { serviceAreas } from "@/content/site";
+import { leistungen, serviceAreas } from "@/content/site";
 
 export function ServiceView({ id }: { id: string }) {
   const area = serviceAreas.find((item) => item.id === id);
   if (!area) notFound();
+  const jobs = leistungen.filter((item) => item.href === `/${area.id}`);
 
   return (
     <section className={area.featured ? "band band-featured" : "band"}>
@@ -13,6 +14,16 @@ export function ServiceView({ id }: { id: string }) {
           <p className="eyebrow">{area.featured ? "Schwerpunkt" : "Weiterer Bereich"}</p>
           <h1>{area.title}</h1>
           <p className="intro">{area.intro}</p>
+          {jobs.length > 0 ? (
+            <div className="band-jobs">
+              {jobs.map((job) => (
+                <figure key={job.title}>
+                  <img src={job.image} alt={job.imageAlt} />
+                  <figcaption>{job.title}</figcaption>
+                </figure>
+              ))}
+            </div>
+          ) : null}
           <div className="service-groups">
             {area.groups.map((group) => (
               <div key={group.title ?? area.id}>
