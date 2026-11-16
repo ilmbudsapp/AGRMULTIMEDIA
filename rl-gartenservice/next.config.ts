@@ -5,6 +5,17 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   poweredByHeader: false,
   devIndicators: false,
+  allowedDevOrigins: ["192.168.178.91"],
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "rl-gartenservice.de" }],
+        destination: "https://www.rl-gartenservice.de/:path*",
+        permanent: true,
+      },
+    ];
+  },
   images: { unoptimized: true },
   turbopack: {
     root: path.dirname(fileURLToPath(import.meta.url)),
