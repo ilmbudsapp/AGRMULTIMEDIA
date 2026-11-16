@@ -1,10 +1,14 @@
 import { CountUp } from "@/components/CountUp";
+import { HeroMotion } from "@/components/HeroMotion";
 import { hero, site } from "@/content/site";
 
 export function Hero() {
   return (
     <section className="hero" id="start">
-      <img className="hero-photo" src={hero.image} alt={hero.alt} fetchPriority="high" />
+      <HeroMotion />
+      <div className="hero-photo-frame">
+        <img className="hero-photo" src={hero.image} alt={hero.alt} fetchPriority="high" />
+      </div>
       <div className="hero-shade" />
       <div className="hero-panel">
         <div className="hero-copy">

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useId, useRef, useState } from "react";
+import { Compare } from "@/components/Compare";
 import {
   gallery,
   galleryCategories,
@@ -112,60 +113,3 @@ export function Gallery() {
   );
 }
 
-function Compare({
-  before,
-  after,
-  title,
-}: {
-  before: { src: string; alt: string };
-  after: { src: string; alt: string };
-  title: string;
-}) {
-  const [value, setValue] = useState(50);
-  const frame = useRef<HTMLDivElement>(null);
-  const labelId = useId();
-  const inputId = useId();
-
-  function setFromClientX(clientX: number) {
-    const rect = frame.current?.getBoundingClientRect();
-    if (!rect || rect.width === 0) return;
-    const next = ((clientX - rect.left) / rect.width) * 100;
-    setValue(Math.min(100, Math.max(0, next)));
-  }
-
-  return (
-    <div className="compare">
-      <div
-        className="compare-frame"
-        ref={frame}
-        onPointerDown={(event) => {
-          event.currentTarget.setPointerCapture(event.pointerId);
-          setFromClientX(event.clientX);
-        }}
-        onPointerMove={(event) => {
-          if (!event.currentTarget.hasPointerCapture(event.pointerId)) return;
-          setFromClientX(event.clientX);
-        }}
-      >
-        <img src={after.src} alt={after.alt} loading="lazy" draggable={false} />
-        <img src={before.src} alt="" style={{ clipPath: `inset(0 ${100 - value}% 0 0)` }} loading="lazy" draggable={false} />
-        <span className="compare-tag before-tag">Vorher</span>
-        <span className="compare-tag after-tag">Nachher</span>
-        <span className="compare-handle" style={{ left: `${value}%` }} aria-hidden="true" />
-      </div>
-      <label id={labelId} htmlFor={inputId}>
-        {title}: Vorher und Nachher vergleichen
-      </label>
-      <input
-        id={inputId}
-        type="range"
-        min={0}
-        max={100}
-        step={1}
-        value={Math.round(value)}
-        aria-labelledby={labelId}
-        onChange={(event) => setValue(Number(event.target.value))}
-      />
-    </div>
-  );
-}

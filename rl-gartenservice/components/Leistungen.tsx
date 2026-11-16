@@ -11,7 +11,8 @@ export function Leistungen() {
         {leistungen.map((item) => (
           <li key={item.title} data-reveal>
             <a className="leistung-card" href={item.href}>
-              <Icon name={item.icon} className="svc-icon" />
+              <span className="card-sheen" aria-hidden="true" />
+              <Icon name={item.icon} className={`svc-icon svc-${item.icon}`} />
               <span className="leistung-copy">
                 <strong>{item.title}</strong>
                 {item.text}

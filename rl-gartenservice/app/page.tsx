@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Area } from "@/components/Area";
 import { Hero } from "@/components/Hero";
+import { HomeCompare } from "@/components/HomeCompare";
 import { Leistungen } from "@/components/Leistungen";
 import { Spotlight } from "@/components/Spotlight";
 import { places, serviceAreas, site, socials } from "@/content/site";
@@ -50,6 +51,7 @@ export default function HomePage() {
       <Hero />
       <Leistungen />
       <Spotlight />
+      <HomeCompare />
       <Area />
     </main>
   );

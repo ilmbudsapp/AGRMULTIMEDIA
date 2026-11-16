@@ -103,10 +103,14 @@ const glyphs: Record<IconName, ReactNode> = {
   ),
   shears: (
     <>
-      <circle cx="6.2" cy="6.4" r="2.5" />
-      <circle cx="6.2" cy="17.6" r="2.5" />
-      <path d="M8.4 8 20.6 16.8" />
-      <path d="M8.4 16 20.6 7.2" />
+      <g className="blade blade-a">
+        <circle cx="6.2" cy="6.4" r="2.5" />
+        <path d="M8.4 8 20.6 16.8" />
+      </g>
+      <g className="blade blade-b">
+        <circle cx="6.2" cy="17.6" r="2.5" />
+        <path d="M8.4 16 20.6 7.2" />
+      </g>
     </>
   ),
   terrace: (
@@ -149,12 +153,18 @@ const glyphs: Record<IconName, ReactNode> = {
   ),
   fence: (
     <>
-      <path d="M6 19.6V8.8" />
-      <path d="M12 19.6V8.8" />
-      <path d="M18 19.6V8.8" />
-      <path d="M6 8.8 7.4 5.8 8.8 8.8" />
-      <path d="M12 8.8 13.4 5.8 14.8 8.8" />
-      <path d="M18 8.8 19.4 5.8l1.4 3" />
+      <g className="picket">
+        <path d="M6 19.6V8.8" />
+        <path d="M6 8.8 7.4 5.8 8.8 8.8" />
+      </g>
+      <g className="picket">
+        <path d="M12 19.6V8.8" />
+        <path d="M12 8.8 13.4 5.8 14.8 8.8" />
+      </g>
+      <g className="picket">
+        <path d="M18 19.6V8.8" />
+        <path d="M18 8.8 19.4 5.8l1.4 3" />
+      </g>
       <path d="M4.2 12.2h16.4" />
       <path d="M4.2 15.8h16.4" />
     </>
