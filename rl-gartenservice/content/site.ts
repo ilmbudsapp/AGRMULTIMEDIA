@@ -71,6 +71,8 @@ export const hero = {
   image: "/media/hero-desktop.webp?v=3",
   imageMobile: "/media/hero-mobile.webp?v=3",
   imageJpg: "/media/hero-desktop.jpg",
+  video: "/media/hero-desktop.mp4",
+  videoMobile: "/media/hero-mobile.mp4",
   alt: "Gepflegter Garten mit Rasenfläche, gepflastertem Weg, Holzterrasse und Hecke",
   eyebrow: "Augsburg & Umgebung",
   title: "RL Gartenservice",

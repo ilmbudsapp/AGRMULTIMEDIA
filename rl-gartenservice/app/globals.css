@@ -252,6 +252,13 @@ p { margin: 0 0 1rem; }
   z-index: 0;
 }
 .hero-photo-frame picture { inset: 0; display: block; }
+.hero-photo-frame video.hero-photo {
+  position: absolute;
+  inset: 0;
+  object-position: center center;
+  transform-origin: center center;
+}
+.hero-photo-frame.is-playing picture { visibility: hidden; }
 .hero-photo {
   width: 100%;
   height: 100%;
@@ -916,6 +923,7 @@ address > span { display: grid; gap: 0.15rem; }
   .brand img { height: 52px; }
   .hero { min-height: auto; padding: 26vh 1.15rem 4.6rem; align-items: stretch; }
   .hero-photo { object-position: center 42%; }
+  .hero-photo-frame video.hero-photo { object-position: center center; }
   .leistungen { margin-top: -3rem; }
   .motif { opacity: 0.08; width: 86px; }
   .spotlight-stage-slot,

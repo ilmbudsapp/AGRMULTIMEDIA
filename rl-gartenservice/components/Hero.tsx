@@ -1,5 +1,6 @@
 import type { CSSProperties } from "react";
 import { CountUp } from "@/components/CountUp";
+import { HeroMedia } from "@/components/HeroMedia";
 import { HeroMotion } from "@/components/HeroMotion";
 import { hero, site } from "@/content/site";
 
@@ -19,12 +20,7 @@ export function Hero() {
   return (
     <section className="hero" id="start">
       <HeroMotion />
-      <div className="hero-photo-frame">
-        <picture>
-          <source media="(max-width: 719px)" srcSet={hero.imageMobile} />
-          <img className="hero-photo" src={hero.image} alt={hero.alt} fetchPriority="high" />
-        </picture>
-      </div>
+      <HeroMedia />
       <div className="hero-shade" />
       <div className="hero-panel">
         <div className="hero-copy">

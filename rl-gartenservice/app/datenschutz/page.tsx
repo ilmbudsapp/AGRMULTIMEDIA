@@ -122,8 +122,11 @@ export default function PrivacyPage() {
             keine Werbe- oder Marketingdienste eingebunden.
           </p>
           <p>
-            Fotos und Videos in der Galerie liegen auf dem Server dieser Website. Ein Video wird erst geladen,
-            wenn Sie es öffnen. Dabei wird kein externes Videoportal aufgerufen.
+            Auf der Startseite läuft ein kurzes Video der Gartenansicht. Es liegt auf dem Server dieser
+            Website, hat keinen Ton und ruft kein externes Videoportal auf. Geladen wird nur die Fassung
+            für das jeweilige Gerät. Wer reduzierte Bewegung eingestellt hat, sieht stattdessen das
+            Standbild. Fotos und Videos in der Galerie liegen ebenfalls auf diesem Server. Ein Galerievideo
+            wird erst geladen, wenn Sie es öffnen.
           </p>
           <p>
             Es werden keine optionalen Cookies und kein optionales Tracking gespeichert. Eine Einwilligung
