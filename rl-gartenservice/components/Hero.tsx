@@ -20,7 +20,10 @@ export function Hero() {
     <section className="hero" id="start">
       <HeroMotion />
       <div className="hero-photo-frame">
-        <img className="hero-photo" src={hero.image} alt={hero.alt} fetchPriority="high" />
+        <picture>
+          <source media="(max-width: 719px)" srcSet={hero.imageMobile} />
+          <img className="hero-photo" src={hero.image} alt={hero.alt} fetchPriority="high" />
+        </picture>
       </div>
       <div className="hero-shade" />
       <div className="hero-panel">
