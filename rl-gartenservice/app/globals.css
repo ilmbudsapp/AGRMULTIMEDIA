@@ -316,6 +316,7 @@ p { margin: 0 0 1rem; }
   letter-spacing: 0.01em;
 }
 .stat { margin: 0; text-align: left; min-width: 8.5rem; padding-bottom: 0.2rem; }
+.stat-figure { display: inline-grid; justify-items: stretch; }
 .stat strong {
   display: flex;
   justify-content: flex-start;
@@ -325,13 +326,25 @@ p { margin: 0 0 1rem; }
   color: #fff;
   font-variant-numeric: tabular-nums;
 }
-.stat-num { display: inline-flex; min-width: 3ch; height: 1em; }
-.reel { display: block; width: 1ch; height: 1em; overflow: hidden; }
-.reel-strip { display: block; transition: transform 0.95s cubic-bezier(0.16, 0.84, 0.24, 1); }
-.reel-strip span { display: block; height: 1em; line-height: 1; text-align: center; }
-.reel-strip.is-still { transition: none; }
+.stat-num { display: inline-block; min-width: 3ch; text-align: left; }
 .stat-plus { font-size: 0.55em; line-height: 1; margin-left: 0.06em; }
-.stat > span:not(.sr-only) {
+.stat-meter {
+  display: block;
+  height: 4px;
+  margin-top: 0.55rem;
+  background: rgba(255, 252, 248, 0.34);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.stat-meter-fill {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #f3e6c8;
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+.stat > span:not(.sr-only):not(.stat-figure) {
   display: block;
   margin-top: 0.45rem;
   color: #f0e2c4;
@@ -1041,7 +1054,7 @@ address > span { display: grid; gap: 0.15rem; }
   .hero-photo-frame, .motif { transform: none !important; }
   [data-reveal], [data-reveal].is-armed, [data-reveal].is-in,
   .mask-line > span, .leistung-grid > li, .home-compare .more-link { opacity: 1; transform: none; transition: none; }
-  .leistung-card, .svc-icon, .card-arrow, .card-sheen, .button-gold, .reel-strip,
+  .leistung-card, .svc-icon, .card-arrow, .card-sheen, .button-gold,
   .spotlight-stage img, .stage-fallback, .spotlight-copy article, .spotlight-inline { transition: none; }
   .leistungen h2::after { transform: none; }
   .svc-leaf, .svc-mower, .svc-shears .blade, .svc-fence .picket { animation: none; opacity: 1; }
