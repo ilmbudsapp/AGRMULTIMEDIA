@@ -67,7 +67,8 @@ export function Contact() {
   return (
     <section className="contact" id="kontakt">
       <div className="contact-grid">
-        <div data-reveal>
+        <div data-reveal="card">
+          <div className="contact-panel card-motion">
           <p className="eyebrow">Kontakt</p>
           <h1>Kostenlos und unverbindlich anfragen</h1>
           <address>
@@ -113,9 +114,11 @@ export function Contact() {
               <span>{site.url.replace("https://", "")}</span>
             </figcaption>
           </figure>
+          </div>
         </div>
 
-        <form className="inquiry" data-reveal style={{ "--d": "120ms" } as CSSProperties} onSubmit={onSubmit} noValidate>
+        <div data-reveal="card" style={{ "--d": "160ms" } as CSSProperties}>
+        <form className="inquiry card-motion" onSubmit={onSubmit} noValidate>
           <div className="field">
             <label htmlFor="name">Name</label>
             <input
@@ -216,6 +219,7 @@ export function Contact() {
             {status === "success" || status === "error" ? message : ""}
           </p>
         </form>
+        </div>
       </div>
     </section>
   );

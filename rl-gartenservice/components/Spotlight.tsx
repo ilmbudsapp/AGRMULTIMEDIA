@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { MaskWords } from "@/components/MaskWords";
 import { Motif } from "@/components/Motif";
 import { serviceAreas } from "@/content/site";
@@ -38,7 +38,8 @@ export function Spotlight() {
       <Motif side="right" />
       <Motif side="left" />
       <div className="spotlight-inner">
-      <div className="spotlight-stage">
+      <div className="spotlight-stage-slot" data-reveal="card">
+      <div className="spotlight-stage card-motion">
         {scenes.map((scene) => (
           <img
             key={scene.id}
@@ -52,20 +53,23 @@ export function Spotlight() {
           {items[active]?.title}
         </p>
       </div>
+      </div>
       <div className="spotlight-copy">
         <p className="eyebrow word-title" id="spotlight-title" data-reveal="mask">
           <MaskWords text="Schwerpunkte" />
         </p>
         {items.map((area, index) => (
-          <article
+          <div
             key={area.id}
+            data-reveal="card"
             ref={(node) => {
               articles.current[index] = node;
             }}
-            className={index === active ? "is-active" : undefined}
+            style={index % 2 === 1 ? ({ "--d": "160ms" } as CSSProperties) : undefined}
           >
+          <article className={index === active ? "card-motion is-active" : "card-motion"}>
             {area.image ? (
-              <figure className="spotlight-inline" data-reveal="photo">
+              <figure className="spotlight-inline">
                 <img src={area.image.src} alt={area.image.alt} />
               </figure>
             ) : null}
@@ -77,6 +81,7 @@ export function Spotlight() {
               Mehr erfahren
             </a>
           </article>
+          </div>
         ))}
       </div>
       </div>

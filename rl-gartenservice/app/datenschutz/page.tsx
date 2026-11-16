@@ -9,7 +9,9 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <main id="inhalt" className="legal">
+    <main id="inhalt">
+      <div data-reveal="card">
+      <div className="legal card-motion">
       <h1>Datenschutzerklärung</h1>
       <p className="notice">
         Vor der Veröffentlichung den konkreten Hosting-Anbieter eintragen. Die Website setzt keine
@@ -62,6 +64,8 @@ export default function PrivacyPage() {
         DSGVO zu widersprechen. Außerdem können Sie sich bei einer Aufsichtsbehörde beschweren. Zuständig für
         Bayern ist das Bayerische Landesamt für Datenschutzaufsicht (BayLDA).
       </p>
+      </div>
+      </div>
     </main>
   );
 }

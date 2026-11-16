@@ -62,7 +62,9 @@ export function Gallery() {
       ) : (
         <ul className="gallery-grid" key={filter}>
           {visible.map((item) => (
-            <li key={item.id} className={item.kind === "compare" ? "gallery-item is-feature" : "gallery-item"} data-reveal="photo">
+            <li key={item.id} className={item.kind === "compare" ? "gallery-item is-feature" : "gallery-item"}>
+              <div data-reveal="card">
+              <div className="card-motion">
               {item.kind === "compare" ? (
                 <Compare before={item.before} after={item.after} title={item.title} />
               ) : (
@@ -76,6 +78,8 @@ export function Gallery() {
                   {item.kind === "video" ? <span className="badge">Video</span> : null}
                 </button>
               )}
+              </div>
+              </div>
             </li>
           ))}
         </ul>

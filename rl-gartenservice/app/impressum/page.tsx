@@ -9,7 +9,9 @@ export const metadata: Metadata = {
 
 export default function ImpressumPage() {
   return (
-    <main id="inhalt" className="legal">
+    <main id="inhalt">
+      <div data-reveal="card">
+      <div className="legal card-motion">
       <h1>Impressum</h1>
       <p className="notice">
         Vor der Veröffentlichung ergänzen, falls vorhanden: Umsatzsteuer-Identifikationsnummer und
@@ -44,6 +46,8 @@ export default function ImpressumPage() {
         Veröffentlichung mit dem Auftraggeber zu bestätigen. Solange keine andere Vorgabe vorliegt, sind wir
         nicht verpflichtet und nicht bereit, an einem solchen Verfahren teilzunehmen.
       </p>
+      </div>
+      </div>
     </main>
   );
 }

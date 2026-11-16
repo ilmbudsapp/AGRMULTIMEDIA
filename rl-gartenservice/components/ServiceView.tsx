@@ -7,8 +7,9 @@ export function ServiceView({ id }: { id: string }) {
 
   return (
     <section className={area.featured ? "band band-featured" : "band"}>
-      <div className="band-inner">
-        <div className="band-copy" data-reveal>
+      <div data-reveal="card">
+      <div className="band-inner card-motion">
+        <div className="band-copy">
           <p className="eyebrow">{area.featured ? "Schwerpunkt" : "Weiterer Bereich"}</p>
           <h1>{area.title}</h1>
           <p className="intro">{area.intro}</p>
@@ -29,10 +30,11 @@ export function ServiceView({ id }: { id: string }) {
           </a>
         </div>
         {area.image ? (
-          <figure className="band-photo" data-reveal="photo">
+          <figure className="band-photo">
             <img src={area.image.src} alt={area.image.alt} />
           </figure>
         ) : null}
+      </div>
       </div>
     </section>
   );

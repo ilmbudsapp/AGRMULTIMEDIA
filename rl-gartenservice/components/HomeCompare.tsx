@@ -21,7 +21,8 @@ export function HomeCompare() {
 
   return (
     <section className="home-compare" aria-labelledby="compare-title">
-      <div className="home-compare-inner">
+      <div data-reveal="card">
+      <div className="home-compare-inner card-motion">
         <p className="eyebrow">Referenzen</p>
         <h2 id="compare-title" className="word-title" data-reveal="mask">
           <MaskWords text="Vorher und Nachher" />
@@ -40,6 +41,7 @@ export function HomeCompare() {
         >
           Alle Referenzen ansehen
         </a>
+      </div>
       </div>
     </section>
   );

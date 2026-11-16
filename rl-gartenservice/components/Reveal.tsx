@@ -21,8 +21,9 @@ export function Reveal() {
       const box = rect ?? target.getBoundingClientRect();
       const viewHeight = window.innerHeight || 1;
       const isCard = target.getAttribute("data-reveal") === "card";
+      const jumpedPast = box.top < viewHeight * 0.35 && window.scrollY > 80;
       const alreadyInside = isCard
-        ? box.top < viewHeight * 0.42 && box.bottom > 40
+        ? jumpedPast && box.bottom > 40
         : box.top < viewHeight * 0.8 && box.bottom > 20;
       if (reduce || alreadyInside) {
         target.classList.add("is-in", "is-now");
@@ -35,12 +36,14 @@ export function Reveal() {
     const watch = () => {
       document.querySelectorAll("[data-reveal]:not(.is-in)").forEach((node) => {
         if (seen.has(node)) return;
-        seen.add(node);
         if (reduce) {
+          seen.add(node);
           node.classList.add("is-in", "is-now");
           return;
         }
         const box = node.getBoundingClientRect();
+        if (box.width === 0 && box.height === 0) return;
+        seen.add(node);
         const viewHeight = window.innerHeight || 1;
         const near = box.bottom > 0 && box.top < viewHeight + 90;
         if (!near) {
@@ -55,9 +58,11 @@ export function Reveal() {
     watch();
     const changes = new MutationObserver(watch);
     changes.observe(document.body, { childList: true, subtree: true });
+    window.addEventListener("resize", watch);
     return () => {
       io.disconnect();
       changes.disconnect();
+      window.removeEventListener("resize", watch);
     };
   }, []);
 

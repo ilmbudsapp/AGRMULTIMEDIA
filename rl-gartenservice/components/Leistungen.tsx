@@ -18,7 +18,7 @@ export function Leistungen() {
       <ul className="leistung-grid">
         {leistungen.map((item) => (
           <li key={item.title} data-reveal="card">
-            <a className="leistung-card" href={item.href}>
+            <a className="leistung-card card-motion" href={item.href}>
               <span className="card-sheen" aria-hidden="true" />
               <Icon name={item.icon} className={`svc-icon svc-${item.icon}`} />
               <span className="leistung-copy">
