@@ -37,8 +37,8 @@ export const metadata: Metadata = {
     description: site.description,
     images: [
       {
-        url: "/media/hero-terrasse.jpg",
-        alt: "Fertige Holzterrasse mit Rasen und geschnittenen Hecken",
+        url: "/media/hero-team.jpg",
+        alt: "Zwei Gärtner von RL Gartenservice bei der Arbeit im Garten",
       },
     ],
   },

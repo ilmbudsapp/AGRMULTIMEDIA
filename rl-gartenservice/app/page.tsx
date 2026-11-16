@@ -16,7 +16,7 @@ const jsonLd = {
   "@type": "HomeAndConstructionBusiness",
   name: site.name,
   url: site.url,
-  image: `${site.url}/media/hero-terrasse.jpg`,
+  image: `${site.url}/media/hero-team.jpg`,
   logo: `${site.url}/logo.png`,
   telephone: "+491777928689",
   email: site.email,

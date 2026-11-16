@@ -68,9 +68,9 @@ export const nav = [
 ] as const;
 
 export const hero = {
-  image: "/media/garten-rasen-fertig.webp",
-  imageJpg: "/media/hero-terrasse.jpg",
-  alt: "Gepflegte Rasenfläche mit Sträuchern, Hecken und Bäumen vor dem Haus",
+  image: "/media/hero-team.webp",
+  imageJpg: "/media/hero-team.jpg",
+  alt: "Zwei Gärtner von RL Gartenservice bei der Arbeit, einer an der Hecke und einer von hinten mit dem Firmenlogo auf der Jacke",
   eyebrow: "Augsburg & Umgebung",
   title: "RL Gartenservice",
   lead: "Ihr zuverlässiger Partner rund um Haus & Garten",
