@@ -212,6 +212,10 @@ export function Contact() {
             <label htmlFor="companyWebsite">Website</label>
             <input id="companyWebsite" name="companyWebsite" tabIndex={-1} autoComplete="off" />
           </div>
+          <p className="form-privacy">
+            Informationen zur Verarbeitung Ihrer Angaben stehen in der{" "}
+            <a href="/datenschutz">Datenschutzerklärung</a>.
+          </p>
           <button className="button button-gold" type="submit" disabled={status === "sending"}>
             {status === "sending" ? "Wird gesendet …" : "Anfrage senden"}
           </button>

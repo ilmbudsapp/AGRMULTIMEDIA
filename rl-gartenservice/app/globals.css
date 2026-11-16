@@ -122,6 +122,9 @@ p { margin: 0 0 1rem; }
     transition: transform 760ms cubic-bezier(0.16, 0.84, 0.2, 1), opacity 280ms ease;
     transition-delay: var(--d, 0ms);
   }
+  .leistung-grid [data-reveal="card"].is-in > .card-motion {
+    transition-duration: 460ms, 280ms;
+  }
   [data-reveal="card"].is-now > .card-motion { transition: none; transform: none; }
   .leistung-grid > li.is-in:not(.is-now) .card-title > span {
     animation: title-in 340ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
@@ -238,7 +241,7 @@ p { margin: 0 0 1rem; }
   min-height: calc(100svh - var(--header));
   display: flex;
   align-items: flex-end;
-  padding: 2.2rem 1.4rem 12.4rem;
+  padding: 2.2rem 1.4rem 7.8rem;
   overflow: hidden;
   color: #fff;
 }
@@ -253,8 +256,8 @@ p { margin: 0 0 1rem; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 46%;
-  transform-origin: center 46%;
+  object-position: 58% 68%;
+  transform-origin: 58% 68%;
 }
 .hero-shade {
   position: absolute;
@@ -387,7 +390,7 @@ p { margin: 0 0 1rem; }
   position: relative;
   z-index: 2;
   width: 100%;
-  margin: -10.2rem 0 0.4rem;
+  margin: -4.4rem 0 0.4rem;
   padding: 0.35rem 1.4rem 0.6rem;
   overflow-x: clip;
   background: linear-gradient(180deg, rgba(232, 240, 224, 0.94) 0%, rgba(226, 236, 214, 0.86) 8.5rem, rgba(214, 228, 204, 0.42) 100%);
@@ -868,7 +871,8 @@ address > span { display: grid; gap: 0.15rem; }
 .field p { margin: 0; color: var(--danger); font-size: 0.92rem; }
 #photos-hint { color: var(--muted); }
 .hp { position: absolute; left: -9999px; height: 0; overflow: hidden; }
-.form-status:empty { display: none; }
+.form-privacy { margin: 0; color: var(--muted); font-size: 0.92rem; }
+.form-privacy a { color: var(--forest); }
 .form-status { margin: 0; font-weight: 650; color: var(--forest); }
 
 .site-footer {
@@ -887,6 +891,7 @@ address > span { display: grid; gap: 0.15rem; }
 .site-footer p { margin: 0.35rem 0 0; color: var(--muted); }
 .site-footer nav { display: flex; gap: 1rem; align-items: flex-start; }
 .site-footer a { color: var(--forest); }
+.footer-sign { flex: 1 0 100%; margin: 0.15rem 0 0; font-size: 0.92rem; }
 
 .legal {
   width: min(860px, calc(100% - 2.5rem));
@@ -910,7 +915,7 @@ address > span { display: grid; gap: 0.15rem; }
   .header-call { margin-left: auto; }
   .brand img { height: 52px; }
   .hero { min-height: auto; padding: 26vh 1.15rem 4.6rem; align-items: stretch; }
-  .hero-photo { object-position: center 42%; }
+  .hero-photo { object-position: center 48%; }
   .leistungen { margin-top: -3rem; }
   .motif { opacity: 0.08; width: 86px; }
   .spotlight-stage-slot,
@@ -973,9 +978,11 @@ address > span { display: grid; gap: 0.15rem; }
 }
 @media (max-width: 719px) and (prefers-reduced-motion: no-preference) {
   [data-reveal="card"].is-armed:not(.is-in) > .card-motion { transform: translate3d(-115%, 0, 0); }
+  .leistung-grid [data-reveal="card"].is-armed:not(.is-in) > .card-motion { transform: translate3d(0, 16px, 0); }
 }
 @media (min-width: 720px) and (prefers-reduced-motion: no-preference) {
   [data-reveal="card"].is-armed:not(.is-in) > .card-motion { transform: translate3d(-120%, 0, 0); }
+  .leistung-grid [data-reveal="card"].is-armed:not(.is-in) > .card-motion { transform: translate3d(-20px, 14px, 0); }
 }
 @media (prefers-reduced-motion: no-preference) {
   .hero-photo { animation: hero-zoom 900ms cubic-bezier(.22, .7, .2, 1) both; }

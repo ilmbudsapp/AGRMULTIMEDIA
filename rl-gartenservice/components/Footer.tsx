@@ -17,6 +17,11 @@ export function Footer() {
         <a href="/impressum">Impressum</a>
         <a href="/datenschutz">Datenschutzerklärung</a>
       </nav>
+      <p className="footer-sign">
+        Webdesign: Agron Osmani – <a href="https://www.agrmultimedia.com/">AGRMULTIMEDIA</a>
+        <br />
+        <a href="https://www.agrmultimedia.com/">https://www.agrmultimedia.com/</a>
+      </p>
     </footer>
   );
 }

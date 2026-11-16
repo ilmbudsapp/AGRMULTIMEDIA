@@ -14,16 +14,18 @@ export function Reveal() {
           reveal(entry.target, entry.boundingClientRect);
         }
       },
-      { threshold: 0, rootMargin: "0px 0px 90px 0px" },
+      { threshold: 0, rootMargin: "0px 0px 150px 0px" },
     );
 
     const reveal = (target: Element, rect?: DOMRect) => {
       const box = rect ?? target.getBoundingClientRect();
       const viewHeight = window.innerHeight || 1;
       const isCard = target.getAttribute("data-reveal") === "card";
-      const jumpedPast = box.top < viewHeight * 0.35 && window.scrollY > 80;
+      const serviceCard = Boolean(target.closest(".leistung-grid"));
       const alreadyInside = isCard
-        ? jumpedPast && box.bottom > 40
+        ? serviceCard
+          ? box.top < viewHeight * 0.58 && box.bottom > 20
+          : box.top < viewHeight * 0.35 && window.scrollY > 80 && box.bottom > 40
         : box.top < viewHeight * 0.8 && box.bottom > 20;
       if (reduce || alreadyInside) {
         target.classList.add("is-in", "is-now");
@@ -45,7 +47,7 @@ export function Reveal() {
         if (box.width === 0 && box.height === 0) return;
         seen.add(node);
         const viewHeight = window.innerHeight || 1;
-        const near = box.bottom > 0 && box.top < viewHeight + 90;
+        const near = box.bottom > 0 && box.top < viewHeight + 150;
         if (!near) {
           node.classList.add("is-armed");
           io.observe(node);
