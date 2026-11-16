@@ -20,7 +20,10 @@ export function Reveal() {
     const reveal = (target: Element, rect?: DOMRect) => {
       const box = rect ?? target.getBoundingClientRect();
       const viewHeight = window.innerHeight || 1;
-      const alreadyInside = box.top < viewHeight * 0.8 && box.bottom > 20;
+      const isCard = target.getAttribute("data-reveal") === "card";
+      const alreadyInside = isCard
+        ? box.top < viewHeight * 0.42 && box.bottom > 40
+        : box.top < viewHeight * 0.8 && box.bottom > 20;
       if (reduce || alreadyInside) {
         target.classList.add("is-in", "is-now");
         return;
