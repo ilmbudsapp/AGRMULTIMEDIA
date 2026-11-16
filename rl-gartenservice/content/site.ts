@@ -216,66 +216,88 @@ export const leistungen: {
   title: string;
   text: string;
   icon: "leaf" | "mower" | "shears" | "broom" | "floor" | "grass" | "paver" | "terrace" | "house" | "fence";
+  image: string;
+  imageAlt: string;
 }[] = [
   {
     href: "/gartenpflege",
     title: "Gartenpflege",
     text: "Beetpflege, Unkrautentfernung und Laubarbeiten",
     icon: "leaf",
+    image: "/media/cards/gartenpflege.webp",
+    imageAlt: "Gärtner pflegt ein Beet, von hinten",
   },
   {
     href: "/gartenbau",
     title: "Rollrasen verlegen",
     text: "Schnelle und saubere Verlegung von Fertigrasen",
     icon: "grass",
+    image: "/media/cards/rollrasen.webp",
+    imageAlt: "Fertigrasen wird ausgerollt, von hinten",
   },
   {
     href: "/gartenpflege",
     title: "Rasenmähen",
     text: "Fachgerechtes Mähen und Rasenpflege",
     icon: "mower",
+    image: "/media/cards/rasenmaehen.webp",
+    imageAlt: "Rasenmähen im Park, von hinten",
   },
   {
     href: "/gartenbau",
     title: "Pflasterarbeiten",
     text: "Wege, Einfahrten, Terrassen und Hofflächen",
     icon: "paver",
+    image: "/media/cards/pflaster.webp",
+    imageAlt: "Pflastersteine werden verlegt, von hinten",
   },
   {
     href: "/gartenpflege",
     title: "Hecken- & Strauchschnitt",
     text: "Form- und Rückschnitt für gepflegte Grünflächen",
     icon: "shears",
+    image: "/media/cards/hecke.webp",
+    imageAlt: "Heckenschnitt, von hinten",
   },
   {
     href: "/gartenbau",
     title: "Terrassenbau",
     text: "Planung und Bau individueller Terrassen",
     icon: "terrace",
+    image: "/media/cards/terrasse.webp",
+    imageAlt: "Holzterrasse wird gebaut, von hinten",
   },
   {
     href: "/hausmeisterservice",
     title: "Reinigung",
     text: "Außenreinigung von Wegen, Terrassen und Einfahrten",
     icon: "broom",
+    image: "/media/cards/reinigung.webp",
+    imageAlt: "Zwei Personen reinigen ein Treppenhaus, von hinten",
   },
   {
     href: "/hausmeisterservice",
     title: "Hausmeisterservice",
     text: "Außenanlagen, kleine Reparaturen und Instandhaltung",
     icon: "house",
+    image: "/media/cards/hausmeister.webp",
+    imageAlt: "Wechsel einer Deckenleuchte, von hinten",
   },
   {
     href: "/bodenbelag",
     title: "Bodenleger",
     text: "Fachgerechte Verlegung von Bodenbelägen",
     icon: "floor",
+    image: "/media/cards/boden.webp",
+    imageAlt: "Holzfußboden wird verlegt, von hinten",
   },
   {
     href: "/gartenbau",
     title: "Zaunbau",
     text: "Montage von Zäunen für Gärten und Grundstücke",
     icon: "fence",
+    image: "/media/cards/zaun.webp",
+    imageAlt: "Holzzaun wird montiert, von hinten",
   },
 ];
 

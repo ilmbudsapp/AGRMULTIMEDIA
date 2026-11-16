@@ -20,7 +20,7 @@ export function Leistungen() {
           <li key={item.title} data-reveal="card">
             <a className="leistung-card card-motion" href={item.href}>
               <span className="card-sheen" aria-hidden="true" />
-              <Icon name={item.icon} className={`svc-icon svc-${item.icon}`} />
+              <img className="card-photo" src={item.image} alt={item.imageAlt} />
               <span className="leistung-copy">
                 <strong className="card-title">
                   <span>{item.title}</span>
