@@ -24,7 +24,7 @@ npm run build
 `content/site.ts`
 
 - tekstovi, telefon, mejl, meni, usluge, mesta, galerija
-- društvene mreže: Facebook i TikTok se vide i bez linka. Ubaci tačan URL u `href` kad stigne, pa postaju klikabilni.
+- društvene mreže: prazan `href` ostavlja ime i ikonu, ali bez linka.
 
 Nova fotografija:
 
@@ -41,7 +41,6 @@ Nema formulara. Stranica `/kontakt` prikazuje telefon, WhatsApp, e-poštu i Goog
 
 ## Još treba pre objave
 
-- TikTok URL (naziv na flajeru: RL Gartenservice)
 - Google Unternehmensprofil URL
 - Umsatzsteuer-ID, ako postoji
 - Handelsregister, ako postoji

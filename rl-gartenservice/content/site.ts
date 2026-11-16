@@ -53,7 +53,12 @@ export const socials: { icon: "instagram" | "facebook" | "tiktok"; label: string
     handle: "RL Gartenservice",
     href: "https://www.facebook.com/profile.php?id=61596533423821",
   },
-  { icon: "tiktok", label: "TikTok", handle: "RL Gartenservice", href: "" },
+  {
+    icon: "tiktok",
+    label: "TikTok",
+    handle: "RL Gartenservice",
+    href: "https://www.tiktok.com/@rl.gartenservice",
+  },
 ];
 
 export const nav = [

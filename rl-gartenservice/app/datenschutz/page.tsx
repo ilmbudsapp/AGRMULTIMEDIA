@@ -97,15 +97,14 @@ export default function PrivacyPage() {
 
           <h2>Instagram, Facebook und TikTok</h2>
           <p>
-            Links zu Instagram und Facebook sind gewöhnliche externe Links. Erst Ihr Klick stellt eine
+            Links zu Instagram, Facebook und TikTok sind gewöhnliche externe Links. Erst Ihr Klick stellt eine
             Verbindung zu der jeweiligen Plattform her. Es sind keine Social-Media-Plugins, keine
             Like-Schaltflächen und keine eingebetteten Beiträge auf der Seite, die schon beim Laden eine
             Verbindung aufbauen.
           </p>
           <p>
-            Verlinkt sind die Profile rl_gartenservice_augsburg und rlbodenlegeraugsburg auf Instagram sowie
-            das Facebook-Profil von RL Gartenservice. TikTok wird namentlich genannt. Solange keine Adresse
-            hinterlegt ist, ist der Name kein Link und es entsteht keine Verbindung zu TikTok.
+            Verlinkt sind die Profile rl_gartenservice_augsburg und rlbodenlegeraugsburg auf Instagram, das
+            Facebook-Profil von RL Gartenservice und das TikTok-Profil @rl.gartenservice.
           </p>
 
           <h2>Schriften, Karten, Video und Zugriffe auf das Endgerät</h2>
@@ -134,8 +133,8 @@ export default function PrivacyPage() {
           <p>
             Empfänger sind der noch nicht benannte Hosting-Anbieter, soweit er die Seite ausliefert, sowie
             Google als Anbieter des E-Mail-Postfachs, sobald eine Nachricht dort ankommt, und als Anbieter
-            der Karte, sobald die Kontaktseite geladen wird. Bei einem WhatsApp-, Instagram- oder
-            Facebook-Klick ist die jeweilige Plattform Empfängerin der dann entstehenden Verbindung. Eine
+            der Karte, sobald die Kontaktseite geladen wird. Bei einem WhatsApp-, Instagram-, Facebook- oder
+            TikTok-Klick ist die jeweilige Plattform Empfängerin der dann entstehenden Verbindung. Eine
             Weitergabe zu Werbezwecken findet nicht statt.
           </p>
 
