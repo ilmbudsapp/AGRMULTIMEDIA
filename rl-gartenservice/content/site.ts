@@ -68,10 +68,10 @@ export const nav = [
 ] as const;
 
 export const hero = {
-  image: "/media/hero-desktop.webp?v=2",
-  imageMobile: "/media/hero-mobile.webp?v=2",
+  image: "/media/hero-desktop.webp?v=3",
+  imageMobile: "/media/hero-mobile.webp?v=3",
   imageJpg: "/media/hero-desktop.jpg",
-  alt: "Zwei Gärtner von RL Gartenservice bei der Gartenpflege, einer schneidet Hortensien und einer harkt von hinten mit dem Firmenlogo",
+  alt: "Gepflegter Garten mit Rasenfläche, gepflastertem Weg, Holzterrasse und Hecke",
   eyebrow: "Augsburg & Umgebung",
   title: "RL Gartenservice",
   lead: "Ihr zuverlässiger Partner rund um Haus & Garten",
