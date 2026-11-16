@@ -34,14 +34,18 @@ export function Spotlight() {
   return (
     <section className="spotlight" aria-labelledby="spotlight-title">
       <div className="spotlight-stage">
-        {scenes.map((scene, index) => (
+        {scenes.map((scene) => (
           <img
             key={scene.id}
             src={scene.image.src}
             alt={scene.image.alt}
-            className={scenes.length === 1 || index === active ? "is-shown" : undefined}
+            aria-hidden={items[active]?.id !== scene.id}
+            className={items[active]?.id === scene.id ? "is-shown" : undefined}
           />
         ))}
+        <p className={items[active]?.image ? "stage-fallback" : "stage-fallback is-shown"} aria-hidden="true">
+          {items[active]?.title}
+        </p>
       </div>
       <div className="spotlight-copy">
         <p className="eyebrow" id="spotlight-title">
@@ -54,14 +58,17 @@ export function Spotlight() {
               articles.current[index] = node;
             }}
             className={index === active ? "is-active" : undefined}
-            data-reveal
           >
             {area.image ? (
               <figure className="spotlight-inline" data-reveal="photo">
                 <img src={area.image.src} alt={area.image.alt} />
               </figure>
             ) : null}
-            <h2>{area.title}</h2>
+            <h2 data-reveal="mask">
+              <span className="mask-line">
+                <span>{area.title}</span>
+              </span>
+            </h2>
             <p>{area.intro}</p>
             <a className="more-link" href={`/${area.id}`}>
               Mehr erfahren

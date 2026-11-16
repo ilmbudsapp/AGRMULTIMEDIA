@@ -4,8 +4,13 @@ import { leistungen } from "@/content/site";
 export function Leistungen() {
   return (
     <section className="leistungen" id="leistungen" aria-labelledby="leistungen-title">
-      <h2 id="leistungen-title" data-reveal>
-        Unsere Leistungen
+      <h2 id="leistungen-title" className="split-title">
+        <span className="mask-line">
+          <span>Unsere</span>
+        </span>{" "}
+        <span className="mask-line">
+          <span>Leistungen</span>
+        </span>
       </h2>
       <ul className="leistung-grid">
         {leistungen.map((item) => (

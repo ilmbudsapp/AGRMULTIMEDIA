@@ -5,31 +5,47 @@ import { useEffect } from "react";
 export function Reveal() {
   useEffect(() => {
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const nodes = new Set<Element>();
+    const seen = new Set<Element>();
     const io = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
           if (!entry.isIntersecting) continue;
-          const target = entry.target;
-          target.classList.add("is-armed");
-          requestAnimationFrame(() => {
-            requestAnimationFrame(() => target.classList.add("is-in"));
-          });
-          io.unobserve(target);
+          io.unobserve(entry.target);
+          reveal(entry.target, entry.boundingClientRect);
         }
       },
-      { threshold: 0.12, rootMargin: "0px 0px 10% 0px" },
+      { threshold: 0, rootMargin: "0px" },
     );
+
+    const reveal = (target: Element, rect?: DOMRect) => {
+      const box = rect ?? target.getBoundingClientRect();
+      const viewHeight = window.innerHeight || 1;
+      const alreadyInside = box.top < viewHeight * 0.62 && box.bottom > 32;
+      if (reduce || alreadyInside) {
+        target.classList.add("is-in", "is-now");
+        return;
+      }
+      target.classList.add("is-armed");
+      window.setTimeout(() => target.classList.add("is-in"), 40);
+    };
 
     const watch = () => {
       document.querySelectorAll("[data-reveal]:not(.is-in)").forEach((node) => {
-        if (nodes.has(node)) return;
-        nodes.add(node);
+        if (seen.has(node)) return;
+        seen.add(node);
         if (reduce) {
-          node.classList.add("is-in");
+          node.classList.add("is-in", "is-now");
           return;
         }
-        io.observe(node);
+        const box = node.getBoundingClientRect();
+        const viewHeight = window.innerHeight || 1;
+        const near = box.bottom > 0 && box.top < viewHeight;
+        if (!near) {
+          node.classList.add("is-armed");
+          io.observe(node);
+          return;
+        }
+        reveal(node, box);
       });
     };
 

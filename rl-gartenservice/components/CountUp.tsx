@@ -1,36 +1,25 @@
 "use client";
 
-import { useLayoutEffect, useRef, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 
 export function CountUp({ to, label }: { to: number; label: string }) {
   const digits = String(to).split("").map((digit) => Number(digit));
-  const node = useRef<HTMLParagraphElement>(null);
   const [roll, setRoll] = useState(false);
   const [still, setStill] = useState(false);
 
   useLayoutEffect(() => {
-    const target = node.current;
-    if (!target) return;
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduce) {
       setStill(true);
       setRoll(true);
       return;
     }
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (!entry?.isIntersecting) return;
-        setRoll(true);
-        observer.disconnect();
-      },
-      { threshold: 0.4 },
-    );
-    observer.observe(target);
-    return () => observer.disconnect();
+    const frame = requestAnimationFrame(() => setRoll(true));
+    return () => cancelAnimationFrame(frame);
   }, []);
 
   return (
-    <p className="stat" ref={node}>
+    <p className="stat">
       <strong aria-hidden="true">
         <span className="stat-num">
           {digits.map((digit, index) => (
