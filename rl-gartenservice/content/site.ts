@@ -405,12 +405,12 @@ export const gallery: GalleryItem[] = [
     category: "gartenbau",
     title: "Terrasse",
     before: {
-      src: "/media/terrasse-vorher.webp",
-      alt: "Terrasse vor dem Bau, noch ohne Holzbelag",
+      src: "/media/terrasse-nachher.webp",
+      alt: "Holzterrasse mit Steinrand und Rasenfläche",
     },
     after: {
-      src: "/media/terrasse-nachher.webp",
-      alt: "Fertige Holzterrasse unter dem Glasdach",
+      src: "/media/terrasse-vorher.webp",
+      alt: "Holzterrasse mit Stufen unter dem Glasdach",
     },
   },
   {
