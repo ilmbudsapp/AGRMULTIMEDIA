@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Outfit, Source_Sans_3 } from "next/font/google";
+import { Fraunces, Source_Sans_3 } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Reveal } from "@/components/Reveal";
@@ -7,7 +7,7 @@ import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { site } from "@/content/site";
 import "./globals.css";
 
-const display = Outfit({
+const display = Fraunces({
   subsets: ["latin"],
   variable: "--font-display",
   display: "swap",

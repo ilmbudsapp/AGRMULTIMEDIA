@@ -32,7 +32,7 @@ export const site = {
 
 /**
  * Prazan href znači da tačan link još nije stigao.
- * Facebook i TikTok se ipak prikazuju, sa imenom i ikonom, dok link ne stigne.
+ * Takav kanal se i dalje prikazuje, sa imenom i ikonom, ali nije link.
  */
 export const socials: { icon: "instagram" | "facebook" | "tiktok"; label: string; handle: string; href: string }[] = [
   {
@@ -47,7 +47,12 @@ export const socials: { icon: "instagram" | "facebook" | "tiktok"; label: string
     handle: "rlbodenlegeraugsburg",
     href: "https://www.instagram.com/rlbodenlegeraugsburg/",
   },
-  { icon: "facebook", label: "Facebook", handle: "RL Gartenservice", href: "" },
+  {
+    icon: "facebook",
+    label: "Facebook",
+    handle: "RL Gartenservice",
+    href: "https://www.facebook.com/profile.php?id=61596533423821",
+  },
   { icon: "tiktok", label: "TikTok", handle: "RL Gartenservice", href: "" },
 ];
 
