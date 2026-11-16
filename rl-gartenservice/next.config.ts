@@ -2,7 +2,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import type { NextConfig } from "next";
 
-const appRoot = path.dirname(fileURLToPath(import.meta.url));
+const repoRoot = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
@@ -19,9 +19,9 @@ const nextConfig: NextConfig = {
     ];
   },
   images: { unoptimized: true },
-  outputFileTracingRoot: appRoot,
+  outputFileTracingRoot: repoRoot,
   turbopack: {
-    root: appRoot,
+    root: repoRoot,
   },
 };
 
