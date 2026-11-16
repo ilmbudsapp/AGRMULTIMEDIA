@@ -224,7 +224,7 @@ export const leistungen: {
     title: "Gartenpflege",
     text: "Beetpflege, Unkrautentfernung und Laubarbeiten",
     icon: "leaf",
-    image: "/media/cards/gartenpflege.webp",
+    image: "/media/cards/v2-gartenpflege.webp",
     imageAlt: "Gärtner pflegt ein Beet, von hinten",
   },
   {
@@ -232,7 +232,7 @@ export const leistungen: {
     title: "Rollrasen verlegen",
     text: "Schnelle und saubere Verlegung von Fertigrasen",
     icon: "grass",
-    image: "/media/cards/rollrasen.webp",
+    image: "/media/cards/v2-rollrasen.webp",
     imageAlt: "Fertigrasen wird ausgerollt, von hinten",
   },
   {
@@ -240,7 +240,7 @@ export const leistungen: {
     title: "Rasenmähen",
     text: "Fachgerechtes Mähen und Rasenpflege",
     icon: "mower",
-    image: "/media/cards/rasenmaehen.webp",
+    image: "/media/cards/v2-rasenmaehen.webp",
     imageAlt: "Rasenmähen im Park, von hinten",
   },
   {
@@ -248,7 +248,7 @@ export const leistungen: {
     title: "Pflasterarbeiten",
     text: "Wege, Einfahrten, Terrassen und Hofflächen",
     icon: "paver",
-    image: "/media/cards/pflaster.webp",
+    image: "/media/cards/v2-pflaster.webp",
     imageAlt: "Pflastersteine werden verlegt, von hinten",
   },
   {
@@ -256,7 +256,7 @@ export const leistungen: {
     title: "Hecken- & Strauchschnitt",
     text: "Form- und Rückschnitt für gepflegte Grünflächen",
     icon: "shears",
-    image: "/media/cards/hecke.webp",
+    image: "/media/cards/v2-hecke.webp",
     imageAlt: "Heckenschnitt, von hinten",
   },
   {
@@ -264,7 +264,7 @@ export const leistungen: {
     title: "Terrassenbau",
     text: "Planung und Bau individueller Terrassen",
     icon: "terrace",
-    image: "/media/cards/terrasse.webp",
+    image: "/media/cards/v2-terrasse.webp",
     imageAlt: "Holzterrasse wird gebaut, von hinten",
   },
   {
@@ -272,15 +272,15 @@ export const leistungen: {
     title: "Reinigung",
     text: "Außenreinigung von Wegen, Terrassen und Einfahrten",
     icon: "broom",
-    image: "/media/cards/reinigung.webp",
-    imageAlt: "Zwei Personen reinigen ein Treppenhaus, von hinten",
+    image: "/media/cards/v2-reinigung.webp",
+    imageAlt: "Treppenhaus wird gereinigt, von hinten",
   },
   {
     href: "/hausmeisterservice",
     title: "Hausmeisterservice",
     text: "Außenanlagen, kleine Reparaturen und Instandhaltung",
     icon: "house",
-    image: "/media/cards/hausmeister.webp",
+    image: "/media/cards/v2-hausmeister.webp",
     imageAlt: "Wechsel einer Deckenleuchte, von hinten",
   },
   {
@@ -288,7 +288,7 @@ export const leistungen: {
     title: "Bodenleger",
     text: "Fachgerechte Verlegung von Bodenbelägen",
     icon: "floor",
-    image: "/media/cards/boden.webp",
+    image: "/media/cards/v2-boden.webp",
     imageAlt: "Holzfußboden wird verlegt, von hinten",
   },
   {
@@ -296,7 +296,7 @@ export const leistungen: {
     title: "Zaunbau",
     text: "Montage von Zäunen für Gärten und Grundstücke",
     icon: "fence",
-    image: "/media/cards/zaun.webp",
+    image: "/media/cards/v2-zaun.webp",
     imageAlt: "Holzzaun wird montiert, von hinten",
   },
 ];
