@@ -986,7 +986,8 @@ address > span { display: grid; gap: 0.15rem; }
 }
 @media (max-width: 719px) and (prefers-reduced-motion: no-preference) {
   [data-reveal="card"].is-armed:not(.is-in) > .card-motion { transform: translate3d(-115%, 0, 0); }
-  .leistung-grid [data-reveal="card"].is-armed:not(.is-in) > .card-motion { transform: translate3d(0, 16px, 0); }
+  .leistung-grid [data-reveal="card"].is-armed:not(.is-in) > .card-motion { transform: translate3d(0, 64px, 0); }
+  .leistung-grid [data-reveal="card"].is-in > .card-motion { transition-duration: 680ms, 280ms; }
 }
 @media (min-width: 720px) and (prefers-reduced-motion: no-preference) {
   [data-reveal="card"].is-armed:not(.is-in) > .card-motion { transform: translate3d(-120%, 0, 0); }

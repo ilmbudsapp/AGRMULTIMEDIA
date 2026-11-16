@@ -2,7 +2,9 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import type { NextConfig } from "next";
 
-const repoRoot = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
+const appRoot = path.dirname(fileURLToPath(import.meta.url));
+const repoRoot = path.join(appRoot, "..");
+const tracingRoot = process.env.VERCEL === "1" ? repoRoot : appRoot;
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
@@ -19,9 +21,9 @@ const nextConfig: NextConfig = {
     ];
   },
   images: { unoptimized: true },
-  outputFileTracingRoot: repoRoot,
+  outputFileTracingRoot: tracingRoot,
   turbopack: {
-    root: repoRoot,
+    root: tracingRoot,
   },
 };
 
