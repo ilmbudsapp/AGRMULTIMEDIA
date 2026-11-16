@@ -18,7 +18,7 @@ export function Footer() {
         <a href="/datenschutz">Datenschutzerklärung</a>
       </nav>
       <p className="footer-sign">
-        <a href="https://www.agrmultimedia.com/">AGRMULTIMEDIA</a>
+        Webdesign: <a href="https://www.agrmultimedia.com/">AGRMULTIMEDIA</a>
       </p>
     </footer>
   );
