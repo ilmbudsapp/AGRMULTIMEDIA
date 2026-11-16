@@ -23,6 +23,8 @@ export const site = {
     country: "Deutschland",
   },
   areaLine: "Landkreis Augsburg und Umgebung bis 70 km",
+  /** Potvrdi sa klijentom pre objave. */
+  satisfiedClients: 150,
   title: "RL Gartenservice | Gartenpflege & Hausmeisterservice in Augsburg",
   description:
     "RL Gartenservice in Gersthofen: Gartenpflege, Gartenbau, Hausmeisterservice und Bodenbelagsarbeiten für Augsburg und Umgebung. Jetzt kostenlos und unverbindlich anfragen.",

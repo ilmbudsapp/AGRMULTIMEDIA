@@ -169,10 +169,10 @@ p { margin: 0 0 1rem; }
 
 .hero {
   position: relative;
-  min-height: calc(100svh - var(--header));
+  min-height: calc(100svh - 9.6rem);
   display: flex;
   align-items: flex-end;
-  padding: 2rem 1.25rem 1.6rem;
+  padding: 1.4rem 1.25rem 1.1rem;
   overflow: hidden;
 }
 .hero > img {
@@ -194,10 +194,12 @@ p { margin: 0 0 1rem; }
 .hero-panel {
   position: relative;
   z-index: 1;
-  width: min(820px, 100%);
+  width: min(1120px, 100%);
   margin-right: auto;
   display: grid;
-  padding: clamp(1.3rem, 3vw, 2.2rem);
+  gap: 1rem;
+  align-items: center;
+  padding: clamp(1.15rem, 2.4vw, 1.7rem);
   background: rgba(8, 28, 18, 0.78);
   border: 1px solid var(--line);
   border-radius: 26px;
@@ -223,6 +225,27 @@ p { margin: 0 0 1rem; }
   max-width: 22ch;
 }
 .hero-services { color: var(--gold-2); }
+.stat { margin: 0; text-align: center; min-width: 8.5rem; }
+.stat strong {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: var(--font-display), "Segoe UI", sans-serif;
+  font-size: clamp(2.8rem, 5vw, 4.1rem);
+  line-height: 0.9;
+  color: var(--gold-2);
+  font-variant-numeric: tabular-nums;
+}
+.stat-num { display: inline-block; min-width: 3ch; text-align: right; }
+.stat-plus { font-size: 0.62em; line-height: 1; }
+.stat > span:not(.sr-only) {
+  display: block;
+  margin-top: 0.4rem;
+  color: var(--gold);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
 .button {
   display: inline-flex;
   align-items: center;
@@ -289,8 +312,8 @@ p { margin: 0 0 1rem; }
 .leistung-card strong { display: block; font-size: 1.08rem; margin-bottom: 0.15rem; color: #fff; }
 .leistung-copy { color: rgba(255, 255, 255, 0.9); line-height: 1.35; }
 .svc-icon {
-  width: 30px;
-  height: 30px;
+  width: 29px;
+  height: 29px;
   margin-top: 0.12rem;
   flex: none;
   color: var(--gold-2);
@@ -563,7 +586,21 @@ p { margin: 0 0 1rem; }
 
 .contact-grid { display: grid; gap: 0.9rem; }
 .contact-grid > div, .inquiry { padding: clamp(1.2rem, 3vw, 1.8rem); }
-address { font-style: normal; display: grid; gap: 0.2rem; margin-bottom: 1rem; }
+address {
+  font-style: normal;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+address > span { display: grid; gap: 0.15rem; }
+.contact-icon {
+  width: 28px;
+  height: 28px;
+  flex: none;
+  color: var(--gold-2);
+  margin-top: 0.05rem;
+}
 .contact-links { list-style: none; padding: 0; margin: 0 0 1.2rem; display: grid; gap: 0.7rem; }
 .contact-links a, .contact-links .channel {
   display: flex;
@@ -674,7 +711,8 @@ address { font-style: normal; display: grid; gap: 0.2rem; margin-bottom: 1rem; }
   .leistung-grid > li:nth-child(n + 5) { --d: 220ms; }
   .leistung-grid > li:nth-child(n + 7) { --d: 330ms; }
   .leistung-grid > li:nth-child(n + 9) { --d: 440ms; }
-  .svc-icon { width: 34px; height: 34px; }
+  .svc-icon { width: 35px; height: 35px; }
+  .hero-panel { grid-template-columns: 1fr auto; }
   .band-inner:has(.band-photo) { grid-template-columns: 1.15fr 0.85fr; }
   .gallery-item.is-feature { grid-column: 1 / -1; }
 }

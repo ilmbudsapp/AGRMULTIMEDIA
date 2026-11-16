@@ -1,7 +1,7 @@
 "use client";
 
 import { FormEvent, useState, type CSSProperties } from "react";
-import { IconBadge, type IconName } from "@/components/Icons";
+import { Icon, type IconName } from "@/components/Icons";
 import { serviceOptions, site, socials } from "@/content/site";
 import { LIMITS, type FieldErrors } from "@/lib/contact";
 
@@ -71,19 +71,22 @@ export function Contact() {
           <p className="eyebrow">Kontakt</p>
           <h1>Kostenlos und unverbindlich anfragen</h1>
           <address>
-            <strong>{site.name}</strong>
-            <span>{site.owner}</span>
+            <Icon name="pin" className="contact-icon" />
             <span>
-              {site.address.street}
-              <br />
-              {site.address.postalCode} {site.address.city}
+              <strong>{site.name}</strong>
+              <span>{site.owner}</span>
+              <span>
+                {site.address.street}
+                <br />
+                {site.address.postalCode} {site.address.city}
+              </span>
             </span>
           </address>
           <ul className="contact-links">
             {channels.map((item) => {
               const body = (
                 <>
-                  <IconBadge name={item.icon} />
+                  <Icon name={item.icon} className="contact-icon" />
                   <span>
                     <strong>{item.label}</strong>
                     {item.value}

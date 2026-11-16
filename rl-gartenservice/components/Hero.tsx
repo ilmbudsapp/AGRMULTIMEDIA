@@ -1,4 +1,5 @@
-import { hero } from "@/content/site";
+import { CountUp } from "@/components/CountUp";
+import { hero, site } from "@/content/site";
 
 export function Hero() {
   return (
@@ -21,6 +22,7 @@ export function Hero() {
             {hero.cta}
           </a>
         </div>
+        <CountUp to={site.satisfiedClients} label="Zufriedene Kunden" />
       </div>
     </section>
   );
