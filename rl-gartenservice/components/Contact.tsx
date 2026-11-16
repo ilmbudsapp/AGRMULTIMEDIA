@@ -1,11 +1,9 @@
 import type { CSSProperties } from "react";
 import { Icon, type IconName } from "@/components/Icons";
+import { SiteMap } from "@/components/SiteMap";
 import { site, socials } from "@/content/site";
 
 export function Contact() {
-  const query = `${site.address.street}, ${site.address.postalCode} ${site.address.city}, ${site.address.country}`;
-  const embed = `https://maps.google.com/maps?q=${encodeURIComponent(query)}&z=16&hl=de&output=embed`;
-  const route = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
   const channels: { icon: IconName; label: string; value: string; href: string }[] = [
     { icon: "phone", label: "Tel", value: site.phoneDisplay, href: site.phoneTel },
     { icon: "whatsapp", label: "WhatsApp", value: site.whatsappDisplay, href: site.whatsappUrl },
@@ -72,18 +70,7 @@ export function Contact() {
         </div>
 
         <div data-reveal="card" style={{ "--d": "160ms" } as CSSProperties}>
-          <div className="map-panel card-motion">
-            <iframe
-              title={`Karte: ${site.name}, ${site.address.street}, ${site.address.postalCode} ${site.address.city}`}
-              src={embed}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              allowFullScreen
-            />
-            <p className="map-note">
-              <a href={route}>Route in Google Maps öffnen</a>
-            </p>
-          </div>
+          <SiteMap />
         </div>
       </div>
     </section>

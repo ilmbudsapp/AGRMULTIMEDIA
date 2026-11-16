@@ -1,3 +1,4 @@
+import { ConsentSettings } from "@/components/Consent";
 import { site } from "@/content/site";
 
 export function Footer() {
@@ -16,6 +17,7 @@ export function Footer() {
       <nav aria-label="Rechtliches">
         <a href="/impressum">Impressum</a>
         <a href="/datenschutz">Datenschutzerklärung</a>
+        <ConsentSettings />
       </nav>
       <p className="footer-sign">
         Webdesign: <a href="https://www.agrmultimedia.com/">AGRMULTIMEDIA</a>

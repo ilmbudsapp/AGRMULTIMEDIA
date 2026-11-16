@@ -65,20 +65,24 @@ export default function PrivacyPage() {
 
           <h2>Google Maps</h2>
           <p>
-            Auf der Kontaktseite zeigen wir den Betriebssitz auf einer Karte von Google Maps: {site.address.street},{" "}
-            {site.address.postalCode} {site.address.city}. Beim Öffnen dieser Seite lädt Ihr Browser die Karte von
-            Google. Dabei wird eine Verbindung zu Google aufgebaut. Google kann die IP-Adresse und technische
-            Angaben zum Gerät verarbeiten, auch außerhalb des Europäischen Wirtschaftsraums.
+            Auf der Kontaktseite können wir den Betriebssitz auf einer Karte von Google Maps zeigen:{" "}
+            {site.address.street}, {site.address.postalCode} {site.address.city}. Die Karte wird erst geladen,
+            wenn Sie das erlauben. Vorher sehen Sie die Adresse und den Link „Route in Google Maps öffnen“.
+            Dieser Link baut erst beim Anklicken eine Verbindung zu Google auf.
           </p>
           <p>
-            Google stützt solche Übermittlungen auf seine geltenden Datenschutzrahmen, insbesondere
-            Standardvertragsklauseln, soweit kein Angemessenheitsbeschluss greift. Hinweise von Google stehen unter{" "}
+            Wenn Sie die Karte erlauben, lädt Ihr Browser sie von Google. Google kann dabei die IP-Adresse und
+            technische Angaben zum Gerät verarbeiten und eigene Cookies speichern, auch außerhalb des
+            Europäischen Wirtschaftsraums. Google stützt solche Übermittlungen auf seine geltenden
+            Datenschutzrahmen, insbesondere Standardvertragsklauseln, soweit kein Angemessenheitsbeschluss
+            greift. Hinweise von Google stehen unter{" "}
             <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.
           </p>
           <p>
-            Rechtsgrundlage ist Artikel 6 Abs. 1 lit. f DSGVO. Das berechtigte Interesse ist, Besuchern den
-            Standort des Betriebs zu zeigen. Der Link „Route in Google Maps öffnen“ baut erst beim Anklicken eine
-            weitere Verbindung zu Google auf.
+            Rechtsgrundlage für das Laden der Karte ist Ihre Einwilligung, Artikel 6 Abs. 1 lit. a DSGVO und
+            § 25 Abs. 1 TDDDG. Die Entscheidung wird nur lokal in Ihrem Browser gespeichert, nicht auf unserem
+            Server. Sie können sie jederzeit über „Cookie-Einstellungen“ unten auf der Seite ändern. Lehnen Sie
+            ab oder widerrufen Sie die Einwilligung, wird die Karte nicht mehr von Google geladen.
           </p>
 
           <h2>WhatsApp</h2>
@@ -122,18 +126,17 @@ export default function PrivacyPage() {
             wird erst geladen, wenn Sie es öffnen.
           </p>
           <p>
-            Diese Website selbst speichert keine optionalen Cookies und kein Tracking. Eine Einwilligung
-            nach § 25 TDDDG holen wir für eigene Cookies nicht ein, weil wir keine setzen. Beim Laden der
-            Google-Karte auf der Kontaktseite kann Google eigene Cookies speichern. Technisch nötige
-            Verbindungsdaten des Hostings fallen unter die oben genannte Interessenabwägung. Es gibt keine
-            Schaltfläche zum Widerruf einer Einwilligung, weil wir selbst keine solche Einwilligung einholen.
+            Diese Website selbst setzt keine Cookies und kein Tracking. Eine Einwilligung fragen wir nur für
+            die Google-Karte auf der Kontaktseite ab, weil Google dort eigene Cookies speichern kann. Die
+            Schaltflächen stehen in dem Hinweis und später unter „Cookie-Einstellungen“. Technisch nötige
+            Verbindungsdaten des Hostings fallen unter die oben genannte Interessenabwägung.
           </p>
 
           <h2>Empfänger</h2>
           <p>
             Empfänger sind der noch nicht benannte Hosting-Anbieter, soweit er die Seite ausliefert, sowie
             Google als Anbieter des E-Mail-Postfachs, sobald eine Nachricht dort ankommt, und als Anbieter
-            der Karte, sobald die Kontaktseite geladen wird. Bei einem WhatsApp-, Instagram-, Facebook- oder
+            der Karte, sobald Sie die Karte erlaubt haben. Bei einem WhatsApp-, Instagram-, Facebook- oder
             TikTok-Klick ist die jeweilige Plattform Empfängerin der dann entstehenden Verbindung. Eine
             Weitergabe zu Werbezwecken findet nicht statt.
           </p>
@@ -142,9 +145,8 @@ export default function PrivacyPage() {
           <p>
             Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und
             Datenübertragbarkeit. Soweit wir Daten auf Grundlage von Artikel 6 Abs. 1 lit. f DSGVO
-            verarbeiten, können Sie widersprechen. Eine Einwilligung können Sie mit Wirkung für die Zukunft
-            widerrufen, sobald eine Verarbeitung auf einer Einwilligung beruht. Das ist bei den hier
-            beschriebenen Vorgängen derzeit nicht der Fall.
+            verarbeiten, können Sie widersprechen. Die Einwilligung für die Google-Karte können Sie jederzeit
+            über „Cookie-Einstellungen“ mit Wirkung für die Zukunft widerrufen.
           </p>
           <p>
             Sie haben das Recht, sich bei einer Aufsichtsbehörde zu beschweren. Für den nicht-öffentlichen
