@@ -64,19 +64,22 @@ export function Gallery() {
           {visible.map((item) => (
             <li key={item.id} className={item.kind === "compare" ? "gallery-item is-feature" : "gallery-item"}>
               <div data-reveal="card">
-              <div className="card-motion">
+              <div className="card-motion gallery-card">
               {item.kind === "compare" ? (
                 <Compare before={item.before} after={item.after} title={item.title} />
               ) : (
-                <button
-                  type="button"
-                  className="shot"
-                  aria-label={item.alt}
-                  onClick={() => setActive(item)}
-                >
-                  <img src={item.kind === "video" ? item.poster : item.src} alt={item.alt} loading="lazy" />
-                  {item.kind === "video" ? <span className="badge">Video</span> : null}
-                </button>
+                <>
+                  <button
+                    type="button"
+                    className="shot"
+                    aria-label={item.alt}
+                    onClick={() => setActive(item)}
+                  >
+                    <img src={item.kind === "video" ? item.poster : item.src} alt={item.alt} loading="lazy" />
+                    {item.kind === "video" ? <span className="badge">Video</span> : null}
+                  </button>
+                  <p className="gallery-caption">{item.alt}</p>
+                </>
               )}
               </div>
               </div>
