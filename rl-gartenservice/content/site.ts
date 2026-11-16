@@ -312,21 +312,6 @@ export const places = [
   "Dachau",
 ] as const;
 
-export const serviceOptions = [
-  "Gartenpflege",
-  "Rasenmähen und Rasenpflege",
-  "Heckenschnitt und Strauchschnitt",
-  "Gartenbau & Außenanlagen",
-  "Pflasterarbeiten",
-  "Terrassenbau",
-  "Zaunbau",
-  "Rollrasenverlegung",
-  "Hausmeisterservice",
-  "Reinigung",
-  "Bodenbelagsarbeiten",
-  "Sonstiges / Beratung",
-] as const;
-
 export type GalleryCategory =
   | "gartenpflege"
   | "gartenbau"

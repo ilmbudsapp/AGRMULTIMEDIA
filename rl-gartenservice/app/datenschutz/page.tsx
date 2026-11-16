@@ -63,29 +63,22 @@ export default function PrivacyPage() {
             greift.
           </p>
 
-          <h2>Kontaktformular</h2>
+          <h2>Google Maps</h2>
           <p>
-            Über das Formular sind diese Angaben erforderlich: Name, Telefonnummer oder E-Mail-Adresse,
-            gewünschte Dienstleistung, Ort oder Postleitzahl und eine kurze Nachricht. Fotos sind freiwillig.
-            Sie können bis zu fünf Dateien im Format JPG, PNG oder WEBP beifügen, jeweils höchstens 8 MB.
+            Auf der Kontaktseite zeigen wir den Betriebssitz auf einer Karte von Google Maps: {site.address.street},{" "}
+            {site.address.postalCode} {site.address.city}. Beim Öffnen dieser Seite lädt Ihr Browser die Karte von
+            Google. Dabei wird eine Verbindung zu Google aufgebaut. Google kann die IP-Adresse und technische
+            Angaben zum Gerät verarbeiten, auch außerhalb des Europäischen Wirtschaftsraums.
           </p>
           <p>
-            Wir verwenden diese Angaben nur, um Ihre Anfrage zu bearbeiten und bei Bedarf ein Angebot zu
-            erstellen. Die Fotos werden nicht veröffentlicht und nicht für Werbung verwendet. Rechtsgrundlage
-            ist Artikel 6 Abs. 1 lit. b DSGVO für vorvertragliche Schritte, im Übrigen Artikel 6 Abs. 1 lit. f
-            DSGVO mit dem berechtigten Interesse, Anfragen zu beantworten.
+            Google stützt solche Übermittlungen auf seine geltenden Datenschutzrahmen, insbesondere
+            Standardvertragsklauseln, soweit kein Angemessenheitsbeschluss greift. Hinweise von Google stehen unter{" "}
+            <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.
           </p>
           <p>
-            Die Übermittlung läuft über den Server dieser Website. Ist der E-Mail-Versand eingerichtet, werden
-            der Inhalt der Anfrage und freiwillige Fotos als Anhang an {site.email} weitergeleitet. Ein
-            bestimmter Versanddienst ist dafür noch nicht festgelegt. Solange der Versand nicht eingerichtet
-            ist, kann das Formular die Anfrage nicht zustellen; Sie können uns dann anrufen oder über WhatsApp
-            schreiben.
-          </p>
-          <p>
-            Wir löschen Anfragen, sobald sie erledigt sind und keine gesetzliche Aufbewahrungspflicht
-            entgegensteht. Kommt ein Auftrag zustande, gelten die für Geschäftsunterlagen maßgeblichen
-            Aufbewahrungsfristen. Eine feste Löschfrist in Tagen ist nicht festgelegt.
+            Rechtsgrundlage ist Artikel 6 Abs. 1 lit. f DSGVO. Das berechtigte Interesse ist, Besuchern den
+            Standort des Betriebs zu zeigen. Der Link „Route in Google Maps öffnen“ baut erst beim Anklicken eine
+            weitere Verbindung zu Google auf.
           </p>
 
           <h2>WhatsApp</h2>
@@ -118,8 +111,9 @@ export default function PrivacyPage() {
           <h2>Schriften, Karten, Video und Zugriffe auf das Endgerät</h2>
           <p>
             Die Schrift wird mit der Website ausgeliefert. Beim Seitenaufruf wird keine Schrift von Google
-            oder einem anderen Schriftdienst nachgeladen. Es sind keine Karten, keine Analysewerkzeuge und
-            keine Werbe- oder Marketingdienste eingebunden.
+            oder einem anderen Schriftdienst nachgeladen. Es sind keine Analysewerkzeuge und keine Werbe-
+            oder Marketingdienste eingebunden. Die einzige eingebettete Karte ist Google Maps auf der
+            Kontaktseite; sie ist im Abschnitt „Google Maps“ beschrieben.
           </p>
           <p>
             Auf der Startseite läuft ein kurzes Video der Gartenansicht. Es liegt auf dem Server dieser
@@ -129,18 +123,20 @@ export default function PrivacyPage() {
             wird erst geladen, wenn Sie es öffnen.
           </p>
           <p>
-            Es werden keine optionalen Cookies und kein optionales Tracking gespeichert. Eine Einwilligung
-            nach § 25 TDDDG ist für den Betrieb der Seite deshalb nicht erforderlich. Technisch nötige
+            Diese Website selbst speichert keine optionalen Cookies und kein Tracking. Eine Einwilligung
+            nach § 25 TDDDG holen wir für eigene Cookies nicht ein, weil wir keine setzen. Beim Laden der
+            Google-Karte auf der Kontaktseite kann Google eigene Cookies speichern. Technisch nötige
             Verbindungsdaten des Hostings fallen unter die oben genannte Interessenabwägung. Es gibt keine
-            Schaltfläche zum Widerruf einer Einwilligung, weil keine solche Einwilligung eingeholt wird.
+            Schaltfläche zum Widerruf einer Einwilligung, weil wir selbst keine solche Einwilligung einholen.
           </p>
 
           <h2>Empfänger</h2>
           <p>
             Empfänger sind der noch nicht benannte Hosting-Anbieter, soweit er die Seite ausliefert, sowie
-            Google als Anbieter des E-Mail-Postfachs, sobald eine Nachricht dort ankommt. Bei einem WhatsApp-,
-            Instagram- oder Facebook-Klick ist die jeweilige Plattform Empfängerin der dann entstehenden
-            Verbindung. Eine Weitergabe zu Werbezwecken findet nicht statt.
+            Google als Anbieter des E-Mail-Postfachs, sobald eine Nachricht dort ankommt, und als Anbieter
+            der Karte, sobald die Kontaktseite geladen wird. Bei einem WhatsApp-, Instagram- oder
+            Facebook-Klick ist die jeweilige Plattform Empfängerin der dann entstehenden Verbindung. Eine
+            Weitergabe zu Werbezwecken findet nicht statt.
           </p>
 
           <h2>Ihre Rechte</h2>

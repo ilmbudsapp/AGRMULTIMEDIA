@@ -35,32 +35,14 @@ Novi video: `.mp4` plus poster `.webp`, stavka `kind: "video"`. Video se učitav
 
 Vorher / Nachher samo kad su oba snimka isti posao: `kind: "compare"`.
 
-## Kontakt forma
+## Kontakt
 
-Lokalno (`.env.local`): `CONTACT_SINK=file`. Upit se snima u `data/inquiries/`. Potvrda se prikazuje tek kad fajl stvarno bude upisan.
-
-Pre objave u `.env` na serveru:
-
-```
-CONTACT_SINK=smtp
-SMTP_HOST=
-SMTP_PORT=587
-SMTP_USER=
-SMTP_PASS=
-SMTP_FROM=
-CONTACT_TO=rlgartenservice24@gmail.com
-```
-
-Bez ovih podataka forma na produkciji vraća grešku i ne prikazuje uspeh.
-
-Dozvoljeno je do 5 fotografija, JPG, PNG ili WEBP, do 8 MB. Tip fajla se proverava na serveru, ne samo po nastavku.
+Nema formulara. Stranica `/kontakt` prikazuje telefon, WhatsApp, e-poštu i Google mapu adrese.
 
 ## Još treba pre objave
 
-- Facebook URL (naziv na flajeru: RL Gartenservice)
 - TikTok URL (naziv na flajeru: RL Gartenservice)
 - Google Unternehmensprofil URL
-- SMTP nalog za prijem upita
 - Umsatzsteuer-ID, ako postoji
 - Handelsregister, ako postoji
 - naziv hosting provajdera u Datenschutzerklärung
