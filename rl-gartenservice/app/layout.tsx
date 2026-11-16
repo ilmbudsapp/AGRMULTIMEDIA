@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Source_Sans_3 } from "next/font/google";
+import { Instrument_Sans, Instrument_Serif } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Reveal } from "@/components/Reveal";
@@ -7,14 +7,16 @@ import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { site } from "@/content/site";
 import "./globals.css";
 
-const display = Fraunces({
-  subsets: ["latin"],
+const display = Instrument_Serif({
+  subsets: ["latin", "latin-ext"],
+  weight: "400",
   variable: "--font-display",
   display: "swap",
 });
 
-const body = Source_Sans_3({
-  subsets: ["latin"],
+const body = Instrument_Sans({
+  subsets: ["latin", "latin-ext"],
+  weight: ["400", "500", "600"],
   variable: "--font-body",
   display: "swap",
 });

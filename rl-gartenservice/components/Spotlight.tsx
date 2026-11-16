@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { MaskWords } from "@/components/MaskWords";
+import { Motif } from "@/components/Motif";
 import { serviceAreas } from "@/content/site";
 
 const focusIds = ["gartenpflege", "hausmeisterservice"] as const;
@@ -33,6 +35,9 @@ export function Spotlight() {
 
   return (
     <section className="spotlight" aria-labelledby="spotlight-title">
+      <Motif side="right" />
+      <Motif side="left" />
+      <div className="spotlight-inner">
       <div className="spotlight-stage">
         {scenes.map((scene) => (
           <img
@@ -48,8 +53,8 @@ export function Spotlight() {
         </p>
       </div>
       <div className="spotlight-copy">
-        <p className="eyebrow" id="spotlight-title">
-          Schwerpunkte
+        <p className="eyebrow word-title" id="spotlight-title" data-reveal="mask">
+          <MaskWords text="Schwerpunkte" />
         </p>
         {items.map((area, index) => (
           <article
@@ -65,9 +70,7 @@ export function Spotlight() {
               </figure>
             ) : null}
             <h2 data-reveal="mask">
-              <span className="mask-line">
-                <span>{area.title}</span>
-              </span>
+              <MaskWords text={area.title} />
             </h2>
             <p>{area.intro}</p>
             <a className="more-link" href={`/${area.id}`}>
@@ -75,6 +78,7 @@ export function Spotlight() {
             </a>
           </article>
         ))}
+      </div>
       </div>
     </section>
   );

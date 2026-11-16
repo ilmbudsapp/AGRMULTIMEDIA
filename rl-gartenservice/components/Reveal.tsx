@@ -14,19 +14,19 @@ export function Reveal() {
           reveal(entry.target, entry.boundingClientRect);
         }
       },
-      { threshold: 0, rootMargin: "0px" },
+      { threshold: 0, rootMargin: "0px 0px 90px 0px" },
     );
 
     const reveal = (target: Element, rect?: DOMRect) => {
       const box = rect ?? target.getBoundingClientRect();
       const viewHeight = window.innerHeight || 1;
-      const alreadyInside = box.top < viewHeight * 0.62 && box.bottom > 32;
+      const alreadyInside = box.top < viewHeight * 0.8 && box.bottom > 20;
       if (reduce || alreadyInside) {
         target.classList.add("is-in", "is-now");
         return;
       }
       target.classList.add("is-armed");
-      window.setTimeout(() => target.classList.add("is-in"), 40);
+      window.setTimeout(() => target.classList.add("is-in"), 32);
     };
 
     const watch = () => {
@@ -39,7 +39,7 @@ export function Reveal() {
         }
         const box = node.getBoundingClientRect();
         const viewHeight = window.innerHeight || 1;
-        const near = box.bottom > 0 && box.top < viewHeight;
+        const near = box.bottom > 0 && box.top < viewHeight + 90;
         if (!near) {
           node.classList.add("is-armed");
           io.observe(node);

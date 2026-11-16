@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Compare } from "@/components/Compare";
+import { MaskWords } from "@/components/MaskWords";
 import { gallery } from "@/content/site";
 
 export function HomeCompare() {
@@ -22,13 +23,8 @@ export function HomeCompare() {
     <section className="home-compare" aria-labelledby="compare-title">
       <div className="home-compare-inner">
         <p className="eyebrow">Referenzen</p>
-        <h2 id="compare-title" className="split-title" data-reveal="mask">
-          <span className="mask-line">
-            <span>Vorher und</span>
-          </span>{" "}
-          <span className="mask-line">
-            <span>Nachher</span>
-          </span>
+        <h2 id="compare-title" className="word-title" data-reveal="mask">
+          <MaskWords text="Vorher und Nachher" />
         </h2>
         <p className="intro">Dieselbe Terrasse vor und nach dem Bau.</p>
         <Compare
