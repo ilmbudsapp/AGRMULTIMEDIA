@@ -213,6 +213,7 @@ export const serviceAreas: ServiceArea[] = [
 
 export const leistungen: {
   href: string;
+  slug: string;
   title: string;
   text: string;
   icon: "leaf" | "mower" | "shears" | "broom" | "floor" | "grass" | "paver" | "terrace" | "house" | "fence";
@@ -221,6 +222,7 @@ export const leistungen: {
 }[] = [
   {
     href: "/gartenpflege",
+    slug: "gartenpflege",
     title: "Gartenpflege",
     text: "Beetpflege, Unkrautentfernung und Laubarbeiten",
     icon: "leaf",
@@ -229,6 +231,7 @@ export const leistungen: {
   },
   {
     href: "/gartenbau",
+    slug: "rollrasen",
     title: "Rollrasen verlegen",
     text: "Schnelle und saubere Verlegung von Fertigrasen",
     icon: "grass",
@@ -237,6 +240,7 @@ export const leistungen: {
   },
   {
     href: "/gartenpflege",
+    slug: "rasenmaehen",
     title: "Rasenmähen",
     text: "Fachgerechtes Mähen und Rasenpflege",
     icon: "mower",
@@ -245,6 +249,7 @@ export const leistungen: {
   },
   {
     href: "/gartenbau",
+    slug: "pflaster",
     title: "Pflasterarbeiten",
     text: "Wege, Einfahrten, Terrassen und Hofflächen",
     icon: "paver",
@@ -253,6 +258,7 @@ export const leistungen: {
   },
   {
     href: "/gartenpflege",
+    slug: "hecke",
     title: "Hecken- & Strauchschnitt",
     text: "Form- und Rückschnitt für gepflegte Grünflächen",
     icon: "shears",
@@ -261,6 +267,7 @@ export const leistungen: {
   },
   {
     href: "/gartenbau",
+    slug: "terrasse",
     title: "Terrassenbau",
     text: "Planung und Bau individueller Terrassen",
     icon: "terrace",
@@ -269,6 +276,7 @@ export const leistungen: {
   },
   {
     href: "/hausmeisterservice",
+    slug: "reinigung",
     title: "Reinigung",
     text: "Außenreinigung von Wegen, Terrassen und Einfahrten",
     icon: "broom",
@@ -277,6 +285,7 @@ export const leistungen: {
   },
   {
     href: "/hausmeisterservice",
+    slug: "hausmeister",
     title: "Hausmeisterservice",
     text: "Außenanlagen, kleine Reparaturen und Instandhaltung",
     icon: "house",
@@ -285,6 +294,7 @@ export const leistungen: {
   },
   {
     href: "/bodenbelag",
+    slug: "boden",
     title: "Bodenleger",
     text: "Fachgerechte Verlegung von Bodenbelägen",
     icon: "floor",
@@ -293,6 +303,7 @@ export const leistungen: {
   },
   {
     href: "/gartenbau",
+    slug: "zaun",
     title: "Zaunbau",
     text: "Montage von Zäunen für Gärten und Grundstücke",
     icon: "fence",
