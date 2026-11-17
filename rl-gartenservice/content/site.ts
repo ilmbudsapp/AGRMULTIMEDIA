@@ -441,11 +441,10 @@ export const gallery: GalleryItem[] = [
   },
   {
     id: "boden-vorbereiten",
-    kind: "video",
+    kind: "image",
     category: "gartenpflege",
-    src: "/media/garten-boden-vorbereiten.mp4",
-    poster: "/media/garten-boden-vorbereiten-poster.webp",
-    alt: "Vorbereitete Fläche für Rasen und Beet",
+    src: "/media/cards/real/rollrasen-3.webp",
+    alt: "Vorbereitete Fläche vor dem Verlegen von Rollrasen",
   },
   {
     id: "terrasse",
@@ -486,8 +485,8 @@ export const gallery: GalleryItem[] = [
     id: "zaun-montage",
     kind: "image",
     category: "gartenbau",
-    src: "/media/zaun-montage.webp",
-    alt: "Zaunpfosten während der Montage neben dem Haus",
+    src: "/media/cards/real/zaun-1.webp",
+    alt: "Montierter Metallzaun im Garten",
   },
   {
     id: "zaun-metall",
@@ -520,11 +519,10 @@ export const gallery: GalleryItem[] = [
   },
   {
     id: "pflasterweg",
-    kind: "video",
+    kind: "image",
     category: "gartenbau",
-    src: "/media/gartenbau-pflasterweg.mp4",
-    poster: "/media/gartenbau-pflasterweg-poster.webp",
-    alt: "Gepflasterter Weg neben einem dunklen Zaun",
+    src: "/media/cards/real/pflaster-1.webp",
+    alt: "Pflasterarbeiten an einem Gartenweg",
   },
   {
     id: "boden-holz",
@@ -556,11 +554,10 @@ export const gallery: GalleryItem[] = [
   },
   {
     id: "boden-flur-video",
-    kind: "video",
+    kind: "image",
     category: "boden",
-    src: "/media/boden-flur-dunkel.mp4",
-    poster: "/media/boden-flur-dunkel-poster.webp",
-    alt: "Dunkler Bodenbelag in einem Flur",
+    src: "/media/cards/real/boden-1.webp",
+    alt: "Verlegung eines Holzfußbodens im Flur",
   },
   {
     id: "boden-hell-video",
