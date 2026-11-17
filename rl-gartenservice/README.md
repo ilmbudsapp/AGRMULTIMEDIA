@@ -41,7 +41,6 @@ Nema formulara. Stranica `/kontakt` prikazuje telefon, WhatsApp, e-poštu i Goog
 
 ## Još treba pre objave
 
-- Google Unternehmensprofil URL
 - Umsatzsteuer-ID, ako postoji
 - Handelsregister, ako postoji
 - naziv hosting provajdera u Datenschutzerklärung

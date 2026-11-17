@@ -67,8 +67,10 @@ export default function PrivacyPage() {
           <p>
             Auf der Kontaktseite können wir den Betriebssitz auf einer Karte von Google Maps zeigen:{" "}
             {site.address.street}, {site.address.postalCode} {site.address.city}. Die Karte wird erst geladen,
-            wenn Sie das erlauben. Vorher sehen Sie die Adresse und den Link „Route in Google Maps öffnen“.
-            Dieser Link baut erst beim Anklicken eine Verbindung zu Google auf.
+            wenn Sie das erlauben. Vorher sehen Sie die Adresse und die Links „Google Unternehmensprofil“ und
+            „Route planen“. Der Profil-Link öffnet den öffentlichen Google-Eintrag von {site.name}. Derselbe
+            Link steht auch in der Fußzeile. Diese Links bauen erst beim Anklicken eine Verbindung zu Google
+            auf.
           </p>
           <p>
             Wenn Sie die Karte erlauben, lädt Ihr Browser sie von Google. Google kann dabei die IP-Adresse und
@@ -136,7 +138,8 @@ export default function PrivacyPage() {
           <p>
             Empfänger sind der noch nicht benannte Hosting-Anbieter, soweit er die Seite ausliefert, sowie
             Google als Anbieter des E-Mail-Postfachs, sobald eine Nachricht dort ankommt, und als Anbieter
-            der Karte, sobald Sie die Karte erlaubt haben. Bei einem WhatsApp-, Instagram-, Facebook- oder
+            der Karte, sobald Sie die Karte erlaubt haben. Ein Klick auf das Google Unternehmensprofil oder
+            auf „Route planen“ richtet die Verbindung ebenfalls an Google. Bei einem WhatsApp-, Instagram-, Facebook- oder
             TikTok-Klick ist die jeweilige Plattform Empfängerin der dann entstehenden Verbindung. Eine
             Weitergabe zu Werbezwecken findet nicht statt.
           </p>

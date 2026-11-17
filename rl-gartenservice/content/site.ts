@@ -22,6 +22,9 @@ export const site = {
     city: "Gersthofen",
     country: "Deutschland",
   },
+  /** Javni Google Unternehmensprofil, bez praćenja iz deljenog linka. */
+  mapsUrl:
+    "https://www.google.com/maps/place/RL+Gartenservice/@48.4316416,10.8799417,15z/data=!4m15!1m8!3m7!1s0xa3ad4a40f4f0401:0x7d49776f29843305!2sRL+Gartenservice!8m2!3d48.4314932!4d10.8798824!10e5!16s%2Fg%2F11_047_yw8!3m5!1s0xa3ad4a40f4f0401:0x7d49776f29843305!8m2!3d48.4314932!4d10.8798824!16s%2Fg%2F11_047_yw8",
   areaLine: "Landkreis Augsburg und Umgebung bis 70 km",
   /** Potvrdi sa klijentom pre objave. */
   satisfiedClients: 150,

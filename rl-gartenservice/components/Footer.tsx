@@ -12,6 +12,10 @@ export function Footer() {
           {site.address.street}
           <br />
           {site.address.postalCode} {site.address.city}
+          <br />
+          <a href={site.mapsUrl} rel="noopener noreferrer">
+            Google Unternehmensprofil
+          </a>
         </p>
       </div>
       <nav aria-label="Rechtliches">

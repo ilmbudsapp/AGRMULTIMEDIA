@@ -5,9 +5,9 @@ import { CONSENT_EVENT, readConsent, writeConsent } from "@/lib/consent";
 import { site } from "@/content/site";
 
 export function SiteMap() {
-  const query = `${site.address.street}, ${site.address.postalCode} ${site.address.city}, ${site.address.country}`;
-  const embed = `https://maps.google.com/maps?q=${encodeURIComponent(query)}&z=16&hl=de&output=embed`;
-  const route = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
+  const query = `${site.name}, ${site.address.street}, ${site.address.postalCode} ${site.address.city}`;
+  const embed = "https://maps.google.com/maps?cid=9027878247362474757&hl=de&z=16&output=embed";
+  const route = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(query)}`;
   const [allowed, setAllowed] = useState(false);
 
   useEffect(() => {
@@ -43,7 +43,12 @@ export function SiteMap() {
         </div>
       )}
       <p className="map-note">
-        <a href={route}>Route in Google Maps öffnen</a>
+        <a href={site.mapsUrl} rel="noopener noreferrer">
+          Google Unternehmensprofil
+        </a>
+        <a href={route} rel="noopener noreferrer">
+          Route planen
+        </a>
       </p>
     </div>
   );

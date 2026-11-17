@@ -29,8 +29,9 @@ const jsonLd = {
     addressCountry: "DE",
   },
   founder: { "@type": "Person", name: site.owner },
+  hasMap: site.mapsUrl,
   areaServed: places.map((name) => ({ "@type": "City", name })),
-  sameAs: socials.filter((item) => item.href).map((item) => item.href),
+  sameAs: [...socials.filter((item) => item.href).map((item) => item.href), site.mapsUrl],
   makesOffer: serviceAreas.map((area) => ({
     "@type": "Offer",
     url: `${site.url}/${area.id}`,
