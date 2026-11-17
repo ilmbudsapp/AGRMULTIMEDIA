@@ -10,6 +10,14 @@ export function HeroMedia() {
   const [playing, setPlaying] = useState(false);
   const [posterReady, setPosterReady] = useState(false);
 
+  const armVideo = () => {
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        window.setTimeout(() => setPosterReady(true), 200);
+      });
+    });
+  };
+
   useEffect(() => {
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
     const narrow = window.matchMedia("(max-width: 719px)");
@@ -28,7 +36,7 @@ export function HeroMedia() {
 
   useEffect(() => {
     const poster = posterRef.current;
-    if (poster?.complete && poster.naturalWidth > 0) setPosterReady(true);
+    if (poster?.complete && poster.naturalWidth > 0) armVideo();
   }, []);
 
   useEffect(() => {
@@ -51,8 +59,6 @@ export function HeroMedia() {
     };
   }, [clip, posterReady]);
 
-  const poster = clip === hero.videoMobile ? hero.imageMobile : hero.image;
-
   return (
     <div className={playing ? "hero-photo-frame is-playing" : "hero-photo-frame"}>
       <picture>
@@ -65,8 +71,8 @@ export function HeroMedia() {
           width={1600}
           height={900}
           fetchPriority="high"
-          decoding="async"
-          onLoad={() => setPosterReady(true)}
+          decoding="sync"
+          onLoad={armVideo}
         />
       </picture>
       {clip && posterReady ? (
@@ -75,12 +81,11 @@ export function HeroMedia() {
           ref={videoRef}
           className="hero-photo"
           src={clip}
-          poster={poster}
           autoPlay
           muted
           loop
           playsInline
-          preload="metadata"
+          preload="none"
           aria-hidden="true"
           onPlaying={() => setPlaying(true)}
           onError={() => setClip(null)}

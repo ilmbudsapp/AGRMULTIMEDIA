@@ -31,7 +31,7 @@ body {
   background-color: #d5e3c8;
   background-image:
     linear-gradient(180deg, rgba(236, 242, 228, 0.74) 0%, rgba(214, 228, 204, 0.66) 48%, rgba(206, 222, 196, 0.72) 100%),
-    url("/media/garden-wash.webp");
+    url("/media/garden-wash.webp?v=2");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
@@ -1238,6 +1238,15 @@ address > span { display: grid; gap: 0.15rem; }
   from { opacity: 0; }
   to { opacity: 1; }
 }
+.leistungen,
+.spotlight,
+.home-compare,
+.area,
+.site-footer {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 640px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .hero-photo, .letter > span, .hero-sub > span, .hero-services, .hero-cta, .gallery-grid, .site-nav,

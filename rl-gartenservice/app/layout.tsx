@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { Instrument_Sans } from "next/font/google";
+import { preload } from "react-dom";
 import { Consent } from "@/components/Consent";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Reveal } from "@/components/Reveal";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
-import { site } from "@/content/site";
+import { hero, site } from "@/content/site";
 import { ogImage } from "@/lib/jsonld";
 import "./globals.css";
 
@@ -42,6 +43,8 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  preload(hero.imageMobile, { as: "image", fetchPriority: "high", media: "(max-width: 719px)" });
+  preload(hero.image, { as: "image", fetchPriority: "high", media: "(min-width: 720px)" });
   return (
     <html lang="de" className={body.variable}>
       <body>

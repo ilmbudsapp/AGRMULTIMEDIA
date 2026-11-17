@@ -30,7 +30,7 @@ export function Header() {
       </a>
       <div className="header-bar">
         <a className="brand" href="/">
-          <img src="/logo.png" alt="" width={900} height={677} />
+          <img src="/logo-mark.webp" alt="" width={280} height={211} fetchPriority="low" decoding="async" />
           <span>
             <strong>{site.name}</strong>
             <small>{site.subtitle}</small>
