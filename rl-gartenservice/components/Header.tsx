@@ -45,9 +45,12 @@ export function Header() {
           type="button"
           aria-expanded={open}
           aria-controls="site-nav"
+          aria-label={open ? "Menü schließen" : "Menü öffnen"}
           onClick={() => setOpen((value) => !value)}
         >
-          {open ? "Schließen" : "Menü"}
+          <span />
+          <span />
+          <span />
         </button>
       </div>
       <nav id="site-nav" className={open ? "site-nav open" : "site-nav"} aria-label="Hauptnavigation">
