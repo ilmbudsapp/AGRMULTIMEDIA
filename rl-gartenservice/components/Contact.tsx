@@ -1,4 +1,5 @@
 import type { CSSProperties } from "react";
+import { Crumbs } from "@/components/Crumbs";
 import { Icon, type IconName } from "@/components/Icons";
 import { SiteMap } from "@/components/SiteMap";
 import { site, socials } from "@/content/site";
@@ -21,8 +22,10 @@ export function Contact() {
       <div className="contact-grid">
         <div data-reveal="card">
           <div className="contact-panel card-motion">
+            <Crumbs items={[{ href: "/", label: "Startseite" }, { label: "Kontakt" }]} />
             <p className="eyebrow">Kontakt</p>
-            <h1>Kostenlos und unverbindlich anfragen</h1>
+            <h1>Kontakt in Gersthofen</h1>
+            <p className="intro">Kostenlos und unverbindlich anfragen, telefonisch, per WhatsApp oder per E-Mail.</p>
             <address>
               <Icon name="pin" className="contact-icon" />
               <span>

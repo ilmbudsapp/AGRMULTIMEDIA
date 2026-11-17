@@ -1,6 +1,7 @@
 import { Icon } from "@/components/Icons";
 import { Motif } from "@/components/Motif";
 import { leistungen } from "@/content/site";
+import { cardSrc } from "@/lib/media";
 
 export function Leistungen() {
   return (
@@ -20,7 +21,15 @@ export function Leistungen() {
           <li key={item.title} data-reveal="card">
             <a className="leistung-card card-motion" href={`${item.href}?arbeit=${item.slug}`}>
               <span className="card-sheen" aria-hidden="true" />
-              <img className="card-photo" src={item.photos[0].src} alt={item.photos[0].alt} />
+              <img
+                className="card-photo"
+                src={cardSrc(item.photos[0].src)}
+                alt={item.photos[0].alt}
+                width={480}
+                height={360}
+                loading="lazy"
+                decoding="async"
+              />
               <span className="leistung-copy">
                 <strong className="card-title">
                   <span>{item.title}</span>

@@ -28,9 +28,9 @@ export const site = {
   areaLine: "Landkreis Augsburg und Umgebung bis 70 km",
   /** Potvrdi sa klijentom pre objave. */
   satisfiedClients: 150,
-  title: "RL Gartenservice | Gartenpflege & Hausmeisterservice in Augsburg",
+  title: "RL Gartenservice | Gartenpflege in Gersthofen und Augsburg",
   description:
-    "RL Gartenservice in Gersthofen: Gartenpflege, Gartenbau, Hausmeisterservice und Bodenbelagsarbeiten für Augsburg und Umgebung. Jetzt kostenlos und unverbindlich anfragen.",
+    "RL Gartenservice in Gersthofen: Gartenpflege, Gartenbau, Hausmeisterservice und Bodenbeläge für Augsburg und Umgebung bis 70 km. Kostenlos und unverbindlich anfragen.",
 } as const;
 
 /**
@@ -79,8 +79,8 @@ export const hero = {
   image: "/media/hero-desktop.webp?v=3",
   imageMobile: "/media/hero-mobile.webp?v=3",
   imageJpg: "/media/hero-desktop.jpg",
-  video: "/media/hero-desktop.mp4",
-  videoMobile: "/media/hero-mobile.mp4",
+  video: "/media/hero-desktop.mp4?v=4",
+  videoMobile: "/media/hero-mobile.mp4?v=4",
   alt: "Gepflegter Garten mit Rasenfläche, gepflastertem Weg, Holzterrasse und Hecke",
   eyebrow: "Augsburg & Umgebung",
   title: "RL Gartenservice",
@@ -107,7 +107,7 @@ export const serviceAreas: ServiceArea[] = [
     title: "Gartenpflege",
     featured: true,
     intro:
-      "Regelmäßige Pflege und saisonale Arbeiten für private Gärten und Grünanlagen — vom Mähen bis zur Laubentfernung.",
+      "Regelmäßige Pflege und saisonale Arbeiten für private Gärten und Grünanlagen in Gersthofen, Augsburg und Umgebung — vom Mähen bis zur Laubentfernung.",
     image: {
       src: "/media/garten-rasen-fertig.webp",
       alt: "Frisch gepflegte Rasenfläche mit Sträuchern vor einem Wohnhaus",
@@ -134,7 +134,7 @@ export const serviceAreas: ServiceArea[] = [
     title: "Gartenbau & Außenanlagen",
     featured: false,
     intro:
-      "Wege, Terrassen, Zäune und Rollrasen — einzelne Arbeiten oder die Gestaltung der ganzen Außenanlage.",
+      "Wege, Terrassen, Zäune und Rollrasen in Gersthofen, Augsburg und Umgebung — einzelne Arbeiten oder die Gestaltung der Außenanlage.",
     image: {
       src: "/media/treppe-naturstein.webp",
       alt: "Betontreppe mit Natursteinmauer am Hauseingang",
@@ -159,7 +159,7 @@ export const serviceAreas: ServiceArea[] = [
     title: "Hausmeisterservice & Reinigung",
     featured: true,
     intro:
-      "Der Hausmeisterservice richtet sich an Privatkunden, Eigentümer und Hausverwaltungen.",
+      "Der Hausmeisterservice richtet sich an Privatkunden, Eigentümer und Hausverwaltungen in Gersthofen, Augsburg und Umgebung.",
     groups: [
       {
         title: "Hausmeisterservice",
@@ -192,7 +192,7 @@ export const serviceAreas: ServiceArea[] = [
     title: "Bodenbelagsarbeiten",
     featured: false,
     intro:
-      "Verlegung neuer Böden und Vorbereitung des Untergrunds im zulässigen Rahmen — in Wohnungen und Objekten.",
+      "Verlegung neuer Böden und Vorbereitung des Untergrunds im zulässigen Rahmen — in Wohnungen und Objekten in Gersthofen, Augsburg und Umgebung.",
     image: {
       src: "/media/boden-holz.webp",
       alt: "Neu verlegter heller Holzfußboden in einem hellen Raum",

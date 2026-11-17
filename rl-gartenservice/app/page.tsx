@@ -4,51 +4,28 @@ import { Hero } from "@/components/Hero";
 import { HomeCompare } from "@/components/HomeCompare";
 import { Leistungen } from "@/components/Leistungen";
 import { Spotlight } from "@/components/Spotlight";
-import { places, serviceAreas, site, socials } from "@/content/site";
+import { JsonLd } from "@/components/JsonLd";
+import { ogImage, businessNode, graph, webPageNode, websiteNode } from "@/lib/jsonld";
+import { site } from "@/content/site";
 
 export const metadata: Metadata = {
+  title: { absolute: site.title },
+  description: site.description,
   alternates: { canonical: "/" },
-  openGraph: { url: "/" },
+  openGraph: { url: "/", title: site.title, description: site.description, images: [ogImage] },
+  twitter: { card: "summary_large_image", title: site.title, description: site.description, images: [ogImage.url] },
 };
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "HomeAndConstructionBusiness",
-  name: site.name,
-  url: site.url,
-  image: `${site.url}/media/hero-desktop.jpg`,
-  logo: `${site.url}/logo.png`,
-  telephone: "+491777928689",
-  email: site.email,
-  description: site.description,
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: site.address.street,
-    postalCode: site.address.postalCode,
-    addressLocality: site.address.city,
-    addressCountry: "DE",
-  },
-  founder: { "@type": "Person", name: site.owner },
-  hasMap: site.mapsUrl,
-  areaServed: places.map((name) => ({ "@type": "City", name })),
-  sameAs: [...socials.filter((item) => item.href).map((item) => item.href), site.mapsUrl],
-  makesOffer: serviceAreas.map((area) => ({
-    "@type": "Offer",
-    url: `${site.url}/${area.id}`,
-    itemOffered: {
-      "@type": "Service",
-      name: area.title,
-      description: area.intro,
-      url: `${site.url}/${area.id}`,
-      areaServed: "Augsburg und Umgebung",
-    },
-  })),
-};
+const jsonLd = graph([
+  businessNode(),
+  websiteNode(),
+  webPageNode("/", site.title, site.description),
+]);
 
 export default function HomePage() {
   return (
     <main id="inhalt">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <JsonLd data={jsonLd} />
       <Hero />
       <Leistungen />
       <Spotlight />

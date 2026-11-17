@@ -2,12 +2,22 @@
 
 import { useEffect, useId, useRef, useState } from "react";
 import { Compare } from "@/components/Compare";
+import { Crumbs } from "@/components/Crumbs";
 import {
   gallery,
   galleryCategories,
   type GalleryCategory,
   type GalleryItem,
 } from "@/content/site";
+import { fitSrc } from "@/lib/media";
+
+const serviceLinks: Record<GalleryCategory, { href: string; label: string }> = {
+  gartenpflege: { href: "/gartenpflege", label: "Zur Gartenpflege" },
+  gartenbau: { href: "/gartenbau", label: "Zum Gartenbau" },
+  hausmeisterservice: { href: "/hausmeisterservice", label: "Zum Hausmeisterservice" },
+  reinigung: { href: "/hausmeisterservice", label: "Zur Reinigung" },
+  boden: { href: "/bodenbelag", label: "Zu den Bodenbelagsarbeiten" },
+};
 
 export function Gallery() {
   const [filter, setFilter] = useState<GalleryCategory | "alle">("alle");
@@ -34,8 +44,9 @@ export function Gallery() {
   return (
     <section className="gallery" id="galerie">
       <div className="gallery-head" data-reveal>
+        <Crumbs items={[{ href: "/", label: "Startseite" }, { label: "Galerie" }]} />
         <p className="eyebrow">Referenzen</p>
-        <h1>Galerie / Referenzen</h1>
+        <h1>Referenzen aus Augsburg und Umgebung</h1>
         <p className="intro">
           Eine Auswahl ausgeführter Arbeiten. Vorher- und Nachher-Bilder zeigen denselben Auftrag.
         </p>
@@ -75,12 +86,24 @@ export function Gallery() {
                     aria-label={item.alt}
                     onClick={() => setActive(item)}
                   >
-                    <img src={item.kind === "video" ? item.poster : item.src} alt={item.alt} loading="lazy" />
+                    <img
+                      src={fitSrc(item.kind === "video" ? item.poster : item.src)}
+                      srcSet={`${fitSrc(item.kind === "video" ? item.poster : item.src)} 960w, ${item.kind === "video" ? item.poster : item.src} 1800w`}
+                      sizes="(max-width: 719px) 92vw, (min-width: 980px) 340px, 46vw"
+                      alt={item.alt}
+                      width={960}
+                      height={720}
+                      loading="lazy"
+                      decoding="async"
+                    />
                     {item.kind === "video" ? <span className="badge">Video</span> : null}
                   </button>
                   <p className="gallery-caption">{item.alt}</p>
                 </>
               )}
+              <p className="gallery-more">
+                <a href={serviceLinks[item.category].href}>{serviceLinks[item.category].label}</a>
+              </p>
               </div>
               </div>
             </li>

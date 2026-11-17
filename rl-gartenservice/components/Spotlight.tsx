@@ -3,7 +3,9 @@
 import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { MaskWords } from "@/components/MaskWords";
 import { Motif } from "@/components/Motif";
+import { serviceCopy } from "@/content/service-copy";
 import { serviceAreas } from "@/content/site";
+import { fitSrc } from "@/lib/media";
 
 const focusIds = ["gartenpflege", "hausmeisterservice"] as const;
 
@@ -43,8 +45,14 @@ export function Spotlight() {
         {scenes.map((scene) => (
           <img
             key={scene.id}
-            src={scene.image.src}
+            src={fitSrc(scene.image.src)}
+            srcSet={`${fitSrc(scene.image.src)} 960w, ${scene.image.src} 1800w`}
+            sizes="(max-width: 979px) 92vw, 46vw"
             alt={scene.image.alt}
+            width={960}
+            height={720}
+            loading="lazy"
+            decoding="async"
             aria-hidden={items[active]?.id !== scene.id}
             className={items[active]?.id === scene.id ? "is-shown" : undefined}
           />
@@ -70,7 +78,16 @@ export function Spotlight() {
           <article className={index === active ? "card-motion is-active" : "card-motion"}>
             {area.image ? (
               <figure className="spotlight-inline">
-                <img src={area.image.src} alt={area.image.alt} />
+                <img
+                  src={fitSrc(area.image.src)}
+                  srcSet={`${fitSrc(area.image.src)} 960w, ${area.image.src} 1800w`}
+                  sizes="92vw"
+                  alt={area.image.alt}
+                  width={960}
+                  height={720}
+                  loading="lazy"
+                  decoding="async"
+                />
               </figure>
             ) : null}
             <h2 data-reveal="mask">
@@ -78,7 +95,7 @@ export function Spotlight() {
             </h2>
             <p>{area.intro}</p>
             <a className="more-link" href={`/${area.id}`}>
-              Mehr erfahren
+              {serviceCopy[area.id]?.moreLabel ?? area.title}
             </a>
           </article>
           </div>

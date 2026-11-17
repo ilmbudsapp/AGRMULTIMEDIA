@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { nav, site } from "@/content/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date("2026-11-16");
+  const lastModified = new Date("2026-11-17");
   const pages = nav.map((item) => ({
     url: item.href === "/" ? site.url : `${site.url}${item.href}`,
     lastModified,

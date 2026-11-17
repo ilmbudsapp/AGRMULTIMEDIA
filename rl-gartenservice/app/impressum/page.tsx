@@ -1,17 +1,31 @@
-import type { Metadata } from "next";
+import { JsonLd } from "@/components/JsonLd";
+import { Crumbs } from "@/components/Crumbs";
 import { site } from "@/content/site";
+import { breadcrumbNode, businessNode, graph, webPageNode, websiteNode } from "@/lib/jsonld";
+import { simpleMetadata } from "@/lib/page-meta";
 
-export const metadata: Metadata = {
-  title: "Impressum",
-  description: "Impressum von RL Gartenservice, Rakip Lleshi, Gersthofen.",
-  alternates: { canonical: "/impressum" },
-};
+const title = "Impressum | RL Gartenservice";
+const description = "Impressum von RL Gartenservice, Rakip Lleshi, Gersthofen.";
+
+export const metadata = simpleMetadata(title, description, "/impressum");
 
 export default function ImpressumPage() {
   return (
     <main id="inhalt">
+      <JsonLd
+        data={graph([
+          businessNode(),
+          websiteNode(),
+          webPageNode("/impressum", title, description),
+          breadcrumbNode("/impressum", [
+            { name: "Startseite", path: "/" },
+            { name: "Impressum", path: "/impressum" },
+          ]),
+        ])}
+      />
       <div data-reveal="card">
         <div className="legal card-motion">
+          <Crumbs items={[{ href: "/", label: "Startseite" }, { label: "Impressum" }]} />
           <h1>Impressum</h1>
           <h2>Anbieter</h2>
           <p>

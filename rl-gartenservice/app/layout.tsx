@@ -6,6 +6,7 @@ import { Header } from "@/components/Header";
 import { Reveal } from "@/components/Reveal";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { site } from "@/content/site";
+import { ogImage } from "@/lib/jsonld";
 import "./globals.css";
 
 const body = Instrument_Sans({
@@ -29,12 +30,13 @@ export const metadata: Metadata = {
     siteName: site.name,
     title: site.title,
     description: site.description,
-    images: [
-      {
-        url: "/media/hero-desktop.jpg",
-        alt: "Zwei Gärtner von RL Gartenservice bei der Gartenpflege",
-      },
-    ],
+    images: [ogImage],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: site.title,
+    description: site.description,
+    images: [ogImage.url],
   },
   robots: { index: true, follow: true },
 };
@@ -42,6 +44,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="de" className={body.variable}>
+      <head>
+        <link rel="preload" as="image" href={"/media/hero-desktop.webp?v=3"} media="(min-width: 720px)" fetchPriority="high" />
+        <link rel="preload" as="image" href={"/media/hero-mobile.webp?v=3"} media="(max-width: 719px)" fetchPriority="high" />
+      </head>
       <body>
         <Reveal />
         <Header />

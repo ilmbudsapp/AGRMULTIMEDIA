@@ -50,7 +50,15 @@ export function HeroMedia() {
     <div className={playing ? "hero-photo-frame is-playing" : "hero-photo-frame"}>
       <picture>
         <source media="(max-width: 719px)" srcSet={hero.imageMobile} />
-        <img className="hero-photo" src={hero.image} alt={hero.alt} fetchPriority="high" />
+        <img
+          className="hero-photo"
+          src={hero.image}
+          alt={hero.alt}
+          width={1672}
+          height={941}
+          fetchPriority="high"
+          decoding="async"
+        />
       </picture>
       {clip ? (
         <video
@@ -63,9 +71,10 @@ export function HeroMedia() {
           muted
           loop
           playsInline
-          preload="auto"
+          preload="metadata"
           aria-hidden="true"
           onPlaying={() => setPlaying(true)}
+          onError={() => setClip(null)}
         />
       ) : null}
     </div>

@@ -24,7 +24,12 @@ export function Footer() {
         <ConsentSettings />
       </nav>
       <p className="footer-sign">
-        Webdesign: <a href="https://www.agrmultimedia.com/">AGRMULTIMEDIA</a>
+        <span>
+          Webdesign von Agron Osmani – <a href="https://www.agrmultimedia.com/">AGRMULTIMEDIA</a>
+        </span>
+        <a className="footer-sign-url" href="https://www.agrmultimedia.com/">
+          www.agrmultimedia.com
+        </a>
       </p>
     </footer>
   );

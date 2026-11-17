@@ -990,7 +990,35 @@ address > span { display: grid; gap: 0.15rem; }
 .site-footer p { margin: 0.35rem 0 0; color: var(--muted); }
 .site-footer nav { display: flex; gap: 1rem; align-items: flex-start; }
 .site-footer a { color: var(--forest); }
-.footer-sign { flex: 1 0 100%; margin: 0.15rem 0 0; font-size: 0.92rem; }
+.footer-sign { flex: 1 0 100%; display: grid; gap: 0.15rem; margin: 0.15rem 0 0; font-size: 0.92rem; }
+.footer-sign-url { font-size: 0.85rem; }
+.crumbs { margin: 0 0 0.85rem; color: var(--muted); font-size: 0.92rem; }
+.crumbs a { color: var(--forest); text-decoration: none; }
+.crumbs a:hover { text-decoration: underline; }
+.job-links { display: flex; flex-wrap: wrap; gap: 0.45rem; list-style: none; padding: 0; margin: 0.2rem 0 0.9rem; }
+.job-links a {
+  display: inline-block;
+  border: 1px solid var(--card-line);
+  background: var(--panel);
+  color: var(--forest);
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  text-decoration: none;
+}
+.job-links a[aria-current="page"] { background: var(--forest); color: #fff; }
+.service-block { margin-top: 1.35rem; }
+.service-block h2 { margin: 1rem 0 0.35rem; font-size: 1.35rem; color: var(--forest); }
+.service-block h2:first-child { margin-top: 0; }
+.service-block p { margin: 0.35rem 0; }
+.faq { display: grid; gap: 0.7rem; }
+.faq div { background: var(--panel); border: 1px solid var(--card-line); border-radius: 14px; padding: 0.8rem 0.95rem; }
+.faq h3 { margin: 0 0 0.3rem; font-size: 1.02rem; color: var(--forest); }
+.faq p { margin: 0; }
+.service-links { display: flex; flex-wrap: wrap; gap: 0.4rem 1rem; margin: 1.1rem 0 0; }
+.gallery-more { margin: 0.2rem 0 0; font-size: 0.92rem; }
+.about h2 { font-size: 1.45rem; margin-top: 1.35rem; }
+.about-links { margin: 0.4rem 0 0; padding-left: 1.1rem; }
+.about-links a { color: var(--forest); }
 
 .consent {
   position: fixed;
@@ -1065,8 +1093,7 @@ address > span { display: grid; gap: 0.15rem; }
   .header-call { margin-left: auto; }
   .brand img { height: 52px; }
   .hero { min-height: auto; padding: 26vh 1.15rem 4.6rem; align-items: stretch; }
-  .hero-photo { object-position: center 42%; }
-  .hero-photo-frame video.hero-photo { object-position: center center; }
+  .hero-photo, .hero-photo-frame video.hero-photo { object-position: center 42%; }
   .leistungen { margin-top: -3rem; }
   .motif { opacity: 0.08; width: 86px; }
   .spotlight-stage-slot,

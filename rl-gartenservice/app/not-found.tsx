@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: { absolute: "Seite nicht gefunden | RL Gartenservice" },
+  robots: { index: false, follow: true },
+};
+
 export default function NotFound() {
   return (
     <main id="inhalt">

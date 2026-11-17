@@ -1,17 +1,31 @@
-import type { Metadata } from "next";
+import { Crumbs } from "@/components/Crumbs";
+import { JsonLd } from "@/components/JsonLd";
 import { site } from "@/content/site";
+import { breadcrumbNode, businessNode, graph, webPageNode, websiteNode } from "@/lib/jsonld";
+import { simpleMetadata } from "@/lib/page-meta";
 
-export const metadata: Metadata = {
-  title: "Datenschutzerklärung",
-  description: "Datenschutzerklärung von RL Gartenservice.",
-  alternates: { canonical: "/datenschutz" },
-};
+const title = "Datenschutzerklärung | RL Gartenservice";
+const description = "Datenschutzerklärung von RL Gartenservice.";
+
+export const metadata = simpleMetadata(title, description, "/datenschutz");
 
 export default function PrivacyPage() {
   return (
     <main id="inhalt">
+      <JsonLd
+        data={graph([
+          businessNode(),
+          websiteNode(),
+          webPageNode("/datenschutz", title, description),
+          breadcrumbNode("/datenschutz", [
+            { name: "Startseite", path: "/" },
+            { name: "Datenschutzerklärung", path: "/datenschutz" },
+          ]),
+        ])}
+      />
       <div data-reveal="card">
         <div className="legal card-motion">
+          <Crumbs items={[{ href: "/", label: "Startseite" }, { label: "Datenschutz" }]} />
           <h1>Datenschutzerklärung</h1>
           <p>
             Diese Erklärung beschreibt die Verarbeitung personenbezogener Daten auf dieser Website nach dem

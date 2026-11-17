@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useId, useLayoutEffect, useRef, useState } from "react";
+import { fitSrc } from "@/lib/media";
 
 type Shot = { src: string; alt: string; focus?: string };
 
@@ -161,15 +162,27 @@ export function Compare({
       >
         <img
           className="compare-after"
-          src={after.src}
+          src={fitSrc(after.src)}
+          srcSet={`${fitSrc(after.src)} 960w, ${after.src} 1800w`}
+          sizes="(max-width: 719px) 92vw, 70vw"
           alt={after.alt}
+          width={960}
+          height={1280}
+          loading="lazy"
+          decoding="async"
           draggable={false}
           style={after.focus ? { objectPosition: after.focus } : undefined}
         />
         <img
           className="compare-before"
-          src={before.src}
+          src={fitSrc(before.src)}
+          srcSet={`${fitSrc(before.src)} 960w, ${before.src} 1800w`}
+          sizes="(max-width: 719px) 92vw, 70vw"
           alt=""
+          width={960}
+          height={1280}
+          loading="lazy"
+          decoding="async"
           draggable={false}
           style={{
             clipPath: `inset(0 ${100 - value}% 0 0)`,
