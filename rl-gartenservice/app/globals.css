@@ -1118,7 +1118,7 @@ address > span { display: grid; gap: 0.15rem; }
   .svc-icon { width: 35px; height: 35px; }
   .card-photo { width: 80px; height: 60px; }
   .inside-photos img { width: 168px; height: 126px; }
-  .hero-panel { grid-template-columns: 1fr auto; align-items: end; }
+  .hero-panel { align-items: end; }
   .band-inner:has(.band-photo) { grid-template-columns: 1.15fr 0.85fr; }
   .gallery-item.is-feature { grid-column: 1 / -1; }
 }
@@ -1167,7 +1167,7 @@ address > span { display: grid; gap: 0.15rem; }
   .leistung-grid [data-reveal="card"].is-armed:not(.is-in) > .card-motion { transform: translate3d(-20px, 14px, 0); }
 }
 @media (prefers-reduced-motion: no-preference) {
-  .hero-photo { animation: hero-zoom 900ms cubic-bezier(.22, .7, .2, 1) both; }
+  .hero-photo-frame.is-playing video.hero-photo { animation: hero-zoom 900ms cubic-bezier(.22, .7, .2, 1) both; }
   .letter > span {
     animation: line-in 420ms cubic-bezier(.2, .7, .2, 1) both;
     animation-delay: calc(var(--i) * 24ms);

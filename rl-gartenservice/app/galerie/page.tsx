@@ -5,7 +5,7 @@ import { breadcrumbNode, businessNode, graph, webPageNode, websiteNode } from "@
 
 const title = "Referenzen in Augsburg und Umgebung | RL Gartenservice";
 const description =
-  "Referenzen von RL Gartenservice: Gartenpflege, Gartenbau und Bodenbelagsarbeiten in Augsburg und Umgebung. Der Ort des einzelnen Auftrags steht nicht bei den Fotos.";
+  "Referenzen von RL Gartenservice: Gartenpflege, Gartenbau, Terrassen, Zäune, Pflaster und Bodenbeläge in Augsburg und Umgebung.";
 
 export const metadata = simpleMetadata(title, description, "/galerie");
 

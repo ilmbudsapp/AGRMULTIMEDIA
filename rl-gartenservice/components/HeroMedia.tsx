@@ -5,8 +5,10 @@ import { hero } from "@/content/site";
 
 export function HeroMedia() {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const posterRef = useRef<HTMLImageElement>(null);
   const [clip, setClip] = useState<string | null>(null);
   const [playing, setPlaying] = useState(false);
+  const [posterReady, setPosterReady] = useState(false);
 
   useEffect(() => {
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -22,6 +24,11 @@ export function HeroMedia() {
       reduce.removeEventListener("change", apply);
       narrow.removeEventListener("change", apply);
     };
+  }, []);
+
+  useEffect(() => {
+    const poster = posterRef.current;
+    if (poster?.complete && poster.naturalWidth > 0) setPosterReady(true);
   }, []);
 
   useEffect(() => {
@@ -42,7 +49,7 @@ export function HeroMedia() {
       node.removeEventListener("canplay", start);
       observer.disconnect();
     };
-  }, [clip]);
+  }, [clip, posterReady]);
 
   const poster = clip === hero.videoMobile ? hero.imageMobile : hero.image;
 
@@ -51,16 +58,18 @@ export function HeroMedia() {
       <picture>
         <source media="(max-width: 719px)" srcSet={hero.imageMobile} />
         <img
+          ref={posterRef}
           className="hero-photo"
           src={hero.image}
           alt={hero.alt}
-          width={1672}
-          height={941}
+          width={1600}
+          height={900}
           fetchPriority="high"
           decoding="async"
+          onLoad={() => setPosterReady(true)}
         />
       </picture>
-      {clip ? (
+      {clip && posterReady ? (
         <video
           key={clip}
           ref={videoRef}

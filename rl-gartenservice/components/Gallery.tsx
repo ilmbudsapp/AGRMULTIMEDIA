@@ -25,11 +25,10 @@ export function Gallery() {
   const closeRef = useRef<HTMLButtonElement>(null);
   const titleId = useId();
 
+  const filters = galleryCategories.filter(
+    (category) => category.id === "alle" || gallery.some((item) => item.category === category.id),
+  );
   const visible = gallery.filter((item) => filter === "alle" || item.category === filter);
-  const emptyNote =
-    filter === "hausmeisterservice" || filter === "reinigung"
-      ? "Für diesen Bereich liegen noch keine Referenzfotos oder Videos vor."
-      : "In dieser Auswahl sind noch keine Referenzen hinterlegt.";
 
   useEffect(() => {
     if (!active) return;
@@ -52,7 +51,7 @@ export function Gallery() {
         </p>
       </div>
       <div className="filters" role="tablist" aria-label="Galerie filtern">
-        {galleryCategories.map((category) => (
+        {filters.map((category) => (
           <button
             key={category.id}
             type="button"
@@ -65,11 +64,8 @@ export function Gallery() {
           </button>
         ))}
       </div>
-      <p className="gallery-note">
-        Für Hausmeisterservice und Reinigung liegen noch keine Fotos oder Videos vor. Angezeigt werden nur vorhandene Referenzen.
-      </p>
       {visible.length === 0 ? (
-        <p className="gallery-empty">{emptyNote}</p>
+        <p className="gallery-empty">In dieser Auswahl sind noch keine Referenzen hinterlegt.</p>
       ) : (
         <ul className="gallery-grid" key={filter}>
           {visible.map((item) => (

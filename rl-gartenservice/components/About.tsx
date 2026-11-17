@@ -29,9 +29,8 @@ export function About() {
           </p>
           <h2>Referenzen</h2>
           <p>
-            Ausgeführte Arbeiten aus Gartenpflege, Gartenbau und Bodenbelag zeigen wir in der{" "}
-            <a href="/galerie">Galerie</a>. Für Hausmeisterservice und Reinigung liegen noch keine
-            Referenzfotos vor. Die Fotos nennen nicht den Ort des einzelnen Auftrags.
+            In der <a href="/galerie">Galerie</a> sehen Sie ausgeführte Arbeiten aus Gartenpflege, Gartenbau und
+            Bodenbelag, darunter Terrassen, Zäune, Pflaster und neu verlegte Böden.
           </p>
           <h2>So erreichen Sie uns</h2>
           <p>

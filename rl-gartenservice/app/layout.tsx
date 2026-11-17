@@ -44,10 +44,6 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="de" className={body.variable}>
-      <head>
-        <link rel="preload" as="image" href={"/media/hero-desktop.webp?v=3"} media="(min-width: 720px)" fetchPriority="high" />
-        <link rel="preload" as="image" href={"/media/hero-mobile.webp?v=3"} media="(max-width: 719px)" fetchPriority="high" />
-      </head>
       <body>
         <Reveal />
         <Header />

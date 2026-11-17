@@ -1,8 +1,7 @@
 import type { CSSProperties } from "react";
-import { CountUp } from "@/components/CountUp";
 import { HeroMedia } from "@/components/HeroMedia";
 import { HeroMotion } from "@/components/HeroMotion";
-import { hero, site } from "@/content/site";
+import { hero } from "@/content/site";
 
 function Letters({ text }: { text: string }) {
   return (
@@ -44,7 +43,6 @@ export function Hero() {
             {hero.cta}
           </a>
         </div>
-        <CountUp to={site.satisfiedClients} label="Zufriedene Kunden" />
       </div>
     </section>
   );

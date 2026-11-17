@@ -64,7 +64,7 @@ export const serviceCopy: Record<string, ServiceCopy> = {
       },
       {
         q: "Wo kann ich ausgeführte Arbeiten sehen?",
-        a: "In der Galerie liegen Referenzen zu Terrassen, Zäunen, Pflaster und Einfassungen. Die Fotos nennen nicht den Ort des einzelnen Auftrags.",
+        a: "In der Galerie sehen Sie Terrassen, Zäune, Pflaster und Einfassungen aus ausgeführten Aufträgen.",
       },
       {
         q: "Arbeiten Sie auch außerhalb von Augsburg?",
@@ -98,8 +98,8 @@ export const serviceCopy: Record<string, ServiceCopy> = {
         a: "Für Privatkunden, Eigentümer und Hausverwaltungen in Gersthofen, Augsburg und Umgebung.",
       },
       {
-        q: "Gibt es dazu Referenzfotos?",
-        a: "Für Hausmeisterservice und Reinigung liegen noch keine Referenzfotos oder Videos vor. Arbeiten aus Garten und Bodenbelag zeigen wir in der Galerie.",
+        q: "Was gehört zur Betreuung eines Objekts?",
+        a: "Kontrollen, Pflege der Außenanlagen, Reinigung der Außenbereiche, der Mülltonnenservice und kleine Reparatur- und Instandhaltungsarbeiten im zulässigen Rahmen. Zur Reinigung gehören Treppenhaus, Gemeinschaftsflächen, Hof, Gehwege, Terrassen und Einfahrten.",
       },
     ],
   },
@@ -130,7 +130,7 @@ export const serviceCopy: Record<string, ServiceCopy> = {
       },
       {
         q: "Kann ich Beispiele sehen?",
-        a: "In der Galerie gibt es Aufnahmen von vorbereiteten Untergründen und neu verlegten Böden. Der Ort des einzelnen Auftrags steht dort nicht dabei.",
+        a: "In der Galerie sehen Sie vorbereitete Untergründe und neu verlegte Böden aus ausgeführten Aufträgen.",
       },
     ],
   },
