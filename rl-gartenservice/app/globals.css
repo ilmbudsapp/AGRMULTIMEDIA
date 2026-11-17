@@ -470,12 +470,26 @@ p { margin: 0 0 1rem; }
 .leistung-copy { color: var(--muted); line-height: 1.4; min-width: 0; }
 .leistung-text { display: block; font-size: 0.98rem; font-weight: 400; line-height: 1.45; }
 .card-photo {
-  width: 84px;
-  height: 64px;
+  width: 72px;
+  height: 54px;
   flex: none;
   object-fit: cover;
   object-position: center 40%;
-  border-radius: 10px;
+  border-radius: 8px;
+  display: block;
+}
+.inside-photos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin: 1rem 0 0.3rem;
+}
+.inside-photos img {
+  width: 132px;
+  height: 100px;
+  object-fit: cover;
+  object-position: center 40%;
+  border-radius: 12px;
   display: block;
 }
 .svc-icon {
@@ -1050,7 +1064,8 @@ address > span { display: grid; gap: 0.15rem; }
   .gallery-grid > li:nth-child(even) { --d: 160ms; }
   .compare-story .compare-frame { aspect-ratio: 16 / 9; }
   .svc-icon { width: 35px; height: 35px; }
-  .card-photo { width: 96px; height: 72px; }
+  .card-photo { width: 80px; height: 60px; }
+  .inside-photos img { width: 168px; height: 126px; }
   .hero-panel { grid-template-columns: 1fr auto; align-items: end; }
   .band-inner:has(.band-photo) { grid-template-columns: 1.15fr 0.85fr; }
   .gallery-item.is-feature { grid-column: 1 / -1; }

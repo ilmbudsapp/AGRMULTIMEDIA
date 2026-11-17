@@ -217,8 +217,7 @@ export const leistungen: {
   title: string;
   text: string;
   icon: "leaf" | "mower" | "shears" | "broom" | "floor" | "grass" | "paver" | "terrace" | "house" | "fence";
-  image: string;
-  imageAlt: string;
+  photos: { src: string; alt: string }[];
 }[] = [
   {
     href: "/gartenpflege",
@@ -226,8 +225,11 @@ export const leistungen: {
     title: "Gartenpflege",
     text: "Beetpflege, Unkrautentfernung und Laubarbeiten",
     icon: "leaf",
-    image: "/media/cards/v2-gartenpflege.webp",
-    imageAlt: "Gärtner pflegt ein Beet, von hinten",
+    photos: [
+      { src: "/media/cards/real/gartenpflege-1.webp", alt: "Gartenpflege" },
+      { src: "/media/cards/real/gartenpflege-2.webp", alt: "Gartenpflege" },
+      { src: "/media/cards/real/laub-1.webp", alt: "Laub auf der Rasenfläche" },
+    ],
   },
   {
     href: "/gartenbau",
@@ -235,8 +237,11 @@ export const leistungen: {
     title: "Rollrasen verlegen",
     text: "Schnelle und saubere Verlegung von Fertigrasen",
     icon: "grass",
-    image: "/media/cards/v2-rollrasen.webp",
-    imageAlt: "Fertigrasen wird ausgerollt, von hinten",
+    photos: [
+      { src: "/media/cards/real/rollrasen-1.webp", alt: "Rollrasen" },
+      { src: "/media/cards/real/rollrasen-2.webp", alt: "Rollrasen" },
+      { src: "/media/cards/real/rollrasen-3.webp", alt: "Rollrasen" },
+    ],
   },
   {
     href: "/gartenpflege",
@@ -244,8 +249,10 @@ export const leistungen: {
     title: "Rasenmähen",
     text: "Fachgerechtes Mähen und Rasenpflege",
     icon: "mower",
-    image: "/media/cards/v2-rasenmaehen.webp",
-    imageAlt: "Rasenmähen im Park, von hinten",
+    photos: [
+      { src: "/media/cards/real/rasen-1.webp", alt: "Rasenmähen" },
+      { src: "/media/cards/real/rasen-2.webp", alt: "Rasenmähen" },
+    ],
   },
   {
     href: "/gartenbau",
@@ -253,8 +260,10 @@ export const leistungen: {
     title: "Pflasterarbeiten",
     text: "Wege, Einfahrten, Terrassen und Hofflächen",
     icon: "paver",
-    image: "/media/cards/v2-pflaster.webp",
-    imageAlt: "Pflastersteine werden verlegt, von hinten",
+    photos: [
+      { src: "/media/cards/real/pflaster-1.webp", alt: "Pflasterarbeiten" },
+      { src: "/media/cards/real/pflaster-2.webp", alt: "Pflasterarbeiten" },
+    ],
   },
   {
     href: "/gartenpflege",
@@ -262,8 +271,11 @@ export const leistungen: {
     title: "Hecken- & Strauchschnitt",
     text: "Form- und Rückschnitt für gepflegte Grünflächen",
     icon: "shears",
-    image: "/media/cards/v2-hecke.webp",
-    imageAlt: "Heckenschnitt, von hinten",
+    photos: [
+      { src: "/media/cards/real/hecke-1.webp", alt: "Heckenschnitt" },
+      { src: "/media/cards/real/hecke-2.webp", alt: "Heckenschnitt" },
+      { src: "/media/cards/real/hecke-ecke.webp", alt: "Hecke vor dem Schnitt" },
+    ],
   },
   {
     href: "/gartenbau",
@@ -271,8 +283,7 @@ export const leistungen: {
     title: "Terrassenbau",
     text: "Planung und Bau individueller Terrassen",
     icon: "terrace",
-    image: "/media/cards/v2-terrasse.webp",
-    imageAlt: "Holzterrasse wird gebaut, von hinten",
+    photos: [{ src: "/media/cards/real/terrasse-1.webp", alt: "Terrassenbau" }],
   },
   {
     href: "/hausmeisterservice",
@@ -280,8 +291,10 @@ export const leistungen: {
     title: "Reinigung",
     text: "Außenreinigung von Wegen, Terrassen und Einfahrten",
     icon: "broom",
-    image: "/media/cards/v2-reinigung.webp",
-    imageAlt: "Treppenhaus wird gereinigt, von hinten",
+    photos: [
+      { src: "/media/cards/real/reinigung-1.webp", alt: "Reinigung einer Außenfläche" },
+      { src: "/media/cards/real/reinigung-2.webp", alt: "Reinigung einer Außenfläche" },
+    ],
   },
   {
     href: "/hausmeisterservice",
@@ -289,8 +302,10 @@ export const leistungen: {
     title: "Hausmeisterservice",
     text: "Außenanlagen, kleine Reparaturen und Instandhaltung",
     icon: "house",
-    image: "/media/cards/v2-hausmeister.webp",
-    imageAlt: "Wechsel einer Deckenleuchte, von hinten",
+    photos: [
+      { src: "/media/cards/real/hausmeister-1.webp", alt: "Hausmeisterservice" },
+      { src: "/media/cards/real/hausmeister-2.webp", alt: "Hausmeisterservice" },
+    ],
   },
   {
     href: "/bodenbelag",
@@ -298,8 +313,10 @@ export const leistungen: {
     title: "Bodenleger",
     text: "Fachgerechte Verlegung von Bodenbelägen",
     icon: "floor",
-    image: "/media/cards/v2-boden.webp",
-    imageAlt: "Holzfußboden wird verlegt, von hinten",
+    photos: [
+      { src: "/media/cards/real/boden-1.webp", alt: "Bodenverlegung" },
+      { src: "/media/cards/real/boden-2.webp", alt: "Bodenverlegung" },
+    ],
   },
   {
     href: "/gartenbau",
@@ -307,8 +324,10 @@ export const leistungen: {
     title: "Zaunbau",
     text: "Montage von Zäunen für Gärten und Grundstücke",
     icon: "fence",
-    image: "/media/cards/v2-zaun.webp",
-    imageAlt: "Holzzaun wird montiert, von hinten",
+    photos: [
+      { src: "/media/cards/real/zaun-1.webp", alt: "Zaunbau" },
+      { src: "/media/cards/real/zaun-2.webp", alt: "Zaunbau" },
+    ],
   },
 ];
 
