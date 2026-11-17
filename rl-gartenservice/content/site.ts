@@ -283,7 +283,10 @@ export const leistungen: {
     title: "Terrassenbau",
     text: "Planung und Bau individueller Terrassen",
     icon: "terrace",
-    photos: [{ src: "/media/cards/real/terrasse-1.webp", alt: "Terrassenbau" }],
+    photos: [
+      { src: "/media/cards/real/terrasse-1.webp", alt: "Terrassenbau" },
+      { src: "/media/cards/real/terrasse-2.webp", alt: "Holzterrasse wird gebaut" },
+    ],
   },
   {
     href: "/hausmeisterservice",
