@@ -279,8 +279,6 @@ p { margin: 0 0 1rem; }
 .hero-photo-frame video.hero-photo {
   position: absolute;
   inset: 0;
-  object-position: center center;
-  transform-origin: center center;
 }
 .hero-photo-frame.is-playing picture { visibility: hidden; }
 .hero-photo {
@@ -1181,7 +1179,6 @@ address > span { display: grid; gap: 0.15rem; }
   .leistung-grid [data-reveal="card"].is-armed:not(.is-in) > .card-motion { transform: translate3d(-20px, 14px, 0); }
 }
 @media (prefers-reduced-motion: no-preference) {
-  .hero-photo-frame.is-playing video.hero-photo { animation: hero-zoom 900ms cubic-bezier(.22, .7, .2, 1) both; }
   .letter > span {
     animation: line-in 420ms cubic-bezier(.2, .7, .2, 1) both;
     animation-delay: calc(var(--i) * 24ms);
@@ -1207,10 +1204,6 @@ address > span { display: grid; gap: 0.15rem; }
   .leistung-card.is-in .svc-fence .picket { animation: picket 320ms ease both; }
   .leistung-card.is-in .svc-fence .picket:nth-child(2) { animation-delay: 90ms; }
   .leistung-card.is-in .svc-fence .picket:nth-child(3) { animation-delay: 180ms; }
-}
-@keyframes hero-zoom {
-  from { transform: scale(1.045); }
-  to { transform: scale(1); }
 }
 @keyframes draw-line {
   from { transform: scaleX(0); }
