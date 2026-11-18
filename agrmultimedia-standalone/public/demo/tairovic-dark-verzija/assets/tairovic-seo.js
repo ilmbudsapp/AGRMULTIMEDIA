@@ -143,7 +143,7 @@
       contactPoint: {
         "@type": "ContactPoint",
         telephone: "+49-1520-8531992",
-        email: "mevlidatairovic@gmail.com",
+        email: "ramizajet2018@gmail.com",
         contactType: "customer service",
         areaServed: "DE",
         availableLanguage: ["German", "Albanian"],
@@ -232,7 +232,7 @@
       url: ORIGIN + "/",
       image: OG_IMAGE,
       telephone: "+49-1520-8531992",
-      email: "mevlidatairovic@gmail.com",
+      email: "ramizajet2018@gmail.com",
       founder: { "@id": AUTHOR_ID },
       parentOrganization: { "@id": ORG_ID },
       address: {
