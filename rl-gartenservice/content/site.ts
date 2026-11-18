@@ -80,7 +80,7 @@ export const hero = {
   imageMobile: "/media/hero-mobile.webp?v=5",
   imageJpg: "/media/hero-desktop.jpg",
   video: "/media/hero-desktop.mp4?v=4",
-  videoMobile: "/media/hero-mobile.mp4?v=4",
+  videoMobile: "/media/hero-mobile.mp4?v=5",
   alt: "Symbolbild zur Veranschaulichung: Garten mit Rasen, Holzterrasse und Hecke",
   eyebrow: "Augsburg & Umgebung",
   title: "RL Gartenservice",

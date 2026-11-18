@@ -1106,10 +1106,6 @@ address > span { display: grid; gap: 0.15rem; }
   .brand img { height: 52px; }
   .hero { min-height: auto; padding: 26vh 1.15rem 4.6rem; align-items: stretch; }
   .hero-photo, .hero-photo-frame video.hero-photo { object-position: center 42%; }
-  .hero-photo-frame video.hero-photo {
-    transform: scale(1.26);
-    transform-origin: center center;
-  }
   .leistungen { margin-top: -3rem; }
   .motif { opacity: 0.08; width: 86px; }
   .spotlight-stage-slot,
