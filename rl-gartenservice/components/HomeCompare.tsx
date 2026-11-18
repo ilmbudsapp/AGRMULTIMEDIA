@@ -39,7 +39,7 @@ export function HomeCompare() {
           className={link === "in" ? "more-link is-in" : link === "held" ? "more-link is-held" : "more-link"}
           href="/galerie"
         >
-          Alle Referenzen ansehen
+          Alle Bilder ansehen
         </a>
       </div>
       </div>

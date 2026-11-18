@@ -3,9 +3,9 @@ import { JsonLd } from "@/components/JsonLd";
 import { simpleMetadata } from "@/lib/page-meta";
 import { breadcrumbNode, businessNode, graph, webPageNode, websiteNode } from "@/lib/jsonld";
 
-const title = "Referenzen in Augsburg und Umgebung | RL Gartenservice";
+const title = "Bilder und Videos | RL Gartenservice";
 const description =
-  "Referenzen von RL Gartenservice: Gartenpflege, Gartenbau, Terrassen, Zäune, Pflaster und Bodenbeläge in Augsburg und Umgebung.";
+  "Fotos und Videos von Gartenpflege, Gartenbau, Terrassen, Zäunen, Pflaster und Bodenbelägen.";
 
 export const metadata = simpleMetadata(title, description, "/galerie");
 

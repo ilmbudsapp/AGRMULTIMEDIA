@@ -20,6 +20,7 @@ export function Hero() {
     <section className="hero" id="start">
       <HeroMotion />
       <HeroMedia />
+      <p className="hero-symbol">Symbolbild zur Veranschaulichung der Leistung</p>
       <div className="hero-shade" />
       <div className="hero-panel">
         <div className="hero-copy">

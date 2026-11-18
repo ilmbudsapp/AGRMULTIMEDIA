@@ -102,7 +102,7 @@ export function ServiceView({ id, photo }: { id: string; photo?: string }) {
               </div>
             </div>
             <p className="service-links">
-              <a href="/galerie">Referenzen ansehen</a>
+              <a href="/galerie">Galerie ansehen</a>
               <a href="/kontakt">Kontakt zu {site.name}</a>
             </p>
             <a className="button button-gold page-cta" href="/kontakt">

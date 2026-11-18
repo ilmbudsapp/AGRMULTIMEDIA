@@ -63,8 +63,8 @@ export const serviceCopy: Record<string, ServiceCopy> = {
         a: "Nein. Wenn Steine, Holz oder die Zaunart noch offen sind, klären wir das bei der Anfrage. Das Material beeinflusst den Aufwand.",
       },
       {
-        q: "Wo kann ich ausgeführte Arbeiten sehen?",
-        a: "In der Galerie sehen Sie Terrassen, Zäune, Pflaster und Einfassungen aus ausgeführten Aufträgen.",
+        q: "Wo kann ich Bilder dazu sehen?",
+        a: "In der Galerie sehen Sie Fotos und Videos von Terrassen, Zäunen, Pflaster und Einfassungen.",
       },
       {
         q: "Arbeiten Sie auch außerhalb von Augsburg?",
@@ -130,7 +130,7 @@ export const serviceCopy: Record<string, ServiceCopy> = {
       },
       {
         q: "Kann ich Beispiele sehen?",
-        a: "In der Galerie sehen Sie vorbereitete Untergründe und neu verlegte Böden aus ausgeführten Aufträgen.",
+        a: "In der Galerie sehen Sie Fotos und Videos von vorbereiteten Untergründen und verlegten Böden.",
       },
     ],
   },

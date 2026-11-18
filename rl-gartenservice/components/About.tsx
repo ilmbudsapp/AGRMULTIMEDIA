@@ -29,8 +29,8 @@ export function About() {
           </p>
           <h2>Referenzen</h2>
           <p>
-            In der <a href="/galerie">Galerie</a> sehen Sie ausgeführte Arbeiten aus Gartenpflege, Gartenbau und
-            Bodenbelag, darunter Terrassen, Zäune, Pflaster und neu verlegte Böden.
+            In der <a href="/galerie">Galerie</a> sehen Sie Fotos und Videos zu Gartenpflege, Gartenbau und
+            Bodenbelag, darunter Terrassen, Zäune, Pflaster und verlegte Böden.
           </p>
           <h2>So erreichen Sie uns</h2>
           <p>

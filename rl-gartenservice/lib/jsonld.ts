@@ -7,7 +7,7 @@ export const ogImage = {
   url: "/media/og-share.jpg",
   width: 1200,
   height: 630,
-  alt: "RL Gartenservice: gepflegter Garten mit Rasen, Holzterrasse und Hecke",
+  alt: "RL Gartenservice, Symbolbild eines Gartens mit Rasen, Holzterrasse und Hecke",
 };
 
 const sameAs = [...socials.filter((item) => item.href).map((item) => item.href), site.mapsUrl];

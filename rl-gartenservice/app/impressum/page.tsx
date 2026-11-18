@@ -45,6 +45,13 @@ export default function ImpressumPage() {
             <br />
             E-Mail: <a href={`mailto:${site.email}`}>{site.email}</a>
           </p>
+          <h2>Bild- und Videohinweise</h2>
+          <p>
+            Auf dieser Website werden auch digital erstellte Symbolbilder und Visualisierungen verwendet. Diese
+            dienen der Veranschaulichung unseres Leistungsangebots. Solche Darstellungen sind keine Dokumentation
+            tatsächlich ausgeführter Kundenprojekte und bilden keine tatsächlichen Mitarbeitenden von RL
+            Gartenservice ab.
+          </p>
           <h2>Inhaltlich Verantwortlicher</h2>
           <p>
             Diese Website ist eine Darstellung der angebotenen Dienstleistungen. Sie enthält kein

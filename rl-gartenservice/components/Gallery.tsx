@@ -44,10 +44,11 @@ export function Gallery() {
     <section className="gallery" id="galerie">
       <div className="gallery-head" data-reveal>
         <Crumbs items={[{ href: "/", label: "Startseite" }, { label: "Galerie" }]} />
-        <p className="eyebrow">Referenzen</p>
-        <h1>Referenzen aus Augsburg und Umgebung</h1>
+        <p className="eyebrow">Galerie</p>
+        <h1>Bilder und Videos aus der Arbeit</h1>
         <p className="intro">
-          Eine Auswahl ausgeführter Arbeiten. Vorher- und Nachher-Bilder zeigen denselben Auftrag.
+          Fotos und Videos aus Gartenpflege, Gartenbau und Bodenbelägen. Die Vorher- und Nachher-Ansicht der
+          Terrasse zeigt denselben Auftrag.
         </p>
       </div>
       <div className="filters" role="tablist" aria-label="Galerie filtern">
@@ -65,7 +66,7 @@ export function Gallery() {
         ))}
       </div>
       {visible.length === 0 ? (
-        <p className="gallery-empty">In dieser Auswahl sind noch keine Referenzen hinterlegt.</p>
+        <p className="gallery-empty">In dieser Auswahl sind noch keine Bilder hinterlegt.</p>
       ) : (
         <ul className="gallery-grid" key={filter}>
           {visible.map((item) => (

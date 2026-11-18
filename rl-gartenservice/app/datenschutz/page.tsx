@@ -46,16 +46,31 @@ export default function PrivacyPage() {
 
           <h2>Hosting</h2>
           <p>
-            Beim Aufruf der Website verarbeitet der jeweilige Hosting-Anbieter die Verbindungsdaten, die
-            erforderlich sind, um die Seite auszuliefern und den Betrieb abzusichern. Rechtsgrundlage ist
+            Diese Website wird von Vercel Inc., 440 N Barranca Avenue #4133, Covina, CA 91723, USA,
+            ausgeliefert. Das ergibt sich aus der Projektkonfiguration und aus der Server-Kennung der
+            veröffentlichten Seite.
+          </p>
+          <p>
+            Beim Aufruf verarbeitet Vercel die Verbindungsdaten, die nötig sind, um die Seite auszuliefern und
+            den Betrieb abzusichern. Nach den veröffentlichten Angaben von Vercel gehören dazu insbesondere die
+            IP-Adresse, daraus abgeleitete Angaben zu Stadt und Land sowie technische Angaben zur Anfrage.
+            Eine genaue Standortbestimmung findet dabei nach diesen Angaben nicht statt. Rechtsgrundlage ist
             Artikel 6 Abs. 1 lit. f DSGVO. Das berechtigte Interesse ist der sichere und funktionsfähige
             Betrieb der Website.
           </p>
           <p>
-            Der konkrete Hosting-Anbieter, der genaue Inhalt der Serverprotokolle und deren Speicherdauer
-            sind für den öffentlichen Betrieb noch nicht festgelegt. Diese Angaben werden ergänzt, sobald der
-            produktive Anbieter feststeht. Die Registrierung der Domain begründet für sich genommen nicht,
-            wer die Website hostet.
+            Eine eigene Speicherdauer für diese Verbindungsdaten legt dieser Betrieb nicht fest. Sie richtet
+            sich nach den Bedingungen von Vercel. Der für dieses Konto geltende Zeitraum ist in den Unterlagen
+            dieses Auftritts nicht hinterlegt.
+          </p>
+          <p>
+            Vercel beschreibt, dass die Verarbeitung vorrangig in den USA stattfindet und Daten auch in
+            anderen Ländern verarbeitet werden können. Für Übermittlungen aus dem Europäischen Wirtschaftsraum
+            verweist Vercel in seinen veröffentlichten Unterlagen auf Standardvertragsklauseln und eine
+            Zertifizierung nach dem EU-US Data Privacy Framework. Ob für dieses Konto ein
+            Auftragsverarbeitungsvertrag geschlossen ist, ist in den Unterlagen dieses Auftritts nicht
+            hinterlegt. Hinweise von Vercel stehen unter{" "}
+            <a href="https://vercel.com/legal/privacy-notice">vercel.com/legal/privacy-notice</a>.
           </p>
 
           <h2>Kontakt per Telefon und E-Mail</h2>
@@ -127,19 +142,27 @@ export default function PrivacyPage() {
             Facebook-Profil von RL Gartenservice und das TikTok-Profil @rl.gartenservice.
           </p>
 
-          <h2>Schriften, Karten, Video und Zugriffe auf das Endgerät</h2>
+          <h2>Bilder, Videos und Schriften</h2>
           <p>
-            Die Schrift wird mit der Website ausgeliefert. Beim Seitenaufruf wird keine Schrift von Google
-            oder einem anderen Schriftdienst nachgeladen. Es sind keine Analysewerkzeuge und keine Werbe-
-            oder Marketingdienste eingebunden. Die einzige eingebettete Karte ist Google Maps auf der
-            Kontaktseite; sie ist im Abschnitt „Google Maps“ beschrieben.
+            Bilder, Videos und die Schrift werden mit dieser Website ausgeliefert. Es ist kein zusätzlicher
+            Mediendienst eingebunden. Die dabei anfallenden Verbindungsdaten sind im Abschnitt „Hosting“
+            beschrieben.
           </p>
           <p>
-            Auf der Startseite läuft ein kurzes Video der Gartenansicht. Es liegt auf dem Server dieser
-            Website, hat keinen Ton und ruft kein externes Videoportal auf. Geladen wird nur die Fassung
-            für das jeweilige Gerät. Wer reduzierte Bewegung eingestellt hat, sieht stattdessen das
-            Standbild. Fotos und Videos in der Galerie liegen ebenfalls auf diesem Server. Ein Galerievideo
-            wird erst geladen, wenn Sie es öffnen.
+            Die Schrift ist Instrument Sans und liegt auf dem Server dieser Website. Beim Seitenaufruf wird
+            keine Schrift von Google oder einem anderen Schriftdienst nachgeladen.
+          </p>
+          <p>
+            Auf der Startseite folgt auf das Standbild ein kurzes Video ohne Ton. Geladen wird nur die Fassung
+            für das jeweilige Gerät, und erst nachdem das Standbild angezeigt ist. Wer reduzierte Bewegung
+            eingestellt hat, sieht das Standbild. Ein Video in der Galerie wird erst geladen, wenn Sie es
+            öffnen. Es wird kein externes Videoportal aufgerufen.
+          </p>
+          <h2>Keine Analysewerkzeuge</h2>
+          <p>
+            Es sind keine Analysewerkzeuge und keine Werbe- oder Marketingdienste eingebunden. Die einzige
+            eingebettete Karte ist Google Maps auf der Kontaktseite; sie ist im Abschnitt „Google Maps“
+            beschrieben.
           </p>
           <p>
             Diese Website selbst setzt keine Cookies und kein Tracking. Eine Einwilligung fragen wir nur für
@@ -150,12 +173,12 @@ export default function PrivacyPage() {
 
           <h2>Empfänger</h2>
           <p>
-            Empfänger sind der noch nicht benannte Hosting-Anbieter, soweit er die Seite ausliefert, sowie
-            Google als Anbieter des E-Mail-Postfachs, sobald eine Nachricht dort ankommt, und als Anbieter
-            der Karte, sobald Sie die Karte erlaubt haben. Ein Klick auf das Google Unternehmensprofil oder
-            auf „Route planen“ richtet die Verbindung ebenfalls an Google. Bei einem WhatsApp-, Instagram-, Facebook- oder
-            TikTok-Klick ist die jeweilige Plattform Empfängerin der dann entstehenden Verbindung. Eine
-            Weitergabe zu Werbezwecken findet nicht statt.
+            Empfänger der Auslieferung der Website, einschließlich der Bilder, Videos und Schriften, ist
+            Vercel Inc. Google ist Empfänger, sobald eine E-Mail an das Postfach bei Google ankommt, sobald
+            Sie die Karte erlaubt haben, und sobald Sie das Google Unternehmensprofil oder „Route planen“
+            anklicken. Bei einem WhatsApp-, Instagram-, Facebook- oder TikTok-Klick ist die jeweilige
+            Plattform Empfängerin der dann entstehenden Verbindung. Eine Weitergabe zu Werbezwecken findet
+            nicht statt.
           </p>
 
           <h2>Ihre Rechte</h2>

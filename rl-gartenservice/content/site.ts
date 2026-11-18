@@ -71,7 +71,7 @@ export const nav = [
   { href: "/hausmeisterservice", label: "Hausmeisterservice & Reinigung" },
   { href: "/bodenbelag", label: "Bodenbelagsarbeiten" },
   { href: "/ueber-uns", label: "Über uns" },
-  { href: "/galerie", label: "Galerie / Referenzen" },
+  { href: "/galerie", label: "Galerie" },
   { href: "/kontakt", label: "Kontakt" },
 ] as const;
 
@@ -81,7 +81,7 @@ export const hero = {
   imageJpg: "/media/hero-desktop.jpg",
   video: "/media/hero-desktop.mp4?v=4",
   videoMobile: "/media/hero-mobile.mp4?v=4",
-  alt: "Gepflegter Garten mit Rasenfläche, gepflastertem Weg, Holzterrasse und Hecke",
+  alt: "Symbolbild zur Veranschaulichung: Garten mit Rasen, Holzterrasse und Hecke",
   eyebrow: "Augsburg & Umgebung",
   title: "RL Gartenservice",
   lead: "Ihr zuverlässiger Partner rund um Haus & Garten",
