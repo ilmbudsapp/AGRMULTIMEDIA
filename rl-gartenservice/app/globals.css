@@ -288,20 +288,6 @@ p { margin: 0 0 1rem; }
   object-position: 62% 46%;
   transform-origin: 62% 46%;
 }
-.hero-symbol {
-  position: absolute;
-  z-index: 2;
-  top: 0.75rem;
-  right: 0.75rem;
-  margin: 0;
-  max-width: 15rem;
-  padding: 0.35rem 0.55rem;
-  background: rgba(244, 242, 232, 0.94);
-  color: var(--forest);
-  font-size: 0.75rem;
-  line-height: 1.35;
-  letter-spacing: 0;
-}
 .hero-shade {
   position: absolute;
   inset: 0;
