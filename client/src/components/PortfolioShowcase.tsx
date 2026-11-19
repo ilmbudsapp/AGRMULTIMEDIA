@@ -18,6 +18,8 @@ import { fotoKreiraneSaAiGalleryByLang } from "@/data/fotoKreiraneSaAiGallery";
 import type { PortfolioFilterId } from "@/lib/portfolioPageI18n";
 import { toServiceLang } from "@/lib/servicePageI18n";
 
+const RL_GARTENSERVICE_LIVE = "https://www.rl-gartenservice.de/";
+const RL_GARTENSERVICE_IMG = "/portfolio/referenzen/00-rl-gartenservice.webp";
 const TONIS_AUTOPFLEGE_LIVE = "https://www.tonis-autopflege-goeppingen.de/";
 const TONIS_AUTOPFLEGE_IMG = "/portfolio/referenzen/01-tonis-autopflege.webp";
 const TAIROVIC_DARK_DEMO = "/demo/tairovic-dark-verzija/index.html";
@@ -227,6 +229,25 @@ export default function PortfolioShowcase() {
               intro={p.categories.web.intro}
             >
               <div className="grid gap-8 lg:grid-cols-2 xl:grid-cols-3">
+                <ProjectCard
+                  image={RL_GARTENSERVICE_IMG}
+                  title={p.projects.rlGartenservice.title}
+                  description={p.projects.rlGartenservice.description}
+                  pillarLabel={p.categories.web.title}
+                  pillarIcon={LayoutGrid}
+                  pillarClass={webPillarClass}
+                  gradeBadge={p.projects.rlGartenservice.gradeBadge}
+                >
+                  <a
+                    href={RL_GARTENSERVICE_LIVE}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={LIVE_BTN}
+                  >
+                    {p.projects.rlGartenservice.liveCta}
+                    <ExternalLink className="h-4 w-4" aria-hidden />
+                  </a>
+                </ProjectCard>
                 <ProjectCard
                   image={TONIS_AUTOPFLEGE_IMG}
                   title={p.projects.tonisAutopflege.title}

@@ -106,6 +106,13 @@ const en: PortfolioPageCopy = {
     },
   },
   projects: {
+    rlGartenservice: {
+      title: "RL Gartenservice",
+      description:
+        "Professional garden care & maintenance website for Gersthofen & Augsburg — services, before/after gallery, coverage area map and local SEO optimization for landscaping business.",
+      liveCta: "View live website",
+      gradeBadge: "Live · Local SEO",
+    },
     tonisAutopflege: {
       title: "Toni's Autopflege Göppingen",
       description:
@@ -216,6 +223,13 @@ const de: PortfolioPageCopy = {
     },
   },
   projects: {
+    rlGartenservice: {
+      title: "RL Gartenservice",
+      description:
+        "Professionelle Gartenpflege-Website für Gersthofen & Augsburg — Dienstleistungen, Vorher/Nachher-Galerie, Einsatzgebiet-Karte und lokales SEO für Gartenbau-Unternehmen.",
+      liveCta: "Website live ansehen",
+      gradeBadge: "Live · Lokales SEO",
+    },
     tonisAutopflege: {
       title: "Toni's Autopflege Göppingen",
       description:
